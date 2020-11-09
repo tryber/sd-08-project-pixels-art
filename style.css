@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;   
+}
+
 .classe {
     border: 1px solid black;
     width: 100px;
@@ -5,4 +10,18 @@
     list-style-type: none;
     display: inline-block;
     margin: 10px;
+}
+
+#pixel-board {   
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+}
+
+.pixel {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    list-style-type: none;
+    display: inline-block;
 }

@@ -21,5 +21,19 @@ for (let index=0; index<4; index++){
     colorIndex[index].style.backgroundColor = color[index];
 }
 
+let divQuadro = document.createElement("div");
+body.appendChild(divQuadro);
+
+let ulQuadro = document.createElement("ul");
+ulQuadro.id = "pixel-board";
+divQuadro.appendChild(ulQuadro);
+
+for (let index=0; index<25; index++){
+    let liQuadro = document.createElement("li");
+    liQuadro.className = "pixel";
+    liQuadro.style.backgroundColor = "white";
+    ulQuadro.appendChild(liQuadro);
+}
+
 
 
