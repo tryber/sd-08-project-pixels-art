@@ -1,3 +1,7 @@
+:root {
+  --pixel-size: 40px;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -14,8 +18,17 @@
 }
 
 #color-palette {
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
   overflow: hidden;
+}
+
+#pixel-board {
+  width: calc(var(--pixel-size) * 5);
+  overflow: hidden;
+}
+
+.pixel {
+  display: inline-block;
+  width: var(--pixel-size);
+  height: var(--pixel-size);
+  float: left;
 }

@@ -10,7 +10,6 @@ for (let i = 0; i < 3; i++) {
 }
 
 colors.unshift('#000000');
-console.log(colors);
 
 for (let i = 0, len = colors.length; i < len; i++) {
   const li = document.createElement('li');
@@ -27,4 +26,12 @@ function getRandomColor() {
     color += hexset[index];
   }
   return color;
+}
+
+const pixelBoard = document.getElementById('pixel-board');
+for(let i = 0; i < 25; i++) {
+  const pixel = document.createElement('span');
+  pixel.className = 'pixel';
+  pixel.style.backgroundColor = getRandomColor();
+  pixelBoard.appendChild(pixel);
 }
