@@ -54,7 +54,7 @@ h1 {
   border: black 1px solid;
 }
 
-.pixel-board {
+#pixel-board {
   margin: 0 auto;
   margin-top: 20px;
   width: 200px;
