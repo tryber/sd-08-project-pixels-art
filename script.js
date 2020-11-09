@@ -28,4 +28,15 @@ window.onload = function () {
     }
   }
   eventPalette();
+  function changePixelColor() {
+    const pixels = document.querySelectorAll('.pixel');
+    for (let i = 0; i < pixels.length; i += 1) {
+      pixels[i].addEventListener('click', function () {
+        pixels[i].style.backgroundColor = document.querySelector(
+          '.selected',
+        ).style.backgroundColor;
+      });
+    }
+  }
+  changePixelColor();
 };
