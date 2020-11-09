@@ -1,0 +1,41 @@
+#title {
+
+}
+
+#color-palette {
+    padding-bottom: auto;
+}
+
+.color {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    border: 1px solid black
+}
+
+.black {
+    background-color: black;
+}
+
+.red {
+    background-color: red;
+}
+
+.green {
+    background-color: green;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.pixel {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    background-color: white;
+}
+
+#clear-board {
+    margin-bottom: auto;
+}
