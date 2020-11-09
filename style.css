@@ -39,4 +39,6 @@ div#pixel-board {
   height: 40px;
   margin: 0;
   width: 40px;
+  position: relative;
+  top: 0;
 }
