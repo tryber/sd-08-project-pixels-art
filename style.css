@@ -6,31 +6,31 @@
   width: 40px;
 }
 
-#pret {
+.preto {
   background-color: black;
 }
 
-#ver {
+.vermelho {
   background-color: red;
 }
 
-#azl {
+.azul {
   background-color: blue;
 }
 
-#vrd {
+.verde {
   background-color: green;
 }
 
 .pixel {
-  height: 40px;
-  width: 40px;
   background-color: white;
   border: 1px solid black;
+  height: 40px;
   padding: 0;
+  width: 40px;
 }
 
-#pixel-board {
+/* #pixel-board {
   border-collapse: separate;
   border-spacing: 0px;
-}
+} */
