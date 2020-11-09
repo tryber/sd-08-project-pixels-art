@@ -35,3 +35,7 @@
     border: 1px solid black;
     background-color: white;
 }
+
+#clear-board {
+    margin-bottom: 15px;
+}

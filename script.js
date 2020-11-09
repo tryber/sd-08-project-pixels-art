@@ -27,4 +27,14 @@ window.onload = function () {
             selecionado.className += ' selected'
         }
     })
+
+    addEventListener('click', function(event){
+        let button = document.querySelector('#clear-board');
+        let pixelsArray = document.querySelectorAll('.pixel');
+        if (event.target == button) {
+            for (let pix of pixelsArray) {
+                pix.style.backgroundColor = 'white';
+            }
+        }
+    })
 }
