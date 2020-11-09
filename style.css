@@ -1,8 +1,12 @@
+#color-palette {
+   margin: 0px; 
+}
+
 .color {
     border: solid 1px;
     display: inline-block;
-    width: 50px;
-    height: 50px;
+    width: 70px;
+    height: 70px;
 }
 
 #pixel-board {
@@ -22,4 +26,8 @@
 
 .pixels-set {
      margin: 0px;
+}
+
+#clear-board {
+    margin: 10px;
 }
