@@ -32,6 +32,7 @@
     grid-template-rows: repeat(5, 40px); 
     margin-bottom: 20px;
     width: 202px;
+    margin-top: 10px;
 }
   
 .pixel {
@@ -40,4 +41,8 @@
     cursor: pointer;
     height: 40px;
     width: 40px;
+}
+
+#clear-board{
+    margin-top: 10px;
 }

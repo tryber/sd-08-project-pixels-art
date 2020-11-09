@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,40 +11,43 @@
 <body>
     <h1 id="title">Paleta de Cores</h1>
     <section id="color-palette">
-        <button class="color black"></button>
-        <button class="color green"></button>
-        <button class="color red"></button>
-        <button class="color blue"></button>
+        <button class="color black" id="black"></button>
+        <button class="color green" id="green"></button>
+        <button class="color red" id="red"></button>
+        <button class="color blue" id="blue"></button>
     </section>
 
-    <section class="board" id="pixel-board">
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-        <div class="pixel"></div>
-      </section>
+    <div id="clear-board">
+        <input type="button" value="Limpar" onclick= "limpar()">
+    </div>
 
+    <section class="board" id="pixel-board">
+        <div class="pixel" onclick="colorir(this)"></div>
+        <div class="pixel" onclick="colorir(this)"></div>
+        <div class="pixel" onclick="colorir(this)"></div>
+        <div class="pixel" onclick="colorir(this)"></div>
+        <div class="pixel" onclick="colorir(this)"></div>
+        <div class="pixel" onclick="colorir(this)"></div>
+        <div class="pixel" onclick="colorir(this)"></div>
+        <div class="pixel" onclick="colorir(this)"></div>
+        <div class="pixel" onclick="colorir(this)"></div>
+        <div class="pixel" onclick="colorir(this)"></div>
+        <div class="pixel" onclick="colorir(this)"></div>
+        <div class="pixel" onclick="colorir(this)"></div>
+        <div class="pixel" onclick="colorir(this)"></div>
+        <div class="pixel" onclick="colorir(this)"></div>
+        <div class="pixel" onclick="colorir(this)"></div>
+        <div class="pixel" onclick="colorir(this)"></div>
+        <div class="pixel" onclick="colorir(this)"></div>
+        <div class="pixel" onclick="colorir(this)"></div>
+        <div class="pixel" onclick="colorir(this)"></div>
+        <div class="pixel" onclick="colorir(this)"></div>
+        <div class="pixel" onclick="colorir(this)"></div>
+        <div class="pixel" onclick="colorir(this)"></div>
+        <div class="pixel" onclick="colorir(this)"></div>
+        <div class="pixel" onclick="colorir(this)"></div>
+        <div class="pixel" onclick="colorir(this)"></div>
+    </section>
 
 
 
@@ -53,4 +57,5 @@
 
     <script src="./script.js"></script>
 </body>
+
 </html>
