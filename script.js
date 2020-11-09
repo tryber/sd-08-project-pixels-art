@@ -54,3 +54,15 @@ function fillPixelColor() {
 }
 fillPixelColor();
 
+function clearBoard() {
+  let clearPixels = document.getElementById("clear-board");
+  let pixelUnits = document.querySelectorAll(".pixel");
+
+  function clearPixelsColor() {
+    for (let i = 0; i < pixelUnits.length; i += 1) {
+      pixelUnits[i].style.backgroundColor = 'white';
+    }
+  }
+  clearPixels.addEventListener('click', clearPixelsColor);
+}
+clearBoard();
