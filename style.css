@@ -1,0 +1,39 @@
+#title
+{
+
+}
+
+#color-palette
+{
+    position: absolute;
+}
+
+#color-palette .color
+{
+    padding: 20px;
+    margin: 10px 5px 10px 0px;
+    border: solid black 1px;
+    display: block;
+    position: relative;
+    float: left;
+}
+
+#black
+{
+    background-color: black;
+}
+
+#red
+{
+    background-color: red;
+}
+
+#blue
+{
+    background-color: blue;
+}
+
+#green
+{
+    background-color: green;
+}
