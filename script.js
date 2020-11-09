@@ -11,20 +11,24 @@ function createPalette() {
 
 createPalette();
 
-const board = document.querySelector('#pixel-board');
-for(let index = 1; index <= 5; index += 1) {
-  const lineBoardElement = document.createElement('div');
-  lineBoardElement.id = `line ${index}`;
-  lineBoardElement.className = 'lines';
-
-  for (let i = 0; i < 5; i += 1) {
-    const squarePixel = document.createElement('div');
-    squarePixel.className = 'pixel';
-    lineBoardElement.appendChild(squarePixel);
+function createBoardPixel() {
+  const board = document.querySelector('#pixel-board');
+  for(let index = 1; index <= 5; index += 1) {
+    const lineBoardElement = document.createElement('div');
+    lineBoardElement.id = `line ${index}`;
+    lineBoardElement.className = 'lines';
+    for (let i = 0; i < 5; i += 1) {
+      const squarePixel = document.createElement('div');
+      squarePixel.className = 'pixel';
+      lineBoardElement.appendChild(squarePixel);
+    }
+    board.appendChild(lineBoardElement);
   }
-
-  board.appendChild(lineBoardElement);
 }
+
+createBoardPixel();
+
+
 
 
 
