@@ -23,7 +23,7 @@ main {
   padding: 5px;
 }
 
-.color {
+.color, .color.selected {
   border: 1px solid black;
   height: 60px;
   padding: 5px;
