@@ -110,4 +110,27 @@ window.onload = function() {
         }
       }
     
- 
+      function colums() {
+        for (let i = 0; i < parseInt(inputNumber.value); i++) {
+          let colum = document.createElement("td");
+          colum.classList.add("pixel");
+          for(let j = 0; j < parseInt(inputNumber.value); j++) {
+            document.getElementsByClassName("body-pixel")[0].children[i].appendChild(colum.cloneNode())
+          }
+        }
+      }
+    
+    
+      function getRandomRgb() {
+        var num = Math.round(0xffffff * Math.random());
+        var r = num >> 16;
+        var g = num >> 8 & 255;
+        var b = num & 255;
+        return 'rgb(' + r + ', ' + g + ', ' + b + ')';
+      }
+    
+      document.getElementsByClassName("red")[0].style.backgroundColor = getRandomRgb();
+      document.getElementsByClassName("blue")[0].style.backgroundColor = getRandomRgb();
+      document.getElementsByClassName("green")[0].style.backgroundColor = getRandomRgb();
+      
+    }
