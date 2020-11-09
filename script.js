@@ -1,4 +1,4 @@
-function pintaPixel (event) {
+function pintaPixel(event) {
   const corSelecionada = document.querySelector('.selected');
   event.target.style.backgroundColor = corSelecionada.style.backgroundColor;
 }
@@ -16,7 +16,7 @@ btn.addEventListener('click', clearBoard);
 const cores = ['#000000'];
 
 function selecionaCor(event) {
-  let corSelecionada = document.querySelector('.selected');
+  const corSelecionada = document.querySelector('.selected');
   corSelecionada.className = 'color';
   event.target.className = 'selected color';
 }
@@ -35,16 +35,16 @@ function geraPaletaDeCores() {
 geraPaletaDeCores();
 
 function evitaCorRepetida() {
-    for (let index = 0; index < cores.length; index += 1) {
-      let pos = index + 1;
+  for (let index = 0; index < cores.length; index += 1) {
+    let pos = index + 1;
 
-      for (pos; pos < cores.length; pos += 1) {
-        if (cores[index] === cores[pos] || cores[pos] === '#FFFFFF' || cores[pos] === '') {
-          geraCores();
-        }
+    for (pos; pos < cores.length; pos += 1) {
+      if (cores[index] === cores[pos] || cores[pos] === '#FFFFFF' || cores[pos] === '') {
+        geraCores();
       }
     }
   }
+}
 
 function geraCores() {
   const cor = document.querySelectorAll('#color-palette .color');
