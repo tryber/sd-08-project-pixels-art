@@ -1,6 +1,9 @@
 // Sets reference to color palette div
 const palette = document.querySelector('.palette');
 
+//Sets reference do pixel board
+const board = document.querySelector('.pixel-board');
+
 // Sets reference select color picker divs
 const blackColor = document.querySelector('.black');
 const firstColor = document.querySelector('.first');
@@ -43,4 +46,11 @@ function selectColor(event) {
   }
 }
 
+function applyColor(event) {
+  const eventTarget = event.target;
+  const color = parseSelection();
+  eventTarget.style.backgroundColor = color;
+}
+
 palette.addEventListener('click', selectColor);
+board.addEventListener('click', applyColor);
