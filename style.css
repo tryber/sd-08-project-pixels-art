@@ -1,0 +1,22 @@
+.colorOption {
+    border: 1px solid black;
+    padding: 20px 30px;
+    margin: 2px;
+
+}
+
+#black {
+    background-color: black;
+}
+
+#yellow {
+    background-color: yellow;
+}
+
+#green {
+    background-color: green;
+}
+
+#pink {
+    background-color: pink;
+}
