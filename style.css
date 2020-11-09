@@ -1,7 +1,27 @@
+#color-palette {
+  padding-left: 20px;
+}
+
 .color {
   border: 1px solid black;
   display: inline-block;
   width: 100px;
-  height: 100px ;
+  height: 100px;
   margin: 5px;
+}
+
+#pixel-board {
+  margin: 20px;
+}
+
+.lines {
+  margin: 0px;
+  height: 100px;
+}
+
+.pixel {
+  border: 1px solid black;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
 }
