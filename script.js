@@ -1,6 +1,5 @@
 function generateRandomColor() {
-  return `${Math.ceil(Math.random() * 254)} , ${Math.ceil(Math.random() * 254)}
-   , ${Math.ceil(Math.random() * 254)}`;
+  return `${Math.ceil(Math.random() * 254)} , ${Math.ceil(Math.random() * 254)} , ${Math.ceil(Math.random() * 254)}`;
 }
 
 function generatePalette(palette) {
@@ -27,6 +26,11 @@ function generatePalette(palette) {
   }
 }
 
+function handleClickPaintSquare (event) {
+  currentColor = document.getElementsByClassName('selected')[0].style.backgroundColor;
+  event.target.style.backgroundColor = currentColor;
+}
+
 function createLine(size) {
   let currentColor;
   const line = document.createElement('tr');
@@ -36,10 +40,7 @@ function createLine(size) {
     const pixel = document.createElement('td');
     pixel.className = 'pixel';
     pixel.style.backgroundColor = 'white';
-    pixel.addEventListener('click', (event) => {
-      currentColor = document.getElementsByClassName('selected')[0].style.backgroundColor;
-      event.target.style.backgroundColor = currentColor;
-    });
+    pixel.addEventListener('click', handleClickPaintSquare(ev));
 
     line.appendChild(pixel);
   }
@@ -94,4 +95,4 @@ window.onload = () => {
       generateBoard(newSize, board);
     }
   });
-}
+};
