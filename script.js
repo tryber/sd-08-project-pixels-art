@@ -1,8 +1,8 @@
 //Função para definir a cor selecionada e atribuir a classe 'color' para a que tinha a classe 'selected'.
 function selecionado (botaoSelecionado) {
   let antigoSelecionado = document.querySelector('.selected');
-  antigoSelecionado.className = 'color';
-  botaoSelecionado.target.classList.remove('color');
+  antigoSelecionado.classList.toggle('selected');
+  
   botaoSelecionado.target.classList.add('selected');
 }
 
@@ -21,7 +21,8 @@ for (let index = 0; index < 4; index += 1) {
   corDaPaleta.style.borderColor = ('black');
   if (index == 0){
     corDaPaleta.style.backgroundColor = ('black');
-    corDaPaleta.className = ('selected');
+    corDaPaleta.className = ('color');
+    corDaPaleta.className += (' selected');
   } else {
     corDaPaleta.style.backgroundColor = (arrayDeCores[index - 1]);
   } 
