@@ -33,7 +33,7 @@ function getRandomColor() {
 }
 
 const pixelBoardContainer = document.getElementById('pixel-board-container');
-const pixelBoardSize = document.getElementById('pixel-board-size');
+const pixelBoardSize = document.getElementById('board-size');
 let boardSize = parseInt(pixelBoardSize.value);
 
 function createPixelBoard() {
@@ -67,9 +67,8 @@ function createPixel() {
 let pixelBoard = createPixelBoard();
 pixelBoardContainer.appendChild(pixelBoard);
 
-// Cada vez que o tamanho mudar cria uma pixelBoard nova
-// e substitui pela antiga
-pixelBoardSize.addEventListener('change', function() {
+const generateBoardButton = document.getElementById('generate-board');
+generateBoardButton.addEventListener('click', function() {
   boardSize = parseInt(pixelBoardSize.value);
   const newPixelBoard = createPixelBoard();
   pixelBoardContainer.replaceChild(newPixelBoard, pixelBoard);
@@ -78,9 +77,8 @@ pixelBoardSize.addEventListener('change', function() {
 });
 
 // A primeira cor do palete deverá estar selecionada
-const primeiraCor = document.querySelector('.color');
-primeiraCor.classList.add('selected');
-
+const cores = document.querySelectorAll('.color');
+cores[0].classList.add('selected');
 
 // Adiciona evento de click para selecao de cor no palete
 for (let i = 0; i < cores.length; i += 1) {
@@ -100,11 +98,9 @@ function selectColor(event) {
 // Adiciona evento de click para colorir os pixels
 function addColorClickEvent() {
   const pixels = document.querySelectorAll('.pixel');
-  console.log('adding color click event on ', pixels);
   for (let i = 0; i < pixels.length; i++) {
     const pixel = pixels[i];
     pixel.addEventListener('click', function(event) {
-      console.log('clicked');
       const selected = document.querySelector('.color.selected');
       event.target.style.backgroundColor = selected.style.backgroundColor;
     });
@@ -112,7 +108,6 @@ function addColorClickEvent() {
 }
 
 addColorClickEvent();
-
 
 // Botão para limpar o board
 const buttonClearBoard = document.getElementById('clear-board');
