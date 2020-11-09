@@ -1,6 +1,18 @@
 .color{
     border: solid black 1px;
-    width:50px;
-    height: 50px;
+    width:40px;
+    height: 40px;
     display: inline-block;
+}
+
+.pixel{
+    border: solid black 1px;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+
+}
+
+.pixel-line{
+    margin-bottom: -5px;
 }
