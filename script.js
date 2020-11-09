@@ -28,3 +28,15 @@ function addColorPalette(colors) {
 }
 
 addColorPalette(['black', 'red', 'green', 'orange']);
+
+const board = document.querySelector('#pixel-board');
+
+function pixelBoard() {
+  for (let index = 0; index < 25; index += 1) {
+    const pixelItem = document.createElement('li');
+    pixelItem.className = 'pixel';
+    board.appendChild(pixelItem);
+  }
+}
+
+pixelBoard();
