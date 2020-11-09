@@ -16,9 +16,16 @@ function createPixels (){
         for (let line = 0; line < 5; line += 1){                       
             let trPixels = document.createElement('tr');    
             trPixels.className = "pixel";
-            trPixels.backgroundColor = "white";
             pixelLine.appendChild(trPixels);
         }    
     }    
 }
 createPixels();
+
+function corInicial (){
+    let pixelsLocal = document.getElementsByClassName('pixel');
+    for (let i = 0; i < 25; i += 1) {
+        pixelsLocal.backgroundColor = "white";
+    }
+}
+corInicial();
