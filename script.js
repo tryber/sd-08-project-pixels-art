@@ -23,9 +23,12 @@ createPixels()
 //Definir a cor selecionada
 function selectColor(){
     let colorPalette = document.getElementById("color-pallete")
-    colorPalette.addEventListener("click", function(event) {
+    let selected = document.getElementsByClassName("color selected")
+    function colorir (event) {
+        selected.className = "color"
         event.target.className = "color selected"
-    })
+    }
+    colorPalette.addEventListener("click", colorir)
 }
 
 selectColor()
