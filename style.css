@@ -30,7 +30,6 @@
   width: 40px;
 }
 
-/* #pixel-board {
-  border-collapse: separate;
-  border-spacing: 0px;
-} */
+.tabela {
+  border-spacing: 0;
+}
