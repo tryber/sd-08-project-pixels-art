@@ -1,0 +1,21 @@
+body {
+  text-align: center;
+}
+
+#color-palette {
+display: inline-flex;
+flex-wrap: wrap;
+}
+
+.color {
+width: 70px;
+height: 70px;
+border: solid 1px black;
+}
+
+#color1 {
+  border-radius: 10px 0px 0px 10px;
+}
+#color4 {
+  border-radius: 0px 10px 10px 0px; 
+}
