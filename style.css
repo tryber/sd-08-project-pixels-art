@@ -1,23 +1,40 @@
 .color {
-    width: 70px;
-    height: 70px;
-    display: inline-block;
-    margin-right: 5px;
-    border: 1px solid black;
+  width: 70px;
+  height: 70px;
+  display: inline-block;
+  margin-right: 5px;
+  border: 1px solid black;
+}
+
+.linha {
+  display: block;
+  margin: 0px;
+}
+
+.pixel {
+  width: 70px;
+  height: 70px;
+  display: inline-block;
+  border: 1px solid black;
+  margin: 0px;
 }
 
 #paleta1 {
-    background-color: black;    
+  background-color: black;
 }
 
 #paleta2 {
-    background-color: red;    
+  background-color: red;
 }
 
 #paleta3 {
-    background-color: green;    
+  background-color: green;
 }
 
 #paleta4 {
-    background-color: blue;    
+  background-color: blue;
+}
+
+#pixel-board {
+  margin: 20px 0px 0px 30px;
 }
