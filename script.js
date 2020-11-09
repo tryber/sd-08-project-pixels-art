@@ -6,6 +6,7 @@ window.onload = function(){
             for(let index = 0; index < setColor.length ; index+=1){
                 setColor[index].style.backgroundColor = colors[index];
         }
+        return color;
     }
     setBackgroundColor();
 
@@ -29,14 +30,15 @@ window.onload = function(){
     setPixelBoard();
 
     //Pintar pixels
-    // function getThisColor(){
-    //     let color = "black";
-    //     let thisColor = querySelectorAll(".color");
-    //     thisColor.addEventListener("click", function(){
-    //         color = setBackgroundColor();
-    //         console.log ("clicou na cor" + setBackgroundColor());
-    //     })
-
-    // }
-    // getThisColor(setBackgroundColor());
+    function getThisColor(){
+        let color = "black";
+        let thisColor = querySelectorAll(".color");
+            for(index = 0; thisColor > index; index+=1){
+                thisColor[index].addEventListener("click", function(){
+                    color = getBackgroundColor();
+                    console.log ("clicou na cor" + setBackgroundColor());
+                })
+             }
+    }
+    getThisColor(setBackgroundColor());
 }
