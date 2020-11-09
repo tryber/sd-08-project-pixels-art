@@ -12,11 +12,11 @@ html , body {
   width: 100%;
 }
 
-#color-pallete {
+.color-pallete {
   display: inline-block;
 }
 
-#pixel-board {
+.pixel-board {
   display: block;
   margin: 0 auto;
 }

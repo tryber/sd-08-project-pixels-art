@@ -1,9 +1,14 @@
+function generateRandomColor() {
+  return `${Math.ceil(Math.random() * 254)} , ${Math.ceil(Math.random() * 254)}
+   , ${Math.ceil(Math.random() * 254)}`;
+}
+
 function generatePalette(palette) {
   for (let i = 0; i < 4; i += 1) {
-    let color = document.createElement('div');
+    const color = document.createElement('div');
     color.addEventListener('click', (event) => {
-      for (let colPixel of palette.children) {
-        colPixel.className = 'color';
+      for (let colPixel in palette.children) {
+        palette.children[colPixel].className = 'color';
       }
       event.target.className = 'color selected';
     });
@@ -13,7 +18,7 @@ function generatePalette(palette) {
       color.style.backgroundColor = 'black';
       palette.appendChild(color);
     } else {
-      let colGen = generateRandomColor();
+      const colGen = generateRandomColor();
 
       color.className = 'color';
       color.style.backgroundColor = `rgb(${colGen})`;
@@ -24,18 +29,18 @@ function generatePalette(palette) {
 
 function generateBoard(size, board) {
   for (let i = 0; i < size; i += 1) {
-    let line = createLine(size);
+    const line = createLine(size);
     board.appendChild(line);
   }
 }
 
 function createLine(size) {
   let currentColor;
-  let line = document.createElement('tr');
+  const line = document.createElement('tr');
   line.className = 'pixel-line';
 
   for (let i = 0; i < size; i += 1) {
-    let pixel = document.createElement('td');
+    const pixel = document.createElement('td');
     pixel.className = 'pixel';
     pixel.style.backgroundColor = 'white';
     pixel.addEventListener('click', (event) => {
@@ -49,9 +54,15 @@ function createLine(size) {
   return line;
 }
 
-function generateRandomColor() {
-  return `${Math.ceil(Math.random() * 254)} , ${Math.ceil(Math.random() * 254)}
-   , ${Math.ceil(Math.random() * 254)}`;
+function handleBigNumbers(size) {
+  let newSize = size;
+  if (newSize < 5) {
+    newSize = 5;
+  } else if (newSize > 50) {
+    newSize = 50;
+  }
+
+  return newSize;
 }
 
 window.onload = () => {
@@ -67,8 +78,8 @@ window.onload = () => {
   clearButton.addEventListener('click', () => {
     const pixels = document.getElementsByClassName('pixel');
 
-    for (let pix of pixels) {
-      pix.style.backgroundColor = 'white';
+    for (let pix in pixels) {
+      pixels[pix].style.backgroundColor = 'white';
     }
   });
   updateSizeButton.addEventListener('click', () => {
@@ -78,11 +89,7 @@ window.onload = () => {
       alert('Board inválido!');
     } else {
       board.innerHTML = '';
-      if (newSize < 5) {
-        newSize = 5;
-      } else if (newSize > 50) {
-        newSize = 50;
-      }
+      newSize = handleBigNumbers(newSize);
       generateBoard(newSize, board);
     }
   });
