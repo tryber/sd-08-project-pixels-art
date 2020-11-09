@@ -1,0 +1,21 @@
+.color {
+  border: solid 1px black;
+  display: inline-block;
+  height: 60px;
+  margin-bottom: 10px;
+  margin-right: 5px;
+  width: 60px;
+}
+
+.pixel {
+  background-color: white;
+  border: solid black 1px;
+  display: inline-block;
+  height: 40px;
+  margin: 0;
+  width: 40px;
+}
+
+.clear {
+  margin-bottom: 10px;
+}
