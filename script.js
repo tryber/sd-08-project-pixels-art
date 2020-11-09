@@ -37,9 +37,9 @@ for (let i = 0; i <= 3; i += 1) {
 //
 // Adicionando evento de pintura nos pixels no pixelboard;
 //
-let pixelClicked = document.getElementsByClassName('pixel');
+const pixelClicked = document.getElementsByClassName('pixel');
 for (let i = 0; i < pixelClicked.length; i += 1) {
   pixelClicked[i].addEventListener('click', function () {
-  pixelClicked[i].style.backgroundColor = document.querySelector('.color.selected').style.backgroundColor;
+    pixelClicked[i].style.backgroundColor = document.querySelector('.color.selected').style.backgroundColor;
   });
 }
