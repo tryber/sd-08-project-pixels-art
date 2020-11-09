@@ -20,3 +20,12 @@ function pixelBoard () {
   }
 }
 pixelBoard();
+
+function selectColor () {
+  let colorselection = document.querySelectorAll('.color');
+  colorselection.addEventListener('click', function (event) {
+    let index = event.target.className;
+    console.log(index);
+  });
+}
+selectColor();
