@@ -1,4 +1,5 @@
 window.onload = function () {
+  const pixels = document.querySelectorAll('.pixel');
   const pixel = document.getElementsByClassName('color');
   const colors = ['black', 'blue', 'red', 'yellow'];
 
@@ -29,7 +30,6 @@ window.onload = function () {
   }
   eventPalette();
   function changePixelColor() {
-    const pixels = document.querySelectorAll('.pixel');
     for (let i = 0; i < pixels.length; i += 1) {
       pixels[i].addEventListener('click', function () {
         pixels[i].style.backgroundColor = document.querySelector(
@@ -39,4 +39,13 @@ window.onload = function () {
     }
   }
   changePixelColor();
+  function clearPixels() {
+    const btnClear = document.getElementById('clear-board');
+    btnClear.addEventListener('click', function () {
+      for (let i = 0; i < pixels.length; i += 1) {
+        pixels[i].style.backgroundColor = 'white';
+      }
+    });
+  }
+  clearPixels();
 };
