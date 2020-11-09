@@ -7,6 +7,8 @@
 
 #pixel-board {
   width: 210px;
+  position: relative;
+  visibility: visible;
 }
 
 .pixel {
