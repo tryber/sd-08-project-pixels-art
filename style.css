@@ -53,3 +53,7 @@ input {
 #clear-board:hover {
   background-color: lightskyblue;
 }
+
+.bordao {
+  border: 3px solid white;
+}

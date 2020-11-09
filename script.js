@@ -42,11 +42,11 @@ function boardGenerator(n) {
   }
 }
 
-function paleteGeneretor(n) {
+function paleteGeneretor() {
   let paleta = document.querySelector("#color-palette");
   let lista = document.querySelector("#color-list");
 
-  for (let i = 0; i < n; i++) {
+  for (let i = 0; i < 4; i++) {
     let cor = document.createElement("div");
     cor.classList.add("color");
 
@@ -57,6 +57,7 @@ function paleteGeneretor(n) {
     cor.addEventListener("click", (e) => {
       removeAllPrevSelected();
       e.target.classList.add("selected");
+      e.target.classList.add("bordao");
     });
     let backCor;
     backCor = i === 0 ? "black" : generateRandomColor();
@@ -74,6 +75,7 @@ function removeAllPrevSelected() {
   let cor = document.querySelectorAll(".color");
   cor.forEach((e) => {
     e.classList.remove("selected");
+    e.classList.remove("bordao");
   });
 }
 
