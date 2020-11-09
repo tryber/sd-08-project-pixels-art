@@ -75,7 +75,6 @@ function cleanPixels (){
             const pixelLocal = document.getElementsByClassName("pixel");
             for (let i=0; i<pixelLocal.length; i+=1) {
                 pixelLocal[i].style.backgroundColor = "white"
-                document.getElementsByClassName(".trigged").className = "";
             }
             bottonLocal.className = "";
         }
