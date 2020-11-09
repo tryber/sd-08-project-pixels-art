@@ -40,7 +40,10 @@
   background-color: white;
   border: 1px solid;
   display: inline-block;
-  height: 40px;
   margin: 0px;
   padding: 50px;
+}
+
+tr.pixel {
+    height: 40px;
 }
