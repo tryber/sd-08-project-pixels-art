@@ -8,3 +8,19 @@ function fillingInPalette() {
   }
 }
 fillingInPalette();
+
+// Requirements 4 and 5
+let pixelBoard = document.getElementById('pixel-board');
+
+function createPixels(width) {
+  let pixelsTotal = Math.pow(width, 2);
+
+  for (let index = 0; index < pixelsTotal; index += 1) {
+    let pixel = document.createElement('button');
+    pixel.className = 'pixel';
+    pixel.style.backgroundColor = 'white';
+    pixelBoard.appendChild(pixel);
+  }
+}
+
+createPixels(5);

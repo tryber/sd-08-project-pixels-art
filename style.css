@@ -3,19 +3,31 @@ body {
 }
 
 #color-palette {
-display: inline-flex;
-flex-wrap: wrap;
+  display: inline-flex;
+  flex-wrap: wrap;
 }
 
 .color {
-width: 70px;
-height: 70px;
-border: solid 1px black;
+  width: 70px;
+  height: 70px;
+  border: solid 1px black;
 }
 
 #color1 {
   border-radius: 10px 0px 0px 10px;
 }
 #color4 {
-  border-radius: 0px 10px 10px 0px; 
+  border-radius: 0px 10px 10px 0px;
+}
+
+#pixel-board {
+  width: 200px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.pixel {
+  width: 40px;
+  height: 40px;
+  border: solid 1px black;
 }
