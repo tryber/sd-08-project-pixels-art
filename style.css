@@ -2,8 +2,8 @@
 .color {
   border: solid 1px black;
   display: inline-block;
-  width: 100px;
-  height: 100px;
+  width: 60px;
+  height: 60px;
   margin-right: 5px;
 }
 #pixel-board {
@@ -15,5 +15,6 @@
   height: 40px;
   margin: 0;
   border: solid black 1px;
+  display: inline-block;
 
 }
