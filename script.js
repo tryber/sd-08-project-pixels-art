@@ -178,7 +178,7 @@ paintpallete()
 
 
 
-function pegacor(){
+
 
     let pega1 = document.querySelectorAll(".color")
     let pega2 = document.querySelectorAll(".selected")
@@ -188,21 +188,23 @@ function pegacor(){
             
             
             
-            pega1[i].addEventListener("click",function(){
-                let color = pega1[i].style.backgroundColor
+            pega1[i].addEventListener("click",function(ze){
                 
                 
+               let color = pega1[i].style.backgroundColor
                 console.log(color)
+
 
             
 
             })
             
+            
+            
 
           }
          
-  }
-  pegacor()
+  
 
 
     function aplicacor(){
@@ -213,12 +215,11 @@ function pegacor(){
 
         for(let i = 0 ; i <pegaposi3.length ; i++){
 
-            pegaposi3.addEventListener("click",function(pegacor){
+            pegaposi3[i].addEventListener("click",function(ze){
 
-            if(pegaposi3[i] === pega2){
 
-            pegaposi3.style.backgroundColor = pega2.style.backgroundColor
-}
+            pegaposi3[i].style.background = color
+
 
             
         })
@@ -228,6 +229,7 @@ function pegacor(){
 
     }
     }
+    
     aplicacor()
 
 
