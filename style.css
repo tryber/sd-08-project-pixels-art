@@ -1,15 +1,16 @@
 .color {
   border: 1px solid black;
-  padding: 30px;
   display: inline;
   margin: 5px;
+  margin-left: 50px;
+  padding: 25px;
 }
 table,
 th,
 td {
   border: 1px solid black;
   border-collapse: collapse;
-  padding: 30px;
+  padding: 25px;
   margin: 50px;
 }
 #title {
