@@ -35,5 +35,8 @@
   height: 200px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+#clear-board {
   margin: 10px 0;
 }
