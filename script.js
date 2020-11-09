@@ -1,4 +1,4 @@
-let coresFundo = ['black','red','blue','green', 'yellow']
+let coresFundo = ['black','red','blue','green']
 let palette = document.getElementById('color-palette');
 
 for (let i = 0; i < coresFundo.length; i += 1){
