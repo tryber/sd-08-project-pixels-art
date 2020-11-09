@@ -51,6 +51,21 @@ function colorSelected() {
     }
 }
 
+function getColor() {
+    let getPaleta = document.querySelector('.color.selected');
+    let getColor = getPaleta.style.backgroundColor;
+    return getColor;
+}
+
+function paint() {
+    let getPixel = document.querySelectorAll('.pixel');
+    for (let key of getPixel){
+        key.addEventListener('click', function(event) {
+            event.target.style.backgroundColor = getColor();
+        })
+    }
+}
+
 const colorInit = () => {
     let getPaleta =  document.querySelector('.color');
     getPaleta.classList.add('selected');
@@ -63,6 +78,7 @@ const mainFunction = () => {
     colorInit();
     colorSelected();
     colorSelected();
+    paint();
 }
 
 mainFunction();
