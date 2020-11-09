@@ -39,6 +39,7 @@ const reset = () => {
 };
 document.querySelector(".color").classList.add("selected");
 let seletorDeCores = paletaDeCores.querySelectorAll("div");
+let aquarela = quadroDePixels.querySelectorAll(".pixel");
 for (
   let coresDaPaleta = 0;
   coresDaPaleta < seletorDeCores.length;
@@ -47,5 +48,11 @@ for (
   seletorDeCores[coresDaPaleta].addEventListener("click", () => {
     reset();
     seletorDeCores[coresDaPaleta].classList.add("selected");
+  });
+}
+for (let pixel in aquarela) {
+  aquarela[pixel].addEventListener("click", () => {
+    let cor = document.querySelector(".selected").style.background;
+    aquarela[pixel].style.background = cor;
   });
 }
