@@ -66,3 +66,22 @@ function clearBoard() {
   clearPixels.addEventListener('click', clearPixelsColor);
 }
 clearBoard();
+
+function generateNewBoard() {
+  let VQV = document.getElementById("generate-board");
+
+  VQV.addEventListener('click', function(){
+    let input = document.getElementById("board-size").value;
+    if (input == "" || input < 5 || input > 50) {
+      alert("Board inválido!");
+    }
+    else {
+      const myNode = document.getElementById("pixel-board");
+      while (myNode.firstChild) {
+        myNode.removeChild(myNode.lastChild);
+      }
+      generateBoard(input);
+    }
+  });
+}
+generateNewBoard();
