@@ -20,21 +20,33 @@ ul {
   padding: 5em;
 }
 
-#pixel-board table {
+#button-container {
+  text-align: center;
+  justify-content: space-around;
+}
+
+#button-container button {
+  background-color: antiquewhite;
+  font-size: 2em;
+  width: auto;
+  margin: 5px;
+  border: 3px dashed grey;
+}
+
+#pixel-board {
   display: table;
+  margin-left: auto;
+  margin-right: auto;
   border-collapse: collapse;
-  border-spacing: 0;
   width: 5em;
   height: 5em;
 }
 
 #pixel-board tr,
 td {
-  border-collapse: collapse;
-  border-spacing: 0;
-  width: 40px;
-  height: 40px;
+  max-width: 40px;
+  max-height: 40px;
   padding: 5em;
   border: 1px groove black;
-  background-color: white;
+  background-color: none;
 }
