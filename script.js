@@ -67,3 +67,17 @@ function selectedPalette() {
 }
 
 selectedPalette();
+
+function pixelColorOfSelectedPallete() {
+  const pixelsBoard = document.querySelector('#pixel-board');
+
+  pixelsBoard.addEventListener('click', (event) => {
+    const selectedPalette = document.querySelector('.selected');
+
+    if (selectedPalette !== null) {
+      event.target.style.backgroundColor = selectedPalette.style.backgroundColor;
+    }
+  });
+}
+
+pixelColorOfSelectedPallete();
