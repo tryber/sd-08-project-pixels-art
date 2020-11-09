@@ -32,3 +32,4 @@ for (let altura = 0; altura < 5; altura += 1) {
   }
   quadroDePixels.appendChild(quebraDeLinha);
 }
+document.querySelector('.color').classList.add('selected') 
