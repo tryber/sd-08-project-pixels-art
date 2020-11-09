@@ -1,0 +1,45 @@
+#color-palette {
+  margin: 0px;
+  border-spacing: 0px;
+  border-collapse: collapse;
+}
+
+.color {
+  border: 1px solid;
+  border-color: black;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+}
+
+.black {
+  background-color: black;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+}
+
+#pixel-board {
+  border-collapse: collapse;
+}
+
+.pixel {
+   height: 41px;
+   width: 41px;
+   padding: 0px;
+   border: 1px solid;
+   background-color: white;
+}
+
+#clear-board {
+  margin: 5px;
+}
