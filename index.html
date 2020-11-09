@@ -15,7 +15,7 @@
     </section>
 
     <button id="clear-board">Limpar</button>
-    <input id="board-size" type="number" min="0" />
+    <input id="board-size" type="number" min="0" oninput="validity.valid||(value='');"/>
     <button id="generate-board">VQV</button>
 
     <section id="pixel-board"></section>
