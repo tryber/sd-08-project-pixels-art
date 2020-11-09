@@ -94,8 +94,27 @@ const colorInit = () => {
     getPaleta.classList.add('selected');
 }
 
+function rgbRandon() {
+    let r = parseInt(Math.random() * 255, 0);
+    let g = parseInt(Math.random() * 255, 0);
+    let b = parseInt(Math.random() * 255, 0);
+    let rgb = `rgb(${r}, ${g}, ${b})`;
+    return rgb;
+}
+
+const arrayColors = () => {
+    const contador = 3;
+    let arrayColor = ['black'];
+    for (let x = 0; x < contador; x += 1){
+        let aux = rgbRandon();
+        arrayColor.push(aux);
+    }
+    return arrayColor;
+}
+
 const mainFunction = () => {
-    const colors = ['black', 'green', 'gold', 'orange'];
+    // const colors = ['black', 'green', 'gold', 'orange'];
+    const colors = arrayColors();
     createColors('div', colors);
     createPixels('div', 5);
     colorInit();
