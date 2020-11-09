@@ -31,4 +31,5 @@
   width: var(--pixel-size);
   height: var(--pixel-size);
   float: left;
+  border: 1px solid black;
 }

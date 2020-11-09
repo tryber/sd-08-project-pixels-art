@@ -32,6 +32,6 @@ const pixelBoard = document.getElementById('pixel-board');
 for(let i = 0; i < 25; i++) {
   const pixel = document.createElement('span');
   pixel.className = 'pixel';
-  pixel.style.backgroundColor = getRandomColor();
+  pixel.style.backgroundColor = 'white';
   pixelBoard.appendChild(pixel);
 }
