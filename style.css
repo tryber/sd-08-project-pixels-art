@@ -1,3 +1,7 @@
+* {
+    background-color: grey;
+}
+
 #black{
     background-color:black;
     height: 50px;
@@ -29,7 +33,7 @@
 .color {
     border: black solid 1px;
     display: inline-block;
-    margin-left: 12%;
+    margin-left: 15%;
 }
 
 #title {
@@ -41,8 +45,9 @@
 
     height: 230px;
     width: 230px;
-    background-color: white;
-    margin-left: 12%;
+    background-color: grey;
+    margin-left: 40%;
+    margin-top: 5%;
     display: inline-block;
 }
 
