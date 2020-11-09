@@ -45,9 +45,11 @@ function createBoard () {
         alert("Board inválido!")
     } else {
         let n = parseInt(input.value);
-        if (n > 50 || n<5) {
-            alert("Número Inválido ! Digite um número entre 5 e 50");
+        if (n<0) {
+            alert("Número Inválido !");
         } else {
+            if (n>50) n=50;
+            if (n<5) n=5;
             let board = document.getElementById("pixel-board");
             board.innerHTML = "";
             board.style.width = n*42 + "px";
