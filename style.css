@@ -25,9 +25,9 @@
 .pixel {
   background-color: white;
   border: solid black 1px;
-  height: 41px;
-  margin: 0px;
+  height: 40px;
   width: 40px;
+  padding: 0px;
 }
 
 #pixel-board {
