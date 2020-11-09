@@ -24,12 +24,12 @@
 
 .pixel {
   background-color: white;
-  border: 1px solid black;
-  height: 40px;
+  border: solid black 1px;
+  height: 41px;
   margin: 0px;
   width: 40px;
 }
 
-#pixel-board{
+#pixel-board {
   border-collapse: collapse;
 }
