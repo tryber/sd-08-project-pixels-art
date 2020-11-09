@@ -1,0 +1,29 @@
+* {
+  text-align: center;
+}
+
+#color-palette {
+  height: 40px;
+  width: 200px;
+  display: inline-flex;
+}
+
+#pixel-board {
+  width: 210px;
+  height: 210px;
+  display: inline-flex;
+}
+
+.color {
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  border: black solid 1px
+}
+
+.pixel {
+  width: 40px;
+  height: 40px;
+  border: black solid 1px
+}
+
