@@ -33,7 +33,7 @@ function quadro(){
       for (let indice = 0; indice < largura; indice +=1 ){
         let div = document.createElement('div');
         linhas[index].appendChild(div);
-        div.className = "colunas";
+        div.className = "pixel";
       } 
         
     }
