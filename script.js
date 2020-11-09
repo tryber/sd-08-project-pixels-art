@@ -1,8 +1,3 @@
-function palettaColor () {
-    document.querySelectorAll('.color')[0].style.background = 'black';    
-}
-palettaColor();
-
 let pixelBox = 5;
 function createLines () {
     let divMother = document.querySelector('#pixel-board');    
@@ -30,7 +25,8 @@ window.onload = function () {
     document.querySelectorAll('.color')[0].classList.add('selected');
     document.querySelectorAll('.color')[1].classList.remove('selected');
     document.querySelectorAll('.color')[2].classList.remove('selected');
-    document.querySelectorAll('.color')[3].classList.remove('selected'); 
+    document.querySelectorAll('.color')[3].classList.remove('selected');
+    document.querySelectorAll('.color')[0].style.background = 'black'; 
     document.querySelectorAll('.color')[1].style.background = generateRandomColor();
     document.querySelectorAll('.color')[2].style.background = generateRandomColor();
     document.querySelectorAll('.color')[3].style.background = generateRandomColor();    
