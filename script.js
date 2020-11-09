@@ -1,12 +1,8 @@
-
-
 //Função para criar a paleta de cores
+let colors = [' black', ' red', ' green', ' blue'];
 function colorsPalete() {
-  let colors = [' black selected', ' red', ' green', ' blue'];
   let divPaleta = document.getElementById('color-palette');
-
   for (i = 0; i < colors.length; i++) {
-    
     let divColors = document.createElement('div');
     divPaleta.appendChild(divColors)
     divColors.className = 'color';
@@ -31,4 +27,6 @@ function pixelBoard() {
 };
 pixelBoard();
 
-//Função para selecionar a cor preta
+window.onload = function() {
+  colors[0] += ' selected';
+}
