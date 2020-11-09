@@ -2,6 +2,26 @@ window.onload = function () {
   //Ao carregar a página, a cor preta da paleta já deve estar selecionada para pintar os pixels.
   let blackElement = document.getElementById('color-pallet0');
   blackElement.className = 'color selected';
+  //Fim exercício 6
+
+  //Ao clicar em uma das cores da paleta, a cor selecionada é que vai ser usada para preencher os pixels no quadro.
+  const divColorPallet = document.getElementById('color-palette');
+  const colorList = document.querySelectorAll('.color');
+
+  divColorPallet.addEventListener('click', selectColor);
+
+  function selectColor(event) {
+    removeColorSelection();
+    event.target.className = "color selected";
+  }
+
+  function removeColorSelection() {
+    for (let color = 0; color < colorList.length; color += 1) {
+      colorList[color].classList.remove('selected');
+    }
+  }
+  //Fim exercício 7
+
 };
 
 // Cria a paleta de cores
