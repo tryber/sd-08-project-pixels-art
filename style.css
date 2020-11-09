@@ -10,3 +10,14 @@
   border-width: 1px;
   display: inline-block;
 }
+
+
+.pixel {
+  width: 40px;
+  height: 40px;
+  margin: 1px;
+  background-color: white;
+  border-style: solid;
+  display: inline-block;
+
+}
