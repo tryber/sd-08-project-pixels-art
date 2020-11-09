@@ -57,12 +57,13 @@ h1 {
 #pixel-board {
   margin: 0 auto;
   margin-top: 20px;
-  width: 200px;
-  height: 200px;
-  border: black 1px solid;
+  max-width: 220px;
+  max-height: 220px;
 }
 
 .pixel {
+  background: white;
+  display: inline-block;
   width: 40px;
   height: 40px;
   border: black 1px solid;
