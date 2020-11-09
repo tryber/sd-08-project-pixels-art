@@ -27,15 +27,24 @@ for (let row = 0; row < boardSize; row += 1) {
   }
 }
 
-// Selecionar a cor da peleta
+// Eventos
 document.addEventListener('click', function (event) {
+  // Seleciona a cor
   if (event.target.classList.contains('color')) {
     const selectedColor = document.querySelector('.selected');
     selectedColor.className = 'color';
     event.target.className = 'color selected';
   }
+  // Pinta o pixel com a cor selecionada
   if (event.target.classList.contains('pixel')) {
-    let applyColor = document.querySelector('.selected').style.backgroundColor;
+    const applyColor = document.querySelector('.selected').style.backgroundColor;
     event.target.style.backgroundColor = applyColor;
+  }
+  // Limpa o quadro
+  if (event.target.classList.contains('btn-clear')) {
+    const pixel = document.getElementsByClassName('pixel');
+    for (let index = 0; index < pixel.length; index += 1) {
+      pixel[index].removeAttribute('style');
+    }
   }
 });
