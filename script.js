@@ -1,4 +1,4 @@
-window.onload = function() {
+window.onload = () => {
   let board = document.getElementById("pixel-board");
   let palette = document.getElementById("color-palette");
   let clearButton = document.getElementById("clear-board");
