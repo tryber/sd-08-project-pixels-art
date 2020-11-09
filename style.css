@@ -1,27 +1,27 @@
-.cor1{
+.color-black{
     border: 1px black solid;
     width: 90px;
     height: 90px;
     background-color: black;
 }
    
-.cor2{
+.color-green{
     border: 1px black solid;
     width: 90px;
     height: 90px;
-    background-color: rgb(19, 19, 208);
+    background-color: green;
 }
 
-.cor3{
+.color-red{
     border: 1px black solid;
     width: 90px;
     height: 90px;
-    background-color: rgb(223, 18, 18);
+    background-color: red;
 }
 
-.cor4{
+.color-blue{
     border: 1px black solid;
     width: 90px;
     height: 90px;
-    background-color: rgb(121, 236, 6);
+    background-color: blue;
 }
