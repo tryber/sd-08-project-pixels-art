@@ -78,7 +78,7 @@ clearButton.addEventListener('click', clearBoard);
 
 // Removes all board children when called
 function removeBoard() {
-  let lines = board.children;
+  const lines = board.children;
   for (let i = 0; lines[i];) {
     board.removeChild(lines[i]);
   }
@@ -87,7 +87,7 @@ function removeBoard() {
 // Stores input value
 function valueStorage() {
   const input = document.querySelector('#board-size');
-  const storedValue = parseInt(input.value);
+  const storedValue = parseInt(input.value, 10);
   boardSize = storedValue;
   if (boardSize < 5) {
     input.value = '5';
@@ -98,13 +98,13 @@ function valueStorage() {
 // Generates blocks within line
 function blockGen(n) {
   for (let i = 0; i < n; i += 1) {
-    let div = document.createElement('div');
+    const div = document.createElement('div');
     div.className = 'pixel';
-    board.lastElementChild.appendChild(div)
+    board.lastElementChild.appendChild(div);
   }
 }
 
-// Generates lines 
+// Generates lines
 function lineGen(n) {
   for (let i = 0; i < n; i += 1) {
     const div = document.createElement('div');
@@ -130,13 +130,13 @@ function sizeValidate() {
   } else if (boardSize < 5) {
     boardSize = 5;
   } else if (boardSize > 50) {
-      boardSize = 50;
+    boardSize = 50;
   }
 }
 
 // Regenerates board
 genButton.addEventListener('click', () => {
-  valueStorage()
-  sizeValidate()
-  regenBoard()
+  valueStorage();
+  sizeValidate();
+  regenBoard();
 });
