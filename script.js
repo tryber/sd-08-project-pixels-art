@@ -48,3 +48,12 @@ function changeSelectedColor (){
     });
 }
 changeSelectedColor();
+
+function changeColorPixel (){    
+    const pixelLocal = document.getElementById("pixel-board");
+    pixelLocal.addEventListener("click", function (event){
+        let colorSelected = document.querySelector(".selected");
+        event.target.style.backgroundColor = colorSelected.style.backgroundColor;
+    });
+}
+changeColorPixel();
