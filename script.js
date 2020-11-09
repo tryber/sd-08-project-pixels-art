@@ -22,7 +22,6 @@ function mudaCor(evt) {
   const removeSelected = document.querySelector('.selected');
   removeSelected.className = 'color';
   evt.target.className = 'color selected';
-
 }
 
 function criaPalette() {
@@ -33,7 +32,6 @@ function criaPalette() {
     if (i === 1) {
       divChildPallet.style.backgroundColor = primeiroPallet;
       divChildPallet.className = 'color selected';
-
     } else {
       divChildPallet.style.backgroundColor = getRandomColor();
     }
