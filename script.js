@@ -12,3 +12,17 @@ function colorsPalete() {
 }
 colorsPalete();
 
+function pixelBoard() {
+  
+  let divPixelBoard = document.getElementById('pixel-board');
+  for (i = 0; i < 5; i++) {
+    let divPixelsLinha = document.createElement('div');
+    divPixelBoard.appendChild(divPixelsLinha);
+    for (j = 0; j < 5; j++) {
+      let divPixels = document.createElement('div');
+      divPixelBoard.appendChild(divPixels);
+      divPixels.className = 'pixel';
+    };
+  };
+};
+pixelBoard();

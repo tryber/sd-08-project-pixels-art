@@ -24,3 +24,12 @@ h1 {
 #color-palette {
   text-align: center;
 }
+#pixel-board {
+  border: 1px solid black;
+}
+.pixel {
+  display: table-cell;
+  border: 1px solid black;
+  width: 40px;
+  height: 40px;
+}
