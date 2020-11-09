@@ -1,39 +1,41 @@
 * {
   margin: 0;
+  box-sizing: border-box;
 }
 
 .color {
-  display: inline-block;
   border: 1px solid black;
   border-radius: 100%;
-  width: 60px;
+  display: inline-block;
   height: 60px;
+  width: 60px;
+  
 }
 
-#first-color {
+div#first-color {
   background-color: black !important;
 }
-#color2 {
+div#color2 {
   background-color: blue;
 }
 
-#color3 {
+div#color3 {
   background-color: chartreuse;
 }
 
-#color4 {
+div#color4 {
   background-color: crimson;
 }
 
-#pixel-board {
-  width: 210px;
-  
-
+div#pixel-board {
+  width: 200px;
+  height: fit-content;
 }
+
 .pixel {
-  width: 40px;
+  border: 1px solid black;
+  display: inline-block;
   height: 40px;
   margin: 0;
-  display: inline-block;
-  border: 1px solid black;
+  width: 40px;
 }
