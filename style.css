@@ -8,7 +8,7 @@
 
 .linha {
   display: block;
-  margin: 0px;
+  margin: 0;
 }
 
 .pixel {
@@ -16,26 +16,26 @@
   height: 40px;
   display: inline-block;
   border: 1px solid black;
-  margin: 0px;
-  background-color: rgb(255, 255, 255);
+  margin: 0;
+  background-color: white;
 }
 
-#paleta1 {
+.paleta1 {
   background-color: black;
 }
 
-#paleta2 {
+.paleta2 {
   background-color: red;
 }
 
-#paleta3 {
+.paleta3 {
   background-color: green;
 }
 
-#paleta4 {
+.paleta4 {
   background-color: blue;
 }
 
 #pixel-board {
-  margin: 20px 0px 0px 30px;
+  margin: 20px 0 0 30px;
 }

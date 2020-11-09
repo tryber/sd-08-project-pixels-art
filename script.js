@@ -1,10 +1,10 @@
 window.onload = function () {
-  let paletas = document.querySelectorAll('.color');
-  let pixels = document.querySelectorAll('.pixel');
-  let botaoLimpar = document.querySelector('#clear-board');
+  const paletas = document.querySelectorAll('.color');
+  const pixels = document.querySelectorAll('.pixel');
+  const botaoLimpar = document.querySelector('#clear-board');
 
   function deselecionaPaletas() {
-    for (let index = 0; index < paletas.length; index++) {
+    for (let index = 0; index < paletas.length; index += 1) {
       if (paletas[index].classList.contains('selected')) {
         paletas[index].classList.remove('selected');
       }
@@ -17,23 +17,23 @@ window.onload = function () {
   }
 
   function pintarPixel(elemento) {
-    let paletaSelecionada = document.querySelector('.selected');
-    let corSelecionada = window
+    const paletaSelecionada = document.querySelector('.selected');
+    const corSelecionada = window
       .getComputedStyle(paletaSelecionada, null)
       .getPropertyValue('background-color');
     elemento.target.style.backgroundColor = corSelecionada;
   }
 
-  for (let index = 0; index < paletas.length; index++) {
+  for (let index = 0; index < paletas.length; index += 1) {
     paletas[index].addEventListener('click', selecionaPaleta);
   }
 
-  for (let index = 0; index < pixels.length; index++) {
+  for (let index = 0; index < pixels.length; index += 1) {
     pixels[index].addEventListener('click', pintarPixel);
   }
 
   function limparPixels() {
-    for (let index = 0; index < pixels.length; index++) {
+    for (let index = 0; index < pixels.length; index += 1) {
       pixels[index].style.backgroundColor = 'rgb(255, 255, 255)';
     }
   }
