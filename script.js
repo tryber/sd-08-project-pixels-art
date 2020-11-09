@@ -1,7 +1,7 @@
 const colorPalette = document.getElementById('color-palette');
 
 const colors = [];
-for (let i = 0; i < 20; i++) {
+for (let i = 0; i < 3; i++) {
   let currentColor = null;
   do {
     currentColor = getRandomColor();
