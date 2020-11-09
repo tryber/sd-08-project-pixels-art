@@ -1,38 +1,32 @@
+#title {
+    color: red;
+}
+
 #color-palette {
   background-color: salmon;
   margin: 0;
   padding: 0;
-  
 }
 
-.color-black {
+.color{
+  display: inline-block;
+  border: 1px solid;
+  margin: 25px;
+  padding: 50px;
+}
+
+.black {
   background-color: black;
-  border: 1px solid;
-  display: inline-block;
-  margin: 25px;
-  padding: 50px;
 }
 
-.color-red {
+.red {
   background-color: red;
-  border: 1px solid;
-  display: inline-block;
-  margin: 25px;
-  padding: 50px;
 }
 
-.color-green {
+.green {
   background-color: green;
-  border: 1px solid;
-  display: inline-block;
-  margin: 25px;
-  padding: 50px;
 }
 
-.color-blue {
+.blue {
   background-color: blue;
-  border: 1px solid;
-  display: inline-block;
-  margin: 25px;
-  padding: 50px;
 }
