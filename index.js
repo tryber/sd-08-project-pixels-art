@@ -1,9 +1,10 @@
-window.onload = function () {
+function startLoad() {
   let pixels = document.getElementsByClassName('pixel');
   for (let index = 0; index < pixels.length; index +=1) {
     pixels[index].style.backgroundColor = 'white';
   }
 }
+startLoad();
 
 /* Selecione as cores das paletas de cores */
 function setColorTwo(color) {
@@ -25,3 +26,11 @@ function setColorFour(color) {
 setColorFour();
 
 /**/
+
+function setPixelColor(color) {
+
+  let pixel = document.getElementsByClassName('pixel')[0];
+  pixel.style.backgroundColor = color;
+
+}
+
