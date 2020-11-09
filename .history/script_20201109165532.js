@@ -1,0 +1,24 @@
+function nameColor(){
+   let colorBox ="black"
+  if (colored.classList[3]!=null){
+     colorBox = colored.classList[3];
+  } else {
+     colorBox = colored.classList[2];
+  }
+  return colorBox;
+}
+
+const colored = document.querySelector('.color');
+function toggleColor(){
+    let colorOfEvent = nameColor();
+    let colorOfSelector = nameColor(document.querySelector('.selected'));
+    console.log(colorOfEvent);
+    if (document.querySelector('.selected') != Event){
+      document.querySelector('.selected').className = "color box "+ colorOfSelector;
+      Event.classList.className = "color box selected "+colorOfEvent ;
+    } else{
+      console.log("cor já selecionada");
+    }
+}
+
+colored.addEventListener.children('click',toggleColor())
