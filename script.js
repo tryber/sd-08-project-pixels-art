@@ -1,5 +1,6 @@
 window.onload = function () {
     let pixel_board = document.querySelector('#pixel-board');
+
     let black = document.querySelector(".black");
     black.className += ' selected';
 
@@ -20,6 +21,12 @@ window.onload = function () {
     red.addEventListener('click', selectColor);
     green.addEventListener('click', selectColor);
     yellow.addEventListener('click', selectColor);
+
+    let pixelArray = document.querySelectorAll('.pixel');
+
+    for (pixel of pixelArray) {
+        pixel.addEventListener('click', paintPixel);
+    }
 }
 
 function selectColor(event) {
@@ -27,4 +34,16 @@ function selectColor(event) {
     currentSelected.className = currentSelected.className.replace(" selected", "");
 
     event.target.className += ' selected';
+}
+
+function paintPixel(event) {
+    let color = document.querySelector('.selected').className.split(' ')[1];
+    // event.target.className = event.target.className.replace(event.target.className.split(' ')[1], '');
+    if (event.target.className.split(' ')[1] == null) {
+        event.target.className += ' ' + color;
+}
+    else {
+        event.target.className = event.target.className.replace(event.target.className.split(' ')[1], color);
+    }
+
 }

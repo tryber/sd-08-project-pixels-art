@@ -20,6 +20,21 @@
     padding: 0;
 }
 
+#pixel-board {
+    width: 202px;
+    height: 202px;
+    border: 1px solid #000;
+    line-height: 0;
+}
+
+.pixel {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #000;
+    background-color: #fff;
+}
+
 .black {
     background-color: #000;
 }
@@ -34,19 +49,4 @@
 
 .yellow {
     background-color: yellow;
-}
-
-#pixel-board {
-    width: 202px;
-    height: 202px;
-    border: 1px solid #000;
-    line-height: 0;
-}
-
-.pixel {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    border: 1px solid #000;
-    background-color: #fff;
 }
