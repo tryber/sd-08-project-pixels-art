@@ -14,4 +14,8 @@ function pixelClass() {
     })
   }
 }
+
+function pintaPixel() {
+  
+}
   
