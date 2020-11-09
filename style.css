@@ -24,7 +24,8 @@ h1 {
   
 }
 div#color-palette {
-  margin: 20px;
+  margin-top: 20px;
+  margin-bottom: 25px;
 }
 
 div#color1 {
@@ -34,12 +35,13 @@ div#color1 {
 div#pixel-board {
   height: fit-content;
   margin: auto;
+  margin-top: 25px;
   line-height: 0;
 }
 
-button {
-  margin: 25px;
-  padding: 15px;
+button, input {
+  margin: 10px;
+  padding: 05px;
   color: blue;
   border 1px solid white;
   border-radius: 5px;
@@ -52,6 +54,5 @@ button {
   display: inline-block;
   height: 40px;
   margin: 0;
-  width: 40px;
-  
+  width: 40px;  
 }

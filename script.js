@@ -19,6 +19,7 @@ function criaCores(){
 
 criaCores();
 
+
 function criaPixels(numeroDePixels){
   const board = document.getElementById('pixel-board');
   for (let index = 0; index < Math.pow(numeroDePixels, 2); index += 1){
