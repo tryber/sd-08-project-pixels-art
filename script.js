@@ -20,3 +20,22 @@ function cores(){
 }
     cores();
 
+
+
+let board = 5;
+let largura = board;
+let altura = board;
+
+let linhas = document.getElementsByClassName('line');
+
+function quadro(){
+    for (let index = 0; index < linhas.length; index += 1) {
+      for (let indice = 0; indice < largura; indice +=1 ){
+        let div = document.createElement('div');
+        linhas[index].appendChild(div);
+        div.className = "colunas";
+      } 
+        
+    }
+}
+    quadro();
