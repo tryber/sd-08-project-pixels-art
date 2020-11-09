@@ -3,22 +3,7 @@
     height: 45px;
     width: 45px;
     border: 1px solid black;
-}
-
-#preto {
-    background-color: black;
-}
-
-#azul {
-    background-color: blue;
-}
-
-#verde {
-    background-color: green;
-}
-
-#amarelo {
-    background-color: yellow;
+    margin: 2px;
 }
 
 #pixel-board li {
