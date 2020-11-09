@@ -77,7 +77,7 @@ function pixelColorOfSelectedPallete() {
     const selectedColor = document.querySelector('.selected');
 
     if (selectedColor !== null) {
-      event.target.style.backgroundColor = selectedPalette.style.backgroundColor;
+      event.target.style.backgroundColor = selectedColor.style.backgroundColor;
     }
   });
 }
