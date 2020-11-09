@@ -14,10 +14,9 @@ body {
 
 
 
-#color-1 {
+/* #color-1 {
     width: 100px;
     height: 100px;
-    
     background-color: black;
 }
 
@@ -37,11 +36,15 @@ body {
     width: 100px;
     height: 100px;
     background-color:green;
-}
+} */
 
 a {
-    margin: 1px;
-    border-style: solid ;
-    border-color: black;
-    
+	/* margin: 1px;
+  border-style: solid ;
+  border-color: black;
+  */
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  border: 1px solid black;
 }
