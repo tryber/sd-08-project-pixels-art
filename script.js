@@ -1,40 +1,38 @@
-const black = document.querySelector(".black");
-const blue = document.querySelector(".blue");
-const pink = document.querySelector(".pink");
-const yellow = document.querySelector(".yellow");
-
-black.addEventListener("click", changeSelector)
-blue.addEventListener("click", changeSelector)
-pink.addEventListener("click", changeSelector)
-yellow.addEventListener("click", changeSelector)
+const black = document.querySelector('.black');
+const blue = document.querySelector('.blue');
+const pink = document.querySelector('.pink');
+const yellow = document.querySelector('.yellow');
 
 function changeSelector() {
-    black.classList.remove("selected")
-    blue.classList.remove("selected")
-    pink.classList.remove("selected")
-    yellow.classList.remove("selected")
-
-    this.classList.add("selected")
+  black.classList.remove('selected');
+  blue.classList.remove('selected');
+  pink.classList.remove('selected');
+  yellow.classList.remove('selected');
+  this.classList.add('selected');
 }
 
-const pixel = document.querySelectorAll(".pixel")
+black.addEventListener('click', changeSelector)
+blue.addEventListener('click', changeSelector)
+pink.addEventListener('click', changeSelector)
+yellow.addEventListener('click', changeSelector)
 
-for (let i = 0; i < pixel.length; i += 1) {
-    pixel[i].addEventListener("click", changeColor)
-}
+const pixel = document.querySelectorAll('.pixel');
 
 function changeColor() {
-    let selected = window.getComputedStyle(document.querySelector(".selected")).backgroundColor;
-    
-    this.style.backgroundColor = selected;
+  const selected = window.getComputedStyle(document.querySelector('.selected')).backgroundColor;
+  this.style.backgroundColor = selected;
 }
 
-const button = document.querySelector(".button")
+for (let i = 0; i < pixel.length; i += 1) {
+  pixel[i].addEventListener('click', changeColor);
+}
 
-button.addEventListener("click", clearColors);
+const button = document.querySelector('.button');
 
 function clearColors() {
-    for (let i = 0; i < pixel.length; i += 1) {
-        pixel[i].style.backgroundColor = "white";
-    }
+  for (let i = 0; i < pixel.length; i += 1) {
+    pixel[i].style.backgroundColor = 'white';
+  }
 }
+
+button.addEventListener('click', clearColors);
