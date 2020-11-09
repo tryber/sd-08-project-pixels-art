@@ -1,0 +1,34 @@
+header h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:aqua;
+}
+#color-palette {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.color {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border: 1px solid black;
+}
+
+.color.black {
+    background-color: black;
+}
+
+.color.red {
+    background-color: rgb(214, 21, 21);
+}
+
+.color.blue {
+    background-color: rgb(14, 14, 218);
+}
+
+.color.green {
+    background-color: rgb(20, 204, 20);
+}
