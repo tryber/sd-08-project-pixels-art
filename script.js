@@ -11,7 +11,7 @@ function createPaleteColorEle(){
     
         createele.style.backgroundColor = "black"
         createele.className = "color"
-        createele.innerHTML = "Zin"
+       
         
         getpos.appendChild(createele)
     }
@@ -19,7 +19,7 @@ function createPaleteColorEle(){
       
         createele.style.backgroundColor = "red"
         createele.className = "color"
-        createele.innerHTML = "Zin"
+        
         
         getpos.appendChild(createele)
     }
@@ -27,7 +27,7 @@ function createPaleteColorEle(){
         
         createele.style.backgroundColor = "blue"
         createele.className = "color"
-        createele.innerHTML = "Zin"
+       
       
         getpos.appendChild(createele)
     }
@@ -35,7 +35,7 @@ function createPaleteColorEle(){
         
         createele.style.backgroundColor = "pink"
         createele.className = "color"
-        createele.innerHTML = "Zin"
+        
       
         getpos.appendChild(createele)
 
@@ -53,3 +53,18 @@ function createPaleteColorEle(){
  
 }
 createPaleteColorEle()
+
+
+function createQuadroPixel(){
+    let getposi = document.querySelector("#pixel-board")
+    for(let i = 0; i < 5 ; i++){
+        for(let i1 = 0 ; i1 < 5 ; i1 ++){
+            
+        }
+        let createpixel = document.createElement("div")
+        createpixel.className = "pixel"
+        
+        getposi.appendChild(createpixel)
+    }
+}
+createQuadroPixel()
