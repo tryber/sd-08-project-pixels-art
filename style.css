@@ -3,6 +3,10 @@
     padding:0;
     box-sizing: border-box;
 }
+.container {
+    background: #ccc;
+    height: 100vh;
+}
 body{
     text-align: center;
 }
@@ -23,4 +27,17 @@ body{
     height: 50px;
     border:1px solid black;
     display: inline-block;
+}
+
+#pixel-board{
+    border-collapse: collapse;
+    margin: 30px auto;
+}
+
+.pixel{
+    width:40px;
+    height: 40px;
+    border:1px solid black;
+    padding: 0;
+    background:white;
 }
