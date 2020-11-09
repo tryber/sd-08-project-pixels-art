@@ -86,4 +86,9 @@ for(let index = 0; index < pixelsArray.length; index +=1){
 
 //bibliografia para resolver o requisito acima: https://www.w3schools.com/jsref/jsref_getcomputedstyle.asp
 
-
+let button = document.getElementById('clear-board');
+button.addEventListener('click',function(){
+    for(let index = 0; index < pixelsArray.length; index +=1){
+        pixelsArray[index].style.backgroundColor = "white"
+    }
+})
