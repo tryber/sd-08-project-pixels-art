@@ -1,4 +1,11 @@
+#title {
+  text-align: center;
+}
 
+#color-palette {
+  text-align: center;
+  margin-left: -1.8em;
+}
 
 .color {
   border: 1px solid black;
@@ -22,4 +29,9 @@
 
 .black {
   background-color: black;
+}
+
+#pixel-board {
+  text-align: center;
+  margin: auto;
 }
