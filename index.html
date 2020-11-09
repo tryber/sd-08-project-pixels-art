@@ -8,16 +8,20 @@
   </head>
   <body>
     <h1 id="title">Paleta de Cores</h1>
+
+    <ul id="color-list"></ul>
+
+    <div id="color-palette"></div>
+
     <input
-      type="text"
+      type="number"
+      min="1"
       name="boardSize"
       id="board-size"
       placeholder="Digite o tamanho do board entre 5 e 50"
     />
     <button id="generate-board">VQV</button>
-    <ul id="color-list"></ul>
-    <div id="clear-board">Limpar</div>
-    <div id="color-palette"></div>
+    <button id="clear-board">Limpar</button>
     <div id="pixel-board"></div>
 
     <script src="script.js"></script>

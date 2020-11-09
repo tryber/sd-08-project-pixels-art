@@ -1,7 +1,7 @@
 window.onload = function () {
   boardGenerator(5);
-  applyInputValue();
   adicionarClickBotaoLimpar();
+  applyInputValue();
 };
 
 function adicionarClickBotaoLimpar() {
@@ -92,6 +92,9 @@ function applyInputValue() {
 
   botao.addEventListener("click", () => {
     var size = pegaValor();
+    if (size === "") {
+      return alert("Board inválido!");
+    }
     console.log(clearBoardList());
     boardGenerator(size);
   });
