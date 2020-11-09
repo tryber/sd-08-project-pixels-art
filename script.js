@@ -83,22 +83,11 @@ document.querySelectorAll('.color')[3].addEventListener('click', function eventC
         }            
     }    
 });
-
-document.querySelector('#pixel-board').addEventListener('click', function changeColorPixel (event) {
-    event.target.style.background = document.querySelector('.selected').style.background;
-});
-
-
-document.querySelector('#clear-board').addEventListener('click', function clearPixel() {
-    for (let i = 0; i < document.querySelectorAll('.pixel').length; i += 1) {
-        document.querySelectorAll('.pixel')[i].style.background = '';
-    }
-});
  
 document.querySelector('#generate-board').addEventListener('click', function inputValue(){    
     if (document.querySelector('#board-size').value == '') {
-        alert("Deve ser um valor positivo!");
-    }
+        alert("Board inválido!");
+    }    
     if (document.querySelector('#board-size').value < 5) {
         document.querySelector('#board-size').value = 5;
     } 
@@ -113,6 +102,19 @@ document.querySelector('#generate-board').addEventListener('click', function inp
     console.log(pixelBox);
     createLines();
     createPixels();
+    document.querySelector('#pixel-board').addEventListener('click', function changeColorPixel (event) {
+        event.target.style.background = document.querySelector('.selected').style.background;
+    });
 });
 
+document.querySelector('#pixel-board').addEventListener('click', function changeColorPixel (event) {
+    event.target.style.background = document.querySelector('.selected').style.background;
+});
+
+
+document.querySelector('#clear-board').addEventListener('click', function clearPixel() {
+    for (let i = 0; i < document.querySelectorAll('.pixel').length; i += 1) {
+        document.querySelectorAll('.pixel')[i].style.background = '';
+    }
+});
 
