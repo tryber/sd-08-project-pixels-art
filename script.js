@@ -32,4 +32,20 @@ for (let altura = 0; altura < 5; altura += 1) {
   }
   quadroDePixels.appendChild(quebraDeLinha);
 }
-document.querySelector('.color').classList.add('selected') 
+const reset = () => {
+  for (let item in seletorDeCores) {
+    seletorDeCores[item].className = "color";
+  }
+};
+document.querySelector(".color").classList.add("selected");
+let seletorDeCores = paletaDeCores.querySelectorAll("div");
+for (
+  let coresDaPaleta = 0;
+  coresDaPaleta < seletorDeCores.length;
+  coresDaPaleta += 1
+) {
+  seletorDeCores[coresDaPaleta].addEventListener("click", () => {
+    reset();
+    seletorDeCores[coresDaPaleta].classList.add("selected");
+  });
+}
