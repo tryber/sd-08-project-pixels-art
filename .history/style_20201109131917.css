@@ -1,0 +1,21 @@
+
+.color{
+  border: 1px solid black;
+  width: 40px;
+  height: 40px;
+  margin: 10px auto;
+  text-align: center;
+  display: flex;
+}
+#black {
+  background-color: black;
+}
+#blue {
+  background-color: blue;
+}
+#yellow {
+  background-color: yellow;
+}
+#red {
+  background-color: red;
+}
