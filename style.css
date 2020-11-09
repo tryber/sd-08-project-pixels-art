@@ -1,0 +1,29 @@
+.color {
+  border: 1px solid black;
+  padding: 30px;
+  display: inline;
+  margin: 5px;
+}
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding: 30px;
+  margin: 50px;
+}
+#title {
+  margin-bottom: 50px;
+}
+#cor1 {
+  background-color: black;
+}
+#cor2 {
+  background-color: yellow;
+}
+#cor3 {
+  background-color: red;
+}
+#cor4 {
+  background-color: blue;
+}
