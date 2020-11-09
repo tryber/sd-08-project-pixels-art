@@ -12,3 +12,7 @@
     display: table-cell;
     background-color: white;
 }
+
+.clean-board{
+    margin-bottom: 5px;
+}
