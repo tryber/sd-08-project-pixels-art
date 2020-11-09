@@ -1,3 +1,31 @@
+body {
+    margin: 0;
+    background-color: #3d3d3d;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
 #title {
     font-family: 'Ubuntu', sans-serif;
+    color: white;
+    text-align: center;
+    margin: 50px;
+}
+
+#color-palete{
+    text-align: center;
+    width: 25%;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.color {
+    border: 2px solid black;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 10px;
 }
