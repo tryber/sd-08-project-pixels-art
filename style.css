@@ -35,7 +35,7 @@ div, .black, .red, .green, .blue{
     background-color: white;
     width: 40px;
     height: 40px;
-    
+    border: black solid 1px;
 }
 #pixel-board {
     width: 210px;
