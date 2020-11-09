@@ -38,7 +38,7 @@ body {
     background-color:green;
 } */
 
-a {
+.color {
 	/* margin: 1px;
   border-style: solid ;
   border-color: black;
@@ -47,4 +47,23 @@ a {
   height: 100px;
   margin: auto;
   border: 1px solid black;
+}
+
+#pixel-board {
+	display: flex;
+	flex-direction: row;
+	margin-top: 50px;
+	gap: 0px;
+	width: 600px;
+  height: 500px;
+  /* margin: auto; */
+  /* border: 1px solid black; */
+}
+
+.pixel {
+	display: block;
+	width: 100px;
+  height: 100px;
+  margin: auto;
+	border: 2px solid black;
 }
