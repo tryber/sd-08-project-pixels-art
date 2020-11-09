@@ -30,15 +30,13 @@ window.onload = function(){
     setPixelBoard();
 
     //Pintar pixels
-    function getThisColor(){
-        let color = "black";
-        let thisColor = querySelectorAll(".color");
-            for(index = 0; thisColor > index; index+=1){
-                thisColor[index].addEventListener("click", function(){
-                    color = getBackgroundColor();
-                    console.log ("clicou na cor" + setBackgroundColor());
-                })
-             }
-    }
-    getThisColor(setBackgroundColor());
+    // function getThisColor(){
+    //     let color = "black";
+    //     let thisColor = document.querySelectorAll(".color");
+    //             thisColor.addEventListener("click", function(){
+    //                 color = setBackgroundColor();
+    //                 console.log ("clicou na cor" + setBackgroundColor());
+    //             })
+    // }
+    // getThisColor(setBackgroundColor());
 }
