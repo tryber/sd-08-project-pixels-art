@@ -1,30 +1,31 @@
 ul li {
   display: inline;
 }
-button{
+button {
   border: 1px solid black;
-  width: 50px;
   height: 50px;
+  width: 50px;
 }
 
-#color1{
+#cor1 {
   background: black;
 }
 
-#color2{
+#cor2 {
   background: rgb(0, 119, 255);
 }
 
-#color3{
+#cor3 {
   background: red;
 }
 
-#color4{
+#cor4 {
   background: yellow;
 }
 
 .pixel {
+  background: white;
+  border: 1px solid;
   height: 40px;
   width: 40px;
-  border: 1px solid;  
 }
