@@ -24,3 +24,6 @@ function createPixels(width) {
 }
 
 createPixels(5);
+
+// Requirement 6
+let selectedColor = document.getElementById('color1');
