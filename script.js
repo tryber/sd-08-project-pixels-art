@@ -6,4 +6,16 @@ function title(){
 }
 
     title();
+
+let cor = ['black', 'purple', 'red', 'green'];
+
+function cores(){
+    let lista = document.querySelectorAll('li');
+
+    for (let index = 0; index < lista.length; index +=1){
+        lista[index].innerText =  cor[index];
+    }
+
+}
+    cores();
     
