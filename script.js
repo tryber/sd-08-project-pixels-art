@@ -16,6 +16,7 @@ function criaPixels (n) {
         document.getElementById("pixel-board").appendChild(pixel);
     }
 }
+criaPixels(5);
 
 function selectColor (event) {
     let selected = document.getElementsByClassName("selected");
@@ -42,16 +43,17 @@ function createBoard () {
     let input = document.querySelector("#board-size");
     if (input.value === ""){
         alert("Board inválido!")
-    }
-    let n = parseInt(input.value);
-    if (n > 50 || n<5) {
-        alert("Número Inválido ! Digite um número entre 5 e 50");
     } else {
-        let board = document.getElementById("pixel-board");
-        board.innerHTML = "";
-        board.style.width = n*42 + "px";
-        board.style.height = n*42 + "px";
-        criaPixels(n);
+        let n = parseInt(input.value);
+        if (n > 50 || n<5) {
+            alert("Número Inválido ! Digite um número entre 5 e 50");
+        } else {
+            let board = document.getElementById("pixel-board");
+            board.innerHTML = "";
+            board.style.width = n*42 + "px";
+            board.style.height = n*42 + "px";
+            criaPixels(n);
+        }
     }
 }
 document.getElementById("generate-board").addEventListener("click",createBoard);
