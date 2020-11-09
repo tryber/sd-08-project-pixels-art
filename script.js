@@ -17,8 +17,10 @@ window.onload = function () {
   }
 
   function pintarPixel(elemento) {
-    let corSelecionada = document.querySelector('.selected').style
-      .backgroundColor;
+    let paletaSelecionada = document.querySelector('.selected');
+    let corSelecionada = window
+      .getComputedStyle(paletaSelecionada, null)
+      .getPropertyValue('background-color');
     elemento.target.style.backgroundColor = corSelecionada;
   }
 
@@ -30,9 +32,9 @@ window.onload = function () {
     pixels[index].addEventListener('click', pintarPixel);
   }
 
-  function limparPixels(){
+  function limparPixels() {
     for (let index = 0; index < pixels.length; index++) {
-        pixels[index].style.backgroundColor = 'rgb(255, 255, 255)';
+      pixels[index].style.backgroundColor = 'rgb(255, 255, 255)';
     }
   }
 
