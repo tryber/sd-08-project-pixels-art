@@ -1,7 +1,8 @@
-window.onload = function() {
+function pixelInicial() {
   let pixelInicial = document.querySelector('#black');
   pixelInicial.className = "color selected";
 };
+pixelInicial();
 
 function pixelClass() {
   let pixelColor = document.querySelectorAll('.color');
@@ -15,25 +16,12 @@ function pixelClass() {
 }
 pixelClass()
 
-function pintaPixel() {
-  let pixels = document.querySelectorAll('.pixel');
-  for (let i = 0; i < pixels.length; i += 1) {
-    let pixel = pixels[i];
-    pixel.addEventListener('click', function(event) {
-      let color = document.querySelector('.color.selected').style.backgroundColor;
-      event.target.style.backgroundColor = color;
-    })
-  }
-}
-pintaPixel()
-
 function limpaPixels() {
   let button = document.getElementById('clear-board');
+  let pixels = document.querySelectorAll('.pixel');
   button.addEventListener('click', function() {
-    let pixels = document.querySelectorAll('.pixel');
     for (let i = 0; i < pixels.length; i += 1) {
-      let pixel = pixels[i];
-      pixel.style.backgroundColor = 'white';
+      pixels[i].style.backgroundColor = 'white';
     }
   })
 }
