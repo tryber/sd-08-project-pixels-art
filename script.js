@@ -50,6 +50,9 @@ function paintPixel(event) {
 function generateBoard() {
     if (board_size.value == null || board_size.value == '') { alert('Board inválido!'); }
     else {
+        if(board_size.value < 5) { board_size.value = 5; }
+        else if(board_size.value > 50) { board_size.value = 50; }
+
         pixelArray = document.querySelectorAll('.pixel');
         let boardSize = parseInt((board_size.value) * 40) + 2;
         boardSize += 'px'
