@@ -6,6 +6,7 @@
   margin-right: 5px;
   width: 60px;
 }
+
 .pixel {
   background-color: white;
   border: solid black 1px;
@@ -14,6 +15,7 @@
   margin: 0;
   width: 40px;
 }
+
 .clear {
   margin-bottom: 10px;
 }
