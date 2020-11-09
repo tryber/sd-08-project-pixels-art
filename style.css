@@ -1,0 +1,8 @@
+.classe {
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+    list-style-type: none;
+    display: inline-block;
+    margin: 10px;
+}
