@@ -37,3 +37,17 @@ for (let lineNumber = 1; lineNumber <= pixelsLineAndColumn[0]; lineNumber += 1) 
 
     document.querySelector('#pixel-board').appendChild(line);
 }
+
+const pixels = document.querySelectorAll('.pixel')
+
+pixels.forEach((pixel) => {
+    pixel.addEventListener('click', () => {
+        const colorToApply = document.querySelector('.selected').style.backgroundColor;
+
+        pixel.style.backgroundColor = colorToApply;
+    });
+});
+
+document.querySelector('#clear-board').addEventListener('click', () => {
+    pixels.forEach(pixel => pixel.style.backgroundColor = 'white');
+});
