@@ -8,6 +8,10 @@
     padding: 0px;
 }
 
+.pixel{
+    background-color: white;
+}
+
 .line{
     line-height: 0px;
 }

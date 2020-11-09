@@ -10,16 +10,19 @@ function title(){
 let cor = ['black', 'purple', 'red', 'green'];
 
 function cores(){
-    let lista = document.getElementsByClassName('color');
+    let lista = document.querySelectorAll('.color');
 
     for (let index = 0; index < lista.length; index +=1){
         lista[index].style.backgroundColor = cor[index];
 
+        lista[index].addEventListener('click', function(event){
+            event.target.classList.add("selected");
+        })
+    
     }
 
 }
     cores();
-
 
 
 let board = 5;
@@ -39,3 +42,4 @@ function quadro(){
     }
 }
     quadro();
+
