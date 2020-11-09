@@ -1,12 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Indie Flower', cursive;
 }
 
 :root {
     font-size: 10px;
+}
+
+body {
+    background-color: rgb(30, 28, 28);
+    color: rgb(220, 215, 215);
+}
+
+header h1 {
+    font-size: 3.5rem;
 }
 
 #color-palette {
@@ -18,6 +29,20 @@
     width: 40px;
     height: 40px;
     margin: 0 2px;
+}
 
-    box-sizing: content-box;
+#pixel-board {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.line {
+    display: flex;
+}
+
+.pixel {
+    border: 1px solid black;
+    width: 40px;
+    height: 40px;
 }
