@@ -1,0 +1,23 @@
+.color {
+    width: 70px;
+    height: 70px;
+    display: inline-block;
+    margin-right: 5px;
+    border: 1px solid black;
+}
+
+#paleta1 {
+    background-color: black;    
+}
+
+#paleta2 {
+    background-color: red;    
+}
+
+#paleta3 {
+    background-color: green;    
+}
+
+#paleta4 {
+    background-color: blue;    
+}
