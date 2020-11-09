@@ -3,35 +3,33 @@
 }
 
 .color {
-    display: inline-block;
-    border: 1px solid;
-    padding: 40px;
+  display: inline-block;
+  border: 1px solid;
+  padding: 40px;
 }
 
 .black {
-    background-color: black;
+  background-color: black;
 }
 
 .blue {
-    background-color: blue;
+  background-color: blue;
 }
 
 .red {
-    background-color: red;
+  background-color: red;
 }
 
 .green{
-    background-color: green;
+  background-color: green;
 }
 
 .pixel{
-    background-color: white;
-    border: 1px solid black;
-    padding: 40px;
-    
-    
+  border: 1px solid black;
+  padding: 40px;  
+  background-color: white;
 }
 
 #pixel-board{
-    
+    background-color: white;
 }
