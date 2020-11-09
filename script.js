@@ -26,3 +26,12 @@ for (let row = 0; row < boardSize; row += 1) {
     pixelCellContainer.appendChild(pixelCell);
   }
 }
+
+// Selecionar a cor da peleta
+document.addEventListener('click', function (event) {
+  let selectedColor = document.querySelector('.selected');
+  selectedColor.className = 'color';
+  if (event.target.classList.contains('color')) {
+    event.target.className = 'color selected';
+  }
+});

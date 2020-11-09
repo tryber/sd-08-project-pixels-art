@@ -16,9 +16,9 @@
 }
 
 .pixel {
-  box-sizing: border-box;
-  border: 1px solid black;
   background: white;
+  border: 1px solid black;
+  box-sizing: border-box;
   display: table-cell;
   height: 40px;
   width: 40px;
