@@ -77,4 +77,10 @@ function changeColorPixel (event) {
     event.target.style.background = document.querySelector('.selected').style.background;
 }
 document.querySelector('#pixel-board').addEventListener('click', changeColorPixel);
+
+document.querySelector('#clear-board').addEventListener('click', function clearPixel() {
+    for (let i = 0; i < document.querySelectorAll('.pixel').length; i += 1) {
+        document.querySelectorAll('.pixel')[i].style.background = '';
+    }
+});
    
