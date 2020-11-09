@@ -24,18 +24,9 @@ function nameColor(colored){
   });
   }
 
-  const button = document.querySelector('button');
-  button.addEventListener('click',function(){
-    for (let i = 0; i <= matrix.length; i++) {
-      matrix[i].className ="box pixel white";
-    }
-  })
-
-
-
   const matrix = document.querySelectorAll('.pixel');
   for (let i = 0; i <= matrix.length; i++) {
-  matrix[i].addEventListener('click',function(){
+  matrix[i].addEventListener('click',function(event){
     let colorOfSelector = nameColor(document.querySelector('.selected'));
     console.log(matrix[i].classList[2]+" =?= "+colorOfSelector)
     if(matrix[i].classList[2] != colorOfSelector){
@@ -43,6 +34,12 @@ function nameColor(colored){
       matrix[i].className = "box pixel " + colorOfSelector ;
       console.log(matrix[i].className)
     }
-  });
+  })
   }
 
+  const button = document.querySelector(button);
+  button.addEventListener('click',function(event){
+    for (let i = 0; i <= matrix.length; i++) {
+      matrix[i].className = "box pixel white";
+    }
+  })

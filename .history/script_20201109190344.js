@@ -27,7 +27,7 @@ function nameColor(colored){
   const button = document.querySelector('button');
   button.addEventListener('click',function(){
     for (let i = 0; i <= matrix.length; i++) {
-      matrix[i].className ="box pixel white";
+      matrix[i].className = "box pixel white";
     }
   })
 
@@ -43,6 +43,6 @@ function nameColor(colored){
       matrix[i].className = "box pixel " + colorOfSelector ;
       console.log(matrix[i].className)
     }
-  });
+  })
   }
 

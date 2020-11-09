@@ -43,6 +43,6 @@ function nameColor(colored){
       matrix[i].className = "box pixel " + colorOfSelector ;
       console.log(matrix[i].className)
     }
-  });
+  })
   }
 
