@@ -1,7 +1,7 @@
 let pxBoard = document.getElementById("pixel-board");
 let size = 5;
 
-let colorVector = ["black", "yellow", "red", "blue"];
+let colorVector = randomColors();
 let colors = document.getElementById("color-palette");
 
 for (let index = 0; index < colors.children.length; index += 1) {
@@ -84,3 +84,19 @@ btnChangeSize.addEventListener("click", function () {
     colorBoard();
   }
 });
+
+function randomColor() {
+  let r = Math.floor(Math.random() * 255);
+  let g = Math.floor(Math.random() * 255);
+  let b = Math.floor(Math.random() * 255);
+  let randColor = `rgb(${r},${g},${b})`;
+  return randColor;
+}
+
+function randomColors() {
+  let colorVect = ["black"];
+  for (let i = 0; i < 3; i += 1) {
+    colorVect.push(randomColor());
+  }
+  return colorVect;
+}
