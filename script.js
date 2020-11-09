@@ -1,4 +1,5 @@
 window.onload = function () {
+  boardGenerator(5);
   applyInputValue();
   adicionarClickBotaoLimpar();
 };
