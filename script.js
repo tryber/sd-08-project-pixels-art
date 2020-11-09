@@ -1,7 +1,3 @@
-// window.onload() {
-//   document.getElementById('tinta1').classList.add('selected');
-// }
-
 // function inputTinta1() {
 //   console.log("botão preto clicado");
 //   document.getElementById("pinta-pixel").style.backgroundColor = "black";
