@@ -32,6 +32,19 @@ window.onload = function () {
   }
   //Fim do exercício 8
 
+  //Crie um botão que, ao ser clicado, limpa o quadro preenchendo a cor de todos seus pixels com branco.
+  const btnClear = document.getElementById('clear-board');
+  const pixelColorList = document.querySelectorAll('.pixel');
+  
+  btnClear.addEventListener('click', clearBoard);
+
+  function clearBoard() {
+    for (let color = 0; color < pixelColorList.length; color += 1) {
+      pixelColorList[color].style.backgroundColor = "white";
+    }
+  }
+  //Fim do exercício 9
+
 };
 
 // Cria a paleta de cores
