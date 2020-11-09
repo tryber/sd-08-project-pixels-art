@@ -1,3 +1,8 @@
+window.onload = function (){
+    let selected = document.querySelector("#black");
+    selected.className('selected')
+};//Função anonima
+
 //função para limpar os pixels
 function limpar() {
   const botao = document.querySelector("#clear-board");
@@ -16,7 +21,7 @@ const black = document.querySelector("#black");
 const blue = document.querySelector("#blue");
 const green = document.querySelector("#green");
 const yellow = document.querySelector("#yellow");
-let cor = 0;
+let cor = 1;
 
 //Função para sombrear cada cor a ser selecionada
 function dayMouseOver() {
