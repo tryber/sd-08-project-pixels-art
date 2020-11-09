@@ -71,3 +71,19 @@ colorsArray[3].addEventListener("click",function(){
     }
     colorsArray[3].className = 'color blue selected';
 })
+
+//colorindo os pixels
+let pixelsArray = document.getElementsByClassName('pixel');
+for(let index = 0; index < pixelsArray.length; index +=1){
+    pixelsArray[index].addEventListener('click', function(){
+      
+            var elem = document.getElementsByClassName('selected')[0];
+            var elemColor = window.getComputedStyle(elem, null).getPropertyValue("background-color");
+        
+            pixelsArray[index].style.backgroundColor = elemColor;
+    })
+}
+
+//bibliografia para resolver o requisito acima: https://www.w3schools.com/jsref/jsref_getcomputedstyle.asp
+
+
