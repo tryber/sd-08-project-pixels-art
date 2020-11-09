@@ -33,6 +33,16 @@ for (color of colors.children) {
   });
 }
 
+function clearBoard() {
+  let pixels = document.querySelectorAll(".pixel");
+  for (let pos = 0; pos < pixels.length; pos += 1) {
+    pixels[pos].style.backgroundColor = "white";
+  }
+}
+
+let btn = document.getElementById("clear-board");
+btn.addEventListener("click", clearBoard);
+
 function colorBoard() {
   for (row of pxBoard.children) {
     for (element of row.children) {
