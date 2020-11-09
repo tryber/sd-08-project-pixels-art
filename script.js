@@ -6,7 +6,7 @@ function colorPalette () {
         let colorBox = document.createElement('div');
         colorBox.className = "color";
         paletteLocal.appendChild(colorBox);
-        
+
         const colorLocal = document.querySelectorAll(".color");
         colorLocal[i].style.backgroundColor = colors[i];
     }
@@ -28,3 +28,7 @@ function createPixels (){
     }    
 }
 createPixels();
+
+function selectedColor (){
+    let colorInicial = document.querySelector("color");
+}

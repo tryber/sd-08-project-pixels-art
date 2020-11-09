@@ -8,8 +8,8 @@
 }
 
 #pixel-board {
-    max-width: 220px;
-    max-height: 220px; 
+    max-width: 210px;
+    max-height: 210px; 
     display: table-row;
 }
 
