@@ -67,11 +67,11 @@ function generateBoard(size, board) {
 
 function createLine(size) {
   let currentColor;
-  let line = document.createElement("div");
+  let line = document.createElement("tr");
   line.className = "pixel-line";
 
   for (let i = 0; i < size; i += 1) {
-    let pixel = document.createElement("div");
+    let pixel = document.createElement("td");
     pixel.className = "pixel";
     pixel.style.backgroundColor = "white";
     pixel.addEventListener('click', event => {

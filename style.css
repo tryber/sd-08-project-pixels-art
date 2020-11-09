@@ -23,6 +23,7 @@ html, body {
 }
 
 #pixel-board {
+  margin: 0 auto;
   display: block;
 }
 
@@ -38,10 +39,6 @@ html, body {
   width: 40px;
   height: 40px;
   border: 1px solid black;
-}
-
-.pixel-line {
-  display: inline-block;
 }
 
 .size-definition {
