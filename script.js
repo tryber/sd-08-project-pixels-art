@@ -1,12 +1,9 @@
-function createDivs() {
     for (index = 0; index < 4; index += 1) {
     let colorPalette = document.getElementById('color-palette');
     let divColor = document.createElement('div');
     colorPalette.appendChild(divColor);
     divColor.className = 'color';
-}
-}
-createDivs();
+
 
 function createColor() {
 let palette = ["black", "blue", "green", "yellow"];
