@@ -21,18 +21,14 @@
 }
 
 .pixel {
-    background-color: white;
-    border-right: 1px solid black;
     height: 40px;
     width: 40px;
+    background-color: white;
+    border: 1px solid black;
     padding: 0px;
 }
 
 #pixel-board {
     margin-top: 35px;
-    border-collapse: collapse;
-}
-
-tr {
-    border: 1px solid black;
+    border-collapse: separate;
 }
