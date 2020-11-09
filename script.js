@@ -18,7 +18,9 @@ window.onload = function(){
     }
     createDiv(5);
 
+    const colorBlack = document.getElementById('color1')
 
+    colorBlack.classList.add('selected')
 
 
 
