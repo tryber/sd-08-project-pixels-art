@@ -1,0 +1,42 @@
+html , body {
+  height: 100%;
+  width: 100%;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+.color-pallete {
+  display: inline-block;
+}
+
+.pixel-board {
+  display: block;
+  margin: 0 auto;
+}
+
+.color {
+  border: 1px solid black;
+  display: inline-block;
+  height: 40px;
+  margin: 0 2px;
+  width: 40px;
+}
+
+.pixel {
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
+}
+
+.size-definition {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
