@@ -1,5 +1,5 @@
-/*function firstBlack(){
-    let element = document.querySelector('.black')
+function firstBlack(){
+    let element = document.getElementById('black')
     element.className = 'selected'
 }
-firstBlack()*/
+firstBlack()

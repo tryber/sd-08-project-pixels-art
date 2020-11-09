@@ -1,27 +1,36 @@
 #color-palette {
     
 }
+.color{
 
-.color {
+}
+
+#black {
+  background-color: black;
   display: inline-block;
   border: 1px solid;
   padding: 40px;
 }
 
-.black {
-  background-color: black;
-}
-
-.blue {
+#blue {
   background-color: blue;
+  display: inline-block;
+  border: 1px solid;
+  padding: 40px;
 }
 
-.red {
+#red {
   background-color: red;
+  display: inline-block;
+  border: 1px solid;
+  padding: 40px;
 }
 
-.green{
+#green{
   background-color: green;
+  display: inline-block;
+  border: 1px solid;
+  padding: 40px;
 }
 
 .pixel{
