@@ -1,60 +1,45 @@
 // Paleta de cores - Adicionando as cores de forma dinâmica para evitar encadeamento de classes
 function addPalletColor() {
-    let paleta = document.querySelectorAll('.color');
-    paleta[0].style.backgroundColor = 'black';
-    paleta[1].style.backgroundColor = '#f7be4a';
-    paleta[2].style.backgroundColor = '#ab8333';
-    paleta[3].style.backgroundColor = '#6b5220';
+  const paleta = document.querySelectorAll('.color');
+  paleta[0].style.backgroundColor = 'black';
+  paleta[1].style.backgroundColor = '#f7be4a';
+  paleta[2].style.backgroundColor = '#ab8333';
+  paleta[3].style.backgroundColor = '#6b5220';
 }
 addPalletColor();
 //
 // Criando quadro de pixels
 //
-let pixelBoard = document.getElementById('pixel-board');
+const pixelBoard = document.getElementById('pixel-board');
 function generatePixel() {
-    for( let j = 0; j < 25; j += 1) {
-        let colorizedPixel = document.createElement('div');
-        colorizedPixel.className = 'pixel';
-        pixelBoard.appendChild(colorizedPixel);
+  for (let j = 0; j < 25; j += 1) {
+    const colorizedPixel = document.createElement('div');
+    colorizedPixel.className = 'pixel';
+    pixelBoard.appendChild(colorizedPixel);
     }
 }
 generatePixel();
 //
 // Adicionando eventos para selecionar a cor da paleta
 //
-let p = document.getElementsByClassName('color')
-for (let i = 0; i<=3; i += 1) {
-    p[i].addEventListener('click',function() {
-    p[i].classList.add('selected');
-    indexClicked = i;
-    for(j = 0; j<=3; j += 1) {
-        if(j != indexClicked) {
-            p[j].className = 'color';
+const p = document.getElementsByClassName('color');
+for (let i = 0; i <= 3; i += 1) {
+  p[i].addEventListener('click', function () {
+  p[i].classList.add('selected');
+  let indexClicked = i;
+  for (let j = 0; j <= 3; j += 1) {
+    if (j !== indexClicked) {
+      p[j].className = 'color';
         }
     }
     });
 }
 //
-//adicionando evento de pintura nos pixels no pixelboard;
+// Adicionando evento de pintura nos pixels no pixelboard;
 //
 let pixelClicked = document.getElementsByClassName('pixel');
 for (let i = 0; i < pixelClicked.length; i += 1) {
-    pixelClicked[i].addEventListener('click',function() {
-    pixelClicked[i].style.backgroundColor = document.querySelector('.color.selected').style.backgroundColor;
-    });
+  pixelClicked[i].addEventListener('click', function () {
+  pixelClicked[i].style.backgroundColor = document.querySelector('.color.selected').style.backgroundColor;
+  });
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

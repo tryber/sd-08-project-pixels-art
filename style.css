@@ -1,21 +1,21 @@
 header {
-  margin-left: 40%;
-  position: relative;
+
+  margin-left: 50%;
+  text-align: center;
+  transform: translateX(-50%);
 }
 
 main {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  border: 1px solid rgb(236, 10, 10);
   height: 500px;
+  justify-content: flex-start;  
   margin: 2% 25%;
   width: 50%;
 }
 
 .color-palette {
   align-items: flex-start;
-  border: 1px solid green;
   display: flex;
   flex-wrap: wrap;
   height: 15%;
@@ -23,7 +23,7 @@ main {
   padding: 5px;
 }
 
-.color, .color.selected {
+.color , .selected {
   border: 1px solid black;
   height: 60px;
   padding: 5px;
@@ -38,6 +38,7 @@ main {
   margin-top: 2%;
   width: 210px;
 }
+
 .pixel {
   background-color: white;
   border: 1px solid;
