@@ -15,9 +15,27 @@ function createColors(nameEl, colors) {
     }
 }
 
+function pixelsLine(el, tamanho) {
+    let newLine = criarElemento(el, 'class', 'line');
+    for (let l = 0; l < tamanho; l += 1){
+        let newRow = criarElemento(el, 'class', 'pixel');
+        newLine.appendChild(newRow);
+    }
+    return newLine;
+}
+
+function createPixels(nameEl, tamanho) {
+    let getDiv = document.querySelector('#pixel-board');
+    for (let i = 0; i < tamanho; i += 1){
+        let newPixels = pixelsLine(nameEl, 5);
+        getDiv.appendChild(newPixels);
+    }
+}
+
 const mainFunction = () => {
     const colors = ['black', 'blue', 'red', 'yellow'];
     createColors('div', colors);
+    createPixels('div', 5);
 }
 
 mainFunction();
