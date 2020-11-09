@@ -1,11 +1,15 @@
-body {
-  height: 100vh;
-}
-
 * {
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .color {
@@ -16,13 +20,8 @@ body {
 }
 
 #color-palette {
-  justify-content: center;
   display: flex;
   margin: 10px 0;
-}
-
-#title {
-  text-align: center;
 }
 
 .pixel {
@@ -34,7 +33,7 @@ body {
 #pixel-board {
   width: 200px;
   height: 200px;
-  margin: auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  margin: 10px 0;
 }
