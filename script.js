@@ -48,7 +48,7 @@ window.onload = function () {
     const sectionBoard = document.querySelector('#pixel-board');
     const paiQuadro = sectionBoard.parentNode;
     paiQuadro.removeChild(sectionBoard);
-    let sectionBoardCreate = document.createElement('section');
+    const sectionBoardCreate = document.createElement('section');
     sectionBoardCreate.id = 'pixel-board';
     for (let index = 0; index < n; index += 1) {
       const sectionLinha = document.createElement('section');
@@ -79,9 +79,9 @@ window.onload = function () {
   }
 
   function gerarCor() {
-    const corR = parseInt(Math.random() * 255);
-    const corG = parseInt(Math.random() * 255);
-    const corB = parseInt(Math.random() * 255);
+    const corR = parseInt(Math.random() * 255, 10);
+    const corG = parseInt(Math.random() * 255, 10);
+    const corB = parseInt(Math.random() * 255, 10);
     return `rgb(${corR}, ${corG}, ${corB})`;
   }
 
