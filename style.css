@@ -39,19 +39,17 @@
 
 #pixel-board {
 
-    height: 300px;
-    width: 490px;
-    background-color:black;
+    height: 230px;
+    width: 230px;
+    background-color: white;
     margin-left: 12%;
     display: inline-block;
-    border: black solid 1px;
-
 }
 
 .pixel {
 
-    height: 55px;
-    width: 92.6px;
+    height: 40px;
+    width: 40px;
     border: black solid 1px;
     background-color: white;
     display: inline-block;
