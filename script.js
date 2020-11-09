@@ -26,13 +26,12 @@ function generatePalette(palette) {
   }
 }
 
-function handleClickPaintSquare (event) {
-  currentColor = document.getElementsByClassName('selected')[0].style.backgroundColor;
+function handleClickPaintSquare(event) {
+  const currentColor = document.getElementsByClassName('selected')[0].style.backgroundColor;
   event.target.style.backgroundColor = currentColor;
 }
 
 function createLine(size) {
-  let currentColor;
   const line = document.createElement('tr');
   line.className = 'pixel-line';
 
@@ -40,7 +39,7 @@ function createLine(size) {
     const pixel = document.createElement('td');
     pixel.className = 'pixel';
     pixel.style.backgroundColor = 'white';
-    pixel.addEventListener('click', handleClickPaintSquare(ev));
+    pixel.addEventListener('click', handleClickPaintSquare(event));
 
     line.appendChild(pixel);
   }
