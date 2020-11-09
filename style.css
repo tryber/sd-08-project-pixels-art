@@ -1,33 +1,38 @@
-#color-palette{
-    width: 100%;
-    display: inline-block;
-    padding: 20px;
-    background-color: aqua;
-}
-div, .black, .red, .green, .blue{
-    width: 25px;
-    height: 25px;
-    border: black solid 1px;
-}
 .black{
     display: inline-block;
     margin-right: 5px;
     background-color: black;
 }
-.red{
+
+.black, .blue, .green, .red{
+    width: 25px;
+    height: 25px;
+    border: black solid 1px;
+}
+
+.blue{
     display: inline-block;
     margin-right: 5px;
-    background-color: red;
+    background-color: blue;
 }
+
+.color-palette{
+    width: 100%;
+    display: inline-block;
+    padding: 20px;
+    background-color: aqua;
+}
+
 .green{
     display: inline-block;
     margin-right: 5px;
     background-color: green;
 }
-.blue{
+
+.red{
     display: inline-block;
     margin-right: 5px;
-    background-color: blue;
+    background-color: red;
 }
 
 .pixel {
@@ -37,6 +42,7 @@ div, .black, .red, .green, .blue{
     height: 40px;
     border: black solid 1px;
 }
-#pixel-board {
+
+.pixel-board {
     width: 210px;
 }
