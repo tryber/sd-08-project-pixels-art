@@ -29,6 +29,9 @@ function getRandomColor() {
 }
 
 const pixelBoard = document.getElementById('pixel-board');
+const pixelBoardSize = document.getElementById('pixel-board-size')
+const numberOfPixels = Math.pow(pixelBoardSize, 2);
+
 for(let i = 0; i < 25; i++) {
   const pixel = document.createElement('span');
   pixel.className = 'pixel';
