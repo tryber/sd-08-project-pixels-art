@@ -1,10 +1,10 @@
 window.onload = function () {  
-  //Ao carregar a página, a cor preta da paleta já deve estar selecionada para pintar os pixels.
+  // Ao carregar a página, a cor preta da paleta já deve estar selecionada para pintar os pixels.
   let blackElement = document.getElementById('color-pallet0');
   blackElement.className = 'color selected';
-  //Fim do exercício 6
+  // Fim do exercício 6
 
-  //Ao clicar em uma das cores da paleta, a cor selecionada é que vai ser usada para preencher os pixels no quadro.
+  // Ao clicar em uma das cores da paleta, a cor selecionada é que vai ser usada para preencher os pixels no quadro.
   const divColorPallet = document.getElementById('color-palette');
   const colorList = document.querySelectorAll('.color');
 
@@ -20,9 +20,9 @@ window.onload = function () {
       colorList[color].className = "color";
     }
   }
-  //Fim do exercício 7
+  // Fim do exercício 7
 
-  //Ao clicar em um pixel dentro do quadro após selecionar uma cor na paleta, o pixel deve ser preenchido com esta cor.
+  // Ao clicar em um pixel dentro do quadro após selecionar uma cor na paleta, o pixel deve ser preenchido com esta cor.
   const divPixelBoard = document.getElementById('pixel-board');
   
   divPixelBoard.addEventListener('click', setColor);
@@ -30,9 +30,9 @@ window.onload = function () {
   function setColor(event) {
     event.target.style.backgroundColor = document.querySelector('.color.selected').style.backgroundColor;    
   }
-  //Fim do exercício 8
+  // Fim do exercício 8
 
-  //Crie um botão que, ao ser clicado, limpa o quadro preenchendo a cor de todos seus pixels com branco.
+  // Crie um botão que, ao ser clicado, limpa o quadro preenchendo a cor de todos seus pixels com branco.
   const btnClear = document.getElementById('clear-board');
   const pixelColorList = document.querySelectorAll('.pixel');
   
@@ -43,22 +43,23 @@ window.onload = function () {
       pixelColorList[color].style.backgroundColor = "white";
     }
   }
-  //Fim do exercício 9
+  // Fim do exercício 9
 
 };
 
-// Cria a paleta de cores
+// A página deve possuir uma paleta de quatro cores distintas.
 const colorPaletteContainer = document.getElementById('color-palette');
 const colors = ['black', 'red', 'green', 'blue'];
 for (let paletteColor = 0; paletteColor < colors.length; paletteColor += 1) {
-  const colorPalette = document.createElement('div');
+  let colorPalette = document.createElement('div');
   colorPalette.id = `color-pallet${paletteColor}`  
   colorPalette.className = 'color';
   colorPalette.style.backgroundColor = colors[paletteColor];
   colorPaletteContainer.appendChild(colorPalette);
 }
+// Fim do exercício 2
 
-// Cria o quadro de pixels
+// A página deve possuir um quadro de pixels, com 25 pixels.
 const boardSize = 5;
 const pixelBoard = document.getElementById('pixel-board');
 for (let row = 0; row < boardSize; row += 1) {
@@ -73,3 +74,4 @@ for (let row = 0; row < boardSize; row += 1) {
     pixelCellContainer.appendChild(pixelCell);
   }
 }
+//Fim do exercício 4
