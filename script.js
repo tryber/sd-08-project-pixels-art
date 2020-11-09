@@ -29,7 +29,7 @@ createPixels(5);
 let selectedColor = document.getElementById('color1');
 
 // Requirement 7
-let paletteColors = document.querySelectorAll('.color');
+const paletteColors = document.querySelectorAll('.color');
 
 function switchSelectedColor(event) {
   selectedColor.classList.remove('selected');
