@@ -26,10 +26,10 @@
   background-color: white;
   border: 1px solid black;
   height: 40px;
+  margin: 0px;
   width: 40px;
 }
 
 #pixel-board{
   border-collapse: collapse;
-  
 }
