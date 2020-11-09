@@ -1,0 +1,29 @@
+#title {
+text-align: center;
+}
+
+ul {
+  border-color: black;
+  width: auto;
+  background-color: red;
+}
+
+#color-palette {
+    text-align: center;
+}
+
+#color-palette li {
+    text-align: center;
+    border: 5px solid black;
+    margin: 5px;
+
+}
+
+li {
+  text-align: center;
+  display: inline-block;
+  margin: 0px;
+  border: 1px solid black;
+  padding: 5em;
+  background-color: aliceblue;
+}
