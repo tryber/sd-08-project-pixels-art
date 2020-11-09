@@ -18,7 +18,8 @@ pixelClass()
 function pintaPixel() {
   let pixels = document.querySelectorAll('.pixel');
   for (let i = 0; i < pixels.length; i += 1) {
-    pixels[i].addEventListener('click', function(event) {
+    let pixel = pixels[i];
+    pixel.addEventListener('click', function(event) {
       let selected = document.querySelector('.color.selected');
       event.target.style.backgroundColor = selected.style.backgroundColor;
     })
@@ -32,7 +33,7 @@ function limpaPixels() {
     let pixels = document.querySelectorAll('.pixel');
     for (let i = 0; i < pixels.length; i += 1) {
       let pixel = pixels[i];
-      pixel.style.backgroundColor = 'white';
+      pixel.removeAttribute('style');
     }
   })
 }
