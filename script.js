@@ -51,3 +51,13 @@ const allPixels = document.querySelectorAll('.pixel');
 for (let pixel = 0; pixel < allPixels.length; pixel += 1) {
   allPixels[pixel].addEventListener('click', paintPixel);
 }
+
+//Requirement 9
+function clearPixels() {
+for (let pixel = 0; pixel < allPixels.length; pixel += 1) {
+  allPixels[pixel].style.backgroundColor = 'white';
+}
+}
+
+let clearButton = document.getElementById('clear-board');
+clearButton.addEventListener('click', clearPixels);

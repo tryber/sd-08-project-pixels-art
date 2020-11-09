@@ -13,6 +13,13 @@ body {
   width: 70px;
 }
 
+.clear-board {
+  display: block;
+  margin: 10px auto;
+  width: 200px;
+  height: 30px;
+}
+
 .pixel-board {
   margin-left: auto;
   margin-right: auto;
