@@ -9,7 +9,7 @@ function createPalette() {
   for (let i = 0; i < colorArray.length; i += 1) {
     const colorElement = document.createElement('li');
     colorElement.className = 'color';
-    colorElement.id = `colorPalette ${i+1}`;
+    //colorElement.id = `colorPalette ${i+1}`;
     colorElement.style.backgroundColor = colorArray[i];
     palleteColorsList.appendChild(colorElement);
   }
@@ -34,10 +34,16 @@ function createBoardPixel() {
 
 createBoardPixel();
 
+function paletteColorSelected() {
+  const paletteColors = document.querySelector('#color-palette');
+  paletteColors.addEventListener('click', colorSelected);
+  function colorSelected(eventColor) {
+    const colors = document.querySelectorAll('.color')
+    for (let element of colors) {
+      element.className = 'color';
+    }
+    eventColor.target.className = 'color selected';
+  }
+}
 
-
-
-
-
-
-
+paletteColorSelected();
