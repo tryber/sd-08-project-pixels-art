@@ -35,3 +35,5 @@ for(let i = 0; i < 25; i++) {
   pixel.style.backgroundColor = 'white';
   pixelBoard.appendChild(pixel);
 }
+
+document.querySelector('.color').classList.add('selected');
