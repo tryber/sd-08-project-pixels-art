@@ -6,16 +6,15 @@
 }
 
 #pixel-board {
-    max-width: 210px;
-    max-height: 210px;
-    border-spacing: unset;
-    border-collapse: inherit;
-    box-sizing: content-box;
-    border: 1px black solid;
-    
+    max-width: 220px;
+    max-height: 220px;
+    display: table-cell;   
 }
-td tr {
+
+td {
     padding: 0;
+    display: table-row;
+    
 }
 
 .pixel {
