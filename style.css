@@ -2,22 +2,7 @@
   display: inline-block;
   width: 40px;
   height: 40px;
-  border: 1px solid black;
-}
-#firstColor {
-  background-color: black;
-}
-#secondColor {
-  background-color: orange;
-}
-#thirdColor {
-  background-color: red;
-}
-#fourthColor {
-  background-color: green;
-}
-#pixel-board {
-  background-color: white;
+  border: 1px solid #000000;
 }
 .lines {
   display: inline-block;
@@ -26,4 +11,5 @@
   width: 40px;
   height: 40px;
   border: 1px solid black;
+  background-color: white;
 }
