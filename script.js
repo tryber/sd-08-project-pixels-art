@@ -70,6 +70,12 @@ window.onload = function () {
     if (tamanhoQuadro == '') {
       alert('Board inválido!');
     } else {
+        if(tamanhoQuadro < 5){
+            tamanhoQuadro = 5;
+        } else if(tamanhoQuadro > 50){
+            tamanhoQuadro = 50
+        }
+        console.log(tamanhoQuadro)
       criarQuadro(tamanhoQuadro);
     }
   }
