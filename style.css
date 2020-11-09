@@ -16,6 +16,9 @@
 #fourthColor {
   background-color: green;
 }
+#pixel-board {
+  background-color: white;
+}
 .lines {
   display: inline-block;
 }

@@ -18,3 +18,18 @@ createBoard(5);
 
 
 
+function selectedColor() {
+  let colorPalette = document.querySelector('#color-palette');
+
+
+  function changeStatus(event) {
+    let selectedPalette = document.querySelector(".color.selected");
+    selectedPalette.className = 'color';
+    event.target.className = 'color selected';
+  }
+
+  colorPalette.addEventListener('click' , changeStatus);
+  
+}
+selectedColor();
+
