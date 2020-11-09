@@ -1,46 +1,46 @@
 .black{
+    background-color: black;
     display: inline-block;
     margin-right: 5px;
-    background-color: black;
 }
 
 .black, .blue, .green, .red{
-    width: 25px;
-    height: 25px;
     border: black solid 1px;
+    height: 25px;
+    width: 25px;
 }
 
 .blue{
+    background-color: blue;
     display: inline-block;
     margin-right: 5px;
-    background-color: blue;
 }
 
 .color-palette{
-    width: 100%;
+    background-color: aqua;
     display: inline-block;
     padding: 20px;
-    background-color: aqua;
+    width: 100%;
 }
 
 .green{
+    background-color: green;
     display: inline-block;
     margin-right: 5px;
-    background-color: green;
 }
 
 .red{
+    background-color: red;
     display: inline-block;
     margin-right: 5px;
-    background-color: red;
 }
 
 .pixel {
-    display: inline-block;
     background-color: white;
-    width: 40px;
-    height: 40px;
     border: black solid 1px;
+    display: inline-block;
+    height: 40px;
+    width: 40px;
 }
 
 .pixel-board {
