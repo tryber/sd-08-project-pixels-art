@@ -22,3 +22,16 @@
 #quad4 {
     background-color: blue;
 }
+#pixel-board {
+   margin-top: 20px;
+   border-collapse: collapse;
+}
+.pixel {
+    width: 40px;
+    height: 40px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+    background-color: white;
+    float: left;
+}
