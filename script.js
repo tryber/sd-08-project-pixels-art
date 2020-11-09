@@ -1,5 +1,5 @@
 const paletaDeCores = document.getElementById("color-palette");
-const tabelaDeCores = ["blue", "pink", "green", "red"];
+const tabelaDeCores = ["black", "pink", "green", "red"];
 for (let itens = 0; itens < tabelaDeCores.length; itens += 1) {
   let color = document.createElement("div");
   color.className = "color";
@@ -11,5 +11,6 @@ for (let itens = 0; itens < tabelaDeCores.length; itens += 1) {
   let text = document.createElement("p");
   text.innerHTML = tabelaDeCores[itens];
   text.style.textAlign = 'center'
+  text.style.color = '#fff'
   color.appendChild(text);
 }
