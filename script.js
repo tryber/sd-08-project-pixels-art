@@ -1,8 +1,11 @@
 // Sets reference to color palette div
 const palette = document.querySelector('.palette');
 
-//Sets reference do pixel board
+// Sets reference do pixel board
 const board = document.querySelector('.pixel-board');
+
+// Sets reference to buttons
+const clearButton = document.querySelector('#clear-board')
 
 // Sets reference select color picker divs
 const blackColor = document.querySelector('.black');
@@ -22,13 +25,14 @@ firstColor.style.backgroundColor = 'blue';
 secondColor.style.backgroundColor = 'red';
 thirdColor.style.backgroundColor = 'gray';
 
-
+// Removes 'selection' class from all pallete elements
 function removeSelection() {
   for (let i = 0; i < colorList.length; i += 1) {
     colorList[i].classList.remove('selected');
   }
 }
 
+// Returns the color of the selected element
 function parseSelection() {
   for (let i = 0; i < colorList.length; i += 1) {
     if (colorList[i].classList.contains('selected')) {
@@ -38,6 +42,7 @@ function parseSelection() {
   return '';
 }
 
+// Adds 'selection' class to the targeted element
 function selectColor(event) {
   const eventTarget = event.target;
   if (eventTarget.className !== 'palette') {
@@ -46,11 +51,23 @@ function selectColor(event) {
   }
 }
 
+palette.addEventListener('click', selectColor);
+
+// Applies color of the selected element to targeted element
 function applyColor(event) {
   const eventTarget = event.target;
   const color = parseSelection();
   eventTarget.style.backgroundColor = color;
 }
 
-palette.addEventListener('click', selectColor);
 board.addEventListener('click', applyColor);
+
+// Paints board with white color
+function clearBoard () {
+  const pixels = document.querySelectorAll('.pixel')
+  for (let i = 0; i < pixels.length; i += 1) {
+    pixels[i].removeAttribute("style")
+  }
+}
+
+clearButton.addEventListener('click', clearBoard);

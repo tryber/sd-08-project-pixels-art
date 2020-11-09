@@ -11,6 +11,11 @@
   width: 40px;
 }
 
+/* Buttons */
+.button {
+  margin: 0 5px 20px 0;
+}
+
 /* Pixel board */
 .pixel-board {
   display: inline-block;
