@@ -22,8 +22,9 @@ function selecionaCor(){
 }
 selecionaCor();
 
-function colorePixel(){
-  let pixels = document.getElementsByClassName('pixel');
+let pixels = document.getElementsByClassName('pixel');
+
+function colorePixel(){  
   for (index = 0; index < pixels.length; index +=1){
   pixels[index].addEventListener('click', mudaCor); 
   }
@@ -35,26 +36,15 @@ function colorePixel(){
 }
 colorePixel();
 
-/*
-function mudaCor(event){
-  let selecionada = document.querySelector('.selected');
-  let cor = selecionada.style.getPropertyValue('background-color');
-  
-  event.target.backgroundColor = cor;
-}
-mudaCor();
-*/
 
-/*
+
 function limpaQuadro(){
   let botao = document.querySelector('button');
   botao.addEventListener('click', fundoBranco)
   function fundoBranco(){
-    let pixels = document.querySelectorAll('.pixel');
     for (index = 0; index < pixels.length; index +=1){
-      pixels[index].style.backgroundColor = 'white';
+    pixels[index].style.backgroundColor = 'white';
     }
   }
 }
 limpaQuadro();
-*/
