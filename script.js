@@ -40,3 +40,30 @@ function pixelBoard() {
 }
 
 pixelBoard();
+
+function selectedPaletteBlack() {
+  for (let index = 0; index < itemPalette.length; index += 1) {
+    const item = itemPalette[index];
+    if (item.style.backgroundColor === 'black') {
+      item.className = 'color selected';
+    }
+  }
+}
+
+selectedPaletteBlack();
+
+function selectedPalette() {
+  for (let index = 0; index < itemPalette.length; index += 1) {
+    const item = itemPalette[index];
+
+    item.addEventListener('click', (event) => {
+      if (item.className === 'color') {
+        event.target.className = 'color selected';
+      } else {
+        event.target.className = 'color';
+      }
+    });
+  }
+}
+
+selectedPalette();
