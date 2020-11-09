@@ -1,9 +1,9 @@
 // Cria a paleta de cores
-let colorPaletteContainer = document.getElementById("color-palette");
-let colors = ["black", "red", "green", "blue"];
+const colorPaletteContainer = document.getElementById('color-palette');
+const colors = ['black', 'red', 'green', 'blue'];
 for (let backColor of colors) {
-  let colorPalette = document.createElement("div");
-  colorPalette.className = "color";
+  let colorPalette = document.createElement('div');
+  colorPalette.className = 'color';
   colorPalette.style.backgroundColor = backColor;
   colorPaletteContainer.appendChild(colorPalette);
 }
