@@ -4,10 +4,11 @@
   height: 40px;
   border: 1px solid #000000;
 }
-.lines {
-  display: inline-block;
+#pixel-board {
+  line-height: 0;
 }
 .pixel {
+  display: inline-block;
   width: 40px;
   height: 40px;
   border: 1px solid black;
