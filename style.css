@@ -11,22 +11,6 @@
   width: 40px;
 }
 
-.black {
-  background-color: black;
-}
-
-.blue {
-  background-color: blue;
-}
-
-.red {
-  background-color: red;
-}
-
-.gray {
-  background-color: gray;
-}
-
 /* Pixel board */
 .pixel-board {
   display: inline-block;
