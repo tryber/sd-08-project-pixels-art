@@ -73,12 +73,7 @@ function generatePallete() {
 let input = document.getElementById("board-size");
 let button2 = document.getElementById("generate-board");
 
-input.addEventListener("input", verifySize);
 button2.addEventListener("click", generateBoard);
-
-function verifySize() {
-  input.value = input.value < 0 ? 0: input.value;
-}
 
 function generateBoard() {
   let size = input.value == "" ? alert("Board inválido!") : input.value > 50 ? 50 : input.value < 5 ? 5 : input.value;
@@ -91,6 +86,8 @@ function generateBoard() {
 
   board.style.width = 5 * size + "px";
   board.style.height = 5 * size + "px";
+
+  fillWhite();
 }
 
 
