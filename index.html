@@ -8,50 +8,18 @@
   </head>
   <body>
     <h1 id="title">Paleta de Cores</h1>
-    <div id="color-palette">
+    <main id="main">
+      <div id="color-palette">
         <div class="color"></div>
         <div class="color"></div>
         <div class="color"></div>
         <div class="color"></div>
-    </div>
-    <button id="clear-board">Limpar</button>
-    <table id="pixel-board">
-      <tr>
-        <td class="pixel"></td>
-        <td class="pixel"></td>
-        <td class="pixel"></td>
-        <td class="pixel"></td>
-        <td class="pixel"></td>
-      </tr>
-      <tr>
-        <td class="pixel"></td>
-        <td class="pixel"></td>
-        <td class="pixel"></td>
-        <td class="pixel"></td>
-        <td class="pixel"></td>
-      </tr>
-      <tr>
-        <td class="pixel"></td>
-        <td class="pixel"></td>
-        <td class="pixel"></td>
-        <td class="pixel"></td>
-        <td class="pixel"></td>
-      </tr>
-      <tr>
-        <td class="pixel"></td>
-        <td class="pixel"></td>
-        <td class="pixel"></td>
-        <td class="pixel"></td>
-        <td class="pixel"></td>
-      </tr>
-      <tr>
-        <td class="pixel"></td>
-        <td class="pixel"></td>
-        <td class="pixel"></td>
-        <td class="pixel"></td>
-        <td class="pixel"></td>
-      </tr>
-    </table>
+      </div>
+      <input id="board-size" type="number" min="5" max="50" id="board-size" />
+      <button id="generate-board">VQV</button>
+      <button id="clear-board">Limpar</button>
+
+    </main>
     <script src="script.js"></script>
   </body>
 </html>

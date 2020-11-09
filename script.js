@@ -1,9 +1,31 @@
 window.onload = function () {
-  const pixels = document.querySelectorAll('.pixel');
-  const pixel = document.getElementsByClassName('color');
+  function generateBoard(size) {
+    if (size === undefined) {
+      size = 5;
+    }
+    const mainElement = document.getElementById('main');
+    const table = document.createElement('table');
+
+    table.id = 'pixel-board';
+
+    for (let i = 1; i <= size; i += 1) {
+      const tr = document.createElement('tr');
+      for (let j = 1; j <= size; j += 1) {
+        const td = document.createElement('td');
+        td.classList.add('pixel');
+        tr.appendChild(td);
+      }
+      table.appendChild(tr);
+    }
+    mainElement.appendChild(table);
+  }
+  generateBoard();
+  const btnGenerate = document.getElementById('generate-board');
+  const inputNunber = document.getElementById('board-size');
   const colors = ['black', 'blue', 'red', 'yellow'];
 
   function setupColorPalette() {
+    const pixel = document.getElementsByClassName('color');
     for (let i = 0; i < pixel.length; i += 1) {
       pixel[i].style.backgroundColor = colors[i];
     }
@@ -11,6 +33,7 @@ window.onload = function () {
   setupColorPalette();
 
   function selectColor(color) {
+    const pixel = document.getElementsByClassName('color');
     for (let i = 0; i < pixel.length; i += 1) {
       if (pixel[i].style.backgroundColor === color) {
         pixel[i].classList.add('selected');
@@ -20,6 +43,7 @@ window.onload = function () {
   selectColor('black');
 
   function eventPalette() {
+    const pixel = document.getElementsByClassName('color');
     for (let i = 0; i < pixel.length; i += 1) {
       pixel[i].addEventListener('click', function () {
         const colorSelected = document.querySelector('.selected');
@@ -30,6 +54,7 @@ window.onload = function () {
   }
   eventPalette();
   function changePixelColor() {
+    const pixels = document.querySelectorAll('.pixel');
     for (let i = 0; i < pixels.length; i += 1) {
       pixels[i].addEventListener('click', function () {
         pixels[i].style.backgroundColor = document.querySelector(
@@ -40,6 +65,7 @@ window.onload = function () {
   }
   changePixelColor();
   function clearPixels() {
+    const pixels = document.querySelectorAll('.pixel');
     const btnClear = document.getElementById('clear-board');
     btnClear.addEventListener('click', function () {
       for (let i = 0; i < pixels.length; i += 1) {
@@ -48,4 +74,11 @@ window.onload = function () {
     });
   }
   clearPixels();
+
+  function btnVQV() {
+    btnGenerate.addEventListener('click', function () {
+      generateBoard(inputNunber.value);
+    });
+  }
+  btnVQV();
 };
