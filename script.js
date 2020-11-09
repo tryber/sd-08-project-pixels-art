@@ -58,6 +58,8 @@ function selectedPalette() {
 
     item.addEventListener('click', (event) => {
       if (item.className === 'color') {
+        const selectedPalette = document.querySelector('.selected');
+        selectedPalette.className = 'color';
         event.target.className = 'color selected';
       } else {
         event.target.className = 'color';
