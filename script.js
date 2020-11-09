@@ -23,6 +23,7 @@ function createTable() {
         spot.style.backgroundColor = 'white';
         document.querySelector('#pixel-board').appendChild(spot);
         colorChange(spot);
+        clear(spot);
     }
 }
 
@@ -40,5 +41,12 @@ function colorChange(element){
     element.addEventListener('click', function(event) {
         let selected = document.querySelector('.selected');
         event.target.style.backgroundColor = selected.style.backgroundColor;
+    })
+}
+
+function clear(element) {
+    let button = document.querySelector('#clear-board');
+    button.addEventListener('click',function(){
+        element.style.backgroundColor = 'white';
     })
 }
