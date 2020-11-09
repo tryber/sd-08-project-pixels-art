@@ -3,6 +3,16 @@
   box-sizing: border-box;
 }
 
+h1 {
+  margin: 30px;
+}
+
+.container {
+  width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
 .color {
   border: 1px solid black;
   border-radius: 100%;
@@ -10,6 +20,9 @@
   height: 60px;
   width: 60px;
   
+}
+div#color-palette {
+  margin: 20px;
 }
 
 div#first-color {
@@ -30,6 +43,16 @@ div#color4 {
 div#pixel-board {
   width: 200px;
   height: fit-content;
+  margin: auto;
+}
+
+button {
+  margin: 25px;
+  padding: 15px;
+  color: blue;
+  border 1px solid white;
+  border-radius: 5px;
+  box-sizing: border-box;
 }
 
 .pixel {
