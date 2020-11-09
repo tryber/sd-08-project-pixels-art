@@ -12,6 +12,10 @@
     max-height: 210px;     
 }
 
+#clear-board {
+    padding-bottom: 5px;
+}
+
 .pixel {
     width: 40px;
     height: 40px;

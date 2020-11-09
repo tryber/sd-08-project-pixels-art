@@ -57,3 +57,29 @@ function changeColorPixel (){
     });
 }
 changeColorPixel();
+
+function createBotton (type, text){
+    const bottonLocal = document.querySelector("#clear-board");
+    let botton = document.createElement(type);
+    botton.innerText = text;
+    bottonLocal.appendChild(botton);
+}
+createBotton("button", "Limpar");
+
+function cleanPixels (){
+    const botonLocal = document.getElementById("clear-board");
+    botonLocal.addEventListener("click", function (event){
+        event.target.className = "trigged";
+        let bottonLocal = document.querySelector("#clear-board").firstChild;
+        if (bottonLocal.className === "trigged"){
+            const pixelLocal = document.getElementsByClassName("pixel");
+            for (let i=0; i<pixelLocal.length; i+=1) {
+                pixelLocal[i].style.backgroundColor = "white"
+                document.getElementsByClassName(".trigged").className = "";
+            }
+            bottonLocal.className = "";
+        }
+        
+    });
+}
+cleanPixels();
