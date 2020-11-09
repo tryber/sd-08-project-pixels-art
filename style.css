@@ -1,0 +1,26 @@
+
+#color-palette {
+    display: flex;
+}
+
+.color {
+    border: 1px solid black;
+    width: 10px;
+    height: 10px;
+}
+
+#colorA {
+    background: black;
+}
+
+#colorB {
+    background: red;
+}
+
+#colorC {
+    background: blue;
+}
+
+#colorD {
+    background: yellow;
+}
