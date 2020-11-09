@@ -1,0 +1,20 @@
+.color {
+  border: black solid 1px;
+  display: inline-block;
+}
+
+#box-black {
+  background-color: black;
+}
+
+#box-red {
+  background-color: red;
+}
+
+#box-blue {
+  background-color: blue;
+}
+
+#box-green {
+  background-color: green;
+}
