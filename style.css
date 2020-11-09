@@ -14,8 +14,8 @@
 }
 
 #pixel-board{
-  width: 250px;
-  height: 250px;
+  width: 210px;
+  height: 210px;
   display: flex;
   flex-wrap: wrap;
   align-content: start;
