@@ -14,11 +14,15 @@ div.appendChild(ul);
 for (let index=0; index<4; index++){
     let color = ["black", "green", "blue", "red"];
     let li = document.createElement("li");
-    li.className = "classe color";
+    li.className = "color";
     ul.appendChild(li);
 
-    let colorIndex = document.querySelectorAll(".classe");
+    let colorIndex = document.querySelectorAll(".color");
     colorIndex[index].style.backgroundColor = color[index];
+
+    if (color[index] == "black"){
+        li.className += " selected";
+    }   
 }
 
 let divQuadro = document.createElement("div");
@@ -35,5 +39,26 @@ for (let index=0; index<25; index++){
     ulQuadro.appendChild(liQuadro);
 }
 
+let ulColor = document.querySelector("#color-palette");
+let color = ulColor.childNodes;
 
 
+
+
+function colorSelected(){
+    
+    ulColor.addEventListener("click", function(event){           
+      
+            if (event.target.className !== "color selected"){
+                event.target.className = "color selected";
+            }                    
+                   
+    });
+     
+}
+colorSelected();
+
+
+
+
+console.log(ulColor);
