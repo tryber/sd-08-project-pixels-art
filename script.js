@@ -30,14 +30,14 @@ window.onload = function(){
     setPixelBoard();
 
     //cor preta selecionada ao iniciar o arquivo
-    let firstColor = document.querySelectorAll(".color");
-    firstColor[0].classList.add("selected");
+    let thisColor = document.querySelectorAll(".color");
+    thisColor[0].classList.add("selected");
 
     //pegar cor
-    for(let index=0; firstColor.length > index; index+=1){
-        let cor = firstColor[index];
+    for(let index = 0; thisColor.length > index; index+=1){
+        let cor = thisColor[index];
         cor.addEventListener("click", function selectColor(event){
-            let cores = document.querySelectorAll(".color");
+        let cores = document.querySelectorAll(".color");
             for (let index = 0; cores.length > index; index+=1){
                 let cor = cores[index];
                 if (cor !== event.target && cor.classList.contains("selected")) {
@@ -49,28 +49,30 @@ window.onload = function(){
     }
     
     //Pintar pixels
-    // function colorClickEvent(){
-    //     let pixels = document.querySelectorAll(".pixel");
-    //     for (let index = 0; pixels.length > index; index+=1){
-    //         let pixel = pixels[index];
-    //         pixel.addEventListener("click", function(event){
-    //             let selected = document.querySelector(".color.selected");
-    //             event.target.style.backgroundColor = selected.style.backgroundColor;
-    //         })
-    //     }
-    // }
-    // colorClickEvent();
+    function colorClickEvent(){
+        let pixels = document.querySelectorAll(".pixel");
+        for (let index = 0; pixels.length > index; index+=1){
+            let pixel = pixels[index];
+            pixel.addEventListener("click", function(event){
+                let selected = document.querySelector(".color.selected");
+                event.target.style.backgroundColor = selected.style.backgroundColor;
+            })
+        }
+    }
+    colorClickEvent();
     
-    // //aciona e executa função para reverter as cores
-    // let clearButton = document.getElementById("clear-board");
-    // clearButton.addEventListener("click", function revertBackground(){
-    //     let pixels = document.querySelectorAll(".pixel");
-    //     for (let index = 0; pixels.length > index; index+=1){
-    //         let pixel = pixels[index];
-    //         pixel.style.backgroundColor = "white";
-    //     }
-    // });
-}
+    //aciona e executa função para reverter as cores
+    let clearButton = document.getElementById("clear-board");
+    clearButton.addEventListener("click", function revertBackground(){
+        let pixels = document.querySelectorAll(".pixel");
+        for (let index = 0; pixels.length > index; index+=1){
+            let pixel = pixels[index];
+            pixel.style.backgroundColor = "white";
+        }
+    });
 
+    
+
+}
 
 //funções e ideias tiradas de https://stackoverflow.com/questions/62732368/background-color-changingonclick-via-javascript-not-working e https://developer.mozilla.org/pt-BR/docs/Web/API/Element/classList
