@@ -72,7 +72,14 @@ function generateNewBoard() {
 
   VQV.addEventListener('click', function(){
     let input = document.getElementById("board-size").value;
-    if (input == "" || input < 5 || input > 50) {
+    if (input < 5) {
+      input = 5;
+    }
+    else if (input > 50) {
+      input = 50;
+    }
+
+    if (input == "") {
       alert("Board inválido!");
     }
     else {
