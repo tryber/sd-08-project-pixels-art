@@ -66,8 +66,17 @@ function paint () {
     item.addEventListener('click', function(event) {
       let color = document.querySelector('.selected').style.backgroundColor;
       event.target.style.backgroundColor = color;
-      console.log(color);
     });
   });
 }
 paint();
+
+function clear() {
+  let btnClear = document.querySelector('#clear-board');
+    btnClear.addEventListener('click', function() {
+      document.querySelectorAll('.pixel').forEach(function(item) {
+      item.style.backgroundColor = 'white';
+    });
+  });
+}
+clear();
