@@ -1,37 +1,38 @@
 .color {
-  display: inline-block;
   border: solid 1px black;
-  width: 100px;
+  display: inline-block; 
   height: 100px;
-  margin: 10px;
+  margin: 10px; 
+  width: 100px;
+  
 }
 
-#cor1{
+#cor1 {
   background-color: black;
 }
 
-#cor2{
-background-color: aquamarine;
+#cor2 {
+  background-color: aquamarine;
 }
 
-#cor3{
+#cor3 {
   background-color: greenyellow;
 }
 
-#cor4{
-  background-color:blueviolet;
+#cor4 {
+  background-color: blueviolet;
 }
 
 #pixel-board {
   display: table;
-  margin: 10px;
-  
+  margin: 10px;  
 }
-.pixel{
-  display: table-cell;
-  border: 1px solid black;
-  padding: 0px 0px;
+
+.pixel {
   background-color: white;
-  width: 40px;
+  border: 1px solid black;
+  display: table-cell;
   height: 40px;
+  padding: 0;
+  width: 40px;
 }
