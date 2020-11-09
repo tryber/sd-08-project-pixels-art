@@ -1,1 +1,19 @@
-.
+
+
+.color {
+  border: 1px solid black;
+  text-align: center;
+  justify-content: center;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin-right: 2px;
+}
+
+.tr {
+  display: table-row;
+}
+
+.td {
+  display: table-column;
+}
