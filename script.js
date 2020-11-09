@@ -7,7 +7,7 @@ function palettaColor () {
 palettaColor();
 
 function createPixels () {    
-    let divlPixelBoard = document.querySelectorAll('#pixel-board');
+    let divlPixelBoard = document.querySelectorAll('#line');
     for (let i = 0; i < divlPixelBoard.length; i +=1) {
         for (let j = 0; j < divlPixelBoard.length; j +=1){
             let divPixel = document.createElement('div');
@@ -72,4 +72,9 @@ document.querySelectorAll('.color')[3].addEventListener('click', function eventC
         }            
     }    
 });
+
+function changeColorPixel (event) {
+    event.target.style.background = document.querySelector('.selected').style.background;
+}
+document.querySelector('#pixel-board').addEventListener('click', changeColorPixel);
    
