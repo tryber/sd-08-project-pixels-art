@@ -1,11 +1,11 @@
 window.onload = function(){
+    //Escolha de cores da paleta.
     function setBackgroundColor(color){
-        let thisBackgroundColor = document.querySelector(".color");
-        for(index = 0; thisBackgroundColor.length > index ; index+=1){
-            thisBackgroundColor[index].style.backgroundColor = color[index];
-            localStorage.setItem("backgroundColor", color[index]);
+        let setColor = document.querySelectorAll(".color")
+        let colors = ['black', 'purple', 'blue', 'yellow'];
+            for(let index = 0; index < setColor.length ; index+=1){
+                setColor[index].style.backgroundColor = colors[index];
         }
-        colors = ['black, blue, green, purple'];
     }
-    setBackgroundColor(colors);
+    setBackgroundColor();
 }
