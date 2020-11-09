@@ -1,13 +1,24 @@
 const pixel = document.querySelector('#pixel-board');
+const color = document.querySelectorAll('.color');
 for (let coluna = 0; coluna < 5; coluna += 1) {
   for (let linha = 0; linha < 5; linha += 1) {
-    let a = document.createElement('div');
-    a.className = 'pixel';
-    a.style.backgroundColor = '#fff';
-    a.style.width = '40px'
-    a.style.height = '40px'
-    a.style.marginBottom = '10px'
-    a.style.border = '1px solid black'
-    pixel.appendChild(a);
-  }    
+    let div = document.createElement('div');
+    div.className = 'pixel';
+    div.style.backgroundColor = '#fff';
+    div.style.width = '40px'
+    div.style.height = '40px'
+    div.style.marginBottom = '10px'
+    div.style.border = '1px solid black'
+    pixel.appendChild(div);
+  }
+  window.onload = function () {
+    addEventListener('click', function (evt) {
+        if(evt.target.className == 'color') {
+            for (let index = 0; index < color.length; index += 1) {
+                color[index].className = 'color';
+            }
+            evt.target.className = 'color selected'
+        }
+    })
+  }
 }
