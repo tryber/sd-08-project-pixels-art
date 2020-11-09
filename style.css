@@ -32,17 +32,17 @@ main {
 
 .pixel-board {
   align-self: center;
+  border: 1px solid;
   display: flex;
   flex-wrap: wrap;
-  width: 210px;
   margin-top: 2%;
-  border: 1px solid;
+  width: 210px;
 }
 .pixel {
-  display: flex;
   background-color: white;
   border: 1px solid;
-  width: 40px;
+  display: flex;
   height: 40px;
   margin: 0;
+  width: 40px;
 }
