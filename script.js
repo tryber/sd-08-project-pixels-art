@@ -9,14 +9,13 @@ function preenchePalete () {
 }
 preenchePalete();
 
-function criaPixels () {    
-    for (let i=0; i<25; i+=1){
+function criaPixels (n) {    
+    for (let i=0; i<n*n; i+=1){
         let pixel = document.createElement('div');
         pixel.className = 'pixel';
         document.getElementById("pixel-board").appendChild(pixel);
     }
 }
-criaPixels();
 
 function selectColor (event) {
     let selected = document.getElementsByClassName("selected");
@@ -38,3 +37,21 @@ function clearBoard () {
     }
 }
 document.getElementById("clear-board").addEventListener("click",clearBoard);
+
+function createBoard () {
+    let input = document.querySelector("#board-size");
+    if (input.value === ""){
+        alert("Board inválido!")
+    }
+    let n = parseInt(input.value);
+    if (n > 50 || n<5) {
+        alert("Número Inválido ! Digite um número entre 5 e 50");
+    } else {
+        let board = document.getElementById("pixel-board");
+        board.innerHTML = "";
+        board.style.width = n*42 + "px";
+        board.style.height = n*42 + "px";
+        criaPixels(n);
+    }
+}
+document.getElementById("generate-board").addEventListener("click",createBoard);

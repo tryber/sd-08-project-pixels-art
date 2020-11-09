@@ -23,3 +23,11 @@
 #clear-board {
     margin-top: 30px;
 }
+
+#board-size {
+    width: 13%;
+}
+
+#color-palette {
+    margin-top: 20px;
+}
