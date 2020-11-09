@@ -7,9 +7,11 @@ let limpar = document.getElementById('clear-board');
 
 
 
-limpar.addEventListener("click", function() {
-    for (let i = 0; i < pixel.length; i += 1) {
-        pixel[i].style.backgroundColor = "white";
+
+limpar.addEventListener('click', clearPixelBoard);
+function clearPixelBoard() {
+  const pixels = document.querySelectorAll('.pixel');
+  for (let i = 0; i < pixels.length; i += 1) {
+    pixels[i].style.backgroundColor = 'white';
+  }
 }
-   
- }
