@@ -18,20 +18,17 @@
 
 /* Pixel board */
 .pixel-board {
-  display: table;
-  border-collapse: collapse;
+  display: inline-block;
   height: fit-content;
   width: fit-content;
-}
-
-.line {
-  display: table-row;
 }
 
 .pixel {
   background-color: white;
   border: 1px solid black;
-  display: table-cell;
+  display: inline-block;
   height: 40px;
+  margin-bottom: -6px;
+  margin-right: -1px;
   width: 40px;
 }
