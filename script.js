@@ -1,7 +1,7 @@
 function createDivs() {
-    for (index = 0; index < 5; index += 1) {
+    for (index = 0; index < 4; index += 1) {
     var paletteDiv = document.getElementById('color-palette');
-    var myDivs = document.createElement('divs');
+    var myDivs = document.createElement('div');
     paletteDiv.appendChild(myDivs);
     myDivs.className = 'color';
 }
@@ -9,6 +9,9 @@ function createDivs() {
 createDivs();
 
 function createColor() {
-var paletteDiv = document.getElementsByClassName('color');
-paletteDiv[0].style.backgroundColor = 'black';
+var cores = document.querySelectorAll(".color");
+cores[0].style.backgroundColor = 'black';
+cores[1].style.backgroundColor = 'blue';
+cores[2].style.backgroundColor = 'green';
+cores[3].style.backgroundColor = 'yellow';
 }
