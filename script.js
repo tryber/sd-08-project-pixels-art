@@ -25,8 +25,7 @@ colorsArray[0].addEventListener('click', function () {
     colorsArray[3].className = 'color blue';
   }
   colorsArray[0].className = 'color black selected';
-}
-);
+});
 
 //  vermelho
 
@@ -41,8 +40,7 @@ colorsArray[1].addEventListener('click', function () {
     colorsArray[3].className = 'color blue';
   }
   colorsArray[1].className = 'color red selected';
-}
-);
+});
 
 //  verde
 
@@ -57,8 +55,7 @@ colorsArray[2].addEventListener('click', function () {
     colorsArray[3].className = 'color blue';
   }
   colorsArray[2].className = 'color green selected';
-}
-);
+});
 
 //  azul
 
@@ -73,8 +70,7 @@ colorsArray[3].addEventListener('click', function () {
     colorsArray[2].className = 'color green';
   }
   colorsArray[3].className = 'color blue selected';
-}
-);
+});
 
 //  colorindo os pixels
 const pixelsArray = document.getElementsByClassName('pixel');
@@ -84,7 +80,7 @@ for (let index = 0; index < pixelsArray.length; index += 1) {
     const elemColor = window.getComputedStyle(elem, null).getPropertyValue('background-color');
     pixelsArray[index].style.backgroundColor = elemColor;
   })
-}
+};
 
 //      bibliografia para resolver o requisito acima: https://www.w3schools.com/jsref/jsref_getcomputedstyle.asp
 
@@ -93,4 +89,4 @@ button.addEventListener('click', function () {
   for (let index = 0; index < pixelsArray.length; index += 1) {
     pixelsArray[index].style.backgroundColor = 'white';
   }
-})
+});
