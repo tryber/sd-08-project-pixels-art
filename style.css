@@ -22,7 +22,7 @@
 
 .pixel {
     background-color: white;
-    border: 1px solid black;
+    border-right: 1px solid black;
     height: 40px;
     width: 40px;
     padding: 0px;
@@ -31,4 +31,8 @@
 table {
     margin-top: 35px;
     border-collapse: collapse;
+}
+
+tr {
+    border: 1px solid black;
 }
