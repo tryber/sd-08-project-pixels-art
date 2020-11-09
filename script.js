@@ -6,6 +6,17 @@ function palettaColor () {
 }
 palettaColor();
 
+let pixelBox = 5;
+function createLines () {
+    let divMother = document.querySelector('#pixel-board');    
+    for (let i = 0; i < pixelBox; i +=1) {
+        let divNova = document.createElement('div');
+        divNova.id = 'line'; 
+        divMother.appendChild(divNova);
+    }
+}
+createLines();
+
 function createPixels () {    
     let divlPixelBoard = document.querySelectorAll('#line');
     for (let i = 0; i < divlPixelBoard.length; i +=1) {
@@ -22,7 +33,7 @@ window.onload = function () {
     document.querySelectorAll('.color')[0].classList.add('selected');
     document.querySelectorAll('.color')[1].classList.remove('selected');
     document.querySelectorAll('.color')[2].classList.remove('selected');
-    document.querySelectorAll('.color')[3].classList.remove('selected');   
+    document.querySelectorAll('.color')[3].classList.remove('selected');     
 }
 
 document.querySelectorAll('.color')[0].addEventListener('click', function eventColorClick1 () {    
@@ -73,14 +84,35 @@ document.querySelectorAll('.color')[3].addEventListener('click', function eventC
     }    
 });
 
-function changeColorPixel (event) {
+document.querySelector('#pixel-board').addEventListener('click', function changeColorPixel (event) {
     event.target.style.background = document.querySelector('.selected').style.background;
-}
-document.querySelector('#pixel-board').addEventListener('click', changeColorPixel);
+});
+
 
 document.querySelector('#clear-board').addEventListener('click', function clearPixel() {
     for (let i = 0; i < document.querySelectorAll('.pixel').length; i += 1) {
         document.querySelectorAll('.pixel')[i].style.background = '';
     }
 });
-   
+ 
+document.querySelector('#generate-board').addEventListener('click', function inputValue(){    
+    if (document.querySelector('#board-size').value == '') {
+        alert("Deve ser um valor positivo!");
+    }
+    if (document.querySelector('#board-size').value < 5) {
+        document.querySelector('#board-size').value = 5;
+    } 
+    if (document.querySelector('#board-size').value > 50) {
+        document.querySelector('#board-size').value = 50; 
+    }
+    document.body.removeChild(document.getElementById('pixel-board'));
+    let divNova = document.createElement('div');
+    divNova.id = 'pixel-board';  
+    document.body.appendChild(divNova);
+    pixelBox = document.querySelector('#board-size').value;
+    console.log(pixelBox);
+    createLines();
+    createPixels();
+});
+
+
