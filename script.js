@@ -69,7 +69,13 @@ pixelBoardContainer.appendChild(pixelBoard);
 
 const generateBoardButton = document.getElementById('generate-board');
 generateBoardButton.addEventListener('click', function() {
-  boardSize = parseInt(pixelBoardSize.value);
+  const inputValue = pixelBoardSize.value;
+  if (!inputValue) {
+    alert("Board inválido!");
+    return;
+  }
+  boardSize = parseInt(inputValue);
+  boardSize = Math.max(Math.min(inputValue, 50), 5);
   const newPixelBoard = createPixelBoard();
   pixelBoardContainer.replaceChild(newPixelBoard, pixelBoard);
   pixelBoard = newPixelBoard;
