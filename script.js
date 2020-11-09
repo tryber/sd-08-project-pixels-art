@@ -34,22 +34,21 @@ function getRandomColor() {
 
 const pixelBoardContainer = document.getElementById('pixel-board-container');
 const pixelBoardSize = document.getElementById('board-size');
-let boardSize = parseInt(pixelBoardSize.value);
 
-function createPixelBoard() {
+function createPixelBoard(size) {
   const pixelBoard = document.createElement('div');
   pixelBoard.className = 'pixel-board';
-  for(let i = 0; i < boardSize; i++) {
-    const pixelRow = createPixelRow();
+  for(let i = 0; i < size; i++) {
+    const pixelRow = createPixelRow(size);
     pixelBoard.appendChild(pixelRow);
   }
   return pixelBoard;
 }
 
-function createPixelRow() {
+function createPixelRow(size) {
   const row = document.createElement('div');
   row.className = 'pixel-row';
-  for (let i = 0; i < boardSize; i += 1) {
+  for (let i = 0; i < size; i += 1) {
     const pixel = createPixel();
     row.appendChild(pixel);
   }
@@ -64,7 +63,7 @@ function createPixel() {
 }
 
 // Cria a primeira pixelBoard e adiciona no container
-let pixelBoard = createPixelBoard();
+let pixelBoard = createPixelBoard(5);
 pixelBoardContainer.appendChild(pixelBoard);
 
 const generateBoardButton = document.getElementById('generate-board');
@@ -74,9 +73,9 @@ generateBoardButton.addEventListener('click', function() {
     alert("Board inválido!");
     return;
   }
-  boardSize = parseInt(inputValue);
-  boardSize = Math.max(Math.min(inputValue, 50), 5);
-  const newPixelBoard = createPixelBoard();
+  let size = parseInt(pixelBoardSize.value);
+  size = Math.max(Math.min(inputValue, 50), 5);
+  const newPixelBoard = createPixelBoard(size);
   pixelBoardContainer.replaceChild(newPixelBoard, pixelBoard);
   pixelBoard = newPixelBoard;
   addColorClickEvent();
