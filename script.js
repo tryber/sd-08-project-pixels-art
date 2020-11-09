@@ -9,6 +9,16 @@ colors.forEach((color) => {
     document.querySelector('#color-palette').appendChild(paletteColors);
 });
 
+document.querySelector('.color').classList.add('selected');
+
+document.querySelectorAll('.color').forEach((color, index, arr) => {
+    color.addEventListener('click', () => {
+        arr.forEach(element => element.classList.remove('selected'));
+        
+        color.classList.add('selected');
+    });
+});
+
 const pixelsLineAndColumn = [5, 5];
 
 for (let lineNumber = 1; lineNumber <= pixelsLineAndColumn[0]; lineNumber += 1) {
