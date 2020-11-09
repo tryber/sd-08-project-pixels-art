@@ -1,12 +1,4 @@
 window.onload = function () {
-    let paletaCores = document.querySelectorAll('.color');
-
-    let corPreta = paletaCores[0];
-    let corVermelha = paletaCores[1];
-    let corVerde = paletaCores[2];
-    let corAzul = paletaCores[3];
-
-    corPreta.className += ' selected';
     let selecionado = document.querySelector('.selected');
     console.log(selecionado.style.backgroundColor)
     
@@ -34,6 +26,47 @@ window.onload = function () {
         if (event.target == button) {
             for (let pix of pixelsArray) {
                 pix.style.backgroundColor = 'white';
+            }
+        }
+    })
+
+    addEventListener('click', function(event){
+        let button = document.querySelector('#generate-board');
+        let input = document.querySelector('#board-size');
+        let lado = input.value;
+        
+
+        if (event.target == button) {
+            if (lado == 0) {
+                alert('Board inválido!');
+            } else if (lado == document.getElementsByTagName('tr').length) {
+                // faz nada
+            } else {
+                let pixelBoard = document.querySelector('.pixel-board');
+                pixelBoard.remove(pixelBoard)
+
+                if (lado < 5) {
+                    lado = 5;
+                }
+                else if (lado > 50) {
+                    lado = 50;
+                }
+                
+                pixelBoard = document.createElement('table');
+                let main = document.getElementsByTagName('main')
+                pixelBoard.className = 'pixel-board';
+                main[0].appendChild(pixelBoard);
+                
+                for (let i = 0; i < lado; i += 1) {
+                    let linha = document.createElement('tr');
+                    pixelBoard.appendChild(linha);
+                    for (let j = 0; j < lado; j += 1) {
+                        let pix = document.createElement('td');
+                        pix.className = 'pixel';
+                        pixelBoard.lastChild.appendChild(pix);
+                    }
+                }
+ 
             }
         }
     })

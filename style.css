@@ -3,12 +3,12 @@
 }
 
 #color-palette {
-    padding-bottom: 15px;
+    padding-bottom: auto;
 }
 
 .color {
-    width: 25px;
-    height: 25px;
+    width: 40px;
+    height: 40px;
     display: inline-block;
     border: 1px solid black
 }
@@ -37,5 +37,5 @@
 }
 
 #clear-board {
-    margin-bottom: 15px;
+    margin-bottom: auto;
 }
