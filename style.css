@@ -1,0 +1,26 @@
+.color { 
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    display: inline-block;
+    margin: 5px;    
+}
+.cor1 {
+    background-color: black;
+}
+.cor2 {
+    background-color: red;
+}
+.cor3 {
+    background-color: blue;
+}
+.cor4 {
+    background-color: green;
+}
+.pixel { 
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    display: inline-block;   
+    
+}
