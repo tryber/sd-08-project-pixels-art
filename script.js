@@ -30,11 +30,3 @@ function createGrade () {
 }
 createGrade()
 
-function getColor(selected) {
-  selected.setAttribute('class', 'selected')
-}
-
-getColor()
-function paint () {
-
-}
