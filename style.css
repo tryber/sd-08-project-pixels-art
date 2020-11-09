@@ -1,35 +1,5 @@
 #color-palette {
-  display: table
+  display: flex;
 }
 
-#color-palette #color1 {
-  display: table-row;
-  background-color: black;
-  border-color: black;
-  border: solid;
-  border: 1px;
-}
 
-#color-palette #color2 {
-  display: table-row;
-  background-color: green;
-  border-color: black;
-  border: solid;
-  border: 1px;
-}
-
-#color-palette #color3 {
-  display: table-row;
-  background-color: yellow;
-  border-color: black;
-  border: solid;
-  border: 1px;
-}
-
-#color-palette #color4 {
-  display: table-row;
-  background-color: blue;
-  border-color: black;
-  border: solid;
-  border: 1px;
-}
