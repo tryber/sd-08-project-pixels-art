@@ -19,7 +19,7 @@ ul {
   padding: 0 25px;
 }
 
-.color:nth-child(1) {
+/* .color:nth-child(1) {
   background-color: black;
 }
 
@@ -31,4 +31,4 @@ ul {
 }
 .color:nth-child(4) {
   background-color: blue;
-}
+} */
