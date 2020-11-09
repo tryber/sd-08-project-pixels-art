@@ -1,0 +1,31 @@
+#color-palette li {
+    display: inline-block;
+    width: 13.6%;
+    height: 45px;
+    width: 45px;
+    border: 1px solid black;
+}
+
+#preto {
+    background-color: black;
+}
+
+#azul {
+    background-color: blue;
+}
+
+#verde {
+    background-color: green;
+}
+
+#amarelo {
+    background-color: yellow;
+}
+
+#laranja {
+    background-color: orange;
+}
+
+#roxo {
+background-color: purple;
+}
