@@ -1,24 +1,24 @@
 // Cria a paleta de cores
 const colorPaletteContainer = document.getElementById('color-palette');
 const colors = ['black', 'red', 'green', 'blue'];
-for (let backColor of colors) {
-  let colorPalette = document.createElement('div');
+for (let paletteColor = 0; paletteColor < colors.length; paletteColor += 1) {
+  const colorPalette = document.createElement('div');
   colorPalette.className = 'color';
-  colorPalette.style.backgroundColor = backColor;
+  colorPalette.style.backgroundColor = colors[paletteColor];
   colorPaletteContainer.appendChild(colorPalette);
 }
 
 // Cria o quadro de pixels
-let boardSize = 5;
-let pixelBoard = document.getElementById('pixel-board');
+const boardSize = 5;
+const pixelBoard = document.getElementById('pixel-board');
 for (let row = 0; row < boardSize; row += 1) {
-  let pixelRow = document.createElement('div');
+  const pixelRow = document.createElement('div');
   pixelRow.className = 'pixel-row';
   pixelBoard.appendChild(pixelRow);
   let pixelCells = document.getElementsByClassName('pixel-row');
   for (let cell = 0; cell < boardSize; cell += 1) {
     let pixelCellContainer = pixelCells[row];
-    let pixelCell = document.createElement('div');
+    const pixelCell = document.createElement('div');
     pixelCell.className = 'pixel';
     pixelCellContainer.appendChild(pixelCell);
   }
