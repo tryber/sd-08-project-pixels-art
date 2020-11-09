@@ -22,6 +22,7 @@ function createTable() {
         spot.classList = 'pixel';
         spot.style.backgroundColor = 'white';
         document.querySelector('#pixel-board').appendChild(spot);
+        colorChange(spot);
     }
 }
 
@@ -35,3 +36,9 @@ function selecting(element) {
     })
 }
 
+function colorChange(element){
+    element.addEventListener('click', function(event) {
+        let selected = document.querySelector('.selected');
+        event.target.style.backgroundColor = selected.style.backgroundColor;
+    })
+}
