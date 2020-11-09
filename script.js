@@ -1,9 +1,9 @@
 function createDivs() {
     for (index = 0; index < 4; index += 1) {
-    let paletteDiv = document.getElementById('color-palette');
-    let myDivs = document.createElement('div');
-    paletteDiv.appendChild(myDivs);
-    myDivs.className = 'color';
+    let colorPalette = document.getElementById('color-palette');
+    let divColor = document.createElement('div');
+    colorPalette.appendChild(divColor);
+    divColor.className = 'color';
 }
 }
 createDivs();
