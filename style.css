@@ -5,3 +5,14 @@
     display: inline-block;    
 }
 
+#pixel-board {
+    width: 210px;
+    
+}
+
+.pixel {
+    width: 40px;
+    height: 40px;
+    border: 1px black solid;
+    display: inline-block; 
+}
