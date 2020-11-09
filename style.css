@@ -1,0 +1,30 @@
+#title{
+    text-align: center;
+}
+
+#color-palette{
+    display: inline;
+    float: left;
+}
+
+.color {
+    width: 100px;
+    height: 40px;
+    border: 1px solid black;
+}
+
+.black {
+    background-color: black;
+}
+
+.red{
+    background-color: red;
+}
+
+.blue{
+    background-color: blue;
+}
+
+.green{
+    background-color: green;
+}
