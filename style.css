@@ -30,5 +30,12 @@ div.pixel-board {
 }
 
 .button {
+    margin-top: 10px;
     margin-bottom: 10px;
 }
+
+.input-container {
+    width: 49%;
+    height: 10px;
+    display: inline-block;
+  }
