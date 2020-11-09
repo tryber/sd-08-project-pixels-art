@@ -58,8 +58,8 @@ function selectedPalette() {
 
     item.addEventListener('click', (event) => {
       if (item.className === 'color') {
-        const selectedPalette = document.querySelector('.selected');
-        selectedPalette.className = 'color';
+        const selectedColor = document.querySelector('.selected');
+        selectedColor.className = 'color';
         event.target.className = 'color selected';
       } else {
         event.target.className = 'color';
@@ -74,9 +74,9 @@ function pixelColorOfSelectedPallete() {
   const pixelsBoard = document.querySelector('#pixel-board');
 
   pixelsBoard.addEventListener('click', (event) => {
-    const selectedPalette = document.querySelector('.selected');
+    const selectedColor = document.querySelector('.selected');
 
-    if (selectedPalette !== null) {
+    if (selectedColor !== null) {
       event.target.style.backgroundColor = selectedPalette.style.backgroundColor;
     }
   });
