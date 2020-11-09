@@ -1,4 +1,4 @@
-.titulo {
+body {
   text-align: center;
 }
 
@@ -31,6 +31,7 @@
 .btn-clear {
   border-radius: 7;
   height: 25px;
+  margin: 15px;
   width: 120px;
 }
 

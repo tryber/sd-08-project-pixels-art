@@ -1,19 +1,25 @@
 function pintaPixel (event) {
   const corSelecionada = document.querySelector('.selected');
   event.target.style.backgroundColor = corSelecionada.style.backgroundColor;
-};
-  
-function clearBoard() {
-  let pixel = document.querySelectorAll('.pixel');
-  for (let index = 0; index < pixel.length; index += 1){
-    pixel[index].style.backgroundColor = 'white';
-  };
-};
+}
 
-let btn = document.getElementById('clear-board');
+function clearBoard() {
+  const pixel = document.querySelectorAll('.pixel');
+  for (let index = 0; index < pixel.length; index += 1) {
+    pixel[index].style.backgroundColor = 'white';
+  }
+}
+
+const btn = document.getElementById('clear-board');
 btn.addEventListener('click', clearBoard);
 
 const cores = ['#000000'];
+
+function selecionaCor(event) {
+  let corSelecionada = document.querySelector('.selected');
+  corSelecionada.className = 'color';
+  event.target.className = 'selected color';
+}
 
 function geraPaletaDeCores() {
   const paletaDeCores = document.getElementById('color-palette');
@@ -23,14 +29,8 @@ function geraPaletaDeCores() {
     divCor.className = 'color';
     divCor.addEventListener('click', selecionaCor);
     paletaDeCores.append(divCor);
-  };
-};
-
-function selecionaCor(event) {
-  let corSelecionada = document.querySelector('.selected');
-  corSelecionada.className = 'color';
-  event.target.className = 'selected color';
-};
+  }
+}
 
 geraPaletaDeCores();
 
@@ -41,10 +41,10 @@ function evitaCorRepetida() {
       for (pos; pos < cores.length; pos += 1) {
         if (cores[index] === cores[pos] || cores[pos] === '#FFFFFF' || cores[pos] === '') {
           geraCores();
-        };
-      };
-    };
-  };
+        }
+      }
+    }
+  }
 
 function geraCores() {
   const cor = document.querySelectorAll('#color-palette .color');
@@ -55,10 +55,10 @@ function geraCores() {
   for (let index = 1; index < 4; index += 1) {
     cor[index].style.backgroundColor = '#' + (Math.floor(Math.random() * 16777215).toString(16));
     cores.push(cor[index].style.backgroundColor);
-  };
+  }
 
   evitaCorRepetida();
-};
+}
 
 geraCores();
 
@@ -75,8 +75,8 @@ function geraPixelBoard() {
       pixel.style.backgroundColor = '#FFFFFF';
       pixel.addEventListener('click', pintaPixel);
       pixelBoard.lastChild.append(pixel);
-    };
-  };
-};
+    }
+  }
+}
 
 geraPixelBoard();
