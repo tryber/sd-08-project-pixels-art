@@ -1,5 +1,6 @@
 let colors = document.querySelectorAll('.color');
 let pixels = document.querySelectorAll('.pixel');
+let clearButton = document.getElementById('clear-board');
 let selected = colors[0];
 let currentColor = 'black';
 
@@ -16,6 +17,12 @@ function fillPixel(event) {
   event.target.style.backgroundColor = currentColor;
 }
 
+function clearBoard() {
+  for (pixel of pixels) {
+    pixel.style.backgroundColor = 'white';
+  }
+}
+
 for (color of colors) {
   color.addEventListener('click', selectColor);
 }
@@ -23,3 +30,5 @@ for (color of colors) {
 for (pixel of pixels) {
   pixel.addEventListener('click', fillPixel);
 }
+
+clearButton.addEventListener('click', clearBoard);
