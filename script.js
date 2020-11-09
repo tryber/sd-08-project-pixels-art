@@ -12,8 +12,7 @@ function criaCores(){
       cores[index].style.backgroundColor = `rgb(${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)})`;
       // copiei a função de numero aleatorio do site https://www.w3schools.com/js/js_random.asp
     };
-  }
-  
+  }  
 
 criaCores();
 
@@ -67,3 +66,17 @@ function limpaQuadro(){
   }
 }
 limpaQuadro();
+
+
+/*
+function quadroUsuario(){
+let vqv = document.getElementById('generate-board');
+vqv.addEventListener('click', criaQuadro);
+function criaQuadro(){
+  let input = document.getElementById('board-size');
+  let value = input.value;
+  criaPixels(value);
+}
+}
+quadroUsuario();
+*/
