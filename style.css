@@ -1,5 +1,5 @@
 #title {
-text-align: center;
+  text-align: center;
 }
 
 ul {
@@ -9,21 +9,32 @@ ul {
 }
 
 #color-palette {
-    text-align: center;
+  text-align: center;
 }
 
 #color-palette li {
-    text-align: center;
-    border: 5px solid black;
-    margin: 5px;
-
+  display: inline-block;
+  text-align: center;
+  border: 1px solid black;
+  margin: 1em;
+  padding: 5em;
 }
 
-li {
-  text-align: center;
-  display: inline-block;
-  margin: 0px;
-  border: 1px solid black;
+#pixel-board table {
+  display: table;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 5em;
+  height: 5em;
+}
+
+#pixel-board tr,
+td {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 40px;
+  height: 40px;
   padding: 5em;
-  background-color: aliceblue;
+  border: 1px groove black;
+  background-color: white;
 }
