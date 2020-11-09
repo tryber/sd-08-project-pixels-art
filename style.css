@@ -57,13 +57,13 @@ body {
 	width: 508px;
   height: 508px;
   /* margin: auto; */
-   border: 1px solid black;
+   /* border: 1px solid black; */
 }
 
 .pixel {
 	display: block;
-	width: 100px;
-  height: 100px;
+	width: 40px;
+  height: 40px;
   margin: auto;
 	border: 1px solid black;
 }
