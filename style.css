@@ -2,25 +2,23 @@
     width: 40px;
     height: 40px;
     border: 1px black solid;
-    display: inline-block;    
+    display: inline-block;  
+    margin-left: 5px;
+
 }
 
 #pixel-board {
     max-width: 220px;
-    max-height: 220px;
-    display: table-cell;   
-}
-
-td {
-    padding: 0;
+    max-height: 220px; 
     display: table-row;
-    
 }
 
 .pixel {
     width: 40px;
     height: 40px;
-    border: 1px black solid;
-    display: inline-block; 
+    border: 1px black solid;    
     background-color: white;
+    display: table; 
+    border-collapse: unset; 
+    border-spacing: 0px;
 }

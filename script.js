@@ -1,13 +1,13 @@
 const colors = ["black", "yellow", "green", "red"];
 function colorPalette () {
-    let paletteLocal = document.querySelector("color-palette");
-
-
-
-    const colorLocal = document.querySelectorAll(".color");
+    let paletteLocal = document.getElementById("color-palette");
+    
     for (let i = 0; i < colors.length; i += 1) {
-
-
+        let colorBox = document.createElement('div');
+        colorBox.className = "color";
+        paletteLocal.appendChild(colorBox);
+        
+        const colorLocal = document.querySelectorAll(".color");
         colorLocal[i].style.backgroundColor = colors[i];
     }
 }
