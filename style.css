@@ -1,0 +1,23 @@
+.color {
+  display: inline-block;
+  border: solid 1px black;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+}
+
+#cor1{
+  background-color: black;
+}
+
+#cor2{
+background-color: aquamarine;
+}
+
+#cor3{
+  background-color: greenyellow;
+}
+
+#cor4{
+  background-color:blueviolet;
+}
