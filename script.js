@@ -40,3 +40,14 @@ function switchSelectedColor(event) {
 for (const colorInPalette of paletteColors) {
   colorInPalette.addEventListener('click', switchSelectedColor);
 }
+
+// Requirement 8
+function paintPixel(event) {
+  const pickedColor = selectedColor.style.backgroundColor;
+  event.target.style.backgroundColor = pickedColor;
+}
+
+const allPixels = document.querySelectorAll('.pixel');
+for (let pixel = 0; pixel < allPixels.length; pixel += 1) {
+  allPixels[pixel].addEventListener('click', paintPixel);
+}
