@@ -17,13 +17,12 @@ main {
 
 #color-palete{
     text-align: center;
-    width: 25%;
     background-color: white;
     border-radius: 8px;
 }
 
 .color {
-    border: 2px solid black;
+    border: 1px solid black;
     display: inline-block;
     width: 40px;
     height: 40px;
