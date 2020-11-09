@@ -1,0 +1,26 @@
+.color {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+}
+#firstColor {
+  background-color: black;
+}
+#secondColor {
+  background-color: orange;
+}
+#thirdColor {
+  background-color: red;
+}
+#fourthColor {
+  background-color: green;
+}
+.lines {
+  display: inline-block;
+}
+.pixel {
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+}
