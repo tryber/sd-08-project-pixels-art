@@ -1,6 +1,12 @@
+li {
+  list-style-type: none;
+  float: left;
+}
+
 .color-palette {
   display: flex;
 }
+
 .color {
   border: 1px solid black;
   border-radius: 100%;
@@ -27,4 +33,11 @@
   float: left;
   height: 40px;
   width: 40px;
+}
+
+.control-board input[type='number'] {
+  width: 35px;
+}
+.clear-board {
+  margin: 8px;
 }
