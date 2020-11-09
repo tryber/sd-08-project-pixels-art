@@ -9,28 +9,7 @@ function paintPixelsPalette(colors) {
     div.style.backgroundColor = colors[i]
   }
 }
-
-
 paintPixelsPalette(colors)
-function createGrade () {
-  let size = 5;
-  let board = document.getElementById("pixel-board")
-
-  for(index = 0; index < size; index++){
-    let newLine = document.createElement('div')
-    newLine.className = 'line'
-    newLine.setAttribute('onclick', 'paint()')
-    board.appendChild(newLine)
-    for(i = 0; i < size; i++){
-      let newDiv = document.createElement('div')
-      newDiv.className = 'pixel'
-      newLine.appendChild(newDiv)
-    }
-  }
-}
-createGrade()
-
-
 
 function selectColor(){
   var pixels = document.querySelectorAll('.color')
@@ -48,7 +27,7 @@ function selectColor(){
       }
     })
 
-    function wathColor(cor){
+    function wathColor(){
       for( i = 0; i < pixels.length; i++){
       if(pixels[i].className === 'color selected'){
         var cor = pixels[i].style.backgroundColor
@@ -60,6 +39,26 @@ function selectColor(){
 }
 selectColor()
 
-function paint(){
 
+
+
+
+function createGrade () {
+  let size = 5;
+  let board = document.getElementById("pixel-board")
+
+  for(index = 0; index < size; index++){
+    let newLine = document.createElement('div')
+    newLine.className = 'line'
+    newLine.addEventListener('click', (event) => {
+        event.target.style.backgroundColor = selectColor()
+    })
+    board.appendChild(newLine)
+    for(i = 0; i < size; i++){
+      let newDiv = document.createElement('div')
+      newDiv.className = 'pixel'
+      newLine.appendChild(newDiv)
+    }
+  }
 }
+createGrade()
