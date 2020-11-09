@@ -36,3 +36,23 @@
 
     text-align: center;
 }
+
+#pixel-board {
+
+    height: 300px;
+    width: 490px;
+    background-color:black;
+    margin-left: 12%;
+    display: inline-block;
+    border: black solid 1px;
+
+}
+
+.pixel {
+
+    height: 55px;
+    width: 92.6px;
+    border: black solid 1px;
+    background-color: white;
+    display: inline-block;
+}
