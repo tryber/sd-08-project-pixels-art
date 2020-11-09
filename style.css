@@ -29,22 +29,6 @@ body {
   border: 1px solid black;
 }
 
-#colorA {
-  background: black;
-}
-
-#colorB {
-  background: red;
-}
-
-#colorC {
-  background: blue;
-}
-
-#colorD {
-  background: yellow;
-}
-
 #pixel-board {
   margin-top: 10px;
   display: grid;
@@ -56,4 +40,9 @@ body {
 .pixel {
   background: white;
   border: 1px solid black;
+}
+
+button {
+  margin-top: 20px;
+  text-align: center;
 }
