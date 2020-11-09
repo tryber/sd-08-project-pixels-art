@@ -20,8 +20,8 @@ function pintaPixel() {
   for (let i = 0; i < pixels.length; i += 1) {
     let pixel = pixels[i];
     pixel.addEventListener('click', function(event) {
-      let selected = document.querySelector('.color.selected');
-      event.target.style.backgroundColor = selected.style.backgroundColor;
+      let color = document.querySelector('.color.selected').style.backgroundColor;
+      event.target.style.backgroundColor = color;
     })
   }
 }
@@ -33,7 +33,7 @@ function limpaPixels() {
     let pixels = document.querySelectorAll('.pixel');
     for (let i = 0; i < pixels.length; i += 1) {
       let pixel = pixels[i];
-      pixel.removeAttribute('style');
+      pixel.style.backgroundColor = 'white';
     }
   })
 }
