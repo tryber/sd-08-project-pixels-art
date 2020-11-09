@@ -54,10 +54,10 @@ body {
 	flex-direction: row;
 	margin-top: 50px;
 	gap: 0px;
-	width: 600px;
-  height: 500px;
+	width: 508px;
+  height: 508px;
   /* margin: auto; */
-  /* border: 1px solid black; */
+   border: 1px solid black;
 }
 
 .pixel {
@@ -65,5 +65,5 @@ body {
 	width: 100px;
   height: 100px;
   margin: auto;
-	border: 2px solid black;
+	border: 1px solid black;
 }
