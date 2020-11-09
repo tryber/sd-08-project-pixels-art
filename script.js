@@ -23,6 +23,10 @@ function capturedElementEvents(target, event, callback) {
     callback(elementEvent, colorSelected);
   });
 }
+function clear() {
+  document.location.reload(true);
+}
 
 capturedElementEvents('pixel-board', 'click', backgroundColor, false);
 capturedElementEvents('color-palette', 'click', addedSelected);
+capturedElementEvents('clear-board', 'click', clear);
