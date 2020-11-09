@@ -11,8 +11,8 @@ header h1 {
 }
 
 .color {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   margin-right: 14px;
   border: 1px solid black;
 }
@@ -44,8 +44,8 @@ header h1 {
 }
 
 .pixel-board {
-  width: 260px;
-  height: 260px;
+  width: 210px;
+  height: 210px;
   margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
@@ -54,7 +54,7 @@ header h1 {
 }
 
 .pixel {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border: 1px solid black;
 }
