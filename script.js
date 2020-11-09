@@ -17,7 +17,7 @@ function createColors(nameEl, colors) {
 
 function pixelsLine(el, tamanho) {
     let newLine = criarElemento(el, 'class', 'line');
-    for (let l = 0; l < tamanho; l += 1){
+    for (let l = 0; l < tamanho; l += 1) {
         let newRow = criarElemento(el, 'class', 'pixel');
         newLine.appendChild(newRow);
     }
@@ -26,7 +26,7 @@ function pixelsLine(el, tamanho) {
 
 function createPixels(nameEl, tamanho) {
     let getDiv = document.querySelector('#pixel-board');
-    for (let i = 0; i < tamanho; i += 1){
+    for (let i = 0; i < tamanho; i += 1) {
         let newPixels = pixelsLine(nameEl, 5);
         getDiv.appendChild(newPixels);
     }
@@ -35,10 +35,10 @@ function createPixels(nameEl, tamanho) {
 function color(event) {
     let getPaleta = document.getElementsByClassName('color');
     let cor = event.target.style.backgroundColor;
-    for(let i = 0; i < getPaleta.length; i += 1){
-        if(getPaleta[i].style.backgroundColor === cor){
+    for (let i = 0; i < getPaleta.length; i += 1) {
+        if (getPaleta[i].style.backgroundColor === cor) {
             getPaleta[i].classList.add('selected');
-        }else{
+        } else {
             getPaleta[i].classList.remove('selected');
         }
     }
@@ -46,7 +46,7 @@ function color(event) {
 
 function colorSelected() {
     let getPaleta = document.getElementsByClassName('color');
-    for (let key of getPaleta){
+    for (let key of getPaleta) {
         key.addEventListener('click', color);
     }
 }
@@ -59,26 +59,51 @@ function getColor() {
 
 function paint() {
     let getPixel = document.querySelectorAll('.pixel');
-    for (let key of getPixel){
-        key.addEventListener('click', function(event) {
+    for (let key of getPixel) {
+        key.addEventListener('click', function (event) {
             event.target.style.backgroundColor = getColor();
         })
     }
 }
 
+function createButton(name, nameAtribute, value) {
+    let newButton = criarElemento('button', nameAtribute, value);
+    newButton.innerText = name;
+    newButton.type = 'button';
+    return newButton;
+}
+
+function buttonClear() {
+    let newBtn = createButton('Limpar', 'id', 'clear-board');
+    let getContainer = document.querySelector('.btn-clear-container');
+    getContainer.appendChild(newBtn);
+}
+
+function pixelColorDefault() {
+    let getBtn = document.getElementById('clear-board');
+    let getPixel = document.getElementsByClassName('pixel');
+    getBtn.addEventListener('click', function() {
+        for(let key of getPixel) {
+            key.style.backgroundColor = 'white';
+        }
+    })
+}
+
 const colorInit = () => {
-    let getPaleta =  document.querySelector('.color');
+    let getPaleta = document.querySelector('.color');
     getPaleta.classList.add('selected');
 }
 
 const mainFunction = () => {
-    const colors = ['black', 'blue', 'red', 'yellow'];
+    const colors = ['black', 'green', 'gold', 'orange'];
     createColors('div', colors);
     createPixels('div', 5);
     colorInit();
     colorSelected();
     colorSelected();
     paint();
+    buttonClear();
+    pixelColorDefault();
 }
 
 mainFunction();
