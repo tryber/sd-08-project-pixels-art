@@ -1,3 +1,7 @@
+window.onload = function () {
+  
+};
+
 // Cria a paleta de cores
 const colorPaletteContainer = document.getElementById('color-palette');
 const colors = ['black', 'red', 'green', 'blue'];
