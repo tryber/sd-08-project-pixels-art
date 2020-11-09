@@ -1,7 +1,8 @@
+//Criando quadrados modelo de cores para paleta.
 let paletaDeCor = document.getElementById('color-palette');
 let arrayDeCores = ['green', 'yellow', 'blue'];
 
-for (let index = 0; index < 4; index += 1){
+for (let index = 0; index < 4; index += 1) {
   let corDaPaleta = document.createElement('div');
   corDaPaleta.className = ('color');
   corDaPaleta.style.display = ('flex');
@@ -17,6 +18,25 @@ for (let index = 0; index < 4; index += 1){
   corDaPaleta.style.height = ('40px');
   corDaPaleta.style.margin = ('5px');
   paletaDeCor.appendChild(corDaPaleta);
+}
 
+//Criando mosaico com as células a serem pintadas.
+let gradeCelulas = document.getElementById('pixel-board');
+gradeCelulas.style.borderSpacing = (0);
+gradeCelulas.style.border = ('none');
+
+for (let primeiroIndex = 0; primeiroIndex < 5; primeiroIndex += 1) {
+  let linhaDaTabela = document.createElement('tr');
+  for (let segundoIndex = 0; segundoIndex < 5; segundoIndex += 1) {
+    let celulaLinhaTabela = document.createElement('td');
+    celulaLinhaTabela.className = ('pixel');
+    celulaLinhaTabela.style.backgroundColor = ('yellow');
+    celulaLinhaTabela.style.border = ('solid');
+    celulaLinhaTabela.style.borderWidth = ('1px');
+    celulaLinhaTabela.style.width = ('40px');
+    celulaLinhaTabela.style.height = ('40px');
+    linhaDaTabela.appendChild(celulaLinhaTabela);
+  }
+  gradeCelulas.appendChild(linhaDaTabela);
 }
 

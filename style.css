@@ -2,4 +2,6 @@
   display: flex;
 }
 
-
+#pixel-board {
+  border-spacing: 0;
+}
