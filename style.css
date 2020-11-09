@@ -1,29 +1,31 @@
-* {
+.title {
   text-align: center;
 }
 
-#color-palette {
-  height: 40px;
-  width: 200px;
+.palette {
   display: inline-flex;
+  height: 50px;
+  width: 200px;
+  margin: auto;
 }
 
-#pixel-board {
-  width: 210px;
+.board {
+  display: inline-flex;  
   height: 210px;
-  display: inline-flex;
+  width: 210px;
+  margin: auto;
 }
 
 .color {
-  width: 40px;
+  border: black solid 1px;
   height: 40px;
-  margin: 5px;
-  border: black solid 1px
+  margin: 5px;  
+  width: 40px;
 }
 
-.pixel {
-  width: 40px;
+.pixel {  
+  border: black solid 1px;
   height: 40px;
-  border: black solid 1px
+  width: 40px;
 }
 
