@@ -60,3 +60,14 @@ function selectColor () {
   // });
 }
 selectColor();
+
+function paint () {
+  let pixelBoad = document.querySelectorAll('.pixel').forEach(function(item) {
+    item.addEventListener('click', function(event) {
+      let color = document.querySelector('.selected').style.backgroundColor;
+      event.target.style.backgroundColor = color;
+      console.log(color);
+    });
+  });
+}
+paint();
