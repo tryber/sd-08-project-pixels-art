@@ -34,3 +34,16 @@ function selectedColor (){
     colorInicial.className += " selected"; 
 }
 selectedColor();
+
+function changeSelectedColor (){
+    const colorSelected = document.querySelector("#color-palette");
+    const colorLocal = document.querySelectorAll(".color");
+
+    colorSelected.addEventListener("click", function (event){  
+        for (let i = 0; i < colors.length; i += 1) {
+            colorLocal[i].className = "color";           
+        }
+        event.target.className += " selected";
+    });
+}
+changeSelectedColor();
