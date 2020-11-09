@@ -1,0 +1,47 @@
+
+
+body {
+    margin: 0px;
+}
+
+#color-palette {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 500px;
+    height: 100px;
+}
+
+
+
+#color-1 {
+    width: 100px;
+    height: 100px;
+    
+    background-color: black;
+}
+
+#color-2 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+
+#color-3 {
+    width: 100px;
+    height: 100px;
+    background-color:blue;
+}
+
+#color-4 {
+    width: 100px;
+    height: 100px;
+    background-color:green;
+}
+
+a {
+    margin: 1px;
+    border-style: solid ;
+    border-color: black;
+    
+}
