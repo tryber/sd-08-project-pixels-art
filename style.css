@@ -20,3 +20,18 @@
 #green {
     background-color: green;
 }
+
+#pixel-board {
+    height: 210px;
+    width: 210px;
+    margin-top: 50px;
+}
+
+.pixel {
+    border: 1px solid black;
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    margin-top: -4px;
+    background-color: white;
+}
