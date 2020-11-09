@@ -1,6 +1,6 @@
 // Requirements 2 and 3:
-let colors = ['black', 'red', 'yellow', 'blue'];
-let colorPalette = document.querySelectorAll('.color');
+const colors = ['black', 'red', 'yellow', 'blue'];
+const colorPalette = document.querySelectorAll('.color');
 
 function fillingInPalette() {
   for (let index = 0; index < colorPalette.length; index += 1) {
@@ -10,13 +10,13 @@ function fillingInPalette() {
 fillingInPalette();
 
 // Requirements 4 and 5
-let pixelBoard = document.getElementById('pixel-board');
+const pixelBoard = document.getElementById('pixel-board');
 
 function createPixels(width) {
-  let pixelsTotal = Math.pow(width, 2);
+  const pixelsTotal = width ** 2;
 
   for (let index = 0; index < pixelsTotal; index += 1) {
-    let pixel = document.createElement('button');
+    const pixel = document.createElement('button');
     pixel.className = 'pixel';
     pixel.style.backgroundColor = 'white';
     pixelBoard.appendChild(pixel);

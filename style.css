@@ -2,32 +2,25 @@ body {
   text-align: center;
 }
 
-#color-palette {
+.color-palette {
   display: inline-flex;
   flex-wrap: wrap;
 }
 
 .color {
-  width: 70px;
-  height: 70px;
   border: solid 1px black;
+  height: 70px;
+  width: 70px;
 }
 
-#color1 {
-  border-radius: 10px 0px 0px 10px;
-}
-#color4 {
-  border-radius: 0px 10px 10px 0px;
-}
-
-#pixel-board {
-  width: 200px;
-  margin-right: auto;
+.pixel-board {
   margin-left: auto;
+  margin-right: auto;
+  width: 200px;
 }
 
 .pixel {
-  width: 40px;
-  height: 40px;
   border: solid 1px black;
+  height: 40px;
+  width: 40px;
 }
