@@ -5,3 +5,16 @@
     display: inline-block;
     
 }
+#color1{
+    background-color: black;
+}
+
+#color2{
+    background-color: red;
+}
+#color3{
+    background-color: blue;
+}
+#color4{
+    background-color: green;
+}
