@@ -1,8 +1,8 @@
-let pixelsLength = 5
+let pixelsLength = 5;
 
 //Criar um quadro de pixels
 function createPixels() {
-    let pixelBoard = document.getElementById("pixel-board");
+  let pixelBoard = document.getElementById("pixel-board");
     for (var i = 0; i < pixelsLength; i+= 1) {
         let line = document.createElement("tr")
         line.className = "line"
@@ -19,3 +19,8 @@ function createPixels() {
 }
 
 createPixels()
+
+//Definir a cor selecionada
+function selectColor(){
+    
+}
