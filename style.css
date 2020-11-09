@@ -1,22 +1,30 @@
 .color {
+  border: 1px solid black;
   display: inline-block;
   height: 45px;
+  margin: 5 px;
   width: 45px;
-  border: 1px solid black;
 }
 
-#black {
+#preto {
   background-color: black;
 }
 
-#red {
-    background-color: red;
+#vermelho {
+  background-color: red;
 }
 
-#blue{
-    background-color: blue;
+#azul {
+  background-color: blue;
 }
 
-#green {
-    background-color: green;
+#verde {
+  background-color: green;
+}
+
+.pixel {
+  border: 1px solid black;
+  height: 45px;
+  width: 45px;
+  background-color: white;
 }
