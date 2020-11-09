@@ -1,8 +1,3 @@
-body {
-  background-color: darkgrey;
-}
-
-
 #title {
   text-align: center;
 }
@@ -25,7 +20,7 @@ body {
 }
 
 .color3 {
-  background-color: yellow;
+  background-color: rgb(255, 255, 0);
 }
 
 .color4 {
@@ -36,17 +31,23 @@ body {
   background-color: black;
 }
 
+#button-container {
+  text-align: center;
+  margin: 2rem;
+}
+
 #pixel-board {
   text-align: center;
   margin: auto;
 }
 
-.pixel {
+table {
+  background-color: transparent;
+}
 
+.pixel {
   border: 1px solid black;
   margin: 0;
   width: 40px;
   height: 40px;
-  background: grey;
-
 }
