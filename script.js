@@ -21,8 +21,15 @@ window.onload = function(){
     const colorBlack = document.getElementById('color1')
 
     colorBlack.classList.add('selected')
+/*
+    function trocaCor(){
+        const quadrinhos = document.getElementsByClassName('pixel');
+        
 
-
+        }
+        
+    }
+    trocaCor();*/
 
 
 
