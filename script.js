@@ -1,0 +1,1 @@
+document.querySelector('#color-1').className= "color selected"

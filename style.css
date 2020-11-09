@@ -53,10 +53,10 @@ body {
 #pixel-board {
 	display: flex;
 	flex-direction: row;
-	margin-top: 50px;
+	margin-top: 10px;
 	margin-left: 50px;
-	width: 210px;
-  /* margin: auto; */
+	/* width: 200px; */
+	/* margin: auto; */
 	/* border: 1px solid black; */
 
 }
@@ -65,6 +65,5 @@ body {
 	display: block;
 	width: 40px;
   height: 40px;
-  margin: auto;
-	border: 1px solid black;
+ 	border: 1px solid black;
 }
