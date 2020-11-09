@@ -19,15 +19,17 @@ h1 {
   display: inline-block;
   height: 60px;
   width: 60px;
+  margin: 3px;
   
 }
 div#color-palette {
   margin: 20px;
 }
 
-div#first-color {
-  background-color: black !important;
+div#color1 {
+  background-color: black;
 }
+
 div#color2 {
   background-color: blue;
 }
