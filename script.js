@@ -7,7 +7,7 @@ for (let color = 0; color < colors.length; color += 1) {
   if (colors[color] === 'black') {
     colorPalette.className = 'color selected';
   }
-  colorPalette.style.backgroundColor = colors[color];
+  colorPalette.style.background = colors[color];
   colorPaletteContainer.appendChild(colorPalette);
 }
 
@@ -37,14 +37,16 @@ document.addEventListener('click', function (event) {
   }
   // Pinta o pixel com a cor selecionada
   if (event.target.classList.contains('pixel')) {
-    const applyColor = document.querySelector('.selected').style.backgroundColor;
-    event.target.style.backgroundColor = applyColor;
+    const applyColor = document.querySelector('.selected').style.background;
+    event.target.style.background = applyColor;
   }
   // Limpa o quadro
   if (event.target.classList.contains('btn-clear')) {
     const pixel = document.getElementsByClassName('pixel');
     for (let index = 0; index < pixel.length; index += 1) {
-      pixel[index].removeAttribute('style');
+      pixel[index].style.background = 'white';
     }
   }
 });
+
+
