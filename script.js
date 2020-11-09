@@ -1,16 +1,19 @@
 let selectedColor = document.getElementById("black");
-document.querySelectorAll(".color").forEach(colorSelect);
+let table = document.querySelectorAll(".pixel");
+let clearBoard = document.getElementById("clear-board");
+let paintColor = document.querySelectorAll(".pixel");
+let colorOptions = document.querySelectorAll(".color");
+
+colorOptions.forEach(colorSelect);
     function colorSelect(element) {
     element.addEventListener("click", function () {
-        document.querySelectorAll(".color");
+        colorOptions;
     element.classList.add("selected");
         selectedColor = element;
     element.classList.remove("selected");
   });
 }
-let paintColor = document.querySelectorAll(".pixel");
-
-document.querySelectorAll(".pixel").forEach(changeColor);
+paintColor.forEach(changeColor);
     function changeColor(element) {
    element.addEventListener("click", () => {
     color = window
@@ -19,3 +22,8 @@ document.querySelectorAll(".pixel").forEach(changeColor);
     element.style.backgroundColor = color;
   });
 }
+clearBoard.addEventListener("click", () => {
+  for (let i = 0; i < table.length; i += 1) {
+    table[i].style.backgroundColor = "white";
+  }
+});

@@ -46,3 +46,7 @@ h1 {
 #green {
     background-color: green;
 }
+button{
+    padding: 3px;
+    background-color: yellow;
+}
