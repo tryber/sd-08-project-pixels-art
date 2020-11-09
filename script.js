@@ -1,5 +1,5 @@
 let cores = ['black',corXablau(),corXablau(),corXablau()];
-let paleta = document.getElementsByClassName('color');
+let paleta = document.querySelectorAll('.color');
 
 
 function corXablau(){
