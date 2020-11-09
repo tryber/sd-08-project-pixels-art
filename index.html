@@ -17,58 +17,54 @@
             type="button"
             class="color"
             class="selected"
-            id="cor1"
+            id="tinta1"
+            onclick="inputTinta1()"
           ></button>
         </li>
-        <li><button type="button" class="color" id="cor2"></button></li>
-        <li><button type="button" class="color" id="cor3"></button></li>
-        <li><button type="button" class="color" id="cor4"></button></li>
+        <li><button type="button" class="color" id="tinta2" onclick="inputTinta2()"></button></li>
+        <li><button type="button" class="color" id="tinta3" onclick="inputTinta3()"></button></li>
+        <li><button type="button" class="color" id="tinta4" onclick="inputTinta4()"></button></li>
       </ul>
     </section>
+    
+    <button type="button" id="varrer" onclick="limpar()">Limpar</button>
 
-    <button id="">Limpar</button>
-
-    <section>
-      <table id="quadro-pixels">
-        <thead>
-          <div id="pixel-board">Cabeçalho do pixel art</div>
-        </thead>
-        <tr>
-          <td><div class="pixel">pixel1</div></td>
-          <td><div class="pixel">pixel2</div></td>
-          <td><div class="pixel">pixel3</div></td>
-          <td><div class="pixel">pixel4</div></td>
-          <td><div class="pixel">pixel5</div></td>
-        </tr>
-        <tr>
-          <td><div class="pixel">pixel6</div></td>
-          <td><div class="pixel">pixel7</div></td>
-          <td><div class="pixel">pixel8</div></td>
-          <td><div class="pixel">pixel9</div></td>
-          <td><div class="pixel">pixel10</div></td>
-        </tr>
-        <tr>
-          <td><div class="pixel">pixel11</div></td>
-          <td><div class="pixel">pixel12</div></td>
-          <td><div class="pixel">pixel13</div></td>
-          <td><div class="pixel">pixel14</div></td>
-          <td><div class="pixel">pixel15</div></td>
-        </tr>
-        <tr>
-          <td><div class="pixel">pixel16</div></td>
-          <td><div class="pixel">pixel17</div></td>
-          <td><div class="pixel">pixel18</div></td>
-          <td><div class="pixel">pixel19</div></td>
-          <td><div class="pixel">pixel20</div></td>
-        </tr>
-        <tr>
-          <td><div class="pixel">pixel21</div></td>
-          <td><div class="pixel">pixel22</div></td>
-          <td><div class="pixel">pixel23</div></td>
-          <td><div class="pixel">pixel24</div></td>
-          <td><div class="pixel">pixel25</div></td>
-        </tr>
-      </table>
+    <section id="pixel-board">
+      <div class="tr">
+        <div id="pinta-pixel" class="pixel"></div>
+        <div id="pinta-pixel" class="pixel"></div>
+        <div id="pinta-pixel" class="pixel"></div>
+        <div id="pinta-pixel" class="pixel"></div>
+        <div id="pinta-pixel" class="pixel"></div>        
+      </div>
+      <div class="tr">
+        <div id="pinta-pixel" class="pixel"></div>
+        <div id="pinta-pixel" class="pixel"></div>
+        <div id="pinta-pixel" class="pixel"></div>
+        <div id="pinta-pixel" class="pixel"></div>
+        <div id="pinta-pixel" class="pixel"></div>
+      </div>
+      <div class="tr">
+        <div id="pinta-pixel" class="pixel"></div>
+        <div id="pinta-pixel" class="pixel"></div>
+        <div id="pinta-pixel" class="pixel"></div>
+        <div id="pinta-pixel" class="pixel"></div>
+        <div id="pinta-pixel" class="pixel"></div>
+      </div>
+      <div class="tr">
+        <div id="pinta-pixel" class="pixel"></div>
+        <div id="pinta-pixel" class="pixel"></div>
+        <div id="pinta-pixel" class="pixel"></div>
+        <div id="pinta-pixel" class="pixel"></div>
+        <div id="pinta-pixel" class="pixel"></div>
+      </div>
+      <div class="tr">
+        <div id="pinta-pixel" class="pixel"></div>
+        <div id="pinta-pixel" class="pixel"></div>
+        <div id="pinta-pixel" class="pixel"></div>
+        <div id="pinta-pixel" class="pixel"></div>
+        <div id="pinta-pixel" class="pixel"></div>
+      </div>
     </section>
   </body>
 </html>

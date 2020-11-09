@@ -1,31 +1,57 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
 ul li {
   display: inline;
 }
+
 button {
   border: 1px solid black;
   height: 50px;
   width: 50px;
 }
 
-#cor1 {
-  background: black;
+#tinta1 {
+  background-color: black;
 }
 
-#cor2 {
-  background: rgb(0, 119, 255);
+#tinta2 {
+  background-color: rgb(0, 119, 255);
 }
 
-#cor3 {
-  background: red;
+#tinta3 {
+  background-color: rgb(255, 0, 0);
 }
 
-#cor4 {
-  background: yellow;
+#tinta4 {
+  background-color: rgb(255, 255, 0);
 }
 
 .pixel {
-  background: white;
+  background-color: white;
   border: 1px solid;
-  height: 40px;
+  display: table-cell;
+  height: 40px;  
   width: 40px;
+  
 }
+
+#pixel-board {
+  display: table;
+  margin: 3px;
+}
+
+.tr{
+  display: table-row;
+}
+
+#varrer{
+  background-color:white;
+}
+
+#pinta-pixel{
+  background-color:white;
+}
+
