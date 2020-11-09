@@ -2,16 +2,14 @@ function criaCores(){
   const paleta = document.getElementById('color-palette');
   
   for (index = 1; index <=4; index +=1){
-    const cor = document.createElement('div');
+    const cor = document.createElement('div');    
     paleta.appendChild(cor);
     cor.id = `color${index}`;
-    cor.className = 'color';
+    cor.className = 'color'; 
+    }    
   }
-  let cores = document.getElementsByClassName('color');
-  cores[0].classList.add('selected');
-}
-criaCores();
 
+criaCores();
 
 function criaPixels(){
   const board = document.getElementById('pixel-board');

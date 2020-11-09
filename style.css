@@ -1,5 +1,6 @@
 * {
   margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
@@ -46,6 +47,7 @@ div#pixel-board {
   width: 200px;
   height: fit-content;
   margin: auto;
+  line-height: 0;
 }
 
 button {
@@ -64,6 +66,5 @@ button {
   height: 40px;
   margin: 0;
   width: 40px;
-  position: relative;
-  top: 0;
+  
 }
