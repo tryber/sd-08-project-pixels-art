@@ -1,14 +1,17 @@
-window.onload = function () {
-  
+window.onload = function () {  
+  //Ao carregar a página, a cor preta da paleta já deve estar selecionada para pintar os pixels.
+  let blackElement = document.getElementById('color-pallet0');
+  blackElement.className = 'color selected';
 };
 
 // Cria a paleta de cores
 const colorPaletteContainer = document.getElementById('color-palette');
 const colors = ['black', 'red', 'green', 'blue'];
-for (let backColor of colors) {
-  let colorPalette = document.createElement("div");
-  colorPalette.className = "color";
-  colorPalette.style.backgroundColor = backColor;
+for (let paletteColor = 0; paletteColor < colors.length; paletteColor += 1) {
+  const colorPalette = document.createElement('div');
+  colorPalette.id = `color-pallet${paletteColor}`  
+  colorPalette.className = 'color';
+  colorPalette.style.backgroundColor = colors[paletteColor];
   colorPaletteContainer.appendChild(colorPalette);
 }
 
