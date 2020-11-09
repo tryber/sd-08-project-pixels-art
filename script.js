@@ -32,10 +32,37 @@ function createPixels(nameEl, tamanho) {
     }
 }
 
+function color(event) {
+    let getPaleta = document.getElementsByClassName('color');
+    let cor = event.target.style.backgroundColor;
+    for(let i = 0; i < getPaleta.length; i += 1){
+        if(getPaleta[i].style.backgroundColor === cor){
+            getPaleta[i].classList.toggle('selected');
+        }else{
+            getPaleta[i].classList.remove('selected');
+        }
+    }
+}
+
+function colorSelected() {
+    let getPaleta = document.getElementsByClassName('color');
+    for (let key of getPaleta){
+        key.addEventListener('click', color);
+    }
+}
+
+const colorInit = () => {
+    let getPaleta =  document.querySelector('.color');
+    getPaleta.classList.add('selected');
+}
+
 const mainFunction = () => {
     const colors = ['black', 'blue', 'red', 'yellow'];
     createColors('div', colors);
     createPixels('div', 5);
+    colorInit();
+    colorSelected();
+    colorSelected();
 }
 
 mainFunction();
