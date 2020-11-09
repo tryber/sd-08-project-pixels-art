@@ -1,87 +1,108 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
-body{
-    background-color: rgb(241, 241, 241);
+body {
+  background-color: rgb(241, 241, 241);
 }
 hr {
-    margin: 10px;
-    border: none;
-    background: linear-gradient(to right,  rgb(241, 241, 241), rgba(205, 207, 214, 0.521),  rgb(241, 241, 241));
-    height: 2px;
-  }
-#title{
-    text-align: center;
-    text-shadow: 3px 3px 4px lightgrey;
-    font-family: 'Sedgwick Ave Display', cursive;
-    letter-spacing: 4px;
+  margin: 10px;
+  border: none;
+  background: linear-gradient(
+    to right,
+    rgb(241, 241, 241),
+    rgba(205, 207, 214, 0.521),
+    rgb(241, 241, 241)
+  );
+  height: 2px;
+}
+#title {
+  text-align: center;
+  text-shadow: 3px 3px 4px lightgrey;
+  font-family: "Sedgwick Ave Display", cursive;
+  letter-spacing: 4px;
 }
 #color-palette {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-spacing: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-spacing: 2rem;
 }
-#color-palette td{
-    border: 1px solid black;    
-    text-align: center;
-    width: 100px;
-    height: 25px;
-    font-family: 'Sedgwick Ave Display', cursive;
-    letter-spacing: 4px; 
-    border-radius: 5px;  
-    box-shadow: 0px 5px 10px rgba(231, 226, 226, 0.76); 
+#color-palette td {
+  border: 1px solid black;
+  text-align: center;
+  width: 100px;
+  height: 25px;
+  font-family: "Sedgwick Ave Display", cursive;
+  letter-spacing: 4px;
+  border-radius: 5px;
+  box-shadow: 0px 5px 10px rgba(231, 226, 226, 0.76);
 }
 #pixel-board {
-    display: flex;
-    justify-content: center;
-    align-items: center;   
-    border-spacing: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-spacing: 0px;
 }
-#pixel-board td{
-    border: 1px solid black;
-    background-color:rgb(255, 255, 255);
-    text-align: center;
-    width: 40px;  
-    height: 40px;
-    font-family: 'Sedgwick Ave Display', cursive;  
-    box-shadow: 0px 5px 10px rgba(231, 226, 226, 0.76); 
+#pixel-board td {
+  border: 1px solid black;
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  width: 40px;
+  height: 40px;
+  font-family: "Sedgwick Ave Display", cursive;
+  /* box-shadow: 0px 5px 10px rgba(231, 226, 226, 0.76); */
 }
-.container{
-    margin:auto;
-    margin-top:2px;
-    background-color: rgba(61, 43, 19, 0.151);
-    padding: 1%;
-    width: 50%;
-    border-radius: 30px;
-    box-shadow: 0px 5px 8px rgba(231, 226, 226, 0.5);    
+.container {
+  margin: auto;
+  margin-top: 2px;
+  background-color: rgba(61, 43, 19, 0.151);
+  padding: 1%;
+  width: 50%;
+  border-radius: 30px;
+  box-shadow: 0px 5px 8px rgba(231, 226, 226, 0.5);
 }
-.div-button{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1%;
+.div-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1%;
 }
 /* botão */
-#clear-board{
-    width: 100px;
-    height: 25px;
-    border: none;
-    background-color: rgb(199, 2, 2);
-    color: white;
-    font-family: 'Sedgwick Ave Display', cursive;
-    letter-spacing: 4px; 
-    outline:none;
-    transition: 0.2s;
+#clear-board {
+  width: 100px;
+  height: 25px;
+  border: none;
+  background-color: rgb(199, 2, 2);
+  color: white;
+  font-family: "Sedgwick Ave Display", cursive;
+  letter-spacing: 4px;
+  outline: none;
+  transition: 0.2s;
 }
-#clear-board:hover{
-    background-color:#ff2b1c;
-    box-shadow: 0px 3px 5px rgb(236, 117, 117);
-    outline:none;
-    transition: 0.2s
+#clear-board:hover {
+  background-color: #ff2b1c;
+  box-shadow: 0px 3px 5px rgb(236, 117, 117);
+  outline: none;
+  transition: 0.2s;
 }
-#clear-board:active{
-    background-color:#f5ecec;    
-    outline:none;
+#clear-board:active {
+  background-color: #f5ecec;
+  outline: none;
+}
+#black {
+  background-color: black;
+  color: white;
+}
+#blue {
+  background-color: blue;
+  color: white;
+}
+#green {
+  background-color: green;
+  color: white;
+}
+#yellow {
+  background-color: yellow;
+  color: white;
 }
