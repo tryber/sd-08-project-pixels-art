@@ -6,8 +6,14 @@ function criaCores(){
     paleta.appendChild(cor);
     cor.id = `color${index}`;
     cor.className = 'color'; 
-    }    
+    }
+    let cores = document.getElementsByClassName('color');
+    for (let index =1; index <4; index +=1){
+      cores[index].style.backgroundColor = `rgb(${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)})`;
+      // copiei a função de numero aleatorio do site https://www.w3schools.com/js/js_random.asp
+    };
   }
+  
 
 criaCores();
 
@@ -59,3 +65,9 @@ function limpaQuadro(){
   }
 }
 limpaQuadro();
+
+setTimeout(() => {
+  let body = document.querySelector('body');
+  let random = Math.random() * 255;
+  body.backgroundColor = `rgb(${random},${random},${random})`;
+}, 200);

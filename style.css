@@ -9,7 +9,7 @@ h1 {
 }
 
 .container {
-  width: 1000px;
+  width: 100%;
   margin: auto;
   text-align: center;
 }
@@ -29,18 +29,6 @@ div#color-palette {
 
 div#color1 {
   background-color: black;
-}
-
-div#color2 {
-  background-color: blue;
-}
-
-div#color3 {
-  background-color: chartreuse;
-}
-
-div#color4 {
-  background-color: crimson;
 }
 
 div#pixel-board {
