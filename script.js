@@ -8,12 +8,20 @@ function colorPalette () {
 colorPalette();
 
 function createPixels (){
-    for (let i = 0; i < 25; i += 1){
-        let pixelLocal = document.getElementById('pixel-board');
-        let divPixels = document.createElement('div');
-        divPixels.className = "pixel";
-        divPixels.backgroundColor = "white";
-        pixelLocal.appendChild(divPixels);
+    for (let colum = 0; colum < 5; colum += 1){
+        let pixelColum = document.getElementById('pixel-board');
+        let tdPixels = document.createElement('td');
+        pixelColum.appendChild(tdPixels); 
+        let pixelLine = document.getElementsByTagName('td')[colum];  
+        for (let line = 0; line < 5; line += 1){
+                       
+            let trPixels = document.createElement('tr');
+    
+            trPixels.className = "pixel";
+            trPixels.backgroundColor = "white";
+            pixelLine.appendChild(trPixels);
+        }    
     }
+    
 }
 createPixels();
