@@ -33,3 +33,13 @@
   float: left;
   border: 1px solid black;
 }
+
+#controls {
+  overflow: hidden;
+  padding: 10px;
+}
+
+.input-group {
+  float: left;
+  margin-right: 20px;
+}

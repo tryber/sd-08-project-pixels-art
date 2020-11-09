@@ -9,7 +9,13 @@
 <body>
   <h1 id="title">Paleta de Cores</h1>
   <ul id="color-palette"></ul>
-  <button id="clear-board">Clear board</button>
+  <div id="controls">
+    <button id="clear-board">Clear board</button>
+    <div class="input-group">
+      <label for="tamanho">Tamanho</label>
+      <input id="tamanho" type="number" min="5" max="50">
+    </div>
+  </div>
   <div id="pixel-board"></div>
   <script src="script.js"></script>
 </body>
