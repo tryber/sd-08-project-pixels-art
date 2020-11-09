@@ -15,3 +15,23 @@ border-color: black;
 border-width: 1px;
 display: inline-block;
 }
+
+.lines {
+  display: table-row;
+}
+
+#pixel-board {
+  border-collapse: collapse;
+  display: table;
+}
+
+.pixel {
+  width: 40px;
+  height: 40px;
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+  margin: 0px;
+  display: table-cell;
+  background-color: white;
+}
