@@ -59,3 +59,22 @@ window.onload = function () {
   fillBoard();
   colorBoard();
 };
+
+let btnChangeSize = document.getElementById("generate-board");
+let sizeText = document.getElementById("board-size");
+function deleteBoard() {
+  let actsize = pxBoard.children.length;
+  for (let index = 0; index < actsize; index += 1) {
+    pxBoard.removeChild(pxBoard.firstElementChild);
+  }
+}
+btnChangeSize.addEventListener("click", function () {
+  size = sizeText.value;
+  if (size == "" || size < 5 || size > 50) {
+    alert("Board inválido!");
+  } else {
+    deleteBoard();
+    fillBoard();
+    colorBoard();
+  }
+});
