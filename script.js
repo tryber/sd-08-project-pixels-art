@@ -52,7 +52,9 @@ function carregaPixels(){
         pintarAmarelo.className += " selected";
     })
 
-    
+    pintarPreto.className += " selected";
+    pintar = "black";
+
      let box = document.getElementsByClassName('pixel');
      Array.from(box).forEach(function(box){
          box.addEventListener("click", function(){
