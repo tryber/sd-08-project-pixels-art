@@ -1,3 +1,15 @@
+window.onload = function() {
+    colorOptions[0].style.backgroundColor = "black";
+    colorOptions[1].style.backgroundColor = "red";
+    colorOptions[2].style.backgroundColor = "blue";
+    colorOptions[3].style.backgroundColor = "yellow";
+    
+}
+
+
+
+
+
 function createPixelBox() {
   for (let index = 0; index < 25; index += 1) {
     let pixelBox = document.createElement("div");
@@ -8,10 +20,6 @@ function createPixelBox() {
 createPixelBox();
 
 let colorOptions = document.querySelectorAll('.color');
-colorOptions[0].style.backgroundColor = "black";
-colorOptions[1].style.backgroundColor = "red";
-colorOptions[2].style.backgroundColor = "blue";
-colorOptions[3].style.backgroundColor = "yellow";
 let selectedColor = "black";
 const colorPicker = document.getElementById("color-palette");
 colorPicker.addEventListener ('click', function (event) {
@@ -23,9 +31,6 @@ colorPicker.addEventListener ('click', function (event) {
         if (event.target.className == "color selected");
         selectedColor = event.target.style.backgroundColor;
         console.log(selectedColor);
-    } else {
-        event.target.className = "color";
-        selectedColor = 'white';
     }
 })
 
@@ -40,5 +45,6 @@ clearButton.addEventListener ('click', function (){
     for (let index = 0; index < pixelElements.length; index += 1) {
         pixelElements[index].style.backgroundColor = 'white';
     }
+
 })
 
