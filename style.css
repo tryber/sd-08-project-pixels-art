@@ -1,0 +1,35 @@
+#title {
+    text-align: center;
+}
+
+#color-palette {
+    margin-left: 30%;
+}
+
+.color {
+    width: 80px;
+    float: left;
+    padding-left: 20px;
+    padding-right: 20px;
+    border: solid black 1px;
+}
+
+#black {
+    color: black;
+    background-color: black;
+}
+
+#yellow {
+    color: yellow;
+    background-color: yellow;
+}
+
+#orange {
+    color: orange;
+    background-color: orange;
+}
+
+#red {
+    color: red;
+    background-color: red;
+}
