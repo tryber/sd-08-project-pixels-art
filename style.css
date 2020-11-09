@@ -7,9 +7,10 @@ body {
 #color-palette {
     display: flex;
     flex-direction: row;
-    gap: 10px;
-    width: 500px;
-    height: 100px;
+    gap: 1px;
+    width: 200px;
+		height: 100px;
+		margin-left: 50px;
 }
 
 
@@ -43,8 +44,8 @@ body {
   border-style: solid ;
   border-color: black;
   */
-  width: 100px;
-  height: 100px;
+  width: 40px;
+  height: 40px;
   margin: auto;
   border: 1px solid black;
 }
