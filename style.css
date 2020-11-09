@@ -5,38 +5,40 @@ header {
 
 main {
   border: 1px solid rgb(236 , 10 , 10);
-  width: 50%;
   height: 500px;
   margin: 2% 25%;
+  width: 50%;
+  
 }
 
-#color-palette {
+.color-palette {
+  align-items: flex-start;
   border: 1px solid green;
   display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
   flex-wrap: wrap;
   height: 15%;
+  justify-content: space-around;
   padding: 5px;
 }
 
 .color {
-  padding: 5px;
   border: 1px solid black;
+  padding: 5px;
+  height: 60px;
   width: 60px;
-  height: 60px;   
+  
 }
-.color.black {
-    background-color: black;
+.color black {
+  background-color: black;
 }
-.color.brown_one {
-  background-color: #F7BE4A;   
+.color .brown_one {
+  background-color: #f7be4A;
   }
 
-.color.brown_two {
-  background-color: #AB8333;   
+.color .brown_two {
+  background-color: #ab8333;
   }
 
-.color.brown_three {
-  background-color: #6B5220;   
+.color .brown_three {
+  background-color: #6b5220;
 }
