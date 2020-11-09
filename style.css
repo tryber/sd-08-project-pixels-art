@@ -30,35 +30,35 @@ h1 {
   font-size: 24px;
 }
 
-.black {
+#black {
   background: black;
   border: black 1px solid;
 }
 
-.black span {
+#black span {
   color: white;
 }
 
-.light-green {
+#light-green {
   background: #2a9d8f;
   border: black 1px solid;
 }
 
-.dark-yellow {
+#dark-yellow {
   background: #e9c46a;
   border: black 1px solid;
 }
 
-.orange {
+#orange {
   background: #f4a261;
   border: black 1px solid;
 }
 
 #pixel-board {
   margin: 0 auto;
-  margin-top: 20px;
-  max-width: 220px;
-  max-height: 220px;
+  margin-top: 40px;
+  max-width: 200px;
+  max-height: 200px;
 }
 
 .pixel {
