@@ -13,6 +13,7 @@ for (index = 0; index < elementosPaleta.length; index += 1) {
 
 
 // Requisitos 4 e 5
+
 const n = 5;
 const board = document.getElementById("pixel-board");
 
@@ -33,6 +34,9 @@ const board = document.getElementById("pixel-board");
       }
 
     }
+
+
+// Requisitos
 
 
 
