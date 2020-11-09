@@ -1,7 +1,7 @@
 window.onload = function () {
-  let paletas = document.querySelectorAll('.color');
-  let botaoLimpar = document.querySelector('#clear-board');
-  let botaoGerarQuadro = document.querySelector('#generate-board');
+  const paletas = document.querySelectorAll('.color');
+  const botaoLimpar = document.querySelector('#clear-board');
+  const botaoGerarQuadro = document.querySelector('#generate-board');
 
   function deselecionaPaletas() {
     for (let index = 0; index < paletas.length; index += 1) {
@@ -25,7 +25,7 @@ window.onload = function () {
   }
 
   function selecionarPixels() {
-    let pixels = document.querySelectorAll('.pixel');
+    const pixels = document.querySelectorAll('.pixel');
 
     for (let index = 0; index < pixels.length; index += 1) {
       pixels[index].addEventListener('click', pintarPixel);
@@ -37,7 +37,7 @@ window.onload = function () {
   }
 
   function limparPixels() {
-    let pixels = document.querySelectorAll('.pixel');
+    const pixels = document.querySelectorAll('.pixel');
 
     for (let index = 0; index < pixels.length; index += 1) {
       pixels[index].style.backgroundColor = 'rgb(255, 255, 255)';
@@ -45,17 +45,16 @@ window.onload = function () {
   }
 
   function criarQuadro(n) {
-    console.log('entrou');
-    let sectionBoard = document.querySelector('#pixel-board');
-    let paiQuadro = sectionBoard.parentNode;
+    const sectionBoard = document.querySelector('#pixel-board');
+    const paiQuadro = sectionBoard.parentNode;
     paiQuadro.removeChild(sectionBoard);
     let sectionBoardCreate = document.createElement('section');
     sectionBoardCreate.id = 'pixel-board';
     for (let index = 0; index < n; index += 1) {
-      let sectionLinha = document.createElement('section');
+      const sectionLinha = document.createElement('section');
       sectionLinha.className = 'linha';
-      for (let j = 0; j < n; j++) {
-        let divPixel = document.createElement('div');
+      for (let j = 0; j < n; j += 1) {
+        const divPixel = document.createElement('div');
         divPixel.className = 'pixel';
         sectionLinha.appendChild(divPixel);
       }
@@ -67,34 +66,33 @@ window.onload = function () {
 
   function gerarQuadro() {
     let tamanhoQuadro = document.querySelector('#board-size').value;
-    if (tamanhoQuadro == '') {
+    if (tamanhoQuadro === '') {
       alert('Board inválido!');
     } else {
-        if(tamanhoQuadro < 5){
-            tamanhoQuadro = 5;
-        } else if(tamanhoQuadro > 50){
-            tamanhoQuadro = 50
-        }
-        console.log(tamanhoQuadro)
+      if (tamanhoQuadro < 5) {
+        tamanhoQuadro = 5;
+      } else if (tamanhoQuadro > 50) {
+        tamanhoQuadro = 50;
+      }
       criarQuadro(tamanhoQuadro);
     }
   }
 
-  function gerarCor(){
-    let corR = parseInt(Math.random() * 255);
-    let corG = parseInt(Math.random() * 255);
-    let corB = parseInt(Math.random() * 255);
+  function gerarCor() {
+    const corR = parseInt(Math.random() * 255);
+    const corG = parseInt(Math.random() * 255);
+    const corB = parseInt(Math.random() * 255);
     return `rgb(${corR}, ${corG}, ${corB})`;
   }
 
-  function gerarCoresAleatorias(){
-      const paleta2 = document.querySelector('.paleta2');
-      const paleta3 = document.querySelector('.paleta3');
-      const paleta4 = document.querySelector('.paleta4');
+  function gerarCoresAleatorias() {
+    const paleta2 = document.querySelector('.paleta2');
+    const paleta3 = document.querySelector('.paleta3');
+    const paleta4 = document.querySelector('.paleta4');
 
-      paleta2.style.backgroundColor = gerarCor();
-      paleta3.style.backgroundColor = gerarCor();
-      paleta4.style.backgroundColor = gerarCor();
+    paleta2.style.backgroundColor = gerarCor();
+    paleta3.style.backgroundColor = gerarCor();
+    paleta4.style.backgroundColor = gerarCor();
   }
   selecionarPixels();
   botaoLimpar.addEventListener('click', limparPixels);
