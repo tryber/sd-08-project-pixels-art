@@ -36,8 +36,6 @@ function colorePixel(){
 }
 colorePixel();
 
-
-
 function limpaQuadro(){
   let botao = document.querySelector('button');
   botao.addEventListener('click', fundoBranco)
