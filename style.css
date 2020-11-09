@@ -41,6 +41,9 @@
   border: 1px solid;
   display: inline-block;
   margin: 0;
-  height: 40px;
   padding: 50px;
+}
+
+.pixel tr {
+    height: 40px;
 }
