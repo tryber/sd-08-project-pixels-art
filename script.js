@@ -1,9 +1,15 @@
+window.onload = function () {
+  const palleteColorsList = document.querySelectorAll('.color');
+  palleteColorsList[0].className += ' selected'
+}
+
 function createPalette() {
   const palleteColorsList = document.querySelector('#color-palette');
   const colorArray = ['black', 'red', 'green', 'blue'];
   for (let i = 0; i < colorArray.length; i += 1) {
     const colorElement = document.createElement('li');
     colorElement.className = 'color';
+    colorElement.id = `colorPalette ${i+1}`;
     colorElement.style.backgroundColor = colorArray[i];
     palleteColorsList.appendChild(colorElement);
   }
@@ -27,6 +33,9 @@ function createBoardPixel() {
 }
 
 createBoardPixel();
+
+
+
 
 
 
