@@ -1,3 +1,9 @@
+#title{
+    text-align: center;
+    text-shadow: 3px 3px 4px lightgrey;
+    font-family: 'Sedgwick Ave Display', cursive;
+    letter-spacing: 4px;
+}
 #color-palette {
     display: flex;
     justify-content: center;
