@@ -1,8 +1,14 @@
 const colors = ["black", "yellow", "green", "red"];
 function colorPalette () {
+    let paletteLocal = document.querySelector("color-palette");
+
+
+
     const colorLocal = document.querySelectorAll(".color");
     for (let i = 0; i < colors.length; i += 1) {
-    colorLocal[i].style.backgroundColor = colors[i];
+
+
+        colorLocal[i].style.backgroundColor = colors[i];
     }
 }
 colorPalette();
@@ -22,11 +28,3 @@ function createPixels (){
     }    
 }
 createPixels();
-
-function corInicial (){
-    let pixelsLocal = document.getElementsByClassName('pixel');
-    for (let i = 0; i < 25; i += 1) {
-        pixelsLocal[i].backgroundColor = "white";
-    }
-}
-corInicial();

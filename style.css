@@ -22,4 +22,5 @@ td {
     height: 40px;
     border: 1px black solid;
     display: inline-block; 
+    background-color: white;
 }
