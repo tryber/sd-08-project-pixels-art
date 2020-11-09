@@ -5,7 +5,7 @@ const palette = document.querySelector('.palette');
 const board = document.querySelector('.pixel-board');
 
 // Sets reference to buttons
-const clearButton = document.querySelector('#clear-board')
+const clearButton = document.querySelector('#clear-board');
 
 // Sets reference select color picker divs
 const blackColor = document.querySelector('.black');
@@ -62,11 +62,11 @@ function applyColor(event) {
 
 board.addEventListener('click', applyColor);
 
-// Paints board with white color
-function clearBoard () {
-  const pixels = document.querySelectorAll('.pixel')
+// Removes added colors from pixels
+function clearBoard() {
+  const pixels = document.querySelectorAll('.pixel');
   for (let i = 0; i < pixels.length; i += 1) {
-    pixels[i].removeAttribute("style")
+    pixels[i].removeAttribute('style');
   }
 }
 
