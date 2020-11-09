@@ -1,5 +1,8 @@
+
+
+//Função para criar a paleta de cores
 function colorsPalete() {
-  let colors = [' black', ' red', ' green', ' blue'];
+  let colors = [' black selected', ' red', ' green', ' blue'];
   let divPaleta = document.getElementById('color-palette');
 
   for (i = 0; i < colors.length; i++) {
@@ -12,6 +15,7 @@ function colorsPalete() {
 }
 colorsPalete();
 
+//Função para criar os elementos
 function pixelBoard() {
   
   let divPixelBoard = document.getElementById('pixel-board');
@@ -26,3 +30,5 @@ function pixelBoard() {
   };
 };
 pixelBoard();
+
+//Função para selecionar a cor preta
