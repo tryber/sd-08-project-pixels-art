@@ -1,0 +1,35 @@
+.color {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 5px;
+}
+.black {
+    background-color: black;
+}
+.red {
+    background-color: red;
+}
+.green {
+    background-color: green;
+}
+.yellow {
+    background-color: yellow;
+}
+.purple {
+    background-color: purple;
+}
+.aqua {
+    background-color: aqua;
+}
+.fuchsia {
+    background-color: fuchsia;
+}
+.orange {
+    background-color: orange;
+}
+.blue {
+    background-color: blue;
+}
