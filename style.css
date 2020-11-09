@@ -1,0 +1,23 @@
+.color {
+  border: 1px solid black;
+  height: 50px;
+  width: 50px;
+  display: inline-block;
+}
+
+.color:nth-child(1) {
+  background-color: black;
+}
+
+.color:nth-child(2) {
+  background-color: yellow;
+}
+.color:nth-child(3) {
+  background-color: red;
+}
+.color:nth-child(4) {
+  background-color: blue;
+}
+.color:nth-child(5) {
+  background-color: green;
+}
