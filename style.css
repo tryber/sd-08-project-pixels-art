@@ -3,7 +3,7 @@
 }
 
 #color-palette {
-
+    padding-bottom: 15px;
 }
 
 .color {
@@ -27,4 +27,11 @@
 
 .blue {
     background-color: blue;
+}
+
+.pixel {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    border: 1px solid black;
 }
