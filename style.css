@@ -1,0 +1,25 @@
+.color {
+  width: 50px;
+  height: 50px;
+  border: 1px solid rgb(0 , 0 , 0)
+}
+
+.black {
+  background-color: rgb(0 , 0 , 0);
+}
+
+.green {
+  background-color: rgb(0 , 122 , 0);
+}
+
+.red {
+  background-color: rgb(255 , 0 , 0);
+}
+
+.blue {
+  background-color: rgb(0 , 0 , 255);
+}
+
+li {
+  display: inline-block;
+}
