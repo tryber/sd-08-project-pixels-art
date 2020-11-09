@@ -7,6 +7,9 @@ const board = document.querySelector('.pixel-board');
 // Sets reference to buttons
 const clearButton = document.querySelector('#clear-board');
 
+// sets boardSize default value
+let boardSize = 5;
+
 // Sets reference select color picker divs
 const blackColor = document.querySelector('.black');
 const firstColor = document.querySelector('.first');
@@ -71,3 +74,40 @@ function clearBoard() {
 }
 
 clearButton.addEventListener('click', clearBoard);
+
+// Removes all board children when called
+function removeBoard() {
+  lines = board.children
+  for (let i = 0; lines[i];) {
+    board.removeChild(lines[i]);
+  }
+}
+
+// Stores input value
+function valueStorage() {
+  const input = document.querySelector('#board-size');
+  const storedValue = parseInt(input.value);
+  boardSize = storedValue;
+}
+
+// Generates board lines
+// removeBoard();
+
+function blockGen(n) {
+  for (let i = 0; i < n; i += 1) {
+    let div = document.createElement('div');
+    div.className = 'pixel';
+    board.lastElementChild.appendChild(div)
+  }
+}
+
+function lineGen(n) {
+  for (let i = 0; i < n; i += 1) {
+    let div = document.createElement('div');
+    div.className = 'line';
+    board.appendChild(div);
+    blockGen(n);
+  }
+}
+
+lineGen(boardSize);
