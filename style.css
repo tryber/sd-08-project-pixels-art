@@ -1,0 +1,15 @@
+#color-palette {
+  display: flex;
+  flex-direction: row;
+  width: 350px;
+  height: 80px;
+  justify-content: space-between ;
+
+}
+.color{
+  width: 80px;
+  height: 80px;
+  border: solid 1px;
+  border-color: black;
+
+}
