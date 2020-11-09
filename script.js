@@ -32,6 +32,7 @@ for (let altura = 0; altura < 5; altura += 1) {
   }
   quadroDePixels.appendChild(quebraDeLinha);
 }
+document.querySelector('.color').classList.add('selected')
 const reset = () => {
   for (let item in seletorDeCores) {
     seletorDeCores[item].className = "color";
@@ -39,16 +40,20 @@ const reset = () => {
 };
 document.querySelector(".color").classList.add("selected");
 let seletorDeCores = paletaDeCores.querySelectorAll("div");
-let aquarela = quadroDePixels.querySelectorAll(".pixel");
-for (let coresDaPaleta in seletorDeCores) {
+for (
+  let coresDaPaleta = 0;
+  coresDaPaleta < seletorDeCores.length;
+  coresDaPaleta += 1
+) {
   seletorDeCores[coresDaPaleta].addEventListener("click", () => {
     reset();
     seletorDeCores[coresDaPaleta].classList.add("selected");
   });
 }
-for (let pixel in aquarela) {
-  aquarela[pixel].addEventListener("click", () => {
-    let cor = document.querySelector(".selected").style.background;
-    aquarela[pixel].style.background = cor;
-  });
-}
+let aquarela = quadroDePixels.querySelectorAll(".pixel");
+for (let pixel = 0; pixel < aquarela.length; pixel += 1) {
+    aquarela[pixel].addEventListener("click", () => {
+      let cor = document.querySelector(".selected").style.background;
+      aquarela[pixel].style.background = cor;
+    });
+  }
