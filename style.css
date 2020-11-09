@@ -25,5 +25,12 @@
   border: black solid 1px;
   height: 40px;
   width: 40px;
+  background-color: '#FFFFFF';
+}
+
+.btn-clear {
+  border-radius: 7;
+  height: 25px;
+  width: 120px;
 }
 

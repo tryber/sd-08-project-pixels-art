@@ -1,3 +1,8 @@
+window.onload = function () {
+  let btn = document.getElementById('clear-board')
+  btn.addEventListener('click', clearBoard)
+}
+
 const cores = ['#000000'];
 
 function geraPaletaDeCores() {
@@ -6,10 +11,15 @@ function geraPaletaDeCores() {
   for (let index = 0; index < 4; index += 1) {
     const divCor = document.createElement('div');
     divCor.className = 'color';
+    divCor.addEventListener('click', selecionaCor)
     paletaDeCores.append(divCor);
   }
+}
 
-  geraCores();
+function selecionaCor(event) {
+  let corSelecionada = document.querySelector('.selected')
+  corSelecionada.className = 'color'
+  event.target.className = 'selected color'
 }
 
 geraPaletaDeCores();
@@ -19,7 +29,7 @@ function evitaCorRepetida() {
       let pos = index + 1;
   
       for (pos; pos < cores.length; pos += 1) {
-        if (cores[index] === cores[pos] || cores[index] === '#FFFFFF' || cores[index] === '') {
+        if (cores[index] === cores[pos] || cores[pos] === '#FFFFFF' || cores[pos] === '') {
           geraCores();
         }
       }
@@ -40,6 +50,8 @@ function geraCores() {
   evitaCorRepetida();
 }
 
+geraCores();
+
 function geraPixelBoard() {
   const pixelBoard = document.getElementById('pixel-board');
 
@@ -51,9 +63,22 @@ function geraPixelBoard() {
       const pixel = document.createElement('div');
       pixel.className = 'pixel';
       pixel.style.backgroundColor = '#FFFFFF';
+      pixel.addEventListener('click', pintaPixel)
       pixelBoard.lastChild.append(pixel);
     }
   }
 }
 
 geraPixelBoard();
+
+function pintaPixel (event) {
+  let corSelecionada = document.querySelector('.selected')
+  event.target.style.backgroundColor = corSelecionada.style.backgroundColor
+}
+
+function clearBoard() {
+  let pixel = document.querySelectorAll('.pixel')
+  for (let index = 0; index < pixel.length; index += 1){
+    pixel[index].style.backgroundColor = '#FFFFFF'
+  }
+}
