@@ -26,11 +26,11 @@ for (let index = 0; index <= 3; index += 1) {
 
 //capturar a div 'color' para poder usar o laço for - getElementsByClassName gera um array, o que dispensa o laço for
 const captureDivColor = document.getElementsByClassName('color');
-
-   captureDivColor[0].style.backgroundColor = 'orange';
+    //requisito 3
+   captureDivColor[0].style.backgroundColor = 'black';
    captureDivColor[1].style.backgroundColor = 'blue';
    captureDivColor[2].style.backgroundColor = 'green';
-   captureDivColor[3].style.backgroundColor = 'black';
+   captureDivColor[3].style.backgroundColor = 'orange';
 
 
 
