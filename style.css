@@ -1,0 +1,37 @@
+#color-palette {
+  margin: 0px;
+  padding: 0px;
+  background-color: salmon;
+}
+
+.red {
+  display: inline-block;
+  background-color: black;
+  border: 1px solid;
+  margin: 25px;
+  padding: 50px;
+}
+
+.green {
+  display: inline-block;
+  background-color: red;
+  border: 1px solid;
+  margin: 25px;
+  padding: 50px;
+}
+
+.blue {
+  display: inline-block;
+  background-color: green;
+  border: 1px solid;
+  margin: 25px;
+  padding: 50px;
+}
+
+.black {
+  display: inline-block;
+  background-color: blue;
+  border: 1px solid;
+  margin: 25px;
+  padding: 50px;
+}
