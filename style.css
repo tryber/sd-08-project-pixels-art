@@ -35,7 +35,8 @@
 }
 
 #pixel-board {
-    height: ;
+    height: 800px;
+    width: 800px;
 }
 
 .pixel {
