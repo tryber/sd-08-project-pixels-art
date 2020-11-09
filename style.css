@@ -6,24 +6,22 @@
   display: inline-flex;
   height: 50px;
   width: 200px;
-  margin: auto;
 }
 
 .board {
-  display: inline-flex;  
+  display: inline-flex;
   height: 210px;
   width: 210px;
-  margin: auto;
 }
 
 .color {
   border: black solid 1px;
   height: 40px;
-  margin: 5px;  
+  margin: 5px;
   width: 40px;
 }
 
-.pixel {  
+.pixel {
   border: black solid 1px;
   height: 40px;
   width: 40px;
