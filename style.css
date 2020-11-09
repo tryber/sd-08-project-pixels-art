@@ -8,8 +8,7 @@
 #pixel-board {
     background-color: white;
     width: auto;
-    height: auto;
-    display: inline-block;
+    height: auto;   
 }
 
 .pixel {

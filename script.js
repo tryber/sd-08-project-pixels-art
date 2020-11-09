@@ -1,7 +1,8 @@
-// window.onload = function () {
+window.onload = function () {
+ let colorSelect = document.querySelector('.color');
+ colorSelect.className = 'color selected';   
     
-    
-// }
+}
     
 
     let colorAvaliable = ['black', 'red', 'green', 'blue'];
