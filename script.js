@@ -1,8 +1,5 @@
 function palettaColor () {
-    document.querySelectorAll('.color')[0].style.background = 'black';
-    document.querySelectorAll('.color')[1].style.background = 'red';
-    document.querySelectorAll('.color')[2].style.background = 'green';
-    document.querySelectorAll('.color')[3].style.background = 'blue';
+    document.querySelectorAll('.color')[0].style.background = 'black';    
 }
 palettaColor();
 
@@ -33,7 +30,10 @@ window.onload = function () {
     document.querySelectorAll('.color')[0].classList.add('selected');
     document.querySelectorAll('.color')[1].classList.remove('selected');
     document.querySelectorAll('.color')[2].classList.remove('selected');
-    document.querySelectorAll('.color')[3].classList.remove('selected');     
+    document.querySelectorAll('.color')[3].classList.remove('selected'); 
+    document.querySelectorAll('.color')[1].style.background = generateRandomColor();
+    document.querySelectorAll('.color')[2].style.background = generateRandomColor();
+    document.querySelectorAll('.color')[3].style.background = generateRandomColor();    
 }
 
 document.querySelectorAll('.color')[0].addEventListener('click', function eventColorClick1 () {    
@@ -98,8 +98,7 @@ document.querySelector('#generate-board').addEventListener('click', function inp
     let divNova = document.createElement('div');
     divNova.id = 'pixel-board';  
     document.body.appendChild(divNova);
-    pixelBox = document.querySelector('#board-size').value;
-    console.log(pixelBox);
+    pixelBox = document.querySelector('#board-size').value;    
     createLines();
     createPixels();
     document.querySelector('#pixel-board').addEventListener('click', function changeColorPixel (event) {
@@ -118,3 +117,7 @@ document.querySelector('#clear-board').addEventListener('click', function clearP
     }
 });
 
+function generateRandomColor() {
+    var randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
+    return randomColor;    
+}
