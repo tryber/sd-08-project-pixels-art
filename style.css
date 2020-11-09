@@ -1,8 +1,22 @@
-.color {
+body {
+  line-height: 0;
+}
+
+#color-palette {
+  margin: 25px 1px;
+  padding: 0 25px;
+}
+.color,
+.pixel {
   border: 1px solid black;
   height: 50px;
   width: 50px;
   display: inline-block;
+}
+
+ul {
+  margin: 0;
+  padding: 0 25px;
 }
 
 .color:nth-child(1) {
