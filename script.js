@@ -70,9 +70,15 @@ function deleteBoard() {
 }
 btnChangeSize.addEventListener("click", function () {
   size = sizeText.value;
-  if (size == "" || size < 5 || size > 50) {
+  if (size == "") {
     alert("Board inválido!");
   } else {
+    if (size < 5) {
+      size = 5;
+    }
+    if (size > 50) {
+      size = 50;
+    }
     deleteBoard();
     fillBoard();
     colorBoard();
