@@ -22,11 +22,17 @@ for (let coluna = 0; coluna < 5; coluna += 1) {
     });
     addEventListener('click', function (evt) {
       for (let index = 0; index < color.length; index += 1) {
-        // let colorPixel = color[index].className;
         if (color[index].className == 'color selected' && evt.target.className == 'pixel') {
             evt.target.style.backgroundColor = getComputedStyle(color[index]).backgroundColor;
         }
       } 
+    });
+    let btnClear = document.querySelector('#clear-board');
+    btnClear.addEventListener('click', function () {
+      let clear = document.querySelectorAll('.pixel');
+      for (let index = 0; index < clear.length; index += 1) {
+        clear[index].style.backgroundColor = "white"
+      }
     });
   };
 }
