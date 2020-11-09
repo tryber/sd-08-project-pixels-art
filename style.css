@@ -21,17 +21,17 @@
   overflow: hidden;
 }
 
-#pixel-board {
-  width: calc(var(--pixel-size) * 5);
-  overflow: hidden;
-}
-
 .pixel {
   display: inline-block;
   width: var(--pixel-size);
   height: var(--pixel-size);
   float: left;
   border: 1px solid black;
+}
+
+.pixel-row {
+  display: block;
+  overflow: hidden;
 }
 
 #controls {
