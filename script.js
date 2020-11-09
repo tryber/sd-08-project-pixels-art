@@ -40,11 +40,7 @@ const reset = () => {
 document.querySelector(".color").classList.add("selected");
 let seletorDeCores = paletaDeCores.querySelectorAll("div");
 let aquarela = quadroDePixels.querySelectorAll(".pixel");
-for (
-  let coresDaPaleta = 0;
-  coresDaPaleta < seletorDeCores.length;
-  coresDaPaleta += 1
-) {
+for (let coresDaPaleta in seletorDeCores) {
   seletorDeCores[coresDaPaleta].addEventListener("click", () => {
     reset();
     seletorDeCores[coresDaPaleta].classList.add("selected");
