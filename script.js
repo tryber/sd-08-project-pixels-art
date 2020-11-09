@@ -30,5 +30,7 @@ function createPixels (){
 createPixels();
 
 function selectedColor (){
-    let colorInicial = document.querySelector("color");
+    let colorInicial = document.querySelector(".color");
+    colorInicial.className += " selected"; 
 }
+selectedColor();
