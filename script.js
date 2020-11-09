@@ -80,7 +80,7 @@ for (let index = 0; index < pixelsArray.length; index += 1) {
     const elemColor = window.getComputedStyle(elem, null).getPropertyValue('background-color');
     pixelsArray[index].style.backgroundColor = elemColor;
   });
-};
+}
 
 //      bibliografia para resolver o requisito acima: https://www.w3schools.com/jsref/jsref_getcomputedstyle.asp
 
