@@ -1,6 +1,6 @@
 .color {
-  width: 70px;
-  height: 70px;
+  width: 40px;
+  height: 40px;
   display: inline-block;
   margin-right: 5px;
   border: 1px solid black;
@@ -12,11 +12,13 @@
 }
 
 .pixel {
-  width: 70px;
-  height: 70px;
+  width: 40px;
+  height: 40px;
   display: inline-block;
   border: 1px solid black;
   margin: 0px;
+  background-color: rgb(255, 255, 255);
+  
 }
 
 #paleta1 {
