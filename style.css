@@ -1,4 +1,5 @@
 .color {
     display: inline-block;
-    border: solid 1px;
+    border: 1px solid black;
+    margin-left: 10px;
 }
