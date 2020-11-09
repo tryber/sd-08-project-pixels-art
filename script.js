@@ -52,14 +52,16 @@ window.onload = function () {
   btnGenerateBoard.addEventListener('click', generateBoard);
 
   function generateBoard() {
-    if (txtBoardSize.value === '' || txtBoardSize.value < 5 || txtBoardSize.value > 50) {
+    if (txtBoardSize.value === '') {
       alert('Board inválido!');
-    } else {
-      removeBoard();
-      createBoard(txtBoardSize.value);
-      clearBoard();
+    } else if (txtBoardSize.value < 5) {
+      txtBoardSize.value = 5;
+    } else if (txtBoardSize.value > 50) {
+      txtBoardSize.value = 50;      
     }
-    
+    removeBoard();
+    createBoard(txtBoardSize.value);
+    clearBoard();    
   }
 
   function removeBoard() {
