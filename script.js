@@ -36,4 +36,25 @@ for(let i = 0; i < 25; i++) {
   pixelBoard.appendChild(pixel);
 }
 
-document.querySelector('.color').classList.add('selected');
+const cores = document.querySelectorAll('.color');
+cores[0].classList.add('selected');
+
+cores.forEach(cor => cor.addEventListener('click', selectColor));
+
+function selectColor(event) {
+  console.log('clicou na cor', this.style.backgroundColor);
+  for (let i = 0; i < cores.length; i++) {
+    const cor = cores[i];
+    if (cor !== event.target && cor.classList.contains('selected')) cor.classList.remove('selected');
+    event.target.classList.add('selected');
+  }
+}
+
+const pixels = document.querySelectorAll('.pixel');
+for (let i = 0; i < pixels.length; i++) {
+  const pixel = pixels[i];
+  pixel.addEventListener('click', function(event) {
+    const selected = document.querySelector('.color.selected');
+    event.target.style.backgroundColor = selected.style.backgroundColor;
+  });
+}
