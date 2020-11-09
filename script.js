@@ -56,9 +56,9 @@ function selectedPalette() {
   for (let index = 0; index < itemPalette.length; index += 1) {
     const item = itemPalette[index];
 
+    const selectedColor = document.querySelector('.selected');
     item.addEventListener('click', (event) => {
       if (item.className === 'color') {
-        const selectedColor = document.querySelector('.selected');
         selectedColor.className = 'color';
         event.target.className = 'color selected';
       } else {
