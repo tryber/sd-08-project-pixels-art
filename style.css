@@ -2,38 +2,38 @@
   background-color: black;
   display: inline-block;
   margin-right: 5px;
-};
+}
 
 .black , .blue , .green , .red {
   border: black solid 1px;
   height: 25px;
   width: 25px;
-};
+}
 
 .blue {
   background-color: blue;
   display: inline-block;
   margin-right: 5px;
-};
+}
 
 .color-palette {
   background-color: aqua;
   display: inline-block;
   padding: 20px;
   width: 100%;
-};
+}
 
 .green {
   background-color: green;
   display: inline-block;
   margin-right: 5px;
-};
+}
 
 .red {
   background-color: red;
   display: inline-block;
   margin-right: 5px;
-};
+}
 
 .pixel {
   background-color: white;
@@ -41,8 +41,8 @@
   display: inline-block;
   height: 40px;
   width: 40px;
-};
+}
 
 .pixel-board {
   width: 210px;
-};
+}
