@@ -7,8 +7,10 @@
 
 #pixel-board {
   width: 210px;
+  height: 210px;
   position: relative;
   visibility: visible;
+  border: 1px dashed red;
 }
 
 .pixel {
