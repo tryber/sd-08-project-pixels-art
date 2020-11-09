@@ -79,7 +79,25 @@ window.onload = function () {
       criarQuadro(tamanhoQuadro);
     }
   }
+
+  function gerarCor(){
+    let corR = parseInt(Math.random() * 255);
+    let corG = parseInt(Math.random() * 255);
+    let corB = parseInt(Math.random() * 255);
+    return `rgb(${corR}, ${corG}, ${corB})`;
+  }
+
+  function gerarCoresAleatorias(){
+      const paleta2 = document.querySelector('.paleta2');
+      const paleta3 = document.querySelector('.paleta3');
+      const paleta4 = document.querySelector('.paleta4');
+
+      paleta2.style.backgroundColor = gerarCor();
+      paleta3.style.backgroundColor = gerarCor();
+      paleta4.style.backgroundColor = gerarCor();
+  }
   selecionarPixels();
   botaoLimpar.addEventListener('click', limparPixels);
   botaoGerarQuadro.addEventListener('click', gerarQuadro);
+  gerarCoresAleatorias();
 };
