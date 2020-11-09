@@ -16,7 +16,7 @@ function generatePixel() {
     const colorizedPixel = document.createElement('div');
     colorizedPixel.className = 'pixel';
     pixelBoard.appendChild(colorizedPixel);
-    }
+  }
 }
 generatePixel();
 //
@@ -25,14 +25,14 @@ generatePixel();
 const p = document.getElementsByClassName('color');
 for (let i = 0; i <= 3; i += 1) {
   p[i].addEventListener('click', function () {
-  p[i].classList.add('selected');
-  let indexClicked = i;
-  for (let j = 0; j <= 3; j += 1) {
-    if (j !== indexClicked) {
-      p[j].className = 'color';
-        }
+    p[i].classList.add('selected');
+    const indexClicked = i;
+    for (let j = 0; j <= 3; j += 1) {
+      if (j !== indexClicked) {
+        p[j].className = 'color';
+      }
     }
-    });
+  });
 }
 //
 // Adicionando evento de pintura nos pixels no pixelboard;
