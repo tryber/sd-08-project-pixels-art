@@ -1,5 +1,5 @@
 //Função para criar a paleta de cores
-let colors = [' black', ' red', ' green', ' blue'];
+let colors = [' black selected', ' red', ' green', ' blue'];
 function colorsPalete() {
   let divPaleta = document.getElementById('color-palette');
   for (i = 0; i < colors.length; i++) {
@@ -27,6 +27,3 @@ function pixelBoard() {
 };
 pixelBoard();
 
-window.onload = function() {
-  colors[0] += ' selected';
-}
