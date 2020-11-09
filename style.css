@@ -1,12 +1,19 @@
-#black {
-    
+.color {
+    padding: 25px;
+    width: 25px;
+    height: 25px;
+    border: 1px solid black;
+    float: left;
 }
-#red {
-    
+.black {
+    background-color: black;
 }
-#blue {
-
+.red {
+    background-color: red;
 }
-#green {
-
+.blue {
+    background-color: blue;
+}
+.green {
+    background-color: green;
 }
