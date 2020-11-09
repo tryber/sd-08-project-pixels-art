@@ -1,6 +1,6 @@
 const getPixelBoard = document.getElementById('pixel-board');
-let getColor = document.getElementsByClassName('color');
-let blackColor = document.getElementById('black');
+let getColor = document.querySelector('.black');
+let colorSelected = document.querySelectorAll('.color');
 
 let createPixelBoard = () => {
   for (let i = 0; i < 5; i += 1) {
@@ -16,6 +16,16 @@ let createPixelBoard = () => {
 createPixelBoard();
 
 let setBlackColor = () => {
-  blackColor.classList.add('selected');
+  getColor.classList.add('selected');
 };
 setBlackColor();
+
+let changePalette = (event) => {
+  getColor.classList.remove('selected');
+  event.target.classList.add('selected');
+  getColor = event.target;
+}
+
+for (let colors of colorSelected) {
+  colors.addEventListener('click', changePalette);
+}
