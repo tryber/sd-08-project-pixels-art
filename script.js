@@ -89,4 +89,25 @@ window.onload = function() {
       }
     }
   
-  
+    function resizeColums() {
+        if(parseInt(inputNumber.value) < 5) {
+          inputNumber.value = "5";
+          colums();
+        }
+        else if(parseInt(inputNumber.value) > 50) {
+          inputNumber.value = "50";
+          colums();
+        } else{
+          colums();
+        }
+      }
+      buttonSize.addEventListener("click", resizeBoard);
+    
+      function lines() {
+        for (let i = 0; i < parseInt(inputNumber.value); i++) {
+          let line = document.createElement("tr");
+          document.getElementsByClassName("body-pixel")[0].appendChild(line.cloneNode());
+        }
+      }
+    
+ 
