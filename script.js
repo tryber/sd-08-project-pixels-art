@@ -12,15 +12,19 @@ let cor = ['black', 'purple', 'red', 'green'];
 function cores(){
     let lista = document.querySelectorAll('.color');
 
+    lista[0].classList.add("selected");
+
     for (let index = 0; index < lista.length; index +=1){
         lista[index].style.backgroundColor = cor[index];
 
         lista[index].addEventListener('click', function(event){
+            
             let removerClass = document.querySelectorAll('.selected');
             for( let index = 0; index < removerClass.length; index +=1 ){
                 removerClass[index].classList.remove("selected");
             }
-            event.target.classList.add("selected");
+
+         event.target.classList.add("selected");
         })
     
     }
