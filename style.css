@@ -1,8 +1,15 @@
-.color1, .color2, .color3, .color4 {
+.color {
+    width: 80px;
+    height: 80px;
+
+    border: "10px";
+    border: 1px solid black;
     display: inline-block;
 }
 
-.color1 {
+
+
+#black {
     width: 80px;
     height: 80px;
 
@@ -12,7 +19,7 @@
 
 }
 
-.color2 {
+#red {
     width: 80px;
     height: 80px;
 
@@ -21,7 +28,7 @@
     background-color: red;
 }
 
-.color3 {
+#blue {
     width: 80px;
     height: 80px;
 
@@ -30,7 +37,7 @@
     background-color: blue;
 }
 
-.color4 {
+#green {
     width: 80px;
     height: 80px;
 
@@ -39,12 +46,9 @@
     background-color: green;
 }
 
+
  td, tr {
     width: 80px;
     height: 80px;
-
-    border-color: black;
-    border-width: 1px;
-    border-style: solid;
-    border-collapse: collapse;
+    border: 1px solid black;
 }
