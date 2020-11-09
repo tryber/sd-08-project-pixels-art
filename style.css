@@ -51,8 +51,8 @@ body {
 }
 
 #pixel-board {
-	display: flex;
-	flex-direction: row;
+	/* display: flex;
+	flex-direction: row; */
 	margin-top: 10px;
 	margin-left: 50px;
 	/* width: 200px; */
@@ -61,9 +61,22 @@ body {
 
 }
 
-a.pixel {
+/* a.pixel {
 	display: block;
 	width: 40px;
   height: 40px;
  	border: 1px solid black;
+} */
+
+table {
+	/* border-collapse: collapse; */
+	border-spacing: 0;
+}
+
+.pixel {
+	background-color:white;
+	border: 1px solid black;
+	padding: 0px;
+	width: 40px;
+	height: 40px;
 }
