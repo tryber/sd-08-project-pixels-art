@@ -13,15 +13,12 @@ function createPixels (){
         let tdPixels = document.createElement('td');
         pixelColum.appendChild(tdPixels); 
         let pixelLine = document.getElementsByTagName('td')[colum];  
-        for (let line = 0; line < 5; line += 1){
-                       
-            let trPixels = document.createElement('tr');
-    
+        for (let line = 0; line < 5; line += 1){                       
+            let trPixels = document.createElement('tr');    
             trPixels.className = "pixel";
             trPixels.backgroundColor = "white";
             pixelLine.appendChild(trPixels);
         }    
-    }
-    
+    }    
 }
 createPixels();

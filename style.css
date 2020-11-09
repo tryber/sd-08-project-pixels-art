@@ -6,8 +6,16 @@
 }
 
 #pixel-board {
-    width: 210px;
+    max-width: 210px;
+    max-height: 210px;
+    border-spacing: unset;
+    border-collapse: inherit;
+    box-sizing: content-box;
+    border: 1px black solid;
     
+}
+td {
+    padding: 0;
 }
 
 .pixel {
@@ -15,5 +23,4 @@
     height: 40px;
     border: 1px black solid;
     display: inline-block; 
-    margin: 0;
 }
