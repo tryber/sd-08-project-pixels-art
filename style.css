@@ -4,19 +4,19 @@
   width: 50px;
 }
 
-.black {
+#black {
   background-color: black;
 }
 
-.green {
+#green {
   background-color: green;
 }
 
-.red {
+#red {
   background-color: red;
 }
 
-.blue {
+#blue {
   background-color: blue;
 }
 
