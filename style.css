@@ -32,18 +32,15 @@
 }
 
 #pixel-board {
-  width: 514px;
-  background-color:  black;
+  background-color: black;
+  width: 515px;
 }
 
 .pixel {
   background-color: white;
   border: 1px solid;
   display: inline-block;
-  margin: 0px;
+  margin: 0;
+  height: 40px;
   padding: 50px;
-}
-
-tr.pixel {
-    height: 40px;
 }
