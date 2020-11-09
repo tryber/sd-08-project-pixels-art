@@ -1,27 +1,43 @@
 .black{
     border: 1px black solid;
-    width: 90px;
-    height: 90px;
+    width: 45px;
+    height: 45px;
     background-color: black;
 }
    
 .green{
     border: 1px black solid;
-    width: 90px;
-    height: 90px;
+    width: 45px;
+    height: 45px;
     background-color: green;
 }
 
 .red{
     border: 1px black solid;
-    width: 90px;
-    height: 90px;
+    width: 45px;
+    height: 45px;
     background-color: red;
 }
 
 .blue{
     border: 1px black solid;
-    width: 90px;
-    height: 90px;
+    width: 45px;
+    height: 45px;
     background-color: blue;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(5, 40px);
+    grid-template-rows: repeat(5, 40px); 
+    margin-bottom: 20px;
+    width: 202px;
+}
+  
+.pixel {
+    background-color: white;
+    border: 1px solid black;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
 }
