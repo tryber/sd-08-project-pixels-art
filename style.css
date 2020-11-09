@@ -1,0 +1,12 @@
+#title {
+    text-align: center;
+}
+
+.pixel-board {
+    border: 1px solid black;
+}
+
+#black, #red, #blue, #green {
+    display: inline-block;
+    border: 1px solid black;
+}
