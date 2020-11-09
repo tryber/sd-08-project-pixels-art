@@ -6,6 +6,7 @@ for (let itens = 0; itens < tabelaDeCores.length; itens += 1) {
   color.style.background = tabelaDeCores[itens];
   color.style.display = "inline-block";
   color.style.width = '100px'
+  color.style.border = 'solid 1px'
   paletaDeCores.appendChild(color);
   let text = document.createElement("p");
   text.innerHTML = tabelaDeCores[itens];
