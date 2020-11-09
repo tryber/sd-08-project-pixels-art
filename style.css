@@ -1,32 +1,27 @@
-:root {
-  --pixel-size: 40px;
-}
-
-* {
-  padding: 0;
-  margin: 0;
+body , div , span , ul , li , input , h1 { /* Codeclimate não deixa usar o '*' :-( */
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 .color {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
   border: 1px solid black;
-  margin: 5px;
   float: left;
+  height: 40px;
+  margin: 5px;
+  width: 40px;
 }
 
-#color-palette {
+.color-palette {
+  list-style: none;
   overflow: hidden;
 }
 
 .pixel {
-  display: inline-block;
-  width: var(--pixel-size);
-  height: var(--pixel-size);
-  float: left;
   border: 1px solid black;
+  float: left;
+  height: 40px;
+  width: 40px;
 }
 
 .pixel-row {
@@ -34,7 +29,7 @@
   overflow: hidden;
 }
 
-#controls {
+.controls {
   overflow: hidden;
   padding: 10px;
 }
