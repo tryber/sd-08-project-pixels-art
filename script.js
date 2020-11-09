@@ -21,11 +21,42 @@ function pixelBoard () {
 }
 pixelBoard();
 
-// function selectColor () {
-//   let colorselection = document.querySelectorAll('.color');
-//   colorselection.addEventListener('click', function (event) {
-//     let index = event.target.index;
-//     console.log(index);
-//   });
-// }
-// selectColor();
+function selectColor () {
+  let element1 = document.querySelectorAll('.color')[0];
+  let element2 = document.querySelectorAll('.color')[1];
+  let element3 = document.querySelectorAll('.color')[2];
+  let element4 = document.querySelectorAll('.color')[3];
+  let palette = document.querySelector('#color-palette');
+  
+  palette.addEventListener('click', function(event) {
+    if (event.target.style.backgroundColor === 'black' && event.target.className === 'color') {
+      event.target.className = 'color selected';
+      element2.className = 'color';
+      element3.className = 'color';
+      element4.className = 'color';
+    } else if (event.target.style.backgroundColor === 'blue' && event.target.className === 'color') {
+      event.target.className = 'color selected';
+      element1.className = 'color';
+      element3.className = 'color';
+      element4.className = 'color';
+    } else if (event.target.style.backgroundColor === 'yellow' && event.target.className === 'color') {
+      event.target.className = 'color selected';
+      element1.className = 'color';
+      element2.className = 'color';
+      element4.className = 'color';
+    } else if (event.target.style.backgroundColor === 'green' && event.target.className === 'color') {
+      event.target.className = 'color selected';
+      element1.className = 'color';
+      element2.className = 'color';
+      element3.className = 'color';
+    }
+  });
+
+  // let colorselection = document.querySelectorAll('.color').forEach (function (item) {
+  //   item.addEventListener('click', function (event) {
+  //     event.target.className = 'color selected';
+  //     console.log(item.className);
+  // });
+  // });
+}
+selectColor();
