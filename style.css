@@ -6,6 +6,10 @@
   width: 25px;
 }
 
+button {
+  margin-left: 70px;
+}
+
 #pixel-board {
   max-width: 250px;
 }
