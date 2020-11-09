@@ -46,7 +46,7 @@ hr {
 }
 #pixel-board td {
   border: 1px solid black;
-  background-color: rgb(255, 255, 255);
+  background-color: rgb(223, 215, 215);
   text-align: center;
   width: 40px;
   height: 40px;
@@ -88,7 +88,7 @@ hr {
   cursor: pointer;
 }
 #clear-board:active {
-  background-color: #f5ecec;
+  background-color: #0f0a0a;
   outline: none;
 }
 #black {

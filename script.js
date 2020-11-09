@@ -5,7 +5,7 @@ function limpar() {
   botao.addEventListener("click", changeColor);
   function changeColor() {
     for (let i in tabela) {
-      tabela[i].style.backgroundColor = "white";
+      tabela[i].style.backgroundColor = "rgb(255,255,255)";
     }
   }
 }
