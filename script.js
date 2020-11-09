@@ -14,16 +14,17 @@ function colorPalette () {
 colorPalette();
 
 function createPixels (){
-    for (let colum = 0; colum < 5; colum += 1){
-        let pixelColum = document.getElementById('pixel-board');
-        let tdPixels = document.createElement('td');
-        pixelColum.appendChild(tdPixels); 
-        let pixelLine = document.getElementsByTagName('td')[colum]; 
+    for (let line = 0; line < 5; line += 1){
+        let lineLocal = document.getElementById('pixel-board');
+        let linePixels = document.createElement('div');
+        linePixels.className = "line";
+        lineLocal.appendChild(linePixels); 
+        let pixelLine = document.getElementsByClassName('line')[line]; 
 
-        for (let line = 0; line < 5; line += 1){                       
-            let trPixels = document.createElement('tr');    
-            trPixels.className = "pixel";
-            pixelLine.appendChild(trPixels);
+        for (let colum = 0; colum < 5; colum += 1){                       
+            let columPixels = document.createElement('div');    
+            columPixels.className = "pixel";
+            pixelLine.appendChild(columPixels);
         }    
     }    
 }
