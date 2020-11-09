@@ -58,3 +58,13 @@ for (let i = 0; i < pixels.length; i++) {
     event.target.style.backgroundColor = selected.style.backgroundColor;
   });
 }
+
+const buttonClearBoard = document.getElementById('clear-board');
+buttonClearBoard.addEventListener('click', clearBoard);
+
+function clearBoard() {
+  for (let i = 0; i < pixels.length; i++) {
+    const pixel = pixels[i];
+    pixel.style.backgroundColor = 'white';
+  }
+}
