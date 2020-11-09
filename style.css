@@ -39,6 +39,7 @@
   border: 1px solid black;
   display: inline-block;
   height: 40px;
-  margin: -3px;
+  margin-right: -6px;
+  margin-bottom: -6px;
   width: 40px;
 }
