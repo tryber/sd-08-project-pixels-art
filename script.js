@@ -1,6 +1,13 @@
 window.onload = function () {
     let pixel_board = document.querySelector('#pixel-board');
 
+    let clear_board = document.querySelector('#clear-board');
+    clear_board.addEventListener('click', function () {
+        for (let pixel of pixelArray) {
+            pixel.className = pixel.className.replace(pixel.className.split(' ')[1], 'white');
+        }
+    })
+
     let black = document.querySelector(".black");
     black.className += ' selected';
 
@@ -11,7 +18,7 @@ window.onload = function () {
     for (let index = 1; index <= 5; index++) {
         for (let index = 1; index <= 5; index++) {
             let pixel = document.createElement('div');
-            pixel.className = 'pixel';
+            pixel.className = 'pixel white';
 
             pixel_board.appendChild(pixel);
         }
@@ -38,12 +45,5 @@ function selectColor(event) {
 
 function paintPixel(event) {
     let color = document.querySelector('.selected').className.split(' ')[1];
-    // event.target.className = event.target.className.replace(event.target.className.split(' ')[1], '');
-    if (event.target.className.split(' ')[1] == null) {
-        event.target.className += ' ' + color;
-}
-    else {
-        event.target.className = event.target.className.replace(event.target.className.split(' ')[1], color);
-    }
-
+    event.target.className = event.target.className.replace(event.target.className.split(' ')[1], color);
 }
