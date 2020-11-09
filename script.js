@@ -37,7 +37,7 @@ function color(event) {
     let cor = event.target.style.backgroundColor;
     for(let i = 0; i < getPaleta.length; i += 1){
         if(getPaleta[i].style.backgroundColor === cor){
-            getPaleta[i].classList.toggle('selected');
+            getPaleta[i].classList.add('selected');
         }else{
             getPaleta[i].classList.remove('selected');
         }
