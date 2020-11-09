@@ -1,10 +1,9 @@
 .color {
   border: solid 1px black;
-  display: inline-block; 
+  display: inline-block;
   height: 100px;
-  margin: 10px; 
+  margin: 10px;
   width: 100px;
-  
 }
 
 #cor1 {
@@ -25,7 +24,7 @@
 
 #pixel-board {
   display: table;
-  margin: 10px;  
+  margin: 10px;
 }
 
 .pixel {
@@ -36,3 +35,5 @@
   padding: 0;
   width: 40px;
 }
+
+
