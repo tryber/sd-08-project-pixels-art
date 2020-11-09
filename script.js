@@ -1,8 +1,3 @@
-window.onload = function (){
-    let selected = document.querySelector("#black");
-    selected.className('selected')
-};//Função anonima
-
 //função para limpar os pixels
 function limpar() {
   const botao = document.querySelector("#clear-board");
