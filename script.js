@@ -6,6 +6,7 @@ const board = document.querySelector('.pixel-board');
 
 // Sets reference to buttons
 const clearButton = document.querySelector('#clear-board');
+const genButton = document.querySelector('#generate-board');
 
 // sets boardSize default value
 let boardSize = 5;
@@ -77,7 +78,7 @@ clearButton.addEventListener('click', clearBoard);
 
 // Removes all board children when called
 function removeBoard() {
-  lines = board.children
+  let lines = board.children;
   for (let i = 0; lines[i];) {
     board.removeChild(lines[i]);
   }
@@ -88,11 +89,13 @@ function valueStorage() {
   const input = document.querySelector('#board-size');
   const storedValue = parseInt(input.value);
   boardSize = storedValue;
+  if (boardSize < 5) {
+    input.value = '5';
+    boardSize = 5;
+  }
 }
 
-// Generates board lines
-// removeBoard();
-
+// Generates blocks within line
 function blockGen(n) {
   for (let i = 0; i < n; i += 1) {
     let div = document.createElement('div');
@@ -101,13 +104,39 @@ function blockGen(n) {
   }
 }
 
+// Generates lines 
 function lineGen(n) {
   for (let i = 0; i < n; i += 1) {
-    let div = document.createElement('div');
+    const div = document.createElement('div');
     div.className = 'line';
     board.appendChild(div);
     blockGen(n);
   }
 }
 
-lineGen(boardSize);
+// Generates initial board
+lineGen(5);
+
+// Generates a new board with input value as size
+function regenBoard() {
+  removeBoard();
+  lineGen(boardSize);
+}
+
+// Board size input validator
+function sizeValidate() {
+  if (!boardSize) {
+    alert('Board inválido!');
+  } else if (boardSize < 5) {
+    boardSize = 5;
+  } else if (boardSize > 50) {
+      boardSize = 50;
+  }
+}
+
+// Regenerates board
+genButton.addEventListener('click', () => {
+  valueStorage()
+  sizeValidate()
+  regenBoard()
+});
