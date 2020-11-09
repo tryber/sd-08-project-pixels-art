@@ -42,19 +42,22 @@ for (let index=0; index<25; index++){
 let ulColor = document.querySelector("#color-palette");
 let color = ulColor.childNodes;
 
+function removeSelected(){
+    for (let index=0; index<color.length; index++){
+        if (color[index].className == "color selected"){
+            color[index].className = "color";
+        }
+    }
+}
 
 
-
-function colorSelected(){
-    
-    ulColor.addEventListener("click", function(event){           
-      
+function colorSelected(){    
+    ulColor.addEventListener("click", function(event){         
+            removeSelected();
             if (event.target.className !== "color selected"){
                 event.target.className = "color selected";
             }                    
-                   
-    });
-     
+    });     
 }
 colorSelected();
 
