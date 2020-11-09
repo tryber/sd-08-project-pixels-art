@@ -1,0 +1,38 @@
+#blue{
+    background-color: blue;
+    height: 50px;
+    width: 50px;
+
+}
+
+#red {
+    background-color: red;
+    height: 50px;
+    width: 50px;
+    
+}
+
+#green {
+    background-color:green;
+    height: 50px;
+    width: 50px;
+    
+}
+
+#yellow {
+    background-color:  yellow;
+    height: 50px;
+    width: 50px;
+    
+}
+
+.color {
+    border: black solid 1px;
+    display: inline-block;
+    margin-left: 12%;
+}
+
+#title {
+
+    text-align: center;
+}
