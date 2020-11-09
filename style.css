@@ -16,6 +16,7 @@
 }
 
 .pixel {
+  box-sizing: border-box;
   border: 1px solid black;
   background: white;
   display: table-cell;
