@@ -53,3 +53,17 @@ h1 {
   background: #f4a261;
   border: black 1px solid;
 }
+
+.pixel-board {
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 200px;
+  height: 200px;
+  border: black 1px solid;
+}
+
+.pixel {
+  width: 40px;
+  height: 40px;
+  border: black 1px solid;
+}
