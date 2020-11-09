@@ -1,0 +1,22 @@
+#black {
+   background-color: black;
+}
+
+#green {
+    background-color: green;
+}
+
+#pink {
+    background-color: hotpink;
+}
+
+#orange {
+    background-color: orange;
+}
+
+.color {
+    border: 1px solid black;
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+}
