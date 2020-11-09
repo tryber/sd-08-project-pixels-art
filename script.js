@@ -11,10 +11,10 @@ function changeSelector() {
   this.classList.add('selected');
 }
 
-black.addEventListener('click', changeSelector)
-blue.addEventListener('click', changeSelector)
-pink.addEventListener('click', changeSelector)
-yellow.addEventListener('click', changeSelector)
+black.addEventListener('click', changeSelector);
+blue.addEventListener('click', changeSelector);
+pink.addEventListener('click', changeSelector);
+yellow.addEventListener('click', changeSelector);
 
 const pixel = document.querySelectorAll('.pixel');
 
