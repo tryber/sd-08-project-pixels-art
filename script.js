@@ -2,6 +2,15 @@ window.onload = function () {
     let selecionado = document.querySelector('.selected');
     console.log(selecionado.style.backgroundColor)
     
+    function geraNumero(){
+        return Math.ceil(Math.random() * 255);
+    }
+
+    let arrayCores = document.querySelectorAll('.color');
+    for (let i = 1; i < arrayCores.length; i += 1) {
+        arrayCores[i].style.backgroundColor = 'rgb(' + geraNumero() + ", " + geraNumero() + ", " + geraNumero() + ")";
+    }
+    
     addEventListener('click', function(event){
         let pixelClicado = event.target;
         let cor = window.getComputedStyle(selecionado).backgroundColor;
