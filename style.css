@@ -1,9 +1,9 @@
 .color {
   border: 1px solid black;
   display: inline-block;
-  height: 45px;
-  margin: 5 px;
-  width: 45px;
+  height: 40px;
+  margin: 5px;
+  width: 40px;
 }
 
 #preto {
@@ -24,7 +24,11 @@
 
 .pixel {
   border: 1px solid black;
-  height: 45px;
-  width: 45px;
+  height: 40px;
+  width: 40px;
   background-color: white;
+}
+
+#pixel-board{
+  border-collapse: collapse;
 }
