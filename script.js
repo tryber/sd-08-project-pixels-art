@@ -15,3 +15,10 @@ function fillBoard() {
 }
 
 fillBoard();
+
+let colors = document.getElementById("color-palette");
+
+window.onload = function () {
+  //black selected
+  colors.children[0].classList.add("selected");
+};
