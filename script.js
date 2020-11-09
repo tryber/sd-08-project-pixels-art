@@ -1,5 +1,5 @@
 function firstBlack(){
     let element = document.getElementById('black')
-    element.className = 'selected'
+    element.className = 'color selected'
 }
 firstBlack()
