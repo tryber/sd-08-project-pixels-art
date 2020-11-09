@@ -1,0 +1,30 @@
+ul li {
+  display: inline;
+}
+button{
+  border: 1px solid black;
+  width: 50px;
+  height: 50px;
+}
+
+#color1{
+  background: black;
+}
+
+#color2{
+  background: rgb(0, 119, 255);
+}
+
+#color3{
+  background: red;
+}
+
+#color4{
+  background: yellow;
+}
+
+.pixel {
+  height: 40px;
+  width: 40px;
+  border: 1px solid;  
+}
