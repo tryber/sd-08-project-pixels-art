@@ -29,9 +29,13 @@ for (let row = 0; row < boardSize; row += 1) {
 
 // Selecionar a cor da peleta
 document.addEventListener('click', function (event) {
-  let selectedColor = document.querySelector('.selected');
-  selectedColor.className = 'color';
   if (event.target.classList.contains('color')) {
+    const selectedColor = document.querySelector('.selected');
+    selectedColor.className = 'color';
     event.target.className = 'color selected';
+  }
+  if (event.target.classList.contains('pixel')) {
+    let applyColor = document.querySelector('.selected').style.backgroundColor;
+    event.target.style.backgroundColor = applyColor;
   }
 });
