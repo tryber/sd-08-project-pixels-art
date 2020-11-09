@@ -1,5 +1,6 @@
 #color1 {
 background-color: black;
+
 }
 
 #color2 {
@@ -12,4 +13,8 @@ background-color: yellow;
 
 #color4 {
 background-color: magenta;
+}
+
+.color {
+    display: inline;
 }
