@@ -45,5 +45,3 @@ function selectColor(event) {
 }
 
 palette.addEventListener('click', selectColor)
-
-let selectedColor = parseSelection();
