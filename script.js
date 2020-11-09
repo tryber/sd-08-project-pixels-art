@@ -1,6 +1,5 @@
 function criaCores(){
   const paleta = document.getElementById('color-palette');
-  
   for (index = 1; index <=4; index +=1){
     const cor = document.createElement('div');    
     paleta.appendChild(cor);
@@ -13,12 +12,10 @@ function criaCores(){
       cores[index].style.backgroundColor = `rgb(${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)},${Math.floor(Math.random() * 255)})`;
       // copiei a função de numero aleatorio do site https://www.w3schools.com/js/js_random.asp
     };
-
   }
   
 
 criaCores();
-
 
 function criaPixels(numeroDePixels){
   const board = document.getElementById('pixel-board');
@@ -32,9 +29,6 @@ function criaPixels(numeroDePixels){
 criaPixels(5);
 //função Math.pow retirada de https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Math/pow
 
-
-
-
 function selecionaCor(){
   const cores = document.querySelectorAll('.color');  
     for (index = 0; index < cores.length; index +=1){
@@ -45,7 +39,7 @@ function selecionaCor(){
         cores[index].className = 'color';
       }
     event.target.className = 'color selected';
-    }           
+    }
 }
 selecionaCor();
 
@@ -73,4 +67,3 @@ function limpaQuadro(){
   }
 }
 limpaQuadro();
-
