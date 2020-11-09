@@ -10,12 +10,13 @@ function title(){
 let cor = ['black', 'purple', 'red', 'green'];
 
 function cores(){
-    let lista = document.querySelectorAll('li');
+    let lista = document.getElementsByClassName('color');
 
     for (let index = 0; index < lista.length; index +=1){
-        lista[index].innerText =  cor[index];
+        lista[index].style.backgroundColor = cor[index];
+
     }
 
 }
     cores();
-    
+
