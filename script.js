@@ -14,11 +14,22 @@ function fillBoard() {
   }
 }
 
-fillBoard();
-
 let colors = document.getElementById("color-palette");
+
+function clearSelection() {
+  for (color of colors.children) {
+    color.classList.remove("selected");
+  }
+}
+for (color of colors.children) {
+  color.addEventListener("click", function (e) {
+    clearSelection();
+    e.target.classList.add("selected");
+  });
+}
 
 window.onload = function () {
   //black selected
   colors.children[0].classList.add("selected");
+  fillBoard();
 };
