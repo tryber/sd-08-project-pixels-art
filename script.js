@@ -6,6 +6,21 @@ function selecionado (botaoSelecionado) {
   botaoSelecionado.target.classList.add('selected');
 }
 
+//Função para preencher célula com a cor desejada.
+function preencheCelula (preenche) {
+  let cor = document.querySelector('.selected');
+  preenche.style.backgroundColor = (window.getComputedStyle(cor, null).getPropertyValue("background-color"));
+}
+
+//Criando função para limpar a grade.
+function limpaGrade(botao) {
+  let todasCelulas = document.getElementsByClassName('pixel');
+  for (let index = 0; index < todasCelulas.length; index +=1) {
+    let celula = todasCelulas[index];
+    celula.style.backgroundColor = ('white');
+  }
+}
+
 
 
 //Criando quadrados modelo de cores para paleta.
@@ -33,6 +48,13 @@ for (let index = 0; index < 4; index += 1) {
   paletaDeCor.appendChild(corDaPaleta);
 }
 
+//Criando botão para limpar as células e preenche-las com branco.
+let botaoLimpar = document.getElementById('clear-board');
+botaoLimpar.style.marginBottom = ('10px');
+botaoLimpar.style.marginTop = ('5px');
+botaoLimpar.addEventListener('click', limpaGrade);
+ 
+
 //Criando mosaico com as células a serem pintadas.
 let gradeCelulas = document.getElementById('pixel-board');
 gradeCelulas.style.borderSpacing = (0);
@@ -52,4 +74,11 @@ for (let primeiroIndex = 0; primeiroIndex < 5; primeiroIndex += 1) {
   }
   gradeCelulas.appendChild(linhaDaTabela);
 }
+
+//Adicionando o método event bubbling para preencher as células.
+document.addEventListener('click', function (clique) {
+  if ( clique.target.classList.contains( 'pixel' ) ) {
+      preencheCelula(clique.target);
+  }
+}, false);
 
