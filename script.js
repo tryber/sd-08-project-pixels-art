@@ -2,6 +2,7 @@ window.onload = () => {
   let board = document.getElementById("pixel-board");
   let palette = document.getElementById("color-palette");
   let clearButton = document.getElementById("clear-board");
+  let updateSizeButton = document.getElementById("generate-board");
 
   let size = 5;
 
@@ -14,7 +15,23 @@ window.onload = () => {
     for (pix of pixels) {
       pix.style.backgroundColor = "white";
     }
-  })
+  });
+
+  updateSizeButton.addEventListener("click", event => {
+    let newSize = document.getElementById("board-size").value;
+
+    if (!newSize) {
+      alert("Board inválido!");
+    } else {
+      board.innerHTML = "";
+      if (newSize < 5) {
+        newSize = 5;
+      } else if (newSize > 50) {
+        newSize = 50;
+      }
+      generateBoard(newSize, board);
+    }
+  });
 }
 
 function generatePalette(palette) {

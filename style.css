@@ -43,3 +43,9 @@ html, body {
 .pixel-line {
   display: inline-block;
 }
+
+.size-definition {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
