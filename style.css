@@ -25,10 +25,11 @@
 .pixel {
   background-color: white;
   border: 1px solid black;
-  height: 38px;
-  width: 37px;
+  height: 40px;
+  width: 40px;
 }
 
 #pixel-board{
   border-collapse: collapse;
+  
 }
