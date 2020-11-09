@@ -1,37 +1,38 @@
 #color-palette {
-  margin: 0px;
-  padding: 0px;
   background-color: salmon;
+  margin: 0;
+  padding: 0;
+  
 }
 
-.red {
-  display: inline-block;
+.color-black {
   background-color: black;
   border: 1px solid;
+  display: inline-block;
   margin: 25px;
   padding: 50px;
 }
 
-.green {
-  display: inline-block;
+.color-red {
   background-color: red;
   border: 1px solid;
+  display: inline-block;
   margin: 25px;
   padding: 50px;
 }
 
-.blue {
-  display: inline-block;
+.color-green {
   background-color: green;
   border: 1px solid;
+  display: inline-block;
   margin: 25px;
   padding: 50px;
 }
 
-.black {
-  display: inline-block;
+.color-blue {
   background-color: blue;
   border: 1px solid;
+  display: inline-block;
   margin: 25px;
   padding: 50px;
 }
