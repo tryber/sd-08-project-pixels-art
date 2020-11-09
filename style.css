@@ -1,0 +1,22 @@
+.color {
+    border-radius: 5px;
+    height: 40px;
+    width: 40px;
+    margin: 10px;
+    border: solid 1px black;
+}
+.black {
+    background-color: black;
+}
+
+.yellow{
+    background-color: yellow;
+}
+
+.green {
+    background-color: green;
+}
+
+.blue {
+    background-color: blue;
+}
