@@ -22,10 +22,7 @@ function createPixels () {
 createPixels();
 
 window.onload = function () {
-    document.querySelectorAll('.color')[0].classList.add('selected');
-    document.querySelectorAll('.color')[1].classList.remove('selected');
-    document.querySelectorAll('.color')[2].classList.remove('selected');
-    document.querySelectorAll('.color')[3].classList.remove('selected');
+    document.querySelectorAll('.color')[0].classList.add('selected');    
     document.querySelectorAll('.color')[0].style.background = 'black'; 
     document.querySelectorAll('.color')[1].style.background = generateRandomColor();
     document.querySelectorAll('.color')[2].style.background = generateRandomColor();
@@ -113,7 +110,8 @@ document.querySelector('#clear-board').addEventListener('click', function clearP
     }
 });
 
+// FUNÇÃO RETIRADA DO https://dev.to/akhil_001/generating-random-color-with-single-line-of-js-code-fhj
 function generateRandomColor() {
-    var randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);
+    var randomColor = '#'+Math.floor(Math.random()*16777215).toString(16);     
     return randomColor;    
 }
