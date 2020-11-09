@@ -4,11 +4,13 @@ header {
 }
 
 main {
-  border: 1px solid rgb(236 , 10 , 10);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid rgb(236, 10, 10);
   height: 500px;
   margin: 2% 25%;
   width: 50%;
-  
 }
 
 .color-palette {
@@ -23,22 +25,22 @@ main {
 
 .color {
   border: 1px solid black;
-  padding: 5px;
   height: 60px;
+  padding: 5px;
   width: 60px;
-  
 }
-.color black {
-  background-color: black;
+
+.pixel-board {
+  align-self: center;
+  border: 1px solid ;
+  display: flex;
+  margin-top: 2%;
+  width: min-content;
 }
-.color .brown_one {
-  background-color: #f7be4A;
-  }
 
-.color .brown_two {
-  background-color: #ab8333;
-  }
-
-.color .brown_three {
-  background-color: #6b5220;
+.pixel {
+  background-color: white;
+  border: 1px solid;
+  width: 40px;
+  height: 40px;
 }
