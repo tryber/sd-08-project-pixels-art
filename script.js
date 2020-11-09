@@ -7,7 +7,7 @@ for (let i in cores) {
   let diviCores = document.createElement('div');
   diviCores.style = `background-color:${cores[i]};`;
   diviCores.className = 'color';
-    if(i===0){
+    if(i==0){
     diviCores.classList.add('select');
   }
   divColorPalette.appendChild(diviCores);
