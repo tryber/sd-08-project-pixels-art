@@ -9,16 +9,19 @@ paleta[3].style.backgroundColor = '#6b5220';
 
 let pixelBoard = document.getElementById('pixel-board');
 function generatePixel(){
-    for (let i = 0; i < 5; i += 1) {
-        let lineOfBoard = document.createElement('div');
-            lineOfBoard.className = 'lineOfBoard';
-            pixelBoard.appendChild(lineOfBoard);
-            for( let j = 0; j < 5; j += 1) {
-                let colorizedPixel = document.createElement('div');
-                colorizedPixel.className = 'pixel';
-                lineOfBoard.appendChild(colorizedPixel);
-            }
+    for( let j = 0; j < 25; j += 1) {
+        let colorizedPixel = document.createElement('div');
+        colorizedPixel.className = 'pixel';
+        pixelBoard.appendChild(colorizedPixel);
     }
 }
+
+
+// Adicionando eventos para selecionar cor da paleta
+
+
+
+
+
 
 generatePixel();
