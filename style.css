@@ -32,7 +32,6 @@
   display: inline-flex; /* source: https://stackoverflow.com/a/37300782/14424360 */
 }
 
-
 .pixel {
   background-color: white;
   border: 1px solid black;
