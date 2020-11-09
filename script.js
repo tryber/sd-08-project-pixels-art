@@ -7,58 +7,7 @@ let limpar = document.getElementById('clear-board');
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-buttonClear.addEventListener("click", function() {
-    for (let i = 0; i < pixel.length; i += 1) {
-        pixel[i].style.backgroundColor = "white";
-    }
+// buttonClear.addEventListener("click", function() {
+//     for (let i = 0; i < pixel.length; i += 1) {
+//         pixel[i].style.backgroundColor = "white";
+//     }
