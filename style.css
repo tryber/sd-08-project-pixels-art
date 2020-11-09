@@ -1,6 +1,6 @@
 #title
 {
-
+    font-style: Shiny Signature;
 }
 
 #color-palette
@@ -10,7 +10,7 @@
 
 #color-palette .color
 {
-    padding: 20px;
+    padding: 15px;
     margin: 10px 5px 10px 0px;
     border: solid black 1px;
     display: block;
@@ -36,4 +36,25 @@
 #green
 {
     background-color: green;
+}
+
+#pixel-board
+{
+    position: absolute;
+    margin-top: 60px;
+    margin-left: 0px;
+    width: 150px;
+
+
+}
+
+.pixel
+{
+    margin: 0px;
+    display: block;
+    float: right;
+    width: 25px;
+    height: 25px;
+    border: 1px solid black;
+    background-color: white;
 }
