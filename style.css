@@ -1,6 +1,6 @@
 .color {
     border: 1px solid black;
-    padding: 25px 35px;
+    padding: 30px 40px;
     margin: 2px;
 }
 
@@ -22,8 +22,8 @@
 
 .pixel {
     background-color: white;
-    border: 2px solid black;
-    padding: 35px 35px;
+    border: 1px solid black;
+    padding: 40px 40px;
 }
 
 table {
