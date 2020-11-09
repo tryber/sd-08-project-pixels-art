@@ -1,3 +1,7 @@
+window.onload = function () {
+  document.querySelector('.color').className = 'color selected';
+}
+
 function initialColors () {
   let colors = document.querySelectorAll('.color');
   colors[0].style.backgroundColor = 'black';
