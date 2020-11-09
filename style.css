@@ -16,6 +16,10 @@
     display: table-row;
 }
 
+td {
+    padding: 0px;
+}
+
 .pixel {
     width: 40px;
     height: 40px;
