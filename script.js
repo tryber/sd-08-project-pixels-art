@@ -42,7 +42,7 @@ window.onload = function () {
             } else if (lado == document.getElementsByTagName('tr').length) {
                 // faz nada
             } else {
-                let pixelBoard = document.querySelector('.pixel-board');
+                let pixelBoard = document.querySelector('#pixel-board');
                 pixelBoard.remove(pixelBoard)
 
                 if (lado < 5) {
@@ -54,7 +54,7 @@ window.onload = function () {
                 
                 pixelBoard = document.createElement('table');
                 let main = document.getElementsByTagName('main')
-                pixelBoard.className = 'pixel-board';
+                pixelBoard.id = 'pixel-board';
                 main[0].appendChild(pixelBoard);
                 
                 for (let i = 0; i < lado; i += 1) {
