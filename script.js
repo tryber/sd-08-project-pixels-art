@@ -51,3 +51,20 @@ function quadro(){
 }
     quadro();
 
+function pixelColors(){
+        let pixels = document.querySelectorAll('.pixel');
+
+    for (let i = 0; i < pixels.length; i += 1){
+        let quadrado = pixels[i];
+
+        quadrado.addEventListener('click', function(e){
+            let paleta = document.querySelector('.selected');
+            quadrado.style.backgroundColor = paleta.style.backgroundColor;
+        })
+    }
+}
+
+pixelColors();
+
+    
+        
