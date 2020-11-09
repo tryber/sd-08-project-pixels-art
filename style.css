@@ -1,7 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
 
+* {
+    padding: 0;
+    margin: 0;
+}
+
 body {
     background-color: rgb(139,126,102);
+}
+
+header {
+    margin: 50px 0 20px 0;
 }
 
 #title {
@@ -46,7 +55,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
 .pixel {
@@ -55,5 +64,4 @@ body {
     width: 40px;
     height: 40px;
     cursor: pointer;
-    box-sizing: border-box;
 }
