@@ -20,6 +20,7 @@ createDiv(25, "pixel-board", "pixel");
 
 let pallet = ["black", "green", "blue", "yellow"];
 let colors = document.getElementsByClassName("color");
+
 for (let index = 0; index < colors.length; index++) {
   colors[index].style.backgroundColor = pallet[index];
 }
@@ -33,3 +34,22 @@ function fillWhite() {
 
 let button = document.getElementById("clear-board");
 button.addEventListener("click", fillWhite);
+
+let pixels = document.getElementsByClassName("pixel");
+for (pixel of pixels) {
+  pixel.addEventListener("click", fillColor);
+}
+
+function fillColor(event) {
+  let color = document.getElementsByClassName("selected")[0];
+  event.target.style.backgroundColor = color.style.backgroundColor;
+}
+
+for (color of colors) {
+  color.addEventListener("click", selectColor);
+}
+
+function selectColor(event) {
+  document.getElementsByClassName("selected")[0].classList.remove("selected");
+  event.target.classList.add("selected");
+}
