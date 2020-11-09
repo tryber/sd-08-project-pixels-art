@@ -1,10 +1,15 @@
 function preenchePalete () {
     let coresPalete = document.querySelectorAll("#color-palette div");
     for (let i=0; i<coresPalete.length; i+=1) {
-        if (i===0) coresPalete[i].style.backgroundColor = "black";
-        if (i===1) coresPalete[i].style.backgroundColor = "red";
-        if (i===2) coresPalete[i].style.backgroundColor = "blue";
-        if (i===3) coresPalete[i].style.backgroundColor = "green";
+        if (i===0) {
+            coresPalete[i].style.backgroundColor = "black";
+        } else {
+            let random1 = Math.random() * 255;
+            let random2 = Math.random() * 255;
+            let random3 = Math.random() * 255;
+            coresPalete[i].style.backgroundColor = "rgb("+ random1 + "," + random2 + "," + random3 + ")";
+        }
+        
     }
 }
 preenchePalete();
