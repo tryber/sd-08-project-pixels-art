@@ -33,17 +33,13 @@
 
 #pixel-board {
   background-color: black;
-  width: 515px;
+  width: 250px;
 }
 
 .pixel {
   background-color: white;
   border: 1px solid;
   display: inline-block;
-  margin: 0;
-  padding: 50px;
-}
-
-.pixel tr {
-    height: 40px;
+  height: 40px;
+  width: 40px;
 }
