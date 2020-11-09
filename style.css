@@ -8,8 +8,11 @@
 }
 
 #pixel-board {
-    max-width: 210px;
-    max-height: 210px; 
+    max-width: 200px;
+    max-height: 200px; 
+    border-collapse: unset; 
+    border-spacing: 0px;
+    box-sizing: unset;
     display: table-row;
 }
 
@@ -19,6 +22,5 @@
     border: 1px black solid;    
     background-color: white;
     display: table; 
-    border-collapse: unset; 
-    border-spacing: 0px;
+    
 }
