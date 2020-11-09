@@ -1,6 +1,6 @@
 .color {
-    width: 80px;
-    height: 80px;
+    width: 40px;
+    height: 40px;
 
     border: "10px";
     border: 1px solid black;
@@ -10,8 +10,8 @@
 
 
 #black {
-    width: 80px;
-    height: 80px;
+    width: 40px;
+    height: 40px;
 
     border: "10px";
     border: 1px solid black;
@@ -20,8 +20,8 @@
 }
 
 #red {
-    width: 80px;
-    height: 80px;
+    width: 40px;
+    height: 40px;
 
     border: "10px";
     border: 1px solid black;
@@ -29,8 +29,8 @@
 }
 
 #blue {
-    width: 80px;
-    height: 80px;
+    width: 40px;
+    height: 40px;
 
     border: "10px";
     border: 1px solid black;
@@ -38,8 +38,8 @@
 }
 
 #green {
-    width: 80px;
-    height: 80px;
+    width: 40px;
+    height: 40px;
 
     border: "10px";
     border: 1px solid black;
@@ -47,10 +47,11 @@
 }
 
 
-td {
-    width: 80px;
-    height: 80px;
+.pixel {
+    width: 40px;
+    height: 40px;
     border: 1px solid black;
+    background-color: white;
 }
 
 #pixel-board {
