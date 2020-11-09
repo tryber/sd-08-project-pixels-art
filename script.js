@@ -10,7 +10,8 @@ function createPaleteColorEle(){
     if (i === 0) {
     
         createele.style.backgroundColor = "black"
-        createele.className = "color"
+        createele.className = "color" 
+      
        
         
         getpos.appendChild(createele)
@@ -172,3 +173,90 @@ let getposicaopal = document.querySelector()
 }
 paintpallete()
 */ 
+
+
+
+
+
+function pegacor(){
+
+    let pega1 = document.querySelectorAll(".color")
+    let pega2 = document.querySelectorAll(".selected")
+    
+
+        for(let i = 0 ; i <pega1.length ; i++){
+            
+            
+            
+            pega1[i].addEventListener("click",function(){
+                let color = pega1[i].style.backgroundColor
+                
+                
+                console.log(color)
+
+            
+
+            })
+            
+
+          }
+         
+  }
+  pegacor()
+
+
+    function aplicacor(){
+
+
+        let pegaposi3 = document.querySelectorAll(".pixel")
+        
+
+        for(let i = 0 ; i <pegaposi3.length ; i++){
+
+            pegaposi3.addEventListener("click",function(pegacor){
+
+            if(pegaposi3[i] === pega2){
+
+            pegaposi3.style.backgroundColor = pega2.style.backgroundColor
+}
+
+            
+        })
+
+
+
+
+    }
+    }
+    aplicacor()
+
+
+
+    
+    
+    
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+    
+
+
+
+
+
+
+
