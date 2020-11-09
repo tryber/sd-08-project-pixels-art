@@ -9,10 +9,13 @@ for (let i = 0; i < 20; i++) {
   colors.push(currentColor);
 }
 
+colors.unshift('#000000');
+console.log(colors);
+
 for (let i = 0, len = colors.length; i < len; i++) {
   const li = document.createElement('li');
   li.className = 'color';
-  li.style.backgroundColor = getRandomColor();
+  li.style.backgroundColor = colors[i];
   colorPalette.appendChild(li);
 }
 
@@ -25,5 +28,3 @@ function getRandomColor() {
   }
   return color;
 }
-
-console.log(getRandomColor());
