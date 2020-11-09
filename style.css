@@ -1,0 +1,26 @@
+#color-palette {
+  display: flex;
+}
+
+.color {
+width: 150px;
+height: 150px;
+margin: 15px;
+border: 1px solid black;
+}
+
+.black {
+  background-color: black;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.red {
+  background-color: red;
+}
+
+.gray {
+  background-color: gray;
+}
