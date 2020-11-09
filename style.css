@@ -1,5 +1,5 @@
 #title {
-    color: red;
+  color: red;
 }
 
 #color-palette {
@@ -8,9 +8,9 @@
   padding: 0;
 }
 
-.color{
-  display: inline-block;
+.color {
   border: 1px solid;
+  display: inline-block;
   margin: 25px;
   padding: 50px;
 }
@@ -29,4 +29,17 @@
 
 .blue {
   background-color: blue;
+}
+
+#pixel-board {
+  width: 750px;
+  background-color: red;
+}
+
+.pixel {
+    background-color: white;
+    border: 1px solid;
+    display: inline-block;
+    padding: 65px;
+    margin: 0px;
 }
