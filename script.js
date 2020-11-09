@@ -20,5 +20,56 @@ createPixels();
 
 window.onload = function () {
     document.querySelectorAll('.color')[0].classList.add('selected');
-    
+    document.querySelectorAll('.color')[1].classList.remove('selected');
+    document.querySelectorAll('.color')[2].classList.remove('selected');
+    document.querySelectorAll('.color')[3].classList.remove('selected');   
 }
+
+document.querySelectorAll('.color')[0].addEventListener('click', function eventColorClick1 () {    
+    for (let i = 0; i < document.querySelectorAll('.color').length; i+=1) {
+        if (i !== 0) {
+            document.querySelectorAll('.color')[i].classList.remove('selected');
+        }
+        if (document.querySelectorAll('.color')[0].classList.contains('selected')) {
+        } else {
+            document.querySelectorAll('.color')[0].classList.add('selected');
+        }            
+    }    
+});
+
+document.querySelectorAll('.color')[1].addEventListener('click', function eventColorClick2 () {    
+    for (let i = 0; i < document.querySelectorAll('.color').length; i+=1) {
+        if (i !== 1) {
+            document.querySelectorAll('.color')[i].classList.remove('selected');
+        }
+        if (document.querySelectorAll('.color')[1].classList.contains('selected')) {
+        } else {
+            document.querySelectorAll('.color')[1].classList.add('selected');
+        }            
+    }    
+});
+
+document.querySelectorAll('.color')[2].addEventListener('click', function eventColorClick3 () {    
+    for (let i = 0; i < document.querySelectorAll('.color').length; i+=1) {
+        if (i !== 2) {
+            document.querySelectorAll('.color')[i].classList.remove('selected');
+        }
+        if (document.querySelectorAll('.color')[2].classList.contains('selected')) {
+        } else {
+            document.querySelectorAll('.color')[2].classList.add('selected');
+        }            
+    }    
+});
+
+document.querySelectorAll('.color')[3].addEventListener('click', function eventColorClick4 () {    
+    for (let i = 0; i < document.querySelectorAll('.color').length; i+=1) {
+        if (i !== 3) {
+            document.querySelectorAll('.color')[i].classList.remove('selected');
+        }
+        if (document.querySelectorAll('.color')[3].classList.contains('selected')) {
+        } else {
+            document.querySelectorAll('.color')[3].classList.add('selected');
+        }            
+    }    
+});
+   
