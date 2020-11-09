@@ -12,6 +12,9 @@
 #color-palette td{
     border: 1px solid black;
     text-align: center;
-    width: 50px;
+    width: 100px;
     height: 50px;
+    font-family: 'Sedgwick Ave Display', cursive;
+    letter-spacing: 4px;
+    
 }
