@@ -1,64 +1,92 @@
-let color = ['black',corXablau(),corXablau(),corXablau()];
-let palet = document.querySelectorAll('.color');
-let colorPixel = document.querySelectorAll('.pixel');
-let clear = document.querySelector('#clear-board');
-let paintingAmount = document.querySelector('#generate-board')
+window.onload = function() {
+    let colorBlack = document.getElementsByClassName("black")[0];
+    let colorRed = document.getElementsByClassName("red")[0];
+    let colorBlue = document.getElementsByClassName("blue")[0];
+    let colorGreen = document.getElementsByClassName("green")[0];
+    let pixel = document.querySelectorAll(".pixel");
+    let buttonClear = document.querySelector(".limpando-quadro");
+    let buttonSize = document.querySelector(".aumentando-quadro");
+    let inputNumber = document.querySelector(".input1");
+    let mouseColor = "black";
+  
+  
+  
+    for (let i = 0; i < pixel.length; i++){
+      pixel[i].addEventListener("click", function() {
+        pixel[i].style.backgroundColor = mouseColor})
+    };
+        
 
-
-function corXablau(){
-    let xablau = `0123456789ABCDEF`;
-    let meDePapai = `#`
-    for (var a = 0; a < 6; a++){
-        meDePapai += xablau [Math.floor(Math.random()*16)];
+    function anyColor(color) {
+      mouseColor = color;
     }
-    return meDePapai;
-}
-corXablau()
-
-
-for(let a = 0; a < color.length; a+=1){
-    palet[a].style.backgroundColor = color[a];
-    palet[a].addEventListener('click', function(){
-        let selected = document.getElementsByClassName('selected');
-        selected[0].classList.remove('selected');
-        let clickColor = palet[a].style.backgroundColor;
-        sessionStorage.setItem('Escolha', clickColor);
-        palet[a].classList.add('selected');
-    })
-}
-
-for(let a = 0; a < colorPixel.length; a+=1){
-    colorPixel[a].addEventListener('click',function(){
-        colorPixel[a].style.backgroundColor = sessionStorage.getItem('Escolha')
-    })
-}
-
-clear.addEventListener('click', function(){
-    for(let a = 0; a < colorPixel.length; a+=1){
-        colorPixel[a].style.backgroundColor = 'white'
+  
+    colorBlack.addEventListener("click",() => {
+      anyColor("black");
+      for (let i = 0; i < document.querySelectorAll(".color").length; i++) {
+        document.querySelectorAll(".color")[i].classList.remove("selected");
+      }
+      colorBlack.classList.add("selected");
+      })
+  
+    colorRed.addEventListener("click", () => {
+      anyColor(document.getElementsByClassName("red")[0].style.backgroundColor);
+      for (let i = 0; i < document.querySelectorAll(".color").length; i++) {
+        document.querySelectorAll(".color")[i].classList.remove("selected");
+      }
+      colorRed.classList.add("selected");
+    });
+  
+    colorBlue.addEventListener("click",() => {
+      anyColor(document.getElementsByClassName("blue")[0].style.backgroundColor)
+      for (let i = 0; i < document.querySelectorAll(".color").length; i++) {
+        document.querySelectorAll(".color")[i].classList.remove("selected");
+      }
+      colorBlue.classList.add("selected");
+    });
+  
+    colorGreen.addEventListener("click", () => {
+      anyColor(document.getElementsByClassName("green")[0].style.backgroundColor);
+      for (let i = 0; i < document.querySelectorAll(".color").length; i++) {
+        document.querySelectorAll(".color")[i].classList.remove("selected");
+      }
+      colorGreen.classList.add("selected");
+    });
+  
+    function clearBoard() {
+      for (let i = 0; i < document.querySelectorAll(".pixel").length; i++){
+        document.querySelectorAll(".pixel")[i].style.backgroundColor = "white";
+      }
     }
-})
-
-paintingAmount.addEventListener('click', function(){
-    let number = document.querySelector('#board-size').value;
-    document.querySelectorAll('.linha').forEach(e => e.remove());
-    if(number<5){
-        number = 5;
+    buttonClear.addEventListener("click", clearBoard);
+  
+    function resizeBoard() {
+      document.getElementsByClassName("body-pixel")[0].remove();
+      let tb = document.createElement("tbody")
+      tb.classList.add("body-pixel");
+      document.getElementById("pixel-board").appendChild(tb);
+      resizeLines();
+      resizeColums();
+      let pixel1 = document.querySelectorAll(".pixel");
+      for (let i = 0; i < pixel1.length; i++){
+        pixel1[i].addEventListener("click", function() {
+          pixel1[i].style.backgroundColor = mouseColor})
+      };
+    };
+    
+    resizeBoard(inputNumber.value = "5");
+  
+    function resizeLines () {
+      if(parseInt(inputNumber.value) < 5) {
+        inputNumber.value = "5";
+        lines();
+      }
+      else if(parseInt(inputNumber.value) > 50) {
+        inputNumber.value = "50";
+        lines();
+      } else{
+        lines();
+      }
     }
-    else if(number > 50){
-        number = 50;
-    }
-    for(let a = 0;a < number; a++){
-        let createDiv = document.createElement('div');
-        createDiv.className = "linha";
-        document.querySelector('#pixel-board').append(createDiv);
-        for (let b = 0; b < number; b++){
-            let createDiv2 = document.createElement('div');
-            createDiv2.className = 'pixel';
-            createDiv2.addEventListener('click', function(){
-                createDiv2.style.backgroundColor = sessionStorage.getItem('Escolha');
-            })
-            document.getElementsByClassName('linha')[a].appendChild(createDiv2)
-        }
-    }
-})
+  
+  

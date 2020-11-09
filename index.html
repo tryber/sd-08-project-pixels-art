@@ -1,58 +1,32 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paleta de Cores</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="text/javascript" src="script.js"></script>
 </head>
 <body>
-    <h1 id="title">Paleta de Cores</h1> 
-    <section id="color-palette">
-        <div class="color selected" style="background-color: black;"></div>
-        <div class="color"></div>
-        <div class="color"></div>
-        <div class="color "></div>
-    </section>
-    <div id='pixel-board'>
-        <div class="linha">
-            <div class='pixel'></div>
-            <div class='pixel'></div>
-            <div class='pixel'></div>
-            <div class='pixel'></div>
-            <div class='pixel'></div>
-        </div>
-        <div class="linha">
-            <div class='pixel'></div>
-            <div class='pixel'></div>
-            <div class='pixel'></div>
-            <div class='pixel'></div>
-            <div class='pixel'></div>
-        </div>
-        <div class="linha">
-            <div class='pixel'></div>
-            <div class='pixel'></div>
-            <div class='pixel'></div>
-            <div class='pixel'></div>
-            <div class='pixel'></div>
-        </div>
-        <div class="linha">
-            <div class='pixel'></div>
-            <div class='pixel'></div>
-            <div class='pixel'></div>
-            <div class='pixel'></div>
-            <div class='pixel'></div>
-        </div>
-        <div class="linha">
-            <div class='pixel'></div>
-            <div class='pixel'></div>
-            <div class='pixel'></div>
-            <div class='pixel'></div>
-            <div class='pixel'></div>
-    </div>
-    <button id="clear-board">Limpar Tudo</button>
-    <input id='board-size' type="number">
-    <button id="generate-board">Quantidade de Quadros</button>
-    <script src="script.js"></script>
+  <h1 id="title">Paleta de Cores</h1>
+  <table>
+    <tbody>
+      <tr id="color-palette">
+        <td class="color black selected"></td>
+        <td class="color red"></td>
+        <td class="color blue"></td>
+        <td class="color green"></td>
+      </tr>
+    </tbody>
+  </table>
+  <table id="pixel-board">
+    <tbody class="body-pixel"></tbody>
+  </table>
+  <button id="clear-board" class="limpando-quadro">Limpar Quadro</button>
+  <label>Tamanho do quadro</label>
+  <input id="board-size" class="input1">
+  <button id="generate-board" class="aumentando-quadro">Gerar Quadro</button>
+  
 </body>
 </html>
