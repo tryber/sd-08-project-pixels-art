@@ -1,6 +1,6 @@
 window.onload = function () {
- let colorSelect = document.querySelector('.color');
- colorSelect.className = 'color selected';   
+ let classColorSelect = document.querySelector('.color');
+ classColorSelect.className = 'color selected';   
     
 }
     
@@ -10,16 +10,24 @@ window.onload = function () {
  
     function setColors() {
         let colorPallete = document.querySelectorAll('.color');
-        for (let index = 0; index < colorPallete.length; index++) {
+        for (let index = 0; index < colorPallete.length; index+= 1) {
             
             colorPallete[index].style.backgroundColor = colorAvaliable[index];
         }
-        
     }
     setColors();
 
-
-        // let firstColor = document.getElementsByClassName('color');
-        
+    function setClassColor() {
+        let colorPallete = document.querySelectorAll('.color');
+        for (let index = 0; index < colorPallete.length; index+= 1) {
+            colorPallete[index].addEventListener('click', function(changeClass) {
+                let classInSelected = document.querySelector('.color.selected');
+                classInSelected.className = 'color';
+                changeClass.target.className = 'color selected';
+              })
+        }
+    }
+    setClassColor();
+     
         
         
