@@ -20,3 +20,6 @@
     margin: 0px;
     padding: 0px;
 }
+.linha {
+    display: flex;
+}
