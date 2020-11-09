@@ -72,6 +72,10 @@ function generateNewBoard() {
 
   VQV.addEventListener('click', function(){
     let input = document.getElementById("board-size").value;
+    if (input == "") {
+      alert("Board inválido!");
+    }
+
     if (input < 5) {
       input = 5;
     }
@@ -79,10 +83,7 @@ function generateNewBoard() {
       input = 50;
     }
 
-    if (input == "") {
-      alert("Board inválido!");
-    }
-    else {
+    if (input >= 5 || input <= 50) {
       const myNode = document.getElementById("pixel-board");
       while (myNode.firstChild) {
         myNode.removeChild(myNode.lastChild);
