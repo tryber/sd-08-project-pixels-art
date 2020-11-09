@@ -1,5 +1,5 @@
 // Sets reference to color palette div
-const palette = document.querySelector('.palette')
+const palette = document.querySelector('.palette');
 
 // Sets reference select color picker divs
 const blackColor = document.querySelector('.black');
@@ -37,11 +37,10 @@ function parseSelection() {
 
 function selectColor(event) {
   const eventTarget = event.target;
-  if (eventTarget.className != 'palette') {
+  if (eventTarget.className !== 'palette') {
     removeSelection();
-    eventTarget.classList.add('selected')
-    console.log(`${eventTarget} selected!`);
+    eventTarget.classList.add('selected');
   }
 }
 
-palette.addEventListener('click', selectColor)
+palette.addEventListener('click', selectColor);
