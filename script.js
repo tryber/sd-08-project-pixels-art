@@ -21,14 +21,14 @@ function createPixels() {
 createPixels()
 
 //Definir a cor selecionada
-function selectColor(){
-    let colorPalette = document.getElementById("color-pallete")
-    let selected = document.getElementsByClassName("color selected")
-    function colorir (event) {
-        selected.className = "color"
-        event.target.className = "color selected"
-    }
-    colorPalette.addEventListener("click", colorir)
-}
+// function selectColor(){
+//     let colorPalette = document.getElementById("color-pallete")
+//     let selected = document.getElementsByClassName("color selected")
+//     function colorir (event) {
+//         selected.className = "color"
+//         event.target.className = "color selected"
+//     }
+//     colorPalette.addEventListener("click", colorir)
+// }
 
-selectColor()
+// selectColor()
