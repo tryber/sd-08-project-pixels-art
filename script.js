@@ -37,7 +37,7 @@ const pixelBoardSize = document.getElementById('board-size');
 
 function createPixelBoard(size) {
   const pixelBoard = document.createElement('div');
-  pixelBoard.className = 'pixel-board';
+  pixelBoard.id = 'pixel-board';
   for(let i = 0; i < size; i++) {
     const pixelRow = createPixelRow(size);
     pixelBoard.appendChild(pixelRow);
