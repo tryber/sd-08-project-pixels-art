@@ -1,0 +1,35 @@
+.color {
+  border: 1px solid black;
+  display: inline-block;
+  height: 40px;
+  margin: 5px;
+  width: 40px;
+}
+
+.preto {
+  background-color: black;
+}
+
+.vermelho {
+  background-color: red;
+}
+
+.azul {
+  background-color: blue;
+}
+
+.verde {
+  background-color: green;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  height: 40px;
+  padding: 0;
+  width: 40px;
+}
+
+.tabela {
+  border-spacing: 0;
+}
