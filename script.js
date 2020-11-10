@@ -16,3 +16,13 @@ function pintaPaleta() {
     cores[3].style.backgroundColor = 'green';
 }
 pintaPaleta();
+
+function criaQuadro() {
+    let quadro = document.getElementById('pixel-board');
+    for (let index = 0; index < 25; index+=1) {
+        let pixels = document.createElement('div');
+        pixels.className = 'pixel';
+        quadro.appendChild(pixels);
+    }
+}
+criaQuadro();
