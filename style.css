@@ -6,7 +6,7 @@ body {
   display: flex;
   flex-direction: row;
   gap: 1px;
-  width: 200px;
+	width: 200px;
 	height: 100px;
 	margin-left: 50px;
 }
@@ -33,12 +33,6 @@ table {
 	padding: 0px;
 	width: 40px;
 	height: 40px;
-}
-
-table tr td {
-	background-color: red;
-	color: red;
-
 }
 
 #clear-board {
