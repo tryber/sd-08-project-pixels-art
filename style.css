@@ -50,7 +50,7 @@ input {
   display: flex;
   height: fit-content;
   justify-content: center;
-  margin-top: 20px;
+  margin: 20px auto 0;
   width: fit-content;
 }
 

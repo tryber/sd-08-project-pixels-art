@@ -1,3 +1,7 @@
+window.onload = function () {
+  generateBoardColumns(5);
+};
+
 const board = document.querySelector('#pixel-board');
 
 let boardSide = 5;
@@ -31,8 +35,6 @@ const generateBoardColumns = (n) => {
     generateBoardPixels(n);
   }
 };
-
-generateBoardColumns(5);
 
 const removeBoard = () => {
   const oldBoard = board.children;
@@ -127,9 +129,10 @@ const boardColors = (event) => {
 board.addEventListener('click', boardColors);
 
 const button = document.querySelector('#clear-board');
-const pixel = document.querySelectorAll('.pixel');
 
 const clearBoard = () => {
+  const pixel = document.querySelectorAll('.pixel');
+
   for (let i = 0; i < pixel.length; i += 1) {
     pixel[i].removeAttribute('style');
   }
