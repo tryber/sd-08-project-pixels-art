@@ -44,46 +44,37 @@ window.onload = function () {
    squarePixels();
 
 
-    // Eventos do Projeto (Acessar elemento html fruto de um evento)
-
     // No seu uso mais comum, addEventListener recebe dois parâmetros:
     // 1) O evento que estamos esperando escutar: Exemplos: click, change, mouseover etc.
     // 2) A função (criada por você) que será executada quando o evento acontecer.
 
-    // Definindo Classe SELECTED
-    let colorPallete = document.querySelectorAll('.color');
-    for (let index = 0; index < colorPallete.length; index+= 1) {
-        colorPallete[index].addEventListener('click', function(changeClass) {
-            let classInSelected = document.querySelector('.color.selected');
+
+    // Eventos do PROJETO (via classList)
+    // link.: https://gomakethings.com/attaching-multiple-elements-to-a-single-event-listener-in-vanilla-js/
+    document.addEventListener('click', function (eventClick) {
+
+        // Definindo Classe SELECTED (via classList)   
+        if (eventClick.target.classList.contains('color')){
+            // Do something...
+            let classInSelected = document.querySelector('.selected');
             classInSelected.className = 'color';
-            changeClass.target.className = 'color selected';
-          })
-    }
-
+            eventClick.target.className = 'color selected';
+        }
     
-    //Pintado quadrados da Cor;
-    // let colorSelect = document.querySelector('.selected');
-    // const squarePaint = document.querySelectorAll('.pixel')
-    // document.addEventListener('click', function () {
-    //     for (let index = 0; index < squarePaint.length; index += 1) {
-    //         squarePaint[index].style.background = 'white';
-    //     }
-    // });
+        // Aplicando Cor selecionada nos quadrados desejados   
+        if (eventClick.target.classList.contains('pixel')){
+            // Do something...
+            let paintColor = document.querySelector('.selected').style.backgroundColor;
+            eventClick.target.style.backgroundColor = paintColor;
+        }
 
+        // Limpa o quadro com a cor branca
+        if (eventClick.target.classList.contains('buttonClear')){
+            // Do something...
+            const divPixel = document.getElementsByClassName('pixel');
+            for (let index = 0; index < divPixel.length; index += 1) {
+            divPixel[index].style.background = 'white';
+            }
+        }
+    }, false);
 
-    // const squareSelectionColor = document.querySelectorAll('.color-palette');
-    // const squarePaint = document.querySelectorAll('.pixel')
-    // let colorSelect = document.querySelector('.selected');
-    // function setColorEachSquare() {
-    //     squarePaint.style.backgroundColor =  'black';
-
-    // }
-
-
-    // Limpa o quadro
-    const divPixel = document.getElementsByClassName('pixel');
-    document.addEventListener('click', function () {
-    for (let index = 0; index < divPixel.length; index += 1) {
-        divPixel[index].style.background = 'white';
-    }
-});
