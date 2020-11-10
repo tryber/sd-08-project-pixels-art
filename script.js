@@ -70,7 +70,7 @@ window.onload = function(event){
     function generateBoard(){
 
             let num = boardSize();
-            if(num == "" | num <= 0){ 
+            if(num == "" | num < 5 | num > 50){ 
                 alert("Board inválido!");
                 return;
             }else{
