@@ -78,7 +78,7 @@ ul {
   height: 40px;
   max-width: 40px;
   max-height: 40px;
-  border: 1px groove black;
+  border: 1px solid black;
   background-color: white;
   float: right;
 }

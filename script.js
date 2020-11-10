@@ -3,9 +3,33 @@ window.onload = function () {
     'color selected';
 };
 
-function tamanhoQuadro () {
-let inputValue = document.getElementById('board-size').value;
+function clickGenerator() {
+  btnGen.addEventListener('click', inputCheck());
 }
+
+function quadroPixels() {
+  let btnGen = document.getElementById('generate-board');
+  btnGen.addEventListener('click', function () {
+    let inputValue = document.getElementById('board-size').value;
+
+    if (inputValue === '') {
+      alert('Board inválido!');
+    } else if (inputValue > 50) {
+      inputValue === 50;
+    } else if (inputValue < 5) {
+      inputValue === 5;
+    } else {
+      const numQuadrados = inputValue;
+      const squareContainer = document.getElementById('pixel-board');
+      for (let i = 0; i < numQuadrados; i += 1) {
+        let linhaSquares = document.createElement('div');
+        linhaSquares.className = 'pixel';
+        squareContainer.appendChild(linhaSquares);
+      }
+    }
+  });
+}
+quadroPixels();
 
 function randomColor() {
   let colorRGB = `rgb(${Math.floor(Math.random() * 255)}, ${Math.floor(
@@ -44,24 +68,15 @@ function selectedColor() {
 }
 selectedColor();
 
-function pintaColor () {
-let quadroPixels = document.getElementById('pixel-board');
-quadroPixels.addEventListener('click', function () {
-let selectedColor = document.querySelector('.selected').style.backgroundColor;
-event.target.style.backgroundColor = selectedColor;
-})
+function pintaColor() {
+  let quadroPixels = document.getElementById('pixel-board');
+  quadroPixels.addEventListener('click', function () {
+    let selectedColor = document.querySelector('.selected').style
+      .backgroundColor;
+    event.target.style.backgroundColor = selectedColor;
+  });
 }
-pintaColor()
-function quadroPixels() {
-  const numQuadrados = 25;
-  const squareContainer = document.getElementById('pixel-board');
-  for (let i = 0; i < numQuadrados; i += 1) {
-    let linhaSquares = document.createElement('div');
-    linhaSquares.className = 'pixel';
-    squareContainer.appendChild(linhaSquares);
-  }
-}
-quadroPixels();
+pintaColor();
 
 function botaoLimpar() {
   let buttonContainter = document.getElementById('button-container');
