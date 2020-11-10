@@ -70,15 +70,23 @@ const colorList = document.querySelectorAll(".color");
 
 const black = document.querySelector(".black");
 black.classList.add("selected");
-
-const red = document.querySelector(".red");
-const blue = document.querySelector(".blue");
-const green = document.querySelector(".green");
-
 black.style.backgroundColor = "black";
-red.style.backgroundColor = "red";
-blue.style.backgroundColor = "blue";
-green.style.backgroundColor = "green";
+
+const second = document.querySelector(".second");
+const third = document.querySelector(".third");
+const fourth = document.querySelector(".fourth");
+
+let handleRandomColors = () => {
+  const red = Math.floor(Math.random() * 255);
+  const blue = Math.floor(Math.random() * 255);
+  const green = Math.floor(Math.random() * 255);
+
+  return `rgb(${red},${green},${blue})`;
+};
+
+second.style.backgroundColor = handleRandomColors();
+third.style.backgroundColor = handleRandomColors();
+fourth.style.backgroundColor = handleRandomColors();
 
 let removeSelectedClass = () => {
   for (let i = 0; i < colorList.length; i += 1) {
