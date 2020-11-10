@@ -1,10 +1,10 @@
-//função para limpar os pixels
+// //função para limpar os pixels
 function limpar() {
   const botao = document.querySelector("#clear-board");
   const tabela = document.querySelectorAll(".pixel");
   botao.addEventListener("click", changeColor);
   function changeColor() {
-    for (let i in tabela) {
+    for (let i = 0; i < tabela.length; i++) {
       tabela[i].style.backgroundColor = "rgb(255,255,255)";
     }
   }
