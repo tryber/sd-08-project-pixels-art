@@ -1,4 +1,4 @@
-let color = document.querySelectorAll('.color');
+let color = document.querySelectorAll(".color");
 
 function createSquares() {
   let squares = document.getElementById("pixel-board");
@@ -16,24 +16,35 @@ function createSquares() {
 }
 createSquares();
 
-addEventListener('click', function (evt){
-  
-  if (evt.target.className == 'color') {
-    for (let i = 0; i < color.length; i+=1) {
-      color[i].className = 'color';
+addEventListener("click", function (evt) {
+  if (evt.target.className == "color") {
+    for (let i = 0; i < color.length; i += 1) {
+      color[i].className = "color";
     }
-    evt.target.className = 'color selected';
+    evt.target.className = "color selected";
   }
 });
 
-addEventListener('click', function(evt) {
-  for (let i = 0; i < color.length; i+=1){
-    if(color[i].className == 'color selected' && evt.target.className == 'pixel'){
-      evt.target.style.backgroundColor = getComputedStyle(color[i]).backgroundColor;
+addEventListener("click", function (evt) {
+  for (let i = 0; i < color.length; i += 1) {
+    if (
+      color[i].className == "color selected" &&
+      evt.target.className == "pixel"
+    ) {
+      evt.target.style.backgroundColor = getComputedStyle(
+        color[i]
+      ).backgroundColor;
     }
   }
 });
 
-
+addEventListener("click", function (evt) {
+  let pixel = document.querySelectorAll(".pixel")  
+  if (evt.target.id == "clear-board") {    
+    for (let i = 0; i < pixel.length; i += 1) {
+      pixel[i].style.backgroundColor = "white"
+      }
+    }
+  })
 
 
