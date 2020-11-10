@@ -5,9 +5,22 @@ window.onload = function () {
   colorOptions[3].style.backgroundColor = "yellow";
 };
 
+let pixelBox = document.getElementById("pixel-board");
+
+function initialGrid() {
+  for (let index = 0; index < 25; index += 1) {
+    let pixelCreate = document.createElement("div");
+    pixelCreate.className = "pixel";
+    pixelBox.appendChild(pixelCreate);
+  }
+  pixelBox.style.gridTemplateColumns = "repeat(5, 40px)";
+  pixelBox.style.gridTemplateRows = "repeat(5, 40px)";
+}
+initialGrid();
+
+
 let generateButton = document.getElementById("generate-board");
 let inputNumber = document.getElementById("board-size");
-let pixelBox = document.getElementById("pixel-board");
 
 generateButton.addEventListener("click", function () {
   createPixelBox();
@@ -25,7 +38,7 @@ function createPixelBox() {
     for (let index = 0; index < gridSize * gridSize; index += 1) {
       let pixelCreate = document.createElement("div");
       pixelCreate.className = "pixel";
-      document.getElementById("pixel-board").appendChild(pixelCreate);
+      pixelBox.appendChild(pixelCreate);
     }
     pixelBox.style.gridTemplateColumns = "repeat(" + gridSize + ", 40px)";
     pixelBox.style.gridTemplateRows = "repeat(" + gridSize + ", 40px)";
