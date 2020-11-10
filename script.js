@@ -13,7 +13,7 @@ const inputValue = () => {
   }
 };
 
-const generateBoardColumns = (n) => {
+const generateBoardPixels = (n) => {
   for (let i = 0; i < n; i += 1) {
     const div = document.createElement('div');
     div.className = 'pixel';
@@ -22,18 +22,17 @@ const generateBoardColumns = (n) => {
   }
 };
 
-const generateBoardLines = (n) => {
+const generateBoardColumns = (n) => {
   for (let i = 0; i < n; i += 1) {
     const div = document.createElement('div');
-    div.className = 'board-lines';
 
     board.appendChild(div);
 
-    generateBoardColumns(n);
+    generateBoardPixels(n);
   }
 };
 
-generateBoardLines(5);
+generateBoardColumns(5);
 
 const removeBoard = () => {
   const oldBoard = board.children;
