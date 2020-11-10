@@ -22,12 +22,11 @@ function Randomize() {
   if (newColor.length < 7) {
     Randomize();
   }
-  console.log(newColor);
   return newColor;
 }
 
 function MakeBoard() {
-  let size = Math.min(Math.max(5, dim), 50);
+  const size = Math.min(Math.max(5, dim), 50);
   dim = size;
 
   while (area.firstChild) {
@@ -60,10 +59,13 @@ window.onload = function () {
 };
 
 function Verify() {
-  if(!document.getElementById('board-size').value) {
+  if (!document.getElementById('board-size').value) {
     alert('Board inválido!');
+    return;
   }
+  dim = document.getElementById('board-size').value;
+  MakeBoard();
 }
 
 document.getElementById('generate-board').addEventListener('click', Verify);
-document.getElementById('clear-board').addEventListener('click', Verify);
+document.getElementById('clear-board').addEventListener('click', MakeBoard);
