@@ -12,20 +12,23 @@ for (let color = 0; color < colors.length; color += 1) {
 }
 
 // Cria o quadro de pixels
-const boardSize = 5;
-const pixelBoard = document.getElementById('pixel-board');
-for (let row = 0; row < boardSize; row += 1) {
-  const pixelRow = document.createElement('div');
-  pixelRow.className = 'pixel-row';
-  pixelBoard.appendChild(pixelRow);
-  const pixelCells = document.getElementsByClassName('pixel-row');
-  for (let cell = 0; cell < boardSize; cell += 1) {
-    const pixelCellContainer = pixelCells[row];
-    const pixelCell = document.createElement('div');
-    pixelCell.className = 'pixel';
-    pixelCellContainer.appendChild(pixelCell);
+function generateBoard(n) {
+  const boardSize = n;
+  const pixelBoard = document.getElementById('pixel-board');
+  for (let row = 0; row < boardSize; row += 1) {
+    const pixelRow = document.createElement('div');
+    pixelRow.className = 'pixel-row';
+    pixelBoard.appendChild(pixelRow);
+    const pixelCells = document.getElementsByClassName('pixel-row');
+    for (let cell = 0; cell < boardSize; cell += 1) {
+      const pixelCellContainer = pixelCells[row];
+      const pixelCell = document.createElement('div');
+      pixelCell.className = 'pixel';
+      pixelCellContainer.appendChild(pixelCell);
+    }
   }
 }
+generateBoard(5)
 
 // Eventos
 document.addEventListener('click', function (event) {
@@ -34,19 +37,27 @@ document.addEventListener('click', function (event) {
     const selectedColor = document.querySelector('.selected');
     selectedColor.className = 'color';
     event.target.className = 'color selected';
-  }
+  };
   // Pinta o pixel com a cor selecionada
   if (event.target.classList.contains('pixel')) {
     const applyColor = document.querySelector('.selected').style.background;
     event.target.style.background = applyColor;
-  }
+  };
   // Limpa o quadro
   if (event.target.classList.contains('btn-clear')) {
     const pixel = document.getElementsByClassName('pixel');
     for (let index = 0; index < pixel.length; index += 1) {
       pixel[index].style.background = 'white';
     }
-  }
+  };
+  // Gera um novo quadro
+  if (event.target.classList.contains('generate-board')) {
+    let numberOfPixels = document.getElementById('board-size').value;
+    const boardSize = numberOfPixels === '' ? alert("Board inválido!") : numberOfPixels < 5 ? numberOfPixels = 5 : numberOfPixels > 50 ? numberOfPixels = 50 : numberOfPixels;
+    const board = document.getElementById('pixel-board');
+    board.innerHTML = ''; // Ideia vista no projeto da Bianca Caetano
+    generateBoard(numberOfPixels);
+  };
 });
 
 
