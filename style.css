@@ -4,6 +4,7 @@
     height: 40px;
     display: inline-block;
     
+    
 }
 #color1{
     background-color: black;
@@ -34,4 +35,9 @@
     border: 1px black solid;
     box-sizing: border-box;
         
+}
+
+#color-palette{
+    
+    width: 180px;
 }
