@@ -80,7 +80,7 @@ pixelBoard(valor);
       pixelBoard(verfNum);
     } else if (verfNum >= 5 && verfNum <= 50) {
       pixelBoard(verfNum);
-    } else if (Number.isInteger(verfNum) == false) {
+    } else if (typeof verfNum !== 'number') {
       alert('"Aceita apenas números"');
     };
   });
