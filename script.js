@@ -16,11 +16,12 @@ function criaCores(){
 
 criaCores();
 
-function criaPixels(numeroDePixels){
-  const board = document.getElementById('pixel-board');
-  for (let index = 0; index < Math.pow(numeroDePixels, 2); index += 1){
-    let pixel = document.createElement('div');
-    pixel.className = 'pixel';       
+const board = document.getElementById('pixel-board');
+
+function criaPixels(numeroDePixels){  
+  for (let index = 0; index < Math.pow(numeroDePixels, 2); index += 1){ 
+    const pixel = document.createElement('div');
+    pixel.className = 'pixel';          
     board.appendChild(pixel);
   }
   board.style.maxWidth = (numeroDePixels * 40) + 'px';
@@ -68,15 +69,19 @@ function limpaQuadro(){
 limpaQuadro();
 
 
-/*
-function quadroUsuario(){
+
+function quadroUsuario(){  
 let vqv = document.getElementById('generate-board');
 vqv.addEventListener('click', criaQuadro);
 function criaQuadro(){
+  removePixels();
   let input = document.getElementById('board-size');
-  let value = input.value;
+  let value = parseInt(input.value);
   criaPixels(value);
 }
 }
 quadroUsuario();
-*/
+
+function removePixels(){
+  board.innerHTML = '';
+}
