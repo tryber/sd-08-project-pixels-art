@@ -1,5 +1,5 @@
 window.onload = function () {
-    // Gera a patela
+    // Gera a paleta
 
     for (let index = 0; index < 4; index += 1) {
         let pixel = document.createElement("div");
@@ -62,8 +62,10 @@ window.onload = function () {
             squad.style.backgroundColor = currentSelected.style.backgroundColor;
         })
     })
-
- 
+    // Botão que limpa o quadro
+    document.querySelector("button").addEventListener("click", function () {
+        for (let index = 0; index < 25; index += 1) {
+            document.querySelectorAll(".pixel")[index].style.backgroundColor = "rgb(255, 255, 255)";
+        }
+    })
 }
-
-

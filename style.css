@@ -1,6 +1,7 @@
 body {
     margin: 0;
     background-color: #3d3d3d;
+    text-align: center;
 }
 
 .palette, .board {
@@ -17,12 +18,10 @@ body {
 
 .line-pixel {
     display: block;
-    margin: 1px;
-    padding: 0;
 }
 
 #color-palette{
-    background-color: white;
+    background-color: rgb(184, 183, 183);
     border-radius: 8px;
     margin-bottom: 30px;
 }
@@ -31,8 +30,8 @@ body {
     border: 1px solid black;
     border-radius: 4px;
     display: inline-block;
-    width: 38px;
-    height: 38px;
+    width: 40px;
+    height: 40px;
     margin: 3px;
 }
 
@@ -41,6 +40,10 @@ body {
 }
 
 #pixel-board {
-    background-color: white;
+    background-color: rgb(184, 183, 183);
     border-radius: 8px;
+}
+
+#clear-board {
+    margin-bottom: 30px;
 }
