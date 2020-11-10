@@ -15,17 +15,6 @@ window.onload = function () {
 };
 
 let pixelBox = document.getElementById("pixel-board");
-function initialGrid() {
-  for (let index = 0; index < 25; index += 1) {
-    let pixelCreate = document.createElement("div");
-    pixelCreate.className = "pixel";
-    pixelBox.appendChild(pixelCreate);
-  }
-  pixelBox.style.gridTemplateColumns = "repeat(5, 40px)";
-  pixelBox.style.gridTemplateRows = "repeat(5, 40px)";
-}
-initialGrid();
-
 function removeGrid() {
   let pixelCounter = document.querySelectorAll(".pixel");
   for (let index = 0; index < pixelCounter.length; index += 1) {
@@ -65,6 +54,8 @@ function createPixelBox() {
     alert("Board inválido!");
   }
 }
+inputNumber.value = 5;
+createPixelBox()
 
 let colorOptions = document.querySelectorAll(".color");
 let selectedColor = "rgb(0,0,0)";
