@@ -22,6 +22,8 @@ for (let i = 1; i <= 25; i++) {
 divColorPalette.addEventListener('click', pegarCor);
 pixelBoard.addEventListener('click', pintarDivis);
 
+let botao = document.getElementById('clear-board');
+botao.addEventListener('click', limparDivs);
 
 let corDaDiv = 'black';
 let divAnterior =document.getElementsByClassName('selected').item(0);
@@ -37,4 +39,13 @@ function pegarCor(event) {
 function pintarDivis(event) {
   const evento = event.target;
   evento.style.backgroundColor = corDaDiv;
+}
+
+function limparDivs (){
+  for(let i = 0; i < 25; i++ ) {
+    let limparDiv = document.getElementsByClassName('pixel');
+    limparDiv[i].style.backgroundColor= 'white';
+   }
+
+
 }
