@@ -22,3 +22,14 @@ document.addEventListener('click', function (event) {
     event.target.style.backgroundColor = pickedColor;
   }
 });
+
+// Req 9
+
+const button = document.querySelector('#clear-board');
+
+button.addEventListener('click', function () {
+  const pixel = document.querySelectorAll('.pixel');
+  for (let i = 0; i < pixel.length; i += 1) {
+    pixel[i].removeAttribute('style');
+  }
+});
