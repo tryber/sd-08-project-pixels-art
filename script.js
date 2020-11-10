@@ -14,8 +14,9 @@ const initColorPalette = () => {
 
 initColorPalette();
 
-const pen = {
+const config = {
   color: "black",
+  size: 5,
 };
 
 document.getElementById("color-palette").addEventListener("click", () => {
@@ -24,13 +25,13 @@ document.getElementById("color-palette").addEventListener("click", () => {
       element.classList.remove("selected");
     });
     event.target.classList.add("selected");
-    pen.color = event.target.style.backgroundColor;
+    config.color = event.target.style.backgroundColor;
   }
 });
 
 document.getElementById("pixel-board").addEventListener("click", () => {
   if (event.target.classList.contains("pixel")) {
-    event.target.style.backgroundColor = pen.color;
+    event.target.style.backgroundColor = config.color;
   }
   //console.log(event.target);
 });
@@ -46,6 +47,25 @@ document.getElementById("generate-board").addEventListener("click", () => {
   //alert("oi!");
   if (size < 5 || size > 50) {
     alert("Board inválido!");
+  } else {
+    boardBuilder(size);
   }
-  console.log(document.getElementById("board-size").value);
+  document.getElementById("board-size").value = config.size;
+  //console.log(document.getElementById("board-size").value);
 });
+
+const boardBuilder = (size = 5) => {
+  const board = document.getElementById("pixel-board");
+  board.innerHTML = "";
+  for (let i = 0; i < size; i++) {
+    board.innerHTML += `<div class='pixel-row'>`;
+    for (let j = 0; j < size; j++) {
+      board.innerHTML += `<div class="pixel"></div>`;
+    }
+    board.innerHTML += `<div>`;
+  }
+  document.getElementById("board-size").value = size;
+  config.size = size;
+};
+
+boardBuilder(5);
