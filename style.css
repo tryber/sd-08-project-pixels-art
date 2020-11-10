@@ -1,5 +1,5 @@
 #color-palette {
-    display: flex;
+  display: flex;
 }
 
 .color {
@@ -11,7 +11,6 @@
   display: inline-block;
 }
 
-
 .pixel {
   width: 40px;
   height: 40px;
@@ -19,5 +18,4 @@
   background-color: white;
   border-style: solid;
   display: inline-block;
-
 }
