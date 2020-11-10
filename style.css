@@ -24,3 +24,7 @@ largura e 40 pixels de altura e ser delimitado por uma borda preta de 1 pixel.*/
 #clear-board {
   margin-bottom: 10px;
 }
+
+.selected {
+border: 3px dashed white;
+}

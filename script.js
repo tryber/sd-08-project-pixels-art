@@ -3,7 +3,7 @@ window.onload = function () {
   document.querySelector('.color').className = 'color selected';
 }
 
-// Requisito 10.
+// Requisito 12 - Faça com que as cores da paleta sejam geradas aleatoriamente ao carregar a página.
 function hexaRandom (num){
   let random = Math.floor(Math.random() * num);
   return random;
@@ -47,10 +47,6 @@ pixelBoard();
 // Requisito 07 - Ao clicar em uma das cores da paleta, a cor selecionada é que vai ser usada para preencher os pixels no quadro.
 function selectColor () {
   let filhos = document.getElementById('color-palette').children;
-  // let element1 = document.querySelectorAll('.color')[0];
-  // let element2 = document.querySelectorAll('.color')[1];
-  // let element3 = document.querySelectorAll('.color')[2];
-  // let element4 = document.querySelectorAll('.color')[3];
   let palette = document.querySelector('#color-palette');
   
   palette.addEventListener('click', function(event) {
@@ -61,35 +57,8 @@ function selectColor () {
         filhos[index].className = 'color';
       }
     }
-    // if (event.target.style.backgroundColor === 'black' && event.target.className === 'color') {
-    //   event.target.className = 'color selected';
-    //   element2.className = 'color';
-    //   element3.className = 'color';
-    //   element4.className = 'color';
-    // } else if (event.target.style.backgroundColor === 'blue' && event.target.className === 'color') {
-    //   event.target.className = 'color selected';
-    //   element1.className = 'color';
-    //   element3.className = 'color';
-    //   element4.className = 'color';
-    // } else if (event.target.style.backgroundColor === 'yellow' && event.target.className === 'color') {
-    //   event.target.className = 'color selected';
-    //   element1.className = 'color';
-    //   element2.className = 'color';
-    //   element4.className = 'color';
-    // } else if (event.target.style.backgroundColor === 'green' && event.target.className === 'color') {
-    //   event.target.className = 'color selected';
-    //   element1.className = 'color';
-    //   element2.className = 'color';
-    //   element3.className = 'color';
-    // }
-  });
 
-  // let colorselection = document.querySelectorAll('.color').forEach (function (item) {
-  //   item.addEventListener('click', function (event) {
-  //     event.target.className = 'color selected';
-  //     console.log(item.className);
-  // });
-  // });
+  });
 }
 selectColor();
 
@@ -114,3 +83,8 @@ function clear() {
   });
 }
 clear();
+
+// Requisito 10 - Faça o quadro de pixels ter seu tamanho definido pelo usuário.
+function dinamicPixelBoard() {
+  
+}
