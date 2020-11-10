@@ -1,4 +1,3 @@
-window.onload = function () {
 // Criando divs para as paletas.
 const fragment1 = document.createDocumentFragment();
 for (let index = 0; index < 4; index += 1) {
@@ -6,11 +5,9 @@ for (let index = 0; index < 4; index += 1) {
     divPaleta.setAttribute('class', 'color');
     fragment1.appendChild(divPaleta);
 }
-
 // Selecionando origem e inserindo divs paletas
 const container1 = document.getElementById('color-palette');
 container1.appendChild(fragment1); 
-
 
 // Alterando a cor da paleta 01
 function cor01 () {
@@ -19,6 +16,7 @@ function cor01 () {
 }
 
 cor01();
+
 // Alterando a cor da paleta 02
 function cor02 () {
     const cor02 = document.getElementsByClassName('color')[1].style;
@@ -54,4 +52,5 @@ for (let index = 0; index <= 24; index += 1) {
 const container2 = document.querySelector('#pixel-board');
 container2.appendChild(fragment2);
 
-};
+// Inserindo classe elemento paleta preto
+document.getElementsByClassName('color')[0].setAttribute('class', 'selected'); 
