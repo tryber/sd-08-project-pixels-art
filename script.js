@@ -1,3 +1,7 @@
+window.onload = function() {
+  const black = document.querySelector('#black');
+  black.className = 'selected';
+}
 
 function addTable() {
   const table = document.querySelector('#pixel-board');
