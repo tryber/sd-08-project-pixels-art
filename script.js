@@ -39,9 +39,10 @@ tabela.addEventListener("click", function (event) {
 })
 
 // Botão de limpar
-let pixel = document.querySelectorAll(".pixel");
 let cleanButton = document.querySelector("#clear-board");
 cleanButton.addEventListener("click", function () {
+    let pixel = document.querySelectorAll(".pixel");
+    tabela.style.backgroundColor = 'lightgray';
     for (var i = 0; i < pixel.length; i += 1) {
         pixel[i].style.backgroundColor = "white";
     }
