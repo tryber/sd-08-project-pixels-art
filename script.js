@@ -13,13 +13,12 @@ for (let i = 0; i < corSelecionada.length; i += 1) {
     event.target.classList.add('selected');
   });
 }
-const allPixels = document.querySelectorAll('.pixel');
 
 // Req 8
 document.addEventListener('click', function (event) {
   if (event.target.classList.contains('pixel')) {
-    let cor = document.querySelector('.selected');
-    let pickedColor = window.getComputedStyle(cor, null).getPropertyValue("background-color");
+    const cor = document.querySelector('.selected');
+    const pickedColor = window.getComputedStyle(cor, null).getPropertyValue("background-color");
     event.target.style.backgroundColor = pickedColor;
   }
 });
