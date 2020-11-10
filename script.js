@@ -1,10 +1,10 @@
 window.onload = function () {
     // Gera a patela
 
-    for (let index = 0; index < 5; index += 1) {
+    for (let index = 0; index < 4; index += 1) {
         let pixel = document.createElement("div");
         pixel.className = "color";
-        document.getElementById("color-palete").appendChild(pixel);
+        document.getElementById("color-palette").appendChild(pixel);
     }
     // Adiciona cores nos pixels da patela
 
@@ -27,4 +27,20 @@ window.onload = function () {
         multi -= 1;
         colorArray.splice(randomColor, 1);
     }
+
+    // Add pixels nas linhas
+    let board = document.getElementById("pixel-board");
+    for (let index1 = 0; index1 < 5; index1 += 1) {
+        let line = document.createElement("div");
+        line.className = "line-pixel";
+        board.appendChild(line);
+        for (let index2 = 0; index2 < 5; index2 += 1) {
+            let lineContainer = document.getElementsByClassName("line-pixel");
+            let squad = document.createElement("div");
+            squad.className = "pixel";
+            lineContainer[index1].appendChild(squad);
+        }
+    }
 }
+
+
