@@ -13,18 +13,18 @@ function classSelected() {
   const classColors = document.querySelectorAll('.color');
     // Percorrendo cada cor, e adicionando o evento de click
   for (let index = 0; index < classColors.length; index += 1) {
-      const tagClass = classColors[index];
+    const tagClass = classColors[index];
 
-      tagClass.addEventListener('click', function (event) {
-          for (let i = 0; i < classColors.length; i += 1) {
+    tagClass.addEventListener('click', function (event) {
+        for (let i = 0; i < classColors.length; i += 1) {
                 // Remover classe selected caso ja exista
-              if (classColors[i].classList.contains('selected')) {
-                  classColors[i].classList.remove('selected');
-                }
-              event.target.classList.add('selected');
-            }
-        });
-    }
+            if (classColors[i].classList.contains('selected')) {
+                classColors[i].classList.remove('selected');
+              }
+            event.target.classList.add('selected');
+          }
+      });
+  }
 }
 classSelected();
 
@@ -33,26 +33,26 @@ function changeColor() {
   const classPixel = document.querySelectorAll('.pixel');
 
   for (let index = 0; index < classPixel.length; index += 1) {
-      classPixel[index].addEventListener('click', function (event) {
-          const currentAtual = window.getComputedStyle(document.querySelector('.selected')).backgroundColor;
-          event.target.style.backgroundColor = currentAtual;
-        });
-    }
+    classPixel[index].addEventListener('click', function (event) {
+        const currentAtual = window.getComputedStyle(document.querySelector('.selected')).backgroundColor;
+        event.target.style.backgroundColor = currentAtual;
+      });
+  }
 }
 changeColor();
 
 // Requisito 09
 function clearPixels() {
-  let recoverSection = document.querySelector('#location-button');
+  const recoverSection = document.querySelector('#location-button');
   const button = document.createElement('button');
   button.id = 'clear-board';
   button.innerText = 'Limpar';
   recoverSection.appendChild(button);
   const classPixel = document.querySelectorAll('.pixel');
   button.addEventListener('click', function () {
-      for (let index = 0; index < classPixel.length; index += 1) {
-          classPixel[index].style.backgroundColor = 'white';
-        }
-    });
+    for (let index = 0; index < classPixel.length; index += 1) {
+        classPixel[index].style.backgroundColor = 'white';
+      }
+  });
 }
 clearPixels();
