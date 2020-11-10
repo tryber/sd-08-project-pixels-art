@@ -3,19 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <title>Paleta de Cores</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css"/>
+    <script src="script.js" defer></script>
   </head>
   <body>
     <header>
       <h1 id="title">Paleta de Cores</h1>
     </header>
-    <div id="color-palette"></div>
+    <div id="color-palette">
+      <button id="botao1" class="color selected" style="background-color: black"></button>
+      <button id="botao2" class="color" style="background-color: navy"></button>
+      <button id="botao3" class="color" style="background-color: red"></button>
+      <button id="botao4" class="color" style="background-color: green"></button>
+    </div>
 
     <button id="clear-board" onclick="limpar()">Limpar</button>
 
     <section>
       <div id="pixel-board"></div>
-    </section>
-    <script src="script.js"></script>
+    </section>    
   </body>
 </html>
