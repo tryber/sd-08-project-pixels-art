@@ -13,12 +13,12 @@ function createColorPallet(){
     let colors = ["black", "red", "blue", "green"];
     let colorPallet = document.createElement('div');
     colorPallet.id = 'color-palette';
-    colorPallet.className = 'color';
     colorPallet.style.display = 'block'
     body.appendChild(colorPallet);
 
     for(let i = 0; i < colors.length; i += 1){
         let block = document.createElement('div');
+        block.className = 'color';
         block.style.height = '30px';
         block.style.width = '30px';
         block.style.display = 'inline-block';
