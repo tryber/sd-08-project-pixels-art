@@ -68,19 +68,18 @@ pixelBoard(valor);
 
   const botao2NewBoard = document.querySelector('#generate-board');
   botao2NewBoard.addEventListener('click', function () {
-    if (entrada.value == '') {
+    let valorVerf = parseInt(entrada.value, 10);
+    if (valorVerf == '') {
       alert('"Board inválido!"');
-    } else if (entrada.value < 5) {
-      entrada.value = 5;
-      pixelBoard(entrada.value);
-    } else if (entrada.value > 50) {
-      entrada.value = 50;
-      pixelBoard(entrada.value);
+    } else if (valorVerf < 5) {
+      valorVerf = 5;
+      pixelBoard(valorVerf);
+    } else if (valorVerf > 50) {
+      valorVerf = 50;
+      pixelBoard(valorVerf);
     } else {
-      pixelBoard(entrada.value);
-    }
-
-    //const boardSize = entrada.value == '' ? alert('"Board inválido!"') : entrada.value < 5 ? pixelBoard(5) : entrada.value > 50 ? pixelBoard(50) : pixelBoard(entrada.value);
+      pixelBoard(valorVerf);
+    };
   });
 
 //Função para selecionar as cores
