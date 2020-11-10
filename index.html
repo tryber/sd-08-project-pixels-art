@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paleta de Cores</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header and navbar -->
+  <header>
+    <h1 id="title">Paleta de Cores</h1>
+    <nav>
+      <a href="https://sdayube.github.io/">Portfólio</a>
+      <a href="https://www.linkedin.com/in/silvio-dayube/" target="#blank">LinkedIn</a>
+      <a href="https://github.com/sdayube" target="#blank">GitHub</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Color palette -->
+    <section id="color-palette" class="palette">
+      <div class="color black"></div>
+      <div class="color first"></div>
+      <div class="color second"></div>
+      <div class="color third"></div>
+    </section>
+
+    <!-- Controller section -->
+    <section class="controller">
+      <!-- Board generator -->
+      <label for="sizer">Tamanho (5-50): </label>
+      <input type="number" name="sizer" id="board-size" min="1" max="50">
+      <button id="generate-board">VQV</button><br>
+      <!-- Clear colors -->
+      <button id="clear-board" class="button">Limpar</button>
+      <button id="regen-colors" class="button">Novas cores!</button>
+    </section>
+
+    <!-- Pixel board -->
+    <section id="pixel-board" class="pixel-board">
+    </section>
+  </main>
+  <footer>
+    <p>Desenvolvido por <a href="https://sdayube.github.io/" class="footer-link">Silvio Dayube</a> no curso da <a href="https://www.betrybe.com/" target="#blank" class="footer-link">Trybe</a></p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
