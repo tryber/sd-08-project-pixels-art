@@ -29,53 +29,20 @@ window.onload = function () {
     document.querySelectorAll('.color')[3].style.background = generateRandomColor();    
 }
 
-document.querySelectorAll('.color')[0].addEventListener('click', function eventColorClick1 () {    
-    for (let i = 0; i < document.querySelectorAll('.color').length; i+=1) {
-        if (i !== 0) {
-            document.querySelectorAll('.color')[i].classList.remove('selected');
-        }
-        if (document.querySelectorAll('.color')[0].classList.contains('selected')) {
-        } else {
-            document.querySelectorAll('.color')[0].classList.add('selected');
-        }            
-    }    
-});
+for (let index = 0; index < document.querySelectorAll('.color').length; index += 1){
+    document.querySelectorAll('.color')[index].addEventListener('click', function eventColorClick () {    
+        for (let i = 0; i < document.querySelectorAll('.color').length; i+=1) {
+            if (i !== index) {                
+                document.querySelectorAll('.color')[i].classList.remove('selected');
+            }
+            if (document.querySelectorAll('.color')[index].classList.contains('selected')) {
+            } else {
+                document.querySelectorAll('.color')[index].classList.add('selected');
+            }            
+        }    
+    }); 
+}
 
-document.querySelectorAll('.color')[1].addEventListener('click', function eventColorClick2 () {    
-    for (let i = 0; i < document.querySelectorAll('.color').length; i+=1) {
-        if (i !== 1) {
-            document.querySelectorAll('.color')[i].classList.remove('selected');
-        }
-        if (document.querySelectorAll('.color')[1].classList.contains('selected')) {
-        } else {
-            document.querySelectorAll('.color')[1].classList.add('selected');
-        }            
-    }    
-});
-
-document.querySelectorAll('.color')[2].addEventListener('click', function eventColorClick3 () {    
-    for (let i = 0; i < document.querySelectorAll('.color').length; i+=1) {
-        if (i !== 2) {
-            document.querySelectorAll('.color')[i].classList.remove('selected');
-        }
-        if (document.querySelectorAll('.color')[2].classList.contains('selected')) {
-        } else {
-            document.querySelectorAll('.color')[2].classList.add('selected');
-        }            
-    }    
-});
-
-document.querySelectorAll('.color')[3].addEventListener('click', function eventColorClick4 () {    
-    for (let i = 0; i < document.querySelectorAll('.color').length; i+=1) {
-        if (i !== 3) {
-            document.querySelectorAll('.color')[i].classList.remove('selected');
-        }
-        if (document.querySelectorAll('.color')[3].classList.contains('selected')) {
-        } else {
-            document.querySelectorAll('.color')[3].classList.add('selected');
-        }            
-    }    
-});
  
 document.querySelector('#generate-board').addEventListener('click', function inputValue(){    
     if (document.querySelector('#board-size').value == '') {
