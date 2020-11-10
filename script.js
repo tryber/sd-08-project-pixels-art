@@ -29,6 +29,7 @@ function addPalleteColors() {
         const divPixelsColors = document.createElement('div');
         divPixelsColors.classList.add('color');
         divPixelsColors.style.backgroundColor = colorsPallete[i];
+        divPixelsColors.id = colorsPallete[i];
         divContainer.appendChild(divPixelsColors);
     }
 }
@@ -46,6 +47,7 @@ function addPixels(size) {
         const boxPixel = document.createElement('div');
         boxPixel.style.backgroundColor = 'white';
         sectionPixels.appendChild(boxPixel);
+
         for (let col = 0; col < size; col += 1) {
             const boxPixel = document.createElement('div');
             boxPixel.style.backgroundColor = 'white';
@@ -57,20 +59,18 @@ function addPixels(size) {
 
 addPixels(5);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ---------------------------- REQUISITO 06 ---------------------------- */
+
+const blackColor = document.querySelector('#black');
+
+function setBlackColor() {
+    blackColor.classList.add('selected');
+}
+
+setBlackColor();
+
+
+
 /* ---------------------------- REQUISITO 07 ---------------------------- */
 /* ---------------------------- REQUISITO 08 ---------------------------- */
 /* ---------------------------- REQUISITO 09 ---------------------------- */
