@@ -124,13 +124,17 @@ function createInput() {
 
     button.addEventListener('click', function () {
         let getInputValue = document.querySelector('#board-size').value;
-        if (getInputValue > 50) {
-            alert('Tamanho não pode ser maior que 50');
-        } else if (getInputValue == '') {
+
+        if (getInputValue == '') {
             alert('Board inválido!');
-        } else if(getInputValue < 1){
-            alert('Insira um número maior que 0')
-        }else {
+        } else {
+            if (getInputValue > 50) {
+                getInputValue = 50;
+            }
+            if (getInputValue < 5) {
+                getInputValue = 5;
+            }
+            document.querySelector('#board-size').value = getInputValue;
             quantPixels = getInputValue;
             let getPixelBoard = document.querySelector('#pixel-board');
             body.removeChild(getPixelBoard);
