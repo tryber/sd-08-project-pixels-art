@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 header {
   align-items: center;
   display: flex;
@@ -46,22 +50,19 @@ input {
 }
 
 .pixel-board {
-  align-items: center;
-  display: flex;
-  height: fit-content;
-  justify-content: center;
-  margin: 20px auto 0;
-  width: fit-content;
+  margin-top: 20px;
 }
 
 .line {
   height: 40px;
+  margin-left: 43.7%;
   width: 100%;
 }
 
 .pixel {
   background-color: white;
   border: 1px solid black;
+  float: left;
   height: 40px;
   width: 40px;
 }
