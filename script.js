@@ -84,7 +84,7 @@ function removeBoard() {
   }
 }
 
-// Stores input value
+// Stores input value and corrects it if input < 5 or > 50
 function valueStorage() {
   const input = document.querySelector('#board-size');
   const storedValue = parseInt(input.value, 10);
@@ -92,6 +92,9 @@ function valueStorage() {
   if (boardSize < 5) {
     input.value = '5';
     boardSize = 5;
+  } else if (boardSize > 50) {
+    input.value = '50';
+    boardSize = 50;
   }
 }
 
@@ -127,16 +130,15 @@ function regenBoard() {
 function sizeValidate() {
   if (!boardSize) {
     alert('Board inválido!');
-  } else if (boardSize < 5) {
-    boardSize = 5;
-  } else if (boardSize > 50) {
-    boardSize = 50;
+    return false;
   }
+  return true;
 }
 
 // Regenerates board
 genButton.addEventListener('click', () => {
   valueStorage();
-  sizeValidate();
-  regenBoard();
+  if (sizeValidate()) {
+    regenBoard();
+  }
 });
