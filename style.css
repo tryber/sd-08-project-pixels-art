@@ -17,26 +17,6 @@ header h1 {
   border: 1px solid black;
 }
 
-.color:last-child {
-  margin-right: 0;
-}
-
-.color.black {
-  background-color: black;
-}
-
-.color.red {
-  background-color: red;
-}
-
-.color.blue {
-  background-color: blue;
-}
-
-.color.green {
-  background-color: green;
-}
-
 #pixels {
   display: flex;
   align-items: center;
