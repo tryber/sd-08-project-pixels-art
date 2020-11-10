@@ -21,6 +21,18 @@ header h1 {
   margin-right: 0;
 }
 
+.board-size {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+input {
+  width: 200px;
+  height: 30px;
+  margin-right: 10px;
+}
+
 .btn {
   display: flex;
   align-items: center;
@@ -40,8 +52,6 @@ header h1 {
 }
 
 #pixel-board {
-  width: 210px;
-  height: 210px;
   margin-top: 20px;
   display: flex;
   flex-wrap: wrap;

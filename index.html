@@ -20,6 +20,18 @@
         <div class="color green"></div>
       </section>
 
+      <section class="board-size">
+        <input
+          id="board-size"
+          type="text"
+          placeholder="Escolha o tamanho do quadro"
+          min="1"
+          max="50"
+          onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+        />
+        <button id="generate-board">VQV</button>
+      </section>
+
       <section class="btn">
         <button id="clear-board">Limpar</button>
       </section>

@@ -1,14 +1,70 @@
-let createPixels = () => {
-  for (let i = 0; i < 25; i += 1) {
-    let board = document.querySelector("#pixel-board");
-    let pixel = document.createElement("div");
-    pixel.className = "pixel";
+let board = document.querySelector("#pixel-board");
 
-    board.appendChild(pixel);
+let boardSide = 5;
+
+let inputValue = () => {
+  const input = document.querySelector("#board-size");
+  boardSide = input.value;
+
+  if (boardSide >= 1 && boardSide <= 5) {
+    boardSide = 5;
+  } else if (boardSide > 50) {
+    boardSide = 50;
   }
 };
 
-createPixels();
+let generateBoardColumns = (n) => {
+  for (let i = 0; i < n; i += 1) {
+    const div = document.createElement("div");
+    div.className = "pixel";
+
+    board.lastElementChild.appendChild(div);
+  }
+};
+
+let generateBoardLines = (n) => {
+  for (let i = 0; i < n; i += 1) {
+    const div = document.createElement("div");
+
+    board.appendChild(div);
+
+    generateBoardColumns(n);
+  }
+};
+
+generateBoardLines(5);
+
+let removeBoard = () => {
+  const oldBoard = board.children;
+
+  for (let i = 0; oldBoard[i]; i) {
+    board.removeChild(oldBoard[i]);
+  }
+};
+
+const generateButton = document.querySelector("#generate-board");
+
+let generateNewBoard = () => {
+  removeBoard();
+
+  if (boardSide > 0) {
+    generateBoardLines(boardSide);
+  } else {
+    generateBoardLines(5);
+  }
+};
+
+function checkInputValue() {
+  inputValue();
+
+  if (!boardSide) {
+    alert("Board inválido!");
+  }
+
+  generateNewBoard();
+}
+
+generateButton.addEventListener("click", checkInputValue);
 
 const colorList = document.querySelectorAll(".color");
 
@@ -55,8 +111,6 @@ let selectedColor = () => {
 
   return "";
 };
-
-let board = document.querySelector("#pixel-board");
 
 let boardColors = (event) => {
   const color = selectedColor();
