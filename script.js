@@ -19,13 +19,14 @@ window.onload = function () {
     '#FF3380', '#CCCC00', '#66E64D', '#4D80CC', '#9900B3', 
     '#E64D66', '#4DB380', '#FF4D4D', '#99E6E6', '#6666FF'];
     let colorPixel = document.getElementsByClassName("color")
-    colorPixel[0].style.backgroundColor = "black";
+    colorPixel[0].style.backgroundColor = "rgb(0, 0, 0)";
+    colorPixel[0].className = "color selected"
     let multi = 49;
-    let colors = ["black"];
+    // let colors = [colorPixel[0]];
     for (let index = 1; index < colorPixel.length; index += 1) {
         let randomColor = Math.trunc(Math.random() * multi);
         colorPixel[index].style.backgroundColor = colorArray[randomColor];
-        colors.push(colorArray[randomColor]);
+        // colors.push(colorArray[randomColor]);
         multi -= 1;
         colorArray.splice(randomColor, 1);
     }
@@ -44,19 +45,24 @@ window.onload = function () {
             lineContainer[index1].appendChild(squad);
         }
     }
-    // Add eventListener e muda cor dos pixels
-    let colorPalette = document.getElementsByClassName("color");
-    let squad = document.querySelector(".pixel")
-    let colorSelected = document.getElementsByClassName("color")[0];
-    
-    
-
-    function mudaCor() {
-        squad.addEventListener("click", function () {
-            squad.style.backgroundColor = colors[0];
+    // Add eventListener e class selected
+    let currentSelected = document.querySelector(".selected")
+    document.querySelectorAll(".color").forEach(cor => {
+        cor.addEventListener("click", function () {
+            currentSelected.className = "color";
+            currentSelected = cor
+            cor.className = "color selected";
+            console.log(currentSelected);
         })
-    }
-    
+    })
+
+    // Troca a cor dos pixels
+    document.querySelectorAll(".pixel").forEach(squad => {
+        squad.addEventListener("click", function () {
+            squad.style.backgroundColor = currentSelected.style.backgroundColor;
+        })
+    })
+
  
 }
 
