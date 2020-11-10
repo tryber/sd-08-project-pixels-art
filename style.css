@@ -49,10 +49,6 @@ article {
   outline: none;
 }
 
-.selected {
-  border: solid 2px #fffffa;
-}
-
 .pixel-board {
   display: flex;
   flex-direction: column;
