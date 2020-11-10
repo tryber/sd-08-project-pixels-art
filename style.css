@@ -1,22 +1,9 @@
 .color {
     display: inline-block;
-    width: 10px;
-    height: 10px;
+    width: 50px;
+    height: 50px;
     border: 1px solid black;
-    padding: 5px;
-    margin: 5px;
-}
-.black {
-    background-color: black;
-}
-.red {
-    background-color: red;
-}
-.green {
-    background-color: green;
-}
-.blue {
-    background-color: blue;
+    margin: 20px;
 }
 h1 {
   text-align: center;
@@ -27,13 +14,10 @@ h1 {
 #pixel-board {
   border: 1px solid black;
   display: inline-block;
-  margin: auto;
 }
 .pixel {
   display: table-cell;
   border: 1px solid black;
   width: 40px;
   height: 40px;
-  background: white;
-  margin: auto;
 }
