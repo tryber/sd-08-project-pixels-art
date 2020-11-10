@@ -18,7 +18,8 @@ function initialGrid() {
 initialGrid();
 
 function removeGrid() {
-for (let index = 0; index < 25; index += 1) {
+  let pixelCounter = document.querySelectorAll('.pixel');
+for (let index = 0; index < pixelCounter.length; index += 1) {
   let removeDiv = pixelBox.lastElementChild;
   pixelBox.removeChild(removeDiv);
 }
@@ -39,6 +40,12 @@ function createPixelBox() {
   if (inputNumber.value.length > 0 && inputNumber.value > 0) {
     removeGrid()
     let gridSize = inputNumber.value;
+    if (gridSize < 5) {
+      gridSize = 5;
+    }
+    if (gridSize > 50) {
+      gridSize = 50;
+    }
     for (let index = 0; index < gridSize * gridSize; index += 1) {
       let pixelCreate = document.createElement("div");
       pixelCreate.className = "pixel";
@@ -46,6 +53,7 @@ function createPixelBox() {
     }
     pixelBox.style.gridTemplateColumns = "repeat(" + gridSize + ", 40px)";
     pixelBox.style.gridTemplateRows = "repeat(" + gridSize + ", 40px)";
+    
   } else {
     alert("Board inválido!");
   }
