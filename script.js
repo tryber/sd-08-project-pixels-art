@@ -61,3 +61,16 @@ function createButton(buttonName) {
     buttonContainer.appendChild(newButton);
 };
 createButton('Limpar');
+
+function btnClear(){
+    let getLimpar = document.querySelector('#clear-board');
+    let square = document.querySelectorAll('.pixel');
+    let backgroundColor = 'white';
+
+    getLimpar.addEventListener('click', function() {
+        for (let i = 0; i < square.length; i+= 1){
+            square[i].style.backgroundColor = backgroundColor;
+        }
+    })
+}
+    btnClear();
