@@ -45,7 +45,7 @@ document.getElementById("clear-board").addEventListener("click", () => {
 document.getElementById("generate-board").addEventListener("click", () => {
   const size = document.getElementById("board-size").value;
   //alert("oi!");
-  if (size < 5 || size > 50 || size === null || size === undefined) {
+  if (size === null || size === undefined) {
     alert("Board inválido!");
   } else {
     boardBuilder(size);
@@ -55,6 +55,13 @@ document.getElementById("generate-board").addEventListener("click", () => {
 });
 
 const boardBuilder = (size = 5) => {
+  if (size < 5) {
+    size = 5;
+  }
+  if (size > 50) {
+    size = 50;
+  }
+
   const board = document.getElementById("pixel-board");
   board.innerHTML = "";
   for (let i = 0; i < size; i++) {
@@ -68,14 +75,14 @@ const boardBuilder = (size = 5) => {
   config.size = size;
 };
 
-document.getElementById("board-size").addEventListener("change", () => {
-  const size = document.getElementById("board-size").value || 0;
+// document.getElementById("board-size").addEventListener("change", () => {
+//   const size = document.getElementById("board-size").value || 0;
 
-  if (size < 1) {
-    document.getElementById("board-size").value = 5;
-  }
+//   if (size < 1) {
+//     document.getElementById("board-size").value = 5;
+//   }
 
-  //console.log(document.getElementById("board-size").value);
-});
+//   //console.log(document.getElementById("board-size").value);
+// });
 
 boardBuilder(5);
