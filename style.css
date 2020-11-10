@@ -9,10 +9,10 @@
   width: 210px;
   height: 210px;
   position: relative;
-  visibility: visible;
-  border: 1px dashed red;
 }
 
+/*Requisito 05 - Cada elemento do quadro de pixels deve possuir 40 pixels de
+largura e 40 pixels de altura e ser delimitado por uma borda preta de 1 pixel.*/
 .pixel {
   background-color: white;
   border: 1px solid black;
