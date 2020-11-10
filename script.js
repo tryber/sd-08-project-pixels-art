@@ -32,6 +32,7 @@ function geraPixelBoard() {
   for (let index = 0; index < numberOfLines; index += 1) {
     const boardLine = document.createElement('div');
     pixelBoard.append(boardLine);
+    pixelBoard.append(boardLine);
     geraPixel(index);
   }
 }
