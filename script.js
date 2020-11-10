@@ -1,15 +1,19 @@
-// window.onload = function () {
-//   let theBlackSquare = document.getElementById('color-palette')
-//     .firstElementChild.style.backgroundColor;
-//     theBlackSquare.className = 'selected'
-// };
+window.onload = function () {
+  let blkSqrColor = document.getElementById('color-palette')
+    .firstElementChild.style.backgroundColor;
+  blkSqrColor.className = 'color selected';
+};
 
-// function selecionaCor() {
-//     event.target('click', function(selecionado){
-//         let blackColor = document.getElementById('#color-palette')
-//     .firstElementChild.style.backgroundColor;
+function selecionaCor() {
+    let blkSqr = document.getElementById('color-palette')
+    .firstElementChild;
 
-//     })
+    ('click', function(selecionado){
+        let blackColor = document.getElementById('color-palette')
+    .firstElementChild.style.backgroundColor;
+
+    })
+}
 
 function paletaCores() {
   let coresFundo = ['black', 'red', 'blue', 'green'];
@@ -33,7 +37,7 @@ function quadroPixels() {
 
   for (let i = 0; i < linhaQuadrados; i += 1) {
     let linhaSquares = document.createElement('tr');
-    linhaSquares.className = 'pixel';
+    linhaSquares.className = 'pixel-row';
     squareContainer.appendChild(linhaSquares);
 
     for (let i = 0; i < colunaQuadrados; i += 1) {
@@ -49,7 +53,7 @@ function botaoLimpar() {
   let buttonContainter = document.getElementById('button-container');
   let buttonClear = document.createElement('button');
   buttonClear.id = 'clear-board';
-  buttonClear.innerHTML = 'Limpar';
+  buttonClear.innerText = 'Limpar';
   buttonContainter.appendChild(buttonClear);
 }
 botaoLimpar();

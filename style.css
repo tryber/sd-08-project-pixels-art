@@ -42,11 +42,14 @@ ul {
   height: 5em;
 }
 
-#pixel-board tr,
-td {
-  max-width: 40px;
-  max-height: 40px;
-  padding: 5em;
+#pixel-board tr {
+    line-height:0;
+    height: 0;
+}
+
+#pixel-board td {
+
+  padding: 40px;
   border: 1px groove black;
   background-color: none;
 }
