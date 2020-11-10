@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.color {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  margin-left: 10px;
+}
+
+#color-palette {
+  display: flex;
+  margin: 10px 0;
+}
+
+.pixel {
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+}
+
+#pixel-board {
+  width: 200px;
+  height: 200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+#clear-board {
+  margin: 10px 0;
+}
