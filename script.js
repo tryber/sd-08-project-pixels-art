@@ -1,14 +1,14 @@
-let repeat = (what, times) => {
+const repeat = (what, times) => {
     for (let index = 0; index < times; index++) what();
 }
 
-let createPixel = () => {
+const createPixel = () => {
     let pixel = document.createElement('div');
     pixel.className = 'pixel';
     return pixel;
 }
 
-let createPixelRow = () => {
+const createPixelRow = () => {
     let row = document.createElement('div');
     row.className = 'pixel-row';
     repeat(() => {
@@ -18,7 +18,7 @@ let createPixelRow = () => {
     return row;
 }
 
-let createPixelGrid = () => {
+const createPixelGrid = () => {
     let grid = document.querySelector('#pixel-board');
     repeat(() => {
         let row = createPixelRow();
