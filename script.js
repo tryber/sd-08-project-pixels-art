@@ -2,7 +2,7 @@
 const endere = document.getElementById('color-palette');
 const Cores = ['black', 'blue', 'green', 'red'];
 for (let itens = 0; itens < Cores.length; itens += 1) {
-  let color = document.createElement('div');
+  const color = document.createElement('div');
   color.className = 'color';
   color.style.background = Cores[itens];
   color.style.display = 'inline-block';
@@ -15,7 +15,7 @@ for (let itens = 0; itens < Cores.length; itens += 1) {
   text.style.color = '#fff';
   color.appendChild(text);
 }
-//botão para limpar quadro
+// botão para limpar quadro
 let btn = document.createElement('button');
 let endrebtn = document.getElementById('btn')
 btn.id = 'clear-board';
@@ -25,12 +25,12 @@ btn.style.height = '40px';
 btn.style.marginLeft = '100px';
 endrebtn.appendChild(btn);
 // evento botão
-//document.getElementById('clear-board').addEventListener('click', limpa);
-//function limpa() {
-  ///document.getElementsByClassName('pixel-board').background-color ='white';
-//};
+// document.getElementById('clear-board').addEventListener('click', limpa);
+// function limpa() {
+  /// document.getElementsByClassName('pixel-board').background-color ='white';
+// };
 
-//quadro de pixels
+// quadro de pixels
 const quadroDePixels = document.getElementById('pixel-board');
 quadroDePixels.style.width = '400px';
 quadroDePixels.style.height = '400px';
