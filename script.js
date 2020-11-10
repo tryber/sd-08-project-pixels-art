@@ -62,3 +62,12 @@ function selectColor(event) {
   };
 };
 
+// Paiting any pixel with selected color
+const pixels = document.querySelectorAll('.pixel');
+for (let index = 0; index < pixels.length; index += 1) {
+  const pixel = pixels[index];
+  pixel.addEventListener('click', function(event) {
+    const selected = document.querySelector('.color.selected');
+    event.target.style.backgroundColor = selected.style.backgroundColor;
+  });
+};
