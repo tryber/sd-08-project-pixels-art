@@ -16,7 +16,7 @@ const initColorPalette = () => {
 initColorPalette();
 
 const config = {
-  color: "black",
+  color: "#000000",
 };
 
 document.getElementById("color-palette").addEventListener("click", () => {
