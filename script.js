@@ -1,39 +1,18 @@
-// Requisito 06 - Ao carregar a página, a cor preta da paleta já deve estar selecionada para pintar os pixels:
 window.onload = function () {
-  document.getElementsByClassName('color')[0].className = 'color selected';
-  
-}
+  document.getElementById('color-palette').firstElementChild.className =
+    'color selected';
+};
 
-function randomNumber (number){
-  let randomized = Math.floor(Math.random() * number);
-  return randomized;
-}
 function randomColor() {
-  let colorHex = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'];
-  let colorHash = '#';
-  for(let i = 0; i < 6; index += 1) {
-    let randomic = randomNumber(hexadecimal.length);
-    colorHash += colorHex[randomic];
-    if(colorHash === "#FFFFFF"){
-      i = 0;
-    }
-  }
-  return colorHash;
-}
+  let colorRGB = `rgb(${Math.floor(Math.random() * 255)}, ${Math.floor(
+    Math.random() * 255,
+  )}, ${Math.floor(Math.random() * 255)})`;
 
-function selecionaCor() {
-    let blkSqr = document.getElementById('color-palette')
-    .firstElementChild;
-
-    ('click', function(selecionado){
-        let blackColor = document.getElementById('color-palette')
-    .firstElementChild.style.backgroundColor;
-
-    })
+  return colorRGB;
 }
 
 function paletaCores() {
-  let coresFundo = ['black', 'red', 'blue', 'green'];
+  let coresFundo = ['black', randomColor(), randomColor(), randomColor()];
   const palette = document.getElementById('color-palette');
 
   for (let i = 0; i < coresFundo.length; i += 1) {
@@ -44,6 +23,32 @@ function paletaCores() {
   }
 }
 paletaCores();
+
+function selecionaCor() {
+  'click',
+    function (selecionado) {
+      let blackColor = document.getElementById('color-palette')
+        .firstElementChild.style.backgroundColor;
+    };
+}
+
+function selectColor() {
+  let sons = document.getElementById('color-palette').children;
+  let palette = document.querySelector('#color-palette');
+
+  palette.addEventListener('click', function (event) {
+    for (let i = 0; i < sons.length; i += 1) {
+      if (sons[index] === event.target) {
+        event.target.className = 'color selected';
+      } else {
+        sons[index].className = 'color';
+      }
+    }
+  });
+}
+selectColor();
+
+
 
 function quadroPixels() {
   // let tamanhoDefinicao = prompt('quantos quadrados você quer?');
@@ -62,7 +67,7 @@ function quadroPixels() {
     //   colunaSquares.className = 'pixel';
     //   squareContainer.appendChild(colunaSquares);
     // }
-   }
+  }
 }
 quadroPixels();
 
