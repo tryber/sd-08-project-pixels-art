@@ -7,7 +7,7 @@ const initColorPalette = () => {
     })
 }
 
-
+initColorPalette()
 
 let selectedColor = "black"
 
@@ -17,10 +17,11 @@ document.getElementById("color-palette").addEventListener("click", () => {
     })
     event.target.classList.add("selected");
     selectedColor = event.target.style.backgroundColor
-    document.getElementById("color-palette").style = ''
+    //document.getElementById("color-palette").style.clear()
 });
 
 document.getElementById("pixel-board").addEventListener("click", ()=>{
+  //console.log('aa')
    event.target.style.backgroundColor = selectedColor;
 });
 
