@@ -63,7 +63,7 @@ window.onload = function () {
         })
     })
     // Botão que limpa o quadro
-    document.querySelector("button").addEventListener("click", function () {
+    document.querySelectorAll("button")[0].addEventListener("click", function () {
         for (let index = 0; index < 25; index += 1) {
             document.querySelectorAll(".pixel")[index].style.backgroundColor = "rgb(255, 255, 255)";
         }
