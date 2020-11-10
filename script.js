@@ -21,13 +21,13 @@ createDiv(25, "pixel-board", "pixel");
 
 let pallet = ["black", "green", "blue", "yellow"];
 let colors = document.getElementsByClassName("color");
+let pixels = document.getElementsByClassName("pixel");
 
 for (let index = 0; index < colors.length; index++) {
   colors[index].style.backgroundColor = pallet[index];
 }
 
 function fillWhite() {
-  let pixels = document.getElementsByClassName("pixel");
   for (pixel of pixels) {
     pixel.style.backgroundColor = "rgb(255, 255, 255)";
   }
@@ -36,7 +36,6 @@ function fillWhite() {
 let button = document.getElementById("clear-board");
 button.addEventListener("click", fillWhite);
 
-let pixels = document.getElementsByClassName("pixel");
 for (pixel of pixels) {
   pixel.addEventListener("click", fillColor);
 }
@@ -79,13 +78,18 @@ function generateBoard() {
   let size = input.value == "" ? alert("Board inválido!") : input.value > 50 ? 50 : input.value < 5 ? 5 : input.value;
   let board = document.getElementById("pixel-board");
 
-  for(const pixel of pixels) {
+  board.innerHTML = "";
+
+  createDiv(size * size, "pixel-board", "pixel");
+
+  for(pixel of pixels) {
     pixel.style.width = size + "px";
     pixel.style.height = size + "px";
   }
 
-  board.style.width = 5 * size + "px";
-  board.style.height = 5 * size + "px";
+  board.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+  board.style.width = size * size + "px";
+  board.style.height = size * size + "px";
 
   fillWhite();
 }
