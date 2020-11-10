@@ -88,5 +88,5 @@ document.querySelector("#generate-board").addEventListener("click", () => {
 });
 
 document.querySelector("#clear-board").addEventListener("click", () => {
-  pixels.forEach((pixel) => (pixel.style.backgroundColor = "white"));
+  pixels.forEach((pixel) => { pixel.style.backgroundColor = "white" });
 });
