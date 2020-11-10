@@ -56,7 +56,9 @@ const boardBuilder = (size = 5) => {
     size = 50;
   }
   const board = document.getElementById("pixel-board");
+
   board.innerHTML = "";
+
   for (let i = 0; i < size; i++) {
     board.innerHTML += `<div class='pixel-row'>`;
     for (let j = 0; j < size; j++) {
