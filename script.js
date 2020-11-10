@@ -1,16 +1,15 @@
 window.onload = function () {
-  //source: https://www.w3resource.com/javascript-exercises/javascript-math-exercise-40.php
-  function random_bg_color() {
-    var x = Math.floor(Math.random() * 256);
-    var y = Math.floor(Math.random() * 256);
-    var z = Math.floor(Math.random() * 256);
-    var bgColor = `rgb(${x},${y},${z})`;
-    return bgColor;
+  function randomColor() {
+    var r = Math.floor(Math.random() * 256);
+    var g = Math.floor(Math.random() * 256);
+    var b = Math.floor(Math.random() * 256);
+    var rgbColor = `rgb(${r},${g},${b})`;
+    return rgbColor;
   }
 
   colorOptions[0].style.backgroundColor = "rgb(0,0,0)";
   for (let index = 1; index < colorOptions.length; index +=1) {
-  colorOptions[index].style.backgroundColor = random_bg_color();
+  colorOptions[index].style.backgroundColor = randomColor();
 }
 };
 
@@ -53,9 +52,10 @@ function createPixelBox() {
   } else {
     alert("Board inválido!");
   }
+  inputNumber.value = null;
 }
 inputNumber.value = 5;
-createPixelBox()
+createPixelBox();
 
 let colorOptions = document.querySelectorAll(".color");
 let selectedColor = "rgb(0,0,0)";
