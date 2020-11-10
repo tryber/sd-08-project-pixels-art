@@ -65,3 +65,8 @@ button, input {
   margin: 0;
   width: 40px;  
 }
+
+p {
+  color: rgb(136, 129, 129);
+  margin-top: 35px;
+}
