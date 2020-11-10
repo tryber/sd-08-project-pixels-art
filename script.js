@@ -5,7 +5,6 @@ function quadro() {
     quadro.appendChild(linha);
     for (let j = 1; j <= 5; j += 1) {
       let pixel = document.createElement('div');
-      pixel.innerText = 'a';
       pixel.className = 'pixel';
       linha.appendChild(pixel);
     }
