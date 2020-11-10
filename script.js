@@ -53,6 +53,7 @@ function criaQuadro() {
     let quadroWidth = quantPixelPerLine * pixelSize + addBorderSize + 'px';
     quadro.style.width = quadroWidth;
     quadro.style.maxWidth = quadroWidth;
+    quadro.style.display = 'block';
     body.appendChild(quadro);
 
     for (let i = 0; i < (quantPixelPerLine * quantLines); i += 1) {
@@ -74,7 +75,7 @@ function criaQuadro() {
     }
 
 }
-
+createButton();
 criaQuadro();
 
 function selectColor(event) {
@@ -91,6 +92,7 @@ function createButton(){
     button.id = 'clear-board';
     button.innerHTML = 'Limpar';
     button.style.display = 'block';
+    button.style.marginBottom = '4px'
 
     button.addEventListener('click', function(event){
         let getAllPixels = document.querySelectorAll('.pixel');
@@ -98,8 +100,12 @@ function createButton(){
             getAllPixels[i].style.backgroundColor = 'white';
         }
     })
-    getPallet.appendChild(button);
+
+    body.appendChild(button);
 
 }
 
-createButton();
+function createInput(){
+    let input = document.createElement('input');
+    input.id = 'board-size';
+}
