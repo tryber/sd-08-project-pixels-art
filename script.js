@@ -34,8 +34,8 @@ function changeColor() {
 
     for (let index = 0; index < classPixel.length; index += 1) {
         classPixel[index].addEventListener('click', function (event) {
-            let colorAtual = window.getComputedStyle(document.querySelector('.selected')).backgroundColor;
-            event.target.style.backgroundColor = colorAtual;
+            let currentAtual = window.getComputedStyle(document.querySelector('.selected')).backgroundColor;
+            event.target.style.backgroundColor = currentAtual;
         });
     }
 }
