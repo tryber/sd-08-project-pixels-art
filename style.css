@@ -1,20 +1,19 @@
 /* Requisito 02 */
-#color-palette {
+.color-palette {
   display: flex;
 }
-.color {
+
+.color div {
   border: 1px solid black;
   display: inline-block;
   height: 40px;
   width: 40px;
   margin-bottom: 7px;
 }
-
 .pixel-board {
   display: table-cell;
   border-collapse: collapse;
 }
-
 .pixel {
   display: table-cell;
   border-collapse: collapse;
