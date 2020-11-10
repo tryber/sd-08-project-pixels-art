@@ -6,20 +6,8 @@
   width: 100px;
 }
 
-#cor1 {
+#cor-preta {
   background-color: black;
-}
-
-#cor2 {
-  background-color: aquamarine;
-}
-
-#cor3 {
-  background-color: greenyellow;
-}
-
-#cor4 {
-  background-color: blueviolet;
 }
 
 #pixel-board {

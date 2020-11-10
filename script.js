@@ -86,8 +86,41 @@ botaoVQV.addEventListener('click', function() {
       }
     }
   })
+  let pixelsList = document.querySelectorAll('.pixel');
+let botaoLimpeza = document.querySelector('#clear-board');
+botaoLimpeza.addEventListener('click', function () {
+  for (let i = 0; i < pixelsList.length; i++) {
+    pixelsList[i].style.backgroundColor = 'white'
+  }
+})
 })
 
+function generatorRgb(){
+  let RgbComponent1 =  (Math.round(Math.random()*255));
+  let RgbComponent2 =  (Math.round(Math.random()*255));
+  let RgbComponent3 =  (Math.round(Math.random()*255));
+  let corRgb =  ("rgb("+RgbComponent1+", "+RgbComponent2+", "+RgbComponent3+")");
+  return corRgb;
+}
+console.log(generatorRgb())
+
+function generatorId () {
+  let Ref = (Math.round(Math.random()*2))
+  let Id = "cor"+ Ref;
+  return Id;
+}
 
 
+
+
+let cores = document.querySelectorAll('.color')
+console.log(cores)
+
+for (let i = 1; i < cores.length; i++){
+  let elemento = cores[i];
+  console.log(elemento);
+  
+  elemento.style.backgroundColor = generatorRgb();
+  
+}
 
