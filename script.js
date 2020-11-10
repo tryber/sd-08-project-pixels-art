@@ -16,6 +16,17 @@ function pixelClass() {
 }
 pixelClass()
 
+function pintaPixel() {
+  let pixels = document.querySelectorAll('.pixel')
+  for (let i = 0; i < pixels.length; i += 1) {
+    pixels[i].addEventListener('click', function(event) {
+      let color = window.getComputedStyle(document.querySelector('.selected')).backgroundColor;
+      event.target.style.backgroundColor = color;
+    })
+  }
+}
+pintaPixel()
+
 function limpaPixels() {
   let button = document.getElementById('clear-board');
   let color = 'white';
