@@ -6,6 +6,6 @@ function createBtn(nome, id) {
   document.getElementById('button-container').appendChild(btn);
 }
 
-createBtn("limpar", "clear-board");
+createBtn('limpar', 'clear-board');
 
-createBtn("VQV", "generate-board");
+createBtn('VQV', 'generate-board');

@@ -23,7 +23,6 @@
   display: grid;
   grid-template-columns: repeat(5, 40px);
   grid-template-columns: minmax(200px);
-  min
   
 }
 /*grid aprendido no site: https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout */
