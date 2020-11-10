@@ -39,29 +39,18 @@ window.onload = function(){
         
     });
     
-    // function trocaCor(){
-    //     for(let i = 0; i < divCaixas.length)
-    // }
 
-    const divs = document.querySelectorAll('.pixel')
-    const board = document.querySelector('#pixel-board')
-    
-    
-    for(let i = 0; i < divs.length; i+=1){
-        const divIndividual = divs[i];
-        var fundo = document.querySelector('.selected')
 
-        board.addEventListener('click', function(event){
-            event.target.style.backgroundColor = fundo.style.backgroundColor;
+    const divs = document.getElementsByClassName('pixel')
+    const board = document.querySelector('#pixel-board');
+
+    for(let key of divs){
+        key.addEventListener('click', (selected) =>{
+            let selectedColor = document.querySelector('.selected');
+            selectedColor = window.getComputedStyle(selectedColor, null);
+            // https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle
+            selected.target.style.backgroundColor = selectedColor.backgroundColor;
+            
         })
-        
-
-
-
     }
-
-
-
-
-
 }   
