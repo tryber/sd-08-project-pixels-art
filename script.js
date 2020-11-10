@@ -84,3 +84,22 @@ function selectColor(event) {
     }
     event.target.className = 'color selected';
 }
+
+function createButton(){
+    let button = document.createElement('button');
+    let getPallet = document.querySelector('#color-palette')
+    button.id = 'clear-board';
+    button.innerHTML = 'Limpar';
+    button.style.display = 'block';
+
+    button.addEventListener('click', function(event){
+        let getAllPixels = document.querySelectorAll('.pixel');
+        for(let i = 0; i < getAllPixels.length; i += 1){
+            getAllPixels[i].style.backgroundColor = 'white';
+        }
+    })
+    getPallet.appendChild(button);
+
+}
+
+createButton();
