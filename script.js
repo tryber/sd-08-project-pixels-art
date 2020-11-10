@@ -48,7 +48,7 @@ function apagaPixelBoard() {
 function generateBoard() {
   if (boardSize.value === '') {
     alert('Board inválido!');
-    return
+    return;
   }
 
   apagaPixelBoard();
@@ -89,7 +89,9 @@ function geraCores() {
   cor[0].className = 'selected color';
 
   for (let index = 1; index < 4; index += 1) {
-    cor[index].style.backgroundColor = '#' + (Math.floor(Math.random() * 16777215).toString(16));
+    let newColor = (Math.floor(Math.random() * 16777215).toString(16)).toString()
+    newColor = '#' + newColor
+    cor[index].style.backgroundColor = newColor
     cores.push(cor[index].style.backgroundColor);
   }
 }
