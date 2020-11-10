@@ -1,8 +1,3 @@
-function pintaPixel(event) {
-  const corSelecionada = document.querySelector('.selected');
-  event.target.style.backgroundColor = corSelecionada.style.backgroundColor;
-}
-
 function clearBoard() {
   const pixel = document.querySelectorAll('.pixel');
   for (let index = 0; index < pixel.length; index += 1) {
@@ -61,20 +56,32 @@ function evitaCorRepetida() {
 evitaCorRepetida();
 geraCores();
 
+function pintaPixel(event) {
+  const corSelecionada = document.querySelector('.selected');
+  event.target.style.backgroundColor = corSelecionada.style.backgroundColor;
+}
+
+const pixelBoard = document.getElementById('pixel-board');
+
+function geraPixel(index) {
+  for (let pos = 0; pos < 5; pos += 1) {
+    const pixel = document.createElement('div');
+    const lines = document.querySelectorAll('.boardLines')
+    pixel.className = 'pixel';
+    pixel.style.width = '40px'
+    pixel.style.height = '40px'
+    pixel.style.backgroundColor = '#FFFFFF';
+    pixel.addEventListener('click', pintaPixel);
+    lines[index].append(pixel);
+  }
+}
+
 function geraPixelBoard() {
-  const pixelBoard = document.getElementById('pixel-board');
-
   for (let index = 0; index < 5; index += 1) {
-    const newTr = document.createElement('tr');
-    pixelBoard.append(newTr);
-
-    for (let pos = 0; pos < 5; pos += 1) {
-      const pixel = document.createElement('div');
-      pixel.className = 'pixel';
-      pixel.style.backgroundColor = '#FFFFFF';
-      pixel.addEventListener('click', pintaPixel);
-      pixelBoard.lastChild.append(pixel);
-    }
+    const boardLine = document.createElement('div')
+    boardLine.className = 'boardLines'
+    pixelBoard.append(boardLine)
+    geraPixel(index);
   }
 }
 

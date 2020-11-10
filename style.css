@@ -14,6 +14,11 @@ body {
   width: 210px;
 }
 
+.boardLines {
+  height: 42px;
+  width: 210px;
+}
+
 .color {
   border: black solid 1px;
   height: 40px;
