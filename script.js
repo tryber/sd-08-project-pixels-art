@@ -96,7 +96,7 @@ const removeSelectedClass = () => {
 
 const palette = document.querySelector('#color-palette');
 
-let selectColor = (event) => {
+const selectColor = (event) => {
   if (event.target.classList.contains('color')) {
     if (event.target.className !== 'selected') {
       removeSelectedClass();
