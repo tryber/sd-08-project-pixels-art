@@ -29,3 +29,11 @@
     width: 40px;
     display: inline-block;
 }
+
+.pixel {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    display: inline-block;
+    border: black 1px solid;
+}
