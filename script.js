@@ -8,10 +8,9 @@ function nameColor(colored){
   return colorBox;
 }
 
-
-  const colored = document.querySelectorAll('.color');
-  for (let i = 0; i < colored.length ; i++) {
-  colored[i].addEventListener('click',function(event){
+  const colored= document.getElementById("color-palette");
+  colored.addEventListener("click",function(){
+    //console.log(event.target);
     let colorOfEvent = nameColor(event.target);
     let colorOfSelector = nameColor(document.querySelector('.selected'));
     console.log(colorOfEvent);
@@ -21,10 +20,14 @@ function nameColor(colored){
     } else{
       console.log("cor já selecionada");
     }
-  });
-  }
+  })
 
-  const button = document.querySelector('button');
+
+
+
+
+  let matrix = document.querySelectorAll('.pixel');
+  const button = document.getElementById("clear-board");
   button.addEventListener('click',function(){
     for (let i = 0; i <= matrix.length; i++) {
       matrix[i].className ="box pixel white";
@@ -33,16 +36,20 @@ function nameColor(colored){
 
 
 
-  const matrix = document.querySelectorAll('.pixel');
-  for (let i = 0; i <= matrix.length; i++) {
-  matrix[i].addEventListener('click',function(){
+
+  const mapa= document.getElementById("pixel-board");
+  mapa.addEventListener('click',function(){
     let colorOfSelector = nameColor(document.querySelector('.selected'));
-    console.log(matrix[i].classList[2]+" =?= "+colorOfSelector)
-    if(matrix[i].classList[2] != colorOfSelector){
-      console.log(matrix[i].className)
-      matrix[i].className = "box pixel " + colorOfSelector ;
-      console.log(matrix[i].className)
-    }
+    console.log(event.target.classList[2]+" =?= "+colorOfSelector)
+    if(event.target.classList[0] == "box"){
+    if(event.target.classList[2] != colorOfSelector){
+      //console.log(matrix[i].className)
+      event.target.className = "box pixel " + colorOfSelector ;
+      //console.log(matrix[i].className)
+    }}
   });
-  }
+
+
+
+
 
