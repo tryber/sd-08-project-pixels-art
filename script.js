@@ -8,7 +8,7 @@ function pixelClass() {
   const pixelColor = document.querySelectorAll('.color');
   for (let i = 0; i < pixelColor.length; i += 1) {
     pixelColor[i].addEventListener('click', function (event) {
-      const pixelSelected = document.querySelector('.color.selecte');
+      const pixelSelected = document.querySelector('.color.selected');
       pixelSelected.className = 'color';
       event.target.className = 'color selected';
     });
