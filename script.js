@@ -89,8 +89,9 @@ function geraCores() {
   cor[0].className = 'selected color';
 
   for (let index = 1; index < 4; index += 1) {
-    let newColor = (Math.floor(Math.random() * 16777215).toString(16));
-    newColor = '#' + newColor.toString();
+    let newColor = '#'
+    let temp = (Math.floor(Math.random() * 16777215).toString(16)).toString();
+    newColor = newColor + temp
     cor[index].style.backgroundColor = newColor;
     cores.push(cor[index].style.backgroundColor);
   }
