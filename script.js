@@ -1,18 +1,15 @@
 const cores = ['black', 'red', ' blue', 'green'];
 const divColorPalette = document.getElementById("color-palette");
 
-// const body = document.body;
-
 for (let i in cores) {
   let diviCores = document.createElement('div');
   diviCores.style = `background-color:${cores[i]};`;
   diviCores.className = 'color';
-    if(i==0){
-    diviCores.classList.add('select');
+  if (i == 0) {
+    diviCores.classList.add('selected');
   }
   divColorPalette.appendChild(diviCores);
 }
-
 
 const pixelBoard = document.getElementById('pixel-board');
 
@@ -22,25 +19,22 @@ for (let i = 1; i <= 25; i++) {
   pixelBoard.appendChild(divSpan);
 }
 
+divColorPalette.addEventListener('click', pegarCor);
+pixelBoard.addEventListener('click', pintarDivis);
 
-pixelBoard.addEventListener('click', pintarDivPreto);
 
 let corDaDiv = 'black';
+let divAnterior =document.getElementsByClassName('selected').item(0);
 
-function pintarDivPreto(event) {
+function pegarCor(event) {
+  divAnterior.classList.remove('selected');
   const evento = event.target;
-  //console.log(evento);
+  corDaDiv = evento.style.backgroundColor;
+  evento.classList.add('selected');
+  divAnterior=evento;
+  }
+
+function pintarDivis(event) {
+  const evento = event.target;
   evento.style.backgroundColor = corDaDiv;
 }
-
-divColorPalette.addEventListener('click', mudaCorDiv);
-
-function mudaCorDiv(event) {
-  const evento= event.target;
-  //console.log(evento);
-  corDaDiv = evento.style.backgroundColor;
-  console.log(corDaDiv);
-
-
-}
-
