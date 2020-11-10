@@ -27,7 +27,6 @@ window.onload = function () {
 
   function setupColorPalette() {
     const colors = [
-      'black',
       'blue',
       'red',
       'yellow',
@@ -39,8 +38,8 @@ window.onload = function () {
     const pixel = document.getElementsByClassName('color');
     pixel[0].style.backgroundColor = 'black';
     const index = [];
-    while (index.length < 4) {
-      const aux = Math.floor((Math.random()) * ((8 - 1) + 1));
+    while (index.length <= 3) {
+      const aux = Math.floor(Math.random() * (7 - 1 + 1));
       if (index.indexOf(aux) === -1) index.push(aux);
     }
     for (let i = 1; i < pixel.length; i += 1) {
@@ -97,8 +96,7 @@ window.onload = function () {
       const inputNunber = document.getElementById('board-size');
       if (inputNunber.value === '') {
         alert('Board inválido!');
-      } else
-      if (parseInt(inputNunber.value, 10) < 5) {
+      } else if (parseInt(inputNunber.value, 10) < 5) {
         generateBoard(5);
       } else if (parseInt(inputNunber.value, 10) > 50) {
         generateBoard(50);
