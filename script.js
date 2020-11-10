@@ -33,10 +33,14 @@ let removeSelectedClass = () => {
 let palette = document.querySelector("#color-palette");
 
 let selectColor = (event) => {
-  if (event.target.className != "selected") {
-    removeSelectedClass();
+  if (event.target.classList.contains("color")) {
+    if (event.target.className != "selected") {
+      removeSelectedClass();
 
-    event.target.classList.add("selected");
+      event.target.classList.add("selected");
+    }
+  } else {
+    return;
   }
 };
 
