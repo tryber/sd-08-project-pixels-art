@@ -32,3 +32,15 @@ function createSquares() {
 
 createSquares();
 
+function clearBoardButton() {
+    let square = document.querySelectorAll('.pixel');
+    for (let i = 0; i < square.length; i += 1) {
+      let pixel = square[i];
+      pixel.style.backgroundColor = 'white';
+    }
+  }
+  
+  
+  let button = document.getElementById('clear-board');
+  button.addEventListener('click', clearBoardButton);
+
