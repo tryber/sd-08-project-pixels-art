@@ -177,35 +177,37 @@ paintpallete()
 
 
 
-
+// 
 
 
     let pega1 = document.querySelectorAll(".color")
-    let pega2 = document.querySelectorAll(".selected")
+    
     
 
         for(let i = 0 ; i <pega1.length ; i++){
             
             
             
-            pega1[i].addEventListener("click",function(ze){
+            pega1[i].addEventListener("click",function(){
                 
-                
+                pega1[i].className = "color" , "selected"
                let color = pega1[i].style.backgroundColor
-                console.log(color)
+               
+
+              console.log(color)
 
 
-            
+            /* let color = event.target;
+              color.classList.add('selected');
+          
+              colorPalette.classList.remove('selected');
+            });
+            */
 
             })
-            
-            
-            
 
           }
-         
-  
-
+        
 
     function aplicacor(){
 
@@ -215,22 +217,48 @@ paintpallete()
 
         for(let i = 0 ; i <pegaposi3.length ; i++){
 
-            pegaposi3[i].addEventListener("click",function(ze){
+            pegaposi3[i].addEventListener("click",function(){
+                let pegaposi5 = document.querySelector(".selected")
+                
+            //    let color1 = pegaposi5.style.backgroundColor
 
 
             pegaposi3[i].style.background = color
-
-
-            
+  
         })
-
-
-
 
     }
     }
     
     aplicacor()
+
+
+    function criabotao(){
+
+let pegaposicaobotao = document.querySelector("#divbotao")
+let pegaposicaopixels = document.querySelectorAll(".pixel")
+let criabotao = document.createElement("button")
+criabotao.tagName= "clear-board"
+criabotao.innerHTML = "Limpar"
+criabotao.addEventListener("click", function(){
+
+for(let i = 0 ; i < pegaposicaopixels.length ; i ++)
+
+
+
+pegaposicaopixels[i].style.backgroundColor = "white"
+
+
+
+})
+
+
+pegaposicaobotao.appendChild(criabotao)
+
+
+
+    }
+    criabotao()
 
 
 

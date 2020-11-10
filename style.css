@@ -20,19 +20,21 @@
 }
 
 #pixel-board {
-   padding-top: 25px;
    
+   margin-top: 50px;
     width: 200px;
    height: 200px;
-    border: 9px solid black;
+    border: 1px solid black;
     display: block;
+
+    margin-left: 50px;
   
     
  
 }
 .pixel{
-    width: 39px;
-    height: 39px;
+    width: 40px;
+    height: 40px;
     border: 1px solid black;
     background-color: white;
     display:table-cell;
@@ -46,4 +48,12 @@ background-color: black;
 
 .divs{
     display: block;
+}
+#clear-board{
+    
+}
+
+#divbotao{
+  margin-left: 120px;
+  margin-top: 30px;
 }
