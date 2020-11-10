@@ -11,7 +11,7 @@ quadro.id = 'pixel-board';
 corpo.appendChild(quadro);
 const paletaCores = document.createElement('div');
 paletaCores.id = 'color-palette';
-titulo.appendChild(paletaCores);
+corpo.appendChild(paletaCores);
 const colors = ['black', 'red', 'green', 'blue'];
 function colorsPalete() {
   const divPaleta = document.getElementById('color-palette');
@@ -33,7 +33,7 @@ colorsPalete();
 const botao = document.createElement('button');
 botao.id = 'clear-board';
 botao.innerText = '"Limpar"';
-titulo.appendChild(botao);
+corpo.appendChild(botao);
 
 //Função para criar os elementos
 function pixelBoard() {
@@ -49,6 +49,7 @@ function pixelBoard() {
       divPixels.style.backgroundColor = 'white';
     };
   };
+  corpo.appendChild(divPixelBoard);
 };
 pixelBoard();
 
