@@ -50,32 +50,22 @@ function removeSelected(){
     }
 }
 
-
 function addSelected(){    
     ulColor.addEventListener("click", function(event){                     
-            removeSelected();
-            if (event.target.className !== "color selected"){
-                event.target.className = "color selected";
-                let oi = event.target.style.backgroundColor;
-                colorPixel(oi);
-            }            
+            removeSelected();            
+            event.target.className = "color selected";       
                             
     });     
 }
 addSelected();
 
 let ulPixel = document.querySelector("#pixel-board");
-let colorSelect = document.querySelector(".color.selected").style.backgroundColor;
 
-function colorPixel(oi){
-
-    ulPixel.addEventListener("click", function(event){
-
-        event.target.style.backgroundColor = oi;       
-
+function colorPixel(){    
+    ulPixel.addEventListener("click", function(event){        
+        let colorSelect = document.querySelector(".color.selected").style.backgroundColor;        
+        event.target.style.backgroundColor = colorSelect;       
     });
 }
+colorPixel();
 
-
-
-console.log(colorSelect);
