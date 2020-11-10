@@ -25,6 +25,7 @@ const generateBoardColumns = (n) => {
 const generateBoardLines = (n) => {
   for (let i = 0; i < n; i += 1) {
     const div = document.createElement('div');
+    div.className = 'board-lines';
 
     board.appendChild(div);
 
@@ -131,7 +132,7 @@ const pixel = document.querySelectorAll('.pixel');
 
 const clearBoard = () => {
   for (let i = 0; i < pixel.length; i += 1) {
-    pixel[i].style.backgroundColor = 'white';
+    pixel[i].removeAttribute('style');
   }
 };
 
