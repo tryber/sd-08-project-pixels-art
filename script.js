@@ -108,9 +108,9 @@ function corAleatoria (){
     yellow.style.backgroundColor = randomColor3; 
 } corAleatoria();
 
-let pickCor2 = document.getElementById("blue").style.backgroundColor
-let pickCor3 = document.getElementById("green").style.backgroundColor
-let pickCor4 = document.getElementById("yellow").style.backgroundColor
+let pickCor2 = document.querySelector("#blue").style.backgroundColor
+let pickCor3 = document.querySelector("#green").style.backgroundColor
+let pickCor4 = document.querySelector("#yellow").style.backgroundColor
 
 //Ao clicar em uma das cores a variável "cor" recebe um numero que será verificado na função abaixo
 function setColor() {
