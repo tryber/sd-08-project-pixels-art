@@ -5,6 +5,6 @@ function createBtn(nome, id) {
   newBtn.className = btn;
   document.getElementById('button-container').appendChild(newBtn);
 }
-createBtn('limpar', 'clear-board');
+createBtn("limpar", "clear-board");
 
-createBtn('VQV', 'generate-board');
+createBtn("VQV", "generate-board");
