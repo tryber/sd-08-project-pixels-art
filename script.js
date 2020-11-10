@@ -115,86 +115,23 @@ yellowCC.addEventListener('click', function (event) {
 
 }
 toogleColors4()
-    // function changeColorsagain () {
-
-    //     const redCC = document.querySelector ("#red")
-
-    // redCC.addEventListener('click', function (event) {
-    //     let selected = document.querySelectorAll('.selected')
-    //     selected.classList.remove('.selected')
-    //     redCC.className = "selected"
 
 
-    // changeColorsagain ()
+function addColor (){
+    
+    const board = querySelector('#pixel-board')
 
-    // -__________________________________________________________________________________________________
+    board.addEventListener('click', function(event){
 
-//      function toogleRed ()
-//      const redCC = document.querySelector ('#red')
-//      const selected = document.querySelector('.selected')
-//      selected.classList.remove("selected")
+        const selected = document.querySelector('.color selected')
 
-//      redCC.addEventListener('click', function(event) {
+        if( selected.style.backgroundColor !== null)
+         {
 
-//     if (selected === null ) {
-//     event.target.className ="color selected"
-
-// } else {
-//     event.target.className = "color"
-// }
-
-//     }
-//     );
-//     toogleRed()
-
-        // obter elemento com a classe selected
-        // remover a classe selected desse elemento
-        // adicionar a classe selected ao elemento que disparou o evento de clique
-//         function changeColors () {
-
-//     const blackCC = document.querySelector ('#black')
-//     blackCC.className = "color selected"
-
-//         // let elements = document.querySelectorAll('.color-palettes')
-//     // for ( index =0; index < elements.length; index +=1) {
+        event.target.style.backgroundColor = selected.style.backgroundColor
+        }
+    })}
 
 
-//         blackCC.addEventListener('click', function (event) {
 
-//     const selected = document.querySelector('.selected')
-//     if ( selected.className === 'selected') {
-//     selected.classList.remove('selected')
-//     } else if (selected === null ) {
-//     event.target.className ="color selected"
-
-// } else {
-//     event.target.className = "color"
-// }
-//         }
-
-//         )}
-//         changeColors()
-
-//         function changeColors2 () {
-
-//             const redCCC = document.querySelector ('#red')
-
-//                 // let elements = document.querySelectorAll('.color-palettes')
-//             // for ( index =0; index < elements.length; index +=1) {
-
-
-//                 redCC.addEventListener('click', function (event) {
-
-//             const selected = document.querySelector('.selected')
-//             if ( selected.className === 'selected') {
-//             selected.classList.remove('selected')
-//             } else if (selected === null ) {
-//             event.target.className ="color selected"
-
-//         } else {
-//             event.target.className = "color"
-//         }
-//                 }
-
-//                 )}
-//                 changeColors2()
+addColor()
