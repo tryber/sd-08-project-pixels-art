@@ -56,13 +56,11 @@ function selectedPalette() {
   for (let index = 0; index < itemPalette.length; index += 1) {
     const item = itemPalette[index];
 
-    const selectedColor = document.querySelector('.selected');
     item.addEventListener('click', (event) => {
+      const selectedColor = document.querySelector('.selected');
       if (item.className === 'color') {
-        selectedColor.className = 'color';
-        event.target.className = 'color selected';
-      } else {
-        event.target.className = 'color';
+        selectedColor.classList.remove('selected');
+        event.target.classList.add('selected');
       }
     });
   }
