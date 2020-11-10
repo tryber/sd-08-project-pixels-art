@@ -15,7 +15,7 @@
 .pixel {
   width: 40px;
   height: 40px;
-  margin: 1px;
+  border: 1px black;
   background-color: white;
   border-style: solid;
   display: inline-block;

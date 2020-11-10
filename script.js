@@ -23,7 +23,6 @@ function createSquares() {
         }
         squares.appendChild(row);
     }
-
 }
 
 createSquares();
