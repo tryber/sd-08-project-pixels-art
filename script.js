@@ -59,7 +59,15 @@ const vqv = document.querySelector('.vqv');
 
 const table = document.querySelector('.table');
 
+function refreshBoard() {
+	const childs = table.children;
+	for (let i = (childs.length - 1); i >= 0; i -= 1) {
+		table.removeChild(childs[i]);
+	}
+}
+
 function boardPixel() {
+	refreshBoard();
 	if (inputNumber() === true) {
 		for (let i = 0; i < input.value; i += 1) {
 			const td = document.createElement('div');
