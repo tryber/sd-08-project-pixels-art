@@ -1,6 +1,11 @@
 #color-palette {
-  display: flex;
+  display: flex;  
 }
+
+#color-palette button{
+  border: 1px solid black;
+}
+
 .color {
   width: 40px;
   height: 40px;
