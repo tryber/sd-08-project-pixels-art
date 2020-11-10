@@ -83,10 +83,6 @@ function chooseSelectedColor(event) {
 
 /* ---------------------------- REQUISITO 08 ---------------------------- */
 
-// const pixelBoard = document.querySelector('#pixel-board');
-
-// pixelBoard.addEventListener('click', paintPixel);
-
 function paintPixel() {
     const pixelSelected = document.querySelectorAll('.pixel');
 
@@ -101,6 +97,23 @@ function paintPixel() {
 paintPixel();
 
 /* ---------------------------- REQUISITO 09 ---------------------------- */
+
+const button = document.createElement('button');
+button.id = 'clear-board';
+button.innerHTML = 'Limpar';
+
+const secondSection = document.querySelector('#pixel-board');
+document.querySelector('body').insertBefore(button, secondSection);
+
+button.addEventListener('click', clearPixels);
+
+function clearPixels() {
+    const pixels = document.querySelectorAll('.pixel');
+    pixels.forEach((element) => {
+        element.style.backgroundColor = "white";
+    })
+}
+
 /* ---------------------------- REQUISITO 10 ---------------------------- */
 /* ---------------------------- REQUISITO 11 ---------------------------- */
 /* ---------------------------- REQUISITO 12 ---------------------------- */
