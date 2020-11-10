@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -5,7 +7,10 @@
 }
 
 h1 {
-  margin: 30px;
+  color: rgb(59, 103, 145);
+  font-family: 'Permanent Marker', cursive;
+  font-size: 46px;
+  margin: 50px;
 }
 
 .container {
@@ -21,11 +26,12 @@ h1 {
   height: 60px;
   width: 60px;
   margin: 3px;
+  box-shadow: 2px 2px 5px rgb(82, 79, 79);
   
 }
 div#color-palette {
   margin-top: 20px;
-  margin-bottom: 25px;
+  margin-bottom: 40px;
 }
 
 div#color1 {
@@ -35,17 +41,20 @@ div#color1 {
 div#pixel-board {
   height: fit-content;
   margin: auto;
-  margin-top: 25px;
+  margin-top: 45px;
   line-height: 0;
+  box-shadow: 3px 3px 15px rgb(109, 105, 105);
 }
 
 button, input {
   margin: 10px;
   padding: 05px;
-  color: blue;
-  border 1px solid white;
+  color: rgb(56, 53, 53);
+  border: 1px solid rgb(141, 141, 141);
   border-radius: 5px;
   box-sizing: border-box;
+  font-weight: bolder;
+  box-shadow: 1px 1px 10px rgb(109, 105, 105);
 }
 
 .pixel {
