@@ -20,9 +20,40 @@ ul {
   padding: 5em;
 }
 
+#board-size-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: large;
+  background-color: antiquewhite;
+  font-size: 2em;
+  margin: 5px;
+  border: 3px solid grey;
+}
+
+#board-size {
+  font-size: large;
+  background-color: antiquewhite;
+  font-size: 1em;
+  width: 100px;
+  margin: 5px;
+  border: 3px dotted white;
+}
+
+#generate-board {
+  font-size: large;
+  background-color: antiquewhite;
+  font-size: 1em;
+  width: 300px;
+  margin: 5px;
+  border: 3px ridge grey;
+}
+
 #button-container {
   text-align: center;
   justify-content: space-around;
+  
 }
 
 #button-container button {
@@ -30,19 +61,21 @@ ul {
   font-size: 2em;
   width: auto;
   margin: 5px;
-  border: 3px dashed grey;
+  border: 3px ridge grey;
 }
 
 #pixel-board {
   display: inline-block;
   margin-left: 30%;
-  width: 450px;
+  width: 5em;
+  max-width: 50px;
   position: relative;
 }
 
 .pixel {
   display: block;
-  padding: 40px;
+  width: 40px;
+  height: 40px;
   max-width: 40px;
   max-height: 40px;
   border: 1px groove black;

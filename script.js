@@ -3,6 +3,10 @@ window.onload = function () {
     'color selected';
 };
 
+function tamanhoQuadro () {
+let inputValue = document.getElementById('board-size').value;
+}
+
 function randomColor() {
   let colorRGB = `rgb(${Math.floor(Math.random() * 255)}, ${Math.floor(
     Math.random() * 255,
