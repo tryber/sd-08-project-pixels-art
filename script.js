@@ -13,6 +13,7 @@ function colorsOptions() {
     colors[i].classList.add('color');
     if (i === 0) {
       colors[i].style.backgroundColor = 'black';
+      colors[i].classList.add('selected');
     } else {
       colors[i].style.backgroundColor = randomColor();
     }
@@ -33,7 +34,6 @@ function creatPixelBoard() {
     }
   }
 }
-
 
 window.onload = function () {
   colorsOptions();
