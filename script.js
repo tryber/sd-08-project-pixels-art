@@ -24,7 +24,7 @@ function selectColor(){
         event.target.classList.toggle('selected')
         selected = true
         wathColor()
-      };
+      }
     })
 
     function wathColor(){
@@ -50,14 +50,14 @@ function createGrade () {
   for(index = 0; index < size; index++){
     let newLine = document.createElement('div')
     newLine.className = 'line'
-    newLine.addEventListener('click', (event) => {
-        event.target.style.backgroundColor = selectColor()
-    })
     board.appendChild(newLine)
     for(i = 0; i < size; i++){
       let newDiv = document.createElement('div')
       newDiv.className = 'pixel'
       newLine.appendChild(newDiv)
+      newDiv.addEventListener('click', (event) => {
+        event.target.style.backgroundColor = selectColor()
+    })
     }
   }
 }
