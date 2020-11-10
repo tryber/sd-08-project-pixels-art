@@ -1,3 +1,4 @@
+//Requisito 2
 function criacao() {
 const paiDiv = document.getElementById('color-palette');
 const cores = ["black", "red", "blue", "green"];
@@ -11,28 +12,43 @@ for (let index = 0; index < 4; index += 1) {
     }
 }
 criacao();
-/*
-function colorDiv() {
-    const cores = ["black", "red", "blue", "green"];
-    const paiDiv = document.getElementById("color-palette");
-    for (let index = 0; index < cores.length; index += 1) {
-        let corarray = cores[index];
-        const corDivs = document.createElement("div")
-        corDivs.style.backgroundColor = corarray;
-        paiDiv.appendChild(corDivs);
-        } 
+
+//requisito 6
+//document.querySelector('color').classList.add("selected");
+
+//Requisito 6
+function classePreto() {
+    const selectCor = document.querySelector(".color");
+    selectCor.classList.add("selected");
 }
-colorDiv();
-*/
+classePreto();
 
+//Requisito 7
+function MudaSelect() {
+    const array = document.querySelectorAll(".color");
+    for (let index = 0; index < array.length; index += 1) {
+        const item = array[index];
+        item.addEventListener("click", (event) => {
+            const nome = document.querySelector(".selected");
+            if (item.className === "color") {
+                nome.classList.remove("selected");
+                event.target.classList.add("selected");
+            }
+        })
+        
+    }
 
+}
+MudaSelect();
 
-
-
-document.getElementById('black').classList.add("selected");
-
-
+//Requisito 8
 function mudaCor() {
-    div.classList.add("selected");
+    const tabela = document.getElementById("pixel-board");
+    tabela.addEventListener("click", function(event) {
+        const colorSlt = document.querySelector(".selected")
+        if (colorSlt !== "null") {
+            event.target.style.backgroundColor = colorSlt.style.backgroundColor;
+        }
+    })
 }
-color.addEventListener("click", mudaCor);
+mudaCor();
