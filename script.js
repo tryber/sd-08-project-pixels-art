@@ -52,5 +52,5 @@ for (let index = 0; index <= 24; index += 1) {
 const container2 = document.querySelector('#pixel-board');
 container2.appendChild(fragment2);
 
-// Inserindo classe elemento paleta preto
-document.getElementsByClassName('color')[0].setAttribute('class', 'selected'); 
+const cores = document.querySelectorAll('.color');
+cores[0].classList.add('selected');
