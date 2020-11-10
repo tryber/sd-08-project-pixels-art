@@ -1,4 +1,17 @@
+//Função para criar h1
+const corpo = document.querySelector('body');
+const titulo = document.createElement('h1');
+titulo.id = 'title';
+titulo.innerText = '"Paleta de Cores"';
+corpo.appendChild(titulo);
+
 //Função para criar a paleta de cores
+const quadro = document.createElement('div');
+quadro.id = 'pixel-board';
+corpo.appendChild(quadro);
+const paletaCores = document.createElement('div');
+paletaCores.id = 'color-palette';
+titulo.appendChild(paletaCores);
 const colors = ['black', 'red', 'green', 'blue'];
 function colorsPalete() {
   const divPaleta = document.getElementById('color-palette');
@@ -13,6 +26,14 @@ function colorsPalete() {
   };
 };
 colorsPalete();
+
+
+//<button id="clear-board">"Limpar"</button>
+//Função para criar botão Limpar
+const botao = document.createElement('button');
+botao.id = 'clear-board';
+botao.innerText = '"Limpar"';
+titulo.appendChild(botao);
 
 //Função para criar os elementos
 function pixelBoard() {
@@ -30,6 +51,7 @@ function pixelBoard() {
   };
 };
 pixelBoard();
+
 
 //Função para selecionar as cores
 function selecionaPixel() {
@@ -54,9 +76,9 @@ function pintaPixel() {
 };
 pintaPixel();
 
-function limpaPixels(){
+function limpaPixels() {
   const botaoLimpaPixel = document.querySelector('#clear-board');
-  botaoLimpaPixel.addEventListener('click', function() {
+  botaoLimpaPixel.addEventListener('click', function () {
     let pixels = document.querySelectorAll('.pixel');
     for (let i = 0; i < pixels.length; i++) {
       pixels[i].style.background = 'white';
