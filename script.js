@@ -3,31 +3,39 @@ window.onload = function () {
     'color selected';
 };
 
-function clickGenerator() {
-  btnGen.addEventListener('click', inputCheck());
-}
+// function inputValueCheck() {
+//   let btnGen = document.getElementById('generate-board');
+//   btnGen.addEventListener('click', function () {
+//     let inputValue = document.getElementById('board-size').value;
+//     let correctValue;
+//     if (inputValue === '') {
+//       alert('Board inválido!');
+//     } else if (inputValue > 50) {
+//       inputValue === 50;
+//     } else if (inputValue < 5) {
+//       inputValue === 5;
+//     } else {
+//       correctValue = inputValue;
+//     }
+//   });
+//   return correctValue;
+// }
+// inputValueCheck();
 
 function quadroPixels() {
-  let btnGen = document.getElementById('generate-board');
-  btnGen.addEventListener('click', function () {
-    let inputValue = document.getElementById('board-size').value;
+  const num = 5;
+  const squareContainer = document.getElementById('pixel-board');
+  for (let i = 0; i < num; i += 1) {
+    let linhaPixels = document.createElement('div');
+    linhaPixels.className = 'pixel';
+    squareContainer.appendChild(linhaPixels);
 
-    if (inputValue === '') {
-      alert('Board inválido!');
-    } else if (inputValue > 50) {
-      inputValue === 50;
-    } else if (inputValue < 5) {
-      inputValue === 5;
-    } else {
-      const numQuadrados = inputValue;
-      const squareContainer = document.getElementById('pixel-board');
-      for (let i = 0; i < numQuadrados; i += 1) {
-        let linhaSquares = document.createElement('div');
-        linhaSquares.className = 'pixel';
-        squareContainer.appendChild(linhaSquares);
-      }
+    for (let i = 0; i < num; i += 1) {
+      let colunaPixels = document.createElement('div');
+      colunaPixels.className = 'pixel';
+      linhaPixels.appendChild(colunaPixels);
     }
-  });
+  }
 }
 quadroPixels();
 
