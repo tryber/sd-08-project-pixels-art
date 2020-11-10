@@ -1,10 +1,11 @@
-#pixel-board, th, td {
-    border: 1px solid black;
+#pixel-board {
     border-collapse: collapse;
 }
-th, td {
-    width: 25px;
-    height: 25px;
+.pixel {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border: 1px solid black;
 }
 
 #color-palette {
@@ -13,19 +14,23 @@ th, td {
 
 .color {
     border: 1px solid;
-    width: 25px;
-    height: 25px;
+    width: 40px;
+    height: 40px;
     margin: 0 2px 0 0;
 }
+
 .black {
     background-color: black;
 }
+
 .red {
     background-color: red;
 }
+
 .green {
     background-color: green;
 }
+
 .pink {
     background-color: pink;
 }
