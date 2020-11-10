@@ -82,6 +82,24 @@ function chooseSelectedColor(event) {
 }
 
 /* ---------------------------- REQUISITO 08 ---------------------------- */
+
+// const pixelBoard = document.querySelector('#pixel-board');
+
+// pixelBoard.addEventListener('click', paintPixel);
+
+function paintPixel() {
+    const pixelSelected = document.querySelectorAll('.pixel');
+
+    for (let i = 0; i < pixelSelected.length; i += 1) {
+        pixelSelected[i].addEventListener('click', function (event) {
+            let current = document.querySelector('.selected').style.backgroundColor;
+            event.target.style.backgroundColor = current;
+        })
+    }
+}
+
+paintPixel();
+
 /* ---------------------------- REQUISITO 09 ---------------------------- */
 /* ---------------------------- REQUISITO 10 ---------------------------- */
 /* ---------------------------- REQUISITO 11 ---------------------------- */
