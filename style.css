@@ -15,7 +15,7 @@ h1 {
 
 #color-palette {
   padding: 1px;
-  display: inline;
+  display: inline-block;
 }
 
 .color {
