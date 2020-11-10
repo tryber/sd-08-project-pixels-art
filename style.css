@@ -1,11 +1,4 @@
 
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Indie Flower', cursive;
-}
-
 :root {
     font-size: 10px;
 }
@@ -13,6 +6,10 @@
 body {
     background-color: rgb(30, 28, 28);
     color: rgb(220, 215, 215);
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Indie Flower', cursive;
 }
 
 header h1 {
