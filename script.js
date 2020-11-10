@@ -11,8 +11,12 @@ function colorsOptions() {
   for (let i = 0; i < 4; i += 1) {
     colors[i] = document.createElement('ul');
     colors[i].classList.add('color');
-    colors[i].style.backgroundColor = randomColor();
-    options.appendChild(colors[i]);
+    if (i === 0) {
+      colors[i].style.backgroundColor = 'black';
+    } else {
+      colors[i].style.backgroundColor = randomColor();
+   }
+   options.appendChild(colors[i]);
   }
 }
 
