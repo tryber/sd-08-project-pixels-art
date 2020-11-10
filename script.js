@@ -92,3 +92,5 @@ quadroUsuario();
 function removePixels(){
   board.innerHTML = '';
 }
+// Essa função foi baseada nessa respostas do Stack Overflow: https://stackoverflow.com/questions/3955229/remove-all-child-elements-of-a-dom-node-in-javascript
+// foi acrescentada para corrigir o problema de acrescentar um novo quadro a cada vez que o usuario clicana no botao
