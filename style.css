@@ -2,18 +2,28 @@
 
 .color {
   border: 1px solid black;
-  text-align: center;
-  justify-content: center;
   display: inline-block;
   width: 40px;
   height: 40px;
   margin-right: 2px;
+  background: white;
 }
 
-.tr {
+.pixel {
+  border: 1px solid black;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin-right: 2px;
+  background: white;
+}
+
+#pixel-board {
+  border-collapse: collapse;
+  display: table;
+}
+
+
+.pixel-row {
   display: table-row;
-}
-
-.td {
-  display: table-column;
 }
