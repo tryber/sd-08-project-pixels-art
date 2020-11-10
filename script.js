@@ -1,3 +1,4 @@
+//Primeiras regras definidas ao iniciar a página
 function startLoad() {
     let pixels = document.getElementsByClassName('pixel');
     let blackElement = document.querySelector('.black');
@@ -23,6 +24,7 @@ function startLoad() {
   }
   selectColor();
   
+  //Função para remover Selecionado
   function removesSelected() {
     let color = document.querySelectorAll('.selected');
   
@@ -45,7 +47,7 @@ function startLoad() {
   }
   setPixelColor();
   
-  
+  //Função criar botão
   function createsButton(nome) {
     let button = document.createElement('button');
   
@@ -53,7 +55,7 @@ function startLoad() {
     return button;
   }
   
-  
+  //Função botão Limpar
   function clearButton() {
   
     let palette = document.getElementById('button-container');
@@ -66,24 +68,27 @@ function startLoad() {
   }
   clearButton();
   
+  //Setar com Preta
   function setColorBlack(color) {
     let colorOne = document.querySelectorAll('.color')[0];
     colorOne.style.backgroundColor = color;
   }
   setColorBlack('black');
-  
+  //Setar cor Vermelha
   function setColorRed(color) {
     let colorTwo = document.querySelectorAll('.color')[1];
     colorTwo.style.backgroundColor = color;
   }
   setColorRed('red');
-  
+ 
+  //Setar cor Verde
   function setColorGreen(color) {
     let colorThree = document.querySelectorAll('.color')[2];
     colorThree.style.backgroundColor = color;
   }
   setColorGreen('green');
   
+  //Setar cor Azul
   function setColorBlue(color) {
     let colorFour = document.querySelectorAll('.color')[3];
     colorFour.style.backgroundColor = color;
