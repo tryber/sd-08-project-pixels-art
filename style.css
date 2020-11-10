@@ -30,3 +30,7 @@ h1 {
 body{
   background-color: darkgray;
 }
+.botoes {
+  align-content: center;
+  margin-top: 30px;
+}

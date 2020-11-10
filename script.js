@@ -37,12 +37,15 @@ botao.innerText = '"Limpar"';
 corpo.appendChild(botao);
 
 //Criação do botão input
+const divBotoes = document.createElement('div');
+divBotoes.className = 'botoes';
+corpo.appendChild(divBotoes);
 const entrada = document.createElement('input');
 entrada.id = 'board-size';
-corpo.appendChild(entrada);
+divBotoes.appendChild(entrada);
 const botao2 = document.createElement('button');
 botao2.id = 'generate-board';
-corpo.appendChild(botao2);
+divBotoes.appendChild(botao2);
 botao2.innerText = 'VQV';
 
 //Função para criar os elementos
@@ -65,13 +68,7 @@ pixelBoard(valor);
 
   const botao2NewBoard = document.querySelector('#generate-board');
   botao2NewBoard.addEventListener('click', function () {
-    if (entrada.value == []) {
-      alert('"Board inválido!"');
-    } else if (entrada.value >= 5 && entrada.value <= 50) {
-      pixelBoard(entrada.value);
-    } else if (entrada.value < 5 || entrada.value > 50) {
-      alert('Dados de entrada não aceito');
-    };
+    const boardSize = entrada.value == '' ? alert('"Board inválido!"') : entrada.value < 5 ? entrada.value = 5 : entrada.value > 50 ? entrada.value = 50 : pixelBoard(entrada.value);
   });
 
 //Função para selecionar as cores
