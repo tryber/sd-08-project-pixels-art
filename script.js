@@ -1,12 +1,13 @@
 const initColorPalette = () => {
   const cores = [
-    "black",
+    "#000000",
     "#" + Math.random().toString(16).substr(2, 6),
     "#" + Math.random().toString(16).substr(2, 6),
     "#" + Math.random().toString(16).substr(2, 6),
   ];
   document.querySelectorAll(".color").forEach((element) => {
     //console.log(element)
+    //console.log(cores[0]);
     element.style.backgroundColor = cores[0];
     cores.shift();
   });
