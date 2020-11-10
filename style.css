@@ -2,5 +2,8 @@
     border-style: solid;
     border-width: 1px;
     border-color: black;
-    display: inline;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin: 5px;
 }
