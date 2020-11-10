@@ -24,10 +24,18 @@ const colorList = document.querySelectorAll('.color');
 blackColor.style.backgroundColor = 'black';
 blackColor.classList.add('selected');
 
-// Sets other colors
-firstColor.style.backgroundColor = 'blue';
-secondColor.style.backgroundColor = 'red';
-thirdColor.style.backgroundColor = 'gray';
+// Color randomizer
+function randomColor() {
+  const red = Math.ceil(Math.random() * 255);
+  const green = Math.ceil(Math.random() * 255);
+  const blue = Math.ceil(Math.random() * 255);
+  return `rgb(${red}, ${green}, ${blue})`
+}
+
+// Sets other colors to randomized colors
+firstColor.style.backgroundColor = randomColor();
+secondColor.style.backgroundColor = randomColor();
+thirdColor.style.backgroundColor = randomColor();
 
 // Removes 'selection' class from all pallete elements
 function removeSelection() {
@@ -129,7 +137,6 @@ function regenBoard() {
 // Board size input validator
 function sizeValidate() {
   if (!boardSize) {
-    alert('Board inválido!');
     return false;
   }
   return true;
@@ -140,5 +147,8 @@ genButton.addEventListener('click', () => {
   valueStorage();
   if (sizeValidate()) {
     regenBoard();
+    return;
+  } else {
+    return alert('Board inválido!');
   }
 });
