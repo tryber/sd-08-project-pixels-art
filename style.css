@@ -7,7 +7,7 @@
     border: solid black 1px;
     width: 40px;
     height: 40px;
-    display: flex;
+    display: inline-block;
     margin: 0;
 }
 
@@ -25,4 +25,10 @@
 
 .color#blue {
     background-color: blue;
+}
+
+.pixel {
+    background-color: white;
+    border: solid black 1px;
+    margin: 0;
 }
