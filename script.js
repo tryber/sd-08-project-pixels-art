@@ -72,12 +72,16 @@ window.onload = function(event){
         let num;
         if(start == false){
             num = boardSize();
-            if((num == "" )| num < 5 | num > 50){ 
+            if(num == ""){ 
                 alert("Board inválido!");
                 return;
             }else{
                 clearBoard();
             }
+        }else if(num < 5){
+            num = 5;
+        }else if(num > 50){
+            num = 50;
         }else{
             start = false;
             num = 5;
