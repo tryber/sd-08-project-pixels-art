@@ -1,0 +1,23 @@
+#color-palette {
+  display: flex;
+}
+
+#color-palette button {
+  border: 1px solid black;
+}
+
+.color {
+  border: 1px solid black;
+  display: inline-block;
+  height: 40px;
+  margin: 5px;
+  width: 40px;  
+}
+
+.pixel {
+  background: white;
+  border: 1px solid black;
+  display: inline-block;
+  height: 40px;
+  width: 40px;  
+}
