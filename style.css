@@ -1,0 +1,41 @@
+body {
+  margin: 0;
+}
+
+#color-palette {
+  display: flex;
+  flex-direction: row;
+  gap: 1px;
+	width: 200px;
+	height: 100px;
+	margin-left: 50px;
+}
+
+.color {
+	width: 40px;
+  height: 40px;
+  margin: auto;
+  border: 1px solid black;
+}
+
+#pixel-board {
+	margin-top: 10px;
+	margin-left: 50px;
+}
+
+table {
+	border-spacing: 0;
+}
+
+.pixel {
+	background-color: white;
+	border: 1px solid black;
+	padding: 0px;
+	width: 40px;
+	height: 40px;
+}
+
+#clear-board {
+	margin-top: 10px;
+	margin-left: 50px;
+}
