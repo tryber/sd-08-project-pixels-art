@@ -61,15 +61,17 @@ document.querySelector('#generate-board').addEventListener('click', function inp
     pixelBox = document.querySelector('#board-size').value;    
     createLines();
     createPixels();
-    document.querySelector('#pixel-board').addEventListener('click', function changeColorPixel (event) {
-        event.target.style.background = document.querySelector('.selected').style.background;
-    });
+    changeColorPixel();
 });
 
-document.querySelector('#pixel-board').addEventListener('click', function changeColorPixel (event) {
-    event.target.style.background = document.querySelector('.selected').style.background;
-});
-
+function changeColorPixel() {
+    for (let index2 = 0; index2 < document.querySelectorAll('.pixel').length; index2 +=1){
+        document.querySelectorAll('.pixel')[index2].addEventListener('click', function  (event) {
+            event.target.style.background = document.querySelector('.selected').style.background;
+        });
+    }
+}
+changeColorPixel();
 
 document.querySelector('#clear-board').addEventListener('click', function clearPixel() {
     for (let i = 0; i < document.querySelectorAll('.pixel').length; i += 1) {
