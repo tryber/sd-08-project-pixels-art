@@ -2,11 +2,12 @@
   width: 50px;
   height: 50px;
   display: inline-block;
-  };
+    };
 
 #preto{
-  background-color: black;
-
+  background-color: -internal-light-dark(rgb(0, 0, 0), rgb(240, 239, 239));
+  border-style: solid;
+  border-color: black;
 };
 
 #vermelho{
