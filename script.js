@@ -1,19 +1,44 @@
 window.onload = function () {
 
     function firstColorSelected() {
-        let initialColorFrame = document.querySelector('.color')
-        initialColorFrame.classList.add('selected')
+        let selected = document.querySelector('.selected')
+        let frames = document.querySelectorAll('.color')
+        if (!selected) {
+            frames[0].classList.add('selected')
+        }
     }
     firstColorSelected()
+    function ChangeColorOnClick() {
+
+       
+        let framesColor = document.querySelectorAll(".color")
+    
+        for (let index = 0; index < framesColor.length; index += 1) {
+            framesColor[index].addEventListener('click',click)
+            
+        }
+        function click(event){
+            {   
+                let selectedColor = document.querySelector(".selected")
+                selectedColor.classList.remove('selected')
+                event.target.classList.add('selected');
+            }
+        }
+    
+    }
+    ChangeColorOnClick()
 }
 
 function createColorPallete() {
-    let getFrames = document.querySelectorAll('.color')
+    let frames = document.querySelectorAll('.color')
     let colorClass = ['black', 'red', 'green', 'blue']
-    for (let index = 0; index < getFrames.length; index += 1) {
+    for (let index = 0; index < frames.length; index += 1) {
         let color = colorClass[index]
-        getFrames[index].classList.add(color);
+        frames[index].classList.add(color);
     }
 }
 
 createColorPallete()
+
+
+
