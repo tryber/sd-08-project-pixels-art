@@ -17,14 +17,12 @@ function pintaPixel(event) {
   event.target.style.backgroundColor = corSelecionada.style.backgroundColor;
 }
 
-function geraPixel(index) {
+function geraPixel(index, boardLine) {
   for (let pos = 0; pos < numberOfLines; pos += 1) {
     const pixel = document.createElement('div');
-    const lines = document.querySelectorAll('.boardLines');
     pixel.className = 'pixel';
-    pixel.style.backgroundColor = '#FFFFFF';
     pixel.addEventListener('click', pintaPixel);
-    lines[index].append(pixel);
+    boardLine.append(pixel);
   }
 }
 
@@ -32,8 +30,8 @@ function geraPixelBoard() {
   for (let index = 0; index < numberOfLines; index += 1) {
     const boardLine = document.createElement('div');
     boardLine.className = 'boardLines';
+    geraPixel(index, boardLine);
     pixelBoard.append(boardLine);
-    geraPixel(index);
   }
 }
 

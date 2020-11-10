@@ -4,10 +4,8 @@
   width: 200px;
 }
 
-.board {
+.board {  
   display: inline-flex;
-  height: 200px;
-  width: 200px;
 }
 
 .color {
