@@ -68,14 +68,4 @@ const boardBuilder = (size = 5) => {
   }
 };
 
-// document.getElementById("board-size").addEventListener("change", () => {
-//   const size = document.getElementById("board-size").value || 0;
-
-//   if (size < 1) {
-//     document.getElementById("board-size").value = 5;
-//   }
-
-//   //console.log(document.getElementById("board-size").value);
-// });ma
-
 boardBuilder(5);
