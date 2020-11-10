@@ -7,6 +7,14 @@
 
 }
 
+h4 {
+    margin: 2px;
+}
+#board-size {
+    width: 180px;
+    margin-bottom: 5px;
+}
+
 #pixel-board {
     max-width: 210px;
     max-height: 210px;     
