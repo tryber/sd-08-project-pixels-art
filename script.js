@@ -69,7 +69,6 @@ function limpaQuadro(){
 limpaQuadro();
 
 
-
 function quadroUsuario(){  
 let vqv = document.getElementById('generate-board');
 vqv.addEventListener('click', criaQuadro);
@@ -77,7 +76,15 @@ function criaQuadro(){
   removePixels();
   let input = document.getElementById('board-size');
   let value = parseInt(input.value);
+  if(!value){
+    alert("Board inválido!")   
+  }else if (value > 50){
+    value = 50;
+  }else if (value < 5){
+    value = 5;
+  }
   criaPixels(value);
+  colorePixel()
 }
 }
 quadroUsuario();
