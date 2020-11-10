@@ -19,7 +19,7 @@ function addedSelected(target) {
 function capturedElementEvents(target, event, callback) {
   const currentElement = document.getElementById(target);
   currentElement.addEventListener(event, (element) => {
-    const elementEvent = element.path[0];
+    const elementEvent = element.target;
     callback(elementEvent, colorSelected);
   });
 }
@@ -27,6 +27,6 @@ function clear() {
   document.location.reload(true);
 }
 
-capturedElementEvents('pixel-board', 'click', backgroundColor, false);
+capturedElementEvents('pixel-board', 'click', backgroundColor);
 capturedElementEvents('color-palette', 'click', addedSelected);
 capturedElementEvents('clear-board', 'click', clear);

@@ -1,3 +1,16 @@
 # VSCode repo settings
 .vscode
-
+cypress/
+cypress/reports
+cypress/screenshots
+cypress/videos
+.codeclimate.yml
+reporter.json
+package-lock.json
+package.json
+cypress.json
+.prettierrc.json
+.gitignore
+node_module/
+node_modules
+node_modules
