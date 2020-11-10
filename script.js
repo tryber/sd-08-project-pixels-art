@@ -53,4 +53,12 @@ window.onload = function(){
             
         })
     }
+
+    let botao = document.querySelector('#clear-board')
+
+    botao.addEventListener('click', function limpar(){
+        for(let index = 0; index < divs.length; index +=1){
+            divs[index].style.backgroundColor = '#fff'
+        }
+    });
 }   
