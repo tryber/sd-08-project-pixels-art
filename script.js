@@ -16,6 +16,7 @@ const inputValue = () => {
 const generateBoard = (n) => {
   for (let i = 0; i < n; i += 1) {
     const line = document.createElement('div');
+    line.className = 'line';
 
     board.appendChild(line);
 

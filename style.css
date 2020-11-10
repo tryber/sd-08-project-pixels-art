@@ -54,6 +54,11 @@ input {
   width: fit-content;
 }
 
+.line {
+  height: 40px;
+  width: 100%;
+}
+
 .pixel {
   background-color: white;
   border: 1px solid black;
