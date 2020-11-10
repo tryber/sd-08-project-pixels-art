@@ -72,7 +72,7 @@ function cleanPixels (){
         event.target.className = "trigged";
         let bottonLocal = document.querySelector("#clear-board").firstChild;
         if (bottonLocal.className === "trigged"){
-            const pixelLocal = document.getElementsByClassName("pixel");
+            const pixelLocal = document.querySelectorAll(".pixel");
             for (let i=0; i<pixelLocal.length; i+=1) {
                 pixelLocal[i].style.backgroundColor = "white"
             }
