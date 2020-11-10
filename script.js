@@ -8,22 +8,22 @@ const createPixel = () => {
     return pixel;
 }
 
-const createPixelRow = () => {
+const createPixelRow = (width) => {
     let row = document.createElement('div');
     row.className = 'pixel-row';
     repeat(() => {
         let pixel = createPixel();
         row.appendChild(pixel);
-    }, 5);
+    }, width);
     return row;
 }
 
-const createPixelGrid = () => {
+const createPixelGrid = (height, width) => {
     let grid = document.querySelector('#pixel-board');
     repeat(() => {
-        let row = createPixelRow();
+        let row = createPixelRow(width);
         grid.appendChild(row);
-    }, 5);
+    }, height);
 }
 
-createPixelGrid();
+createPixelGrid(5, 5);
