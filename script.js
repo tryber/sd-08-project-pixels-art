@@ -21,34 +21,12 @@ colored.addEventListener('click', function () {
     // console.log('cor já selecionada');
   }
 });
-
+let pixel= document.querySelectorAll('.pixel');
 const button = document.getElementById('clear-board');
 button.addEventListener('click', function () {
-  document.getElementsByClassName('pixel')[0].className = 'box pixel white';
-  document.getElementsByClassName('pixel')[1].className = 'box pixel white';
-  document.getElementsByClassName('pixel')[2].className = 'box pixel white';
-  document.getElementsByClassName('pixel')[3].className = 'box pixel white';
-  document.getElementsByClassName('pixel')[4].className = 'box pixel white';
-  document.getElementsByClassName('pixel')[5].className = 'box pixel white';
-  document.getElementsByClassName('pixel')[6].className = 'box pixel white';
-  document.getElementsByClassName('pixel')[7].className = 'box pixel white';
-  document.getElementsByClassName('pixel')[8].className = 'box pixel white';
-  document.getElementsByClassName('pixel')[9].className = 'box pixel white';
-  document.getElementsByClassName('pixel')[10].className = 'box pixel white';
-  document.getElementsByClassName('pixel')[11].className = 'box pixel white';
-  document.getElementsByClassName('pixel')[12].className = 'box pixel white';
-  document.getElementsByClassName('pixel')[13].className = 'box pixel white';
-  document.getElementsByClassName('pixel')[14].className = 'box pixel white';
-  document.getElementsByClassName('pixel')[15].className = 'box pixel white';
-  document.getElementsByClassName('pixel')[16].className = 'box pixel white';
-  document.getElementsByClassName('pixel')[17].className = 'box pixel white';
-  document.getElementsByClassName('pixel')[18].className = 'box pixel white';
-  document.getElementsByClassName('pixel')[19].className = 'box pixel white';
-  document.getElementsByClassName('pixel')[20].className = 'box pixel white';
-  document.getElementsByClassName('pixel')[21].className = 'box pixel white';
-  document.getElementsByClassName('pixel')[22].className = 'box pixel white';
-  document.getElementsByClassName('pixel')[23].className = 'box pixel white';
-  document.getElementsByClassName('pixel')[24].className = 'box pixel white';
+  for(let i = 0; i <= pixel.length; i++){
+    pixel[i].className = 'box pixel white';
+  }
 });
 
 
