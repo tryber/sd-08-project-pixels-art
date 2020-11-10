@@ -1,7 +1,7 @@
 window.onload = function(event){
     
 
-    
+    let start = true;
     let pintar;
     generateBoard();
     generatorClick();
@@ -69,16 +69,20 @@ window.onload = function(event){
 
     function generateBoard(){
 
-            let num = boardSize();
-            if(num == "" | num < 5 | num > 50){ 
+        let num;
+        if(start == false){
+            num = boardSize();
+            if((num == "" )| num < 5 | num > 50){ 
                 alert("Board inválido!");
                 return;
             }else{
                 clearBoard();
-                console.log(num);
             }
-        
-        console.log(num);
+        }else{
+            start = false;
+            num = 5;
+        }
+
         let table = document.querySelector('#tabela');
         let count = 1;
         for(let col = 1; col <= num; col++){
