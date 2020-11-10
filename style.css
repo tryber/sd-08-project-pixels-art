@@ -44,16 +44,6 @@ body , div , span , ul , li , input , h1 { /* Codeclimate não deixa usar o '*' 
   overflow: hidden;
 }
 
-.controls {
-  overflow: hidden;
-  padding: 10px;
-}
-
-.input-group {
-  float: left;
-  margin-right: 20px;
-}
-
 header {
   align-items: center;
   background-color: black;
@@ -71,11 +61,35 @@ footer {
   display: flex;
   height: 40px;
   justify-content: center;
-  position: absolute;
+  position: fixed;
   width: 100%;
 }
 
 footer a {
   color: orangered;
   text-decoration: none;
+}
+
+.controls {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.board {
+  display: flex;
+  justify-content: center;
+}
+
+.input-group {
+  background-color: rgba(131, 200, 19, 0.2);
+  border-radius: 8px;
+  display: inline-block;
+  margin-left: 20px;
+  padding: 20px;
+}
+
+.controls label , .controls input , .controls button {
+  height: 30px;
 }
