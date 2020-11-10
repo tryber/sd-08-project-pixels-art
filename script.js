@@ -1,15 +1,25 @@
 // Cria a paleta de cores
-const colorPaletteContainer = document.getElementById('color-palette');
-const colors = ['black', 'red', 'green', 'blue'];
-for (let color = 0; color < colors.length; color += 1) {
-  const colorPalette = document.createElement('div');
-  colorPalette.className = 'color';
-  if (colors[color] === 'black') {
-    colorPalette.className = 'color selected';
+function createColorPalette(n) {
+  const colorPaletteContainer = document.getElementById ('color-palette');
+  let colors = ['rgb(0, 0, 0)'];
+  for (let numberOfColors = 0; numberOfColors < n - 1; numberOfColors +=  1) {
+    let r = Math.floor((Math.random() * 254) + 1);
+    let g = Math.floor((Math.random() * 254) + 1);
+    let b = Math.floor((Math.random() * 254) + 1);
+    let rgb = 'rgb(' + r + ', ' + g + ', ' + b + ')';
+    colors.push(rgb);
   }
-  colorPalette.style.background = colors[color];
-  colorPaletteContainer.appendChild(colorPalette);
+  for (let color = 0; color < colors.length; color += 1) {
+    const colorPalette = document.createElement('div');
+    colorPalette.className = 'color';
+    if (colors[color] === 'rgb(0, 0, 0)') {
+      colorPalette.className = 'color selected';
+    }
+    colorPalette.style.background = colors[color];
+    colorPaletteContainer.appendChild(colorPalette);
+  }
 }
+createColorPalette(4)
 
 // Cria o quadro de pixels
 function generateBoard(n) {
