@@ -36,7 +36,35 @@ const board = document.getElementById("pixel-board");
     }
 
 
-// Requisitos
+// Requisitos 6 e 7
+let paletaCompleta = document.getElementById("color-palette");
+
+paletaCompleta.addEventListener("click", function () {
+  let selected = document.querySelectorAll(".color");
+
+  for (index = 0; index < selected.length; index += 1) {
+  selected[index].className = "color";
+  }
+  event.target.className = "color selected";
+});
+
+
+  // for (index = 0; index < elementosPaleta.length ; index += 1) {
+  //   let elemento = elementosPaleta[index];
+  //   elemento.addEventListener("click", selectColor) {
+  //     function selectColor () {
+  //       let selected = document.querySelector(".selected");
+  //       selected.className = "color";
+  //       elemento.className = "color selected";
+  //     }
+  //   }
+  // }
+
+
+clickColor ();
+
+
+
 
 
 
