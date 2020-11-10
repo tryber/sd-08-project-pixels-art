@@ -23,7 +23,7 @@
 .pixel {
     background-color: white;
     border: solid 1px black;
-    display: table-cell;
+    display: inline-block;
     height: 40px;
     width: 40px;
     margin: 0;
@@ -31,6 +31,7 @@
 }
 .line {
     height: 42px;
+    text-align: center;
 }
 .color-palette {
     margin: 15px;
@@ -43,8 +44,8 @@
     text-align: center;
 }
 .pixel-board {
-    margin: 10px 30px 10px 30px;
-    text-align: center;
+    margin: auto;
+    display: table-cell;
 }
 .labels{
     text-align: center;
