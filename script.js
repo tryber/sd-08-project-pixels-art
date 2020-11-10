@@ -31,3 +31,21 @@ function colorindoPixels(){
     }   
 }
 colorindoPixels()
+
+function createButton(){
+    let button = document.createElement('button')
+    let divPai = document.getElementById('color-palette')
+    button.id = 'clear-board'
+    button.innerHTML = 'Clear'
+    divPai.appendChild(button)
+    button.addEventListener('click',function(){
+        let pixel = document.querySelectorAll('.pixel')
+        for(i = 0; i < pixel.length; i += 1){
+            let pick = pixel[i]
+            if(pick.style.backgroundColor !== null){
+                pick.style.backgroundColor = 'white'
+            }
+        }
+    })
+}
+createButton()
