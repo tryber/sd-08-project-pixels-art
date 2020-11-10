@@ -1,3 +1,6 @@
+//Ao carregar a página
+const valor = 5;
+
 //Função para criar h1
 const corpo = document.querySelector('body');
 const titulo = document.createElement('h1');
@@ -27,22 +30,29 @@ function colorsPalete() {
 };
 colorsPalete();
 
-
-//<button id="clear-board">"Limpar"</button>
-//Função para criar botão Limpar
+//Criação do botão Limpar
 const botao = document.createElement('button');
 botao.id = 'clear-board';
 botao.innerText = '"Limpar"';
 corpo.appendChild(botao);
 
-//Função para criar os elementos
-function pixelBoard() {
+//Criação do botão input
+const entrada = document.createElement('input');
+entrada.id = 'board-size';
+corpo.appendChild(entrada);
+const botao2 = document.createElement('button');
+botao2.id = 'generate-board';
+corpo.appendChild(botao2);
+botao2.innerText = 'VQV';
 
+//Função para criar os elementos
+function pixelBoard(valor) {
   const divPixelBoard = document.getElementById('pixel-board');
-  for (let i = 0; i < 5; i++) {
+  divPixelBoard.innerHTML = '';
+  for (let i = 0; i < valor; i++) {
     const divPixelsLinha = document.createElement('div');
     divPixelBoard.appendChild(divPixelsLinha);
-    for (let j = 0; j < 5; j++) {
+    for (let j = 0; j < valor; j++) {
       const divPixels = document.createElement('div');
       divPixelBoard.appendChild(divPixels);
       divPixels.className = 'pixel';
@@ -51,8 +61,18 @@ function pixelBoard() {
   };
   corpo.appendChild(divPixelBoard);
 };
-pixelBoard();
+pixelBoard(valor);
 
+  const botao2NewBoard = document.querySelector('#generate-board');
+  botao2NewBoard.addEventListener('click', function () {
+    if (entrada.value == []) {
+      alert('"Board inválido!"');
+    } else if (entrada.value >= 5 && entrada.value <= 50) {
+      pixelBoard(entrada.value);
+    } else if (entrada.value < 5 || entrada.value > 50) {
+      alert('Dados de entrada não aceito');
+    };
+  });
 
 //Função para selecionar as cores
 function selecionaPixel() {
@@ -77,13 +97,14 @@ function pintaPixel() {
 };
 pintaPixel();
 
+//Função para o botão limpar
 function limpaPixels() {
   const botaoLimpaPixel = document.querySelector('#clear-board');
   botaoLimpaPixel.addEventListener('click', function () {
     let pixels = document.querySelectorAll('.pixel');
     for (let i = 0; i < pixels.length; i++) {
       pixels[i].style.background = 'white';
-    }
+    };
   });
 };
 limpaPixels();
