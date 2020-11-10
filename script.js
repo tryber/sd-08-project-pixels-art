@@ -26,10 +26,19 @@ window.onload = function () {
   generateBoard();
 
   function setupColorPalette() {
-    const colors = ['black', 'blue', 'red', 'yellow'];
+    const colors = [
+      'black',
+      'blue',
+      'red',
+      'yellow',
+      'brown',
+      'orange',
+      'purple',
+    ];
     const pixel = document.getElementsByClassName('color');
-    for (let i = 0; i < pixel.length; i += 1) {
-      pixel[i].style.backgroundColor = colors[i];
+    pixel[0].style.backgroundColor = 'black';
+    for (let i = 1; i < pixel.length; i += 1) {
+      pixel[i].style.backgroundColor = colors[Math.floor(Math.random() * (7 - 1) + 1)];
     }
   }
   setupColorPalette();
