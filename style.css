@@ -34,22 +34,15 @@ ul {
 }
 
 #pixel-board {
-  display: table;
-  margin-left: auto;
-  margin-right: auto;
-  border-collapse: collapse;
-  width: 5em;
-  height: 5em;
+  display: inline-block;
+  width: 450px;
+  position: relative;
 }
 
-#pixel-board tr {
-    line-height:0;
-    height: 0;
-}
-
-#pixel-board td {
-
+.pixel {
+  display: block;
   padding: 40px;
   border: 1px groove black;
-  background-color: none;
+  background-color: white;
+  float: left;
 }
