@@ -6,3 +6,10 @@
     height: 100px;
 }
 
+#pixel-board {
+    border-collapse: collapse;
+}
+.pixel {
+    width: 37px;
+    height: 37px;
+}
