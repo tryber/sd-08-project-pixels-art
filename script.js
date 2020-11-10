@@ -84,4 +84,4 @@ const boardBuilder = (size = 5) => {
 //   //console.log(document.getElementById("board-size").value);
 // });ma
 
-//boardBuilder(5);
+boardBuilder(5);
