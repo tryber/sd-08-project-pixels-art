@@ -11,46 +11,75 @@
 <body>
     <h1 id="title">Paleta de Cores</h1>
     <section id="color-palette">
-        <button class="color black" id="black"></button>
-        <button class="color green" id="green"></button>
-        <button class="color red" id="red"></button>
-        <button class="color blue" id="blue"></button>
+        <button class="color selected" id="black"></button>
+        <button class="color" id="green"></button>
+        <button class="color" id="red"></button>
+        <button class="color" id="blue"></button>
     </section>
 
     <div id="clear-board">
-        <input type="button" value="Limpar" onclick= "limpar()">
+        <button id="clear-board" type="reset" value="Limpar" type="reset" onclick="window.location.reload()">Limpar</button>
     </div>
 
     <section class="board" id="pixel-board">
-        <div class="pixel" onclick="colorir(this)"></div>
-        <div class="pixel" onclick="colorir(this)"></div>
-        <div class="pixel" onclick="colorir(this)"></div>
-        <div class="pixel" onclick="colorir(this)"></div>
-        <div class="pixel" onclick="colorir(this)"></div>
-        <div class="pixel" onclick="colorir(this)"></div>
-        <div class="pixel" onclick="colorir(this)"></div>
-        <div class="pixel" onclick="colorir(this)"></div>
-        <div class="pixel" onclick="colorir(this)"></div>
-        <div class="pixel" onclick="colorir(this)"></div>
-        <div class="pixel" onclick="colorir(this)"></div>
-        <div class="pixel" onclick="colorir(this)"></div>
-        <div class="pixel" onclick="colorir(this)"></div>
-        <div class="pixel" onclick="colorir(this)"></div>
-        <div class="pixel" onclick="colorir(this)"></div>
-        <div class="pixel" onclick="colorir(this)"></div>
-        <div class="pixel" onclick="colorir(this)"></div>
-        <div class="pixel" onclick="colorir(this)"></div>
-        <div class="pixel" onclick="colorir(this)"></div>
-        <div class="pixel" onclick="colorir(this)"></div>
-        <div class="pixel" onclick="colorir(this)"></div>
-        <div class="pixel" onclick="colorir(this)"></div>
-        <div class="pixel" onclick="colorir(this)"></div>
-        <div class="pixel" onclick="colorir(this)"></div>
-        <div class="pixel" onclick="colorir(this)"></div>
+        <div class="pixel" event="colorChange"></div>
+        <div class="pixel" event="colorChange"></div>
+        <div class="pixel" event="colorChange"></div>
+        <div class="pixel" event="colorChange"></div>
+        <div class="pixel" event="colorChange"></div>
+        <div class="pixel" event="colorChange"></div>
+        <div class="pixel" event="colorChange"></div>
+        <div class="pixel" event="colorChange"></div>
+        <div class="pixel" event="colorChange"></div>
+        <div class="pixel" event="colorChange"></div>
+        <div class="pixel" event="colorChange"></div>
+        <div class="pixel" event="colorChange"></div>
+        <div class="pixel" event="colorChange"></div>
+        <div class="pixel" event="colorChange"></div>
+        <div class="pixel" event="colorChange"></div>
+        <div class="pixel" event="colorChange"></div>
+        <div class="pixel" event="colorChange"></div>
+        <div class="pixel" event="colorChange"></div>
+        <div class="pixel" event="colorChange"></div>
+        <div class="pixel" event="colorChange"></div>
+        <div class="pixel" event="colorChange"></div>
+        <div class="pixel" event="colorChange"></div>
+        <div class="pixel" event="colorChange"></div>
+        <div class="pixel" event="colorChange"></div>
+        <div class="pixel" event="colorChange"></div>
     </section>
 
-
-
+    <!-- <form name="selectForm">
+        <p>
+          <label for="tipoMusica">Escolha alguns tipos de música, em seguida, clique no botão abaixo:</label>
+          <select id="tipoMusica" name="tipoMusica" multiple="multiple">
+            <option selected="selected">R&B</option>
+            <option>Jazz</option>
+            <option>Blues</option>
+            <option>New Age</option>
+            <option>Classico</option>
+            <option>Ópera</option>
+          </select>
+        </p>
+        <p><input id="btn" type="button" value="Quantos foram selecionados?" /></p>
+      </form>
+      
+      <script>
+      function howMany(selectObject) {
+        var numeroSelecionadas = 0;
+        for (var i = 0; i < selectObject.options.length; i++) {
+          if (selectObject.options[i].selected) {
+            numeroSelecionadas++;
+          }
+        }
+        return numeroSelecionadas;
+      }
+      
+      var btn = document.getElementById("btn");
+      btn.addEventListener("click", function(){
+        alert('Total de opções selecionadas: ' + howMany(document.selectForm.tipoMusica))
+      });
+      </script> -->
 
 
 
