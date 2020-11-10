@@ -21,7 +21,7 @@ function createPixels() {
 createPixels()
 
 //Definir a cor selecionada
-let color = document.querySelectorAll("#color-palette")[0];
+let color = document.querySelector("#color-palette");
 let selected = document.getElementsByClassName("color selected");
 function select (event) {
     for (var i = 0; i < selected.length; i+= 1) {
@@ -30,6 +30,23 @@ function select (event) {
     event.target.className = "color selected";
 }
 color.addEventListener("click", select)
+
+//Preencher as cores do pixel
+let tabela = document.querySelector("#pixel-board");
+tabela.addEventListener("click", function (event) {
+    let selectColor = document.querySelector(".selected");
+    event.target.style.backgroundColor = selectColor.innerHTML;
+})
+
+//Botão de limpar
+let pixel = document.querySelectorAll(".pixel")
+let cleanButton = document.querySelector("#clear-board")
+cleanButton.addEventListener("click", function () {
+    for (var i = 0; i < pixel.length; i += 1) {
+        pixel[i].style.backgroundColor = "white";
+    }
+})
+
 
 
 
