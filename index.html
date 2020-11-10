@@ -7,30 +7,43 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1 id="title">Paleta de Cores</h1>
+  <!-- Header and navbar -->
+  <header>
+    <h1 id="title">Paleta de Cores</h1>
+    <nav>
+      <a href="https://sdayube.github.io/">Portfólio</a>
+      <a href="https://www.linkedin.com/in/silvio-dayube/" target="#blank">LinkedIn</a>
+      <a href="https://github.com/sdayube" target="#blank">GitHub</a>
+    </nav>
+  </header>
 
-  <!-- Color palette -->
-  <section id="color-palette" class="palette">
-    <div class="color black"></div>
-    <div class="color first"></div>
-    <div class="color second"></div>
-    <div class="color third"></div>
-  </section>
+  <main>
+    <!-- Color palette -->
+    <section id="color-palette" class="palette">
+      <div class="color black"></div>
+      <div class="color first"></div>
+      <div class="color second"></div>
+      <div class="color third"></div>
+    </section>
 
-  <!-- Controller section -->
-  <section class="controller">
-    <!-- Clear colors -->
-    <button id="clear-board" class="button">Limpar</button><br>
+    <!-- Controller section -->
+    <section class="controller">
+      <!-- Board generator -->
+      <label for="sizer">Tamanho (5-50): </label>
+      <input type="number" name="sizer" id="board-size" min="1" max="50">
+      <button id="generate-board">VQV</button><br>
+      <!-- Clear colors -->
+      <button id="clear-board" class="button">Limpar</button>
+      <button id="regen-colors" class="button">Novas cores!</button>
+    </section>
 
-    <!-- Board generator -->
-    <label for="sizer">Tamanho do quadro (min 5, max 50): </label>
-    <input type="number" name="sizer" id="board-size" min="1" max="50">
-    <button id="generate-board">VQV</button>
-  </section>
-
-  <!-- Pixel board -->
-  <section id="pixel-board" class="pixel-board">
-  </section>
+    <!-- Pixel board -->
+    <section id="pixel-board" class="pixel-board">
+    </section>
+  </main>
+  <footer>
+    <p>Desenvolvido por <a href="https://sdayube.github.io/">Silvio Dayube</a> no curso da <a href="https://www.betrybe.com/" target="#blank">Trybe</a></p>
+  </footer>
   <script src="script.js"></script>
 </body>
 </html>
