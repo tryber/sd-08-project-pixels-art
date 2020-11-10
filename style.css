@@ -1,0 +1,31 @@
+body {
+  line-height: 0;
+}
+
+.palette {
+  display: inline-flex;
+  height: 50px;
+  width: 200px;
+}
+
+.color {
+  border: black solid 1px;
+  height: 40px;
+  margin: 5px;
+  width: 40px;
+}
+
+.pixel {
+  background-color: white;
+  border: black solid 1px;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+}
+
+button {
+  border-radius: 7;
+  height: 25px;
+  margin: 15px;
+  width: 120px;
+}
