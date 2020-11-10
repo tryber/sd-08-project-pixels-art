@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;   
+}
+
+h1 {
+    margin: 10px;
+}
+
+.color {
+    border: 1px solid black;
+    width: 40px;
+    height: 40px;
+    list-style-type: none;
+    display: inline-block;
+    margin: 10px;
+}
+
+.selected {
+    border: 1px solid black;
+    width: 40px;
+    height: 40px;
+    list-style-type: none;
+    display: inline-block;
+    margin: 10px;
+}
+
+#pixel-board {   
+    width: 240px;
+    height: 240px;    
+    margin: 10px;
+}
+
+.pixel {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    list-style-type: none;
+    display: inline-block;    
+}
