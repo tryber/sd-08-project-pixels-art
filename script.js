@@ -1,3 +1,7 @@
+window.onload = function () {
+  document.querySelectorAll(".color")[0].classList.add("selected");
+};
+
 function createDivs() {
   const arrayColor = ["black", "purple", "red", "green"];
   const palletDiv = document.getElementById("color-palette");
