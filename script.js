@@ -4,7 +4,7 @@ function createDivColor() {
   for (let i = 0; i < 4; i += 1) {
     let divChild = document.createElement("div");
     divChild.className = "color";
-    let colors = ["black", "yellom", "green", "blue"];
+    let colors = ["black", "yellow", "green", "blue"];
     divChild.style.backgroundColor = colors[i];
     divColor.appendChild(divChild);
   }
