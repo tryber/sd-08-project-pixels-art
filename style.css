@@ -15,3 +15,10 @@
   background-color: white;
   display: inline-block;  
 }
+
+#pixel-board {
+  width: 40px;
+  height: 40px;
+  border-width: 1px;
+  border-color: black;
+}
