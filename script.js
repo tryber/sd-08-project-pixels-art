@@ -16,14 +16,14 @@ function classSelected() {
     const tagClass = classColors[index];
 
     tagClass.addEventListener('click', function (event) {
-        for (let i = 0; i < classColors.length; i += 1) {
+      for (let i = 0; i < classColors.length; i += 1) {
                 // Remover classe selected caso ja exista
-            if (classColors[i].classList.contains('selected')) {
-                classColors[i].classList.remove('selected');
-              }
-            event.target.classList.add('selected');
-          }
-      });
+          if (classColors[i].classList.contains('selected')) {
+              classColors[i].classList.remove('selected');
+            }
+          event.target.classList.add('selected');
+        }
+    });
   }
 }
 classSelected();
@@ -34,9 +34,9 @@ function changeColor() {
 
   for (let index = 0; index < classPixel.length; index += 1) {
     classPixel[index].addEventListener('click', function (event) {
-        const currentAtual = window.getComputedStyle(document.querySelector('.selected')).backgroundColor;
-        event.target.style.backgroundColor = currentAtual;
-      });
+      const currentAtual = window.getComputedStyle(document.querySelector('.selected')).backgroundColor;
+      event.target.style.backgroundColor = currentAtual;
+    });
   }
 }
 changeColor();
@@ -51,8 +51,8 @@ function clearPixels() {
   const classPixel = document.querySelectorAll('.pixel');
   button.addEventListener('click', function () {
     for (let index = 0; index < classPixel.length; index += 1) {
-        classPixel[index].style.backgroundColor = 'white';
-      }
+      classPixel[index].style.backgroundColor = 'white';
+    }
   });
 }
 clearPixels();
