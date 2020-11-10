@@ -5,7 +5,6 @@ function createColorPallete(n) {
 	for (let index = 0; index < n; index += 1) {
         const createColorElement = document.createElement('li');
 		createColorElement.className = "color";
-        createColorElement.innerHTML = "color" + (index + 1);
         colorPaletteContainer.appendChild(createColorElement);
 	};
 };
@@ -30,7 +29,6 @@ function createPixelBoard(number) {
 	for (let index1 = 0; index1 < number; index1 += 1) {
 		const createPixelElement = document.createElement('li');
 		createPixelElement.className = "pixel";
-		createPixelElement.innerHTML = "pixel";
         createPixelElement.style.backgroundColor = 'white';
         createPixelElement.style.color = 'white';
 		pixelBoardContainer.appendChild(createPixelElement);
@@ -38,3 +36,14 @@ function createPixelBoard(number) {
 };
 
 createPixelBoard(25);
+
+// Selecting first color (black) as default
+function selectColor() {
+	var colors = document.getElementsByClassName('color');
+
+	const initialColor = colors[0];
+
+	initialColor.className += ' selected';
+};
+selectColor();
+
