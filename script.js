@@ -14,3 +14,4 @@ window.onload = function(){  //seleciona a cor black assim ue carrega a pagina
 function limpar(){
     document.getElementById('pixel-board').style.backgroundColor = 'white';
 }
+limpar();
