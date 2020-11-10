@@ -9,3 +9,16 @@
     border-style: solid;
     border-width: 1px;
 }
+
+#pixel-board {
+    width: 45%;
+}
+
+.pixel {
+    background-color: 'white';
+    width: 100px;
+    height: 100px;
+    display: inline-block;
+    border-style: solid;
+    border-width: 1px;
+}
