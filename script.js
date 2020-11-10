@@ -27,8 +27,8 @@ window.onload = function(){
     const paleta = document.querySelector('#color-palette')
 
     const todasCores = document.querySelectorAll('.color'); 
-    // for(let index = 0; index < todasCores.length; index +=1){}
-    addEventListener('click', function(event){
+    
+    paleta.addEventListener('click', function(event){
         if(event.target.className === 'color'){     
             for(let i = 0; i < todasCores.length; i++){
                 todasCores[i].className = 'color';
@@ -37,47 +37,11 @@ window.onload = function(){
             event.target.className = "color selected"
         }else{
             event.target.className = "color";
-        }
-       
+        }      
     
-    })
+    });
+    
 
-    /*
-    if(todasCores[0].className === "color selected"){
-        todasCores[1].className = 'color'
-        todasCores[2].className = 'color'
-        todasCores[3].className = 'color'
-    }else if(todasCores[1].className === 'color selected'){
-        todasCores[0].className = 'color'
-        todasCores[2].className = 'color'
-        todasCores[3].className = 'color'
-    }else if(todasCores[2].className === 'color selected'){
-        todasCores[0].className = 'color'
-        todasCores[1].className = 'color'
-        todasCores[3].className = 'color'
-    }else if(todasCores[3].className === 'color selected'){
-        todasCores[0].className = 'color'
-        todasCores[1].className = 'color'
-        todasCores[2].className = 'color'
-    }
-
-    /*
-    function selected(){
-        const paleta = document.querySelector('#color-pallete')
-        const cor1 = document.querySelectorAll('.color')[0];
-        
-        paleta.addEventListener('click', function(event){
-            const divSelected = document.querySelector('.selected')
-            if(divSelected === null){
-                event.target.className = "color selected";
-            }else{
-                event.target.className = "color";
-            }
-        }) 
-
-            
-    }
-    selected();*/
 
 
 
