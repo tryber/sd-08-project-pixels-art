@@ -25,3 +25,16 @@
 #color4 {
     background-color: green;
 }
+
+#pixel-board {
+    position: absolute;
+    top: 150px;
+}
+
+.pixel {
+    border: black solid 1px;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    margin: -1px;
+}
