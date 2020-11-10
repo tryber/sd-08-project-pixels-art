@@ -9,32 +9,31 @@
 </head>
 
 <body>
-    <h1 id="title">Paleta de Cores</h1>
 
 
-    <div id="color-palette">
-        <div class="color cor1 selected"></div>
-        <div class="color cor2"></div>
-        <div class="color cor3"></div>
-        <div class="color cor4"></div>
-    </div>
+    <section>
+        <h1 id="title">Paleta de Cores</h1>
+    </section>
 
+    <section>
+        <div id="color-palette">
+            <div class="color cor1 selected"></div>
+            <div class="color cor2"></div>
+            <div class="color cor3"></div>
+            <div class="color cor4"></div>
+        </div>
+    </section>
 
-    <br>
-    <br>
+    <section>
+        <button id="clear-board">Limpar</button>
+        <input id="board-size" type="number" value="5" min="1" max='50'></input>
+        <button id='generate-board'>VQV</button>
+    </section>
 
-    <button id="clear-board">Limpar</button>
-
-    <br>
-    <br>
-    <input id="board-size" type="number" value="5" min="1" max='50'></input>
-    <button id='generate-board'>VQV</button>
-    <br>
-    <br>
-
-    <div id="pixel-board">
-
-    </div>
+    <section>
+        <div id="pixel-board">
+        </div>
+    </section>
 
 
     <script src="./script.js"></script>

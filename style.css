@@ -11,8 +11,9 @@ body {
   margin: 10px
 }
 
+
 #color-palette{
-  padding: 5px;
+  padding: 1px;
   display: inline;
 }
 
@@ -21,7 +22,6 @@ body {
     height: 40px;
     border: 1px solid black;
     display: inline-block;
-    margin: 1px;
 }
 .cor1 {
   background-color: black;
@@ -41,16 +41,20 @@ body {
     padding: 2px;
 }
 
+
+section {
+   margin-top: 10px;
+   margin-bottom: 10px;
+   padding: 1px;
+}
+
 #pixel-board {
-    margin: 0;
-    padding: 0;
     border: none;
     display: table;
 }
+
 .pixel-row {
     display: table-row;
-    margin: 0;
-    padding: 0;
 }
 .pixel {
     width: 40px;
@@ -58,30 +62,30 @@ body {
     border: 1px solid rgb(0, 0, 0);
     display: table-cell;
     background-color: white;
-    margin: 0;
-    padding: 0;
 }
 
 
 button {
-  border: 1px solid black;
-  border-radius: 5px;
-  padding: 4px;
-  min-width: 50px;
-  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(93, 93, 93);
+  border-radius: 8px;
+  padding: 6px;
+  min-width: 60px;
+  background-color: rgb(243, 243, 243);
   text-decoration: none;
+  margin: 1px;
 }
 button:hover  {
-  background-color: rgb(228, 228, 228);
+  border: 1.5px solid rgb(61, 61, 61);
 }
 input {
-  border: 1px solid black;
-  border-radius: 5px;
-  padding: 4px;
-  min-width: 50px;
-  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(93, 93, 93);
+  border-radius: 8px;
+  padding: 6px;
+  min-width: 60px;
+  background-color: rgb(243, 243, 243);
   text-decoration: none;
+  margin: 1px;
 }
 input:hover  {
-  background-color: rgb(228, 228, 228);
+  border: 1.5px solid rgb(61, 61, 61);
 }
