@@ -11,10 +11,14 @@
 }
 
 .pixel-board {
-  display: flex;
+  display: table-cell;
+  border-collapse: collapse;
 }
 
 .pixel {
+  display: table-cell;
+  border-collapse: collapse;
+  background-color: white;
   border: 1px solid black;
   height: 40px;
   width: 40px;

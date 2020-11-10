@@ -23,7 +23,7 @@ const cores = document.querySelectorAll('.color');
 window.onload = function() {
     preto.style.backgroundColor = 'black';
     preto.classList.add('selected');
-}
+};
 
 function corDeFundo() {
     if (cores.className === 'amarelo') {
