@@ -1,9 +1,9 @@
-let board = document.querySelector("#pixel-board");
+const board = document.querySelector('#pixel-board');
 
 let boardSide = 5;
 
-let inputValue = () => {
-  const input = document.querySelector("#board-size");
+const inputValue = () => {
+  const input = document.querySelector('#board-size');
   boardSide = input.value;
 
   if (boardSide >= 1 && boardSide <= 5) {
@@ -13,18 +13,18 @@ let inputValue = () => {
   }
 };
 
-let generateBoardColumns = (n) => {
+const generateBoardColumns = (n) => {
   for (let i = 0; i < n; i += 1) {
-    const div = document.createElement("div");
-    div.className = "pixel";
+    const div = document.createElement('div');
+    div.className = 'pixel';
 
     board.lastElementChild.appendChild(div);
   }
 };
 
-let generateBoardLines = (n) => {
+const generateBoardLines = (n) => {
   for (let i = 0; i < n; i += 1) {
-    const div = document.createElement("div");
+    const div = document.createElement('div');
 
     board.appendChild(div);
 
@@ -34,7 +34,7 @@ let generateBoardLines = (n) => {
 
 generateBoardLines(5);
 
-let removeBoard = () => {
+const removeBoard = () => {
   const oldBoard = board.children;
 
   for (let i = 0; oldBoard[i]; i) {
@@ -42,9 +42,9 @@ let removeBoard = () => {
   }
 };
 
-const generateButton = document.querySelector("#generate-board");
+const generateButton = document.querySelector('#generate-board');
 
-let generateNewBoard = () => {
+const generateNewBoard = () => {
   removeBoard();
 
   if (boardSide > 0) {
@@ -54,29 +54,29 @@ let generateNewBoard = () => {
   }
 };
 
-let checkInputValue = () => {
+const checkInputValue = () => {
   inputValue();
 
   if (!boardSide) {
-    alert("Board inválido!");
+    alert('Board inválido!');
   }
 
   generateNewBoard();
 };
 
-generateButton.addEventListener("click", checkInputValue);
+generateButton.addEventListener('click', checkInputValue);
 
-const colorList = document.querySelectorAll(".color");
+const colorList = document.querySelectorAll('.color');
 
-const black = document.querySelector(".black");
-black.classList.add("selected");
-black.style.backgroundColor = "black";
+const black = document.querySelector('.black');
+black.classList.add('selected');
+black.style.backgroundColor = 'black';
 
-const second = document.querySelector(".second");
-const third = document.querySelector(".third");
-const fourth = document.querySelector(".fourth");
+const second = document.querySelector('.second');
+const third = document.querySelector('.third');
+const fourth = document.querySelector('.fourth');
 
-let handleRandomColors = () => {
+const handleRandomColors = () => {
   const red = Math.floor(Math.random() * 255);
   const blue = Math.floor(Math.random() * 255);
   const green = Math.floor(Math.random() * 255);
@@ -88,53 +88,51 @@ second.style.backgroundColor = handleRandomColors();
 third.style.backgroundColor = handleRandomColors();
 fourth.style.backgroundColor = handleRandomColors();
 
-let removeSelectedClass = () => {
+const removeSelectedClass = () => {
   for (let i = 0; i < colorList.length; i += 1) {
-    colorList[i].classList.remove("selected");
+    colorList[i].classList.remove('selected');
   }
 };
 
-let palette = document.querySelector("#color-palette");
+const palette = document.querySelector('#color-palette');
 
 let selectColor = (event) => {
-  if (event.target.classList.contains("color")) {
-    if (event.target.className != "selected") {
+  if (event.target.classList.contains('color')) {
+    if (event.target.className !== 'selected') {
       removeSelectedClass();
 
-      event.target.classList.add("selected");
+      event.target.classList.add('selected');
     }
-  } else {
-    return;
   }
 };
 
-palette.addEventListener("click", selectColor);
+palette.addEventListener('click', selectColor);
 
-let selectedColor = () => {
+const selectedColor = () => {
   for (let i = 0; i < colorList.length; i += 1) {
-    if (colorList[i].classList.contains("selected")) {
+    if (colorList[i].classList.contains('selected')) {
       return colorList[i].style.backgroundColor;
     }
   }
 
-  return "";
+  return '';
 };
 
-let boardColors = (event) => {
+const boardColors = (event) => {
   const color = selectedColor();
 
   event.target.style.backgroundColor = color;
 };
 
-board.addEventListener("click", boardColors);
+board.addEventListener('click', boardColors);
 
-let button = document.querySelector("#clear-board");
-let pixel = document.querySelectorAll(".pixel");
+const button = document.querySelector('#clear-board');
+const pixel = document.querySelectorAll('.pixel');
 
-let clearBoard = () => {
+const clearBoard = () => {
   for (let i = 0; i < pixel.length; i += 1) {
-    pixel[i].style.backgroundColor = "white";
+    pixel[i].style.backgroundColor = 'white';
   }
 };
 
-button.addEventListener("click", clearBoard);
+button.addEventListener('click', clearBoard);
