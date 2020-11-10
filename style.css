@@ -14,11 +14,6 @@ body {
   width: 210px;
 }
 
-.boardLines {
-  height: 42px;
-  width: 210px;
-}
-
 .color {
   border: black solid 1px;
   height: 40px;
@@ -27,13 +22,13 @@ body {
 }
 
 .pixel {
-  background-color: 'white';
+  background-color: white;
   border: black solid 1px;
   height: 40px;
   width: 40px;
 }
 
-.btn-clear {
+button {
   border-radius: 7;
   height: 25px;
   margin: 15px;

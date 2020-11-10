@@ -8,6 +8,25 @@ function clearBoard() {
 const btn = document.getElementById('clear-board');
 btn.addEventListener('click', clearBoard);
 
+const btnGenerate = document.getElementById('generate-board');
+btnGenerate.addEventListener('click', generateBoard);
+
+let boardSize = document.getElementById('board-size')
+
+let numberOfLines = 5
+
+function generateBoard() {
+  apagaPixelBoard();
+  if (boardSize.value < 5){
+    numberOfLines = 5
+  } else if (boardSize.value >= 5 && boardSize.value <= 50){
+    numberOfLines = boardSize.value
+  } else if (boardSize.value > 50){
+    numberOfLines = 50
+  }
+  geraPixelBoard();
+}
+
 const cores = ['#000000'];
 
 function selecionaCor(event) {
@@ -64,12 +83,10 @@ function pintaPixel(event) {
 const pixelBoard = document.getElementById('pixel-board');
 
 function geraPixel(index) {
-  for (let pos = 0; pos < 5; pos += 1) {
+  for (let pos = 0; pos < numberOfLines; pos += 1) {
     const pixel = document.createElement('div');
     const lines = document.querySelectorAll('.boardLines')
     pixel.className = 'pixel';
-    pixel.style.width = '40px'
-    pixel.style.height = '40px'
     pixel.style.backgroundColor = '#FFFFFF';
     pixel.addEventListener('click', pintaPixel);
     lines[index].append(pixel);
@@ -77,11 +94,17 @@ function geraPixel(index) {
 }
 
 function geraPixelBoard() {
-  for (let index = 0; index < 5; index += 1) {
-    const boardLine = document.createElement('div')
-    boardLine.className = 'boardLines'
-    pixelBoard.append(boardLine)
+  for (let index = 0; index < numberOfLines; index += 1) {
+    const boardLine = document.createElement('div');
+    boardLine.className = 'boardLines';
+    pixelBoard.append(boardLine);
     geraPixel(index);
+  }
+}
+
+function apagaPixelBoard() {
+  for (let index = 0; index < numberOfLines; index += 1) {
+    pixelBoard.lastChild.remove()
   }
 }
 
