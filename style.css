@@ -1,0 +1,31 @@
+#cor1 {
+    background-color: black;
+    border: 1px solid black;
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+}
+
+#cor2 {
+    background-color: green;
+    border: 1px solid black;
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+}
+
+#cor3 {
+    background-color: red;
+    border: 1px solid black;
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+}
+
+#cor4 {
+    background-color: blue;
+    border: 1px solid black;
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+}
