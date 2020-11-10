@@ -50,18 +50,30 @@ function removeSelected(){
     }
 }
 
-
-function colorSelected(){    
+function addSelected(){    
     ulColor.addEventListener("click", function(event){         
             removeSelected();
             if (event.target.className !== "color selected"){
                 event.target.className = "color selected";
-            }                    
+                
+            }            
+                            
     });     
 }
-colorSelected();
+addSelected();
+
+let ulPixel = document.querySelector("#pixel-board");
+let colorSelect = document.querySelector(".color.selected").style.backgroundColor;
+
+function colorPixel(){
+
+    ulPixel.addEventListener("click", function(event){
+
+        event.target.style.backgroundColor = colorSelect;       
+
+    });
+}
+colorPixel();
 
 
-
-
-console.log(ulColor);
+console.log(colorSelect);
