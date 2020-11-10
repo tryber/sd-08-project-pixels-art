@@ -69,6 +69,7 @@ const boardBuilder = (size = 5) => {
     }
     board.innerHTML += `<div>`;
   }
+
   //document.getElementById("board-size").value = size;
 };
 
