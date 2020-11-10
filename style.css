@@ -35,6 +35,7 @@ ul {
 
 #pixel-board {
   display: inline-block;
+  margin-left: 30%;
   width: 450px;
   position: relative;
 }

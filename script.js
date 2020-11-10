@@ -24,14 +24,6 @@ function paletaCores() {
 }
 paletaCores();
 
-function selecionaCor() {
-  'click',
-    function (selecionado) {
-      let blackColor = document.getElementById('color-palette')
-        .firstElementChild.style.backgroundColor;
-    };
-}
-
 function selectedColor() {
   let quadros = document.getElementById('color-palette').children;
   let paleta = document.getElementById('color-palette');
@@ -46,8 +38,16 @@ function selectedColor() {
     }
   });
 }
-selectColor();
+selectedColor();
 
+function pintaColor () {
+let quadroPixels = document.getElementById('pixel-board');
+quadroPixels.addEventListener('click', function () {
+let selectedColor = document.querySelector('.selected').style.backgroundColor;
+event.target.style.backgroundColor = selectedColor;
+})
+}
+pintaColor()
 function quadroPixels() {
   const numQuadrados = 25;
   const squareContainer = document.getElementById('pixel-board');
