@@ -42,21 +42,23 @@ function createColorPallet() {
 
 createColorPallet();
 
+let quantPixels = 5;
+
 function criaQuadro() {
-    let quantLines = 5;
-    let quantPixelPerLine = 5;
-    let addBorderSize = 2 * quantPixelPerLine;
+    let addBorderSize = 2 * quantPixels;
     let pixelSize = 40;
 
     let quadro = document.createElement('div');
     quadro.id = 'pixel-board';
-    let quadroWidth = quantPixelPerLine * pixelSize + addBorderSize + 'px';
+    let quadroWidth = quantPixels * pixelSize + addBorderSize + 'px';
     quadro.style.width = quadroWidth;
     quadro.style.maxWidth = quadroWidth;
     quadro.style.display = 'block';
     body.appendChild(quadro);
 
-    for (let i = 0; i < (quantPixelPerLine * quantLines); i += 1) {
+    let getPixelBoard = document.querySelector('#pixel-board');
+
+    for (let i = 0; i < (quantPixels * quantPixels); i += 1) {
         let div = document.createElement('div');
         div.style.display = 'inline-block';
         div.className = 'pixel';
@@ -66,27 +68,28 @@ function criaQuadro() {
         div.style.border = '1px solid black'
 
 
-        div.addEventListener('click', function(event){
+        div.addEventListener('click', function (event) {
             let getBgColor = document.querySelector('.selected').style.backgroundColor;
             event.target.style.backgroundColor = getBgColor;
         });
 
-        quadro.appendChild(div);
+        getPixelBoard.appendChild(div);
     }
 
 }
-createButton();
+createInput();
+createButtonClear();
 criaQuadro();
 
 function selectColor(event) {
     let colorPixels = document.querySelectorAll('.color');
-    for (let i = 0; i < colorPixels.length; i += 1){
+    for (let i = 0; i < colorPixels.length; i += 1) {
         colorPixels[i].className = 'color';
     }
     event.target.className = 'color selected';
 }
 
-function createButton(){
+function createButtonClear() {
     let button = document.createElement('button');
     let getPallet = document.querySelector('#color-palette')
     button.id = 'clear-board';
@@ -94,9 +97,9 @@ function createButton(){
     button.style.display = 'block';
     button.style.marginBottom = '4px'
 
-    button.addEventListener('click', function(event){
+    button.addEventListener('click', function (event) {
         let getAllPixels = document.querySelectorAll('.pixel');
-        for(let i = 0; i < getAllPixels.length; i += 1){
+        for (let i = 0; i < getAllPixels.length; i += 1) {
             getAllPixels[i].style.backgroundColor = 'white';
         }
     })
@@ -105,7 +108,35 @@ function createButton(){
 
 }
 
-function createInput(){
+//<input type="number" id="quantity" name="quantity" min="1" max="5"></input>
+
+function createInput() {
     let input = document.createElement('input');
     input.id = 'board-size';
+    input.setAttribute('type', 'number')
+    input.setAttribute('min', 1)
+    input.setAttribute('max', 50)
+    body.appendChild(input);
+
+    let button = document.createElement('button');
+    button.id = 'generate-board';
+    button.innerHTML = 'VQV';
+
+    button.addEventListener('click', function () {
+        let getInputValue = document.querySelector('#board-size').value;
+        if (getInputValue > 50) {
+            alert('Tamanho não pode ser maior que 50');
+        } else if (getInputValue == '') {
+            alert('Board inválido!');
+        } else if(getInputValue < 1){
+            alert('Insira um número maior que 0')
+        }else {
+            quantPixels = getInputValue;
+            let getPixelBoard = document.querySelector('#pixel-board');
+            body.removeChild(getPixelBoard);
+            criaQuadro();
+        }
+    })
+
+    body.appendChild(button);
 }
