@@ -1,0 +1,16 @@
+.color, .pixel{
+    border: 1px black solid;
+    display: inline-block;
+    max-width: 45%;
+    width: 40px;
+    height: 40px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.pixel{
+    background-color: white;
+}
+.line{
+    line-height: 0px;
+}
