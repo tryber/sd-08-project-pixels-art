@@ -4,14 +4,17 @@ body , div , span , ul , li , input , h1 { /* Codeclimate não deixa usar o '*' 
   padding: 0;
 }
 
+body {
+  height: 100vh;
+}
+
 .color-palette {
   align-items: center;
-  background-color: rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: center;
   list-style: none;
   overflow: hidden;
-  padding: 5px;
+  padding: 20px;
 }
 
 .color {
@@ -19,13 +22,13 @@ body , div , span , ul , li , input , h1 { /* Codeclimate não deixa usar o '*' 
   border-radius: 50%;
   height: 40px;
   margin: 5px;
-  transition: 0.1s;
+  transition: 0.2s;
   width: 40px;
 }
 
 .color:hover {
   cursor: pointer;
-  transform: scale(1.1);
+  transform: scale(1.1) translateY(-5px);
 }
 
 .pixel {
@@ -49,8 +52,17 @@ header {
   background-color: black;
   color: white;
   display: flex;
-  height: 60px;
+  height: 80px;
   justify-content: center;
+  position: fixed;
+  width: 100%;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding-top: 80px;
 }
 
 footer {
@@ -59,7 +71,8 @@ footer {
   bottom: 0;
   color: white;
   display: flex;
-  height: 40px;
+  font-size: 20px;
+  height: 60px;
   justify-content: center;
   position: fixed;
   width: 100%;
@@ -67,6 +80,7 @@ footer {
 
 footer a {
   color: orangered;
+  font-weight: 700;
   text-decoration: none;
 }
 
@@ -74,7 +88,7 @@ footer a {
   align-items: center;
   display: flex;
   justify-content: center;
-  padding: 20px 0;
+  margin-bottom: 20px;
 }
 
 .board {
@@ -83,13 +97,21 @@ footer a {
 }
 
 .input-group {
-  background-color: rgba(131, 200, 19, 0.2);
   border-radius: 8px;
   display: inline-block;
-  margin-left: 20px;
-  padding: 20px;
+  margin-left: 10px;
 }
 
-.controls label , .controls input , .controls button {
-  height: 30px;
+.controls input , .controls button {
+  height: 40px;
+}
+
+.controls input {
+  padding: 5px;
+  width: 140px;
+}
+
+.controls input::placeholder {
+  font-size: 14px;
+  text-align: center;
 }
