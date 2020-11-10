@@ -15,19 +15,19 @@
   padding: 50px;
 }
 
-.black {
+#black {
   background-color: black;
 }
 
-.red {
+#red {
   background-color: red;
 }
 
-.green {
+#green {
   background-color: green;
 }
 
-.blue {
+#blue {
   background-color: blue;
 }
 
@@ -42,4 +42,11 @@
   display: inline-block;
   height: 40px;
   width: 40px;
+}
+
+.selected {
+  border: 1px solid;
+  display: inline-block;
+  margin: 25px;
+  padding: 50px;
 }

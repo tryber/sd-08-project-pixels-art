@@ -1,9 +1,3 @@
-window.onload = function() {
-    const colorInit = document.querySelector('.black');
-    colorInit.className = 'color black select';
-}
-
-
 
 function addTable() {
   const table = document.querySelector('#pixel-board');
@@ -19,18 +13,41 @@ function addTable() {
 
 addTable();
 
-// function colorSelect() {
-//   const black = document.querySelector('.black');
-//   const red = document.querySelector('.red');
-//   const green = document.querySelector('.green');
-//   const blue = document.querySelector('.blue');
-//   const colorPalette = document.querySelector('#color-palette');
+function colorSelect() {
+  const colorPalette = document.querySelector('#color-palette');
+  const nameBlack = document.querySelector('#black');
+  const nameRed = document.querySelector('#red');
+  const nameGreen = document.querySelector('#green');
+  const nameBlue = document.querySelector('#blue');
+  let colorBack = document.querySelector('.color-sected');
+  let className = 'color';
 
-//   colorPalette.addEventListener('click', function(event) {
-//     const nome = event.target.className;
-//     if ()
-//   });
 
-// }
+  colorPalette.addEventListener('click', function(event) {
+    nameBlack.className = className;
+    nameRed.className = className;
+    nameGreen.className = className;
+    nameBlue.className = className;
 
-// colorSelect();
+    event.target.className = 'selected';
+    let cor = event.target.id;
+
+    console.log(cor);
+    });
+}
+
+colorSelect();
+
+function colorPaint() {
+  const table = document.querySelector('#pixel-board');
+
+  table.addEventListener('click', function(event) {
+  const color = document.querySelector('.color-selected').style.backgroundColor;
+
+  event.target.style.backgroundColor = color;
+
+  console.log(color);
+  });
+}
+
+colorPaint();
