@@ -61,3 +61,14 @@ let boardColors = (event) => {
 };
 
 board.addEventListener("click", boardColors);
+
+let button = document.querySelector("#clear-board");
+let pixel = document.querySelectorAll(".pixel");
+
+let clearBoard = () => {
+  for (let i = 0; i < pixel.length; i += 1) {
+    pixel[i].style.backgroundColor = "white";
+  }
+};
+
+button.addEventListener("click", clearBoard);

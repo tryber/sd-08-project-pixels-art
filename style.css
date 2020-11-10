@@ -21,6 +21,18 @@ header h1 {
   margin-right: 0;
 }
 
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#clear-board {
+  width: 210px;
+  height: 30px;
+  margin-top: 20px;
+}
+
 #pixels {
   display: flex;
   align-items: center;
