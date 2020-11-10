@@ -1,7 +1,5 @@
 window.onload = function(){
 
-    
-
     function createDiv(number){
         for(let i = 0; i < (number*number); i+=1){
             const pixelQuadro = document.querySelector('#pixel-board');
@@ -21,13 +19,13 @@ window.onload = function(){
 
    
     const colorBlack = document.getElementById('color1')
-
+    
     colorBlack.classList.add('selected')
 
     const paleta = document.querySelector('#color-palette')
 
     const todasCores = document.querySelectorAll('.color'); 
-    
+
     paleta.addEventListener('click', function(event){
         if(event.target.className === 'color'){     
             for(let i = 0; i < todasCores.length; i++){
@@ -35,13 +33,32 @@ window.onload = function(){
                     
             }
             event.target.className = "color selected"
-        }else{
+        }/*else{
             event.target.className = "color";
-        }      
-    
+        }*/
+        
     });
     
+    // function trocaCor(){
+    //     for(let i = 0; i < divCaixas.length)
+    // }
 
+    const divs = document.querySelectorAll('.pixel')
+    const board = document.querySelector('#pixel-board')
+    
+    
+    for(let i = 0; i < divs.length; i+=1){
+        const divIndividual = divs[i];
+        var fundo = document.querySelector('.selected')
+
+        board.addEventListener('click', function(event){
+            event.target.style.backgroundColor = fundo.style.backgroundColor;
+        })
+        
+
+
+
+    }
 
 
 
