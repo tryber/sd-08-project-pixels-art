@@ -1,7 +1,3 @@
-window.onload = function () {
-  generateBoardColumns(5);
-};
-
 const board = document.querySelector('#pixel-board');
 
 let boardSide = 5;
@@ -17,24 +13,22 @@ const inputValue = () => {
   }
 };
 
-const generateBoardPixels = (n) => {
+const generateBoard = (n) => {
   for (let i = 0; i < n; i += 1) {
-    const div = document.createElement('div');
-    div.className = 'pixel';
+    const line = document.createElement('div');
 
-    board.lastElementChild.appendChild(div);
+    board.appendChild(line);
+
+    for (let j = 0; j < n; j += 1) {
+      const pixel = document.createElement('div');
+      pixel.className = 'pixel';
+
+      line.appendChild(pixel);
+    }
   }
 };
 
-const generateBoardColumns = (n) => {
-  for (let i = 0; i < n; i += 1) {
-    const div = document.createElement('div');
-
-    board.appendChild(div);
-
-    generateBoardPixels(n);
-  }
-};
+generateBoard(5);
 
 const removeBoard = () => {
   const oldBoard = board.children;
@@ -50,9 +44,9 @@ const generateNewBoard = () => {
   removeBoard();
 
   if (boardSide > 0) {
-    generateBoardColumns(boardSide);
+    generateBoard(boardSide);
   } else {
-    generateBoardColumns(5);
+    generateBoard(5);
   }
 };
 
