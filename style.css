@@ -29,6 +29,11 @@ h1 {
   box-shadow: 2px 2px 5px rgb(82, 79, 79);
   
 }
+
+.selected {
+  box-shadow: 4px 4px 5px rgb(41, 39, 39)
+}
+
 div#color-palette {
   margin-top: 20px;
   margin-bottom: 40px;
