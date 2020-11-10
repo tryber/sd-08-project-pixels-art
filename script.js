@@ -17,6 +17,23 @@ function toColorDiv (color) {
 }
 toColorDiv(['black', 'green', 'blue', 'orange']);
 
+//requisito 4 
+//elemento 'pai' de 'pixel'
+
+const captureIdPixelBoard = document.getElementById('pixel-board');
+//laço responsável por criar 25 divs com id 'pixel'
+for (let index = 1; index <= 25; index += 1) {
+    let createIdPixel = document.createElement('div');
+    createIdPixel.className = 'pixel';
+    captureIdPixelBoard.appendChild(createIdPixel);
+}
+ 
+
+
+
+
+
+
     
 
 
