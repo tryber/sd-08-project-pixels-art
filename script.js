@@ -7,6 +7,4 @@ for (let i = 0; i < colorList.length; i += 1){
     div.className = 'color';
     div.style.backgroundColor = colorList[i];
     colorPalette.appendChild(div);
-
 }
-    console.log(div)
