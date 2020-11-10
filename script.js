@@ -48,9 +48,9 @@ const generateNewBoard = () => {
   removeBoard();
 
   if (boardSide > 0) {
-    generateBoardLines(boardSide);
+    generateBoardColumns(boardSide);
   } else {
-    generateBoardLines(5);
+    generateBoardColumns(5);
   }
 };
 
