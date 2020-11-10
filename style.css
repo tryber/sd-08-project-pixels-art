@@ -17,18 +17,29 @@ h1 {
 
 .button-clear {
   width: 100px;
-  margin-left: 70px;
+  margin: 20px;
+  display: block;
+}
+
+.button-board {
+  width: 100px;
+  margin: 20px;
+}
+
+.input-board {
+  width: 100px;
+  margin-right: 20px;
 }
 
 .board {
   margin: 20px;
-  width: 210px;
+  width: fit-content;
 }
 
 .lines {
   margin: 0;
   height: 40px;
-  width: 210px;
+  width: fit-content;
 }
 
 .pixel {
