@@ -31,14 +31,20 @@ window.onload = function () {
       'blue',
       'red',
       'yellow',
-      'brown',
+      'pink',
       'orange',
       'purple',
+      'gray',
     ];
     const pixel = document.getElementsByClassName('color');
     pixel[0].style.backgroundColor = 'black';
+    const index = [];
+    while (index.length < 4) {
+      const aux = Math.floor(Math.random() * (8 - 1) + 1);
+      if (index.indexOf(aux) === -1) index.push(aux);
+    }
     for (let i = 1; i < pixel.length; i += 1) {
-      pixel[i].style.backgroundColor = colors[Math.floor(Math.random() * (7 - 1) + 1)];
+      pixel[i].style.backgroundColor = colors[index[i]];
     }
   }
   setupColorPalette();
