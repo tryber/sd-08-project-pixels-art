@@ -48,8 +48,11 @@ input {
 .pixel-board {
   align-items: center;
   display: flex;
+  height: 210px;
   justify-content: center;
+  margin: 0 auto;
   margin-top: 20px;
+  width: 210px;
 }
 
 .pixel {
