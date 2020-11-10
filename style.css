@@ -25,14 +25,13 @@
     background-color: white;
     border: 1px solid black;
     height: 40px;
-    width: 40px;  
+    width: 40px;
 }
 
 #pixel-board {
-    padding-top: 0px;
     display: flex;
     width: 250px;
     height: 210px;
     flex-wrap: wrap;
-    align-content: start;
+    align-content: flex-start;
   }
