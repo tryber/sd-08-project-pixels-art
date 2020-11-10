@@ -1,5 +1,7 @@
 // criar 5 tr's e 5 td's em cada TR
 
+
+
 function creatingLinesAndCells() {
     const table = document.getElementById('pixel-board');
     for (let i = 0; i < 5; i += 1) {
@@ -17,3 +19,29 @@ function creatingLinesAndCells() {
 }
 
 creatingLinesAndCells();
+
+
+// REQUISITO 6
+
+let AllColors = document.getElementsByClassName('color');
+
+function SelectColor() {
+    AllColors[0].classList.add('selected');
+}
+SelectColor();
+
+// REQUISITO 7
+function clickinColor() {
+    for (let i of AllColors) {
+        i.addEventListener('click', AddingRemoving);
+    }
+
+}
+clickinColor();
+
+function AddingRemoving(event) {
+    for (let index = 0; index < AllColors.length; index += 1) {
+        AllColors[index].classList.remove('selected');
+        AllColors[index] = event.target.classList.add('selected');
+    }
+}
