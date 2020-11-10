@@ -15,7 +15,7 @@ function toColorDiv (color) {
         toColor.style.backgroundColor = color[index];
     }
 }
-toColorDiv(['orange', 'green', 'blue', 'pink']);
+toColorDiv(['black', 'green', 'blue', 'orange']);
 
     
 
