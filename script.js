@@ -18,10 +18,14 @@ for (let itens = 0; itens < Cores.length; itens += 1) {
 //botão para limpar quadro
 let btn = document.createElement("button");
 let endrebtn = document.getElementById('btn')
-endrebtn.appendChild(btn);
+btn.id = "clear-board";
+btn.innerText = "Limpar";
 btn.style.width = "200px";
-btn.style.height = "40px"
+btn.style.height = "40px";
 btn.style.marginLeft = "100px";
+endrebtn.appendChild(btn);
+// evento botão
+
 
 //quadro de pixels
 const quadroDePixels = document.getElementById("pixel-board");
