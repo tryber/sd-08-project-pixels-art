@@ -10,7 +10,7 @@ function createPaleteColorEle(){
     if (i === 0) {
     
         createele.style.backgroundColor = "black"
-        createele.className = "color" 
+        createele.className = "selected"  
       
        
         
@@ -19,7 +19,7 @@ function createPaleteColorEle(){
     else if(i == 1) {
       
         createele.style.backgroundColor = "red"
-        createele.className = "color"
+        createele.className = "color" 
         
         
         getpos.appendChild(createele)
@@ -246,7 +246,7 @@ for(let i = 0 ; i < pegaposicaopixels.length ; i ++)
 
 
 
-pegaposicaopixels[i].style.backgroundColor = "white"
+pegaposicaopixels[i].style.backgroundColor = "pink"
 
 
 
