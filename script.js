@@ -1,4 +1,4 @@
-let selecPixel = document.getElementById("pixel-bord");
+let selecPixel = document.getElementById("pixel-board");
 let tamanhoQuadro = 25;
 function tamanhoTabuleiro() {
   for (let i = 0; i < tamanhoQuadro; i += 1) {
@@ -34,7 +34,7 @@ function addCoresPaleta(cores) {
 
   for (let i = 0; i < classCor.length; i += 1) {
     classCor[i].style.backgroundColor = cores[i];
-    console.log(classCor[i]);
+    //console.log(classCor[i]);
   }
 }
 addCoresPaleta(cores);
@@ -48,8 +48,24 @@ function capturandoCor() {
     }
   }
 
-  let corP = document.querySelector(".selected");
+  let eleP = document.querySelector("#color-palette");
 
-  console.log(corP.style.backgroundColor);
+  eleP.addEventListener("click", function (event) {
+    let corSalva = event.target.style.backgroundColor;
+
+    let eleTela = document.querySelector("#pixel-board");
+    eleTela.addEventListener("click", function (event) {
+      event.target.style.backgroundColor = corSalva;
+    });
+  });
 }
 capturandoCor();
+
+function corIncial(){
+let x = document.querySelector("#pixel-board");
+ x.addEventListener('click',function(event){
+  event.target.style.backgroundColor = 'black';
+ })
+
+}
+corIncial()

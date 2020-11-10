@@ -14,7 +14,7 @@ width: 40px;
 border: 1px solid black;
 }
 
-#pixel-bord{
+#pixel-board{
 width: 210px;
 display: flex;
 flex-wrap: wrap;
