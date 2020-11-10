@@ -34,9 +34,9 @@ colorindoPixels()
 
 function createButton(){
     let button = document.createElement('button')
-    let divPai = document.getElementById('color-palette')
+    let divPai = document.getElementById('but')
     button.id = 'clear-board'
-    button.innerHTML = 'Clear'
+    button.innerHTML = 'Limpar'
     divPai.appendChild(button)
     button.addEventListener('click',function(){
         let pixel = document.querySelectorAll('.pixel')
