@@ -20,4 +20,22 @@ function colorsOptions() {
   }
 }
 
-window.onload = colorsOptions();
+function creatPixelBoard() {
+  const board = document.getElementById('pixel-board');
+  for (let i = 0; i < 5; i += 1) {
+    let pixelsLine = document.createElement('div');
+    pixelsLine.className = 'line';
+    board.appendChild(pixelsLine);
+    for (let i2 = 0; i2 < 5; i2 += 1) {
+    let pixelsColumn = document.createElement('div');
+    pixelsColumn.classList.add('pixel');
+    board.appendChild(pixelsColumn); 
+    }
+  }
+}
+
+creatPixelBoard();
+
+window.onload = function () {
+    colorsOptions();
+}

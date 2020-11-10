@@ -8,3 +8,12 @@
   margin-top: 1px;
   width: 10px;
 }
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 30%;
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+}
