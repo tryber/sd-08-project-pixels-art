@@ -15,6 +15,7 @@
 
 #pixel-board {
     display: table;
+    border-collapse: collapse;
 }
 
 .tr {
