@@ -7,26 +7,40 @@ window.onload = function () {
             frames[0].classList.add('selected')
         }
     }
-    firstColorSelected()
-    function ChangeColorOnClick() {
 
-       
+    firstColorSelected()
+    function changeClassOnClick() {
         let framesColor = document.querySelectorAll(".color")
-    
         for (let index = 0; index < framesColor.length; index += 1) {
-            framesColor[index].addEventListener('click',click)
-            
+            framesColor[index].addEventListener('click', click)
+
         }
-        function click(event){
-            {   
+        function click(event) {
+            {
                 let selectedColor = document.querySelector(".selected")
                 selectedColor.classList.remove('selected')
                 event.target.classList.add('selected');
             }
         }
-    
+
     }
-    ChangeColorOnClick()
+
+    changeClassOnClick()
+
+    function changeColor() {
+        let pixels = document.getElementsByClassName('pixel');
+        
+        
+        for (let index = 0; index < pixels.length; index += 1) {
+            pixels[index].addEventListener("click", changePixelColor)
+        }
+        function changePixelColor(event){
+            let currentColorSelected = window.getComputedStyle(document.querySelector(".selected")).backgroundColor;
+            event.target.style.backgroundColor = currentColorSelected;
+        }
+    }
+
+    changeColor()
 }
 
 function createColorPallete() {
