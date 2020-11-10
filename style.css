@@ -4,19 +4,15 @@
     font-family: Shiny Signature;
 }
 
-#color-palette
-{
-    position: absolute;
-}
-
 #color-palette .color
 {
-    padding: 15px;
-    margin: 60px 5px 10px 0px;
+    width: 30px;
+    height: 30px;
+    margin: 70px 5px 10px 0px;
     border: solid black 1px;
-    display: block;
+    display: inline-block;
     position: relative;
-    float: left;
+
 }
 
 #black
@@ -41,17 +37,13 @@
 
 #pixel-board
 {
-    position: absolute;
-    margin-top: 120px;
-    margin-left: 0px;
     width: 250px;
 }
 
 .pixel
 {
     margin: 0px;
-    display: block;
-    float: right;
+    display: inline-block;
     width: 40px;
     height: 40px;
     border: 1px solid black;

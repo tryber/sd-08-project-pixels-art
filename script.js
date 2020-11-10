@@ -1,6 +1,4 @@
-
-
-
+//adiciona quadro de 5x5 pixels
 for(let i = 0; i < 5; i += 1)
 {
     for(let j = 0; j < 5; j += 1)
@@ -15,22 +13,49 @@ for(let i = 0; i < 5; i += 1)
 
 
 
+// Cor selecionada do color-palette
 
+let findColor = document.getElementsByClassName("color");
+let findSelected = document.querySelector("selected");
 
-
-
-
-
-
-/*
-document.getElementById("color-palette").addEventListener("click", selectColor)
-
-
-
-function selectColor()
+for(let i of findColor)
 {
-    if()
+
+    i.addEventListener("click", function()
+    {
+        for(let i of findColor)
+    {
+        if(i.classList.contains("selected"))
+            i.classList.remove("selected")
+    }
+        if(!this.classList.contains("selected"))
+            this.classList.add("selected");
+    })
 }
 
-document.getElementById("pinta-pixel").style.backgroundColor = "black";
-*/
+// colorir quadro clicado
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// https://www.youtube.com/watch?v=kmW857my2fo
