@@ -24,10 +24,21 @@ function limpaGrade(botao) {
   }
 }
 
+//Função para gerar cores aleatórias.
+function geraCores () {
+  let cor = 'rgb(' + geraNum() + ',' + geraNum() + ',' + geraNum() + ')'
+  return (cor);
+}
+
+//Função para criar numeros aleatorios.
+function geraNum () {
+  let numRandom = Math.floor(Math.random() * 255);
+  return(numRandom);
+}
 
 //Criando quadrados modelo de cores para paleta.
 let paletaDeCor = document.getElementById('color-palette');
-let arrayDeCores = ['green', 'yellow', 'blue'];
+let arrayDeCores = [geraCores(), geraCores(), geraCores()];
 
 for (let index = 0; index < 4; index += 1) {
   let corDaPaleta = document.createElement('div');
@@ -76,25 +87,29 @@ botaoVQV.addEventListener('click', criaGrid);
 //Criando mosaico com as células a serem pintadas com argumento do usuário.
 function criaGrid (tamanhoGrid) {
   let size = sizeGrid.value
-  if (size == '') {
+  if (size < 5){
+    size = 5;
+  } else if (size > 50) {
+    size = 50;
+  } else if (size == '') {
     alert('Board inválido!');
-  } else if (size > 0) {
-    let gradeCelulas = document.getElementById('pixel-board');
-    gradeCelulas.innerHTML = '';
-    gradeCelulas.style.borderSpacing = (0);
-    gradeCelulas.style.border = ('none');
+  }
+  let gradeCelulas = document.getElementById('pixel-board');
+  gradeCelulas.innerHTML = '';
+  gradeCelulas.style.borderSpacing = (0);
+  gradeCelulas.style.border = ('none');
 
-    for (let primeiroIndex = 0; primeiroIndex < size; primeiroIndex += 1) {
-      let linhaDaTabela = document.createElement('tr');
-      for (let segundoIndex = 0; segundoIndex < size; segundoIndex += 1) {
-        let celulaLinhaTabela = document.createElement('td');
-        celulaLinhaTabela.className = ('pixel');
-        linhaDaTabela.appendChild(celulaLinhaTabela);
-      }
-      gradeCelulas.appendChild(linhaDaTabela);
+  for (let primeiroIndex = 0; primeiroIndex < size; primeiroIndex += 1) {
+    let linhaDaTabela = document.createElement('tr');
+    for (let segundoIndex = 0; segundoIndex < size; segundoIndex += 1) {
+      let celulaLinhaTabela = document.createElement('td');
+      celulaLinhaTabela.className = ('pixel');
+      linhaDaTabela.appendChild(celulaLinhaTabela);
     }
+    gradeCelulas.appendChild(linhaDaTabela);
   }
 }
+
 
 //Adicionando o método event bubbling para preencher as células.
 document.addEventListener('click', function (clique) {
