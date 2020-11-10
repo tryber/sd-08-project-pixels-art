@@ -43,3 +43,18 @@ function selectColor(e) {
    }
 }
 
+
+const pixelToPaint = document.querySelector('#pixel-board')
+pixelToPaint.addEventListener('click', colorPixel)
+
+function colorPixel(e) {
+
+	let colorSelected = document.querySelector('#color-palette .selected')
+	console.log(colorSelected.style.backgroundColor)
+	let colorToSet = colorSelected.style.backgroundColor
+
+	
+	console.log(e.target)
+	let pixel = e.target
+	pixel.style.backgroundColor = colorToSet
+}
