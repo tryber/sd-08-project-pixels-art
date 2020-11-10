@@ -1,0 +1,38 @@
+body {
+  background-color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  margin: 50px auto;
+  max-width: 300px;
+}
+
+.palette-color {
+  margin-left: 50px;
+}
+
+.color {
+  border: 1px solid black;
+  display: inline-block;
+  height: 25px;
+  margin-right: 2px;
+  width: 25px;
+}
+
+button {
+  margin: 5px 115px;
+}
+
+.board-pixel {
+  max-width: 250px;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+}
