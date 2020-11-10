@@ -38,6 +38,7 @@ const board = document.getElementById("pixel-board");
 
 // Requisitos 6 e 7
 let paletaCompleta = document.getElementById("color-palette");
+let selectedColor = "black";
 
 paletaCompleta.addEventListener("click", function () {
   let selected = document.querySelectorAll(".color");
@@ -46,16 +47,15 @@ paletaCompleta.addEventListener("click", function () {
   selected[index].className = "color";
   }
   event.target.className = "color selected";
+  selectedColor = event.target.style.backgroundColor;
 });
 
 
 // Requisito 8
 
-// board.addEventListener ("click", function (){
-
-
-// event.target.style.backgroundColor
-// })
+board.addEventListener ("click", function (){
+event.target.style.backgroundColor = selectedColor;
+})
 
 
 
