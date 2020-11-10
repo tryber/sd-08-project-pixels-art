@@ -1,18 +1,23 @@
 
-let caixaDois = document.querySelector('#azul');
-let caixaTres = document.querySelector('#roxo');
-let caixaQuatro = document.querySelector('#verde');
-let squares = document.querySelectorAll('.pixel');
+const blue = document.querySelector('#azul');
+const purple = document.querySelector('#roxo');
+const green = document.querySelector('#verde');
+const squares = document.querySelectorAll('.pixel');
 
 const colors = document.querySelectorAll('.color');
 const blackSelected = document.querySelector('#preto');
+blackSelected.classList.add('selected');
 
-function Onload (event) {
-    blackSelected.classList.remove('selected');
-    event.target.classList.add('selected');
-    blackSelected = event.target;      
+for (let index = 0; index < colors.length; index +=1){
+    let colorSelected = colors[index];
+    colorSelected.addEventListener('click', function(event){
+        for (let index2 = 0; index2 < colors.length; index2 +=1){
+        let selected = colors[index2];
+        if (selected.classList.contains('selected')) {
+            selected.classList.remove('selected');
+        }
+        }
+        event.target.classList.add('selected');
+    });         
 }
 
-for(const colorSelected of colors) {
-    colorSelected.addEventListener('click', Onload);
-}
