@@ -40,3 +40,13 @@ function changeColor (){
     }
 }
 changeColor();
+
+//Requisito 09
+
+//Criando botão via java Script
+
+let recuperaSection = document.querySelector('#location-button');
+let botao = document.createElement('button');
+botao.id = 'clear-board';
+botao.innerText = 'Limpar'
+recuperaSection.appendChild(botao);
