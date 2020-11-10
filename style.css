@@ -11,6 +11,18 @@
     display: inline-block;
     margin: 5px;
 }
+.cor1 {
+  background-color: black;
+}
+.cor2 {
+  background-color: #e6be51;
+}
+.cor3 {
+  background-color: #579ea9;
+}
+.cor4 {
+  background-color: #0f579b;
+}
 
 .selected {
     border: 2px solid black;

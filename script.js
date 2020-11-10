@@ -7,7 +7,7 @@ const initColorPalette = () => {
     })
 }
 
-initColorPalette()
+
 
 let selectedColor = "black"
 
