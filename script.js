@@ -140,7 +140,7 @@ function regenPress() {
   if (!boardSize) {
     return alert('Board inválido!');
   }
-  regenBoard();
+  return regenBoard();
 }
 
 // Regenerates board
