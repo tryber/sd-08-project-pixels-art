@@ -40,9 +40,9 @@ function setColors() {
   thirdColor.style.backgroundColor = randomColor();
 }
 
-setColors()
+setColors();
 
-colorGenButton.addEventListener('click', setColors)
+colorGenButton.addEventListener('click', setColors);
 
 // Removes 'selection' class from all pallete elements
 function removeSelection() {

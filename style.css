@@ -1,16 +1,16 @@
 /* Global */
 body {
-  margin:  0;
   background-color: rgb(214, 226, 225);
+  margin: 0;
   text-align: center;
 }
 
 main {
-background-color: white;
-display: inline-block;
-padding: 30px;
-border-radius: 30px;
-margin: 100px 0 60px;
+  background-color: white;
+  border-radius: 30px;
+  display: inline-block;
+  margin: 100px 0 60px;
+  padding: 30px;
 }
 
 /* Header */
@@ -20,7 +20,6 @@ header {
   margin-bottom: 20px;
   overflow: hidden;
   padding: 0 20px;
-  width: auto;
   position: fixed;
   width: 100%;
 }
@@ -35,15 +34,15 @@ nav {
 }
 
 nav a {
-  float: left;
+  border-radius: 4px;
   color: rgb(223, 223, 223);
-  text-align: center;
-  padding: 5px;
-  text-decoration: none;
+  float: left;
   font-size: 18px;
   line-height: 25px;
-  border-radius: 4px;
   margin-right: 10px;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
 }
 
 nav a:hover {
@@ -81,8 +80,8 @@ input {
 .pixel-board {
   display: inline-block;
   height: fit-content;
-  width: fit-content;
   white-space: nowrap;
+  width: fit-content;
 }
 
 .pixel {
@@ -98,15 +97,15 @@ input {
 /* Footer */
 footer {
   background-color: rgb(0, 90, 135);
+  bottom: 0;
   color: rgb(223, 223, 223);
-  position: fixed;
-  left: 0px;
-  bottom: 0px;
-  height:30px;
-  width: 100%;
+  height: 30px;
+  left: 0;
   padding-bottom: 15px;
+  position: fixed;
+  width: 100%;
 }
 
-footer a {
+.footer-link {
   color: rgb(223, 223, 223);
 }
