@@ -117,3 +117,21 @@ yellowCC.addEventListener('click', function (event) {
 toogleColors4()
 
 
+function addColortothepixels (){
+    
+    const board = querySelector('#pixel-board')
+
+    board.addEventListener('click', function(event){
+
+        const selected = document.querySelector('.color selected')
+
+        if( selected.style.backgroundColor !== null)
+         {
+
+        event.target.style.backgroundColor = selected.style.backgroundColor
+        }
+    })}
+
+ 
+
+addColortothepixels()
