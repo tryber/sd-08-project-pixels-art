@@ -42,7 +42,9 @@ ul {
 .pixel {
   display: block;
   padding: 40px;
+  max-width: 40px;
+  max-height: 40px;
   border: 1px groove black;
   background-color: white;
-  float: left;
+  float: right;
 }

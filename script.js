@@ -32,41 +32,29 @@ function selecionaCor() {
     };
 }
 
-function selectColor() {
-  let sons = document.getElementById('color-palette').children;
-  let palette = document.querySelector('#color-palette');
+function selectedColor() {
+  let quadros = document.getElementById('color-palette').children;
+  let paleta = document.getElementById('color-palette');
 
-  palette.addEventListener('click', function (event) {
-    for (let i = 0; i < sons.length; i += 1) {
-      if (sons[index] === event.target) {
+  paleta.addEventListener('click', function (event) {
+    for (let i = 0; i < quadros.length; i += 1) {
+      if (quadros[i] === event.target) {
         event.target.className = 'color selected';
       } else {
-        sons[index].className = 'color';
+        quadros[i].className = 'color';
       }
     }
   });
 }
 selectColor();
 
-
-
 function quadroPixels() {
-  // let tamanhoDefinicao = prompt('quantos quadrados você quer?');
-  // let tamanhoDefinido = Number(tamanhoDefinicao);
-  const linhaQuadrados = 25;
-  const colunaQuadrados = 5;
+  const numQuadrados = 25;
   const squareContainer = document.getElementById('pixel-board');
-
-  for (let i = 0; i < linhaQuadrados; i += 1) {
+  for (let i = 0; i < numQuadrados; i += 1) {
     let linhaSquares = document.createElement('div');
     linhaSquares.className = 'pixel';
     squareContainer.appendChild(linhaSquares);
-
-    // for (let i = 0; i < colunaQuadrados; i += 1) {
-    //   let colunaSquares = document.createElement('div');
-    //   colunaSquares.className = 'pixel';
-    //   squareContainer.appendChild(colunaSquares);
-    // }
   }
 }
 quadroPixels();
