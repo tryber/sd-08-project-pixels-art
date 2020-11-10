@@ -27,7 +27,7 @@ function pixelsLine(el, tamanho) {
 function createPixels(nameEl, tamanho) {
     let getDiv = document.querySelector('#pixel-board');
     for (let i = 0; i < tamanho; i += 1) {
-        let newPixels = pixelsLine(nameEl, 5);
+        let newPixels = pixelsLine(nameEl, tamanho);
         getDiv.appendChild(newPixels);
     }
 }
@@ -75,17 +75,60 @@ function createButton(name, nameAtribute, value) {
 
 function buttonClear() {
     let newBtn = createButton('Limpar', 'id', 'clear-board');
-    let getContainer = document.querySelector('.btn-clear-container');
+    let getContainer = document.querySelector('.custon-container');
     getContainer.appendChild(newBtn);
 }
 
 function pixelColorDefault() {
     let getBtn = document.getElementById('clear-board');
     let getPixel = document.getElementsByClassName('pixel');
-    getBtn.addEventListener('click', function() {
-        for(let key of getPixel) {
+    getBtn.addEventListener('click', function () {
+        for (let key of getPixel) {
             key.style.backgroundColor = 'white';
         }
+    })
+}
+
+function createInput(tipo, name, value) {
+    let newInput = criarElemento('input', name, value);
+    newInput.type = tipo;
+    newInput.value = 0;
+    return newInput;
+}
+
+function createBoard() {
+    let newInput = createInput('number', 'id', 'board-size');
+    let newBtn = createButton('VQV', 'id', 'generate-board');
+
+    let getCuston = document.querySelector('.custon-container');
+
+    getCuston.appendChild(newInput);
+    getCuston.appendChild(newBtn);
+}
+
+function removeChild() {
+    let getPixelBoard = document.getElementById('pixel-board');
+    let getPixeLine = document.querySelectorAll('.line');
+
+    console.log(getPixelBoard)
+    console.log(getPixeLine);
+
+    for (let key of getPixeLine) {
+        getPixelBoard.removeChild(key)
+    }
+}
+
+function generateBoard() {
+    createBoard();
+    let getBtn = document.querySelector('#generate-board');
+
+    getBtn.addEventListener('click', function () {
+        let getInput = document.querySelector('#board-size').value;
+        if (getInput > 5 && getInput < 51) {
+            removeChild();
+            createPixels('div', getInput);
+        }
+        paint();
     })
 }
 
@@ -102,19 +145,28 @@ function rgbRandon() {
     return rgb;
 }
 
-const arrayColors = () => {
-    const contador = 3;
-    let arrayColor = ['black'];
-    for (let x = 0; x < contador; x += 1){
+const newColors = () => {
+    let arrayColor = [];
+    arrayColor.push('rgb(0, 0, 0)');
+    let cont = 4;
+
+    do {
         let aux = rgbRandon();
         arrayColor.push(aux);
-    }
+        arrayColor = arrayColor.filter(function (el, index, arr) {
+            if (arr.indexOf(el) === index && el !== 'rgb(255, 255, 255)') {
+                return el;
+            }
+        })
+
+    } while (arrayColor.length < cont);
+
     return arrayColor;
 }
 
 const mainFunction = () => {
     // const colors = ['black', 'green', 'gold', 'orange'];
-    const colors = arrayColors();
+    const colors = newColors();
     createColors('div', colors);
     createPixels('div', 5);
     colorInit();
@@ -123,6 +175,7 @@ const mainFunction = () => {
     paint();
     buttonClear();
     pixelColorDefault();
+    generateBoard();
 }
 
 mainFunction();

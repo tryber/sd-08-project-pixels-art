@@ -42,23 +42,40 @@ header {
   height: 40px;
 }
 
-.btn-clear-container {
-  width: 80px;
+.custon-container {
+  width: auto;
   height: auto;
   margin: 8px 0 8px 20px;
 }
 
-#clear-board {
+#board-size{
+    display: inline-block;
+    margin: 0 10px 0 30px;
+    height: 20px;
+    width: 55px;
+}
+
+#board-size:focus{
+    outline: none;
+}
+
+#clear-board , #generate-board{
   width: 60px;
   height: 30px;
   border: none;
   border-radius: 3px;
+  display: inline-block;
 }
 
-#clear-board:focus { 
+#clear-board:focus ,  #generate-board:focus{ 
     outline:none 
 }
 #clear-board:hover {
     cursor: pointer;
     background-color: #1614b44f;
+}
+
+#generate-board:hover {
+    cursor: pointer;
+    background-color: olivedrab;
 }
