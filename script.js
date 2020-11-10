@@ -1,4 +1,3 @@
-window.onload =criaBox();
 
 /*function criaBox() {
   for (let index =0;index < 4; index +=1){
@@ -9,33 +8,24 @@ window.onload =criaBox();
   elPronto.appendChild(box);
   }  
 };*/
-function criaBox() {
-  //for (let index =0;index < 4; index +=1){
-    let para = document.createElement("div");
-    let element = document.getElementById("hdr");
-  para.innerHTML = "preto";
-  para.className = "color";
-  para.id = "preto";  
-  element.appendChild(para);
-  
-  let parav = document.createElement("div");
-  let elementv = document.getElementById("hdr");
-  parav.innerHTML = "vermel";
-  parav.className = "color";
-  parav.id = "vermelho";  
-  elementv.appendChild(parav);
+const selectPonto = document.getElementById("seletorCor");
+const index =["black", "red", "blue", "green"];
 
-  let parad = document.createElement("div");
-  let elementd = document.getElementById("hdr");
-  parad.innerHTML = "verde";
-  parad.className = "color";
-  parad.id = "verde";  
-  elementd.appendChild(parad);
 
-  let paraz = document.createElement("div");
-  let elementz = document.getElementById("hdr");
-  paraz.innerHTML = "azul";
-  paraz.className = "color";
-  paraz.id = "azul";  
-  elementz.appendChild(paraz);
-};
+  for(i =0; i < index.length ; i +=1){
+  let elemento = document.createElement("div");
+  //elemento.innerHTML = index[i];
+  elemento.className = "color";
+  elemento.id = index[i];  
+  elemento.style.background = index[i];
+  elemento.style.width = "100px";
+  elemento.style.display = "inline-block";
+  elemento.style.border = "solid 1px";
+  //selectPonto.appendChild(elemento);
+  //let parag = document.createElement("p");
+  //parag.innerHTML = index[i];
+  //parag.style.paragAlign = "center";
+  //parag.style.elemeno = "#fff";
+  //elemento.appendChild(parag);
+  selectPonto.appendChild(elemento);
+  };
