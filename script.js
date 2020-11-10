@@ -14,6 +14,7 @@ const colorList = document.querySelectorAll(".color");
 
 const black = document.querySelector(".black");
 black.classList.add("selected");
+
 const red = document.querySelector(".red");
 const blue = document.querySelector(".blue");
 const green = document.querySelector(".green");
@@ -29,18 +30,6 @@ let removeSelectedClass = () => {
   }
 };
 
-let selectedColor = () => {
-  for (let i = 0; i < colorList.length; i += 1) {
-    if (colorList[i].classList.contains("selected")) {
-      return colorList[i].style.backgroundColor;
-    }
-  }
-
-  return "";
-};
-
-selectedColor();
-
 let palette = document.querySelector("#color-palette");
 
 let selectColor = (event) => {
@@ -52,3 +41,23 @@ let selectColor = (event) => {
 };
 
 palette.addEventListener("click", selectColor);
+
+let selectedColor = () => {
+  for (let i = 0; i < colorList.length; i += 1) {
+    if (colorList[i].classList.contains("selected")) {
+      return colorList[i].style.backgroundColor;
+    }
+  }
+
+  return "";
+};
+
+let board = document.querySelector("#pixel-board");
+
+let boardColors = (event) => {
+  const color = selectedColor();
+
+  event.target.style.backgroundColor = color;
+};
+
+board.addEventListener("click", boardColors);

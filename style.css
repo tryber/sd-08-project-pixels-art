@@ -17,6 +17,10 @@ header h1 {
   border: 1px solid black;
 }
 
+.color:last-child {
+  margin-right: 0;
+}
+
 #pixels {
   display: flex;
   align-items: center;
