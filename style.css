@@ -31,7 +31,7 @@
     height: 100%;
     text-align: center;
 }
-.pixel{
+.pixel, .pixel>*{
     display: inline-block;
     width: 40px;
     height: 40px;
