@@ -1,3 +1,7 @@
+window.onload = function(){
+    document.querySelectorAll(".color")[0].classList.add("selected");
+}
+
 //creation of the divs in the color palette
 function createDivColor() {
   let divColor = document.getElementById("color-palette");
