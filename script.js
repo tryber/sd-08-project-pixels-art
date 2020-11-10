@@ -29,4 +29,18 @@ window.onload = function (){
         event.target.style.backgroundColor = teste;
           
     }
-    
+    //Add function para limpar o pixel board
+    function clearPxBoard(){
+
+        const limpar = document.getElementsByClassName('pixel');
+        for(let index = 0; index < limpar.length; index += 1){
+            if(limpar[index].style.backgroundColor !== limpar[index].style.backgroundColor.white){
+                limpar[index].style.backgroundColor = 'white';
+            }
+        }
+    }
+    //cria btn Limpar
+    const btnLimpar = document.querySelector('button');
+    btnLimpar.id = 'clear-board';
+    btnLimpar.innerText = 'Limpar';
+    btnLimpar.addEventListener('click', clearPxBoard);
