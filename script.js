@@ -38,12 +38,27 @@ function createPixelBoard(number) {
 createPixelBoard(25);
 
 // Selecting first color (black) as default
-function selectColor() {
-	var colors = document.getElementsByClassName('color');
+// function defaultColor() {
+// 	var colors = document.getElementsByClassName('color');
 
-	const initialColor = colors[0];
+// 	const initialColor = colors[0];
 
-	initialColor.className += ' selected';
+// 	initialColor.className += ' selected';
+// };
+// defaultColor();
+
+// Selectig any color from color palette; black as default
+const colors = document.querySelectorAll('.color');
+colors[0].classList.add('selected');
+
+colors.forEach(color => color.addEventListener('click', selectColor));
+
+function selectColor(event) {
+  console.log('Clicked on color:', this.style.backgroundColor);
+  for (let index = 0; index < colors.length; index += 1) {
+    const color = colors[index];
+    if (color !== event.target && color.classList.contains('selected')) color.classList.remove('selected');
+    event.target.classList.add('selected');
+  };
 };
-selectColor();
 
