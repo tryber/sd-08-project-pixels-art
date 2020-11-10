@@ -6,8 +6,6 @@ const initColorPalette = () => {
     "#" + Math.random().toString(16).substr(2, 6),
   ];
   document.querySelectorAll(".color").forEach((element) => {
-    //console.log(element)
-    //console.log(cores[0]);
     element.style.backgroundColor = cores[0];
     cores.shift();
   });
@@ -33,7 +31,6 @@ document.getElementById("pixel-board").addEventListener("click", () => {
   if (event.target.classList.contains("pixel")) {
     event.target.style.backgroundColor = config.color;
   }
-  //console.log(event.target);
 });
 
 document.getElementById("clear-board").addEventListener("click", () => {
@@ -49,8 +46,6 @@ document.getElementById("generate-board").addEventListener("click", () => {
   } else {
     boardBuilder(size);
   }
-  //document.getElementById("board-size").value = config.size;
-  //console.log(document.getElementById("board-size").value);
 });
 
 const boardBuilder = (size = 5) => {
@@ -60,7 +55,6 @@ const boardBuilder = (size = 5) => {
   if (size > 50) {
     size = 50;
   }
-
   const board = document.getElementById("pixel-board");
   board.innerHTML = "";
   for (let i = 0; i < size; i++) {
@@ -70,8 +64,6 @@ const boardBuilder = (size = 5) => {
     }
     board.innerHTML += `<div>`;
   }
-
-  //document.getElementById("board-size").value = size;
 };
 
 // document.getElementById("board-size").addEventListener("change", () => {
