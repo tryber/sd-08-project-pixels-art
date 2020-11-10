@@ -31,7 +31,6 @@ function geraPixel(index) {
 function geraPixelBoard() {
   for (let index = 0; index < numberOfLines; index += 1) {
     const boardLine = document.createElement('div');
-    boardLine.className = 'boardLines';
     pixelBoard.append(boardLine);
     geraPixel(index);
   }
@@ -97,14 +96,18 @@ function geraCores() {
   }
 }
 
+function checkCorRepetida() {
+  if (cores[index] === cores[pos] || cores[pos] === '#FFFFFF' || cores[pos] === '') {
+    geraCores();
+  }
+}
+
 function evitaCorRepetida() {
   for (let index = 0; index < cores.length; index += 1) {
     let pos = index + 1;
 
     for (pos; pos < cores.length; pos += 1) {
-      if (cores[index] === cores[pos] || cores[pos] === '#FFFFFF' || cores[pos] === '') {
-        geraCores();
-      }
+      checkCorRepetida();
     }
   }
 }
