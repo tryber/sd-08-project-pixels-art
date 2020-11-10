@@ -14,17 +14,13 @@ h1 {
 
 .color {
   display: inline-block;
-  height: 180px;
+  height: 90px;
   margin: auto;
-  width: 180px;
-}
-
-.color span {
-  font-size: 24px;
+  width: 90px;
 }
 
 .black {
-  background: black;
+  background-color: black;
   border: black 1px solid;
 }
 
@@ -33,17 +29,17 @@ h1 {
 }
 
 .light-green {
-  background: #2a9d8f;
+  background-color: #2a9d8f;
   border: black 1px solid;
 }
 
 .dark-yellow {
-  background: #e9c46a;
+  background-color: #e9c46a;
   border: black 1px solid;
 }
 
 .orange {
-  background: #f4a261;
+  background-color: #f4a261;
   border: black 1px solid;
 }
 
@@ -54,7 +50,7 @@ h1 {
 }
 
 .pixel {
-  background: white;
+  background-color: white;
   border: black 1px solid;
   display: inline-block;
   height: 40px;

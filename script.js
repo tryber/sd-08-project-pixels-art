@@ -1,8 +1,7 @@
 const getPixelBoard = document.getElementById('pixel-board');
-let getColor = document.querySelector('.black');
-let colorSelected = document.querySelectorAll('.color');
+let getColor = document.getElementsByClassName('color');
 
-let createPixelBoard = () => {
+function createPixelBoard() {
   for (let i = 0; i < 5; i += 1) {
     const createPixel = document.createElement('div');
     getPixelBoard.appendChild(createPixel);
@@ -12,20 +11,36 @@ let createPixelBoard = () => {
       createPixel.className = 'pixel';
     }
   }
-};
+}
 createPixelBoard();
 
-let setBlackColor = () => {
-  getColor.classList.add('selected');
-};
-setBlackColor();
+function setFirstColor() {
+  getColor[0].classList.add('selected');
+}
+setFirstColor();
 
-let changePalette = (event) => {
-  getColor.classList.remove('selected');
-  event.target.classList.add('selected');
-  getColor = event.target;
+function changePalette(event) {
+  for (let i = 0; i < getColor.length; i += 1) {
+    getColor[i].classList.remove('selected');
+    event.target.classList.add('selected');
+    getColor[i] = event.target;
+  }
 }
 
-for (let colors of colorSelected) {
-  colors.addEventListener('click', changePalette);
+function clickColor() {
+  for (let colors of getColor) {
+    colors.addEventListener('click', changePalette);
+  }
 }
+clickColor();
+
+function setPixelColor() {
+  let getPixel = document.getElementById('pixel-board');
+  getPixel.addEventListener('click', function (event) {
+    let getSelectedColor = window.getComputedStyle(document.querySelector('.color.selected')).backgroundColor;
+    console.log(getSelectedColor);
+    event.target.style.backgroundColor = getSelectedColor;
+    console.log(event);
+  });
+}
+setPixelColor();
