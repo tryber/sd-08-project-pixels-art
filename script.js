@@ -15,14 +15,15 @@ for (let coluna = 0; coluna < 5; coluna += 1) {
   }
 }
 window.onload = function () {
-  const array = ["red", "blue", "green"];
-  for (let index = 0; index < array.length; index++) {
-    const aleatorio = Math.floor(Math.random() * (index + 1));
-    [array[index], array[aleatorio]] = [array[aleatorio], array[index]];
+  const hexadecimais = '0123456789ABCDEF';
+  let cor = '#';
+  for (let index = 1; index < 4; index += 1) {
+    for (let i = 0; i < 6; i += 1) {
+      cor += hexadecimais[Math.floor(Math.random() * 16)];
+    }
+    color[index].style.backgroundColor = cor;
+    cor = '#';
   }
-  document.getElementById("red").style.backgroundColor = array[0];
-  document.getElementById("blue").style.backgroundColor = array[1];
-  document.getElementById("green").style.backgroundColor = array[2];
 };
 addEventListener("click", function (evt) {
   if (evt.target.className == "color") {
