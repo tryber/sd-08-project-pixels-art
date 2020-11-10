@@ -6,7 +6,6 @@ window.onload = function () {
 };
 
 let pixelBox = document.getElementById("pixel-board");
-
 function initialGrid() {
   for (let index = 0; index < 25; index += 1) {
     let pixelCreate = document.createElement("div");
@@ -18,14 +17,18 @@ function initialGrid() {
 }
 initialGrid();
 
+function removeGrid() {
+for (let index = 0; index < 25; index += 1) {
+  let removeDiv = pixelBox.lastElementChild;
+  pixelBox.removeChild(removeDiv);
+}
+}
 
 let generateButton = document.getElementById("generate-board");
 let inputNumber = document.getElementById("board-size");
-
 generateButton.addEventListener("click", function () {
   createPixelBox();
 });
-
 inputNumber.addEventListener("keypress", function (press) {
   if (press.key === "Enter") {
     createPixelBox();
@@ -34,6 +37,7 @@ inputNumber.addEventListener("keypress", function (press) {
 
 function createPixelBox() {
   if (inputNumber.value.length > 0 && inputNumber.value > 0) {
+    removeGrid()
     let gridSize = inputNumber.value;
     for (let index = 0; index < gridSize * gridSize; index += 1) {
       let pixelCreate = document.createElement("div");
@@ -58,7 +62,6 @@ colorPicker.addEventListener("click", function (event) {
     event.target.className = "color selected";
     if (event.target.className == "color selected");
     selectedColor = event.target.style.backgroundColor;
-    console.log(selectedColor);
   }
 });
 
