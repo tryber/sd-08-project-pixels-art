@@ -1,5 +1,6 @@
 #pixel-board {
     border-collapse: collapse;
+    border: 1px solid black;
 }
 .pixel {
     width: 40px;
