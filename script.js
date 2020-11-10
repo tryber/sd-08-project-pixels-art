@@ -62,13 +62,13 @@ squarePixels();
 
 
     //Pintado quadrados da Cor;
-    let colorSelect = document.querySelector('.selected');
-    const squarePaint = document.querySelectorAll('.pixel')
-    document.addEventListener('click', function () {
-        for (let index = 0; index < squarePaint.length; index += 1) {
-            squarePaint[index].style.background = 'white';
-        }
-    });
+    // let colorSelect = document.querySelector('.selected');
+    // const squarePaint = document.querySelectorAll('.pixel')
+    // document.addEventListener('click', function () {
+    //     for (let index = 0; index < squarePaint.length; index += 1) {
+    //         squarePaint[index].style.background = 'white';
+    //     }
+    // });
     
 
     // const squareSelectionColor = document.querySelectorAll('.color-palette');
