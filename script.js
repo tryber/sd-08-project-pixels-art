@@ -83,13 +83,13 @@ function pixelColorOfSelectedPallete() {
 pixelColorOfSelectedPallete();
 
 function clearPixel() {
-  const pixels = document.querySelectorAll('.pixel');
   const clearButton = document.querySelector('#clear-board');
+  const color = 'white';
 
   clearButton.addEventListener('click', () => {
-    for (let index = 0; index < pixels.length; index += 1) {
-      const pixel = pixels[index];
-      pixel.style.backgroundColor = 'initial';
+    const pixels = document.querySelectorAll('.pixel')
+    for (let i = 0; i < pixels.length; i += 1) {
+      pixels[i].style.backgroundColor = color;
     }
   });
 }
