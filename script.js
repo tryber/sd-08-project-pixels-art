@@ -29,7 +29,7 @@ function randomColor() {
   const red = Math.ceil(Math.random() * 255);
   const green = Math.ceil(Math.random() * 255);
   const blue = Math.ceil(Math.random() * 255);
-  return `rgb(${red}, ${green}, ${blue})`
+  return `rgb(${red}, ${green}, ${blue})`;
 }
 
 // Sets other colors to randomized colors
@@ -135,20 +135,13 @@ function regenBoard() {
 }
 
 // Board size input validator
-function sizeValidate() {
+function regenPress() {
+  valueStorage();
   if (!boardSize) {
-    return false;
+    return alert('Board inválido!');
   }
-  return true;
+  regenBoard();
 }
 
 // Regenerates board
-genButton.addEventListener('click', () => {
-  valueStorage();
-  if (sizeValidate()) {
-    regenBoard();
-    return;
-  } else {
-    return alert('Board inválido!');
-  }
-});
+genButton.addEventListener('click', regenPress);
