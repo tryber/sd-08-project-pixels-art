@@ -28,7 +28,7 @@ function createPalette() {
 
     arrayColors.push('rgb(' + r + ',' + g + ',' + b + ')');
   }
-  
+
   firstColor.style.backgroundColor = 'black';
   secondColor.style.backgroundColor = arrayColors[0];
   thirdColor.style.backgroundColor = arrayColors[1];
