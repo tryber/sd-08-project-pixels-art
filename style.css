@@ -3,18 +3,24 @@
   display: inline-block;
 }
 
-#box-black {
+#preto {
   background-color: black;
 }
 
-#box-red {
+#vermelho {
   background-color: red;
 }
 
-#box-blue {
+#azul {
   background-color: blue;
 }
 
-#box-green {
+#verde {
   background-color: green;
+}
+
+.pixel {
+  display: inline-block;
+  margin: 40px;
+  background-color: white;
 }
