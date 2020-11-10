@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paleta de Cores</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+
+        <h1 id="title">Paleta de Cores</h1>
+        <h2>Obviamente, a melhor pixel art que você verá</h2>
+    </header>
+
+    <article id="color-palette">
+
+        <button class="selected color" onclick="ChangeToColor(0)"></button>
+        <button class="color" onclick="ChangeToColor(1)"></button>
+        <button class="color" onclick="ChangeToColor(2)"></button>
+        <button class="color" onclick="ChangeToColor(3)"></button>
+    </article>
+    <section>
+
+        <input placeholder="linhas" type="number" id="board-size" min="1">
+        <button id="generate-board">VQV</button>
+        <button id="clear-board">Limpar</button>
+    </section>
+    <article id="pixel-board" class="pixel-board"></article>
+</body>
+</html>
