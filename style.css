@@ -1,33 +1,7 @@
-ul {
-    display: inline;
-    list-style-type: none;
-}
-
-li.color {
-    display: inline;
-    list-style: none;
-}
-
-li#black.color {
-    color: rgb(0, 0, 0);
-    border: 1px solid rgb(0, 0, 0);
-    display: inline-block;
-}
-
-#red {
-    background-color: red;
-    border: 1px solid rgb(0, 0, 0);
-    display: inline-block;
-}
-
-#blue {
-    background-color: blue;
-    border: 1px solid rgb(0, 0, 0);
-    display: inline-block;
-}
-
-#yellow {
-    background-color: yellow;
-    border: 1px solid rgb(0, 0, 0);
-    display: inline-block;
+.color {
+  border: 1px solid black;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  margin-bottom: 7px;
 }
