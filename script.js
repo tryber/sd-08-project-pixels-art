@@ -10,7 +10,7 @@ function createPaleteColorEle(){
     if (i === 0) {
     
         createele.style.backgroundColor = "black"
-        createele.className = "selected"  
+        createele.className = "color"  
       
        
         
@@ -260,6 +260,7 @@ pegaposicaobotao.appendChild(criabotao)
     }
     criabotao()
 
+    
 
 
     
