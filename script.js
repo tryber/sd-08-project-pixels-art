@@ -54,7 +54,7 @@ let generateNewBoard = () => {
   }
 };
 
-function checkInputValue() {
+let checkInputValue = () => {
   inputValue();
 
   if (!boardSide) {
@@ -62,7 +62,7 @@ function checkInputValue() {
   }
 
   generateNewBoard();
-}
+};
 
 generateButton.addEventListener("click", checkInputValue);
 
