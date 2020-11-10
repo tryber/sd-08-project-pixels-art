@@ -71,3 +71,13 @@ for (let index = 0; index < pixels.length; index += 1) {
     event.target.style.backgroundColor = selected.style.backgroundColor;
   });
 };
+
+// Add clear button and clear function with addEventListener
+const clearBoardButton = document.querySelector('#clear-board');
+clearBoardButton.addEventListener('click', clearBoard);
+function clearBoard() {
+	for (let index = 0; index <pixels.length; index += 1) {
+		const pixel = pixels[index];
+		pixel.style.backgroundColor = 'white';
+	};
+};
