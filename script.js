@@ -29,21 +29,14 @@ function classSelected() {
 classSelected();
 
 //Requisito 08
-// let ids = document.querySelectorAll('#color1, #color2, #color3, #color4');
-// let arrayIds = [];
-// for (let x =0; x <ids.length; x+=1 ){
-//     arrayIds.push(ids[x]);
-// }
+function changeColor (){
+    let classPixel = document.querySelectorAll('.pixel');
 
-//  //let position1 = arrayIds[0].style.backgroundColor;
-
-//  console.log(arrayIds)
-
-let classPixel = document.querySelectorAll('.pixel');
-
-for (let index = 0; index < classPixel.length; index += 1) {
-    classPixel[index].addEventListener('click', function (event) {
-        let colorAtual = window.getComputedStyle(document.querySelector('.selected')).backgroundColor;
-        event.target.style.backgroundColor = colorAtual;
-    });
+    for (let index = 0; index < classPixel.length; index += 1) {
+        classPixel[index].addEventListener('click', function (event) {
+            let colorAtual = window.getComputedStyle(document.querySelector('.selected')).backgroundColor;
+            event.target.style.backgroundColor = colorAtual;
+        });
+    }
 }
+changeColor();
