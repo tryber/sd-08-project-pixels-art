@@ -1,5 +1,12 @@
 document.getElementById("black").classList.add('selected');
 
+//Gera cores aleatórias
+let randomColor1 = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
+let randomColor2 = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
+let randomColor3 = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);}); //https://stackoverflow.com/questions/5092808/how-do-i-randomly-generate-html-hex-color-codes-using-javascript
+
+
+
 // //função para limpar os pixels
 function limpar() {
     const botao = document.querySelector("#clear-board");
@@ -18,7 +25,6 @@ const black = document.querySelector("#black");
 const blue = document.querySelector("#blue");
 const green = document.querySelector("#green");
 const yellow = document.querySelector("#yellow");
-let cor = 1;
 
 //Função para sombrear cada cor a ser selecionada
 function dayMouseOver() {
@@ -95,21 +101,37 @@ function mouseClick() {
 }
 mouseClick();
 
+//função para receber cor aleatória
+function corAleatoria (){    
+    blue.style.backgroundColor = randomColor1; 
+    green.style.backgroundColor = randomColor2; 
+    yellow.style.backgroundColor = randomColor3; 
+} corAleatoria();
+
+let pickCor2 = document.getElementById("blue").style.backgroundColor
+let pickCor3 = document.getElementById("green").style.backgroundColor
+let pickCor4 = document.getElementById("yellow").style.backgroundColor
+
 //Ao clicar em uma das cores a variável "cor" recebe um numero que será verificado na função abaixo
 function setColor() {
     const pixels = document.querySelectorAll(".pixel");
+    black.className = "selected";
     for (let i = 0; i < pixels.length; i++) {
         pixels[i].addEventListener("click", function (event) {
-            if (cor === 1) {
-                event.target.style.backgroundColor = "black";
-            } else if (cor === 2) {
-                event.target.style.backgroundColor = "blue";
-            } else if (cor === 3) {
-                event.target.style.backgroundColor = "green";
-            } else if (cor === 4) {
-                event.target.style.backgroundColor = "yellow";
+            if (black.className === 'selected') {
+                event.target.style.backgroundColor = 'black';
+            } else if (blue.className === 'selected') {
+                event.target.style.backgroundColor = pickCor2;
+            } else if (green.className === 'selected') {
+                event.target.style.backgroundColor = pickCor3;
+            } else if (yellow.className === 'selected') {
+                event.target.style.backgroundColor = pickCor4;
             }
         });
     }
 }
 setColor();
+
+
+
+
