@@ -1,31 +1,59 @@
-
-/*function criaBox() {
-  for (let index =0;index < 4; index +=1){
-  let box =document.createElement("div");
-  box.innerHTML = "cores";
-  box.className = "cxcores";
-  let elPronto = document.getElementsByClassName('.hdr')
-  elPronto.appendChild(box);
-  }  
-};*/
-const selectPonto = document.getElementById("seletorCor");
-const index =["black", "red", "blue", "green"];
-
-
-  for(i =0; i < index.length ; i +=1){
-  let elemento = document.createElement("div");
-  //elemento.innerHTML = index[i];
-  elemento.className = "color";
-  elemento.id = index[i];  
-  elemento.style.background = index[i];
-  elemento.style.width = "100px";
-  elemento.style.display = "inline-block";
-  elemento.style.border = "solid 1px";
-  //selectPonto.appendChild(elemento);
-  //let parag = document.createElement("p");
-  //parag.innerHTML = index[i];
-  //parag.style.paragAlign = "center";
-  //parag.style.elemeno = "#fff";
-  //elemento.appendChild(parag);
-  selectPonto.appendChild(elemento);
-  };
+const paletaDeCores = document.getElementById("color-palette");
+const tabelaDeCores = ["black", "blue", "green", "red"];
+for (let itens = 0; itens < tabelaDeCores.length; itens += 1) {
+  let color = document.createElement("div");
+  color.className = "color";
+  color.style.background = tabelaDeCores[itens];
+  color.style.display = "inline-block";
+  color.style.width = "100px";
+  color.style.border = "solid 1px";
+  paletaDeCores.appendChild(color);
+  let text = document.createElement("p");
+  text.innerHTML = tabelaDeCores[itens];
+  text.style.textAlign = "center";
+  text.style.color = "#fff";
+  color.appendChild(text);
+}
+const quadroDePixels = document.getElementById("pixel-board");
+quadroDePixels.style.width = "400px";
+quadroDePixels.style.height = "400px";
+quadroDePixels.style.textAlign = "center";
+for (let altura = 0; altura < 5; altura += 1) {
+  let quebraDeLinha = document.createElement("br");
+  for (let comprimento = 0; comprimento < 5; comprimento += 1) {
+    var pixel = document.createElement("div");
+    pixel.className = "pixel";
+    pixel.style.background = "white";
+    pixel.style.border = "solid black 1px";
+    pixel.style.display = "inline-block";
+    pixel.style.width = "40px";
+    pixel.style.height = "40px";
+    quadroDePixels.appendChild(pixel);
+  }
+  quadroDePixels.appendChild(quebraDeLinha);
+}
+document.querySelector('.color').classList.add('selected')
+const reset = () => {
+  for (let item in seletorDeCores) {
+    seletorDeCores[item].className = "color";
+  }
+};
+document.querySelector(".color").classList.add("selected");
+let seletorDeCores = paletaDeCores.querySelectorAll("div");
+for (
+  let coresDaPaleta = 0;
+  coresDaPaleta < seletorDeCores.length;
+  coresDaPaleta += 1
+) {
+  seletorDeCores[coresDaPaleta].addEventListener("click", () => {
+    reset();
+    seletorDeCores[coresDaPaleta].classList.add("selected");
+  });
+}
+let aquarela = quadroDePixels.querySelectorAll(".pixel");
+for (let pixel = 0; pixel < aquarela.length; pixel += 1) {
+    aquarela[pixel].addEventListener("click", () => {
+      let cor = document.querySelector(".selected").style.background;
+      aquarela[pixel].style.background = cor;
+    });
+  }
