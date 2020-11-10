@@ -21,14 +21,17 @@ window.onload = function () {
     let colorPixel = document.getElementsByClassName("color")
     colorPixel[0].style.backgroundColor = "black";
     let multi = 49;
+    let colors = ["black"];
     for (let index = 1; index < colorPixel.length; index += 1) {
         let randomColor = Math.trunc(Math.random() * multi);
         colorPixel[index].style.backgroundColor = colorArray[randomColor];
+        colors.push(colorArray[randomColor]);
         multi -= 1;
         colorArray.splice(randomColor, 1);
     }
 
     // Add pixels nas linhas
+
     let board = document.getElementById("pixel-board");
     for (let index1 = 0; index1 < 5; index1 += 1) {
         let line = document.createElement("div");
@@ -41,6 +44,20 @@ window.onload = function () {
             lineContainer[index1].appendChild(squad);
         }
     }
+    // Add eventListener e muda cor dos pixels
+    let colorPalette = document.getElementsByClassName("color");
+    let squad = document.querySelector(".pixel")
+    let colorSelected = document.getElementsByClassName("color")[0];
+    
+    
+
+    function mudaCor() {
+        squad.addEventListener("click", function () {
+            squad.style.backgroundColor = colors[0];
+        })
+    }
+    
+ 
 }
 
 
