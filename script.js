@@ -1,7 +1,6 @@
 window.onload = function () {
   const btnGenerate = document.getElementById('generate-board');
   const inputNunber = document.getElementById('board-size');
-  const colors = ['black', 'blue', 'red', 'yellow'];
 
   function generateBoard(size) {
     const tableExists = document.querySelector('#pixel-board');
@@ -28,6 +27,7 @@ window.onload = function () {
   generateBoard();
 
   function setupColorPalette() {
+    const colors = ['black', 'blue', 'red', 'yellow'];
     const pixel = document.getElementsByClassName('color');
     for (let i = 0; i < pixel.length; i += 1) {
       pixel[i].style.backgroundColor = colors[i];
