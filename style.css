@@ -1,3 +1,7 @@
+* {
+    margin: 5px;
+}
+
 #color-palette li {
     display: inline-block;
     height: 45px;
@@ -6,14 +10,19 @@
     margin: 2px;
 }
 
-#pixel-board li {
+.pixel {
     display: inline-block;
     height: 40px;
     width: 40px;
     border: 1px solid black;
-    margin: 1px;
+    margin: 0;
+    line-height: 0;   
 }
 
-#pixel-board {
-    width: 18%;
+#clear-board {
+    margin: 5px;
+}
+
+#pixel-board div{
+    line-height: 0px;
 }
