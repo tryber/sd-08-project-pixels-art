@@ -1,4 +1,61 @@
 window.onload = function () {  
+  // Faça com que as cores da paleta sejam geradas aleatoriamente ao carregar a página.
+  function randomColor() {
+    let r = Math.floor(Math.random() * 255);
+    let g = Math.floor(Math.random() * 255);
+    let b = Math.floor(Math.random() * 255);
+    let randColor = `rgb(${r},${g},${b})`;
+    return randColor;
+  }
+
+  function randomColors() {
+    let color = ["black"];
+    for (let i = 0; i < 3; i += 1) {
+      color.push(randomColor());
+    }
+    return color;
+  }
+  //Fim do exercício 12
+
+  // A página deve possuir uma paleta de quatro cores distintas.
+  const colorPaletteContainer = document.getElementById('color-palette');
+  const colors = randomColors();
+
+  function createColorPalette(colors) {
+    for (let paletteColor = 0; paletteColor < colors.length; paletteColor += 1) {
+      let colorPalette = document.createElement('div');
+      colorPalette.id = `color-pallet${paletteColor}`  
+      colorPalette.className = 'color';
+      colorPalette.style.backgroundColor = colors[paletteColor];
+      colorPaletteContainer.appendChild(colorPalette);
+    }
+  }
+
+  createColorPalette(colors);
+  // Fim do exercício 2
+
+  // A página deve possuir um quadro de pixels, com 25 pixels.
+  const boardSize = 5;
+  const pixelBoard = document.getElementById('pixel-board');
+
+  function createBoard(boardSize) {
+    for (let row = 0; row < boardSize; row += 1) {
+      let pixelRow = document.createElement('div');
+      pixelRow.className = 'pixel-row';
+      pixelBoard.appendChild(pixelRow);
+      let pixelCells = document.getElementsByClassName('pixel-row');
+      for (let cell = 0; cell < boardSize; cell += 1) {
+        let pixelCellContainer = pixelCells[row];
+        let pixelCell = document.createElement('div');
+        pixelCell.className = 'pixel';
+        pixelCellContainer.appendChild(pixelCell);
+      }
+    }
+  }
+
+  createBoard(boardSize);
+  //Fim do exercício 4
+
   // Ao carregar a página, a cor preta da paleta já deve estar selecionada para pintar os pixels.
   let blackElement = document.getElementById('color-pallet0');
   blackElement.className = 'color selected';
@@ -10,15 +67,15 @@ window.onload = function () {
 
   divColorPallet.addEventListener('click', selectColor);
 
-  function selectColor(event) {
-    removeColorSelection();
-    event.target.className = "color selected";
-  }
-
   function removeColorSelection() {
     for (let color = 0; color < colorList.length; color += 1) {
       colorList[color].className = "color";
     }
+  }
+
+  function selectColor(event) {
+    removeColorSelection();
+    event.target.className = "color selected";
   }
   // Fim do exercício 7
 
@@ -51,6 +108,13 @@ window.onload = function () {
  
   btnGenerateBoard.addEventListener('click', generateBoard);
 
+  function removeBoard() {
+    let size = pixelBoard.children.length;
+    for (let index = 0; index < size; index += 1) {
+      pixelBoard.removeChild(pixelBoard.firstElementChild);
+    }
+  }
+
   function generateBoard() {
     if (txtBoardSize.value === '') {
       alert('Board inválido!');
@@ -62,52 +126,6 @@ window.onload = function () {
     removeBoard();
     createBoard(txtBoardSize.value);
     clearBoard();    
-  }
-
-  function removeBoard() {
-    let size = pixelBoard.children.length;
-    for (let index = 0; index < size; index += 1) {
-      pixelBoard.removeChild(pixelBoard.firstElementChild);
-    }
-  }
+  }    
   //Fim do exercício 10
 };
-
-// A página deve possuir uma paleta de quatro cores distintas.
-const colorPaletteContainer = document.getElementById('color-palette');
-const colors = ['black', 'red', 'green', 'blue'];
-
-function createColorPalette(colors) {
-  for (let paletteColor = 0; paletteColor < colors.length; paletteColor += 1) {
-    let colorPalette = document.createElement('div');
-    colorPalette.id = `color-pallet${paletteColor}`  
-    colorPalette.className = 'color';
-    colorPalette.style.backgroundColor = colors[paletteColor];
-    colorPaletteContainer.appendChild(colorPalette);
-  }
-}
-
-createColorPalette(colors);
-// Fim do exercício 2
-
-// A página deve possuir um quadro de pixels, com 25 pixels.
-const boardSize = 5;
-const pixelBoard = document.getElementById('pixel-board');
-
-function createBoard(boardSize) {
-  for (let row = 0; row < boardSize; row += 1) {
-    let pixelRow = document.createElement('div');
-    pixelRow.className = 'pixel-row';
-    pixelBoard.appendChild(pixelRow);
-    let pixelCells = document.getElementsByClassName('pixel-row');
-    for (let cell = 0; cell < boardSize; cell += 1) {
-      let pixelCellContainer = pixelCells[row];
-      let pixelCell = document.createElement('div');
-      pixelCell.className = 'pixel';
-      pixelCellContainer.appendChild(pixelCell);
-    }
-  }
-}
-
-createBoard(boardSize);
-//Fim do exercício 4
