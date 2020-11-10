@@ -1,6 +1,6 @@
 #title
 {
-
+    position: absolute;
     font-family: Shiny Signature;
 }
 
@@ -11,7 +11,7 @@
     margin: 70px 5px 10px 0px;
     border: solid black 1px;
     display: inline-block;
-    position: relative;
+
 
 }
 
