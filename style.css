@@ -12,7 +12,7 @@ body {
 }
 
 .color {
-    border-style: solid;
+    border-style: solid black;
     border-width: 1px;
     display: inline-block;
     height: 40px;

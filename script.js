@@ -1,8 +1,8 @@
-window.onload = function(){
-    document.querySelectorAll(".color")[0].classList.add("selected");
+function firstColorSelected(){
+  document.querySelectorAll(".color")[0].classList.add("selected");
 }
 
-//creation of the divs in the color palette
+//creation of the divs in the color palette.
 function createDivColor() {
   let divColor = document.getElementById("color-palette");
   for (let i = 0; i < 4; i += 1) {
@@ -14,7 +14,8 @@ function createDivColor() {
   }
 }
 createDivColor();
-//creation of the pixels in the pixels board
+firstColorSelected();
+//creation of the pixels in the pixels board.
 function createSquaresBox() {
   const squareBox = document.getElementById("pixel-board");
   for (let line = 0; line < 5; line += 1) {
@@ -30,5 +31,18 @@ function createSquaresBox() {
   }
 }
 createSquaresBox();
+//creation creation of the function that selects the colors to be changed on the pixel board.
 
-
+//recovery colors in the HTML.
+let arrColors = document.querySelectorAll(".color");
+for(let i in arrColors){
+  let colorsElement = arrColors[i]; 
+  colorsElement.addEventListener("click",function(event){
+    
+    for(let i=0; i < arrColors.length; i+=1){
+      arrColors[i].classList.remove("selected")
+    }
+    colorsElement.classList.add("selected");
+  });   
+} //scrolling through variable array colors and adding event click.
+  
