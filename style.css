@@ -1,5 +1,10 @@
 body {
   background-color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+main {
   margin: 50px auto;
   max-width: 300px;
 }
@@ -17,7 +22,7 @@ body {
 }
 
 button {
-  margin-left: 115px;
+  margin: 5px 115px;
 }
 
 .board-pixel {
