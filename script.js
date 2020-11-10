@@ -1,6 +1,5 @@
 window.onload = function(event){
     
-
     let start = true;
     let pintar;
     generateBoard();
@@ -16,57 +15,62 @@ window.onload = function(event){
         pintarPreto.className += " selected";
     })
     
-    let pintarVermelho = document.getElementById("red")
-    pintarVermelho.addEventListener("click", function(){ 
-        pintar = "red";
+    let pintarA = document.getElementById("colorA");
+    let corA = getRandomColor();
+    pintarA.style.backgroundColor = corA; 
+    pintarA.addEventListener("click", function(){ 
+        pintar = corA;
         removeClass();
-        pintarVermelho.className += " selected";
+        pintarA.className += " selected";
     })
 
-    let pintarAzul = document.getElementById("blue")
-    pintarAzul.addEventListener("click", function(){ 
-        pintar = "blue";
+    let pintarB = document.getElementById("colorB");
+    let corB = getRandomColor();
+    pintarB.style.backgroundColor = corB;
+    pintarB.addEventListener("click", function(){ 
+        pintar = corB;
         removeClass();
-        pintarAzul.className += " selected";
+        pintarB.className += " selected";
     })
 
-    let pintarAmarelo = document.getElementById("yellow")
-    pintarAmarelo.addEventListener("click", function(){ 
-        pintar = "yellow";
+    let pintarC = document.getElementById("colorC");
+    let corC = getRandomColor();
+    pintarC.style.backgroundColor = corC;
+    pintarC.addEventListener("click", function(){ 
+        pintar = corC;
         removeClass();
-        pintarAmarelo.className += " selected";
+        pintarC.className += " selected";
     })
 
-    pintarPreto.className += " selected";
     pintar = "black";
+    pintarPreto.className += " selected";
 
-     
-
+    //Evento do click do pixel no quadro
     function pintaBox(){
 
         let box = document.getElementsByClassName('pixel');
         Array.from(box).forEach(function(box){
             box.addEventListener("click", function(){
-               box.style.backgroundColor = pintar;
+            box.style.backgroundColor = pintar;
            })
        })
     }
-
+    //Tira a classe "selected" da paleta de cores
     function removeClass(){
 
         pintarPreto.classList.remove("selected");
-        pintarVermelho.classList.remove("selected");
-        pintarAzul.classList.remove("selected");
-        pintarAmarelo.classList.remove("selected");
+        pintarA.classList.remove("selected");
+        pintarB.classList.remove("selected");
+        pintarC.classList.remove("selected");
     }
-
+    //Limpa o quadro de pixels
     function clear(){
         let box = document.getElementsByClassName('pixel');
          Array.from(box).forEach(function(box){
                 box.style.backgroundColor = "white";
         })
     }
-
+    //Gera um quadro de pixels
     function generateBoard(){
 
         let num;
@@ -106,23 +110,20 @@ window.onload = function(event){
             }
         }
         pintaBox();
-}
-
+    }
+    //Retorna o valor do input "board-size"
     function boardSize(){
 
         let size = document.getElementById("board-size").value;
         return size;
-}
-
-    function generatorClick(){
-
-        
-            let generator = document.getElementById("generate-board");
-        generator.addEventListener("click", generateBoard);
-        
-        
     }
-
+    //Evento botao "VQV"
+    function generatorClick(){
+ 
+        let generator = document.getElementById("generate-board");
+        generator.addEventListener("click", generateBoard);   
+    }
+    //Apaga o quadro de pixels
     function clearBoard(){
 
         let table = document.querySelector('#tabela');
@@ -131,6 +132,15 @@ window.onload = function(event){
             table.deleteRow(i-1)
         }
         
+    }
+    //Retorna uma cor aleatoria em hexadecimal
+    function getRandomColor() {
+        let letters = '0123456789ABCDEF';
+        let color = '#';
+        for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
     }
 }
     

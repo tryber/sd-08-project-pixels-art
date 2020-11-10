@@ -14,17 +14,15 @@ header, section{
     height: 75px;
 }
 
-#black{background-color: black;}
-#red{background-color: red;}
-#blue{background-color: blue;}
-#yellow{background-color: yellow;}
+#black{
+    background-color: black;
+}
 
 table{
     margin-left: auto;
     margin-right: auto;
     border-spacing: 0px;
 }
-
 
 .pixel {
     display: inline-block;  
