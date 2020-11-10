@@ -49,19 +49,14 @@ paletaCompleta.addEventListener("click", function () {
 });
 
 
-  // for (index = 0; index < elementosPaleta.length ; index += 1) {
-  //   let elemento = elementosPaleta[index];
-  //   elemento.addEventListener("click", selectColor) {
-  //     function selectColor () {
-  //       let selected = document.querySelector(".selected");
-  //       selected.className = "color";
-  //       elemento.className = "color selected";
-  //     }
-  //   }
-  // }
+// Requisito 8
+
+// board.addEventListener ("click", function (){
 
 
-clickColor ();
+// event.target.style.backgroundColor
+// })
+
 
 
 
