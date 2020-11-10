@@ -2,7 +2,7 @@ h1 {
   padding-left: 20px;
 }
 
-#color-palette {
+.palette {
   padding-left: 15px;
 }
 
@@ -15,13 +15,20 @@ h1 {
   border-radius: 100%;
 }
 
-#pixel-board {
+.button-clear {
+  width: 100px;
+  margin-left: 70px;
+}
+
+.board {
   margin: 20px;
+  width: 210px;
 }
 
 .lines {
-  margin: 0px;
+  margin: 0;
   height: 40px;
+  width: 210px;
 }
 
 .pixel {
