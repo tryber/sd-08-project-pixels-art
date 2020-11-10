@@ -43,9 +43,16 @@ h1 {
   border: black 1px solid;
 }
 
+#clear-board {
+  align-items: center;
+  display: flex;
+  font-size: 24px;
+  margin: 20px auto;
+}
+
 #pixel-board {
   line-height: 0;
-  margin-top: 40px;
+  margin-top: 20px;
   text-align: center;
 }
 
