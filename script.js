@@ -92,7 +92,8 @@ function pixelColorDefault() {
 function createInput(tipo, name, value) {
     let newInput = criarElemento('input', name, value);
     newInput.type = tipo;
-    newInput.value = 0;
+    newInput.value = '';
+    newInput.min = 1;
     return newInput;
 }
 
@@ -110,9 +111,6 @@ function removeChild() {
     let getPixelBoard = document.getElementById('pixel-board');
     let getPixeLine = document.querySelectorAll('.line');
 
-    console.log(getPixelBoard)
-    console.log(getPixeLine);
-
     for (let key of getPixeLine) {
         getPixelBoard.removeChild(key)
     }
@@ -123,11 +121,29 @@ function generateBoard() {
     let getBtn = document.querySelector('#generate-board');
 
     getBtn.addEventListener('click', function () {
-        let getInput = document.querySelector('#board-size').value;
-        if (getInput > 5 && getInput < 51) {
-            removeChild();
-            createPixels('div', getInput);
+        let getInput = document.querySelector('#board-size');
+        if (getInput.value === ''){
+            alert('Board inválido!');
         }
+
+        if (getInput.value >=5 && getInput.value <= 50) {
+            removeChild();
+            createPixels('div', getInput.value);
+            getInput.value = '';
+        }
+
+        if (getInput.value < 5){
+            removeChild();
+            createPixels('div', 5);
+            getInput.value = '';
+        }
+
+        if (getInput.value > 50){
+            removeChild();
+            createPixels('div', 50);
+            getInput.value = '';
+        }
+
         paint();
     })
 }
