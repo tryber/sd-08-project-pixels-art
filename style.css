@@ -1,47 +1,68 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    outline: none;
-    text-decoration: none;
-    text-align: center;
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Press+Start+2P&display=swap');
-
 body {
-    color: #ffffff;
-    background-color: #33333a;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
+  align-items: center;
+  background-color: #33333a;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 h1 {
-    margin-top: 60px;
-    font-size: 48px;
-    font-family: 'Press Start 2P', monospace;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 48px;
+  margin-top: 60px;
 }
 h2 {
-    margin-top: 20px;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 18px;
-    font-weight: 300;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  margin-top: 20px;
 }
 input {
-    margin-top: 20px;
+  margin-top: 20px;
+  width: 50px;
+  padding: 5px 20px;
+}
+#clear-board, #generate-board {
+  padding: 5px 20px;
+  margin: 5px;
+}
+
+button {
+  font-family: 'Open Sans', sans-serif;
 }
 
 article {
-    margin-top: 40px;
+  margin-top: 20px;
 }
-button.color {
-    width: 25px;
-    height: 25px;
-    border: solid 1px #000000;
-    margin:0;
-    cursor: pointer;
+.color {
+  width: 30px;
+  height: 30px;
+  border: solid 1px black;
+  margin:0;
+  cursor: pointer;
 }
-button.color:focus {
-    border: solid 2px #fffffa;
+.color:focus {
+  outline: none;
+  border: solid 2px #fffffa;
+}
+
+#pixel-board {
+  margin: 0;
+  margin-top: 20px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.pixel-line {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  flex-direction: row;
+}
+.pixel {
+  width: 40px;
+  height: 40px;
+  border: solid 1px black;
+  margin: 0;
+  background-color: white;
 }
