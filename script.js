@@ -12,6 +12,14 @@ function colorePixel(){
     event.target.style.backgroundColor = backgroundColor;
 };
 
+function limparPixels(){
+    const pixelsColoridos = document.getElementsByClassName("pixel");
+    for (let pixelColorido of pixelsColoridos) {
+        pixelColorido.style.backgroundColor = "white";
+    } 
+
+}
+
 window.onload = () => { 
  
  let pixelsColorSelect = document.getElementsByClassName("color");
@@ -22,5 +30,7 @@ window.onload = () => {
  for(let pixel of pixels){
      pixel.onclick = colorePixel;
  };
- 
+ let limpaPixels = document.getElementById("clear-board");
+ limpaPixels.onclick = limparPixels;
 };
+

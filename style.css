@@ -35,3 +35,8 @@
 .pink {
     background-color: pink;
 }
+
+#clear-board {
+    display: block;
+    margin-bottom: 4px;
+}
