@@ -97,7 +97,7 @@ function geraCores() {
   }
 }
 
-function checkCorRepetida() {
+function checkCorRepetida(index, pos) {
   if (cores[index] === cores[pos] || cores[pos] === '#FFFFFF' || cores[pos] === '') {
     geraCores();
   }
@@ -108,7 +108,7 @@ function evitaCorRepetida() {
     let pos = index + 1;
 
     for (pos; pos < cores.length; pos += 1) {
-      checkCorRepetida();
+      checkCorRepetida(index, pos);
     }
   }
 }
