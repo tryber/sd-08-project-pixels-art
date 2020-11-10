@@ -47,3 +47,14 @@ function paletteColorSelected() {
 }
 
 paletteColorSelected();
+
+const board = document.querySelector('#pixel-board');
+board.addEventListener('click', paintPixel);
+//console.log(board);
+function paintPixel(eventPixel) {
+  const pixelSelected = document.querySelector('.selected');
+  if (eventPixel.target.style.backgroundColor == pixelSelected.style.backgroundColor)
+    eventPixel.target.style.backgroundColor = 'white';
+  else
+  eventPixel.target.style.backgroundColor = pixelSelected.style.backgroundColor;
+}
