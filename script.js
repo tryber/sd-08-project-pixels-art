@@ -36,10 +36,10 @@ switch (color) {
 		document.querySelector('#green').className= "color"
 			break;
     default:
-            console.log("ops")
+			break;
+            //console.log("ops")
    }
 }
-
 
 const pixelToPaint = document.querySelector('#pixel-board')
 pixelToPaint.addEventListener('click', colorPixel)
@@ -50,3 +50,15 @@ function colorPixel(e) {
 	let pixel = e.target
 	pixel.style.backgroundColor = colorToSet
 }
+
+ const buttonToClear = document.getElementById('clear-board')
+ buttonToClear.addEventListener('click', clearPixels )
+
+ function clearPixels() {
+	let lengthOFTable = document.getElementsByClassName('pixel').length
+
+	for (let index = 0; index < lengthOFTable; index += 1) {
+		document.getElementsByClassName('pixel')[index].style.background = "white"
+	}
+
+ }
