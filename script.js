@@ -25,7 +25,10 @@ btn.style.height = "40px";
 btn.style.marginLeft = "100px";
 endrebtn.appendChild(btn);
 // evento botão
-
+//document.getElementById("clear-board").addEventListener("click", limpa);
+//function limpa() {
+  ///document.getElementsByClassName("pixel-board").background-color ='white';
+//};
 
 //quadro de pixels
 const quadroDePixels = document.getElementById("pixel-board");
