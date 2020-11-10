@@ -41,6 +41,26 @@ window.onload = function () {
     }
 
     changeColor()
+
+    function createClearButton(textContent){
+        let buttonPosition = document.querySelector("#color-palette")
+        let button = document.createElement('button')
+        button.innerHTML = textContent;
+        button.setAttribute('id','clear-board')
+        buttonPosition.insertAdjacentElement('afterend',button);
+        
+        let createButton = document.getElementById('clear-board')
+        createButton.addEventListener('click',ClearPixels)
+        function ClearPixels (){
+            let pixels = document.querySelectorAll('.pixel')
+            for(let index = 0 ; index < pixels.length ; index +=1 ){
+                pixel = pixels[index];
+                pixel.style.backgroundColor = "white";
+            }
+        }
+    }
+
+    createClearButton("Limpar")
 }
 
 function createColorPallete() {
