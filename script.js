@@ -66,20 +66,14 @@ function createBotton (type, text){
 }
 createBotton("button", "Limpar");
 
-function cleanPixels (){
+function cleanPixels (){ //resolvido com ajuda de Rosiele David
     const botonLocal = document.getElementById("clear-board");
-    botonLocal.addEventListener("click", function (event){
-        event.target.className = "trigged";
-        let bottonLocal = document.querySelector("#clear-board").firstChild;
-        if (bottonLocal.className === "trigged"){
-            const pixelLocal = document.querySelectorAll(".pixel");
-            for (let i=0; i<pixelLocal.length; i+=1) {
-                const pix = pixelLocal[i]; //foi adicionado após analisar o código de paulo-simões
-                pix.style.backgroundColor = "white"
-            }
-            bottonLocal.className = "";
-        }
-        
+    botonLocal.addEventListener("click", function (){        
+        const pixelLocal = document.querySelectorAll(".pixel");
+        for (let i=0; i<pixelLocal.length; i+=1) {
+            const pix = pixelLocal[i]; //foi adicionado após analisar o código de paulo-simões
+            pix.style.backgroundColor = "white";
+        }                       
     });
 }
 cleanPixels();
