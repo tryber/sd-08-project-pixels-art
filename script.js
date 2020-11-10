@@ -5,6 +5,7 @@ window.onload = function () {
 function createDivs() {
   const arrayColor = ["black", "purple", "red", "green"];
   const palletDiv = document.getElementById("color-palette");
+  palletDiv.addEventListener("click", CreateEventsColor);
   for (let index = 0; index < arrayColor.length; index += 1) {
     const myDivs = document.createElement("div");
     myDivs.style.backgroundColor = arrayColor[index];
@@ -27,3 +28,9 @@ function createBoxPixels() {
   }
 }
 createBoxPixels();
+
+function CreateEventsColor(event) {
+  const colorClass = document.querySelector(".selected");
+  colorClass.classList.remove("selected");
+  event.target.classList.add("selected");
+}
