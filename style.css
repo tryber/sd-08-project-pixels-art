@@ -1,0 +1,52 @@
+body{
+    text-align: center;
+}
+
+#title{
+    text-align: center;
+}
+#color-palette{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.color{ 
+    display: inline-block;
+    border: black solid 1px;
+    height: 100px;
+    width: 100px;
+}
+.black{
+    background-color: black;
+}
+.red{
+    background-color: red;
+}
+.green{
+    background-color: green;
+}
+.blue{
+    background-color: blue;
+}
+
+#clear-board{
+    display: inline-block;
+}
+
+
+#pixel-board{
+    margin-top: 30px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+.pixel-column{
+    text-align: center;
+}
+.pixel{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border: 1px solid black;
+}
