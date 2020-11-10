@@ -56,5 +56,4 @@ botao.addEventListener('click', function(){
     for(let index =0; index< classPixel.length; index +=1){
         classPixel[index].style.backgroundColor = 'white';
     }    
-
 });
