@@ -8,13 +8,13 @@ body {
 }
 
 h1 {
-  font-family: "Press Start 2P", 'Press Start 2P', monospace;
+  font-family: Press Start 2P, monospace;
   font-size: 48px;
   margin-top: 60px;
 }
 
 h2 {
-  font-family: "Open Sans", 'Open Sans', sans-serif;
+  font-family: Open Sans, sans-serif;
   font-size: 18px;
   font-weight: 300;
   margin-top: 20px;
@@ -27,7 +27,7 @@ input {
 }
 
 button {
-  font-family: "Open Sans", 'Open Sans', sans-serif;
+  font-family: Open Sans, sans-serif;
   margin: 5px;
   padding: 5px 20px;
 }
@@ -45,15 +45,10 @@ article {
   width: 30px;
 }
 
-.color:focus {
-  outline: none;
-}
-
 .pixel-board {
   display: flex;
   flex-direction: column;
-  margin-top: 20px;
-  margin: 0;
+  margin: 20px 0px 0px 0px;
   padding: 0;
 }
 

@@ -1,12 +1,12 @@
-let colors = ['#000', '#2EC2A8', '#2D88CD', '#342FD4'];
+const colors = ['#000', '#2EC2A8', '#2D88CD', '#342FD4'];
 let current = '#000';
+let dim = 5;
 
 const buttons = document.getElementsByClassName('color');
-const dim = document.getElementById('board-size');
 const area = document.getElementById('pixel-board');
 
 function ChangeToColor(c) {
-  let buttonWith = document.getElementsByClassName('selected');
+  const buttonWith = document.getElementsByClassName('selected');
   buttonWith[0].classList.remove('selected');
   buttons[c].classList.add('selected');
   current = colors[c];
@@ -17,16 +17,18 @@ function Paint(e) {
 }
 
 function Randomize() {
-  const hexColor = (Math.random() * 0xFFFFFF << 0);
+  const hexColor = Math.floor(Math.random() * 16777215);
   const newColor = `#${hexColor.toString(16)}`;
   if (newColor.length < 7) {
     Randomize();
   }
+  console.log(newColor);
   return newColor;
 }
 
 function MakeBoard() {
-  const size = dim.value;
+  let size = Math.min(Math.max(5, dim), 50);
+  dim = size;
 
   while (area.firstChild) {
     area.removeChild(area.lastChild);
@@ -56,3 +58,12 @@ window.onload = function () {
   MakeBoard();
   ChangeToColor(0);
 };
+
+function Verify() {
+  if(!document.getElementById('board-size').value) {
+    alert('Board inválido!');
+  }
+}
+
+document.getElementById('generate-board').addEventListener('click', Verify);
+document.getElementById('clear-board').addEventListener('click', Verify);

@@ -13,8 +13,7 @@
 
         <h1 id="title">Paleta de Cores</h1>
         <h2>Obviamente, a melhor pixel art que você verá</h2>
-        <input placeholder="linhas" value="5" type="number" id="board-size" min="5" max="50">
-        <button id="generate-board" onclick="MakeBoard()">VQV</button>
+        
     </header>
 
     <article id="color-palette">
@@ -26,7 +25,9 @@
     </article>
     <section>
 
-        <button id="clear-board" onclick="MakeBoard()">Limpar</button>
+        <input placeholder="linhas" type="number" id="board-size" min="1">
+        <button id="generate-board">VQV</button>
+        <button id="clear-board">Limpar</button>
     </section>
     <article id="pixel-board" class="pixel-board"></article>
 </body>
