@@ -1,0 +1,24 @@
+#title {
+    color:  red;
+}
+.color-palette {
+    
+}
+.color {
+    height: 50px;
+    width: 50px;
+    border: 1px solid black;
+    display: inline-block;
+}
+#black-pallete {
+    background-color: black;
+}
+#red-pallete {
+    background-color: red;
+}
+#yellow-pallete {
+    background-color: yellow;
+}
+#blue-pallete {
+    background-color: blue;
+}
