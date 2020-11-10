@@ -1,3 +1,5 @@
+document.getElementById("black").classList.add('selected');
+
 // //função para limpar os pixels
 function limpar() {
     const botao = document.querySelector("#clear-board");
