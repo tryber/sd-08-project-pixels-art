@@ -4,17 +4,28 @@ body , div , span , ul , li , input , h1 { /* Codeclimate não deixa usar o '*' 
   padding: 0;
 }
 
+.color-palette {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  overflow: hidden;
+  padding: 5px;
+}
+
 .color {
   border: 1px solid black;
-  float: left;
+  border-radius: 50%;
   height: 40px;
   margin: 5px;
+  transition: 0.1s;
   width: 40px;
 }
 
-.color-palette {
-  list-style: none;
-  overflow: hidden;
+.color:hover {
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
 .pixel {
@@ -22,6 +33,10 @@ body , div , span , ul , li , input , h1 { /* Codeclimate não deixa usar o '*' 
   float: left;
   height: 40px;
   width: 40px;
+}
+
+.pixel:hover {
+  cursor: pointer;
 }
 
 .pixel-row {
@@ -37,4 +52,30 @@ body , div , span , ul , li , input , h1 { /* Codeclimate não deixa usar o '*' 
 .input-group {
   float: left;
   margin-right: 20px;
+}
+
+header {
+  align-items: center;
+  background-color: black;
+  color: white;
+  display: flex;
+  height: 60px;
+  justify-content: center;
+}
+
+footer {
+  align-items: center;
+  background-color: black;
+  bottom: 0;
+  color: white;
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+}
+
+footer a {
+  color: orangered;
+  text-decoration: none;
 }
