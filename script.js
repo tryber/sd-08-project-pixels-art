@@ -76,12 +76,13 @@ window.onload = function(event){
                 alert("Board inválido!");
                 return;
             }else{
+                if(num < 5){
+                    num = 5;
+                }else if(num > 50){
+                    num = 50;
+                }
                 clearBoard();
             }
-        }else if(num < 5){
-            num = 5;
-        }else if(num > 50){
-            num = 50;
         }else{
             start = false;
             num = 5;
