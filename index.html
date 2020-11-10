@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>
-        Paleta de Cores
-    </title>
+    <title>Paleta de Cores</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1 id="title">Paleta de Cores</h1>
     <ul id="color-palette"></ul>
     <button id="clear-board">Limpar</button>
+    <label for="input-board-size">Tamanho de 5 a 50</label>
+    <input type="number" id="board-size" name="input-board-size" min="5" max="50">
+    <button id="generate-board">VQV</button>
     <ul id="pixel-board"></ul>
     <script src="script.js"></script>
 </body>
