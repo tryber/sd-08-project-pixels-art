@@ -34,6 +34,18 @@ function geraPaletaDeCores() {
 
 geraPaletaDeCores();
 
+function geraCores() {
+  const cor = document.querySelectorAll('#color-palette .color');
+
+  cor[0].style.backgroundColor = '#000000';
+  cor[0].className = 'selected color';
+
+  for (let index = 1; index < 4; index += 1) {
+    cor[index].style.backgroundColor = '#' + (Math.floor(Math.random() * 16777215).toString(16));
+    cores.push(cor[index].style.backgroundColor);
+  }
+}
+
 function evitaCorRepetida() {
   for (let index = 0; index < cores.length; index += 1) {
     let pos = index + 1;
@@ -46,20 +58,7 @@ function evitaCorRepetida() {
   }
 }
 
-function geraCores() {
-  const cor = document.querySelectorAll('#color-palette .color');
-
-  cor[0].style.backgroundColor = '#000000';
-  cor[0].className = 'selected color';
-
-  for (let index = 1; index < 4; index += 1) {
-    cor[index].style.backgroundColor = '#' + (Math.floor(Math.random() * 16777215).toString(16));
-    cores.push(cor[index].style.backgroundColor);
-  }
-
-  evitaCorRepetida();
-}
-
+evitaCorRepetida();
 geraCores();
 
 function geraPixelBoard() {
