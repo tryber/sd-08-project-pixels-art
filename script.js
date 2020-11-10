@@ -1,4 +1,4 @@
-// Req 7 
+// Req 7
 const corSelecionada = document.querySelectorAll('.color');
 
 for (let i = 0; i < corSelecionada.length; i += 1) {
@@ -15,6 +15,7 @@ for (let i = 0; i < corSelecionada.length; i += 1) {
 }
 const allPixels = document.querySelectorAll('.pixel');
 
+// Req 8
 document.addEventListener('click', function (event) {
     if (event.target.classList.contains('pixel')) {
         let cor = document.querySelector('.selected');
