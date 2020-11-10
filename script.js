@@ -39,7 +39,7 @@ window.onload = function () {
     pixel[0].style.backgroundColor = 'black';
     const index = [];
     while (index.length <= 3) {
-      const aux = Math.floor(Math.random() * (7 - 1 + 1));
+      const aux = Math.floor((Math.random()) * ((7 - 1 + 1)));
       if (index.indexOf(aux) === -1) index.push(aux);
     }
     for (let i = 1; i < pixel.length; i += 1) {
