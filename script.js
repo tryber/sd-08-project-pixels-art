@@ -74,7 +74,8 @@ function cleanPixels (){
         if (bottonLocal.className === "trigged"){
             const pixelLocal = document.querySelectorAll(".pixel");
             for (let i=0; i<pixelLocal.length; i+=1) {
-                pixelLocal[i].style.backgroundColor = "white"
+                const pix = pixelLocal[i]; //foi adicionado após analisar o código de paulo-simões
+                pix.style.backgroundColor = "white"
             }
             bottonLocal.className = "";
         }
