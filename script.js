@@ -1,19 +1,29 @@
-const paletaDeCores = document.getElementById("color-palette");
-const tabelaDeCores = ["black", "blue", "green", "red"];
-for (let itens = 0; itens < tabelaDeCores.length; itens += 1) {
+//paleta de cores
+const endere = document.getElementById("color-palette");
+const Cores = ["black", "blue", "green", "red"];
+for (let itens = 0; itens < Cores.length; itens += 1) {
   let color = document.createElement("div");
   color.className = "color";
-  color.style.background = tabelaDeCores[itens];
+  color.style.background = Cores[itens];
   color.style.display = "inline-block";
   color.style.width = "100px";
   color.style.border = "solid 1px";
-  paletaDeCores.appendChild(color);
+  endere.appendChild(color);
   let text = document.createElement("p");
-  text.innerHTML = tabelaDeCores[itens];
+  text.innerHTML = Cores[itens];
   text.style.textAlign = "center";
   text.style.color = "#fff";
   color.appendChild(text);
 }
+//botão para limpar quadro
+let btn = document.createElement("button");
+let endrebtn = document.getElementById('btn')
+endrebtn.appendChild(btn);
+btn.style.width = "200px";
+btn.style.height = "40px"
+btn.style.marginLeft = "100px";
+
+//quadro de pixels
 const quadroDePixels = document.getElementById("pixel-board");
 quadroDePixels.style.width = "400px";
 quadroDePixels.style.height = "400px";
@@ -39,7 +49,7 @@ const reset = () => {
   }
 };
 document.querySelector(".color").classList.add("selected");
-let seletorDeCores = paletaDeCores.querySelectorAll("div");
+let seletorDeCores = endere.querySelectorAll("div");
 for (
   let coresDaPaleta = 0;
   coresDaPaleta < seletorDeCores.length;
