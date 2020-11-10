@@ -1,6 +1,7 @@
 const pixel = document.querySelector("#pixel-board");
 const color = document.querySelectorAll(".color");
 const board = document.querySelector("#board-size");
+let valorInput;
 for (let coluna = 0; coluna < 5; coluna += 1) {
   for (let linha = 0; linha < 5; linha += 1) {
     let div = document.createElement("div");
@@ -24,22 +25,17 @@ window.onload = function () {
   });
   addEventListener("click", function (evt) {
     for (let index = 0; index < color.length; index += 1) {
-      if (
-        color[index].className == "color selected" &&
-        evt.target.className == "pixel"
-      ) {
-        evt.target.style.backgroundColor = getComputedStyle(
-          color[index]
-        ).backgroundColor;
+      if (color[index].className == "color selected" && evt.target.className == "pixel") {
+        evt.target.style.backgroundColor = getComputedStyle(color[index]).backgroundColor;
       }
     }
   });
   let btnClear = document.querySelector("#clear-board");
   let clear = document.querySelectorAll(".pixel");
   btnClear.addEventListener("click", function () {
-    if (board.value * board.value > 25) {
+    if (valorInput * valorInput > 25) {
       clear = document.querySelectorAll(".pixel");
-      for (let index = 0; index < board.value * board.value; index += 1) {
+      for (let index = 0; index < valorInput * valorInput; index += 1) {
         clear[index].style.backgroundColor = "white";
       }
     } else {
@@ -50,13 +46,16 @@ window.onload = function () {
   });
   const Gboard = document.querySelector("#generate-board");
   Gboard.addEventListener("click", function () {
-    if (board.value > 4 && board.value < 51) {
-      pixel.style["grid-template-columns"] = `repeat(${board.value}, 1fr)`;
+    valorInput = board.value;
+    if (valorInput == '') {alert('Board inválido!'); return 0;}
+    if (valorInput > 4) {
+      if (valorInput > 51) {valorInput = 50;}
+      pixel.style["grid-template-columns"] = `repeat(${valorInput}, 1fr)`;
       while (pixel.hasChildNodes()) {
         pixel.removeChild(pixel.firstChild);
       }
-      for (let coluna = 0; coluna < board.value; coluna += 1) {
-        for (let linha = 0; linha < board.value; linha += 1) {
+      for (let coluna = 0; coluna < valorInput; coluna += 1) {
+        for (let linha = 0; linha < valorInput; linha += 1) {
           let div = document.createElement("div");
           div.className = "pixel";
           div.style.backgroundColor = "white";
@@ -67,8 +66,6 @@ window.onload = function () {
           pixel.appendChild(div);
         }
       }
-    } else {
-      alert("Board inválido");
     }
   });
 };
