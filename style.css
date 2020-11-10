@@ -2,7 +2,7 @@
     color:  red;
 }
 .color-palette {
-    
+
 }
 .color {
     height: 50px;
@@ -21,4 +21,19 @@
 }
 #blue-pallete {
     background-color: blue;
+}
+#pixel-board {
+width: 226px;
+height: 226px;
+border: 1px solid black;
+background-color: greenyellow;
+}
+.pixel {
+    height: 40px;
+    width: 40px;
+    border: 1px solid black;
+    display: inline-block;
+    background-color:white;
+    margin: 0px;
+    padding: 0px;
 }
