@@ -81,11 +81,11 @@ squarePixels();
 
       
     // Limpa o quadro
-    const divPixel = document.getElementsByClassName('pixel');
-    document.addEventListener('click', function () {
-    for (let index = 0; index < divPixel.length; index += 1) {
-        divPixel[index].style.background = 'white';
-    }
-});
+//     const divPixel = document.getElementsByClassName('pixel');
+//     document.addEventListener('click', function () {
+//     for (let index = 0; index < divPixel.length; index += 1) {
+//         divPixel[index].style.background = 'white';
+//     }
+// });
         
         
