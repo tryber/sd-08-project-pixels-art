@@ -68,17 +68,20 @@ pixelBoard(valor);
 
   const botao2NewBoard = document.querySelector('#generate-board');
   botao2NewBoard.addEventListener('click', function () {
-    let valorVerf = parseInt(entrada.value, 10);
-    if (valorVerf == '') {
+    let verfNum = entrada.value;
+    console.log(entrada.value);
+    if (verfNum == '') {
       alert('"Board inválido!"');
-    } else if (valorVerf < 5) {
-      valorVerf = 5;
-      pixelBoard(valorVerf);
-    } else if (valorVerf > 50) {
-      valorVerf = 50;
-      pixelBoard(valorVerf);
-    } else {
-      pixelBoard(valorVerf);
+    } else if (verfNum < 5) {
+      verfNum = 5;
+      pixelBoard(verfNum);
+    } else if (verfNum > 50) {
+      verfNum= 50;
+      pixelBoard(verfNum);
+    } else if (verfNum >= 5 && verfNum <= 50) {
+      pixelBoard(verfNum);
+    } else if (Number.isInteger(verfNum) == false) {
+      alert('"Aceita apenas números"');
     };
   });
 
