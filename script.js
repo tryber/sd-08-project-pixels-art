@@ -33,6 +33,7 @@ function createColorPallet() {
             block.className = 'color selected';
         }
 
+        //Adiciona eventListener a cada bloco para que ele receba ou perca a className selected quando uma cor for selecionada
         block.addEventListener('click', selectColor);
 
         colorPallet.appendChild(block);
@@ -62,6 +63,13 @@ function criaQuadro() {
         div.style.width = pixelSize + 'px';
         div.style.height = pixelSize + 'px';
         div.style.border = '1px solid black'
+
+
+        div.addEventListener('click', function(event){
+            let getBgColor = document.querySelector('.selected').style.backgroundColor;
+            event.target.style.backgroundColor = getBgColor;
+        });
+
         quadro.appendChild(div);
     }
 
