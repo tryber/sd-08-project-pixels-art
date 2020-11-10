@@ -1,3 +1,8 @@
+function palletSelected() {
+    document.querySelectorAll('.color')[0].classList.add('selected');
+}
+
+
 function createPalletColors() {
     let divColorPallet = document.getElementById("color-palette");
     for (let i = 0; i < 4; i += 1) {
@@ -10,7 +15,7 @@ function createPalletColors() {
 }
 
 createPalletColors();
-
+palletSelected();
 
 function createSquares() {
     let squares = document.getElementById('pixel-board');
