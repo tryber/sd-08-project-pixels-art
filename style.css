@@ -3,3 +3,13 @@
     border: 1px solid black;
     margin-left: 10px;
 }
+
+.pixel {
+    display: inline-block;
+    border: 1px solid black;
+    background-color: white;
+}
+
+#pixel-board {
+    width: 200px;
+}

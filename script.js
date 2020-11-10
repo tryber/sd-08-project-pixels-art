@@ -21,4 +21,20 @@ function createColorPaletteColors() {
         colorPalette[index].style.color = colorsArray[index];
     };
 };
-createColorPaletteColors()
+createColorPaletteColors();
+
+// Creating white pixel board
+function createPixelBoard(number) {
+	const pixelBoardContainer = document.getElementById('pixel-board');
+
+	for (let index1 = 0; index1 < number; index1 += 1) {
+		const createPixelElement = document.createElement('li');
+		createPixelElement.className = "pixel";
+		createPixelElement.innerHTML = "pixel";
+        createPixelElement.style.backgroundColor = 'white';
+        createPixelElement.style.color = 'white';
+		pixelBoardContainer.appendChild(createPixelElement);
+	};
+};
+
+createPixelBoard(25);
