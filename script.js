@@ -97,7 +97,7 @@ window.onload = function () {
       const inputNunber = document.getElementById('board-size');
       if (inputNunber.value === '') {
         alert('Board inválido!');
-      }
+      } else
       if (parseInt(inputNunber.value, 10) < 5) {
         generateBoard(5);
       } else if (parseInt(inputNunber.value, 10) > 50) {
