@@ -87,12 +87,12 @@ botaoVQV.addEventListener('click', criaGrid);
 //Criando mosaico com as células a serem pintadas com argumento do usuário.
 function criaGrid (tamanhoGrid) {
   let size = sizeGrid.value
-  if (size < 5){
-    size = 5;
+  if (size == '') {
+    return(alert('Board inválido!'));
   } else if (size > 50) {
     size = 50;
-  } else if (size == '') {
-    alert('Board inválido!');
+  } else if (size < 5) {
+    size = 5;
   }
   let gradeCelulas = document.getElementById('pixel-board');
   gradeCelulas.innerHTML = '';
