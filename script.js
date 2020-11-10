@@ -19,8 +19,8 @@ function classSelected() {
       for (let i = 0; i < classColors.length; i += 1) {
                 // Remover classe selected caso ja exista
         if (classColors[i].classList.contains('selected')) {
-            classColors[i].classList.remove('selected');
-          }
+          classColors[i].classList.remove('selected');
+        }
         event.target.classList.add('selected');
       }
     });
