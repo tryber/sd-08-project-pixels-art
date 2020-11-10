@@ -8,13 +8,13 @@ body {
 }
 
 h1 {
-  font-family: 'Press Start 2P', monospace;
+  font-family: "Press Start 2P", 'Press Start 2P', monospace;
   font-size: 48px;
   margin-top: 60px;
 }
 
 h2 {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", 'Open Sans', sans-serif;
   font-size: 18px;
   font-weight: 300;
   margin-top: 20px;
@@ -22,14 +22,14 @@ h2 {
 
 input {
   margin-top: 20px;
-  width: 50px;
   padding: 5px 20px;
+  width: 50px;
 }
 
 button {
-  padding: 5px 20px;
+  font-family: "Open Sans", 'Open Sans', sans-serif;
   margin: 5px;
-  font-family: 'Open Sans', sans-serif;
+  padding: 5px 20px;
 }
 
 article {
@@ -37,38 +37,41 @@ article {
 }
 
 .color {
-  width: 30px;
-  height: 30px;
   border: solid 1px black;
-  margin:0;
-  padding: 0;
   cursor: pointer;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+  width: 30px;
+}
+
+.color:focus {
+  outline: none;
 }
 
 .selected {
-  outline: none;
   border: solid 2px #fffffa;
 }
 
 .pixel-board {
-  margin: 0;
-  margin-top: 20px;
-  padding: 0;
   display: flex;
   flex-direction: column;
+  margin-top: 20px;
+  margin: 0;
+  padding: 0;
 }
 
 .pixel-line {
   display: flex;
+  flex-direction: row;
   margin: 0;
   padding: 0;
-  flex-direction: row;
 }
 
 .pixel {
-  width: 40px;
-  height: 40px;
-  border: solid 1px black;
-  margin: 0;
   background-color: white;
+  border: solid 1px black;
+  height: 40px;
+  margin: 0;
+  width: 40px;
 }

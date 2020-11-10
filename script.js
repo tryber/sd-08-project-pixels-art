@@ -17,28 +17,28 @@ function Paint(e) {
 }
 
 function Randomize() {
-  let hexColor = (Math.random()*0xFFFFFF<<0);
-  let newColor = '#' + hexColor.toString(16);
-  if(newColor.length < 7){
-      Randomize();
+  const hexColor = (Math.random() * 0xFFFFFF << 0);
+  const newColor = `#${hexColor.toString(16)}`;
+  if (newColor.length < 7) {
+    Randomize();
   }
   return newColor;
 }
 
 function MakeBoard() {
-  let size = dim.value;
+  const size = dim.value;
 
-  while(area.firstChild) {
+  while (area.firstChild) {
     area.removeChild(area.lastChild);
   }
 
   for (let i = 0; i < size; i += 1) {
-    let line = document.createElement('div');
+    const line = document.createElement('div');
     line.className = 'pixel-line';
     area.appendChild(line);
 
     for (let j = 0; j < size; j += 1) {
-      let pxl = document.createElement('div');
+      const pxl = document.createElement('div');
       pxl.className = 'pixel';
       pxl.addEventListener('click', Paint);
       line.appendChild(pxl);
@@ -54,4 +54,5 @@ window.onload = function () {
     buttons[i].style.backgroundColor = colors[i];
   }
   MakeBoard();
+  ChangeToColor(0);
 };
