@@ -1,18 +1,13 @@
 function createDivs(){
+let colors = ["black", "blue", "green", "yellow"];
 let colorPalette = document.getElementById('color-palette');
-let divColor = document.createElement('div');
-for (index = 0; index < 4; index += 1) {
-colorPalette.appendChild(divColor);
-divColor.className = 'color';
+for (let index = 0; index < colors.length; index += 1) {
+    let divColor = colors[index];
+    let myDivs = document.createElement('div');
+    colorPalette.appendChild(myDivs);
+    myDivs.className = 'color';
+    myDivs.style.backgroundColor = divColor;
 }
 }
 createDivs();
 
-function createColor() {
-let palette = ["black", "blue", "green", "yellow"];
-let colors = document.querySelectorAll('.color');
-for (index = 0; index < palette.length; index += 1) {
-colors[index].style.backgroundColor = palette[index];
-}
-}
-createColor();
