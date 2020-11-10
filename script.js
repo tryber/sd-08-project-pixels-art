@@ -34,8 +34,8 @@ function creatPixelBoard() {
   }
 }
 
-creatPixelBoard();
 
 window.onload = function () {
   colorsOptions();
+  creatPixelBoard();
 };
