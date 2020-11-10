@@ -1,3 +1,14 @@
 .color {
     border: 1px solid black;
 }
+header {
+    align-items: center;
+    display: flex;
+    justify-self: center;
+}
+
+#color-palette {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
