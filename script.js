@@ -8,10 +8,10 @@ function hexaRandom (num){
   let random = Math.floor(Math.random() * num);
   return random;
 }
-function randomColor() {
+function randomColor(string) {
   let hexadecimal = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'];
-  let cor = '#';
-  for(let index = 0; index < 6; index += 1) {
+  let cor = '#' + string;
+  for(let index = 0; index < 5; index += 1) {
     let randomNum = hexaRandom(16);
     cor += hexadecimal[randomNum];
     if(cor === "#FFFFFF"){
@@ -26,9 +26,9 @@ function initialColors () {
   let colors = document.querySelectorAll('.color');
   // Requisito 03 - A cor preta deve ser a primeira na paleta de cores.
   colors[0].style.backgroundColor = 'black';
-  colors[1].style.backgroundColor = randomColor();
-  colors[2].style.backgroundColor = randomColor();
-  colors[3].style.backgroundColor = randomColor();
+  colors[1].style.backgroundColor = randomColor(2);
+  colors[2].style.backgroundColor = randomColor(8);
+  colors[3].style.backgroundColor = randomColor(7);
 }
 initialColors();
 
