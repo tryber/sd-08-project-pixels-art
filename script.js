@@ -7,6 +7,7 @@ const board = document.querySelector('.pixel-board');
 // Sets reference to buttons
 const clearButton = document.querySelector('#clear-board');
 const genButton = document.querySelector('#generate-board');
+const colorGenButton = document.querySelector('#regen-colors');
 
 // sets boardSize default value
 let boardSize = 5;
@@ -33,9 +34,15 @@ function randomColor() {
 }
 
 // Sets other colors to randomized colors
-firstColor.style.backgroundColor = randomColor();
-secondColor.style.backgroundColor = randomColor();
-thirdColor.style.backgroundColor = randomColor();
+function setColors() {
+  firstColor.style.backgroundColor = randomColor();
+  secondColor.style.backgroundColor = randomColor();
+  thirdColor.style.backgroundColor = randomColor();
+}
+
+setColors()
+
+colorGenButton.addEventListener('click', setColors)
 
 // Removes 'selection' class from all pallete elements
 function removeSelection() {
