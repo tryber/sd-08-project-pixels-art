@@ -18,3 +18,16 @@ function selecionaCor(){
     }
 }
 selecionaCor()
+
+function colorindoPixels(){
+    let pixel = document.querySelectorAll('.pixel')
+    for(i = 0; i < pixel.length; i += 1){
+        let pick = pixel[i]
+        pick.addEventListener('click', function(){
+            let selected = document.querySelector('.selected').id
+            if(pick.style.backgroundColor !== null)
+            pick.style.backgroundColor = selected
+        })
+    }   
+}
+colorindoPixels()
