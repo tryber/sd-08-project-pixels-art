@@ -79,14 +79,16 @@ function buttonClear() {
     getContainer.appendChild(newBtn);
 }
 
+function colorWhite() {
+    let getPixel = document.getElementsByClassName('pixel');
+    for (let key of getPixel) {
+        key.style.backgroundColor = 'white';
+    }
+}
+
 function pixelColorDefault() {
     let getBtn = document.getElementById('clear-board');
-    let getPixel = document.getElementsByClassName('pixel');
-    getBtn.addEventListener('click', function () {
-        for (let key of getPixel) {
-            key.style.backgroundColor = 'white';
-        }
-    })
+    getBtn.addEventListener('click', colorWhite);
 }
 
 function createInput(tipo, name, value) {
@@ -94,6 +96,7 @@ function createInput(tipo, name, value) {
     newInput.type = tipo;
     newInput.value = '';
     newInput.min = 1;
+    newInput.max = 50;
     return newInput;
 }
 
@@ -129,21 +132,19 @@ function generateBoard() {
         if (getInput.value >=5 && getInput.value <= 50) {
             removeChild();
             createPixels('div', getInput.value);
-            getInput.value = '';
         }
 
-        if (getInput.value < 5){
+        if (getInput.value > 0 && getInput.value < 5 ){
             removeChild();
             createPixels('div', 5);
-            getInput.value = '';
         }
 
         if (getInput.value > 50){
             removeChild();
             createPixels('div', 50);
-            getInput.value = '';
         }
-
+        getInput.value = '';
+        colorWhite()
         paint();
     })
 }
