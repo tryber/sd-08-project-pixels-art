@@ -1,40 +1,40 @@
 function pixelInicial() {
-  let pixelInicial = document.querySelector('#black');
-  pixelInicial.className = "color selected";
-};
+  const pixelInicial = document.querySelector('#black');
+  pixelInicial.className = 'color selected';
+}
 pixelInicial();
 
 function pixelClass() {
-  let pixelColor = document.querySelectorAll('.color');
+  const pixelColor = document.querySelectorAll('.color');
   for (let i = 0; i < pixelColor.length; i += 1) {
-    pixelColor[i].addEventListener('click', function(event) {
-      let pixelSelected = document.querySelector(".color.selected");
-      pixelSelected.className = "color";
-      event.target.className = "color selected";
-    })
+    pixelColor[i].addEventListener('click', function (event) {
+      const pixelSelected = document.querySelector('.color.selecte');
+      pixelSelected.className = 'color';
+      event.target.className = 'color selected';
+    });
   }
 }
-pixelClass()
+pixelClass();
 
 function pintaPixel() {
-  let pixels = document.querySelectorAll('.pixel')
+  const pixels = document.querySelectorAll('.pixel');
   for (let i = 0; i < pixels.length; i += 1) {
-    pixels[i].addEventListener('click', function(event) {
-      let color = window.getComputedStyle(document.querySelector('.selected')).backgroundColor;
+    pixels[i].addEventListener('click', function (event) {
+      const color = window.getComputedStyle(document.querySelector('.selected')).backgroundColor;
       event.target.style.backgroundColor = color;
-    })
+    });
   }
 }
-pintaPixel()
+pintaPixel();
 
 function limpaPixels() {
-  let button = document.getElementById('clear-board');
-  let color = 'white';
+  const button = document.getElementById('clear-board');
+  const color = 'white';
   button.addEventListener('click', () => {
-    let pixels = document.querySelectorAll('.pixel');
+    const pixels = document.querySelectorAll('.pixel');
     for (let i = 0; i < pixels.length; i += 1) {
       pixels[i].style.backgroundColor = color;
     }
-  })
+  });
 }
-limpaPixels()
+limpaPixels();
