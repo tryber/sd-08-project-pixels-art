@@ -1,11 +1,11 @@
+body {
+  line-height: 0;
+}
+
 .palette {
   display: inline-flex;
   height: 50px;
   width: 200px;
-}
-
-.board {
-  display: inline-flex;
 }
 
 .color {
@@ -16,6 +16,7 @@
 }
 
 .pixel {
+  display: inline-block;
   background-color: white;
   border: black solid 1px;
   height: 40px;
