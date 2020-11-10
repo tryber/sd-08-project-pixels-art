@@ -1,6 +1,5 @@
 window.onload = function () {
   const btnGenerate = document.getElementById('generate-board');
-  const inputNunber = document.getElementById('board-size');
 
   function generateBoard(size) {
     const tableExists = document.querySelector('#pixel-board');
@@ -80,18 +79,19 @@ window.onload = function () {
 
   function btnVQV() {
     btnGenerate.addEventListener('click', function () {
+      const inputNunber = document.getElementById('board-size');
       if (inputNunber.value === '') {
         alert('Board inválido!');
       }
-      if (Number(inputNunber.value) < 5) {
+      if (parseInt(inputNunber.value, 10) < 5) {
         generateBoard(5);
-      }
-      if (Number(inputNunber.value) > 50) {
+      } else if (parseInt(inputNunber.value, 10) > 50) {
         generateBoard(50);
+      } else {
+        generateBoard(inputNunber.value);
+        changePixelColor();
+        clearPixels();
       }
-      generateBoard(inputNunber.value);
-      changePixelColor();
-      clearPixels();
     });
   }
   btnVQV();
