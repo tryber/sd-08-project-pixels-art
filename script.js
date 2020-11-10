@@ -1,3 +1,10 @@
+let numberOfLines = 5;
+const boardSize = document.getElementById('board-size');
+const btn = document.getElementById('clear-board');
+const pixelBoard = document.getElementById('pixel-board');
+const btnGenerate = document.getElementById('generate-board');
+const cores = ['#000000'];
+
 function clearBoard() {
   const pixel = document.querySelectorAll('.pixel');
   for (let index = 0; index < pixel.length; index += 1) {
@@ -5,12 +12,15 @@ function clearBoard() {
   }
 }
 
-const pixelBoard = document.getElementById('pixel-board');
+function pintaPixel(event) {
+  const corSelecionada = document.querySelector('.selected');
+  event.target.style.backgroundColor = corSelecionada.style.backgroundColor;
+}
 
 function geraPixel(index) {
   for (let pos = 0; pos < numberOfLines; pos += 1) {
     const pixel = document.createElement('div');
-    const lines = document.querySelectorAll('.boardLines')
+    const lines = document.querySelectorAll('.boardLines');
     pixel.className = 'pixel';
     pixel.style.backgroundColor = '#FFFFFF';
     pixel.addEventListener('click', pintaPixel);
@@ -27,19 +37,18 @@ function geraPixelBoard() {
   }
 }
 
+geraPixelBoard();
+
 function apagaPixelBoard() {
   for (let index = 0; index < numberOfLines; index += 1) {
-    pixelBoard.lastChild.remove()
+    pixelBoard.lastChild.remove();
   }
 }
 
-const boardSize = document.getElementById('board-size');
-
-let numberOfLines = 5;
-
 function generateBoard() {
   if (boardSize.value === '') {
-    return alert('Board inválido!')
+    alert('Board inválido!');
+    return
   }
 
   apagaPixelBoard();
@@ -53,14 +62,6 @@ function generateBoard() {
   }
   geraPixelBoard();
 }
-
-const btn = document.getElementById('clear-board');
-btn.addEventListener('click', clearBoard);
-
-const btnGenerate = document.getElementById('generate-board');
-btnGenerate.addEventListener('click', generateBoard);
-
-const cores = ['#000000'];
 
 function selecionaCor(event) {
   const corSelecionada = document.querySelector('.selected');
@@ -108,9 +109,5 @@ function evitaCorRepetida() {
 evitaCorRepetida();
 geraCores();
 
-function pintaPixel(event) {
-  const corSelecionada = document.querySelector('.selected');
-  event.target.style.backgroundColor = corSelecionada.style.backgroundColor;
-}
-
-geraPixelBoard();
+btn.addEventListener('click', clearBoard);
+btnGenerate.addEventListener('click', generateBoard);
