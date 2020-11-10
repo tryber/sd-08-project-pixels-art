@@ -26,11 +26,12 @@ function createColorPallet() {
         block.style.width = '30px';
         block.style.display = 'inline-block';
         block.style.border = '1px solid black';
-        block.style.backgroundColor = colors[i];
+        block.style.backgroundColor = generateRGB();
 
         //Adciona a classe selected a cor preta assim que a página é carregada
         if (colors[i] == 'black') {
             block.className = 'color selected';
+            block.style.backgroundColor = "black";
         }
 
         //Adiciona eventListener a cada bloco para que ele receba ou perca a className selected quando uma cor for selecionada
@@ -143,4 +144,14 @@ function createInput() {
     })
 
     body.appendChild(button);
+}
+
+function generateRGB(){
+    let r,g,b;
+
+    r = Math.round(Math.random()*255);
+    g = Math.round(Math.random()*255);
+    b = Math.round(Math.random()*255);
+
+    return "rgb(" + r + "," + g + "," + b + ")"    
 }
