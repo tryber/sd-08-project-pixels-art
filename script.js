@@ -64,3 +64,11 @@ function selectColor(){
    });
  }
 }
+//Botão para limpar seleção
+const btnClear = document.querySelector('#clear-board');
+btnClear.addEventListener('click', function () {
+   for(let index = 0; index < board.length; index += 1) {
+    board[index].style.backgroundColor = 'white';
+    }
+}
+);
