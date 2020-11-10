@@ -1,4 +1,5 @@
 
+// Requisitos obrigatorios serão feitos quando houver tempo.
 // Requisito 06
 // Função que adiciona a classe selected na cor inicial 'preta'
 // Raciocinio encontrado em uma discussão no StackoverFlow (https://pt.stackoverflow.com/questions/225809/como-adicionar-uma-classe-em-javascript-puro)
