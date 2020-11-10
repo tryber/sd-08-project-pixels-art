@@ -5,14 +5,34 @@ window.onload = function () {
   colorOptions[3].style.backgroundColor = "yellow";
 };
 
+let generateButton = document.getElementById("generate-board");
+let inputNumber = document.getElementById("board-size");
+let pixelBox = document.getElementById("pixel-board");
+
+generateButton.addEventListener("click", function () {
+  createPixelBox();
+});
+
+inputNumber.addEventListener("keypress", function (press) {
+  if (press.key === "Enter") {
+    createPixelBox();
+  }
+});
+
 function createPixelBox() {
-  for (let index = 0; index < 25; index += 1) {
-    let pixelBox = document.createElement("div");
-    pixelBox.className = "pixel";
-    document.getElementById("pixel-board").appendChild(pixelBox);
+  if (inputNumber.value.length > 0 && inputNumber.value > 0) {
+    let gridSize = inputNumber.value;
+    for (let index = 0; index < gridSize * gridSize; index += 1) {
+      let pixelCreate = document.createElement("div");
+      pixelCreate.className = "pixel";
+      document.getElementById("pixel-board").appendChild(pixelCreate);
+    }
+    pixelBox.style.gridTemplateColumns = "repeat(" + gridSize + ", 40px)";
+    pixelBox.style.gridTemplateRows = "repeat(" + gridSize + ", 40px)";
+  } else {
+    alert("Board inválido!");
   }
 }
-createPixelBox();
 
 let colorOptions = document.querySelectorAll(".color");
 let selectedColor = "black";
@@ -29,14 +49,13 @@ colorPicker.addEventListener("click", function (event) {
   }
 });
 
-let pixelBox = document.getElementById("pixel-board");
 pixelBox.addEventListener("click", function (event) {
   event.target.style.backgroundColor = selectedColor;
 });
 
-let pixelElements = document.querySelectorAll(".pixel");
 let clearButton = document.getElementById("clear-board");
 clearButton.addEventListener("click", function () {
+  let pixelElements = document.querySelectorAll(".pixel");
   for (let index = 0; index < pixelElements.length; index += 1) {
     pixelElements[index].style.backgroundColor = "white";
   }

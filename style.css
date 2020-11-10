@@ -4,12 +4,21 @@
 }
 
 body {
-  background: linear-gradient(90deg, rgba(115,220,224,1) 0%, rgba(244,253,29,1) 50%, rgba(252,69,236,1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(115, 220, 224, 1) 0%,
+    rgba(244, 253, 29, 1) 50%,
+    rgba(252, 69, 236, 1) 100%
+  );
+  align-items: center;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
-  height: 100vh;
+  height: 100%;
+  margin: 20px;
+}
+
+main {
 }
 
 #title {
@@ -23,39 +32,64 @@ body {
 
 #color-palette {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, 50px);
   grid-template-rows: 50px;
   justify-items: stretch;
-  margin-bottom: 25px;  
 }
 
 .color {
   border: 1px solid black;
-  border-radius: 4px;  
-  
+  border-radius: 4px;
 }
 
 .color:hover {
   box-shadow: 3px 3px 5px 6px rgb(117, 111, 111);
 }
 
+#input-container {
+  display: inline-block;
+  margin-top: 15px;
+}
+
+input {
+  text-align: center;
+  width: 90px;
+  display: inline-block;
+  height: 25px;
+  border-radius: 4px;
+  border: none;
+  box-shadow: 1px 2px 5px 1px rgb(117, 111, 111);
+}
+
 button {
-  width: 80px;
-  height: 30px;
+  background: rgb(231, 228, 225);
   display: block;
   margin: auto;
-  border-radius: 4px;  
+  border-radius: 4px;
+  border: none;
+  box-shadow: 1px 2px 5px 1px rgb(117, 111, 111);
 }
 
 button:hover {
-  box-shadow: 1px 2px 5px 1px rgb(117, 111, 111);
+  background: white;
+  box-shadow: 3px 2px 5px 1px rgb(83, 80, 80);
+}
+
+#generate-board {
+  display: inline-block;
+  width: 90px;
+  height: 25px;
+}
+
+#clear-board {
+  margin-top: 16px;
+  width: 80px;
+  height: 28px;
 }
 
 #pixel-board {
   margin-top: 25px;
   display: grid;
-  grid-template-columns: repeat(5, 40px);
-  grid-template-rows: repeat(5, 40px);
   justify-items: stretch;
   box-shadow: 3px 3px 5px 6px rgb(117, 111, 111);
 }
