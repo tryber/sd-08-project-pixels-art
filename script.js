@@ -52,6 +52,11 @@ let generateButton = document.querySelector("#generate-board");
 let inputText = document.querySelector("#board-size");
 generateButton.addEventListener("click", function(){
     if (inputText.value > 0) {
+        if (inputText.value > 50) {
+            inputText.value = 50;
+        } else if (inputText.value < 5) {
+            inputText.value = 5;
+        }
     pixelsLength = inputText.value;
     tabela.innerHTML = "";
     createPixels();
