@@ -66,28 +66,28 @@ function startLoad() {
   }
   clearButton();
   
-  function setColorOne(color) {
+  function setColorBlack(color) {
     let colorOne = document.querySelectorAll('.color')[0];
     colorOne.style.backgroundColor = color;
   }
-  setColorOne('black');
+  setColorBlack('black');
   
-  function setColorTwo(color) {
+  function setColorRed(color) {
     let colorTwo = document.querySelectorAll('.color')[1];
     colorTwo.style.backgroundColor = color;
   }
-  setColorTwo('rgb(15, 163, 107)');
+  setColorRed('red');
   
-  function setColorThree(color) {
+  function setColorGreen(color) {
     let colorThree = document.querySelectorAll('.color')[2];
     colorThree.style.backgroundColor = color;
   }
-  setColorThree(' rgb(255, 255, 0)');
+  setColorGreen('green');
   
-  function setColorFour(color) {
+  function setColorBlue(color) {
     let colorFour = document.querySelectorAll('.color')[3];
     colorFour.style.backgroundColor = color;
   }
-  setColorFour('red');
+  setColorBlue('blue');
   
   
