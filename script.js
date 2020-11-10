@@ -17,6 +17,7 @@ function selectColor(){
   for( i = 0; i < pixels.length; i++){
     selected = Boolean;
     pixels[i].addEventListener('click', (event)=>{
+
       if(event.target.className === 'color selected'){
         event.target.className = 'color'
         selected = false
@@ -62,3 +63,12 @@ function createGrade () {
   }
 }
 createGrade()
+
+function clearGrade(){
+  let pixels = document.querySelectorAll('.pixel')
+
+    for(i = 0; i < pixels.length; i++){
+      let divs = pixels[i]
+      divs.style.backgroundColor= 'white'
+  }
+}
