@@ -1,12 +1,12 @@
 // Cria a paleta de cores
 function createColorPalette(n) {
-  const colorPaletteContainer = document.getElementById ('color-palette');
-  let colors = ['rgb(0, 0, 0)'];
-  for (let numberOfColors = 0; numberOfColors < n - 1; numberOfColors +=  1) {
-    let r = Math.floor((Math.random() * 254) + 1);
-    let g = Math.floor((Math.random() * 254) + 1);
-    let b = Math.floor((Math.random() * 254) + 1);
-    let rgb = 'rgb(' + r + ', ' + g + ', ' + b + ')';
+  const colorPaletteContainer = document.getElementById('color-palette');
+  const colors = ['rgb(0, 0, 0)'];
+  for (let numberOfColors = 0; numberOfColors < n - 1; numberOfColors += 1) {
+    const r = Math.floor(Math.random() * 254 + 1);
+    const g = Math.floor(Math.random() * 254 + 1);
+    const b = Math.floor(Math.random() * 254 + 1);
+    const rgb = `rgb(${r}, ${g}, ${b})`;
     colors.push(rgb);
   }
   for (let color = 0; color < colors.length; color += 1) {
@@ -19,7 +19,7 @@ function createColorPalette(n) {
     colorPaletteContainer.appendChild(colorPalette);
   }
 }
-createColorPalette(4)
+createColorPalette(4);
 
 // Cria o quadro de pixels
 function generateBoard(n) {
@@ -38,7 +38,7 @@ function generateBoard(n) {
     }
   }
 }
-generateBoard(5)
+generateBoard(5);
 
 // Eventos
 document.addEventListener('click', function (event) {
@@ -47,27 +47,35 @@ document.addEventListener('click', function (event) {
     const selectedColor = document.querySelector('.selected');
     selectedColor.className = 'color';
     event.target.className = 'color selected';
-  };
+  }
   // Pinta o pixel com a cor selecionada
   if (event.target.classList.contains('pixel')) {
     const applyColor = document.querySelector('.selected').style.background;
     event.target.style.background = applyColor;
-  };
+  }
   // Limpa o quadro
   if (event.target.classList.contains('btn-clear')) {
     const pixel = document.getElementsByClassName('pixel');
     for (let index = 0; index < pixel.length; index += 1) {
       pixel[index].style.background = 'white';
     }
-  };
+  }
   // Gera um novo quadro
   if (event.target.classList.contains('generate-board')) {
     let numberOfPixels = document.getElementById('board-size').value;
-    const boardSize = numberOfPixels === '' ? alert("Board inválido!") : numberOfPixels < 5 ? numberOfPixels = 5 : numberOfPixels > 50 ? numberOfPixels = 50 : numberOfPixels;
+    if (numberOfPixels === '') {
+      alert('Board inválido!');
+      return;
+    }
+    if (numberOfPixels < 5) {
+      numberOfPixels = 5;
+    } else if (numberOfPixels > 50) {
+      numberOfPixels = 50;
+    } else {
+      numberOfPixels;
+    }
     const board = document.getElementById('pixel-board');
     board.innerHTML = ''; // Ideia vista no projeto da Bianca Caetano
     generateBoard(numberOfPixels);
-  };
+  }
 });
-
-
