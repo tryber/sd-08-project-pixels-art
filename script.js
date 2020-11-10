@@ -50,3 +50,11 @@ let botao = document.createElement('button');
 botao.id = 'clear-board';
 botao.innerText = 'Limpar'
 recuperaSection.appendChild(botao);
+
+let classPixel = document.querySelectorAll('.pixel');
+botao.addEventListener('click', function(){
+    for(let index =0; index< classPixel.length; index +=1){
+        classPixel[index].style.backgroundColor = 'white';
+    }    
+
+});
