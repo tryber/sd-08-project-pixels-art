@@ -1,5 +1,3 @@
-window.onload = colorsOptions();
-
 function randomColor() {
   const c1 = Math.floor(Math.random() * 255);
   const c2 = Math.floor(Math.random() * 255);
@@ -22,3 +20,4 @@ function colorsOptions() {
   }
 }
 
+window.onload = colorsOptions();
