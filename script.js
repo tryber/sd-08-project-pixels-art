@@ -1,8 +1,16 @@
 window.onload = function () {
-  colorOptions[0].style.backgroundColor = "black";
-  colorOptions[1].style.backgroundColor = "red";
-  colorOptions[2].style.backgroundColor = "blue";
-  colorOptions[3].style.backgroundColor = "yellow";
+  //source: https://www.w3resource.com/javascript-exercises/javascript-math-exercise-40.php
+  function random_bg_color() {
+    var x = Math.floor(Math.random() * 256);
+    var y = Math.floor(Math.random() * 256);
+    var z = Math.floor(Math.random() * 256);
+    var bgColor = "rgb(" + x + "," + y + "," + z + ")";
+    return bgColor;
+  }
+  colorOptions[0].style.backgroundColor = "rgb(0,0,0)";
+  colorOptions[1].style.backgroundColor = random_bg_color();
+  colorOptions[2].style.backgroundColor = random_bg_color();
+  colorOptions[3].style.backgroundColor = random_bg_color();
 };
 
 let pixelBox = document.getElementById("pixel-board");
@@ -18,11 +26,11 @@ function initialGrid() {
 initialGrid();
 
 function removeGrid() {
-  let pixelCounter = document.querySelectorAll('.pixel');
-for (let index = 0; index < pixelCounter.length; index += 1) {
-  let removeDiv = pixelBox.lastElementChild;
-  pixelBox.removeChild(removeDiv);
-}
+  let pixelCounter = document.querySelectorAll(".pixel");
+  for (let index = 0; index < pixelCounter.length; index += 1) {
+    let removeDiv = pixelBox.lastElementChild;
+    pixelBox.removeChild(removeDiv);
+  }
 }
 
 let generateButton = document.getElementById("generate-board");
@@ -38,7 +46,7 @@ inputNumber.addEventListener("keypress", function (press) {
 
 function createPixelBox() {
   if (inputNumber.value.length > 0 && inputNumber.value > 0) {
-    removeGrid()
+    removeGrid();
     let gridSize = inputNumber.value;
     if (gridSize < 5) {
       gridSize = 5;
@@ -53,14 +61,13 @@ function createPixelBox() {
     }
     pixelBox.style.gridTemplateColumns = "repeat(" + gridSize + ", 40px)";
     pixelBox.style.gridTemplateRows = "repeat(" + gridSize + ", 40px)";
-    
   } else {
     alert("Board inválido!");
   }
 }
 
 let colorOptions = document.querySelectorAll(".color");
-let selectedColor = "black";
+let selectedColor = "rgb(0,0,0)";
 const colorPicker = document.getElementById("color-palette");
 colorPicker.addEventListener("click", function (event) {
   if (event.target.className == "color") {
