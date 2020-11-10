@@ -20,5 +20,10 @@ body {
 }
 
 .pixel {
-    color: white;
+    width: 40px;
+    height: 40px;
+    border: 1px, black;
+    background-color: white ;
+    border-style: solid;
+    display: inline-block;
 }
