@@ -1,4 +1,4 @@
-table, th, td {
+#pixel-board, th, td {
     border: 1px solid black;
     border-collapse: collapse;
 }
