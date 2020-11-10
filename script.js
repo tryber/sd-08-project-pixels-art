@@ -1,3 +1,6 @@
+
+
+
 //Função para definir a cor selecionada e atribuir a classe 'color' para a que tinha a classe 'selected'.
 function selecionado (botaoSelecionado) {
   let antigoSelecionado = document.querySelector('.selected');
@@ -22,7 +25,6 @@ function limpaGrade(botao) {
 }
 
 
-
 //Criando quadrados modelo de cores para paleta.
 let paletaDeCor = document.getElementById('color-palette');
 let arrayDeCores = ['green', 'yellow', 'blue'];
@@ -30,10 +32,6 @@ let arrayDeCores = ['green', 'yellow', 'blue'];
 for (let index = 0; index < 4; index += 1) {
   let corDaPaleta = document.createElement('div');
   corDaPaleta.className = ('color');
-  corDaPaleta.style.display = ('flex');
-  corDaPaleta.style.border = ('solid');
-  corDaPaleta.style.borderWidth = ('1px');
-  corDaPaleta.style.borderColor = ('black');
   if (index == 0){
     corDaPaleta.style.backgroundColor = ('black');
     corDaPaleta.className = ('color');
@@ -41,9 +39,6 @@ for (let index = 0; index < 4; index += 1) {
   } else {
     corDaPaleta.style.backgroundColor = (arrayDeCores[index - 1]);
   } 
-  corDaPaleta.style.width = ('40px');
-  corDaPaleta.style.height = ('40px');
-  corDaPaleta.style.margin = ('5px');
   corDaPaleta.addEventListener('click', selecionado);
   paletaDeCor.appendChild(corDaPaleta);
 }
@@ -55,7 +50,7 @@ botaoLimpar.style.marginTop = ('5px');
 botaoLimpar.addEventListener('click', limpaGrade);
  
 
-//Criando mosaico com as células a serem pintadas.
+//Criando primeiro mosaico 5x5.
 let gradeCelulas = document.getElementById('pixel-board');
 gradeCelulas.style.borderSpacing = (0);
 gradeCelulas.style.border = ('none');
@@ -65,14 +60,40 @@ for (let primeiroIndex = 0; primeiroIndex < 5; primeiroIndex += 1) {
   for (let segundoIndex = 0; segundoIndex < 5; segundoIndex += 1) {
     let celulaLinhaTabela = document.createElement('td');
     celulaLinhaTabela.className = ('pixel');
-    celulaLinhaTabela.style.backgroundColor = ('white');
-    celulaLinhaTabela.style.border = ('solid');
-    celulaLinhaTabela.style.borderWidth = ('1px');
-    celulaLinhaTabela.style.width = ('40px');
-    celulaLinhaTabela.style.height = ('40px');
     linhaDaTabela.appendChild(celulaLinhaTabela);
   }
   gradeCelulas.appendChild(linhaDaTabela);
+}
+
+
+//Criando funcionalidade para o botão VQV e recebimento do tamanho da grade de células.
+let sizeGrid = document.getElementById('board-size'); 
+let botaoVQV = document.getElementById('generate-board');
+botaoVQV.addEventListener('click', criaGrid);
+
+
+
+//Criando mosaico com as células a serem pintadas com argumento do usuário.
+function criaGrid (tamanhoGrid) {
+  let size = sizeGrid.value
+  if (size == '') {
+    alert('Board inválido!');
+  } else if (size > 0) {
+    let gradeCelulas = document.getElementById('pixel-board');
+    gradeCelulas.innerHTML = '';
+    gradeCelulas.style.borderSpacing = (0);
+    gradeCelulas.style.border = ('none');
+
+    for (let primeiroIndex = 0; primeiroIndex < size; primeiroIndex += 1) {
+      let linhaDaTabela = document.createElement('tr');
+      for (let segundoIndex = 0; segundoIndex < size; segundoIndex += 1) {
+        let celulaLinhaTabela = document.createElement('td');
+        celulaLinhaTabela.className = ('pixel');
+        linhaDaTabela.appendChild(celulaLinhaTabela);
+      }
+      gradeCelulas.appendChild(linhaDaTabela);
+    }
+  }
 }
 
 //Adicionando o método event bubbling para preencher as células.
@@ -81,4 +102,5 @@ document.addEventListener('click', function (clique) {
       preencheCelula(clique.target);
   }
 }, false);
+
 
