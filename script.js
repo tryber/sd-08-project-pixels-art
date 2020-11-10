@@ -1,4 +1,5 @@
-document.getElementById("black").classList.add('selected');
+let classeInicial = document.querySelector("#black");
+classeInicial.className = "color selected";
 
 //Gera cores aleatórias
 let randomColor1 = "#000000".replace(/0/g,function(){return (~~(Math.random()*16)).toString(16);});
@@ -72,28 +73,28 @@ dayMouseOut();
 function mouseClick() {
     black.addEventListener("click", function (event) {
         cor = 1;
-        black.className = "selected";
+        black.className = "color selected";
         blue.className = "color";
         green.className = "color";
         yellow.className = "color";
     });
     blue.addEventListener("click", function (event) {
         cor = 2;
-        blue.className = "selected";
+        blue.className = "color selected";
         black.className = "color";
         green.className = "color";
         yellow.className = "color";
     });
     green.addEventListener("click", function (event) {
         cor = 3;
-        green.className = "selected";
+        green.className = "color selected";
         black.className = "color";
         blue.className = "color";
         yellow.className = "color";
     });
     yellow.addEventListener("click", function (event) {
         cor = 4;
-        yellow.className = "selected";
+        yellow.className = "color selected";
         black.className = "color";
         blue.className = "color";
         green.className = "color";
@@ -114,17 +115,16 @@ let pickCor4 = document.querySelector("#yellow").style.backgroundColor
 
 //Ao clicar em uma das cores a variável "cor" recebe um numero que será verificado na função abaixo
 function setColor() {
-    const pixels = document.querySelectorAll(".pixel");
-    black.className = "selected";
+    const pixels = document.querySelectorAll(".pixel");    
     for (let i = 0; i < pixels.length; i++) {
         pixels[i].addEventListener("click", function (event) {
-            if (black.className === 'selected') {
+            if (black.className === 'color selected') {
                 event.target.style.backgroundColor = 'black';
-            } else if (blue.className === 'selected') {
+            } else if (blue.className === 'color selected') {
                 event.target.style.backgroundColor = pickCor2;
-            } else if (green.className === 'selected') {
+            } else if (green.className === 'color selected') {
                 event.target.style.backgroundColor = pickCor3;
-            } else if (yellow.className === 'selected') {
+            } else if (yellow.className === 'color selected') {
                 event.target.style.backgroundColor = pickCor4;
             }
         });
