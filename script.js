@@ -8,22 +8,24 @@ function addSelect() {
 addSelect();
 
 //Requisito 07
-//Recuperando cores no html
-let classColors = document.querySelectorAll('.color');
-//Percorrendo cada cor, e adicionando o evento de click
-for (let index = 0; index < classColors.length; index += 1) {
-    let tagClass = classColors[index];
+function classSelected() {
+    //Recuperando cores no html
+    let classColors = document.querySelectorAll('.color');
+    //Percorrendo cada cor, e adicionando o evento de click
+    for (let index = 0; index < classColors.length; index += 1) {
+        let tagClass = classColors[index];
 
-    tagClass.addEventListener('click', function (event) {
-        for (let i =0; i < classColors.length; i+=1){
-            if (classColors[i].classList.contains('selected')){
-                classColors[i].classList.remove('selected');
+        tagClass.addEventListener('click', function (event) {
+            for (let i = 0; i < classColors.length; i += 1) {
+                if (classColors[i].classList.contains('selected')) {
+                    classColors[i].classList.remove('selected')
+                }
             }
-        }
-        event.target.classList.add('selected');
-        
-    });
+            event.target.classList.add('selected');
+        });
+    }
 }
+classSelected();
 
 
 
