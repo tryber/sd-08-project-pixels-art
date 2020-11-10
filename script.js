@@ -5,6 +5,7 @@ body.appendChild(div);
 let h1 = document.createElement("h1");
 h1.id = "title";
 h1.innerHTML = "Paleta de Cores";
+div.id = "div-palette";
 div.appendChild(h1);
 
 let ul = document.createElement("ul");
@@ -68,4 +69,25 @@ function colorPixel(){
     });
 }
 colorPixel();
+
+let button = document.createElement("button");
+button.id = "clear-board";
+button.innerHTML = "Limpar";
+
+let divPalette = document.querySelector("#div-palette");
+divPalette.appendChild(button);
+
+function buttonClear(){
+    button.addEventListener("click", function(event){
+
+        let buttonPixel = document.querySelectorAll(".pixel");
+
+        for (let index=0; index<buttonPixel.length; index++){
+            buttonPixel[index].style.backgroundColor = "white";
+        }        
+    });
+}
+buttonClear();
+
+
 
