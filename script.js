@@ -8,7 +8,7 @@ const cores = ['#000000'];
 function clearBoard() {
   const pixel = document.querySelectorAll('.pixel');
   for (let index = 0; index < pixel.length; index += 1) {
-    pixel[index].style.backgroundColor = 'rgba(0, 0, 0, 0)';
+    pixel[index].style.backgroundColor = 'white';
   }
 }
 
