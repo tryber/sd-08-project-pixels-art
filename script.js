@@ -27,7 +27,7 @@ createSquares();
 
 function limpar() {
   console.log("botão limpar clicado");
-  document.getElementsByClassName.length.style.backgroundColor = "white";
+  document.getElementById("pixel-board").style.backgroundColor = "white";
 }
 
 limpar();
