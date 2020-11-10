@@ -34,9 +34,6 @@ body {
 .cor4 {
   background-color: green;
 }
-.cor5 {
-  background-color: yellow;
-}
 
 
 .selected {
@@ -75,5 +72,16 @@ button {
   text-decoration: none;
 }
 button:hover  {
+  background-color: rgb(228, 228, 228);
+}
+input {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 4px;
+  min-width: 50px;
+  background-color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+input:hover  {
   background-color: rgb(228, 228, 228);
 }
