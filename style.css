@@ -41,3 +41,11 @@ body{
     padding: 0;
     background:white;
 }
+
+#clear-board {
+    width:100px;
+    padding:5px;
+    border-radius: 10px;
+    border: 1px solid black;
+    outline: none;
+}

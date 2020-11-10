@@ -27,6 +27,15 @@ for(let x of pixels){
     })
 }
 
+let clearButton = document.querySelector('#clear-board');
+
+clearButton.addEventListener('click', () => {
+    let pixels = document.getElementsByClassName('pixel');
+    for(let x of pixels){
+        x.style.backgroundColor = 'white';
+    }
+});
+
 
 
 // sColor.addEventListener('click', function() {
