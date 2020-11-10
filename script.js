@@ -10,7 +10,7 @@ function createElements(){
 createElements();
 
 function createColorPallet(){
-    let colors = ["blue", "red", "pink", "green"];
+    let colors = ["black", "red", "blue", "green"];
     let colorPallet = document.createElement('div');
     colorPallet.id = 'color-palette';
     colorPallet.className = 'color';
