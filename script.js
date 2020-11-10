@@ -6,6 +6,11 @@ for (let col = 0; col < 5; col += 1) {
         pixel.appendChild(pix);
     }
 }
-window.onload = function(){
+window.onload = function(){  //seleciona a cor black assim ue carrega a pagina
     document.getElementById('black').classList.add('selected');
+}
+
+
+function limpar(){
+    document.getElementById('pixel-board').style.backgroundColor = 'white';
 }
