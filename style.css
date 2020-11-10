@@ -6,13 +6,13 @@ html {
 }
 
 body {
-    background-image: repeating-linear-gradient(#27418C 0,#27418C),
-                      repeating-linear-gradient(#0B1F8C 0,#0B1F8C ),
-                      repeating-linear-gradient(#31549b 0,#2A4B8C),
+    background-image: repeating-linear-gradient(#27418c 0,#27418c),
+                      repeating-linear-gradient(#0B1F8c 0,#0B1F8c),
+                      repeating-linear-gradient(#31549b 0,#2a4B8c),
                       repeating-linear-gradient(#102040 0, #102040),
-                      repeating-linear-gradient(#0D0D0D, #0D0D0D );
+                      repeating-linear-gradient(#0d0d0d, #0d0d0d);
     background-size: 20%;
-    background-position: 0px, 273.2px, 546.4px, 819.4px, 1092.4px;
+    background-position: 0, 273.2px, 546.4px, 819.4px, 1092.4px;
     background-repeat: no-repeat;
     color: white;
     font-size: large;
@@ -34,7 +34,7 @@ body {
     display: flex;
     width: 35px;
     height: 35px;
-    border: 1px solid white;
+    border: 1px solid black;
     margin: 0;
     padding: 0;
 }
