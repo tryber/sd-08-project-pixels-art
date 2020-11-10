@@ -1,71 +1,75 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Indie Flower", cursive;
+}
 
 :root {
-    font-size: 10px;
+  font-size: 10px;
 }
 
 body {
-    background-color: rgb(30, 28, 28);
-    color: rgb(220, 215, 215);
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Indie Flower', cursive;
+  background-color: rgb(30, 28, 28);
+  color: rgb(220, 215, 215);
 }
 
 header h1 {
-    font-size: 3.5rem;
-    text-align: center;
+  font-size: 3.5rem;
+  text-align: center;
 }
 
 main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 #color-palette {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .color {
-    border: 1px solid black;
-    width: 40px;
-    height: 40px;
-    margin: 0 2px;
+  border: 1px solid black;
+  width: 40px;
+  height: 40px;
+  margin: 0 2px;
 }
 
 .buttons-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-#clear-board, #generate-board, #board-size {
-    margin-top: 15px;
-    font-size: 2rem;
+#clear-board,
+#generate-board,
+#board-size {
+  margin-top: 15px;
+  font-size: 2rem;
 }
 
 #board-size {
-    width: 115px;
-    height: 33px;
-    margin-left: 15px;
-    font-size: 1.3rem;
+  width: 115px;
+  height: 33px;
+  margin-left: 15px;
+  font-size: 1.3rem;
 }
 
 #pixel-board {
-    margin-top: 15px;
-    display: flex;
-    flex-direction: column;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
 }
 
 .line {
-    display: flex;
+  display: flex;
 }
 
 .pixel {
-    border: 1px solid black;
-    width: 40px;
-    height: 40px;
+  border: 1px solid black;
+  width: 40px;
+  height: 40px;
 }
