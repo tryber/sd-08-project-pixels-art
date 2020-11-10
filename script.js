@@ -25,6 +25,7 @@ function pixelBoard() {
       const divPixels = document.createElement('div');
       divPixelBoard.appendChild(divPixels);
       divPixels.className = 'pixel';
+      divPixels.style.backgroundColor = 'white';
     };
   };
 };
