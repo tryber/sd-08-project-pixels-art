@@ -12,9 +12,7 @@ function createColorPalette(n) {
   for (let color = 0; color < colors.length; color += 1) {
     const colorPalette = document.createElement('div');
     colorPalette.className = 'color';
-    if (colors[color] === 'rgb(0, 0, 0)') {
-      colorPalette.className = 'color selected';
-    }
+    if (colors[color] === 'rgb(0, 0, 0)') {colorPalette.className = 'color selected';}
     colorPalette.style.background = colors[color];
     colorPaletteContainer.appendChild(colorPalette);
   }
