@@ -1,3 +1,8 @@
+window.onload = function(){
+  document.querySelectorAll(".color")[0].classList.add("selected");
+}
+
+
 function createPalletColors() {
   let divColorPallet = document.getElementById("color-palette");
   for (let i = 0; i < 4; i += 1) {
@@ -27,7 +32,7 @@ createSquares();
 
 function limpar() {
   console.log("botão limpar clicado");
-  document.getElementById("pixel-board").style.backgroundColor = "white";
+  document.querySelectorAll(".pixel")[0].style.backgroundColor = "white"
 }
 
 limpar();
