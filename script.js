@@ -83,6 +83,12 @@ window.onload = function () {
       if (inputNunber.value === '') {
         alert('Board inválido!');
       }
+      if (Number(inputNunber.value) < 5) {
+        generateBoard(5);
+      }
+      if (Number(inputNunber.value) > 50) {
+        generateBoard(50);
+      }
       generateBoard(inputNunber.value);
       changePixelColor();
       clearPixels();
