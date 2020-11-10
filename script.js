@@ -16,7 +16,6 @@ initColorPalette();
 
 const config = {
   color: "black",
-  size: 5,
 };
 
 document.getElementById("color-palette").addEventListener("click", () => {
@@ -70,8 +69,7 @@ const boardBuilder = (size = 5) => {
     }
     board.innerHTML += `<div>`;
   }
-  document.getElementById("board-size").value = size;
-  config.size = size;
+  //document.getElementById("board-size").value = size;
 };
 
 // document.getElementById("board-size").addEventListener("change", () => {
