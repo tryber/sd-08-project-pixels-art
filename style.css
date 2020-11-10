@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
 
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 h1 {
@@ -14,52 +14,51 @@ h1 {
 }
 
 .container {
-  width: 100%;
   margin: auto;
   text-align: center;
+  width: 100%;
 }
 
 .color {
   border: 1px solid black;
   border-radius: 100%;
+  box-shadow: 2px 2px 5px rgb(82, 79, 79);
   display: inline-block;
   height: 60px;
-  width: 60px;
   margin: 3px;
-  box-shadow: 2px 2px 5px rgb(82, 79, 79);
-  
+  width: 60px;
 }
 
 .selected {
   box-shadow: 4px 4px 5px rgb(41, 39, 39)
 }
 
-div#color-palette {
-  margin-top: 20px;
+#color-palette {
   margin-bottom: 40px;
+  margin-top: 20px;
 }
 
-div#color1 {
+#color1 {
   background-color: black;
 }
 
-div#pixel-board {
+#pixel-board {
+  box-shadow: 3px 3px 15px rgb(109, 105, 105);
   height: fit-content;
+  line-height: 0;
   margin: auto;
   margin-top: 45px;
-  line-height: 0;
-  box-shadow: 3px 3px 15px rgb(109, 105, 105);
 }
 
 button, input {
-  margin: 10px;
-  padding: 05px;
-  color: rgb(56, 53, 53);
   border: 1px solid rgb(141, 141, 141);
   border-radius: 5px;
-  box-sizing: border-box;
-  font-weight: bolder;
   box-shadow: 1px 1px 10px rgb(109, 105, 105);
+  box-sizing: border-box;
+  color: rgb(56, 53, 53);
+  font-weight: bolder;
+  margin: 10px;
+  padding: 05px;
 }
 
 .pixel {
@@ -68,7 +67,7 @@ button, input {
   display: inline-block;
   height: 40px;
   margin: 0;
-  width: 40px;  
+  width: 40px;
 }
 
 p {
