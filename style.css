@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
 
+
 * {
     padding: 0;
     margin: 0;
@@ -9,8 +10,8 @@ body {
     background-color: rgb(139,126,102);
 }
 
-header {
-    margin: 50px 0 20px 0;
+.header {
+    margin: 50px 0px;
 }
 
 #title {
@@ -20,48 +21,37 @@ header {
     font-weight: 700;
 }
 
+.subtitle {
+    font-size: 24px;
+    text-align: center;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 400;
+    margin-top: 20px;
+}
+
 #color-palette {
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 .color {
     border: 1px solid black;
     width: 25px;
     height: 25px;
-    display: flex;
     margin-left: 10px;
     cursor: pointer;
 }
 
-.black {
-    background-color: black;
-}
-
-.orange {
-    background-color: orange;
-}
-
-.gray {
-    background-color: gray;
-}
-
-.blue {
-    background-color: blue;
-}
-
 #pixel-board {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
+    text-align: center;
+    margin: 20px;
 }
 
 .pixel {
     border: 1px solid black;
-    background-color: white;
     width: 40px;
     height: 40px;
+    display: inline-block;
     cursor: pointer;
+    margin-left: 10px;
 }
