@@ -1,0 +1,53 @@
+.color {
+    border-radius: 5px;
+    height: 40px;
+    width: 40px;
+    margin: 10px;
+    border: solid 1px black;
+}
+.black {
+    background-color: black;
+}
+
+.yellow{
+    background-color: yellow;
+}
+
+.green {
+    background-color: green;
+}
+
+.blue {
+    background-color: blue;
+}
+.pixel {
+    background-color: white;
+    border: solid 1px black;
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    margin: 0;
+    padding: 0;
+}
+.line {
+    height: 42px;
+    text-align: center;
+}
+.color-palette {
+    margin: 15px;
+    text-align: center;
+}
+.title {
+    font-size: 60px;
+    font-weight: 600;
+    margin: 5px 0 5px 0;
+    text-align: center;
+}
+.pixel-board {
+    margin: auto;
+    display: table-cell;
+}
+.labels{
+    text-align: center;
+    margin: 50%;
+}
