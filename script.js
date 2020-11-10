@@ -43,13 +43,13 @@ changeColor();
 
 //Requisito 09
 function clearPixels() {
-    let recuperaSection = document.querySelector('#location-button');
-    let botao = document.createElement('button');
-    botao.id = 'clear-board';
-    botao.innerText = 'Limpar'
-    recuperaSection.appendChild(botao);
+    let recoverSection = document.querySelector('#location-button');
+    let button = document.createElement('button');
+    button.id = 'clear-board';
+    button.innerText = 'Limpar'
+    recoverSection.appendChild(button);
     let classPixel = document.querySelectorAll('.pixel');
-    botao.addEventListener('click', function () {
+    button.addEventListener('click', function () {
         for (let index = 0; index < classPixel.length; index += 1) {
             classPixel[index].style.backgroundColor = 'white';
         }
