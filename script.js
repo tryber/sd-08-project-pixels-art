@@ -4,13 +4,14 @@ window.onload = function () {
     var x = Math.floor(Math.random() * 256);
     var y = Math.floor(Math.random() * 256);
     var z = Math.floor(Math.random() * 256);
-    var bgColor = "rgb(" + x + "," + y + "," + z + ")";
+    var bgColor = `rgb(${x},${y},${z})`;
     return bgColor;
   }
+
   colorOptions[0].style.backgroundColor = "rgb(0,0,0)";
-  colorOptions[1].style.backgroundColor = random_bg_color();
-  colorOptions[2].style.backgroundColor = random_bg_color();
-  colorOptions[3].style.backgroundColor = random_bg_color();
+  for (let index = 1; index < colorOptions.length; index +=1) {
+  colorOptions[index].style.backgroundColor = random_bg_color();
+}
 };
 
 let pixelBox = document.getElementById("pixel-board");
@@ -50,8 +51,7 @@ function createPixelBox() {
     let gridSize = inputNumber.value;
     if (gridSize < 5) {
       gridSize = 5;
-    }
-    if (gridSize > 50) {
+    } else if (gridSize > 50) {
       gridSize = 50;
     }
     for (let index = 0; index < gridSize * gridSize; index += 1) {
@@ -59,8 +59,8 @@ function createPixelBox() {
       pixelCreate.className = "pixel";
       pixelBox.appendChild(pixelCreate);
     }
-    pixelBox.style.gridTemplateColumns = "repeat(" + gridSize + ", 40px)";
-    pixelBox.style.gridTemplateRows = "repeat(" + gridSize + ", 40px)";
+    pixelBox.style.gridTemplateColumns = `repeat(${gridSize}, 40px)`;
+    pixelBox.style.gridTemplateRows = `repeat(${gridSize}, 40px)`;
   } else {
     alert("Board inválido!");
   }
