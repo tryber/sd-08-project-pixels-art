@@ -1,38 +1,77 @@
-const black = document.querySelector('.black');
-const blue = document.querySelector('.blue');
-const pink = document.querySelector('.pink');
-const yellow = document.querySelector('.yellow');
+const color = document.querySelectorAll('.color');
+const palette = document.querySelector('#color-palette');
 
-function changeSelector() {
-  black.classList.remove('selected');
-  blue.classList.remove('selected');
-  pink.classList.remove('selected');
-  yellow.classList.remove('selected');
-  this.classList.add('selected');
+function randomColor() {
+	return 'rgb(' + Math.trunc(Math.random() * 255) + ',' + Math.trunc(Math.random() * 255) + ',' + Math.trunc(Math.random() * 255) + ')'
 }
 
-black.addEventListener('click', changeSelector);
-blue.addEventListener('click', changeSelector);
-pink.addEventListener('click', changeSelector);
-yellow.addEventListener('click', changeSelector);
+for (let i = 1; i < color.length; i += 1) {
+	color[i].style.backgroundColor = randomColor();
+}
 
-const pixel = document.querySelectorAll('.pixel');
+function changeSelector(event) {
+	for (let i = 0; i < color.length; i += 1) {
+		color[i].classList.remove('selected');
+	}
+  event.target.classList.add('selected');
+}
 
-function changeColor() {
+palette.addEventListener('click', changeSelector)
+
+const tab = document.querySelector('.table')
+
+function changeColor(event) {
   const selected = window.getComputedStyle(document.querySelector('.selected')).backgroundColor;
-  this.style.backgroundColor = selected;
+  event.target.style.backgroundColor = selected;
 }
 
-for (let i = 0; i < pixel.length; i += 1) {
-  pixel[i].addEventListener('click', changeColor);
-}
+tab.addEventListener('click', changeColor);
 
 const button = document.querySelector('.button');
 
 function clearColors() {
+	const pixel = document.querySelectorAll('.pixel');
   for (let i = 0; i < pixel.length; i += 1) {
     pixel[i].style.backgroundColor = 'white';
   }
 }
 
 button.addEventListener('click', clearColors);
+
+const input = document.querySelector('.input');
+
+function inputNumber() {
+	const number = input.value;
+	if(number === '') {
+		alert('Board inválido!');
+		return false;
+	} else if (number < 5) {
+		alert('5 é o mínimo');
+		input.value = 5;
+	} else if (number > 50) {
+		alert('50 é o máximo');
+		input.value = 50;
+	}
+	return true;
+}
+
+const vqv = document.querySelector('.vqv');
+
+const table = document.querySelector('.table');
+
+function boardPixel() {
+	if (inputNumber() === true) {
+		for (let i = 0; i < input.value; i += 1) {
+			const td = document.createElement('div');
+			table.appendChild(td);
+			table.children[i].classList.add('line');
+			for (let j = 0; j < input.value; j += 1) {
+				const tr = document.createElement('div');
+				table.children[i].appendChild(tr);
+				table.children[i].children[j].classList.add('pixel');
+			}
+		}
+	}
+}
+
+vqv.addEventListener('click', boardPixel);
