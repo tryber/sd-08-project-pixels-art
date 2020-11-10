@@ -3,9 +3,9 @@ function createColorPalette(n) {
   const colorPaletteContainer = document.getElementById('color-palette');
   const colors = ['rgb(0, 0, 0)'];
   for (let numberOfColors = 0; numberOfColors < n - 1; numberOfColors += 1) {
-    const r = Math.floor(Math.random() * 254 + 1);
-    const g = Math.floor(Math.random() * 254 + 1);
-    const b = Math.floor(Math.random() * 254 + 1);
+    const r = Math.floor((Math.random() * 254) + 1);
+    const g = Math.floor((Math.random() * 254) + 1);
+    const b = Math.floor((Math.random() * 254) + 1);
     const rgb = `rgb(${r}, ${g}, ${b})`;
     colors.push(rgb);
   }
