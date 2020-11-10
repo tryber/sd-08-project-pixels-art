@@ -29,7 +29,6 @@ function geraPixel(index, boardLine) {
 function geraPixelBoard() {
   for (let index = 0; index < numberOfLines; index += 1) {
     const boardLine = document.createElement('div');
-    boardLine.className = 'boardLines';
     geraPixel(index, boardLine);
     pixelBoard.append(boardLine);
   }
