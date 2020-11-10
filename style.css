@@ -1,14 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
 
-*{
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-family: 'Open Sans Condensed', sans-serif;
-}
 
 body {
-  margin: 10px
+    margin: 0;
+  padding: 0;
+  border: 0;
+  margin: 10px;
+  font-family: 'Roboto Condensed', sans-serif;
 }
 
 
@@ -22,18 +19,8 @@ body {
     height: 40px;
     border: 1px solid black;
     display: inline-block;
-}
-.cor1 {
-  background-color: black;
-}
-.cor2 {
-  background-color: blue;
-}
-.cor3 {
-  background-color:red;
-}
-.cor4 {
-  background-color: green;
+    background-color: black;
+
 }
 
 
@@ -41,16 +28,10 @@ body {
     padding: 2px;
 }
 
-
 section {
    margin-top: 10px;
    margin-bottom: 10px;
    padding: 1px;
-}
-
-#pixel-board {
-    border: none;
-    display: table;
 }
 
 .pixel-row {
