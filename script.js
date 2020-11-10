@@ -3,7 +3,6 @@ window.onload = function(event){
 
     
     let pintar;
-    let num = 5;
     generateBoard();
     generatorClick();
 
@@ -41,16 +40,18 @@ window.onload = function(event){
     pintarPreto.className += " selected";
     pintar = "black";
 
-     let box = document.getElementsByClassName('pixel');
-     Array.from(box).forEach(function(box){
-         box.addEventListener("click", function(){
-            box.style.backgroundColor = pintar;
-        })
-    })
+     
 
-    
-    
-}
+    function pintaBox(){
+
+        let box = document.getElementsByClassName('pixel');
+        Array.from(box).forEach(function(box){
+            box.addEventListener("click", function(){
+               box.style.backgroundColor = pintar;
+           })
+       })
+    }
+
     function removeClass(){
 
         pintarPreto.classList.remove("selected");
@@ -68,9 +69,16 @@ window.onload = function(event){
 
     function generateBoard(){
 
+            let num = boardSize();
+            if(num == "" | num <= 0){ 
+                alert("Board inválido!");
+                return;
+            }else{
+                clearBoard();
+                console.log(num);
+            }
         
-        let num = boardSize();
-        if(num == ""){ num =5}else{clearBoard();}
+        console.log(num);
         let table = document.querySelector('#tabela');
         let count = 1;
         for(let col = 1; col <= num; col++){
@@ -88,6 +96,7 @@ window.onload = function(event){
             coluna.appendChild(box);
             }
         }
+        pintaBox();
 }
 
     function boardSize(){
@@ -98,12 +107,10 @@ window.onload = function(event){
 
     function generatorClick(){
 
-        if(boardSize() == ""){
-            alert("Board inválido!");
-        }else{
+        
             let generator = document.getElementById("generate-board");
         generator.addEventListener("click", generateBoard);
-        }
+        
         
     }
 
@@ -116,5 +123,9 @@ window.onload = function(event){
         }
         
     }
+}
+    
+
+ 
 
 
