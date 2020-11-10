@@ -1,16 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  max-width: 300px;
+  margin: 50px auto;
+  background-color: #333;
+}
+
 .color {
   border: 1px solid black;
   display: inline-block;
   height: 25px;
-  margin: 2px;
+  margin: 2px auto;
   width: 25px;
 }
 
 button {
-  margin-left: 70px;
+  margin: 10px auto;
 }
 
-#pixel-board {
+.board-pixel {
   max-width: 250px;
 }
 

@@ -87,7 +87,7 @@ function clearPixel() {
   const color = 'white';
 
   clearButton.addEventListener('click', () => {
-    const pixels = document.querySelectorAll('.pixel')
+    const pixels = document.querySelectorAll('.pixel');
     for (let i = 0; i < pixels.length; i += 1) {
       pixels[i].style.backgroundColor = color;
     }
