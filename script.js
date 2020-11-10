@@ -1,25 +1,11 @@
-window.onload = carregaPixels;
+window.onload = function(event){
+    
 
-function carregaPixels(){
-    let table = document.querySelector('#tabela');
-    let count = 1;
-    for(let col = 1; col <= 5; col++){
-
-        let line = document.createElement('tr');
-        //box.className = 'pixel';
-        line.setAttribute("id", "line"+col)
-        table.appendChild(line);
-        let coluna = document.querySelector('#line'+col);
-
-        for(let li = 0; li < 5; li++){
-        let box = document.createElement('td');
-        box.className = 'pixel';
-        box.setAttribute("id", "box"+count);
-        count++;
-        coluna.appendChild(box);
-        }
-    }
+    
     let pintar;
+    let num = 5;
+    generateBoard();
+    generatorClick();
 
     let botao = document.getElementById("clear-board");
     botao.addEventListener("click", clear);
@@ -61,7 +47,10 @@ function carregaPixels(){
             box.style.backgroundColor = pintar;
         })
     })
-     
+
+    
+    
+}
     function removeClass(){
 
         pintarPreto.classList.remove("selected");
@@ -70,14 +59,62 @@ function carregaPixels(){
         pintarAmarelo.classList.remove("selected");
     }
 
-    
-
     function clear(){
         let box = document.getElementsByClassName('pixel');
          Array.from(box).forEach(function(box){
                 box.style.backgroundColor = "white";
         })
     }
+
+    function generateBoard(){
+
+        
+        let num = boardSize();
+        if(num == ""){ num =5}else{clearBoard();}
+        let table = document.querySelector('#tabela');
+        let count = 1;
+        for(let col = 1; col <= num; col++){
+
+            let line = document.createElement('tr');
+            line.setAttribute("id", "line"+col)
+            table.appendChild(line);
+            let coluna = document.querySelector('#line'+col);
+
+            for(let li = 0; li < num; li++){
+            let box = document.createElement('td');
+            box.className = 'pixel';
+            box.setAttribute("id", "box"+count);
+            count++;
+            coluna.appendChild(box);
+            }
+        }
 }
+
+    function boardSize(){
+
+        let size = document.getElementById("board-size").value;
+        return size;
+}
+
+    function generatorClick(){
+
+        if(boardSize() == ""){
+            alert("Board inválido!");
+        }else{
+            let generator = document.getElementById("generate-board");
+        generator.addEventListener("click", generateBoard);
+        }
+        
+    }
+
+    function clearBoard(){
+
+        let table = document.querySelector('#tabela');
+        let rowCount = table.rows.length;
+        for(let i = rowCount;i > 0; i--){
+            table.deleteRow(i-1)
+        }
+        
+    }
 
 
