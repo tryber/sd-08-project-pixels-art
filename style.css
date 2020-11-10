@@ -4,12 +4,18 @@
     box-sizing: border-box;
 }
 
+main {
+    margin: 10px;
+}
+
+section {
+    margin: 10px;
+}
+
 #color-palette {
     border: 1px solid #000;
-    width: 214px;
+    width: 202px;
     height: 52px;
-    margin: 0;
-    padding: 0;
 }
 
 .color {
@@ -18,6 +24,8 @@
     width: 50px;
     height: 50px;
     padding: 0;
+    margin: 0;
+    float: left;
 }
 
 #pixel-board {
@@ -33,4 +41,34 @@
     height: 40px;
     border: 1px solid #000;
     background-color: #fff;
+}
+
+#clear-board {
+    border: 0;
+    background-color: #0b8f70;
+    color: #fff;
+    padding: 8px;
+    box-shadow: none;
+    width: 70px;
+    height: 40px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#generate-board {
+    border: 0;
+    background-color: #0b8f70;
+    color: #fff;
+    padding: 8px;
+    box-shadow: none;
+    width: 70px;
+    height: 40px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#board-size {
+    height: 40px;
+    width: 55px;
+    font-size: 22px;
 }
