@@ -49,7 +49,7 @@ document.getElementById("generate-board").addEventListener("click", () => {
   } else {
     boardBuilder(size);
   }
-  document.getElementById("board-size").value = config.size;
+  //document.getElementById("board-size").value = config.size;
   //console.log(document.getElementById("board-size").value);
 });
 
@@ -84,4 +84,4 @@ const boardBuilder = (size = 5) => {
 //   //console.log(document.getElementById("board-size").value);
 // });ma
 
-boardBuilder(5);
+//boardBuilder(5);
