@@ -7,18 +7,22 @@ function toggleColor() {
 
 }
 
-toggleColor()
+window.onload = toggleColor()
 function toogleColors () {
 
     const blackCC = document.querySelector ('#black')
-    blackCC.className = "color selected"
+    // blackCC.className = "color selected"
    
+
 
 
 blackCC.addEventListener('click', function (event) {
     const selected = document.querySelector('.selected')  
- 
-    if (selected === null ) {
+
+    if (selected !== null ) {
+        selected.classList.remove('selected')
+        event.target.className = "color selected"
+    if (selected.className === 'color') {
     event.target.className ="color selected"
     
 } else {
@@ -27,12 +31,11 @@ blackCC.addEventListener('click', function (event) {
 
     }
 
-    )
+})
     
 }
      toogleColors ()
 
-     toggleColor()
 
 function toogleColors2 () {
 
