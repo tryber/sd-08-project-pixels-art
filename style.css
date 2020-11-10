@@ -1,0 +1,55 @@
+#black{
+    border: 1px black solid;
+    width: 45px;
+    height: 45px;
+    background-color: black;
+}
+   
+#green{
+    border: 1px black solid;
+    width: 45px;
+    height: 45px;
+    background-color: green;
+}
+
+#red{
+    border: 1px black solid;
+    width: 45px;
+    height: 45px;
+    background-color: red;
+}
+
+#blue{
+    border: 1px black solid;
+    width: 45px;
+    height: 45px;
+    background-color: blue;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(5, 40px);
+    grid-template-rows: repeat(5, 40px); 
+    margin-bottom: 20px;
+    width: 20px;
+    margin-top: 10px;
+}
+  
+.pixel {
+    background-color: white;
+    border: 1px solid black;
+    cursor: grabbing;
+    height: 40px;
+    width: 40px;
+}
+
+#clear-board{
+    margin-top: 5px;
+}
+
+.escolha{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 2px solid black;
+}
