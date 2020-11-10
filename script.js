@@ -45,7 +45,7 @@ document.getElementById("clear-board").addEventListener("click", () => {
 document.getElementById("generate-board").addEventListener("click", () => {
   const size = document.getElementById("board-size").value;
   //alert("oi!");
-  if (size === null || size === undefined) {
+  if (size === null || size === undefined || size === "" || size === " ") {
     alert("Board inválido!");
   } else {
     boardBuilder(size);
