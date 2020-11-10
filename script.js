@@ -29,7 +29,7 @@ function classSelected() {
 classSelected();
 
 //Requisito 08
-function changeColor (){
+function changeColor() {
     let classPixel = document.querySelectorAll('.pixel');
 
     for (let index = 0; index < classPixel.length; index += 1) {
@@ -42,18 +42,17 @@ function changeColor (){
 changeColor();
 
 //Requisito 09
-
-//Criando botão via java Script
-
-let recuperaSection = document.querySelector('#location-button');
-let botao = document.createElement('button');
-botao.id = 'clear-board';
-botao.innerText = 'Limpar'
-recuperaSection.appendChild(botao);
-
-let classPixel = document.querySelectorAll('.pixel');
-botao.addEventListener('click', function(){
-    for(let index =0; index< classPixel.length; index +=1){
-        classPixel[index].style.backgroundColor = 'white';
-    }    
-});
+function clearPixels() {
+    let recuperaSection = document.querySelector('#location-button');
+    let botao = document.createElement('button');
+    botao.id = 'clear-board';
+    botao.innerText = 'Limpar'
+    recuperaSection.appendChild(botao);
+    let classPixel = document.querySelectorAll('.pixel');
+    botao.addEventListener('click', function () {
+        for (let index = 0; index < classPixel.length; index += 1) {
+            classPixel[index].style.backgroundColor = 'white';
+        }
+    });
+}
+clearPixels();
