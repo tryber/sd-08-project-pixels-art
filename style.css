@@ -1,10 +1,11 @@
 #pixel-board {
     border-collapse: collapse;
     border: 1px solid black;
+    
 }
 .pixel {
-    width: 40px;
-    height: 40px;
+    width: 41px;
+    height: 41px;
     background-color: white;
     border: 1px solid black;
 }
@@ -14,7 +15,7 @@
 }
 
 .color {
-    border: 1px solid;
+    border: 1px solid black;
     width: 40px;
     height: 40px;
     margin: 0 2px 0 0;
