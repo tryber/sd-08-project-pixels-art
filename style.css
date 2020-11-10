@@ -1,20 +1,6 @@
-#color1 {
-background-color: black;
-
-}
-
-#color2 {
-background-color: green;
-}
-
-#color3 {
-background-color: yellow;
-}
-
-#color4 {
-background-color: magenta;
-}
-
 .color {
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
     display: inline;
 }
