@@ -75,7 +75,7 @@ button {
   margin: 1px;
 }
 button:hover  {
-  border: 1.5px solid rgb(61, 61, 61);
+  border: 1.1px solid rgb(0, 0, 0);
 }
 input {
   border: 1px solid rgb(93, 93, 93);
@@ -87,5 +87,5 @@ input {
   margin: 1px;
 }
 input:hover  {
-  border: 1.5px solid rgb(61, 61, 61);
+  border: 1.1px solid rgb(0, 0, 0);
 }
