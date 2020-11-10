@@ -14,6 +14,7 @@ function pintaPaleta() {
     cores[1].style.backgroundColor = 'red';
     cores[2].style.backgroundColor = 'blue';
     cores[3].style.backgroundColor = 'green';
+    cores[0].classList.add('selected');
 }
 pintaPaleta();
 
