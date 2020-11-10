@@ -38,35 +38,54 @@ function squarePixels() {
             const divLineSquare = document.createElement('div');
             divLineSquare.className = 'pixel';
             lineToColumn.appendChild(divLineSquare);
-            
         }
     }
 }
 squarePixels();
-  
-// Definindo as cores; 
-    // function setColors() {
-    //     let colorPallete = document.querySelectorAll('.color');
-    //     for (let index = 0; index < colorPallete.length; index+= 1) {
-            
-    //         colorPallete[index].style.backgroundColor = colorAvaliable[index];
-    //     }
-    // }
-    // setColors();
+
+       
+    // Eventos do Projeto (Acessar elemento html fruto de um evento)
+
+    // No seu uso mais comum, addEventListener recebe dois parâmetros:
+    // 1) O evento que estamos esperando escutar: Exemplos: click, change, mouseover etc.
+    // 2) A função (criada por você) que será executada quando o evento acontecer.
+
+    // Definindo Classe SELECTED
+   let colorPallete = document.querySelectorAll('.color');
+   for (let index = 0; index < colorPallete.length; index+= 1) {
+       colorPallete[index].addEventListener('click', function(changeClass) {
+           let classInSelected = document.querySelector('.color.selected');
+           classInSelected.className = 'color';
+           changeClass.target.className = 'color selected';
+         })
+   }
 
 
-    // Definindo classe SELECTED;
-    function setClassColor() {
-        let colorPallete = document.querySelectorAll('.color');
-        for (let index = 0; index < colorPallete.length; index+= 1) {
-            colorPallete[index].addEventListener('click', function(changeClass) {
-                let classInSelected = document.querySelector('.color.selected');
-                classInSelected.className = 'color';
-                changeClass.target.className = 'color selected';
-              })
+    //Pintado quadrados da Cor;
+    let colorSelect = document.querySelector('.selected');
+    const squarePaint = document.querySelectorAll('.pixel')
+    document.addEventListener('click', function () {
+        for (let index = 0; index < squarePaint.length; index += 1) {
+            squarePaint[index].style.background = 'white';
         }
+    });
+    
+
+    // const squareSelectionColor = document.querySelectorAll('.color-palette');
+    // const squarePaint = document.querySelectorAll('.pixel')
+    // let colorSelect = document.querySelector('.selected');
+    // function setColorEachSquare() {
+    //     squarePaint.style.backgroundColor =  'black';
+        
+    // }
+
+      
+    // Limpa o quadro
+    const divPixel = document.getElementsByClassName('pixel');
+    document.addEventListener('click', function () {
+    for (let index = 0; index < divPixel.length; index += 1) {
+        divPixel[index].style.background = 'white';
     }
-    setClassColor();
-     
+});
         
         
