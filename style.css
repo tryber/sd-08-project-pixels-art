@@ -1,0 +1,111 @@
+body , div , span , ul , li , input , h1 { /* Codeclimate não deixa usar o '*' :-( */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.color-palette {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.color {
+  border: 1px solid black;
+  border-radius: 50%;
+  height: 40px;
+  margin: 5px;
+  transition: 0.2s;
+  width: 40px;
+}
+
+.color:hover {
+  cursor: pointer;
+  transform: scale(1.1) translateY(-5px);
+}
+
+.pixel {
+  border: 1px solid black;
+  float: left;
+  height: 40px;
+  width: 40px;
+}
+
+.pixel:hover {
+  cursor: pointer;
+}
+
+.pixel-row {
+  display: block;
+  overflow: hidden;
+}
+
+header {
+  align-items: center;
+  background-color: black;
+  color: white;
+  display: flex;
+  height: 80px;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  padding-top: 80px;
+}
+
+footer {
+  align-items: center;
+  background-color: black;
+  bottom: 0;
+  color: white;
+  display: flex;
+  font-size: 20px;
+  height: 60px;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+}
+
+footer a {
+  color: orangered;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.controls {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.board {
+  display: flex;
+  justify-content: center;
+}
+
+.input-group {
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.controls input , .controls button {
+  height: 40px;
+}
+
+.controls input {
+  padding: 5px;
+  width: 140px;
+}
+
+.controls input::placeholder {
+  font-size: 14px;
+  text-align: center;
+}
