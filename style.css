@@ -27,8 +27,21 @@
     background-color: blue;
 }
 
+#pixel-board {
+    margin: 5px;
+}
+
+.pixel-row {
+    margin: 0;
+    display: flex;
+}
+
 .pixel {
     background-color: white;
     border: solid black 1px;
     margin: 0;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
 }
+
