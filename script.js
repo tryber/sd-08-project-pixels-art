@@ -1,5 +1,5 @@
 function title(){
-    let tituloh1 = document.querySelector("h1");
+    let tituloh1 = document.querySelector('h1');
     tituloh1.id = 'title';
     tituloh1.innerHTML = 'Paleta de Cores';
 
@@ -12,7 +12,7 @@ let cor = ['black', 'purple', 'red', 'green'];
 function cores(){
     let lista = document.querySelectorAll('.color');
 
-    lista[0].classList.add("selected");
+    lista[0].classList.add('selected');
 
     for (let index = 0; index < lista.length; index +=1){
         lista[index].style.backgroundColor = cor[index];
@@ -44,7 +44,7 @@ function quadro(){
       for (let indice = 0; indice < largura; indice +=1 ){
         let div = document.createElement('div');
         linhas[index].appendChild(div);
-        div.className = "pixel";
+        div.className = 'pixel';
       } 
         
     }
@@ -67,4 +67,13 @@ function pixelColors(){
 pixelColors();
 
     
-        
+function createButton(buttonName) {
+    let buttonContainer = document.querySelector('.button');
+    let newButton = document.createElement('button');
+    let newButtonID = 'clear-board';
+
+    newButton.innerHTML = buttonName;
+    newButton.id = newButtonID;
+    buttonContainer.appendChild(newButton);
+};
+createButton('Limpar');
