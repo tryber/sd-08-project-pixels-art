@@ -2,7 +2,7 @@ function createPalletColors() {
   let divColorPallet = document.getElementById("color-palette");
   for (let i = 0; i < 4; i += 1) {
       let divChild = document.createElement("button");
-      divChild.className = "color";
+      divChild.className = "color";      
       let colors = ['black', 'blue', 'orange', 'green'];
       divChild.style.backgroundColor = colors[i];
       divColorPallet.appendChild(divChild);
@@ -22,3 +22,10 @@ function createSquares() {
   }
 }
 createSquares();
+
+function limpar() {
+    console.log("botão limpar clicado");
+    document.getElementById('pixel-board').style.backgroundColor = "white";
+}
+
+limpar()
