@@ -66,3 +66,9 @@ for (let i = 0; i < arrColors.length; i += 1) {
 //button to clean the board.
 const buttonClearBoard = document.getElementById("clear-board");
 buttonClearBoard.addEventListener("click", clearBoard);
+function clearBoard(){
+  const clearPixel = document.querySelectorAll(".pixel");
+  clearPixel.forEach((element) => {
+    element.style.backgroundColor = "white";
+  });
+}
