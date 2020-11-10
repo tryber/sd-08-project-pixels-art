@@ -20,10 +20,19 @@ function createPalette() {
   let secondColor = document.getElementById('secondColor');
   let thirdColor = document.getElementById('thirdColor');
   let fourthColor = document.getElementById('fourthColor');
+
+  let arrayColors = [];
+  for (let i = 0; i < 3; i += 1) {
+    let r = Math.floor(Math.random()*255),
+        g = Math.floor(Math.random()*255),
+        b = Math.floor(Math.random()*255);
+
+    arrayColors.push('rgb('+r+','+g+','+b+')');
+  }
   firstColor.style.backgroundColor = 'black';
-  secondColor.style.backgroundColor = 'green';
-  thirdColor.style.backgroundColor = 'orange';
-  fourthColor.style.backgroundColor = 'red';
+  secondColor.style.backgroundColor = arrayColors[0];
+  thirdColor.style.backgroundColor = arrayColors[1];
+  fourthColor.style.backgroundColor = arrayColors[2];
 }
 createPalette();
 
