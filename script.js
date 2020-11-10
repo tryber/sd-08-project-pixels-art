@@ -47,7 +47,7 @@ botaoVQV.addEventListener('click', function() {
             for (let j = 1; j <= quant.value; j++){
               let colunas = document.createElement('div');
               linhas.appendChild(colunas);
-              colunas.className = 'new-pixel';
+              colunas.className = 'pixel';
             }
           }
     }else{
@@ -59,7 +59,7 @@ botaoVQV.addEventListener('click', function() {
           for (let j = 1; j <= 5; j++){
             let colunas = document.createElement('div');
             linhas.appendChild(colunas);
-            colunas.className = 'new-pixel';
+            colunas.className = 'pixel';
           }
         }
       }else{
@@ -70,7 +70,7 @@ botaoVQV.addEventListener('click', function() {
           for (let j = 1; j <= 50; j++){
             let colunas = document.createElement('div');
             linhas.appendChild(colunas);
-            colunas.className = 'new-pixel';
+            colunas.className = 'pixel';
           }
         }
       }
