@@ -61,17 +61,26 @@ addPixels(5);
 
 /* ---------------------------- REQUISITO 06 ---------------------------- */
 
-const blackColor = document.querySelector('#black');
+const selectedColor = document.querySelector('#black');
 
 function setBlackColor() {
-    blackColor.classList.add('selected');
+    selectedColor.classList.add('selected');
 }
 
 setBlackColor();
 
-
-
 /* ---------------------------- REQUISITO 07 ---------------------------- */
+
+const colorPallete = document.querySelector('#color-palette');
+
+colorPallete.addEventListener('click', chooseSelectedColor);
+
+function chooseSelectedColor(event) {
+    const select = document.querySelector('.selected');
+    select.classList.remove('selected');
+    event.target.classList.add('selected');
+}
+
 /* ---------------------------- REQUISITO 08 ---------------------------- */
 /* ---------------------------- REQUISITO 09 ---------------------------- */
 /* ---------------------------- REQUISITO 10 ---------------------------- */
