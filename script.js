@@ -24,7 +24,7 @@ function selectColor(){
         event.target.classList.toggle('selected')
         selected = true
         wathColor()
-      }
+      };
     })
 
     function wathColor(){
