@@ -15,8 +15,8 @@ function colorsOptions() {
       colors[i].style.backgroundColor = 'black';
     } else {
       colors[i].style.backgroundColor = randomColor();
-   }
-   options.appendChild(colors[i]);
+    }
+    options.appendChild(colors[i]);
   }
 }
 
