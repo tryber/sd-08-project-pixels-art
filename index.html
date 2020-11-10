@@ -14,18 +14,20 @@
         <h1 id="title">Paleta de Cores</h1>
         <h2>Obviamente, a melhor pixel art que você verá</h2>
         <input placeholder="linhas" value="5" type="number" id="board-size" min="5" max="50">
-        <button id="generate-board">Gerar</button><br>
-        <button id="clear-board" onclick="MakeBoard()">Limpar</button>
+        <button id="generate-board">VQV</button>
     </header>
 
     <article id="color-palette">
 
-        <button autofocus class="color" onclick="ChangeToColor(0)"></button>
+        <button class="selected color" onclick="ChangeToColor(0)"></button>
         <button class="color" onclick="ChangeToColor(1)"></button>
         <button class="color" onclick="ChangeToColor(2)"></button>
         <button class="color" onclick="ChangeToColor(3)"></button>
     </article>
+    <section>
 
-    <article id="pixel-board"></article>
+        <button id="clear-board" onclick="MakeBoard()">Limpar</button>
+    </section>
+    <article id="pixel-board" class="pixel-board"></article>
 </body>
 </html>

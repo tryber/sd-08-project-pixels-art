@@ -6,15 +6,24 @@ const dim = document.getElementById('board-size');
 const area = document.getElementById('pixel-board');
 
 function ChangeToColor(c) {
+  let buttonWith = document.getElementsByClassName('selected');
+  buttonWith[0].classList.remove('selected');
+  buttons[c].classList.add('selected');
   current = colors[c];
 }
 
-window.onload = function () {
-  for (let i = 0; i < buttons.length; i += 1) {
-    buttons[i].style.backgroundColor = colors[i];
+function Paint(e) {
+  e.target.style.backgroundColor = current;
+}
+
+function Randomize() {
+  let hexColor = (Math.random()*0xFFFFFF<<0);
+  let newColor = '#' + hexColor.toString(16);
+  if(newColor.length < 7){
+      Randomize();
   }
-  MakeBoard();
-};
+  return newColor;
+}
 
 function MakeBoard() {
   let size = dim.value;
@@ -37,6 +46,12 @@ function MakeBoard() {
   }
 }
 
-function Paint(e) {
-  e.target.style.backgroundColor = current;
-}
+window.onload = function () {
+  for (let i = 1; i < colors.length; i += 1) {
+    colors[i] = Randomize();
+  }
+  for (let i = 0; i < buttons.length; i += 1) {
+    buttons[i].style.backgroundColor = colors[i];
+  }
+  MakeBoard();
+};

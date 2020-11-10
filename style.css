@@ -6,59 +6,65 @@ body {
   flex-direction: column;
   text-align: center;
 }
+
 h1 {
   font-family: 'Press Start 2P', monospace;
   font-size: 48px;
   margin-top: 60px;
 }
+
 h2 {
   font-family: 'Open Sans', sans-serif;
   font-size: 18px;
   font-weight: 300;
   margin-top: 20px;
 }
+
 input {
   margin-top: 20px;
   width: 50px;
   padding: 5px 20px;
 }
-#clear-board, #generate-board {
-  padding: 5px 20px;
-  margin: 5px;
-}
 
 button {
+  padding: 5px 20px;
+  margin: 5px;
   font-family: 'Open Sans', sans-serif;
 }
 
 article {
   margin-top: 20px;
 }
+
 .color {
   width: 30px;
   height: 30px;
   border: solid 1px black;
   margin:0;
+  padding: 0;
   cursor: pointer;
 }
-.color:focus {
+
+.selected {
   outline: none;
   border: solid 2px #fffffa;
 }
 
-#pixel-board {
+.pixel-board {
   margin: 0;
   margin-top: 20px;
   padding: 0;
   display: flex;
   flex-direction: column;
 }
+
 .pixel-line {
   display: flex;
   margin: 0;
   padding: 0;
   flex-direction: row;
 }
+
 .pixel {
   width: 40px;
   height: 40px;
