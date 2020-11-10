@@ -23,7 +23,12 @@ function createColorPallet(){
         block.style.width = '30px';
         block.style.display = 'inline-block';
         block.style.border = '1px solid black';
-        block.style.backgroundColor = colors[i];
+        block.style.backgroundColor = colors[i];        
+
+        if(colors[i] == 'black'){
+            block.className = 'color selected';
+        }
+
         colorPallet.appendChild(block);
     }
 }
