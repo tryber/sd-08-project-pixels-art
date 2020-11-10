@@ -13,6 +13,7 @@ body {
 
 #color-palette{
   padding: 5px;
+  display: inline;
 }
 
 .color {
