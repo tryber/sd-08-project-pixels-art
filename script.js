@@ -1,4 +1,16 @@
-const colors = ['black', 'red', 'green', 'blue'];
+function random255() {
+    return Math.floor(Math.random() * 256);
+}
+
+let colors = ['black'];
+
+for (let i = 1; i < 4; i += 1) {
+    let red = random255();
+    let green = random255();
+    let blue = random255();
+
+    colors[i] = `rgb(${red}, ${green}, ${blue})`;
+}
 
 colors.forEach((color) => {
     const paletteColors = document.createElement('div');
