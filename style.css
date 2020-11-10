@@ -31,9 +31,21 @@ header h1 {
     margin: 0 2px;
 }
 
-#clear-board {
+.buttons-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#clear-board, #generate-board, #board-size {
     margin-top: 15px;
     font-size: 2rem;
+}
+
+#board-size {
+    width: 115px;
+    height: 33px;
+    font-size: 1.3rem;
 }
 
 #pixel-board {
