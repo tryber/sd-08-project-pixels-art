@@ -1,32 +1,37 @@
 const initColorPalette = () => {
-    const cores = ['black','#e6be51','#579ea9','#0f579b']
-    document.querySelectorAll('.color').forEach((element) => {
-      //console.log(element)
-        element.style.backgroundColor = cores[0]
-        cores.shift()
-    })
-}
+  const cores = ["black", "blue", "red", "green", "yellow"];
+  document.querySelectorAll(".color").forEach((element) => {
+    //console.log(element)
+    element.style.backgroundColor = cores[0];
+    cores.shift();
+  });
+};
 
-initColorPalette()
+initColorPalette();
 
-let selectedColor = "black"
+const pen = {
+  color: "black",
+};
 
 document.getElementById("color-palette").addEventListener("click", () => {
-    document.querySelectorAll('.color').forEach((element) => {
-        element.classList.remove("selected")
-    })
+  if (event.target.classList.contains("color")) {
+    document.querySelectorAll(".color").forEach((element) => {
+      element.classList.remove("selected");
+    });
     event.target.classList.add("selected");
-    selectedColor = event.target.style.backgroundColor
-    //document.getElementById("color-palette").style.clear()
+    pen.color = event.target.style.backgroundColor;
+  }
 });
 
-document.getElementById("pixel-board").addEventListener("click", ()=>{
-  //console.log('aa')
-   event.target.style.backgroundColor = selectedColor;
+document.getElementById("pixel-board").addEventListener("click", () => {
+  if (event.target.classList.contains("pixel")) {
+    event.target.style.backgroundColor = pen.color;
+  }
+  //console.log(event.target);
 });
 
-document.getElementById("clear-board").addEventListener("click", ()=>{
-  document.querySelectorAll('.pixel').forEach((element) => {
-        element.style.backgroundColor = "white"
-    })
+document.getElementById("clear-board").addEventListener("click", () => {
+  document.querySelectorAll(".pixel").forEach((element) => {
+    element.style.backgroundColor = "white";
+  });
 });
