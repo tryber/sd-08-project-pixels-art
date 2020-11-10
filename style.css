@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+  
+.color {
+    width:40px;
+    height:40px;
+    border: 1px solid; 
+    border-color: black; 
+    margin: 5px;
+    display: inline-block;
+}
+
+div.pixel-board {
+    display: table;
+    border-collapse: collapse;
+}
+  
+.pixel-row {
+    display: table-row;
+}
+
+.pixel {
+    box-sizing: border-box;
+    border: 1px solid black;
+    display: table-cell;
+    background: white;
+    width: 40px;
+    height: 40px;
+}
+
+.button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.input-container {
+    width: 49%;
+    height: 10px;
+    display: inline-block;
+  }
