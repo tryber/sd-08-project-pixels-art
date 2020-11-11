@@ -24,6 +24,12 @@ header div {
   padding: 10px 35px;
 }
 
+.butãoLimpar {
+  background-color: ivory;
+  margin: 0 635px 30px;
+  position: relative;
+}
+
 .table , .td , .tr {
   background-color: white;
   border: black solid 1px;

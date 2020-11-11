@@ -170,9 +170,9 @@ O não cumprimento de um requisito, total ou parcialmente, impactará em sua ava
 
 ##### As seguintes verificações serão feitas:
 
-- [ ] O elemento da cor preta deve possuir, inicialmente, a `classe` `selected`;
+- [x] O elemento da cor preta deve possuir, inicialmente, a `classe` `selected`;
 
-- [ ] Note que o elemento que deverá receber a classe `selected` deve ser um dos elementos que possuem a classe `color`, como especificado no **requisito 2**.
+- [x] Note que o elemento que deverá receber a classe `selected` deve ser um dos elementos que possuem a classe `color`, como especificado no **requisito 2**.
 
 ### 7 - Ao clicar em uma das cores da paleta, a cor selecionada é que vai ser usada para preencher os pixels no quadro.
 
@@ -198,11 +198,11 @@ O não cumprimento de um requisito, total ou parcialmente, impactará em sua ava
 
 ##### As seguintes verificações serão feitas:
 
-- [ ] O botão deve ter o `id` denominado `clear-board`;
+- [x] O botão deve ter o `id` denominado `clear-board`;
 
-- [ ] O botão deve estar posicionado entre a paleta de cores e o quadro de pixels;
+- [x] O botão deve estar posicionado entre a paleta de cores e o quadro de pixels;
 
-- [ ] O texto do botão deve ser **"Limpar"**.
+- [x] O texto do botão deve ser **"Limpar"**.
 
 ## Requisitos Bônus:
 
