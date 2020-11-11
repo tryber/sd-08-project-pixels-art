@@ -57,3 +57,8 @@ addEventListener('click', function (event){
         event.target.style.backgroundColor = masterColor;
     }
 })
+
+// limpar quadro 
+document.getElementById('clear').addEventListener('click', function () {
+    window.history.go(0)
+})
