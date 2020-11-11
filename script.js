@@ -19,22 +19,30 @@ window.onload = function() {
 const itemPalette = document.getElementsByClassName('color'); // coloco as 4 cores da classe color num array 
 
 const paletteDiv = document.getElementById("color-palette"); // seleciono a section com o ID color-pallete
-paletteDiv.addEventListener("click", CreateEventsColor); //escutador de eventos
 
+paletteDiv.addEventListener("click", function(event){
+    let elementoEvento = event.target;
+    CreateEventsColor(elementoEvento) 
+
+}); //escutador de eventos
+
+let corSelecionada = 'black';
 
 function CreateEventsColor(event) {
     const colorClass = document.querySelector(".selected");
     colorClass.classList.remove("selected");
-    event.target.classList.add("selected");
-  }
-  
+    event.classList.add("selected");
+    corSelecionada = event.style.backgroundColor;
+    console.log(event.style.backgroundColor)
+}
+
+
 function paintPixel() {
     const pixelSelected = document.querySelectorAll(".pixel");
     for (let index = 0; index < pixelSelected.length; index += 1) {
         pixelSelected[index].addEventListener("click", function (event) {
-            let colorCurrent = document.querySelector(".selected").style
-                .backgroundColor;
-            event.target.style.backgroundColor = colorCurrent;
+            event.target.style.backgroundColor = corSelecionada;
+            console.log(corSelecionada);
         });
     }
 }
