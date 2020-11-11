@@ -144,7 +144,7 @@ O não cumprimento de um requisito, total ou parcialmente, impactará em sua ava
 
 ##### As seguintes verificações serão feitas:
 
-- [ ] As demais cores podem ser escolhidas livremente.
+- [x] As demais cores podem ser escolhidas livremente.
 
 ### 4 - A página deve possuir um quadro de pixels, com 25 pixels.
 
