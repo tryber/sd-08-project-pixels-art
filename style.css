@@ -11,7 +11,7 @@ h1 {
   text-align: center;
 }
 
-#color-palette {
+header div {
   display: flex;
   justify-content: center;
   margin: 20px;
@@ -21,5 +21,30 @@ h1 {
   border: black solid 1px;
   display: inline-block;
   margin: 10px 0;
-  padding: 20px 45px;
+  padding: 10px 35px;
+}
+
+.table, .tr, .td {
+  border: black solid 1px; 
+  background-color: white;
+}
+
+.table { 
+  display: table;
+  height: 500px;
+  left: 410px;
+  padding: 5px;
+  position: relative;
+  width: 500px;
+}
+
+.tr { 
+  display: table-row; 
+  padding: 5px;
+}
+
+.td {
+  display: table-cell;
+  width: 40px;
+  height: 40px;
 }
