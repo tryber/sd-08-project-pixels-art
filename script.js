@@ -25,6 +25,7 @@ function createTable() {
         for (let i = 0; i < 5; i += 1) {
             let spot = document.createElement('div');
             spot.classList = 'pixel';
+            spot.style.backgroundColor = 'white';
             document.querySelector('#pixel-board').appendChild(spot);
             colorChange(spot);
             clear(spot);
@@ -77,6 +78,7 @@ function generateBoard() {
                 for (let i = 0; i < input.value; i += 1) {
                     let spot = document.createElement('div');
                     spot.classList = 'pixel';
+                    spot.style.backgroundColor = 'white';
                     board.appendChild(spot);
                     colorChange(spot);
                     clear(spot);
