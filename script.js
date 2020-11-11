@@ -44,3 +44,15 @@ function pincel() {
     }
 }
 pincel();
+
+function pintaQuadro() {
+    let pixels = document.querySelectorAll('.pixel');
+    for (let index = 0; index < pixels.length; index+=1) {
+        const pixel = pixels[index];
+        pixel.addEventListener('click', function (event) {
+            const corSelecionada = document.querySelector('.selected');
+            event.target.style.backgroundColor = corSelecionada.style.backgroundColor;
+        })
+    }    
+}
+pintaQuadro();
