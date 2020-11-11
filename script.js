@@ -49,14 +49,14 @@ function colorsPalete() {
 };
 colorsPalete();
 
-//Funcao cor aleatoria
+//Funcao para criar cor aleatoria
 function randomColors() {
   let color = '';
   while (color.length < 6) {
-    color += (Math.random()).toString(16).substr(-6).substr(-1)
-  }
+    color += (Math.random()).toString(16).substr(-6).substr(-1);
+  };
   return '#' + color;
-}
+};
 
 //Criação do botão Limpar
 const botao = document.createElement('button');
