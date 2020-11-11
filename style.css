@@ -18,18 +18,6 @@ header {
     justify-content: left;
     padding: 15px;
 }
-.black {
-    background-color: black;
-}
-.second {
-    background-color: blue;
-}
-.third {
-    background-color: chartreuse;    
-}
-.fourth {
-    background-color: crimson;
-}
 #pixel-board {
   width: 210px;
   height: 210px;
