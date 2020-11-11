@@ -1,30 +1,34 @@
 #color-palette{
-
 }
+
 .color {
+  display: inline-block;
   width: 40px;
   height: 40px;
   border: 1px solid black;
-  float: left;
 }
+
 .black {
   background-color: black;
 }
+
 .red {
   background-color: red;
 }
+
 .blue {
   background-color: blue;
 }
+
 .green {
   background-color: green;
 }
+
 #pixel-board {
   display: grid;
-  grid-template-columns: repeat(5, 40px);
-  grid-template-columns: minmax(200px);
-  
+  grid-template-columns: repeat(5, 40px); 
 }
+
 /*grid aprendido no site: https://developer.mozilla.org/pt-BR/docs/Web/CSS/CSS_Grid_Layout/Basic_Concepts_of_Grid_Layout */
 .pixel {
   width: 40px;
