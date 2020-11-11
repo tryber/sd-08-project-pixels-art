@@ -49,19 +49,6 @@ creatBoard();
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 // function toggleColor() {
 
 
