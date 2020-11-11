@@ -1,26 +1,26 @@
 body {
-    margin: 50px;
+  margin: 50px;
 }
 
-#pixel-board {
-    border-collapse: collapse;
+button {
+	margin: 10px;
+}
+
+.border-collapsed{
+  border-collapse: collapse;
 }
 
 .pixel {
-    background-color: white;
+  background-color: white;
 }
 
 td {
-    width: 41px;
-    height: 41px;
-    border: black solid 1px;
-    padding: 0px;
+	border: black solid 1px;
+	height: 41px;
+	padding: 0;
+	width: 41px;
 }
 
 td .pixel {
-    margin: 0px;
-} 
-
-button {
-    margin: 10px;
+  margin: 0;
 }

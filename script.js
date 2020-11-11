@@ -36,7 +36,7 @@ function changeColor(evt) {
 
 btnPixel.addEventListener('click', changeColor);
 
-function reset(){
+function reset() {
   for (let index = 0; index < pixelList.length; index += 1) {
     pixelList[index].style.backgroundColor = 'white';
   }
