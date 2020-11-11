@@ -25,3 +25,14 @@ for (let linha = 0; linha < 5; linha += 1){
 }
 
 paleta.children[0].className += " selected";
+/* Adiciona a classe para um novo elemento*/
+function selecionaCor () {
+    paleta.addEventListener ('click', function (event){
+        for (let varre = 0; varre < cores.length; varre += 1){
+           
+            paleta.children[varre].className = "color";
+        }
+        event.target.className += " selected";
+    });
+}
+selecionaCor ();
