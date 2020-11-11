@@ -12,3 +12,27 @@ function cores() {
     }
 }
 cores();
+
+// quadro de pixels com 25 pixels
+
+function criaPixels() {
+    
+   let divBoard = document.querySelector('#pixel-board');
+   for (let index = 0; index < 5; index += 1) {
+        
+        let divPixel = document.createElement("div");
+
+        divBoard.appendChild(divPixel);
+        divPixel.style.backgroundColor = "white";
+         
+        
+        for (let index = 0; index < 5; index += 1) {
+
+           let divPixel = document.createElement("div");
+           divPixel.className = "pixel";
+           divBoard.appendChild(divPixel);
+        }
+    }
+
+}
+criaPixels()
