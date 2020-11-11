@@ -62,7 +62,14 @@ for(let p of findPixel)
     })
 }
 
-
+// clear button
+document.getElementById("clear-board").addEventListener("click", function()
+{
+    for(let p of findPixel)
+    {
+        p.style.backgroundColor = "white";
+    }
+})
 
 
 
