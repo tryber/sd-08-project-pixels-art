@@ -1,0 +1,42 @@
+#black {
+   background-color: black;
+}
+
+#green {
+    background-color: green;
+}
+
+#pink {
+    background-color: hotpink;
+}
+
+#orange {
+    background-color: orange;
+}
+
+.color {
+    border: 1px solid black;
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+}
+
+.pixel {
+    background-color: white;
+    border: 1px solid black;
+    height: 40px;
+    width: 40px;
+}
+
+#pixel-board {
+    display: flex;
+    width: 250px;
+    height: 210px;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    background-color: white;
+  }
+
+  #clear-board {
+    margin-bottom: 5px;
+ }
