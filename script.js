@@ -42,7 +42,6 @@ divBotoes.className = 'botoes';
 corpo.appendChild(divBotoes);
 const entrada = document.createElement('input');
 entrada.id = 'board-size';
-entrada.min = '1';
 divBotoes.appendChild(entrada);
 const botao2 = document.createElement('button');
 botao2.id = 'generate-board';
@@ -78,9 +77,9 @@ botao2NewBoard.addEventListener('click', function () {
     verfNum = 50;
     document.getElementById('board-size').value = verfNum;
     pixelBoard(verfNum);
-  } else if (verfNum >= 5 && verfNum <= 50) {
+  } else if (verfNum >= 5 && verfNum <= 50 && verfNum.min === '1' && verfNum.type === 'number') {
     pixelBoard(verfNum);
-  } else if (Number.isInteger(verfNum) == false && verfNum > 0) {
+  } else if (Number.isInteger(verfNum) == false) {
     alert('Aceita apenas números');
   } else {
     alert('"Board inválido!"');
