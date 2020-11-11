@@ -3,10 +3,10 @@ body {
 }
 
 button {
-	margin: 10px;
+  margin: 10px;
 }
 
-.border-collapsed{
+.border-collapsed {
   border-collapse: collapse;
 }
 
@@ -15,10 +15,10 @@ button {
 }
 
 td {
-	border: black solid 1px;
-	height: 41px;
-	padding: 0;
-	width: 41px;
+  border: black solid 1px;
+  height: 41px;
+  padding: 0;
+  width: 41px;
 }
 
 td .pixel {
