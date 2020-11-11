@@ -32,6 +32,7 @@
 #pixel-board {
     border-collapse: collapse;
     border-spacing: 0px;
+    display: table-cell;
 }
     
 
