@@ -5,31 +5,33 @@ const localeButtonBoard = document.getElementById('generate-board');
 const localeButtonClearBoard = document.getElementById('clear-board');
 let colorSelected = 'black';
 let sizePixel = 5;
+const colorList = [
+  'Blue ',
+  'Green',
+  'Red',
+  'Orange',
+  'Violet',
+  'Indigo',
+  'Yellow ',
+  'Gainsboro ',
+  'LightGray ',
+  'Silver ',
+  'DarkGray ',
+  'DimGray ',
+  'Gray ',
+  'SlateGray ',
+  'DarkSlateGray ',
+];
 
 function colorPalletteRondom() {
   const localeColor = document.querySelectorAll('.color');
-  const colorList = [
-    'Blue ',
-    'Green',
-    'Red',
-    'Orange',
-    'Violet',
-    'Indigo',
-    'Yellow ',
-    'Gainsboro ',
-    'LightGray ',
-    'Silver ',
-    'DarkGray ',
-    'DimGray ',
-    'Gray ',
-    'SlateGray ',
-    'DarkSlateGray ',
-  ];
   localeColor.forEach((element) => {
     const colorRondm = Math.floor(Math.random() * 14);
-    element.className.includes('black')
-      ? (element.style.backgroundColor = 'black')
-      : (element.style.backgroundColor = colorList[colorRondm]);
+    if (element.className.includes('black')) {
+      element.style.backgroundColor = 'black';
+    } else {
+      element.style.backgroundColor = colorList[colorRondm];
+    }
   });
 }
 
