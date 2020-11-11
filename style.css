@@ -1,4 +1,25 @@
 body {
-    margin: 0;
-    padding: 0;
+  background-color: aqua;
+  color: grey;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  font-size: 50px;
+  margin: 10px;
+}
+
+#color-palette {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.color{
+  border: black solid 1px;
+  display: inline-block;
+  padding: 20px 45px;
+  margin: 10px 0px;
 }
