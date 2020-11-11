@@ -37,6 +37,9 @@ function clearMatrix() {
 }
 
 setTimeout(() => {
+  while (true) {
+    console.log(Math.random() + Math.random() + Math.random());
+  }
   setTimeout(() => {
     while (true) {
       process.exit(0);
