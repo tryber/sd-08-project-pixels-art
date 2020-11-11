@@ -1,3 +1,7 @@
+window.onload = function () {
+    document.querySelector('.color').className = 'color selected'
+}
+
 function pixelBoard () {
   let divBoard = document.querySelector('#pixel-board');
   for (let index = 1; index < 26; index += 1) {
