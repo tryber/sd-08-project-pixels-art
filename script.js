@@ -66,15 +66,17 @@ document.getElementById('color-palette').addEventListener('click', e => {
     }
 })
 
-//Pintando os pixels de preto ao iniciar a pagina
+//Pintando os pixels
 document.getElementById('pixel-board').addEventListener('click', e => {
     if(e.target.classList.contains('pixel')) {
         e.target.style.backgroundColor = document.getElementsByClassName('selected')[0].style.backgroundColor;
     }
 })
 
-document.getElementById('color-palette').addEventListener('click', e => {
-    if(e.target.classList.contains('selected')) {
-        
+document.getElementById('souPai').addEventListener('click', e => {
+    console.log('oi pai, tô aqui');
+    if(e.target.classList.contains('azul')) {
+        event.target.style.backgroundColor = 'red';
     }
 })
+
