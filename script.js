@@ -16,10 +16,20 @@ function selector (event) {
 const palette = document.getElementById('color-palette');
 palette.addEventListener('click', selector);
 
-let botao = document.getElementById('clear-board');
-botao.addEventListener('click', apagaPixels)
 
-function apagaPixels() {
-    let pixels = document.querySelectorAll('.pixel');
-    pixels.style.backgroundColor = 'white';
+
+function printPixel () {
+    let corSelecionada = document.querySelector('selected');
+    let pixelPrint = document.getElementsByClassName('pixel');
+
+    for (let i = 0; i < pixelPrint.length; i++) {
+
+        pixelPrint[i].style.backgroundColor = corSelecionada.style.backgroundColor;
+        
+    }
+
+    
+
 }
+let quadroCores = document.getElementById('pixel-board')
+
