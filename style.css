@@ -26,13 +26,14 @@
     width: 40px;
     height: 40px;
     background-color: white;
-    padding:0px;
+    padding: 0px;
+    margin:0px;
 }
     
 #pixel-board {
     border-collapse: collapse;
     border-spacing: 0px;
-    display: table-cell;
+    
 }
     
 
