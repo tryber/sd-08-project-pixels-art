@@ -3,36 +3,29 @@
 /* 
     CORES
 */
-.preto{
-    background-color: black;
+.color{
     height: 100px;
     width: 100px;
     border: solid black 1px;
     margin-right: 5px;
+}
+.preto{
+    background-color: black;
 }
 
 .azul{
     background-color: blue;
-    height: 100px;
-    width: 100px;
-    border: solid black 1px;
-    margin-right: 5px;
+   
 }
 
 .vermelho{
     background-color: red;
-    height: 100px;
-    width: 100px;
-    border: solid black 1px;
-    margin-right: 5px;
+ 
 }
 
 .verde{
     background-color: green;
-    height: 100px;
-    width: 100px;
-    border: solid black 1px;
-    margin-right: 5px;
+    
 }
 
 
