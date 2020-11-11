@@ -12,11 +12,26 @@ function quadro() {
 }
 quadro();
 
-// let preto = document.getElementById('preto');
-// preto.addEventListener('click', recebeClick);
-// function recebeClick(evento) {
-//   alert(evento.target.style.backgroundColor);
-// }
+function seleciona() {
+  let ListaCores = document.getElementsByClassName('color');
+  for (let i = 0; i < ListaCores.length; i += 1) {
+    ListaCores[i].addEventListener('click', troca);
+    function troca(evento) {
+      for (let i = 0; i < ListaCores.length; i += 1) {
+        ListaCores[i].className = 'color';
+        evento.target.className = 'color selected';
+      }
+    }
+  }
+}
+seleciona();
+
+
+
+
+
+
+
 
 let limpa = document.getElementById('clear-board');
 limpa.addEventListener('click', limpaTudo);
@@ -26,3 +41,4 @@ function limpaTudo() {
     pixel[i].style.backgroundColor = 'white';
   }
 }
+//getElementsByClassName('pixel'); 
