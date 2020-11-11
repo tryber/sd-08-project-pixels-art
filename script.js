@@ -48,3 +48,12 @@ function pintaPixel () {
     })
 }
 pintaPixel ();
+
+let pixels = document.querySelectorAll(".pixel");
+let butaoApaga = document.querySelector("#clear-board");
+butaoApaga.addEventListener('click', function(){
+    for (let caminha = 0; caminha < pixels.length; caminha+=1){
+        let apagando = pixels[caminha];
+        pixels[caminha].style.backgroundColor = "white";
+    }
+});
