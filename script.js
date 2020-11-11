@@ -56,7 +56,7 @@ for (let index = 0; index <= 24; index += 1) {
 const container2 = document.querySelector('#pixel-board');
 container2.appendChild(fragment2);
 
-// Adicionndo e removendo classe selected
+// Adicionando e removendo classe selected
 document.getElementById('color-palette').addEventListener('click', e => {
     if(e.target.classList.contains('color')) {
         document.querySelectorAll('.color').forEach((Element) => {
@@ -66,5 +66,10 @@ document.getElementById('color-palette').addEventListener('click', e => {
     }
 })
 
+//Pintando os pixels de preto ao iniciar a pagina
+document.getElementById('pixel-board').addEventListener('click', e => {
+    if(e.target.classList.contains('pixel')) {
+        e.target.style.backgroundColor = 'black';
+    }
+})
 
-  
