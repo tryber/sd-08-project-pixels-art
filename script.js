@@ -54,10 +54,18 @@ paletaCompleta.addEventListener("click", function () {
 // Requisito 8
 
 board.addEventListener ("click", function (){
+
 event.target.style.backgroundColor = selectedColor;
 })
 
+let buttonClear = document.getElementById("clear-board");
+let pixels = document.querySelectorAll(".pixel");
 
+buttonClear.addEventListener("click", function () {
+  for (index = 0; index < pixels.length; index += 1) {
+    pixels[index].style.backgroundColor = "white";
+  }
+})
 
 
 
