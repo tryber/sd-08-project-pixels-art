@@ -18,14 +18,16 @@ function selectColor(){
     selected = Boolean;
     pixels[i].addEventListener('click', (event)=>{
 
-      if(event.target.className === 'color selected'){
-        event.target.className = 'color'
-        selected = false
-      }else if(event.target.className === 'color' && selected == false){
-        event.target.classList.toggle('selected')
-        selected = true
-        wathColor()
-      }
+      var pixels = document.querySelectorAll('.color')
+
+        for(i = 0; i < pixels.length; i++){
+          let div = pixels[i]
+
+          div.classList.remove('selected')
+        }
+
+        event.target.classList.add('selected')
+
     })
 
     function wathColor(){
