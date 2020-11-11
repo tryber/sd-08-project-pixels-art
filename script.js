@@ -17,13 +17,13 @@ function gridCreation(size) {
 
 
 // Clear Button
-let clearButton = document.querySelector('#clear-board');
+const clearButton = document.querySelector('#clear-board');
 clearButton.addEventListener('click', function () {
-  let pixels = document.querySelectorAll('.pixel');
-    for(i = 0; i < pixels.length; i++){
-      pixels[i].style.backgroundColor= 'white';
+  const pixels = document.querySelectorAll('.pixel');
+  for (let i = 0; i < pixels.length; i += 1) {
+    pixels[i].style.backgroundColor = 'white';
   }
-})
+});
 
 window.onload = function () {
   gridCreation(5);
