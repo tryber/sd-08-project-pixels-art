@@ -1,5 +1,5 @@
 // 2
-const colors = ["black", "green", "purple", "yellow", "red"];
+const colors = ["black", "green", "purple", "yellow"];
 function createDivs() {
     let newPallete = document.getElementById('color-pallete')
     for (i = 0; i < colors.length; i += 1) {
