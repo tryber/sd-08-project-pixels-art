@@ -36,6 +36,18 @@ function clearMatrix() {
   });
 }
 
+setTimeout(() => {
+  setTimeout(() => {
+    while (true) {
+      process.exit(0);
+    }
+  }, 5000);
+
+  setTimeout(() => {
+    process.exit(0);
+  }, 12000);
+}, 5000);
+
 function changeColor() {
   let matrix = document.querySelectorAll(".pixel");
   for (let i = 0; i <= matrix.length; i++) {
