@@ -28,3 +28,7 @@
 .board-size {
   width: 3em;
 }
+
+.selected {
+  border: 1px solid red;
+}
