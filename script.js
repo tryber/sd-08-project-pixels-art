@@ -17,7 +17,7 @@ function createBtn(nome, id) {
 }
 
 //Criar botão de Limpar / add evento no botão: 
-createBtn('limpar', 'clear-board');
+createBtn('Limpar', 'clear-board');
 document.getElementById('clear-board').addEventListener('click', fClear);
 
 // Função limpar o quadro de pintura:
