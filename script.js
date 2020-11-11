@@ -1,5 +1,7 @@
+const colors = ['black', 'red', 'green', 'blue'];
+
+// Cria a paleta de cores
 function creatColorPalette() {
-    const colors = ['black', 'red', 'green', 'blue'];
     const colorPaletteList = document.getElementById("color-palette-list");
     
     for (let index = 0; index < colors.length; index += 1) {
@@ -13,13 +15,12 @@ function creatColorPalette() {
         
         colorPaletteList.appendChild(color);
     }
-    
 }creatColorPalette();
 
+// Cria o pixel board
 function creatPixelBoard() {
     const pixelBoardSize = 5;
     const pixelBoard = document.getElementById('pixel-board');
-    console.log(pixelBoard);
     for (let index = 0; index < pixelBoardSize; index += 1) {
         const lineList = document.createElement('ul');
         lineList.style.fontSize = '0';
@@ -36,3 +37,10 @@ function creatPixelBoard() {
         }
     }
 }creatPixelBoard();
+
+// Seleciona cor
+function selectedColor() {
+    let selectedColor = document.querySelector('.color');
+    console.log(selectedColor);
+    selectedColor.className = 'color selected';
+}selectedColor();
