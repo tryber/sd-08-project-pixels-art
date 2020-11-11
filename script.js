@@ -75,9 +75,14 @@ function inicializaBoard(n = 5) {
 }
 
 function selectColor(color) {
-  previousColor = document.querySelector('.selected');
-  previousColor.classList.toggle('selected');
+  const selectedColor = document.querySelector('.selected');
+  selectedColor.classList.toggle('selected');
   color.classList.add('selected');
+}
+
+function paintPixel(pixel) {
+  const selectedColor = document.querySelector('.selected');
+  pixel.style.backgroundColor = selectedColor.style.backgroundColor;
 }
 
 function capturaEvento(elementoHTML, tipoDeEvento, acaoDoEvento) {
@@ -89,6 +94,7 @@ function capturaEvento(elementoHTML, tipoDeEvento, acaoDoEvento) {
 
 capturaEvento('generate-board', 'click', validityInput);
 capturaEvento('color-palette', 'click', selectColor);
+capturaEvento('pixel-board', 'click', paintPixel);
 
 window.onload = () => {
   generateColors();
