@@ -42,6 +42,7 @@ divBotoes.className = 'botoes';
 corpo.appendChild(divBotoes);
 const entrada = document.createElement('input');
 entrada.id = 'board-size';
+entrada.min = '1';
 divBotoes.appendChild(entrada);
 const botao2 = document.createElement('button');
 botao2.id = 'generate-board';
@@ -66,24 +67,25 @@ function pixelBoard(valor) {
 };
 pixelBoard(valor);
 
-  const botao2NewBoard = document.querySelector('#generate-board');
-  botao2NewBoard.addEventListener('click', function () {
-    let verfNum = entrada.value;
-    console.log(entrada.value);
-    if (verfNum == '') {
-      alert('"Board inválido!"');
-    } else if (verfNum < 5) {
-      verfNum = 5;
-      pixelBoard(verfNum);
-    } else if (verfNum > 50) {
-      verfNum= 50;
-      pixelBoard(verfNum);
-    } else if (verfNum >= 5 && verfNum <= 50) {
-      pixelBoard(verfNum);
-    } else if (typeof verfNum !== 'number') {
-      alert('"Aceita apenas números"');
-    };
-  });
+const botao2NewBoard = document.querySelector('#generate-board');
+botao2NewBoard.addEventListener('click', function () {
+  let verfNum = entrada.value;
+  if (verfNum < 5 && verfNum > 0) {
+    verfNum = 5;
+    document.getElementById('board-size').value = verfNum;
+    pixelBoard(verfNum);
+  } else if (verfNum > 50) {
+    verfNum = 50;
+    document.getElementById('board-size').value = verfNum;
+    pixelBoard(verfNum);
+  } else if (verfNum >= 5 && verfNum <= 50) {
+    pixelBoard(verfNum);
+  } else if (Number.isInteger(verfNum) == false && verfNum > 0) {
+    alert('Aceita apenas números');
+  } else {
+    alert('"Board inválido!"');
+  };
+});
 
 //Função para selecionar as cores
 function selecionaPixel() {
