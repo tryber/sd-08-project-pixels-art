@@ -7,7 +7,7 @@
 {
     width: 30px;
     height: 30px;
-    margin: 70px 5px 10px 0px;
+    margin: 10px 5px 10px 0px;
     border: solid black 1px;
     display: inline-block;
     position: relative;
@@ -48,3 +48,4 @@
     border: 1px solid black;
 
 }
+
