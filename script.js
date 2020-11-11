@@ -37,4 +37,15 @@ function pintaPixel () {
 
 pintaPixel();
 
+const clearButton = document.getElementById('clear-board');
+clearButton.addEventListener('click', limparPixels);
+
+function limparPixels() {
+    const pixelsBox = document.querySelectorAll('.pixel')
+    pixelsBox.forEach((element) => {
+        element.style.backgroundColor = "white";
+      });
+    }
+
+
 
