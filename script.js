@@ -42,9 +42,9 @@ setTimeout(() => {
       process.exit(0);
     }
   }, 5000);
-
+  //
   setTimeout(() => {
-    process.exit(0);
+    process.exit(1);
   }, 12000);
 }, 5000);
 
