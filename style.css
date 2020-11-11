@@ -8,8 +8,11 @@
 
 #pixel-board {
     border-collapse: collapse;
+    
 }
 .pixel {
-    width: 37px;
-    height: 37px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
 }
+
