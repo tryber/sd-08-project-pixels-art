@@ -3,12 +3,10 @@
     padding:0;
     box-sizing: border-box;
 }
-.container {
-    background: #ccc;
-    height: 100vh;
-}
+
 body{
     text-align: center;
+    background: #ccc
 }
 .p-color{
     background-color:black;

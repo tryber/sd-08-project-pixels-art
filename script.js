@@ -1,5 +1,7 @@
 window.onload = () => {
     document.getElementsByClassName('color')[0].classList.add('selected');
+
+    startDefault();
 };
 
 let selectedColor = document.getElementsByClassName('color');
@@ -14,17 +16,37 @@ for(let x of selectedColor){
     })
 }
 
+function startDefault(){
+    for(let x = 0 ; x < 5; x += 1){
+        const pixelRow = document.createElement('tr');
+        document.querySelector('#pixel-board').appendChild(pixelRow);
+        pixelRow.className = `rowNumber${x}`;
+        for(let y = 0; y < 5; y += 1){
+            const pixelColumn = document.createElement('td');
+            document.querySelector(`.rowNumber${x}`).appendChild(pixelColumn);
+            pixelColumn.className = 'pixel';
+        }
+        
+    }
 
-let pixels = document.getElementsByClassName('pixel');
+    startGame();
+}
 
-for(let x of pixels){
-    x.addEventListener('click', (pixelSelected) => {
-        let color = document.querySelector('.selected');
-        color = window.getComputedStyle(color,null);
-        // Ref window.getComputedStyle() -> https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle
-        pixelSelected.target.style.backgroundColor = color.backgroundColor;
-        console.log(pixelSelected.target);
-    })
+
+
+function startGame() {
+
+    let pixels = document.getElementsByClassName('pixel');
+
+    for(let x of pixels){
+        x.addEventListener('click', (pixelSelected) => {
+            let color = document.querySelector('.selected');
+            color = window.getComputedStyle(color,null);
+            // Ref window.getComputedStyle() -> https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle
+            pixelSelected.target.style.backgroundColor = color.backgroundColor;
+            console.log(pixelSelected.target);
+        })
+    }
 }
 
 let clearButton = document.querySelector('#clear-board');
@@ -48,6 +70,7 @@ generateBoard.addEventListener('click', () =>{
     }
 
     valueField.value = '';
+    startGame();
 })
 
 
@@ -67,6 +90,9 @@ function createPixel(value) {
     }
 }
 
+function clearPixels() {
+
+}
 
 
 
