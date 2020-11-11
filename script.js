@@ -21,12 +21,11 @@ function colorSelected() {
     const reset = 'color';
 
     colorPalette.addEventListener('click', function(event) {
-      black.className = reset;
-      red.className = reset;
-      green.className = reset;
-      blue.className = reset;
-
       if (event.target.id === 'black' || event.target.id === 'red' || event.target.id === 'green' || event.target.id === 'blue') {
+        black.className = reset;
+        red.className = reset;
+        green.className = reset;
+        blue.className = reset;  
         event.target.className = 'selected';
       }
     });
