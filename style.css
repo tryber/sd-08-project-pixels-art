@@ -22,15 +22,15 @@
 }
 
 .pixel {
-    border: solid black;
-    border-width: 1px;
+    border: solid black 1px;
     width: 40px;
     height: 40px;
     background-color: white;
-    
-    
 }
-
+    
 #pixel-board {
     border-collapse: collapse;
 }
+    
+
+    
