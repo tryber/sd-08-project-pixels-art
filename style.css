@@ -24,3 +24,18 @@
 #blue {
   background-color: blue;
 }
+
+#pixel-board {
+    width: 250px;
+    height: 250px;
+    margin: 0;
+}
+
+.pixel {
+    background-color: white;
+    border: 1px solid;
+    display: inline-block;
+    margin: 0;
+    height: 40px;
+    width: 40px;  
+  }
