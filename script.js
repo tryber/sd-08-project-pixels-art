@@ -10,7 +10,7 @@ function createPaleteColorEle(){
     if (i === 0) {
     
         createele.style.backgroundColor = "black"
-        createele.className = "color"
+        createele.className = "selected"
       
        
         
