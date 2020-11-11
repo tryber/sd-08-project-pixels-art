@@ -2,7 +2,7 @@
 const blue = document.querySelector('#azul');
 const purple = document.querySelector('#roxo');
 const green = document.querySelector('#verde');
-const squares = document.querySelectorAll('.pixel');
+
 
 const colors = document.querySelectorAll('.color');
 const blackSelected = document.querySelector('#preto');
@@ -21,3 +21,17 @@ for (let index = 0; index < colors.length; index +=1){
     });         
 }
 
+
+/*Pintando os Pixels*/
+
+
+function painted () {
+    const squares = document.querySelectorAll('.pixel').forEach(function(evt){
+evt.addEventListener('click', function(event){
+    let paint = document.querySelector('.selected').style.backgroundColor;
+    event.target.style.backgroundColor = paint;
+
+});
+    });
+}
+painted();
