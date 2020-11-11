@@ -15,7 +15,26 @@ corpo.appendChild(quadro);
 const paletaCores = document.createElement('div');
 paletaCores.id = 'color-palette';
 corpo.appendChild(paletaCores);
-const colors = ['black', 'red', 'green', 'blue'];
+
+//Verificacao de cores repetidas
+let color1 = [];
+let color2 = [];
+let color3 = [];
+color1 = randomColors();
+color2 = randomColors();
+color3 = randomColors();
+if (color1 === color2) {
+  color2 = randomColors()
+};
+if (color1 === color3) {
+  color3 = randomColors();
+};
+if (color3 === color2) {
+  color2 = randomColors();
+};
+let colors = ['black', color1, color2, color3];
+
+//criacao paleta de cores
 function colorsPalete() {
   const divPaleta = document.getElementById('color-palette');
   for (let i = 0; i < colors.length; i++) {
@@ -29,6 +48,15 @@ function colorsPalete() {
   };
 };
 colorsPalete();
+
+//Funcao cor aleatoria
+function randomColors() {
+  let color = '';
+  while (color.length < 6) {
+    color += (Math.random()).toString(16).substr(-6).substr(-1)
+  }
+  return '#' + color;
+}
 
 //Criação do botão Limpar
 const botao = document.createElement('button');
@@ -66,6 +94,7 @@ function pixelBoard(valor) {
 };
 pixelBoard(valor);
 
+//verificacao dos limites do quadro e dos argumentos do campo de entrada
 let input = document.querySelector('#board-size');
 input.min = '1';
 input.type = 'number';
