@@ -16,3 +16,15 @@ header {
     display: flex;
     justify-content: center;
 }
+.black {
+    background-color: black;
+}
+.second {
+    background-color: blue;
+}
+.third {
+    background-color: chartreuse;    
+}
+.fourth {
+    background-color: crimson;
+}
