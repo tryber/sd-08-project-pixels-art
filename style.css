@@ -1,9 +1,10 @@
 body {
-  font-family: 'sans-serif';
+  font-family: sans-serif;
 }
+
 .color {
-  border-radius: 100%;
   border: 1px solid black;
+  border-radius: 100%;
   cursor: pointer;
   display: inline-block;
   height: 60px;
@@ -11,6 +12,7 @@ body {
   transition: 0.2s;
   width: 60px;
 }
+
 .color:hover {
   box-shadow: 0 4px 4px black;
 }
@@ -18,14 +20,16 @@ body {
 .selected {
   box-shadow: 0 4px 4px black;
 }
+
 .row {
   display: table-row;
 }
+
 .pixel {
-  float: left;
   background-color: white;
   border: 1px solid black;
   cursor: pointer;
+  float: left;
   height: 40px;
   width: 40px;
 }
@@ -71,6 +75,7 @@ body {
 .btn {
   background-color: rgb(47, 50, 80);
   border: none;
+  border-radius: 12px;
   box-sizing: border-box;
   color: white;
   cursor: pointer;
@@ -79,7 +84,6 @@ body {
   padding: 7px 11px;
   transition: 0.2s;
   vertical-align: middle;
-  border-radius: 12px;
 }
 
 .btn:hover {
