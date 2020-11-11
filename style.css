@@ -1,5 +1,5 @@
 * {
-    margin: 0;
+   box-sizing: border-box;  
 }
 
 body {
@@ -9,11 +9,11 @@ body {
 
 #color-palette{
    display: flex;
+   
 }
 
 .color {
-    border-style: solid black;
-    border-width: 1px;
+    border: 1px solid black;
     display: inline-block;
     height: 40px;
     width: 40px; 
