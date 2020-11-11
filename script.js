@@ -73,8 +73,8 @@ function limparQuadro() {
   let classCor = document.querySelectorAll(".pixel");
   console.log(classCor);
   for (let i = 0; i < classCor.length; i += 1) {
-    classCor[i].style.backgroundColor = "";
+    classCor[i].style.backgroundColor = "white";
   }
 }
-let bt = document.querySelector("#clear-bord");
+let bt = document.querySelector("#clear-board");
 bt.addEventListener("click", limparQuadro);
