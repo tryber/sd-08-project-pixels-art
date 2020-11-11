@@ -1,3 +1,4 @@
+
 function createDivs() {
     let newPallete = document.getElementById('color-pallete')
     for (i = 0; i < 4; i += 1) {
