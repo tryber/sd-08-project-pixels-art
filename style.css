@@ -25,6 +25,7 @@ div {
 .selected {
   box-shadow: 0 4px 4px black;
 }
+
 .pixelBoard {
   display: table;
 }
@@ -34,10 +35,10 @@ div {
 }
 
 .pixel {
-  display: table-cell;
   background-color: white;
   border: 1px solid black;
   cursor: pointer;
+  display: table-cell;
   height: 40px;
   width: 40px;
 }

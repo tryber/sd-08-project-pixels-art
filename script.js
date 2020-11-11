@@ -49,6 +49,7 @@ function createElementPixelBoard(pixelBoard) {
       const column = document.createElement('div');
       column.id = `column${index1}${index2}`;
       column.className = 'pixel';
+      column.style.backgroundColor = 'white';
       document.getElementById(row.id).appendChild(column);
     }
   }
