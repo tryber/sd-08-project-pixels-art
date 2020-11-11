@@ -5,6 +5,6 @@ function createDivs() {
         let newDivs = document.createElement("div");
         newDivs.className = "color"
         newPallete.appendChild(newDivs)
-        document.getElementsByClassName("color").style.border = "solid 1px"
     }
+    document.getElementsByClassName("color").style.border = "solid 1px"
 }
