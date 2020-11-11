@@ -24,13 +24,13 @@ header div {
   padding: 10px 35px;
 }
 
-.butãoLimpar {
+main button {
   background-color: ivory;
   margin: 0 635px 30px;
   position: relative;
 }
 
-.table , .td , .tr {
+.table , .td {
   background-color: white;
   border: black solid 1px;
 }
