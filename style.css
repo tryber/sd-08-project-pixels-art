@@ -53,8 +53,8 @@
 }
 
 .quadro-pixels {
-  line-height: 0;
   height: 240px;
+  line-height: 0;
   margin-left: 40%;
   width: 240px;
 }
