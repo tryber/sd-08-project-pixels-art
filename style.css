@@ -33,7 +33,7 @@
  
 }
 .pixel{
-    width: 40px;
+    width:40px ;
     height: 40px;
     border: 1px solid black;
     background-color: white;
@@ -41,14 +41,15 @@
 
 }
 .selected{
-    display: inline-block;
-background-color: black;
 
-padding:  200 px;
-width:50px;
-height: 50px;
-border: 1px solid black;
-margin-left: 20px;
+
+    display: inline-block;
+    padding:  200 px;
+    width:50px;
+    height: 50px;
+    border: 1px solid black;
+    margin-left: 20px;
+    
 
 }
 

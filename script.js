@@ -10,7 +10,7 @@ function createPaleteColorEle(){
     if (i === 0) {
     
         createele.style.backgroundColor = "black"
-        createele.className = "color"  
+        createele.className = "color"
       
        
         
@@ -180,6 +180,9 @@ paintpallete()
 // 
 
 
+
+/* pega cor do color
+
     let pega1 = document.querySelectorAll(".color")
     
     
@@ -197,18 +200,24 @@ paintpallete()
               console.log(color)
 
 
+            */
+
+
             /* let color = event.target;
               color.classList.add('selected');
           
               colorPalette.classList.remove('selected');
             });
-            */
+            
 
             })
 
           }
+          */
         
 
+        
+/*
     function aplicacor(){
 
 
@@ -217,13 +226,13 @@ paintpallete()
 
         for(let i = 0 ; i <pegaposi3.length ; i++){
 
-            pegaposi3[i].addEventListener("click",function(){
+            pegaposi3[i].addEventListener("click",function(pegacorpalleta){
                 let pegaposi5 = document.querySelector(".selected")
                 
             //    let color1 = pegaposi5.style.backgroundColor
 
 
-            pegaposi3[i].style.background = color
+            pegaposi3[i].style.backgroundColor = color
   
         })
 
@@ -231,6 +240,8 @@ paintpallete()
     }
     
     aplicacor()
+
+*/   
 
 
     function criabotao(){
@@ -246,7 +257,7 @@ for(let i = 0 ; i < pegaposicaopixels.length ; i ++)
 
 
 
-pegaposicaopixels[i].style.backgroundColor = "pink"
+pegaposicaopixels[i].style.backgroundColor = "white"
 
 
 
@@ -263,12 +274,83 @@ pegaposicaobotao.appendChild(criabotao)
     
 
 
+    function pegacorpalleta(){
+
+let pegaposicaok = document.querySelectorAll(".color")
+console.log(pegaposicaok)
+
+
+for(let i =0 ; i < pegaposicaok.length ; i ++ ){
+
+pegaposicaok[i].addEventListener("click",function(event){
+
+  if(event.target.className === "color"  ){
+     
+
+event.target.classList.remove("color")
+
+ event.target.classList.add("selected")
+ let color = event.target.style.backgroundColor
+ console.log(color)
+
+  }
+  else{
+      event.target.classList.remove("selected")
+      event.target.classList.add("color")
+      
+
+
+  }
+   
+
+})
+
+    }
+    }
+    pegacorpalleta()
     
     
+   function apllycolor(){
+
+   
+    let pegapixels = document.querySelectorAll(".pixel")
     
     
 
+
+    for(let i = 0 ; i < pegapixels.length  ; i++)
     
+    // so apos ter atribuido um valor a cor anterior mente quando clicado na palleta e q ele ira resgatar o valor da cor e aplicar no quadrado
+    pegapixels[i].addEventListener("click", function(event){
+        let pegaselected = document.querySelector(".selected")
+    let color = pegaselected.style.backgroundColor
+       
+       event.target.style.backgroundColor = color
+    
+
+        
+
+
+
+
+
+    })
+
+
+
+
+   }
+   apllycolor()
+    
+
+
+
+
+
+
+
+
+    // event.target para pegar o background colo
 
 
 
