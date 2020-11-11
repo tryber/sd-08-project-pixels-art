@@ -11,10 +11,10 @@
 createPallete();
 
 // Cores da paleta
-document.querySelector('#color-pallete').children[0].style.backgroundColor = 'black';
-document.querySelector('#color-pallete').children[1].style.backgroundColor = 'red';
-document.querySelector('#color-pallete').children[2].style.backgroundColor = 'blue';
-document.querySelector('#color-pallete').children[3].style.backgroundColor = 'yellow';
+document.querySelector('#color-pallete').children[0].style.backgroundColor = '#000';
+document.querySelector('#color-pallete').children[1].style.backgroundColor = '#255';
+document.querySelector('#color-pallete').children[2].style.backgroundColor = '#64f';
+document.querySelector('#color-pallete').children[3].style.backgroundColor = '#0ff';
 
 
 
