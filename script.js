@@ -36,3 +36,15 @@ function selecionaCor () {
     });
 }
 selecionaCor ();
+
+/*- Ao carregar a página deve ser possível pintar os pixels de preto;
+- Após selecionar uma outra cor na paleta, deve ser possível pintar os pixels com essa cor;
+- Somente o pixel que foi clicado deverá ser preenchido com a cor selecionada, sem influenciar na cor dos demais pixels.*/
+
+function pintaPixel () {
+    tabela.addEventListener ('click', function (event){
+        let selecionado = document.querySelector(".selected");
+        event.target.style.backgroundColor = selecionado.style.backgroundColor;
+    })
+}
+pintaPixel ();
