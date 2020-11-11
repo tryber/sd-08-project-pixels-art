@@ -77,12 +77,14 @@ buttonGrid.addEventListener("click", function () {
 let userValue = inputField.value;
 board.innerHTML = "";
 
-if (userValue < 5) {
+if (userValue === "") {
+  alert("Board inválido!")
+} else if (userValue < 5) {
   userValue = 5;
-}
-if (userValue >50) {
+} else if (userValue >50) {
   userValue = 50;
 }
+
   for (let index = 0; index < userValue; index += 1) {
     let addLines = document.createElement("div");
 
