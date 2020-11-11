@@ -15,7 +15,6 @@ function gridCreation(size) {
 
 // Selected Color Change
 
-
 // Clear Button
 const clearButton = document.querySelector('#clear-board');
 clearButton.addEventListener('click', function () {
