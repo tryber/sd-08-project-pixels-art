@@ -1,71 +1,70 @@
-const initColorPalette = () => {
-  const cores = [
-    "#000000",
-    "#" + Math.random().toString(16).substr(2, 6),
-    "#" + Math.random().toString(16).substr(2, 6),
-    "#" + Math.random().toString(16).substr(2, 6),
-  ];
-  document.querySelectorAll(".color").forEach((element) => {
-    element.style.backgroundColor = cores[0];
-    cores.shift();
-  });
-};
-
-initColorPalette();
-
-const config = {
-  color: "#000000",
-};
-
-document.getElementById("color-palette").addEventListener("click", () => {
-  if (event.target.classList.contains("color")) {
-    document.querySelectorAll(".color").forEach((element) => {
-      element.classList.remove("selected");
-    });
-    event.target.classList.add("selected");
-    config.color = event.target.style.backgroundColor;
-  }
-});
-
-document.getElementById("pixel-board").addEventListener("click", () => {
-  if (event.target.classList.contains("pixel")) {
-    event.target.style.backgroundColor = config.color;
-  }
-});
-
-document.getElementById("clear-board").addEventListener("click", () => {
-  document.querySelectorAll(".pixel").forEach((element) => {
-    element.style.backgroundColor = "white";
-  });
-});
-
-document.getElementById("generate-board").addEventListener("click", () => {
-  const size = document.getElementById("board-size").value;
-  if (size.toString().trim() === "") {
-    alert("Board inválido!");
+function nameColor(colored){
+   let colorBox ="black"
+  if (colored.classList[3]!=null){
+     colorBox = colored.classList[3];
   } else {
-    boardBuilder(size);
+     colorBox = colored.classList[2];
   }
-});
+  return colorBox;
+}
 
-const boardBuilder = (size = 5) => {
-  if (size < 5) {
-    size = 5;
-  }
-  if (size > 50) {
-    size = 50;
-  }
-  const board = document.getElementById("pixel-board");
-
-  board.innerHTML = "";
-
-  for (let i = 0; i < size; i++) {
-    board.innerHTML += `<div class='pixel-row'>`;
-    for (let j = 0; j < size; j++) {
-      board.innerHTML += `<div class="pixel"></div>`;
+function selectColor(){
+  const colored = document.querySelectorAll('.color');
+  for (let i = 0; i < colored.length ; i++) {
+  colored[i].addEventListener('click',function(event){
+    let colorOfEvent = nameColor(event.target);
+    let colorOfSelector = nameColor(document.querySelector('.selected'));
+    //console.log(colorOfEvent);
+    if (document.querySelector('.selected') != event.target){
+      document.querySelector('.selected').className = "color box "+ colorOfSelector;
+      event.target.className = "color box selected "+colorOfEvent ;
+    } else{
+      //console.log("cor já selecionada");
     }
-    board.innerHTML += `<div>`;
+  });
   }
-};
+}
 
-boardBuilder(5);
+function clearMatrix(){
+  let matrix = document.querySelectorAll('.pixel');
+  const button = document.querySelector('button');
+  button.addEventListener('click',function(){
+    for (let i = 0; i <= matrix.length; i++) {
+      matrix[i].className ='box pixel white';
+    }
+  })
+}
+
+
+
+function changeColor(){
+  let matrix = document.querySelectorAll('.pixel');
+  for (let i = 0; i <= matrix.length; i++) {
+  matrix[i].addEventListener('click',function(){
+    let colorOfSelector = nameColor(document.querySelector('.selected'));
+    //console.log(matrix[i].classList[2]+" =?= "+colorOfSelector)
+    if(matrix[i].classList[2] != colorOfSelector){
+      //console.log(matrix[i].className)
+      matrix[i].className = "box pixel " + colorOfSelector ;
+      //console.log(matrix[i].className)
+    }
+  });
+  }
+}
+
+function sleep(milliseconds) {
+  const date = Date.now();
+  let currentDate = null;
+  do {
+    currentDate = Date.now();
+  } while (currentDate - date < milliseconds);
+}
+
+sleep(5000);
+initPage();
+function initPage(){
+  clearMatrix();
+  selectColor();
+  changeColor();
+
+}
