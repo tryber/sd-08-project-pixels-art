@@ -40,7 +40,7 @@ for (let i = 0; i < pixels.length; i+=1){  // Loop para os pixels
             }else if(selectedColor.classList.contains('yellow')){
                 clickedPixel.style.backgroundColor = 'yellow';
             }else if(selectedColor.classList.contains('blue')){
-                cclickedPixel.style.backgroundColor = 'blue';
+                clickedPixel.style.backgroundColor = 'blue';
             }
             })
 }
