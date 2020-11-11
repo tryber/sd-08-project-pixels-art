@@ -17,15 +17,11 @@ function gridCreation(size) {
 
 
 // Clear Button
-const clearButton = document.querySelector('#clear-board');
-clearButton.addEventListener('click', function() {
-  const line = document.querySelectorAll('tr');
-  const column = document.querySelectorAll('td');
-  for (let i = 0; i < line.length; i+= 1) {
-    line[i].style.backgroundColor = 'white';
-    for (let j = 0; j < column.length; j += 1) {
-      column[j].style.backgroundColor = 'white';
-    }
+let clearButton = document.querySelector('#clear-board');
+clearButton.addEventListener('click', function () {
+  let pixels = document.querySelectorAll('.pixel');
+    for(i = 0; i < pixels.length; i++){
+      pixels[i].style.backgroundColor= 'white';
   }
 })
 
