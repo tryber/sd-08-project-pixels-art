@@ -24,7 +24,7 @@ header div {
   padding: 10px 35px;
 }
 
-.table , .tr , .td {
+.table , .td , .tr {
   background-color: white;
   border: black solid 1px;
 }
@@ -32,15 +32,13 @@ header div {
 .table {
   display: table;
   height: 500px;
-  left: 410px;
-  padding: 5px;
+  margin: auto;
   position: relative;
   width: 500px;
 }
 
 .tr {
   display: table-row;
-  padding: 5px;
 }
 
 .td {

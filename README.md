@@ -150,21 +150,21 @@ O não cumprimento de um requisito, total ou parcialmente, impactará em sua ava
 
 ##### As seguintes verificações serão feitas:
 
-- [ ] O quadro de "pixels" deve ter 5 elementos de largura e 5 elementos de comprimento;
+- [x] O quadro de "pixels" deve ter 5 elementos de largura e 5 elementos de comprimento;
 
-- [ ] O quadro de "pixels" deve possuir o `id` denominado `pixel-board`, ao passo que cada "pixel" individual dentro do quadro deve possuir a `classe` denominada `pixel`;
+- [x] O quadro de "pixels" deve possuir o `id` denominado `pixel-board`, ao passo que cada "pixel" individual dentro do quadro deve possuir a `classe` denominada `pixel`;
 
-- [ ] A cor inicial dos "pixels" dentro do quadro, ao abrir a página, deve ser branca;
+- [x] A cor inicial dos "pixels" dentro do quadro, ao abrir a página, deve ser branca;
 
-- [ ] O quadro de "pixels" deve aparecer abaixo da paleta de cores.
+- [x] O quadro de "pixels" deve aparecer abaixo da paleta de cores.
 
 ### 5 - Cada elemento do quadro de pixels deve possuir 40 _pixels_ de largura e 40 _pixels_ de altura e ser delimitado por uma borda preta de 1 pixel.
 
 ##### As seguintes verificações serão feitas:
 
-- [ ] O quadro de pixels tem altura e comprimento de 5 elementos;
+- [x] O quadro de pixels tem altura e comprimento de 5 elementos;
 
-- [ ] 40 pixels deve ser o tamanho total do elemento, incluindo seu conteúdo e excluindo a borda preta, que deve ser criada à parte.
+- [x] 40 pixels deve ser o tamanho total do elemento, incluindo seu conteúdo e excluindo a borda preta, que deve ser criada à parte.
 
 ### 6 - Ao carregar a página, a cor **preta** da paleta já deve estar selecionada para pintar os pixels.
 

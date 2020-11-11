@@ -1,18 +1,18 @@
-// Table creation
-function tableCreation(size) {
-  const table = document.querySelector('#pixel-board');
+// Grid Creation
+function gridCreation(size) {
+  const table = document.querySelector('.table');
   for (let i = 0; i < size; i += 1) {
-    const tr = document.createElement('div');
-    tr.className = 'tr';
+    const line = document.createElement('div');
+    line.className = 'tr';
     for (let j = 0; j < size; j += 1) {
-      const td = document.createElement('div');
-      td.className = 'pixel tr';
-      tr.appendChild(td);
+      const column = document.createElement('div');
+      column.className = "pixel td";
+      line.appendChild(column);
     }
-    table.appendChild(tr);
+    table.appendChild(line);
   }
 }
 
-window.onlad = function () {
-  tableCreation(5);
-};
+window.onload = function () {
+  gridCreation(5);
+}
