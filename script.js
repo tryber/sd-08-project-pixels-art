@@ -45,3 +45,21 @@ function AddingRemoving(event) {
         AllColors[index] = event.target.classList.add('selected');
     }
 }
+
+// REQUISITO 8
+
+function SelecPixel() {
+
+    let cell = document.getElementsByClassName('pixel');
+    for (let index = 0; index < cell.length; index += 1) {
+        cell[index].addEventListener('click', function(event) {
+            let colorSelected = window.getComputedStyle(document.querySelector('.selected')).backgroundColor;
+            event.target.style.backgroundColor = colorSelected;
+
+
+        })
+
+    }
+}
+
+SelecPixel();
