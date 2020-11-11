@@ -26,23 +26,50 @@ function initialColors () {
   let colors = document.querySelectorAll('.color');
   // Requisito 03 - A cor preta deve ser a primeira na paleta de cores.
   colors[0].style.backgroundColor = 'black';
-  colors[1].style.backgroundColor = randomColor(2);
-  colors[2].style.backgroundColor = randomColor(8);
-  colors[3].style.backgroundColor = randomColor(7);
+  colors[1].style.backgroundColor = randomColor("2");
+  colors[2].style.backgroundColor = randomColor("8");
+  colors[3].style.backgroundColor = randomColor("7");
 }
 initialColors();
 
-
 // Requisito 04 - A página deve possuir um quadro de pixels, com 25 pixels.
-function pixelBoard () {
+function pixelBoard (pixels) {
   let divBoard = document.querySelector('#pixel-board');
-  for (let index = 1; index < 26; index += 1) {
+  for (let index = 1; index < pixels; index += 1) {
     let divPixel = document.createElement('div');
     divPixel.className = 'pixel';
     divBoard.appendChild(divPixel);
   }
 }
-pixelBoard();
+pixelBoard(26);
+
+// Requisito 10 - Faça o quadro de pixels ter seu tamanho definido pelo usuário.
+function dinamicPixelBoard() {
+  let btnGenerateBoard = document.querySelector('#generate-board');
+  let board = document.querySelector('#pixel-board');
+  btnGenerateBoard.addEventListener('click', function() {
+    let text = document.querySelector('#board-size');
+    if(text.value > text.getAttribute('min')) {
+      let boardFilhos = document.getElementById('pixel-board').children.length;
+      let sizeBoard = text.value;
+      if(boardFilhos < sizeBoard * sizeBoard) {
+        let newboard = sizeBoard * sizeBoard - boardFilhos + 1;
+        board.style.width = sizeBoard * 42 + 'px';
+        board.style.height = sizeBoard * 42 + 'px';
+        pixelBoard(newboard);
+      } else {
+        let boardPai = document.getElementById('pixel-board');
+        let diferenca = boardFilhos - (sizeBoard * sizeBoard);
+        for(let i = 0; i < diferenca; i += 1) {
+          boardPai.removeChild(boardPai.lastElementChild);
+        }
+        board.style.width = sizeBoard * 42 + 'px';
+        board.style.height = sizeBoard * 42 + 'px';
+      }
+    }
+  });
+}
+dinamicPixelBoard();
 
 // Requisito 07 - Ao clicar em uma das cores da paleta, a cor selecionada é que vai ser usada para preencher os pixels no quadro.
 function selectColor () {
@@ -57,7 +84,6 @@ function selectColor () {
         filhos[index].className = 'color';
       }
     }
-
   });
 }
 selectColor();
@@ -83,8 +109,3 @@ function clear() {
   });
 }
 clear();
-
-// Requisito 10 - Faça o quadro de pixels ter seu tamanho definido pelo usuário.
-function dinamicPixelBoard() {
-  
-}
