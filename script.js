@@ -44,3 +44,14 @@ for (let i = 0; i < pixels.length; i+=1){  // Loop para os pixels
             }
             })
 }
+
+
+document.getElementById('clear-board').addEventListener('click', function(event){
+    let pixelsToBeCleared = document.getElementsByClassName('pixel');
+    for(let index = 0; index < pixelsToBeCleared.length; index+=1){
+        let pixelToBeCleared = pixelsToBeCleared[index];
+        if(pixelToBeCleared.style.backgroundColor !== 'white'){
+            pixelToBeCleared.style.backgroundColor = 'white';
+        }
+    }
+})
