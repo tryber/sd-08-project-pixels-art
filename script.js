@@ -244,20 +244,20 @@ paintpallete()
 */   
 
 
-    function criabotao(){
+function criabotao(){
 
-let pegaposicaobotao = document.querySelector("#divbotao")
-let pegaposicaopixels = document.querySelectorAll(".pixel")
-let criabotao = document.createElement("button")
-criabotao.tagName= "clear-board"
-criabotao.innerHTML = "Limpar"
-criabotao.addEventListener("click", function(){
+    let pegaposicaobotao = document.querySelector("#divbotao")
+    let pegaposicaopixels = document.querySelectorAll(".pixel")
+    let criabotao = document.createElement("button")
+    criabotao.tagName= "clear-board"
+    criabotao.innerHTML = "Limpar"
+    criabotao.addEventListener("click", function(){
 
 for(let i = 0 ; i < pegaposicaopixels.length ; i ++)
 
 
 
-pegaposicaopixels[i].style.backgroundColor = "white"
+    pegaposicaopixels[i].style.backgroundColor ="white"
 
 
 
@@ -269,7 +269,7 @@ pegaposicaobotao.appendChild(criabotao)
 
 
     }
-    criabotao()
+criabotao()
 
     
 
