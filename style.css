@@ -1,0 +1,44 @@
+#cor1 {
+    background-color: black;
+    border: 1px solid black;
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+}
+
+#cor2 {
+    background-color: green;
+    border: 1px solid black;
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+}
+
+#cor3 {
+    background-color: red;
+    border: 1px solid black;
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+}
+
+#cor4 {
+    background-color: blue;
+    border: 1px solid black;
+    height: 40px;
+    width: 40px;
+    display: inline-block;
+}
+
+.pixel {
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    display: inline-block;
+    border: black 1px solid;
+}
+
+#clear-board {
+    margin: 8px auto;
+    font-size: 15px;
+}
