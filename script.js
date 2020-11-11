@@ -1,10 +1,10 @@
 window.onload = function () {
   document.getElementById('color-palette').firstElementChild.className =
     'color selected';
-  let pixelNumbers = document.getElementsByClassName('pixel').length;
-    for (let i = 0; i < pixelNumbers; i += 1) {
-      document.querySelectorAll('.pixel')[i].style.backgroundColor = 'white';
-    }
+  // let pixelNumbers = document.getElementsByClassName('pixel').length;
+  //   for (let i = 0; i < pixelNumbers; i += 1) {
+  //     document.querySelectorAll('.pixel')[i].style.backgroundColor = 'white';
+  //   }
 };
 
 // function inputValueCheck() {
@@ -27,14 +27,14 @@ window.onload = function () {
 // inputValueCheck();
 
 function quadroPixels() {
-  const num = 5;
+  const num = 4;
   const squareContainer = document.getElementById('pixel-board');
   for (let i = 0; i < num; i += 1) {
     let linhaPixels = document.createElement('div');
     linhaPixels.className = 'pixel';
     squareContainer.appendChild(linhaPixels);
 
-    for (let i = 0; i < num; i += 1) {
+    for (let j = 0; j < num; j += 1) {
       let colunaPixels = document.createElement('div');
       colunaPixels.className = 'pixel';
       linhaPixels.appendChild(colunaPixels);
