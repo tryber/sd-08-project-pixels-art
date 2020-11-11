@@ -3,6 +3,7 @@ window.onload = function () {
     'color selected';
 };
 
+// Função cores aleatórias (suporte para paleta de cores):
 function randomColor() {
   let colorRGB = `rgb(${Math.floor(Math.random() * 255)}, ${Math.floor(
     Math.random() * 255,
@@ -11,6 +12,7 @@ function randomColor() {
   return colorRGB;
 }
 
+// Função coloração das color-pallete:
 function paletaCores() {
   let coresFundo = ['black', randomColor(), randomColor(), randomColor()];
   const palette = document.getElementById('color-palette');
@@ -24,7 +26,8 @@ function paletaCores() {
 }
 paletaCores();
 
-function quadroPixels(num) {
+// Função criação do quadro de pixels:
+function quadroPixels(num) { // Mudei a declaração de variável para virar parâmetro;
   const squareContainer = document.getElementById('pixel-board');
   for (let i = 0; i < num; i += 1) {
     let linhaPixels = document.createElement('div');
@@ -40,6 +43,7 @@ function quadroPixels(num) {
 }
 quadroPixels(5);
 
+// Função selecionar cor e mudar a classe da li da color-palette:
 function selectedColor() {
   let quadros = document.getElementById('color-palette').children;
   let paleta = document.getElementById('color-palette');
@@ -56,6 +60,7 @@ function selectedColor() {
 }
 selectedColor();
 
+// Função para pintar os pixels (por algum motivo também pinta o #pixel-board):
 function pintaCor() {
   let quadroPixels = document.getElementById('pixel-board');
   quadroPixels.addEventListener('click', function () {
@@ -66,6 +71,7 @@ function pintaCor() {
 }
 pintaCor();
 
+// Função criação dinâmica do botão #clear-board:
 function botaoLimpar() {
   let buttonContainter = document.getElementById('button-container');
   let buttonClear = document.createElement('button');
@@ -75,6 +81,7 @@ function botaoLimpar() {
 }
 botaoLimpar();
 
+// Função tornar branco o fundo de todos os pixels (com clique no botão Limpar):
 function limpeza() {
   const btnClear = document.getElementById('clear-board');
   btnClear.addEventListener('click', function () {
@@ -86,6 +93,7 @@ function limpeza() {
 }
 limpeza();
 
+// Função para checar e criar novo board (ainda falta entender como apagar o board antigo):
 function inputedValueCheck() {
   let btnGen = document.getElementById('generate-board');
   btnGen.addEventListener('click', function () {
@@ -102,6 +110,8 @@ function inputedValueCheck() {
     }
     if (inputedValue >= 5 || inputedValue <= 50) {
       correctValue = inputedValue;
+      const quadro = document.getElementById('pixel-board');
+      quadro.innerHTML = ''; // Ideia vista no projeto do Massaki, que remete ao projeto da Bianca Caetano (genial!)
       quadroPixels(correctValue);
     }
   });
