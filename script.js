@@ -50,3 +50,4 @@ function clearPixel() {
         }
     });
 }
+clearPixel();
