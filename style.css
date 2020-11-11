@@ -11,7 +11,8 @@
   text-align: center;
   border: 1px solid black;
   margin: 1em;
-  padding: 5em;
+  width: 40px;
+  height: 40px;
 }
 
 #board-size-container {
@@ -29,7 +30,7 @@
   font-size: 1em;
   width: 100px;
   margin: 5px;
-  border: 3px dotted white;
+  border: 1px dotted white;
 }
 
 #generate-board {
@@ -56,17 +57,14 @@
 
 #pixel-board {
   display: flex;
-  width: 5em;
-  height: 5em;
-  position: absolute;
+  position: relative;
+  margin-left: 40%;
 }
 
 .pixel {
   display: block;
   width: 40px;
   height: 40px;
-  max-width: 40px;
-  max-height: 40px;
   border: 1px solid black;
   background-color: white;
   position: relative;
