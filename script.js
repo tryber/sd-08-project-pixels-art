@@ -35,4 +35,6 @@ function pintaPixel () {
 
 }
 
+pintaPixel();
+
 
