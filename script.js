@@ -23,7 +23,7 @@ function criaPixels() {
         let divPixel = document.createElement("div");
 
         divBoard.appendChild(divPixel);
-        divPixel.style.backgroundColor = "white";
+        //divBoard.style.backgroundColor = "white";
          
         
         for (let index = 0; index < 5; index += 1) {
