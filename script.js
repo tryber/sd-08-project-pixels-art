@@ -58,6 +58,7 @@ board.addEventListener ("click", function (){
 event.target.style.backgroundColor = selectedColor;
 })
 
+// Requisito 9
 let buttonClear = document.getElementById("clear-board");
 let pixels = document.querySelectorAll(".pixel");
 
@@ -66,6 +67,41 @@ buttonClear.addEventListener("click", function () {
     pixels[index].style.backgroundColor = "white";
   }
 })
+
+//Requisito 10
+
+let buttonGrid = document.getElementById("generate-board");
+let inputField = document.getElementById("board-size");
+
+buttonGrid.addEventListener("click", function () {
+let userValue = inputField.value;
+board.innerHTML = "";
+
+if (userValue < 5) {
+  userValue = 5;
+}
+if (userValue >50) {
+  userValue = 50;
+}
+  for (let index = 0; index < userValue; index += 1) {
+    let addLines = document.createElement("div");
+
+
+    addLines.className = "lines";
+    board.appendChild(addLines);
+
+    const boardElements = document.getElementsByClassName("lines");
+
+    for (let cont = 0; cont < userValue; cont += 1) {
+      const spacesContainer = boardElements[index];
+      let boardSpace = document.createElement("div");
+      boardSpace.className = "pixel";
+
+      spacesContainer.appendChild(boardSpace);
+      }
+
+    }
+  });
 
 
 
