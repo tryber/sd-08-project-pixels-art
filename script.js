@@ -23,4 +23,4 @@ for (let linha = 0; linha < 5; linha += 1){
     }
 }
 
-
+paleta.children[0].className += " selected";
