@@ -11,3 +11,18 @@ function quadro() {
   }
 }
 quadro();
+
+// let preto = document.getElementById('preto');
+// preto.addEventListener('click', recebeClick);
+// function recebeClick(evento) {
+//   alert(evento.target.style.backgroundColor);
+// }
+
+let limpa = document.getElementById('clear-board');
+limpa.addEventListener('click', limpaTudo);
+function limpaTudo() {
+  let pixel = document.querySelectorAll('.pixel');
+  for (let i = 0; i < pixel.length; i += 1) {
+    pixel[i].style.backgroundColor = 'white';
+  }
+}
