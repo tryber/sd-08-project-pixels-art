@@ -1,14 +1,13 @@
 #title {
-    text-align: center;
+   margin-left: 45px;
 }
 
 #color-palette {
-    margin-left: 415px;
     height: 40px;
 }
 
 .color {
-    width: 120px;
+    width: 75px;
     height: 40px;
     float: left;
     border: solid black 1px;
@@ -35,12 +34,21 @@
 }
 
 #pixel-board {
-    height: 800px;
-    width: 800px;
+    margin-left: 45px;
+    margin-top: 30px;
+    width: 220px;
+    height: 200px;
 }
 
 .pixel {
+    display: inline-block;
     width: 38px;
     height: 38px;
     border: solid black 1px;
+    margin: 0px;
+}
+
+.linePixel {
+    height: 40px;
+    width: 218px;
 }
