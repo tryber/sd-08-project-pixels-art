@@ -7,37 +7,13 @@
 {
     width: 30px;
     height: 30px;
-    margin: 10px 5px 10px 0px;
+    margin: 10px 5px 10px 12px;
     border: solid black 1px;
     display: inline-block;
     position: relative;
-
 }
 
-#black
-{
-    background-color: black;
-}
 
-#red
-{
-    background-color: red;
-}
-
-#blue
-{
-    background-color: blue;
-}
-
-#green
-{
-    background-color: green;
-}
-
-#pixel-board
-{
-    width: 250px;
-}
 
 .pixel
 {
@@ -46,6 +22,16 @@
     width: 40px;
     height: 40px;
     border: 1px solid black;
-
 }
 
+#board-size
+{
+
+    width: 40px;
+}
+
+#generate-board
+{
+    margin-left: 53px;
+    margin-bottom: 5px;
+}
