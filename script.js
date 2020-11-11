@@ -5,7 +5,7 @@ function eventsColor(event) {
 
     
 }
-let verde = document.getElementById('verde');
+let verde = document.getElementById('green');
 verde.addEventListener('click', eventsColor);
 
 let azul = document.getElementById('blue');
