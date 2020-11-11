@@ -28,7 +28,7 @@ function fClear () {
     square[count].style.backgroundColor = squareColor;
  }
 }
-//Evento selecionar cor:
+//Selecionar cor Paleta:
 let squareBlack = document.getElementsByClassName('color')[0];
 let squareRed = document.getElementsByClassName('color')[1];
 let squareBlue = document.getElementsByClassName('color')[2];
@@ -71,7 +71,35 @@ function fGreen() {
   colorSelected = "green";
 }
 
-//console.log(colorSelected);
+//-Selecionar item no quadro pixel:
+//add itens ao array:
+let arraySquare = document.getElementsByClassName('pixel');
+//console.log(arraySquare);
+
+//add função e id a todos itens do array:
+for (count = 0; count < arraySquare.length; count += 1) {
+  let atualSquare = arraySquare[count];
+  atualSquare.id = count;
+  atualSquare.addEventListener('click', fAtualSquare);
+}
+
+  function fAtualSquare() {
+    let idSquare = this.id;
+    let square = document.getElementById(idSquare);
+    console.log(idSquare);
+    if (colorSelected === 'black') {
+      square.style.backgroundColor = 'black';
+    } else if (colorSelected === 'red') {
+      square.style.backgroundColor = 'red';
+    } else if (colorSelected === 'blue') {
+      square.style.backgroundColor = 'bue';
+    } else if (colorSelected === 'green') {
+    square.style.backgroundColor = 'green';
+    }
+  }
+
+
+
 
 
 
