@@ -24,8 +24,7 @@ function paletaCores() {
 }
 paletaCores();
 
-function quadroPixels() {
-  const num = 5;
+function quadroPixels(num) {
   const squareContainer = document.getElementById('pixel-board');
   for (let i = 0; i < num; i += 1) {
     let linhaPixels = document.createElement('div');
@@ -39,7 +38,7 @@ function quadroPixels() {
     }
   }
 }
-quadroPixels();
+quadroPixels(5);
 
 function selectedColor() {
   let quadros = document.getElementById('color-palette').children;
@@ -87,22 +86,24 @@ function limpeza() {
 }
 limpeza();
 
-// function inputValueCheck() {
-//   let btnGen = document.getElementById('generate-board');
-//   btnGen.addEventListener('click', function () {
-//     let inputValue = document.getElementById('board-size').value;
-//     let correctValue;
-//     if (inputValue === '') {
-//       alert('Board inválido!');
-//     } else if (inputValue > 50) {
-//       inputValue === 50;
-//     } else if (inputValue < 5) {
-//       inputValue === 5;
-//     } else {
-//       correctValue = inputValue;
-//     }
-//     return correctValue;
-//   });
-//   return correctValue;
-// }
-//inputValueCheck();
+function inputValueCheck() {
+  let btnGen = document.getElementById('generate-board');
+  btnGen.addEventListener('click', function () {
+    let inputValue = document.getElementById('board-size').value;
+    let correctValue;
+    if (inputValue === '') {
+      alert('Board inválido!');
+    }
+    if (inputValue > 50) {
+      inputValue = 50;
+    }
+    if (inputValue < 5) {
+      inputValue = 5;
+    }
+    if (inputValue >= 5 || inputValue <= 50) {
+      correctValue = inputValue;
+      quadroPixels(correctValue);
+    }
+  });
+}
+inputValueCheck();
