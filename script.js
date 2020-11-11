@@ -48,6 +48,7 @@ function dinamicPixelBoard() {
   let btnGenerateBoard = document.querySelector('#generate-board');
   let board = document.querySelector('#pixel-board');
   btnGenerateBoard.addEventListener('click', function() {
+    limitBoard();
     let text = document.querySelector('#board-size');
     if(text.value === "") {
       alert('Board inválido!');
@@ -72,6 +73,17 @@ function dinamicPixelBoard() {
   });
 }
 dinamicPixelBoard();
+
+// Requisito 11 - Limite o tamanho do mínimo e máximo do board.
+
+function limitBoard() {
+  let input = document.querySelector('#board-size');
+  if (input.value < 5) {
+    input.value = 5;
+  } else if(input.value > 50) {
+    input.value = 50;
+  }
+}
 
 // Requisito 07 - Ao clicar em uma das cores da paleta, a cor selecionada é que vai ser usada para preencher os pixels no quadro.
 function selectColor () {
