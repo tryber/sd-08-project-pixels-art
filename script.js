@@ -18,18 +18,21 @@ palette.addEventListener('click', selector);
 
 
 
-function printPixel () {
-    let corSelecionada = document.querySelector('selected');
-    let pixelPrint = document.getElementsByClassName('pixel');
+function pintaPixel () {
+    const pixels = document.querySelectorAll('.pixel');
 
-    for (let i = 0; i < pixelPrint.length; i++) {
+    
+    for (let i = 0; i < pixels.length; i++) {
 
-        pixelPrint[i].style.backgroundColor = corSelecionada.style.backgroundColor;
+        pixels[i].addEventListener('click', function(event) {
+            let color = document.querySelector('.selected').getElementsByClassName.backgroundColor;
+            event.target.style.backgroundColor = color;
+        });
         
     }
 
     
 
 }
-let quadroCores = document.getElementById('pixel-board')
+
 
