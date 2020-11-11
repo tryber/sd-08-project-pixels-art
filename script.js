@@ -80,6 +80,13 @@ function selectColor(color) {
   color.classList.add('selected');
 }
 
+function clearBoard() {
+  const pixels = document.querySelectorAll('.pixel');
+  pixels.forEach((pixel) => {
+    pixel.style.backgroundColor = 'white';
+  });
+}
+
 function paintPixel(pixel) {
   const selectedColor = document.querySelector('.selected');
   pixel.style.backgroundColor = selectedColor.style.backgroundColor;
@@ -95,6 +102,7 @@ function capturaEvento(elementoHTML, tipoDeEvento, acaoDoEvento) {
 capturaEvento('generate-board', 'click', validityInput);
 capturaEvento('color-palette', 'click', selectColor);
 capturaEvento('pixel-board', 'click', paintPixel);
+capturaEvento('clear-board', 'click', clearBoard);
 
 window.onload = () => {
   generateColors();
