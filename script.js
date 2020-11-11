@@ -2,7 +2,7 @@ const color = document.querySelectorAll('.color');
 const palette = document.querySelector('#color-palette');
 
 function randomColor() {
-  return 'rgb(' + Math.trunc(Math.random() * 255) + ',' + Math.trunc(Math.random() * 255) + ',' + Math.trunc(Math.random() * 255) + ')'
+  return `rgb(${Math.trunc(Math.random() * 255)} , ${Math.trunc(Math.random() * 255)} , ${Math.trunc(Math.random() * 255)})`;
 }
 
 for (let i = 1; i < color.length; i += 1) {
@@ -16,9 +16,9 @@ function changeSelector(event) {
   event.target.classList.add('selected');
 }
 
-palette.addEventListener('click', changeSelector)
+palette.addEventListener('click', changeSelector);
 
-const tab = document.querySelector('.table')
+const tab = document.querySelector('.table');
 
 function changeColor(event) {
   const selected = window.getComputedStyle(document.querySelector('.selected')).backgroundColor;
@@ -42,7 +42,7 @@ const input = document.querySelector('.input');
 
 function inputNumber() {
   const number = input.value;
-  if(number === '') {
+  if (number === '') {
     alert('Board inválido!');
     return false;
   } else if (number < 5) {
@@ -66,19 +66,23 @@ function refreshBoard() {
   }
 }
 
+function createBoard() {
+  for (let i = 0; i < input.value; i += 1) {
+    const td = document.createElement('div');
+    table.appendChild(td);
+    table.children[i].classList.add('line');
+    for (let j = 0; j < input.value; j += 1) {
+      const tr = document.createElement('div');
+      table.children[i].appendChild(tr);
+      table.children[i].children[j].classList.add('pixel');
+    }
+  }
+}
+
 function boardPixel() {
   refreshBoard();
   if (inputNumber() === true) {
-    for (let i = 0; i < input.value; i += 1) {
-      const td = document.createElement('div');
-      table.appendChild(td);
-		  table.children[i].classList.add('line');
-		  for (let j = 0; j < input.value; j += 1) {
-			  const tr = document.createElement('div');
-			  table.children[i].appendChild(tr);
-			  table.children[i].children[j].classList.add('pixel');
-		  }
-	  }
+    createBoard();
   }
 }
 
