@@ -79,7 +79,7 @@ botao2NewBoard.addEventListener('click', function () {
     pixelBoard(verfNum);
   } else if (verfNum >= 5 && verfNum <= 50 && verfNum.min === '1' && verfNum.type === 'number') {
     pixelBoard(verfNum);
-  } else if (Number.isInteger(verfNum) == false) {
+  } else if (Number.isInteger(verfNum) == false && verfNum > 0) {
     alert('Aceita apenas números');
   } else {
     alert('"Board inválido!"');
