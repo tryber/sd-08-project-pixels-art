@@ -49,7 +49,9 @@ function dinamicPixelBoard() {
   let board = document.querySelector('#pixel-board');
   btnGenerateBoard.addEventListener('click', function() {
     let text = document.querySelector('#board-size');
-    if(text.value > text.getAttribute('min')) {
+    if(text.value === "") {
+      alert('Board inválido!');
+    } else if(text.value > text.getAttribute('min')) {
       let boardFilhos = document.getElementById('pixel-board').children.length;
       let sizeBoard = text.value;
       if(boardFilhos < sizeBoard * sizeBoard) {
