@@ -66,21 +66,21 @@ function pixelBoard(valor) {
 };
 pixelBoard(valor);
 
-const botao2NewBoard = document.querySelector('#generate-board');
-botao2NewBoard.addEventListener('click', function () {
-  let verfNum = entrada.value;
-  if (verfNum < 5 && verfNum > 0) {
-    verfNum = 5;
-    document.getElementById('board-size').value = verfNum;
+let input = document.querySelector('#board-size');
+input.min = '1';
+input.type = 'number';
+document.querySelector('#generate-board').addEventListener('click', function () {
+  let verfNum = input.value;
+  if (verfNum >= 5 && verfNum <= 50) {
     pixelBoard(verfNum);
   } else if (verfNum > 50) {
     verfNum = 50;
     document.getElementById('board-size').value = verfNum;
     pixelBoard(verfNum);
-  } else if (verfNum >= 5 && verfNum <= 50 && verfNum.min === '1' && verfNum.type === 'number') {
+  } else if (verfNum < 5 && verfNum > 0) {
+    verfNum = 5;
+    document.getElementById('board-size').value = verfNum;
     pixelBoard(verfNum);
-  } else if (Number.isInteger(verfNum) == false && verfNum > 0) {
-    alert('Aceita apenas números');
   } else {
     alert('"Board inválido!"');
   };
