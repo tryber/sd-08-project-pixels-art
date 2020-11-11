@@ -17,7 +17,7 @@
 
 #board-size-container {
   display: inline-block;
-  width: 600px;
+  width: fit-content;
   font-size: large;
   background-color: antiquewhite;
   font-size: 2em;

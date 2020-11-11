@@ -86,24 +86,24 @@ function limpeza() {
 }
 limpeza();
 
-function inputValueCheck() {
+function inputedValueCheck() {
   let btnGen = document.getElementById('generate-board');
   btnGen.addEventListener('click', function () {
-    let inputValue = document.getElementById('board-size').value;
+    let inputedValue = document.getElementById('board-size').value;
     let correctValue;
-    if (inputValue === '') {
+    if (inputedValue === '') {
       alert('Board inválido!');
     }
-    if (inputValue > 50) {
-      inputValue = 50;
+    if (inputedValue > 50) {
+      inputedValue = 50;
     }
-    if (inputValue < 5) {
-      inputValue = 5;
+    if (inputedValue < 5) {
+      inputedValue = 5;
     }
-    if (inputValue >= 5 || inputValue <= 50) {
-      correctValue = inputValue;
+    if (inputedValue >= 5 || inputedValue <= 50) {
+      correctValue = inputedValue;
       quadroPixels(correctValue);
     }
   });
 }
-inputValueCheck();
+inputedValueCheck();
