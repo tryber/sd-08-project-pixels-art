@@ -62,7 +62,7 @@
 .pixel {
   background-color: white;
   border: 1px solid black;
-  display: grid;
+  display: table;
   height: 40px;
   position: relative;
   width: 40px;

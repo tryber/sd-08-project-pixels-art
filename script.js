@@ -29,12 +29,12 @@ paletaCores();
 // Função criação do quadro de pixels:
 function quadroPixels(num) { // Mudei a declaração de variável para virar parâmetro;
   const squareContainer = document.getElementById('pixel-board');
-  for (let i = 0; i < num; i += 1) {
+  for (let i = 1; i <= num; i += 1) {
     const linhaPixels = document.createElement('div');
     linhaPixels.className = 'pixel-line';
     squareContainer.appendChild(linhaPixels);
 
-    for (let j = 0; j < num; j += 1) {
+    for (let j = 1; j <= num; j += 1) {
       const colunaPixels = document.createElement('div');
       colunaPixels.className = 'pixel';
       linhaPixels.appendChild(colunaPixels);
