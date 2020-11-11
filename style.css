@@ -2,12 +2,6 @@
   text-align: center;
 }
 
-ul {
-  border-color: black;
-  width: auto;
-  background-color: red;
-}
-
 #color-palette {
   text-align: center;
 }
@@ -62,10 +56,9 @@ ul {
 
 #pixel-board {
   display: flex;
-  margin-left: 40%;
   width: 5em;
   height: 5em;
-  position: relative;
+  position: absolute;
 }
 
 .pixel {
@@ -76,5 +69,5 @@ ul {
   max-height: 40px;
   border: 1px solid black;
   background-color: white;
-  float: left;
+  position: relative;
 }
