@@ -42,7 +42,7 @@ clearButton.addEventListener('click', limparPixels);
 
 function limparPixels() {
     const pixelsBox = document.querySelectorAll('.pixel')
-    pixelsBox.forEach((element) => {
+    pixelsBox.forEach((element) {
         element.style.backgroundColor = "white";
       });
     }
