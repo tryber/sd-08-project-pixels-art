@@ -53,7 +53,7 @@
 }
 
 .quadro-pixels {
-  display: flex;
+  line-height: 0;
   height: 240px;
   margin-left: 40%;
   width: 240px;
@@ -62,7 +62,7 @@
 .pixel {
   background-color: white;
   border: 1px solid black;
-  display: table;
+  display: inline-block;
   height: 40px;
   position: relative;
   width: 40px;
