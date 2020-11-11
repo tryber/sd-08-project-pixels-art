@@ -1,18 +1,18 @@
 {
-  "extends": "airbnb",
-  "rules": {
-    "no-alert": "off",
-    "prefer-arrow-callback": "off",
-    "func-names": "off",
-    "arrow-parens": [
+  'extends': 'airbnb',
+  'rules': {
+    'no-alert': 'off',
+    'prefer-arrow-callback': 'off',
+    'func-names': 'off',
+    'arrow-parens': [
       2,
-      "always"
+      'always'
     ],
-    "no-param-reassign": "off"
+    'no-param-reassign': 'off'
   },
-  "env": {
-    "browser": true,
-    "node": true,
-    "jest": true
+  'env': {
+    'browser': true,
+    'node': true,
+    'jest': true
   }
 }

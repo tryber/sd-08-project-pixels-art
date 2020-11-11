@@ -1,0 +1,43 @@
+body {
+    box-sizing: border-box;
+    margin: 50px;
+}
+
+#pixel-board {
+    border-collapse: collapse;
+}
+
+.pixel {
+    background-color: white;
+}
+
+td {
+    width: 40px;
+    height: 40px;
+    border: black solid 1px;
+    padding: 0px;
+}
+
+td .pixel {
+    margin: 0px;
+} 
+
+button {
+    margin: 10px;
+}
+
+#black {
+    background-color: black;
+}
+
+#red {
+    background-color: red;
+}
+
+#orange {
+    background-color: orange;
+}
+
+#yellow {
+    background-color: yellow;
+}

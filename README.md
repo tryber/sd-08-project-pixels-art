@@ -47,10 +47,10 @@ Aqui você vai encontrar os detalhes de como estruturar o desenvolvimento do seu
 
 6. Crie um novo `Pull Request` _(PR)_
   * Vá até a página de _Pull Requests_ do [repositório no GitHub](https://github.com/tryber/sd-08-project-pixels-art/pulls)
-  * Clique no botão verde _"New pull request"_
-  * Clique na caixa de seleção _"Compare"_ e escolha a sua branch **com atenção**
-  * Clique no botão verde _"Create pull request"_
-  * Adicione uma descrição para o _Pull Request_, um título claro que o identifique, e clique no botão verde _"Create pull request"_
+  * Clique no botão verde _'New pull request'_
+  * Clique na caixa de seleção _'Compare'_ e escolha a sua branch **com atenção**
+  * Clique no botão verde _'Create pull request'_
+  * Adicione uma descrição para o _Pull Request_, um título claro que o identifique, e clique no botão verde _'Create pull request'_
   * **Não se preocupe em preencher mais nada por enquanto!**
   * Volte até a [página de _Pull Requests_ do repositório](https://github.com/tryber/sd-08-project-pixels-art/pulls) e confira que o seu _Pull Request_ está criado
 
@@ -95,11 +95,11 @@ O não cumprimento de um requisito, total ou parcialmente, impactará em sua ava
 
 * Para verificar se a sua avaliação foi computada com sucesso, você pode verificar os **detalhes da execução do avaliador**.
 
-  * Na página do seu _Pull Request_, acima do "botão de merge", procure por _**"Evaluator job"**_ e clique no link _**"Details"**_;
+  * Na página do seu _Pull Request_, acima do 'botão de merge', procure por _**'Evaluator job'**_ e clique no link _**'Details'**_;
 
-  * Na página que se abrirá, procure pela linha _**"Cypress evaluator step"**_ e clique nela;
+  * Na página que se abrirá, procure pela linha _**'Cypress evaluator step'**_ e clique nela;
 
-  * Analise os resultados a partir da mensagem _**"(Run Starting)"**_;
+  * Analise os resultados a partir da mensagem _**'(Run Starting)'**_;
 
   * Caso tenha dúvidas, consulte [este vídeo](https://vimeo.com/420861252) ou procure a monitoria.
 
@@ -118,13 +118,13 @@ O não cumprimento de um requisito, total ou parcialmente, impactará em sua ava
 
 **Ou seja, dada uma paleta de cores e um quadro composto por pixels, você vai permitir que quem usa consiga pintar o que quiser no quadro!** 👩‍🎨
 
-### 1 - A página deve possuir o título "Paleta de Cores".
+### 1 - A página deve possuir o título 'Paleta de Cores'.
 
 ##### As seguintes verificações serão feitas:
 
 - O título deverá ficar dentro de uma tag `h1` com o `id` denominado `title`;
 
-- O texto do título deve ser **exatamente** "Paleta de Cores".
+- O texto do título deve ser **exatamente** 'Paleta de Cores'.
 
 ### 2 - A página deve possuir uma paleta de quatro cores distintas.
 
@@ -136,7 +136,7 @@ O não cumprimento de um requisito, total ou parcialmente, impactará em sua ava
 
 - Cada elemento da paleta de cores deverá ter uma borda preta, sólida e com 1 pixel de largura;
 
-- A paleta de cores deverá listar todas as cores disponíveis para utilização lado a lado, e deverá ser posicionada abaixo do título "Paleta de Cores";
+- A paleta de cores deverá listar todas as cores disponíveis para utilização lado a lado, e deverá ser posicionada abaixo do título 'Paleta de Cores';
 
 - A paleta de cores não deve conter cores repetidas.
 
@@ -150,13 +150,13 @@ O não cumprimento de um requisito, total ou parcialmente, impactará em sua ava
 
 ##### As seguintes verificações serão feitas:
 
-- O quadro de "pixels" deve ter 5 elementos de largura e 5 elementos de comprimento;
+- O quadro de 'pixels' deve ter 5 elementos de largura e 5 elementos de comprimento;
 
-- O quadro de "pixels" deve possuir o `id` denominado `pixel-board`, ao passo que cada "pixel" individual dentro do quadro deve possuir a `classe` denominada `pixel`;
+- O quadro de 'pixels' deve possuir o `id` denominado `pixel-board`, ao passo que cada 'pixel' individual dentro do quadro deve possuir a `classe` denominada `pixel`;
 
-- A cor inicial dos "pixels" dentro do quadro, ao abrir a página, deve ser branca;
+- A cor inicial dos 'pixels' dentro do quadro, ao abrir a página, deve ser branca;
 
--  O quadro de "pixels" deve aparecer abaixo da paleta de cores.
+-  O quadro de 'pixels' deve aparecer abaixo da paleta de cores.
 
 ### 5 - Cada elemento do quadro de pixels deve possuir 40 _pixels_ de largura e 40 _pixels_ de altura e ser delimitado por uma borda preta de 1 pixel.
 
@@ -202,7 +202,7 @@ O não cumprimento de um requisito, total ou parcialmente, impactará em sua ava
 
 - O botão deve estar posicionado entre a paleta de cores e o quadro de pixels;
 
-- O texto do botão deve ser **"Limpar"**.
+- O texto do botão deve ser **'Limpar'**.
 
 ## Requisitos Bônus:
 
@@ -218,13 +218,13 @@ O não cumprimento de um requisito, total ou parcialmente, impactará em sua ava
 
 - O input só deve aceitar número maiores que zero. Essa restrição **deve** ser feita usando os atributos do elemento `input`;
 
-- O botão deve conter o texto "VQV";
+- O botão deve conter o texto 'VQV';
 
 - O input deve estar posicionado entre a paleta de cores e o quadro de pixels;
 
 - O botão deve estar posicionado ao lado do input;
 
-- Se nenhum valor for colocado no input ao clicar no botão, mostre um `alert` com o texto: "Board inválido!";
+- Se nenhum valor for colocado no input ao clicar no botão, mostre um `alert` com o texto: 'Board inválido!';
 
 - O novo quadro deve ter todos os pixels preenchidos com a cor branca.
 
@@ -284,15 +284,15 @@ O não cumprimento de um requisito, total ou parcialmente, impactará em sua ava
 
 ### DEPOIS DE TERMINAR O DESENVOLVIMENTO
 
-Para sinalizar que o seu projeto está pronto para o _"Code Review"_ dos seus colegas, faça o seguinte:
+Para sinalizar que o seu projeto está pronto para o _'Code Review'_ dos seus colegas, faça o seguinte:
 
-* Vá até a página **DO SEU** _Pull Request_, adicione a label de _"code-review"_ e marque seus colegas:
+* Vá até a página **DO SEU** _Pull Request_, adicione a label de _'code-review'_ e marque seus colegas:
 
-  * No menu à direita, clique no _link_ **"Labels"** e escolha a _label_ **code-review**;
+  * No menu à direita, clique no _link_ **'Labels'** e escolha a _label_ **code-review**;
 
-  * No menu à direita, clique no _link_ **"Assignees"** e escolha **o seu usuário**;
+  * No menu à direita, clique no _link_ **'Assignees'** e escolha **o seu usuário**;
 
-  * No menu à direita, clique no _link_ **"Reviewers"** e digite `students`, selecione o time `tryber/students-sd-08`.
+  * No menu à direita, clique no _link_ **'Reviewers'** e digite `students`, selecione o time `tryber/students-sd-08`.
 
 Caso tenha alguma dúvida, [aqui tem um video explicativo](https://vimeo.com/362189205).
 
