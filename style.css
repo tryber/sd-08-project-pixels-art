@@ -13,8 +13,6 @@
     position: relative;
 }
 
-
-
 .pixel
 {
     margin: 0px;
@@ -26,12 +24,13 @@
 
 #board-size
 {
-
+    display: inline-block;
     width: 40px;
 }
 
 #generate-board
 {
+    display: inline-block;
     margin-left: 53px;
     margin-bottom: 5px;
 }
