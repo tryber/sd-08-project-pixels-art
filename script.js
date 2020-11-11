@@ -1,8 +1,3 @@
-window.onload = function () {
-    document.querySelectorAll('.color')[0].classList.add('selected');
-
-}
-
 function eventsColor(event) {
     const colorClass = document.querySelectorAll('.selected');
     colorClass.classList.remove('selected');
@@ -10,5 +5,16 @@ function eventsColor(event) {
 
     
 }
+let verde = document.getElementById('verde');
+verde.addEventListener('click', eventsColor);
+
+let azul = document.getElementById('blue');
+azul.addEventListener('click', eventsColor);
+
+let vermelho = document.getElementById('red');
+vermelho.addEventListener('click', eventsColor);
+
+let preto = document.getElementById('black');
+preto.addEventListener('click', eventsColor);
 
 
