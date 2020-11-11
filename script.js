@@ -1,31 +1,32 @@
 const pixel = document.querySelector('#pixel-board');
-for (let col = 0; col < 5; col += 1) {
-    for (let line = 0; line < 5; line += 1) {
-        const pix = document.createElement('div');
-        pix.className = 'pixel';
-        pixel.appendChild(pix);
+
+function pixelBoard() {
+    for (let col = 0; col < 5; col +=1) {
+        for(let line = 0; line < 5; line +=1) {
+            let pix = document.createElement('div');
+            pix.className = 'pixel';
+            pixel.appendChild(pix)
+        }
     }
 }
-window.onload = function () {
-    document.getElementById('black').classList.add('selected')
-    addEventListener("click", function (event) {
-        if (event.target.className == "color") {
-            for (let index = 0; index < color.length; index += 1) {
-            color[index].className = "color";
-            }
-            event.target.className = "color selected";
-        }
-    });
-    addEventListener('click', function (event) {
-        for (let index = 0; index < color.length; index += 1) {
-            if (color[index].className == 'color selected' && event.target.className == 'pixel') {
-                event.target.style.backgroundColor = getComputedStyle(color[index]).backgroundColor;
-            }
-        }
-    });
+pixelBoard();
+
+
+window.onload = function() {
+    document.getElementById('black').classList.add('selected');
 }
 
-function limpar(){
-    document.getElementById('pixel').style.backgroundColor = 'white';
-}
-limpar();
+const itemPalette = document.getElementsByClassName('color'); // coloco as 4 cores da classe color num array 
+
+const paletteDiv = document.getElementById("color-palette"); // seleciono a section com o ID color-pallete
+paletteDiv.addEventListener("click", CreateEventsColor); //escutador de eventos
+console.log(paletteDiv)
+
+function CreateEventsColor(event) {
+    const colorClass = document.querySelector(".selected");
+    colorClass.classList.remove("selected");
+    event.target.classList.add("selected");
+  }
+  
+  console.log()
+  
