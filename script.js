@@ -1,3 +1,18 @@
+window.onload = randonColor ();
+  function randonColor() {
+    const cores = document.querySelectorAll('.color');
+    for (let i = 1; i < cores.length; i += 1) {
+      if (cores[i].style.backgroundColor === 'black') {
+        cores[i].style.backgroundColor = 'black';
+      } else {
+        let r = Math.floor(Math.random() * 255);
+        let g = Math.floor(Math.random() * 255);
+        let b = Math.floor(Math.random() * 255);
+        cores[i].style.backgroundColor = `rgb(${r},${g},${b})`;
+      }
+    }
+  }
+  
 function pixelInicial() {
   const pixelInicial = document.querySelector('#black');
   pixelInicial.className = 'color selected';
