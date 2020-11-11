@@ -25,6 +25,20 @@ function creatColorsOptions() {
   }
 }
 
+
+function allWhite() {
+  const pixels = document.querySelectorAll('div');
+  for (let i = 0; i < pixels.length; i += 1) {
+   pixels[i].style.backgroundColor = 'white';
+  }
+}
+
+function clearBoard() {
+  const button = document.getElementById('clear-board');
+  button.innerHTML = 'Clear Board';
+  button.addEventListener('click', allWhite);
+}
+
 function creatPixelBoard() {
   const board = document.getElementById('pixel-board');
   for (let i = 0; i < 5; i += 1) {
@@ -36,7 +50,6 @@ function creatPixelBoard() {
       pixels.classList.add('pixel');
       pixels.addEventListener('click', (e) => {
         pixels.style.backgroundColor = colorToBePainted();
-        console.log('paint');
       });
       board.appendChild(pixels);
     }
@@ -55,19 +68,8 @@ function colorToBePainted() {
   return colorSelected;
 }
 
-function printColorsOptions() {
-  const colorsOptions = document.querySelectorAll('.color');
-  console.log(colorsOptions);
-}
-
-function printPixelBoard() {
-  const piXelBoard = document.querySelectorAll('.pixel');
-  console.log(piXelBoard);
-}
-
 window.onload = function () {
   creatColorsOptions();
+  clearBoard();
   creatPixelBoard();
-  printColorsOptions();
-  printPixelBoard();
 };
