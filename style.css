@@ -9,12 +9,14 @@ header {
     align-items: center;
     display: flex;
     justify-self: center;
+    padding: 15px;
 }
 
 #color-palette {
     align-items: center;
     display: flex;
-    justify-content: center;
+    justify-content: left;
+    padding: 15px;
 }
 .black {
     background-color: black;
@@ -27,4 +29,18 @@ header {
 }
 .fourth {
     background-color: crimson;
+}
+#pixel-board {
+  width: 210px;
+  height: 210px;
+  position: relative;
+  padding: 15px;  
+}
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  width: 40px;
+  height: 40px;
+  display: block;
+  float: left;
 }
