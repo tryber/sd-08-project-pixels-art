@@ -20,7 +20,7 @@ const itemPalette = document.getElementsByClassName('color'); // coloco as 4 cor
 
 const paletteDiv = document.getElementById("color-palette"); // seleciono a section com o ID color-pallete
 paletteDiv.addEventListener("click", CreateEventsColor); //escutador de eventos
-console.log(paletteDiv)
+
 
 function CreateEventsColor(event) {
     const colorClass = document.querySelector(".selected");
@@ -28,5 +28,25 @@ function CreateEventsColor(event) {
     event.target.classList.add("selected");
   }
   
-  console.log()
-  
+function paintPixel() {
+    const pixelSelected = document.querySelectorAll(".pixel");
+    for (let index = 0; index < pixelSelected.length; index += 1) {
+        pixelSelected[index].addEventListener("click", function (event) {
+            let colorCurrent = document.querySelector(".selected").style
+                .backgroundColor;
+            event.target.style.backgroundColor = colorCurrent;
+        });
+    }
+}
+paintPixel();
+
+function clearPixel() {
+    const clearButton = document.querySelector('#clear-board');
+    const color = 'white';
+    clearButton.addEventListener('click', () => {
+        const pixels = document.querySelectorAll('.pixel')
+        for (let i = 0; i < pixels.length; i += 1) {
+            pixels[i].style.backgroundColor = color;
+        }
+    });
+}
