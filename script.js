@@ -62,8 +62,8 @@ selectColor();
 
 // Função para pintar os pixels (por algum motivo também pinta o #pixel-board):
 function pintaCor() {
-  const quadroPixels = document.getElementById('pixel-board');
-  quadroPixels.addEventListener('click', function () {
+  const quadroPixel = document.getElementById('pixel-board');
+  quadroPixel.addEventListener('click', function () {
     const selectedColor = document.querySelector('.selected').style
       .backgroundColor;
     event.target.style.backgroundColor = selectedColor;
@@ -97,7 +97,7 @@ limpeza();
 function inputedValueCheck() {
   const btnGen = document.getElementById('generate-board');
   btnGen.addEventListener('click', function () {
-    const inputedValue = document.getElementById('board-size').value;
+    let inputedValue = document.getElementById('board-size').value;
     let correctValue;
     if (inputedValue === '') {
       alert('Board inválido!');
