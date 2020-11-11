@@ -1,43 +1,33 @@
-body{background-color:honeydew;}
-div{
-    margin: 0px;
-    padding: 0px;
+body {
+  background-color: honeydew;
 }
-#color-palette{
-    margin: 5px 0;
-height: 40px;
-display: flex;
+div {
+  margin: 0px;
+  padding: 0px;
 }
-.color{
-height: 40px;
-width: 40px;
-border: 1px solid black;
+#color-palette {
+  margin: 5px 0;
+  height: 40px;
+  display: flex;
 }
-
-#pixel-board{
-width: 210px;
-display: flex;
-flex-wrap: wrap;
+.color {
+  height: 40px;
+  width: 40px;
+  border: 1px solid black;
 }
 
-.pixel{
-    width: 40px;
-    height: 40px;
-    border: 1px solid black;
-    background-color: white;
+#pixel-board {
+  width: 210px;
+  display: flex;
+  flex-wrap: wrap;
 }
-/**#cor1{
-    background-color: black;
+
+.pixel {
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  background-color: white;
 }
-#cor2{
-    background-color: red;
+.bt-limpar {
+  margin: 10px;
 }
-#cor3{
-    background-color: green;
-}
-#cor4{
-    background-color: blue;
-}
-#cor5{
-    background-color: yellow;
-}**/

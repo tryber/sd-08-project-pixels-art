@@ -61,11 +61,20 @@ function capturandoCor() {
 }
 capturandoCor();
 
-function corIncial(){
-let x = document.querySelector("#pixel-board");
- x.addEventListener('click',function(event){
-  event.target.style.backgroundColor = 'black';
- })
-
+function corIncial() {
+  let x = document.querySelector("#pixel-board");
+  x.addEventListener("click", function (event) {
+    event.target.style.backgroundColor = "black";
+  });
 }
-corIncial()
+corIncial();
+
+function limparQuadro() {
+  let classCor = document.querySelectorAll(".pixel");
+  console.log(classCor);
+  for (let i = 0; i < classCor.length; i += 1) {
+    classCor[i].style.backgroundColor = "";
+  }
+}
+let bt = document.querySelector("#clear-bord");
+bt.addEventListener("click", limparQuadro);
