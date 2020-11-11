@@ -27,3 +27,20 @@ function criaQuadro() {
     }
 }
 criaQuadro();
+
+function pincel() {
+    let cores = document.querySelectorAll('.color');
+    for (let index = 0; index < cores.length; index++) {
+        const element = cores[index];
+        element.addEventListener('click', function (event) {
+            const corSelecionada = document.querySelector('.selected')
+            if (element !== corSelecionada) {
+                corSelecionada.className = "color";
+                event.target.className = "color selected";
+            } else {
+                event.target.className = "color selected";
+            } 
+        });
+    }
+}
+pincel();
