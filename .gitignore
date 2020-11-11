@@ -1,2 +1,12 @@
 # VSCode repo settings
 .vscode
+.history
+package.json
+node_modules
+package-lock.json
+.prettierignore
+.eslintignore
+*.log
+*.zip
+bug.js
+ok.js
