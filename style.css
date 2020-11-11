@@ -57,6 +57,8 @@
 
 #pixel-board {
   display: flex;
+  width: 5em;
+  height: 5em;
   margin-left: 40%;
 }
 
