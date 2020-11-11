@@ -46,4 +46,32 @@ function creatBoard() {
 creatBoard();
 
 
+function blackMan () {
+    for ( let index =0; index < colorsItens.length; index+=1) {
+        const addcor = colorsItens[index]
+        if (addcor.style.backgroundColor === "black") {
+            addcor.className= "color selected"
+        }
 
+}
+}
+blackMan()
+
+
+function selecionado (){
+    for ( let index =0; index < colorsItens.length; index+=1) {
+        const addcor = colorsItens[index]
+
+        addcor.addEventListener('click', function(event){
+            const selected = document.querySelector('.selected')
+        if ( addcor.className ==='color'){
+                selected.classList.remove('selected')
+                event.target.className='color selected'
+            }
+
+        })
+
+    }
+}
+
+selecionado()
