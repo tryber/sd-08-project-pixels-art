@@ -35,8 +35,8 @@ function creatPixelBoard() {
       const pixels = document.createElement('div');
       pixels.classList.add('pixel');
       pixels.addEventListener('click', (e) => {
-        console.log('paintThePixel');
-        //e.target.style.backgroundColor = paintThePixel;
+        pixels.style.backgroundColor = colorToBePainted();
+        console.log('paint');
       });
       board.appendChild(pixels);
     }
@@ -49,6 +49,12 @@ function removeSelected() {
     colors[i].classList.remove('selected');
   }
 }
+
+function colorToBePainted() {
+  const colorSelected = document.querySelector('.selected').style.backgroundColor;
+  return colorSelected;
+}
+
 function printColorsOptions() {
   const colorsOptions = document.querySelectorAll('.color');
   console.log(colorsOptions);
@@ -59,16 +65,9 @@ function printPixelBoard() {
   console.log(piXelBoard);
 }
 
-function printColorSelected() {
-  const colorSelected = document.querySelector('.selected').style.backgroundColor;
-  console.log(colorSelected);
-}
-
-
 window.onload = function () {
   creatColorsOptions();
   creatPixelBoard();
   printColorsOptions();
   printPixelBoard();
-  printColorSelected();
-}
+};
