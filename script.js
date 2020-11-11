@@ -15,3 +15,11 @@ function selector (event) {
 
 const palette = document.getElementById('color-palette');
 palette.addEventListener('click', selector);
+
+let botao = document.getElementById('clear-board');
+botao.addEventListener('click', apagaPixels)
+
+function apagaPixels() {
+    let pixels = document.getElementsByClassName('pixel');
+    pixels.style.backgroundColor = 'white';
+}
