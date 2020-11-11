@@ -39,10 +39,3 @@
     height: 40px;
     width: 40px;  
   }
-
-  .selected {
-    border: 1px solid;
-    display: inline-block;
-    padding: 25px;
-    margin: 10px;
-  }
