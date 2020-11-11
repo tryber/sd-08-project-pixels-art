@@ -3,10 +3,15 @@ function criaDivs() {
 
 let paleta = document.getElementById("color-palette");
 
-for(let index = 0; index < 4; index += 1) {
-    let box = document.createElement("div");
-    box.className = "color";
-    paleta.appendChild(box);
-}
+let cores = ["black", "blue", "red", "green"];
+
+
+    for(let index = 0; index < cores.length; index += 1) {
+        let cor = cores[index];
+        let box = document.createElement("div");
+        box.className = "color";
+        box.style.backgroundColor = cor;
+        paleta.appendChild(box);
+    }
 }
 criaDivs();
