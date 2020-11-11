@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projeto Pixel art</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1 id="title" class="titulo-geral">Paleta de Cores</h1>
+      <section id="color-palette" class="paleta-cores-container"></section>
+      <div id="board-size-container" class="tamanho-quadro-container">
+        <label for="board-size">Qual o tamanho do quadro de pixels?</label>
+        <input id="board-size" class="input" placeholder="Nº" type="number" min="1" />
+        <button id="generate-board" class="btn-VQV">VQV</button>
+      </div>
+      <div id="button-container" class="container-botao"></div>
+    </header>
+    <main>
+      <section id="pixel-board" class="quadro-pixels"></section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
