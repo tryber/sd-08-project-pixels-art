@@ -17,7 +17,7 @@ btnYellow.style.backgroundColor = 'yellow';
 function classChange(evt) {
   if (evt.target.className === 'color') {
     document.querySelector('.selected').className = 'color';
-    evt.target.className = 'selected';
+    evt.target.className = 'color selected';
     saveColor('selectedColor', evt.target.style.backgroundColor);
   }
 }
