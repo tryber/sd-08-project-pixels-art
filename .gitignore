@@ -8,3 +8,5 @@ package-lock.json
 .eslintignore
 *.log
 *.zip
+bug.js
+ok.js
