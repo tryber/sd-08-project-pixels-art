@@ -1,5 +1,5 @@
 #title {
-    color:  red;
+    color:  black;
 }
 .color-palette {
 
@@ -26,7 +26,7 @@
 width: 226px;
 height: 226px;
 border: 1px solid black;
-background-color: greenyellow;
+background-color: rgb(42, 158, 7);
 }
 .pixel {
     height: 40px;
