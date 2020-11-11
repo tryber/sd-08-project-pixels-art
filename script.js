@@ -50,7 +50,7 @@ function createBoard () {
         alert("Board inválido!")
     } else {
         let n = parseInt(input.value);
-        if (n<0) {
+        if (n<=0) {
             alert("Número Inválido !");
         } else {
             if (n>50) n=50;
