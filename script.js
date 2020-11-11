@@ -37,6 +37,38 @@ clearButton.addEventListener('click', () => {
 });
 
 
+let generateBoard = document.querySelector('#generate-board');
+let valueField = document.querySelector('#board-size');
+
+
+
+generateBoard.addEventListener('click', () =>{
+    if(Number(valueField.value) >=  5 && Number(valueField.value) <= 50){
+        createPixel(Number(valueField.value));
+    }
+
+    valueField.value = '';
+})
+
+
+function createPixel(value) {
+    
+    
+    for(let x = 0 ; x < value; x += 1){
+        const pixelRow = document.createElement('tr');
+        document.querySelector('#pixel-board').appendChild(pixelRow);
+        pixelRow.className = `rowNumber${x}`;
+        for(let y = 0; y < value; y += 1){
+            const pixelColumn = document.createElement('td');
+            document.querySelector(`.rowNumber${x}`).appendChild(pixelColumn);
+            pixelColumn.className = 'pixel';
+        }
+        
+    }
+}
+
+
+
 
 // sColor.addEventListener('click', function() {
 //     let selectedColor = document.querySelector('.selected');

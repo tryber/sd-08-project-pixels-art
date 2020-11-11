@@ -46,6 +46,40 @@ body{
     width:100px;
     padding:5px;
     border-radius: 10px;
-    border: 1px solid black;
     outline: none;
+}
+
+#generate-board {
+    width:70px;
+    border-radius: 5px;
+    padding:2px;
+    text-align: center;
+    border:1px solid black;
+}
+
+
+#clear-board {
+    display:block;
+    margin:20px auto;
+    border:0px;
+}
+
+label {
+    display: block;
+}
+
+#generate-board, #board-size {
+    display: inline-block;
+    margin: 10px 10px 0 0;
+}
+
+#board-size {
+    width:100px;
+    outline: none;
+    border: 1px solid black;
+}
+
+
+#clear-board:hover, #generate-board:hover {
+    background-color:#aaa;
 }

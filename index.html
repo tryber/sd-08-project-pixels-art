@@ -15,44 +15,18 @@
             <div class="color t-color"></div>
             <div class="color f-color"></div>
         </section>
-        <button id="clear-board">Limpar</button>
+        <section>
+            <label for="board-size">Tamanho do quadro ( min:5, max:50 )</label>
+            <!-- label => https://developer.mozilla.org/pt-BR/docs/Web/HTML/Element/label#:~:text=Um%20elemento%20HTML%20representa,ou%20usando%20o%20atributo%20for%20.&text=Um%20input%20pode%20ser%20associado,(s). -->
+          <form onsubmit="return false">
+            <input id='board-size' type='number' min='5' max='50' />
+            <input id='generate-board' type='submit' value='VQVVVV' />
+          </form>
+            <button id="clear-board">Limpar</button>
+        </section>
         <section>
             <table id="pixel-board">
-                <tr>
-                    <td class="pixel"></td>
-                    <td class="pixel"></td>
-                    <td class="pixel"></td>
-                    <td class="pixel"></td>
-                    <td class="pixel"></td>
-                </tr>
-                <tr>
-                    <td class="pixel"></td>
-                    <td class="pixel"></td>
-                    <td class="pixel"></td>
-                    <td class="pixel"></td>
-                    <td class="pixel"></td>
-                </tr>
-                <tr>
-                    <td class="pixel"></td>
-                    <td class="pixel"></td>
-                    <td class="pixel"></td>
-                    <td class="pixel"></td>
-                    <td class="pixel"></td>
-                </tr>
-                <tr>
-                    <td class="pixel"></td>
-                    <td class="pixel"></td>
-                    <td class="pixel"></td>
-                    <td class="pixel"></td>
-                    <td class="pixel"></td>
-                </tr>
-                <tr>
-                    <td class="pixel"></td>
-                    <td class="pixel"></td>
-                    <td class="pixel"></td>
-                    <td class="pixel"></td>
-                    <td class="pixel"></td>
-                </tr>
+                
             </table>
         </section>
     </main>
