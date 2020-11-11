@@ -1,24 +1,16 @@
 // 2
+const colors = ["black", "green", "purple", "yellow", "red"];
 function createDivs() {
     let newPallete = document.getElementById('color-pallete')
-    for (i = 0; i < 4; i += 1) {
+    for (i = 0; i < colors.length; i += 1) {
+        let color = colors[i];
         let newDivs = document.createElement("div");
         newDivs.className = "color"
+        newDivs.style.border = "1px solid"
+        newDivs.style.backgroundColor = color
         newPallete.appendChild(newDivs)
-    }
-    document.getElementsByClassName("color").style.border = "1px solid"
-}
 
-// 3
-let colorBlack = document.getElementsByClassName("color");
-function getColors(array) {
-    for (i = 0; i < array.length; i += 1) {
-            colorBlack.style.background-color == array[i]
     }
 }
-getColors(["black", "green", "purple", "yellow"]);
-
-// 4
-
-
+createDivs();
 
