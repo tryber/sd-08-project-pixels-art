@@ -1,0 +1,72 @@
+* {
+    background-color: grey;
+}
+
+#black{
+
+    background-color:black;
+    height: 50px;
+    width: 50px;
+
+}
+
+#red {
+    background-color: red;
+    height: 50px;
+    width: 50px;
+    
+}
+
+#green {
+    background-color:green;
+    height: 50px;
+    width: 50px;
+    
+}
+
+#yellow {
+    background-color:  yellow;
+    height: 50px;
+    width: 50px;
+    
+}
+
+  
+
+#title {
+
+    text-align: center;
+}
+
+#pixel-board {
+
+    height: 230px;
+    width: 230px;
+    margin-left: 40%;
+    margin-top: 5%;
+    display: inline-block;
+}
+
+.pixel {
+
+    height: 40px;
+    width: 40px;
+    border: black solid 1px;
+    background-color: white;
+    display: inline-block;
+}
+
+.button {
+
+    margin: 5px 115px;
+
+}
+
+.color {
+
+    height: 40px;
+    width: 40px;
+    border: black solid 1px;
+    display: inline-block;
+    margin-left: 15%;
+}
