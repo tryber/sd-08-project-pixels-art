@@ -92,7 +92,7 @@ for (count = 0; count < arraySquare.length; count += 1) {
     } else if (colorSelected === 'red') {
       square.style.backgroundColor = 'red';
     } else if (colorSelected === 'blue') {
-      square.style.backgroundColor = 'bue';
+      square.style.backgroundColor = 'blue';
     } else if (colorSelected === 'green') {
     square.style.backgroundColor = 'green';
     }
