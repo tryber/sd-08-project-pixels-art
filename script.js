@@ -26,7 +26,7 @@ function colorSelected() {
         red.className = reset;
         green.className = reset;
         blue.className = reset;  
-        event.target.className = 'selected';
+        event.target.className = event.target.className + ' ' + 'selected';
       }
     });
 }
@@ -47,3 +47,17 @@ function colorPaint() {
 }
 
 colorPaint();
+
+function clearTable() {
+    const button = document.querySelector('#clear-board');
+
+    button.addEventListener('click', function() {
+        const table = document.querySelectorAll('.pixel');
+
+    for (index = 0; index < table.length; index += 1) {
+        table[index].style.backgroundColor = 'white';
+    }
+    })
+}
+
+clearTable();
