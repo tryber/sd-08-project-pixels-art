@@ -17,6 +17,10 @@ function cor01 () {
 
 cor01();
 
+//Inserindo nova classe ao primeiro elemento
+const insertClass = document.querySelectorAll('.color');
+insertClass[0].classList.add('selected');
+
 // Alterando a cor da paleta 02
 function cor02 () {
     const cor02 = document.getElementsByClassName('color')[1].style;
@@ -52,5 +56,15 @@ for (let index = 0; index <= 24; index += 1) {
 const container2 = document.querySelector('#pixel-board');
 container2.appendChild(fragment2);
 
-const cores = document.querySelectorAll('.color');
-cores[0].classList.add('selected');
+// Adicionndo e removendo classe selected
+document.getElementById('color-palette').addEventListener('click', e => {
+    if(e.target.classList.contains('color')) {
+        document.querySelectorAll('.color').forEach((Element) => {
+            Element.classList.remove('selected');
+        });
+        e.target.classList.add('selected');
+    }
+})
+
+
+  
