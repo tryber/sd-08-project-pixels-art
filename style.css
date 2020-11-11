@@ -18,11 +18,11 @@
   width: 40px;
 }
 
-#clear-board {
+button {
   background-color: white;
   border: 1px solid black;
   border-radius: 30%;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: 'Arial Narrow Bold', Impact, Haettenschweiler, sans-serif;
   height: 40px;
   margin-bottom: 10px;
   margin-top: 5px;

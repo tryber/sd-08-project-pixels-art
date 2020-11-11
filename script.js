@@ -5,13 +5,20 @@ function randomColor() {
   return `rgb(${c1},${c2},${c3})`;
 }
 
+function removeSelected() {
+  const colors = document.getElementsByTagName('ul');
+  for (let i = 0; i < colors.length; i += 1) {
+    colors[i].classList.remove('selected');
+  }
+}
+
 function creatColorsOptions() {
   const options = document.getElementById('color-palette');
   const colors = [];
   for (let i = 0; i < 4; i += 1) {
     colors[i] = document.createElement('ul');
     colors[i].classList.add('color');
-    colors[i].addEventListener('click', (e) => {
+    colors[i].addEventListener('click', () => {
       removeSelected();
       colors[i].classList.add('selected');
     });
@@ -29,7 +36,7 @@ function creatColorsOptions() {
 function allWhite() {
   const pixels = document.querySelectorAll('div');
   for (let i = 0; i < pixels.length; i += 1) {
-   pixels[i].style.backgroundColor = 'white';
+    pixels[i].style.backgroundColor = 'white';
   }
 }
 
@@ -37,6 +44,11 @@ function clearBoard() {
   const button = document.getElementById('clear-board');
   button.innerHTML = 'Limpar';
   button.addEventListener('click', allWhite);
+}
+
+function colorToBePainted() {
+  const colorSelected = document.querySelector('.selected').style.backgroundColor;
+  return colorSelected;
 }
 
 function creatPixelBoard() {
@@ -48,7 +60,7 @@ function creatPixelBoard() {
     for (let i2 = 0; i2 < 5; i2 += 1) {
       const pixels = document.createElement('div');
       pixels.classList.add('pixel');
-      pixels.addEventListener('click', (e) => {
+      pixels.addEventListener('click', () => {
         pixels.style.backgroundColor = colorToBePainted();
       });
       board.appendChild(pixels);
@@ -56,17 +68,6 @@ function creatPixelBoard() {
   }
 }
 
-function removeSelected() {
-  const colors = document.getElementsByTagName('ul');
-  for (let i = 0; i < colors.length; i += 1) {
-    colors[i].classList.remove('selected');
-  }
-}
-
-function colorToBePainted() {
-  const colorSelected = document.querySelector('.selected').style.backgroundColor;
-  return colorSelected;
-}
 
 window.onload = function () {
   creatColorsOptions();
