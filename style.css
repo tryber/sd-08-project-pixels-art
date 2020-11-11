@@ -37,3 +37,8 @@
     display: inline-block;
     border: black 1px solid;
 }
+
+#clear-board {
+    margin: 8px auto;
+    font-size: 15px;
+}

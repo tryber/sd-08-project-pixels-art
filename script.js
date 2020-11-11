@@ -63,3 +63,18 @@ function SelecPixel() {
 }
 
 SelecPixel();
+
+// REQUISITO 9
+
+function ClearCell() {
+    let cleaningButton = document.getElementById('clear-board');
+    cleaningButton.addEventListener('click', function() {
+        const Cells = document.getElementsByClassName('pixel');
+        for (let index = 0; index < Cells.length; index += 1) {
+            Cells[index].style.backgroundColor = 'white';
+        }
+    });
+
+}
+
+ClearCell();
