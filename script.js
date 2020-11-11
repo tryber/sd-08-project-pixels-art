@@ -35,7 +35,7 @@ function allWhite() {
 
 function clearBoard() {
   const button = document.getElementById('clear-board');
-  button.innerHTML = 'Clear Board';
+  button.innerHTML = 'Limpar';
   button.addEventListener('click', allWhite);
 }
 
