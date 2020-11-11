@@ -75,3 +75,18 @@ function selecionado (){
 }
 
 selecionado()
+
+function queHajaCor () {
+    const boardofpixels = document.querySelector('#pixel-board') 
+
+    boardofpixels.addEventListener('click', function(event){
+    const selected = document.querySelector('.selected')
+
+    if(selected !==null ){
+        event.target.style.backgroundColor = selected.style.backgroundColor
+    }
+
+    })
+
+}
+queHajaCor();
