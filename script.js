@@ -20,6 +20,6 @@ let botao = document.getElementById('clear-board');
 botao.addEventListener('click', apagaPixels)
 
 function apagaPixels() {
-    let pixels = document.getElementsByClassName('pixel');
+    let pixels = document.querySelectorAll('.pixel');
     pixels.style.backgroundColor = 'white';
 }
