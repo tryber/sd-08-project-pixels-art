@@ -7,7 +7,7 @@
     background-color: black;
     height: 100px;
     width: 100px;
-    border: solid black 5px;
+    border: solid black 1px;
     margin-right: 5px;
 }
 
@@ -15,7 +15,7 @@
     background-color: blue;
     height: 100px;
     width: 100px;
-    border: solid black 5px;
+    border: solid black 1px;
     margin-right: 5px;
 }
 
@@ -23,7 +23,7 @@
     background-color: red;
     height: 100px;
     width: 100px;
-    border: solid black 5px;
+    border: solid black 1px;
     margin-right: 5px;
 }
 
@@ -31,7 +31,7 @@
     background-color: green;
     height: 100px;
     width: 100px;
-    border: solid black 5px;
+    border: solid black 1px;
     margin-right: 5px;
 }
 
