@@ -24,12 +24,12 @@ header div {
   padding: 10px 35px;
 }
 
-.table, .tr, .td {
-  border: black solid 1px; 
+.table , .tr , .td {
   background-color: white;
+  border: black solid 1px;
 }
 
-.table { 
+.table {
   display: table;
   height: 500px;
   left: 410px;
@@ -38,13 +38,13 @@ header div {
   width: 500px;
 }
 
-.tr { 
-  display: table-row; 
+.tr {
+  display: table-row;
   padding: 5px;
 }
 
 .td {
   display: table-cell;
-  width: 40px;
   height: 40px;
+  width: 40px;
 }
