@@ -26,13 +26,18 @@ function seleciona() {
 }
 seleciona();
 
-
-
-
-
-
-
-
+function colore() {
+  let ListaPixels = document.getElementsByClassName('pixel');
+  for (let i = 0; i < ListaPixels.length; i += 1) {
+    ListaPixels[i].addEventListener('click', pinta);
+    function pinta(evento) {
+      let ListaCores = document.getElementsByClassName('selected');
+      let estilo = window.getComputedStyle(ListaCores[0]);
+      evento.target.style.backgroundColor = estilo.backgroundColor;
+    }
+  }
+}
+colore();
 
 let limpa = document.getElementById('clear-board');
 limpa.addEventListener('click', limpaTudo);
