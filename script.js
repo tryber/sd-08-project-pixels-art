@@ -78,9 +78,9 @@ dinamicPixelBoard();
 
 function limitBoard() {
   let input = document.querySelector('#board-size');
-  if (input.value < 5) {
+  if (input.value < 5 && input.value !== '') {
     input.value = 5;
-  } else if(input.value > 50) {
+  } else if(input.value > 50 && input.value !== '') {
     input.value = 50;
   }
 }
