@@ -73,10 +73,11 @@ document.getElementById('pixel-board').addEventListener('click', e => {
     }
 })
 
-document.getElementById('souPai').addEventListener('click', e => {
-    console.log('oi pai, tô aqui');
-    if(e.target.classList.contains('azul')) {
-        event.target.style.backgroundColor = 'red';
-    }
-})
 
+// Botão limpar, preenche todos os pixels de branco
+document.getElementById('clear-board').addEventListener('click', e => {
+    const limpar = document.querySelectorAll('.pixel');
+    limpar.forEach((Element) => {
+        Element.style.backgroundColor = 'white';
+    })
+})
