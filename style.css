@@ -1,6 +1,10 @@
 body {
   font-family: sans-serif;
 }
+div {
+  margin: 0;
+  padding: 0;
+}
 
 .color {
   border: 1px solid black;
