@@ -10,7 +10,7 @@ function createPaleteColorEle(){
     if (i === 0) {
     
         createele.style.backgroundColor = "black"
-        createele.className = "selected"
+        createele.className = "color selected"
       
        
         
@@ -281,14 +281,14 @@ console.log(pegaposicaok)
 
 
 for(let i =0 ; i < pegaposicaok.length ; i ++ ){
+    
+  
+    pegaposicaok[i].addEventListener("click",function(event){
+        
 
-pegaposicaok[i].addEventListener("click",function(event){
 
   if(event.target.className === "color"  ){
      
-
-event.target.classList.remove("color")
-
  event.target.classList.add("selected")
  let color = event.target.style.backgroundColor
  console.log(color)
