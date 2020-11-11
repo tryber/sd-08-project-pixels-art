@@ -1,0 +1,30 @@
+.color {
+  border: 1px solid black;
+  display: inline-block;
+  height: 80px;
+  width: 80px;
+}
+
+.black {
+  background-color: black;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  display: table-cell;
+  height: 40px;
+  width: 40px;
+}
+
+.table {
+  display: table;
+}
+
+.line {
+  display: table-row;
+}
+
+.button {
+  margin-bottom: 10px;
+}
