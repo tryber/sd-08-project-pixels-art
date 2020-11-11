@@ -33,6 +33,7 @@ seleciona();
 
 
 
+
 let limpa = document.getElementById('clear-board');
 limpa.addEventListener('click', limpaTudo);
 function limpaTudo() {
