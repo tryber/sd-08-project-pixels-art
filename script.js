@@ -12,13 +12,6 @@ function addTable() {
 
 addTable();
 
-function blackSelected() {
-    const black = document.querySelector('.color');
-    black.className = 'selected';
-}
-
-blackSelected();
-
 function colorSelected() {
     const colorPalette = document.querySelector('#color-palette');
     let black = document.querySelector('#black');
@@ -33,7 +26,9 @@ function colorSelected() {
       green.className = reset;
       blue.className = reset;
 
-      event.target.className = 'selected';
+      if (event.target.id === 'black' || event.target.id === 'red' || event.target.id === 'green' || event.target.id === 'blue') {
+        event.target.className = 'selected';
+      }
     });
 }
 
@@ -46,7 +41,9 @@ function colorPaint() {
         const selected = document.querySelector('.selected');
         const color = selected.id;
         
-        event.target.style.backgroundColor = color;
+        if (event.target.className === 'pixel') {
+            event.target.style.backgroundColor = color;
+        }
     });
 }
 
