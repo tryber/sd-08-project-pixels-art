@@ -2,9 +2,13 @@
 // Requisitos 2 e 3
 
 const elementosPaleta = document.getElementsByClassName("color");
+let colorOne = '#'+Math.random().toString(16).substr(-6);
+let colorTwo = '#'+Math.random().toString(16).substr(-6);
+let colorThree = '#'+Math.random().toString(16).substr(-6);
+
 
 for (index = 0; index < elementosPaleta.length; index += 1) {
-  const coresDisponiveis = ["black", "purple", "blue", "cyan"];
+  const coresDisponiveis = ["black", colorOne, colorTwo, colorThree];
 
   for (cont = 0; cont < coresDisponiveis.length; cont +=1) {
     elementosPaleta[index].style.backgroundColor = coresDisponiveis[index];
