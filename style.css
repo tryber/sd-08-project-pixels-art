@@ -5,10 +5,26 @@
 .color {
   border: solid black 1px;
   display: inline-block;
-  width: 40px;
   height: 40px;
+  width: 40px;
 }
 
-.color:first-child {
-  background-color: black;
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  display: table-cell;
+  height: 40px;
+  width: 40px;
+}
+
+.pixel-board {
+  display: table;
+}
+
+.pixel-row {
+  display: table-row;
+}
+
+.board-size {
+  width: 3em;
 }
