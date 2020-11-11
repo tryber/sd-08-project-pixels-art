@@ -1,6 +1,10 @@
 window.onload = function () {
   document.getElementById('color-palette').firstElementChild.className =
     'color selected';
+  let pixelNumbers = document.getElementsByClassName('pixel').length;
+    for (let i = 0; i < pixelNumbers; i += 1) {
+      document.querySelectorAll('.pixel')[i].style.backgroundColor = 'white';
+    }
 };
 
 // function inputValueCheck() {
