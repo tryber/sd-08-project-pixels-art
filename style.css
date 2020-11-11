@@ -24,13 +24,13 @@
 
 #board-size
 {
-    display: inline-block;
+    display: inline;
     width: 40px;
 }
 
 #generate-board
 {
-    display: inline-block;
+    display: inline;
     margin-left: 53px;
     margin-bottom: 5px;
 }
