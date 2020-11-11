@@ -5,7 +5,7 @@ window.onload = function () {
 
 // Função cores aleatórias (suporte para paleta de cores):
 function randomColor() {
-  let colorRGB = `rgb(${Math.floor(Math.random() * 255)}, ${Math.floor(
+  const colorRGB = `rgb(${Math.floor(Math.random() * 255)}, ${Math.floor(
     Math.random() * 255,
   )}, ${Math.floor(Math.random() * 255)})`;
 
@@ -14,7 +14,7 @@ function randomColor() {
 
 // Função coloração das color-pallete:
 function paletaCores() {
-  let coresFundo = ['black', randomColor(), randomColor(), randomColor()];
+  const coresFundo = ['black', randomColor(), randomColor(), randomColor()];
   const palette = document.getElementById('color-palette');
 
   for (let i = 0; i < coresFundo.length; i += 1) {
@@ -30,12 +30,12 @@ paletaCores();
 function quadroPixels(num) { // Mudei a declaração de variável para virar parâmetro;
   const squareContainer = document.getElementById('pixel-board');
   for (let i = 0; i < num; i += 1) {
-    let linhaPixels = document.createElement('div');
+    const linhaPixels = document.createElement('div');
     linhaPixels.className = 'pixel-line';
     squareContainer.appendChild(linhaPixels);
 
     for (let j = 0; j < num; j += 1) {
-      let colunaPixels = document.createElement('div');
+      const colunaPixels = document.createElement('div');
       colunaPixels.className = 'pixel';
       linhaPixels.appendChild(colunaPixels);
     }
@@ -44,9 +44,9 @@ function quadroPixels(num) { // Mudei a declaração de variável para virar par
 quadroPixels(5);
 
 // Função selecionar cor e mudar a classe da li da color-palette:
-function selectedColor() {
-  let quadros = document.getElementById('color-palette').children;
-  let paleta = document.getElementById('color-palette');
+function selectColor() {
+  const quadros = document.getElementById('color-palette').children;
+  const paleta = document.getElementById('color-palette');
 
   paleta.addEventListener('click', function (event) {
     for (let i = 0; i < quadros.length; i += 1) {
@@ -58,13 +58,13 @@ function selectedColor() {
     }
   });
 }
-selectedColor();
+selectColor();
 
 // Função para pintar os pixels (por algum motivo também pinta o #pixel-board):
 function pintaCor() {
-  let quadroPixels = document.getElementById('pixel-board');
+  const quadroPixels = document.getElementById('pixel-board');
   quadroPixels.addEventListener('click', function () {
-    let selectedColor = document.querySelector('.selected').style
+    const selectedColor = document.querySelector('.selected').style
       .backgroundColor;
     event.target.style.backgroundColor = selectedColor;
   });
@@ -73,8 +73,8 @@ pintaCor();
 
 // Função criação dinâmica do botão #clear-board:
 function botaoLimpar() {
-  let buttonContainter = document.getElementById('button-container');
-  let buttonClear = document.createElement('button');
+  const buttonContainter = document.getElementById('button-container');
+  const buttonClear = document.createElement('button');
   buttonClear.id = 'clear-board';
   buttonClear.innerText = 'Limpar';
   buttonContainter.appendChild(buttonClear);
@@ -85,7 +85,7 @@ botaoLimpar();
 function limpeza() {
   const btnClear = document.getElementById('clear-board');
   btnClear.addEventListener('click', function () {
-    let pixelNumbers = document.getElementsByClassName('pixel').length;
+    const pixelNumbers = document.getElementsByClassName('pixel').length;
     for (let i = 0; i < pixelNumbers; i += 1) {
       document.querySelectorAll('.pixel')[i].style.backgroundColor = 'white';
     }
@@ -95,9 +95,9 @@ limpeza();
 
 // Função para checar e criar novo board (ainda falta entender como apagar o board antigo):
 function inputedValueCheck() {
-  let btnGen = document.getElementById('generate-board');
+  const btnGen = document.getElementById('generate-board');
   btnGen.addEventListener('click', function () {
-    let inputedValue = document.getElementById('board-size').value;
+    const inputedValue = document.getElementById('board-size').value;
     let correctValue;
     if (inputedValue === '') {
       alert('Board inválido!');
