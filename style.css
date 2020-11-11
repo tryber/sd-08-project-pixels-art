@@ -1,43 +1,100 @@
-li {
-  list-style-type: none;
-  float: left;
+body {
+  font-family: 'sans-serif';
 }
-
-.color-palette {
-  display: flex;
-}
-
 .color {
-  border: 1px solid black;
   border-radius: 100%;
-  height: 40px;
-  width: 40px;
+  border: 1px solid black;
+  cursor: pointer;
+  display: inline-block;
+  height: 60px;
+  margin-right: 2px;
+  transition: 0.2s;
+  width: 60px;
 }
-
 .color:hover {
-  box-shadow: 0 1px 5px black;
+  box-shadow: 0 4px 4px black;
 }
 
-.color-palette .selected {
-  box-shadow: 0 1px 5px black;
+.selected {
+  box-shadow: 0 4px 4px black;
 }
-
-.pixel-board {
-  height: 240px;
-  width: 240px;
+.row {
+  display: table-row;
 }
-
-.pixel-board .pixel {
+.pixel {
+  float: left;
   background-color: white;
   border: 1px solid black;
-  float: left;
+  cursor: pointer;
   height: 40px;
   width: 40px;
 }
 
-.control-board input[type='number'] {
-  width: 35px;
+.colorPallet {
+  padding-bottom: 10px;
 }
-.clear-board {
-  margin: 8px;
+
+.clear {
+  clear: both;
+}
+
+.black {
+  background-color: black;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.green {
+  background-color: green;
+}
+
+.red {
+  background-color: red;
+}
+
+.white {
+  background-color: white;
+}
+
+.font-zero {
+  font-size: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.configBoard {
+  margin-bottom: 10px;
+}
+
+.btn {
+  background-color: rgb(47, 50, 80);
+  border: none;
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+  height: 32px;
+  padding: 7px 11px;
+  transition: 0.2s;
+  vertical-align: middle;
+  border-radius: 12px;
+}
+
+.btn:hover {
+  background-color: gray;
+}
+
+input {
+  border: 1px solid rgb(208, 205, 175);
+  border-radius: 12px;
+  box-sizing: border-box;
+  color: rgb(184, 182, 165);
+  font-size: 15px;
+  height: 30px;
+  line-height: 30px;
+  padding: 5px;
+  vertical-align: middle;
+  width: 40px;
 }
