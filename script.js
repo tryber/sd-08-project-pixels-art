@@ -395,25 +395,19 @@ function alternaclasse(){
 
 alternaclasse()
 
-
+getposicaocolor[0].classList.classList.add("selected")
 
 function AdicionarRemover(event){
    
-   
-    
+ 
    
     for(let index = 0 ; index < getposicaocolor.length ; index ++ ){
        
-
-
+    
 getposicaocolor[index].classList.remove("selected");
 getposicaocolor[index] = event.target.classList.add("selected") ;
 
     }
-
-
-
-
 
 }
 
