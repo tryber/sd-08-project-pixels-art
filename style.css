@@ -49,3 +49,16 @@
     left: 180px;
     bottom: 86px;
 }
+
+.canvas {
+    width: 240px;
+    height: 200px;
+}
+
+.pixels {
+    width: 40px;
+    height: 40px;
+    float: left;
+    border: 1px solid black;
+    
+}
