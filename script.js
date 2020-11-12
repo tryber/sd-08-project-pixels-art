@@ -1,5 +1,5 @@
 window.onload = function () {
-    let loadColor = document.querySelector('.color');
+    const loadColor = document.querySelectorAll('.color');
     loadColor.classList = 'color selected';
 }
 
@@ -24,7 +24,6 @@ toColorDiv(['black', 'green', 'blue', 'orange']);
 
 //requisito 4 
 //elemento 'pai' de 'pixel'
-
 const captureIdPixelBoard = document.getElementById('pixel-board');
 //laço responsável por criar 25 divs com id 'pixel'
 for (let index = 1; index <= 25; index += 1) {
@@ -32,9 +31,21 @@ for (let index = 1; index <= 25; index += 1) {
     createIdPixel.className = 'pixel';
     captureIdPixelBoard.appendChild(createIdPixel);
 }
- 
+//requisito 7 -
+//a ideia é fazer um laço/ 
+const captureClassColor = document.querySelectorAll('.color');
+for (let index = 0; index < captureClassColor.length; index += 1) {
+    const count = captureClassColor[index];
 
-
+    count.addEventListener ('click', exchangeColor)
+    function exchangeColor (event) {
+        if (count.className = 'color') {
+            event.target.className = 'color selected'
+        } else {
+            event.target.className = 'color';
+        }
+    }
+}
 
 
 
