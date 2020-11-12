@@ -1,28 +1,28 @@
 // Paleta de cores 
-    function createPallete() {
-    let sq = document.getElementById('color-pallete');
+    function createpalette() {
+    let square = document.getElementById('color-palette');
         for(index = 0; index < 4; index++){
-            let pallete = document.createElement('div');
-            pallete.className = 'color';
-            sq.appendChild(pallete);
+            let palette = document.createElement('div');
+            palette.className = 'color';
+            square.appendChild(palette);
         }
     }
 
-createPallete();
+createpalette();
 
 // Cores da paleta
-document.querySelector('#color-pallete').children[0].style.backgroundColor = '#000';
-document.querySelector('#color-pallete').children[1].style.backgroundColor = '#255';
-document.querySelector('#color-pallete').children[2].style.backgroundColor = '#64f';
-document.querySelector('#color-pallete').children[3].style.backgroundColor = '#0ff';
+document.querySelector('#color-palette').children[0].style.backgroundColor = '#000';
+document.querySelector('#color-palette').children[1].style.backgroundColor = '#255';
+document.querySelector('#color-palette').children[2].style.backgroundColor = '#64f';
+document.querySelector('#color-palette').children[3].style.backgroundColor = '#0ff';
 
 
 
 
 // Pixel - Board 
-    function createSq() {
+    function createSquare() {
 
-    let sq = document.getElementById('pixel-board');
+    let square = document.getElementById('pixel-board');
 
         for (index = 0; index < 5; index++){
 
@@ -34,22 +34,33 @@ document.querySelector('#color-pallete').children[3].style.backgroundColor = '#0
                 pixel.className = 'pixel';
                 column.appendChild(pixel);
             }
-        sq.appendChild(column)
+        square.appendChild(column)
         }
     }
 
-createSq();
+createSquare();
 
 
 // Variavel que armazena cor para pintar o quadro
-var masterColor = 'black';
+var masterColor = '#000';
+
+
+// Selected começando no Black
+
+document.querySelector('#color-palette').children[0].classList.toggle('selected');
 
 // Selecionando a cor na paleta
 addEventListener('click', function (event){
     if (event.target.className === 'color'){
        masterColor = event.target.style.backgroundColor;
+       event.target.classList.toggle('selected');
+    } else if (event.target.className === 'color selected'){
+        event.target.className = 'color';
     }
 })
+
+
+
 
 // Inserindo cor no quadro 
 addEventListener('click', function (event){
@@ -59,6 +70,6 @@ addEventListener('click', function (event){
 })
 
 // limpar quadro 
-document.getElementById('clear').addEventListener('click', function () {
+document.getElementById('clear-board').addEventListener('click', function () {
     window.history.go(0)
 })
