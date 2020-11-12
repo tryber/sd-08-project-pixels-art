@@ -27,6 +27,14 @@ for (let index = 1; index <= 25; index += 1) {
     captureIdPixelBoard.appendChild(createIdPixel);
 }
 
+//requisito 6
+const captureColor = document.getElementsByClassName('color');
+for (let index = 0; index < captureColor.length; index += 1 ) {
+    let select = captureColor[index];
+        if (select.style.backgroundColor === 'black') {
+            select.className = 'color selected';
+        }
+}
 
 
 
