@@ -22,17 +22,33 @@ function pixelBoard () {
 }
 pixelBoard();
 
-function selectColor() {
-    let children = document.getElementById('color-palette').children;
-    let palette = document.getElementById('color-palette');
-    palette.addEventListener('click', function(event) {
-        for (let index = 0; index < children.clientHeight; index++) {
-            if(children[index] === event.target) {
-                event.target.className = 'color selected';
-            } else {
-                children[index].className = 'color';
-            }
+let ulColor = document.querySelector("#color-palette");
+let color = ulColor.childNodes;
+
+function removeSelected(){
+    for (let index=0; index<color.length; index++){
+        if (color[index].className == "color selected"){
+            color[index].className = "color";
         }
+    }
+}
+
+function addSelected(){    
+    ulColor.addEventListener("click", function(event){                     
+            removeSelected();            
+            event.target.className = "color selected";       
+
+    });     
+}
+addSelected();
+
+let ulPixel = document.querySelector("#pixel-board");
+
+function colorPixel(){    
+    ulPixel.addEventListener("click", function(event){        
+        let colorSelect = document.querySelector(".color.selected").style.backgroundColor;        
+        event.target.style.backgroundColor = colorSelect;       
     });
 }
-selectColor();
+colorPixel();
+
