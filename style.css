@@ -6,3 +6,13 @@
     margin-right: 5px;
 
 }
+
+.pixel {
+    border: black solid 1px;
+    height: 40px;
+    width: 40px;
+}
+
+#pixel-board {
+    border-collapse: collapse;
+}
