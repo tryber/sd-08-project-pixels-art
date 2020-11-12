@@ -21,19 +21,32 @@ function colors (){
 }
 colors ();
 
-//Requisito 4
+//Requisito 4 e 5
 function createBoard() {
     let board = document.getElementById("pixel-board");
     
 
-    for (let index = 0; index < 5; index += 1){
-        let pixel = document.createElement("div");
+    for (let index = 0; index < 5; index += 1) {
+        let div = document.createElement("div");
         div.className = "pixel";
         board.appendChild(div);
-    }
 
+        for(let index = 0; index < 5; index += 1) {
+            let div = document.createElement("div");
+            div.className = "pixel-coloumn";
+            board.appendChild(div);
+        }
+  }  
 }
 createBoard();
 
-//Requisito 5
-//function 
+//Requisito 6
+function mousePaint(){
+    let select = document.querySelectorAll(".color");
+    
+
+
+
+
+
+}
