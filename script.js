@@ -55,24 +55,28 @@ let generateBoard = document.getElementById('generate-board');
 let pixelBoard = document.getElementById('pixel-board');
 
     generateBoard.addEventListener('click',function(){ 
-        let itens = document.getElementById('pixel-board');
+        let value = document.getElementById('board-size').value;
+        if(value === ''){
+            alert('Board inválido!')
+        }else{
+            let itens = document.getElementById('pixel-board');
         while (itens.hasChildNodes()) {  
             itens.removeChild(itens.firstChild);
           };
-        let value = document.getElementById('board-size').value;
-        for(let i = 0; i < value; i += 1){
-            let createTR = document.createElement('tr');
-            pixelBoard.appendChild(createTR);
-        };
-        let trLength = document.querySelectorAll('tr');
-        for(let j = 0; j < trLength.length; j += 1){
-            for(let k = 0; k < value; k += 1){
-                let createTD = document.createElement('td');
-                createTD.className = 'pixel';
-                trLength[j].appendChild(createTD);
+            for(let i = 0; i < value; i += 1){
+                let createTR = document.createElement('tr');
+                pixelBoard.appendChild(createTR);
             };
-        };
-        colorindoPixels();
+            let trLength = document.querySelectorAll('tr');
+            for(let j = 0; j < trLength.length; j += 1){
+                for(let k = 0; k < value; k += 1){
+                    let createTD = document.createElement('td');
+                    createTD.className = 'pixel';
+                    trLength[j].appendChild(createTD);
+                };
+            };
+            colorindoPixels();
+        }
     });
 
     
