@@ -272,7 +272,7 @@ function limpabotao(){
 
             pegapixels[i].style.backgroundColor = "white"
 
-            
+            pegapixels[i].style.border = "white"
 
 
 
