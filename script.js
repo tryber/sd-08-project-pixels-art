@@ -244,32 +244,48 @@ paintpallete()
 */   
 
 
-function criabotao(){
+function limpabotao(){
 
     let pegaposicaobotao = document.querySelector("#divbotao")
-    let pegaposicaopixels = document.querySelectorAll(".pixel")
+    
     let criabotao = document.createElement("button")
-    criabotao.tagName= "clear-board"
+    criabotao.id= "clear-board"
     criabotao.innerHTML = "Limpar"
-    criabotao.addEventListener("click", function(){
+    pegaposicaobotao.appendChild(criabotao)
+    
+   
+   }
+    limpabotao()
 
-for(let i = 0 ; i < pegaposicaopixels.length ; i ++)
+    function addfunctilimpar(){
+
+        let pegalimpar = document.querySelector("#clear-board")
+       
+        let pegapixels = document.querySelectorAll(".pixel")
+       
+       
+       
+       pegalimpar.addEventListener("click", function(){
+       
+       
+        for(let i = 0 ; i < pegapixels.length ; i++){
+
+            pegapixels[i].style.backgroundColor = "white"
+
+            
 
 
 
-    pegaposicaopixels[i].style.backgroundColor ="white"
+        }
 
-
-
-})
-
-
-pegaposicaobotao.appendChild(criabotao)
-
-
+        })
 
     }
-criabotao()
+
+    addfunctilimpar()
+  
+   
+   
 
     
 
