@@ -71,7 +71,3 @@ label {
 #generate-board:hover {
   background-color: #aaa;
 }
-.selected {
-    transform: scale(0.7);
-    /* https://developer.mozilla.org/pt-BR/docs/Web/CSS/transform-function/scale */
-}
