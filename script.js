@@ -37,13 +37,25 @@ function handleSelected(event) {
     }
     event.target.classList.add('selected');
 }
-
-function setColorSelected() {
-    const colorSelected = document.querySelectorAll('.color');
-    for (let index = 0; index < colorSelected.length; index += 1) {
-        const currentColor = colorSelected[index];
-        currentColor.addEventListener('click', handleSelected)
+ 
+function setEventColor() {
+    const buttonClass = document.querySelectorAll('.color');
+    for (let index = 0; index < buttonClass.length; index += 1) {
+        const currentButtonClas = buttonClass[index];
+        currentButtonClas.addEventListener('click', handleSelected)
     }
 }
-setColorSelected();
+setEventColor();
 
+function paintPixel(event) {
+    const insertColor = document.querySelector('.selected').style.backgroundColor;
+    event.target.style.background = insertColor;
+}
+
+function includesEvent() {
+    const pixelClass = document.querySelectorAll('.pixel');
+    for (let numberOfPixels = 0; numberOfPixels < pixelClass.length; numberOfPixels += 1) {
+        pixelClass[numberOfPixels].addEventListener('click', paintPixel);
+    }
+}
+includesEvent();

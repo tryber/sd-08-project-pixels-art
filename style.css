@@ -28,8 +28,8 @@ body {
 /* color palette style */
 #color-palette {
     display: flex;
-    margin-top: 2em;
     justify-content: center;
+    margin-top: 2em;
 }
 
 .color {
