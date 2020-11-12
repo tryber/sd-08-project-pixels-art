@@ -10,7 +10,7 @@ function createPaleteColorEle(){
     if (i === 0) {
     
         createele.style.backgroundColor = "black"
-        createele.className = "color selected"
+        createele.className = "color selected "
       
        
         
@@ -366,22 +366,22 @@ for(let i =0 ; i < pegaposicaok.length ; i ++ ){
 
 
 
-
-
-
-
-
-
-    // event.target para pegar o background colo
-
-
 let getposicaocolor = document.getElementsByClassName("color") ;
+
+
+
+
 
 function alternaclasse(){
 
+    
+
+   
     for(let i of getposicaocolor){
+        
 
        i.addEventListener("click", AdicionarRemover) ;
+       
 
 
 
@@ -398,7 +398,13 @@ alternaclasse()
 
 
 function AdicionarRemover(event){
+   
+   
+    
+   
     for(let index = 0 ; index < getposicaocolor.length ; index ++ ){
+       
+
 
 getposicaocolor[index].classList.remove("selected");
 getposicaocolor[index] = event.target.classList.add("selected") ;
