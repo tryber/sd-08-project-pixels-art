@@ -58,7 +58,10 @@ let pixelBoard = document.getElementById('pixel-board');
         let value = document.getElementById('board-size').value;
         if(value === ''){
             alert('Board inválido!')
-        }else{
+        }else if(value <= 0 || value > 50){
+            alert('Escolha um número maior que 0 e menor que 50')
+        }
+        else{
             let itens = document.getElementById('pixel-board');
         while (itens.hasChildNodes()) {  
             itens.removeChild(itens.firstChild);
