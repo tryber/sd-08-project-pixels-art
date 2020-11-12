@@ -92,16 +92,22 @@ function paintPixel(pixel) {
   pixel.style.backgroundColor = selectedColor.style.backgroundColor;
 }
 
-function capturaEvento(elementoHTML, tipoDeEvento, acaoDoEvento) {
+function capturaEvento(elementoHTML, tipoDeEvento, acaoDoEvento, filhoSomente = false) {
   const elementoPai = document.getElementById(elementoHTML);
   elementoPai.addEventListener(tipoDeEvento, (eventoDisparado) => {
-    acaoDoEvento(eventoDisparado.target);
+    if (filhoSomente) {
+      if (eventoDisparado.target !== elementoPai) {
+        acaoDoEvento(eventoDisparado.target);
+      }
+    } else {
+      acaoDoEvento(eventoDisparado.target);
+    }
   });
 }
 
 capturaEvento('generate-board', 'click', validityInput);
-capturaEvento('color-palette', 'click', selectColor);
-capturaEvento('pixel-board', 'click', paintPixel);
+capturaEvento('color-palette', 'click', selectColor, true);
+capturaEvento('pixel-board', 'click', paintPixel, true);
 capturaEvento('clear-board', 'click', clearBoard);
 capturaEvento('novas-cores', 'click', generateColors);
 
