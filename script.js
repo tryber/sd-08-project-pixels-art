@@ -32,32 +32,13 @@ function creatColorsOptions() {
   }
 }
 
-
-function allWhite() {
-  const pixels = document.querySelectorAll('div');
-  for (let i = 0; i < pixels.length; i += 1) {
-    pixels[i].style.backgroundColor = 'white';
-  }
-}
-
-function clearBoard() {
-  const button = document.getElementById('clear-board');
-  button.innerHTML = 'Limpar';
-  button.addEventListener('click', allWhite);
-}
-
-function colorToBePainted() {
-  const colorSelected = document.querySelector('.selected').style.backgroundColor;
-  return colorSelected;
-}
-
-function creatPixelBoard() {
+function creatPixelBoard(n) {
   const board = document.getElementById('pixel-board');
-  for (let i = 0; i < 5; i += 1) {
+  for (let i = 0; i < n; i += 1) {
     const pixelsLine = document.createElement('div');
     pixelsLine.className = 'line';
     board.appendChild(pixelsLine);
-    for (let i2 = 0; i2 < 5; i2 += 1) {
+    for (let i2 = 0; i2 < n; i2 += 1) {
       const pixels = document.createElement('div');
       pixels.classList.add('pixel');
       pixels.addEventListener('click', () => {
@@ -68,9 +49,47 @@ function creatPixelBoard() {
   }
 }
 
+function sizeOfTheBoard() {
+  let inputData = document.getElementById('#board-size').childNodes[0].nodeName;
+  let chosenNumber = parseInt(inputData);
+  console.log(inputData);
+  return chosenNumber;
+}
+
+function boardGenerator() {
+  const createBoardButton = document.querySelector('#generate-board');
+  createBoardButton.addEventListener('click', () => {
+    let size = sizeOfTheBoard();
+    if (size < 1 || size > 50) {
+      return alert('Board inválido!');
+    } else {
+    creatPixelBoard(size);
+    }
+  });
+}
+
+function allPixelsBckGroundWhite() {
+  const pixels = document.querySelectorAll('.pixel');
+  for (let i = 0; i < pixels.length; i += 1) {
+    pixels[i].style.backgroundColor = 'white';
+  }
+}
+
+function clearBoard() {
+  const button = document.getElementById('clear-board');
+  button.innerHTML = 'Limpar';
+  button.addEventListener('click', allPixelsBckGroundWhite);
+}
+
+function colorToBePainted() {
+  const colorSelected = document.querySelector('.selected').style.backgroundColor;
+  return colorSelected;
+}
+
 
 window.onload = function () {
-  creatColorsOptions();
+  boardGenerator();
   clearBoard();
-  creatPixelBoard();
+  creatColorsOptions();
+  creatPixelBoard(5);
 };
