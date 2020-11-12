@@ -1,0 +1,34 @@
+.color-palette {
+  list-style: none;
+}
+
+.color {
+  border: solid black 1px;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  display: table-cell;
+  height: 40px;
+  width: 40px;
+}
+
+.pixel-board {
+  display: table;
+}
+
+.pixel-row {
+  display: table-row;
+}
+
+.board-size {
+  width: 3em;
+}
+
+.selected {
+  box-shadow: 0 4px 5px gold;
+}
