@@ -1,5 +1,5 @@
 
-const colors = [ 'rgb(0,0,0)', 'rgb( 214 , 40 , 40 )' , 'rgb( 247 , 127 , 0 )' , 'rgb( 252 , 191 , 73 )' ];
+const colors = [ 'rgb( 0 , 0 , 0 )', 'rgb( 214 , 40 , 40 )' , 'rgb( 247 , 127 , 0 )' , 'rgb( 252 , 191 , 73 )' ];
 const colorPalette = document.querySelectorAll('.color');
 let colorSelected = 'rgb(0,0,0)';
 
@@ -29,12 +29,12 @@ function clearBoard() {
   }
 }
 
-function paintPalette() {
-  for (let index in colorPalette) {
-    colorPalette[index].style.backgroundColor = colors[index];
-    colorPalette[index].addEventListener('click', selectColor);
-  }
-}
+// function paintPalette() {
+//   for (let index in colorPalette) {
+//     colorPalette[index].style.backgroundColor = colors[index];
+//     colorPalette[index].addEventListener('click', selectColor);
+//   }
+// }
 
 function selectColor(event) {
   colorSelected = event.target.style.backgroundColor;
@@ -42,4 +42,4 @@ function selectColor(event) {
   event.target.classList.add('selected');
 }
 
-paintPalette()
+// paintPalette()
