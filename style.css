@@ -21,16 +21,18 @@
     height: 40px;
     border: 1px solid black;
 }
-
+#clear-board
+{
+    padding: 8px;
+}
 #board-size
 {
-    display: inline;
     width: 40px;
+    margin-left: 50px;
 }
 
 #generate-board
 {
-    display: inline;
-    margin-left: 53px;
+    margin-left: 0px;
     margin-bottom: 5px;
 }

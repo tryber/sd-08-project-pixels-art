@@ -1,4 +1,18 @@
+let colors = ["black"]
+// document.getElementsByClassName("color")
+function getRandom(max)
+{
+    return Math.floor(Math.random() * max + 1);
+}
 
+function colorsRGB()
+{
+    for(let i = 1; i < 4; i += 1)
+    {
+        colors[i] = "rgb(" + getRandom(255) + "," + getRandom(255) + "," + getRandom(255) + ")";
+    }
+}
+colorsRGB();
 
 // adiciona color-palette
 function createElements(nome)
@@ -6,16 +20,15 @@ function createElements(nome)
     let div = document.createElement("div");
     div.className="color";
     if(nome === "black")
-        div.className = "color selected"
+        div.className = "color selected";
     document.getElementById("color-palette").appendChild(div);
-    div.id = nome;
     div.style.backgroundColor = nome;
 }
-createElements("black");
-createElements("red");
-createElements("blue");
-createElements("green");
 
+for(let c = 0; c < 4; c += 1)
+{
+    createElements(colors[c]);
+}
 
 //adiciona quadro de 5x5 pixels
 let boardSize = 5;
@@ -61,17 +74,21 @@ for(let i of findColor)
 // colorir quadro clicado
 let findPixel = document.getElementsByClassName("pixel");
 
-for(let p of findPixel)
+function clickPixel()
 {
-
-    p.addEventListener("click", function()
+    for(let p of findPixel)
     {
-        let para = document.getElementsByClassName('selected')[0];
-        let compStyles = window.getComputedStyle(para);
-        this.style.backgroundColor = compStyles.getPropertyValue('background-color');
-    })
+
+        p.addEventListener("click", function()
+        {
+            let para = document.getElementsByClassName('selected')[0];
+            let compStyles = window.getComputedStyle(para);
+            this.style.backgroundColor = compStyles.getPropertyValue('background-color');
+        })
+    }
 }
 
+clickPixel();
 // clear button
 document.getElementById("clear-board").addEventListener("click", clearPixel)
 
@@ -109,6 +126,7 @@ document.getElementById("generate-board").addEventListener("click", function()
     }
     clearboard(document.getElementById("pixel-board"))
     generateBoard(x);
+    clickPixel();
 
 })
 
@@ -133,8 +151,8 @@ document.getElementById("generate-board").addEventListener("click", function()
 
 
 
-
-
+// https://www.freecodecamp.org/news/javascript-math-random-method-explained/
+// https://cibersistemas.pt/tecnologia/como-usar-javascript-math-random-como-gerador-de-numeros-aleatorios/#:~:text=random()%20m%C3%A9todo%20para%20criar,%2B%201))%20%2B%20min%3B%20%7D%3B
 // https://developer.mozilla.org/en-US/docs/Web/API/Window/getComputedStyle
 // https://www.youtube.com/watch?v=kmW857my2fo
 // https://www.w3schools.com/js/tryit.asp?filename=tryjs_button_value
