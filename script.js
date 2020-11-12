@@ -343,17 +343,12 @@ for(let i =0 ; i < pegaposicaok.length ; i ++ ){
     // so apos ter atribuido um valor a cor anterior mente quando clicado na palleta e q ele ira resgatar o valor da cor e aplicar no quadrado
     pegapixels[i].addEventListener("click", function(event){
         let pegaselected = document.querySelector(".selected")
-    let color = pegaselected.style.backgroundColor
+        let color = pegaselected.style.backgroundColor
        
        event.target.style.backgroundColor = color
     
 
-        
-
-
-
-
-
+    
     })
 
 
@@ -367,9 +362,6 @@ for(let i =0 ; i < pegaposicaok.length ; i ++ ){
 
 
 let getposicaocolor = document.getElementsByClassName("color") ;
-
-
-
 
 
 function alternaclasse(){
