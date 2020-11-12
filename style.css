@@ -50,12 +50,14 @@
     bottom: 86px;
 }
 
-.canvas {
+#pixel-board {
     width: 240px;
     height: 200px;
+    position: relative;
+    bottom: 50px;
 }
 
-.pixels {
+.pixel {
     width: 40px;
     height: 40px;
     float: left;
