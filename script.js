@@ -103,6 +103,7 @@ capturaEvento('generate-board', 'click', validityInput);
 capturaEvento('color-palette', 'click', selectColor);
 capturaEvento('pixel-board', 'click', paintPixel);
 capturaEvento('clear-board', 'click', clearBoard);
+capturaEvento('novas-cores', 'click', generateColors);
 
 window.onload = () => {
   generateColors();
