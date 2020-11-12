@@ -10,7 +10,7 @@ function createPaleteColorEle(){
     if (i === 0) {
     
         createele.style.backgroundColor = "black"
-        createele.className = "color selected "
+        createele.className = "color selected"
       
        
         
@@ -363,7 +363,6 @@ for(let i =0 ; i < pegaposicaok.length ; i ++ ){
 
 let getposicaocolor = document.getElementsByClassName("color") ;
 
-
 function alternaclasse(){
 
     
@@ -383,11 +382,11 @@ function alternaclasse(){
     }
 
 
-
+    
 
 alternaclasse()
 
-getposicaocolor[0].classList.classList.add("selected")
+getposicaocolor[0].classList.add("selected")
 
 function AdicionarRemover(event){
    
@@ -396,14 +395,14 @@ function AdicionarRemover(event){
     for(let index = 0 ; index < getposicaocolor.length ; index ++ ){
        
     
-getposicaocolor[index].classList.remove("selected");
-getposicaocolor[index] = event.target.classList.add("selected") ;
+        getposicaocolor[index].classList.remove("selected");
+
 
     }
-
+    event.target.classList.add("selected");
 }
 
-AdicionarRemover()
+
 
 
 
