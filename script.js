@@ -22,3 +22,18 @@ function colors (){
 colors ();
 
 //Requisito 4
+function createBoard() {
+    let board = document.getElementById("pixel-board");
+    
+
+    for (let index = 0; index < 5; index += 1){
+        let pixel = document.createElement("div");
+        div.className = "pixel";
+        board.appendChild(div);
+    }
+
+}
+createBoard();
+
+//Requisito 5
+//function 
