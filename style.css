@@ -10,19 +10,19 @@
     display: inline-block;
 }
 
-#color1 {
+#black {
     background-color: black;
 }
 
-#color2 {
+#red {
     background-color: red;
 }
 
-#color3 {
+#blue {
     background-color: blue;
 }
 
-#color4 {
+#green {
     background-color: green;
 }
 
@@ -38,4 +38,8 @@
     display: inline-block;
     background-color: white;
     margin: -1px;
+}
+
+.selected {
+    
 }
