@@ -60,9 +60,9 @@ let valueField = document.querySelector("#board-size");
 generateBoard.addEventListener("click", () => {
   if (Number(valueField.value) >= 5 && Number(valueField.value) <= 50) {
     createPixels(Number(valueField.value));
+  } else if (valueField.value == "") {
+    alert("Board inválido!");
   }
-
-  valueField.value = "";
   startGame();
 });
 

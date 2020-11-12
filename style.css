@@ -1,83 +1,77 @@
 * {
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-body{
-    text-align: center;
-    background: #ccc
+body {
+  text-align: center;
+  background: #ccc;
 }
-.p-color{
-    background-color:black;
+.p-color {
+  background-color: black;
 }
-.s-color{
-    background:blue;
+.s-color {
+  background: blue;
 }
-.t-color{
-    background: cyan;
+.t-color {
+  background: cyan;
 }
-.f-color{
-    background:brown;
+.f-color {
+  background: brown;
 }
-.color{
-    width:50px;
-    height: 50px;
-    border:1px solid black;
-    display: inline-block;
+.color {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  display: inline-block;
 }
-
-#pixel-board{
-    border-collapse: collapse;
-    margin: 30px auto;
+#pixel-board {
+  border-collapse: collapse;
+  margin: 30px auto;
 }
-
-.pixel{
-    width:40px;
-    height: 40px;
-    border:1px solid black;
-    padding: 0;
-    background:white;
+.pixel {
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  padding: 0;
+  background: white;
 }
-
 #clear-board {
-    width:100px;
-    padding:5px;
-    border-radius: 10px;
-    outline: none;
+  width: 100px;
+  padding: 5px;
+  border-radius: 10px;
+  outline: none;
 }
-
 #generate-board {
-    width:70px;
-    border-radius: 5px;
-    padding:2px;
-    text-align: center;
-    border:1px solid black;
+  width: 70px;
+  border-radius: 5px;
+  padding: 2px;
+  text-align: center;
+  border: 1px solid black;
 }
-
-
 #clear-board {
-    display:block;
-    margin:20px auto;
-    border:0px;
+  display: block;
+  margin: 20px auto;
+  border: 0px;
 }
-
 label {
-    display: block;
+  display: block;
 }
-
-#generate-board, #board-size {
-    display: inline-block;
-    margin: 10px 10px 0 0;
-}
-
+#generate-board,
 #board-size {
-    width:100px;
-    outline: none;
-    border: 1px solid black;
+  display: inline-block;
+  margin: 10px 10px 0 0;
 }
-
-
-#clear-board:hover, #generate-board:hover {
-    background-color:#aaa;
+#board-size {
+  width: 100px;
+  outline: none;
+  border: 1px solid black;
+}
+#clear-board:hover,
+#generate-board:hover {
+  background-color: #aaa;
+}
+.selected {
+    transform: scale(0.7);
+    /* https://developer.mozilla.org/pt-BR/docs/Web/CSS/transform-function/scale */
 }
