@@ -30,7 +30,8 @@
 
 #pixel-board {
     position: absolute;
-    top: 200px;
+    top: 250px;
+    left: 85px;
     display: inline-block;
     border-style: solid;
     border-width: 1px;
@@ -49,4 +50,10 @@ border-style: solid;
 border-width: 1px;
 display: table-cell;
 background-color: white;
+}
+
+#clear-board {
+position: absolute;
+top: 200px;
+left: 160px;
 }
