@@ -16,13 +16,17 @@ function selector (event) {
 const palette = document.getElementById('color-palette');
 palette.addEventListener('click', selector);
 
-function paintPixel() {
-    const pixelSelected = document.querySelectorAll(".pixel");
-    for (let index = 0; index < pixelSelected.length; index += 1) {
-      pixelSelected[index].addEventListener("click", function (event) {
-        let colorCurrent = document.querySelector(".selected").style.backgroundColor;
-        event.target.style.backgroundColor = colorCurrent;
-      });
+const buttonClear = document.getElementById('clear-board');
+
+function pixelClear () {
+    const pixels = document.getElementsByClassName('pixel');
+    
+    for (let i = 0; i < pixels.length; i++) {
+        pixels[i].style.backgroundColor = "white";
     }
-  }
-  paintPixel();
+
+      
+}
+
+buttonClear.addEventListener('click', pixelClear);
+
