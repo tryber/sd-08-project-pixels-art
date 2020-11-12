@@ -40,3 +40,8 @@
 #but{
   display: inline-block;
 }
+.color{
+  display: inline-block;
+  border: 1px solid;
+  padding: 40px;
+}

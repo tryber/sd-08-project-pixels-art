@@ -87,4 +87,18 @@ let pixelBoard = document.getElementById('pixel-board');
         }
     });
 
-    
+    function getRandomColor() {
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+          color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+      }//https://stackoverflow.com/questions/1484506/random-color-generator
+      
+      window.onload = function corRanom(){
+        let cor = document.querySelectorAll('.color')
+        for(i = 1; i < cor.length; i +=1){
+            cor[i].style.backgroundColor = getRandomColor()
+        }
+      }
