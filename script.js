@@ -5,7 +5,12 @@ window.onload = function () {
 
 function color() {
     let colors = ['black','blue','yellow','green'];
-    //rgb((Math.random()*255),(Math.random()*255),(Math.random()*255))
+    for (let i = 1; i < 4; i += 1) {
+        let randomNumber = Math.random()*255;
+        let randomNumber2 = Math.random()*255;
+        let randomNumber3 = Math.random()*255;
+        colors[i] = 'rgb(' + randomNumber + ',' + randomNumber2 + ',' + randomNumber3 + ')';
+    }
     for (let i in colors) {
         let spot = document.createElement('li');
         spot.classList = 'color';
