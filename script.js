@@ -16,15 +16,22 @@ function selector (event) {
 const palette = document.getElementById('color-palette');
 palette.addEventListener('click', selector);
 
+
+
+
+
+
+
 const buttonClear = document.getElementById('clear-board');
 
 function pixelClear () {
-    const pixels = document.querySelectorAll('.pixel').forEach((pixel) => {
-        pixel.style.backgroundColor = 'white';
-      }
-    ) 
     
+ const pixels = document.getElementsByClassName('pixel');
 
+
+ for (let i = 0; i < pixels.length; i++) {
+    pixels[i].style.backgroundColor = "white";
+ }
       
 }
 
