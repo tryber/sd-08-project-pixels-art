@@ -58,14 +58,19 @@ let pixelBoard = document.getElementById('pixel-board');
         let value = document.getElementById('board-size').value;
         if(value === ''){
             alert('Board inválido!')
-        }else if(value <= 0 || value > 50){
-            alert('Escolha um número maior que 0 e menor que 50')
+        }else if(value <= 0){
+            alert('Escolha um número maior que 0.')
         }
         else{
             let itens = document.getElementById('pixel-board');
         while (itens.hasChildNodes()) {  
             itens.removeChild(itens.firstChild);
           };
+          if(value >= 1 && value <= 4){
+            value = 5
+        }else if(value > 50){
+            value = 50
+        };
             for(let i = 0; i < value; i += 1){
                 let createTR = document.createElement('tr');
                 pixelBoard.appendChild(createTR);
