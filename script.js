@@ -1,3 +1,8 @@
+window.onload = function () {
+    let loadColor = document.querySelector('.color');
+    loadColor.classList = 'color selected';
+}
+
 //requisito 2 - criando as 4 divs 'color'
 const captureDivColorPalette = document.getElementById('color-palette')
 for (let index = 0; index <= 3; index += 1) {
@@ -28,6 +33,7 @@ for (let index = 1; index <= 25; index += 1) {
     captureIdPixelBoard.appendChild(createIdPixel);
 }
  
+
 
 
 
