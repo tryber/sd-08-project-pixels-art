@@ -30,7 +30,7 @@ function pixelClear () {
 
 
  for (let i = 0; i < pixels.length; i++) {
-    pixels[i].style.backgroundColor = "rgb(255, 255, 255)";
+    pixels[i].style.backgroundColor = "rgb(0, 128, 0)";
  }
       
 }
