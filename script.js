@@ -23,10 +23,11 @@ function colorindoPixels(){
     let pixel = document.querySelectorAll('.pixel')
     for(i = 0; i < pixel.length; i += 1){
         let pick = pixel[i]
-        pick.addEventListener('click', function(){
+        pick.addEventListener('click', function(event){
             let selected = document.querySelector('.selected').id
-            if(pick.style.backgroundColor !== null)
-            pick.style.backgroundColor = selected
+            /*if(pick.style.backgroundColor !== null)
+            pick.style.backgroundColor = selected*/
+            event.target.style.backgroundColor = selected
         })
     }   
 }
@@ -49,3 +50,29 @@ function createButton(){
     })
 }
 createButton()
+
+let generateBoard = document.getElementById('generate-board');
+let pixelBoard = document.getElementById('pixel-board');
+
+    generateBoard.addEventListener('click',function(){ 
+        let itens = document.getElementById('pixel-board');
+        while (itens.hasChildNodes()) {  
+            itens.removeChild(itens.firstChild);
+          };
+        let value = document.getElementById('board-size').value;
+        for(let i = 0; i < value; i += 1){
+            let createTR = document.createElement('tr');
+            pixelBoard.appendChild(createTR);
+        };
+        let trLength = document.querySelectorAll('tr');
+        for(let j = 0; j < trLength.length; j += 1){
+            for(let k = 0; k < value; k += 1){
+                let createTD = document.createElement('td');
+                createTD.className = 'pixel';
+                trLength[j].appendChild(createTD);
+            };
+        };
+        colorindoPixels();
+    });
+
+    

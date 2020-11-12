@@ -36,3 +36,7 @@
 #pixel-board{
     background-color: white;
 }
+
+#but{
+  display: inline-block;
+}
