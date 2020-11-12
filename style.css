@@ -1,0 +1,47 @@
+#black {
+  background-color: black;
+  display: inline-block;
+  border: 1px solid;
+  padding: 40px;
+}
+
+#blue {
+  background-color: blue;
+  display: inline-block;
+  border: 1px solid;
+  padding: 40px;
+}
+
+#red {
+  background-color: red;
+  display: inline-block;
+  border: 1px solid;
+  padding: 40px;
+}
+
+#green{
+  background-color: green;
+  display: inline-block;
+  border: 1px solid;
+  padding: 40px;
+}
+
+.pixel{
+  border: 1px solid black;
+  width: 40px;
+  height: 40px; 
+  background-color: white;
+}
+
+#pixel-board{
+    background-color: white;
+}
+
+#but{
+  display: inline-block;
+}
+.color{
+  display: inline-block;
+  border: 1px solid;
+  padding: 40px;
+}
