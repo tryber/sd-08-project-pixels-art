@@ -1,6 +1,6 @@
 window.onload = function () {
-    let initialColor = document.getElementsByTagName('button')[0];
-    initialColor.className = 'color selected'
+    const initialColor = document.getElementsByTagName('button')[0]
+    initialColor.className = 'color selected';
 };
 
 //  Criação da paleta de 4 cores
@@ -22,7 +22,7 @@ for (let i = 0; i < elementNum; i += 1) {
     for (let j = 0; j < elementNum; j += 1) {
         const div = document.createElement('div');
         div.className = 'pixel';
-        div.style.backgroundColor = 'rgb(255, 255, 255)'
+        div.style.backgroundColor = 'rgb(255, 255, 255)';
         pixelContainer.appendChild(div);
     }
 }
@@ -30,20 +30,20 @@ for (let i = 0; i < elementNum; i += 1) {
 
 // Requisito
 
-function handleSelected (event) {
-    const setColorSelected = document.querySelectorAll('.selected')
+function handleSelected(event) {
+    let setColorSelected = document.querySelectorAll('.selected');
     for (let index = 0; index < setColorSelected.length; index += 1) {
-        setColorSelected[index].classList.remove('selected')
+        setColorSelected[index].classList.remove('selected');
     }
-    event.target.classList.add('selected')
-    
+    event.target.classList.add('selected');
 }
 
- function setColorSelected() {
+function setColorSelected() {
     const colorSelected = document.querySelectorAll('.color');
     for (let index = 0; index < colorSelected.length; index += 1) {
         const currentColor = colorSelected[index];
-        currentColor.addEventListener('click', handleSelected )
+        currentColor.addEventListener('click', handleSelected)
     }
- }
-setColorSelected()
+}
+setColorSelected();
+
