@@ -19,11 +19,11 @@ palette.addEventListener('click', selector);
 const buttonClear = document.getElementById('clear-board');
 
 function pixelClear () {
-    const pixelss = document.getElementsByClassName('pixel');
+    const pixels = document.querySelectorAll('.pixel').forEach((pixel) => {
+        pixel.style.backgroundColor = 'white';
+      }
+    ) 
     
-    for (let i = 0; i < pixels.length; i++) {
-        pixelss[i].style.backgroundColor = "white";
-    }
 
       
 }
