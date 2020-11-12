@@ -24,7 +24,7 @@ function colorindoPixels(){
     for(i = 0; i < pixel.length; i += 1){
         let pick = pixel[i]
         pick.addEventListener('click', function(event){
-            let selected = document.querySelector('.selected').id
+            let selected = document.querySelector('.selected').style.backgroundColor
             /*if(pick.style.backgroundColor !== null)
             pick.style.backgroundColor = selected*/
             event.target.style.backgroundColor = selected
@@ -98,6 +98,7 @@ let pixelBoard = document.getElementById('pixel-board');
       
       window.onload = function corRanom(){
         let cor = document.querySelectorAll('.color')
+        cor[0].style.backgroundColor = 'black'
         for(i = 1; i < cor.length; i +=1){
             cor[i].style.backgroundColor = getRandomColor()
         }
