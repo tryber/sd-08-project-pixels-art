@@ -1,0 +1,28 @@
+* {
+    margin: 5px;
+}
+
+#color-palette li {
+    display: inline-block;
+    height: 45px;
+    width: 45px;
+    border: 1px solid black;
+    margin: 2px;
+}
+
+.pixel {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    border: 1px solid black;
+    margin: 0;
+    line-height: 0;   
+}
+
+#clear-board {
+    margin: 5px;
+}
+
+#pixel-board div{
+    line-height: 0px;
+}
