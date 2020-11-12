@@ -1,8 +1,3 @@
-window.onload = function () {
-    const loadColor = document.querySelectorAll('.color');
-    loadColor.classList = 'color selected';
-}
-
 //requisito 2 - criando as 4 divs 'color'
 const captureDivColorPalette = document.getElementById('color-palette')
 for (let index = 0; index <= 3; index += 1) {
@@ -31,21 +26,7 @@ for (let index = 1; index <= 25; index += 1) {
     createIdPixel.className = 'pixel';
     captureIdPixelBoard.appendChild(createIdPixel);
 }
-//requisito 7 -
-//a ideia é fazer um laço/ 
-const captureClassColor = document.querySelectorAll('.color');
-for (let index = 0; index < captureClassColor.length; index += 1) {
-    const count = captureClassColor[index];
 
-    count.addEventListener ('click', exchangeColor)
-    function exchangeColor (event) {
-        if (count.className = 'color') {
-            event.target.className = 'color selected'
-        } else {
-            event.target.className = 'color';
-        }
-    }
-}
 
 
 
