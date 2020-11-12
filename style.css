@@ -1,6 +1,5 @@
 #color-palette {
-
-   }
+}
 
 #title {
     font-family: fantasy;    
@@ -28,4 +27,7 @@
     border: 1px solid black;
     background-color: white;
 }
-    
+
+.selected {
+
+}
