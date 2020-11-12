@@ -1,0 +1,38 @@
+#title
+{
+    font-family: Shiny Signature;
+}
+
+#color-palette .color
+{
+    width: 30px;
+    height: 30px;
+    margin: 10px 5px 10px 12px;
+    border: solid black 1px;
+    display: inline-block;
+    position: relative;
+}
+
+.pixel
+{
+    margin: 0px;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+}
+#clear-board
+{
+    padding: 8px;
+}
+#board-size
+{
+    width: 40px;
+    margin-left: 50px;
+}
+
+#generate-board
+{
+    margin-left: 0px;
+    margin-bottom: 5px;
+}
