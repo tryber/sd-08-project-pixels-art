@@ -21,3 +21,18 @@ function pixelBoard () {
   }
 }
 pixelBoard();
+
+function selectColor() {
+    let children = document.getElementById('color-palette').children;
+    let palette = document.getElementById('color-palette');
+    palette.addEventListener('click', function(event) {
+        for (let index = 0; index < children.clientHeight; index++) {
+            if(children[index] === event.target) {
+                event.target.className = 'color selected';
+            } else {
+                children[index].className = 'color';
+            }
+        }
+    });
+}
+selectColor();
