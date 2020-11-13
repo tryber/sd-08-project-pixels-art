@@ -7,7 +7,7 @@ pxItem.className = "pixel"
 pixelBox.appendChild(pxItem);
 };
 
-//Seleciona a cor na paleta / alert ("Make it so!")
+//Seleciona a cor na paleta
 let colors = document.querySelectorAll(".color");
 for (let i = 0; i< colors.length; i++){
     let  pallet = colors[i];
@@ -26,23 +26,12 @@ let blackPallet = document.querySelector("#black-pallete")
 blackPallet.className = "color selected"
 
 //Pinta os pixels
-/*function pixelColorOfSelectedPallete() {
-  const pixelsBoard = document.querySelector('#pixel-board');
-
-  pixelsBoard.addEventListener('click', (event) => {
-    const selectedColor = document.querySelector('.selected');
-
-    if (selectedColor !== null) {
-      if (event.target.className !== 'pixel-board') {
-        event.target.style.backgroundColor = selectedColor.style.backgroundColor;
-      }
-    }
-  });
-}*/
+/**/
 document.addEventListener('click', function(event){    
     if (event.target.classList.contains("pixel")){
-        let apply = document.querySelectorAll(".selected");
-        event.target.style.backgroundColor = apply[0].style.backgroundColor;
+        let colorSelected = document.querySelector(".selected");
+        let apply = window.getComputedStyle(colorSelected).getPropertyValue("background-color");
+        event.target.style.backgroundColor = apply;
         console.log(apply);
     //alert ("clicou no pixel e não aconteceu nada")
     }
