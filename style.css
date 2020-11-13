@@ -1,6 +1,3 @@
-#color-palette {
-}
-
 #title {
     font-family: fantasy;    
 }
@@ -28,6 +25,5 @@
     background-color: white;
 }
 
-.selected {
-
+#color-palette {   
 }
