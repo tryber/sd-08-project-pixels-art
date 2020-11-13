@@ -41,8 +41,9 @@ blackPallet.className = "color selected"
 }*/
 document.addEventListener('click', function(event){    
     if (event.target.classList.contains("pixel")){
-        let apply = document.querySelector(".selected").style.backgroundColor;
-        event.target.style.backgroundColor = apply;
+        let apply = document.querySelectorAll(".selected");
+        event.target.style.backgroundColor = apply[0].style.backgroundColor;
+        console.log(apply);
     //alert ("clicou no pixel e não aconteceu nada")
     }
 });
@@ -51,7 +52,6 @@ let pixels = document.querySelectorAll(".pixel")
 let clearButton = document.querySelector("#clear-board")
 clearButton.addEventListener('click', function(event){    
     for (let i = 0; i < pixels.length; i++){        
-    pixels[i].style.backgroundColor = "white";
-    }
-    
+    pixels[i].style.background = "white";
+    }    
 });
