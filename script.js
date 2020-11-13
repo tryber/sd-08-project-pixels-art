@@ -33,3 +33,11 @@ document.addEventListener('click', function(event){
         //alert ("clicou no pixel e não aconteceu nada")
     }
 });
+let pixels = document.querySelectorAll(".pixel")
+let clearButton = document.querySelector("#clear-board")
+clearButton.addEventListener('click', function(event){    
+    for (let i = 0; i < pixels.length; i++){            
+    pixels[i].style.backgroundColor = "white";
+    }
+    
+});
