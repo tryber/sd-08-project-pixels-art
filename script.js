@@ -70,6 +70,7 @@ function dinamicPixelBoard() {
         board.style.height = sizeBoard * 42 + 'px';
       }
     }
+    paint();
   });
 }
 dinamicPixelBoard();
