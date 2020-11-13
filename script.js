@@ -26,17 +26,31 @@ let blackPallet = document.querySelector("#black-pallete")
 blackPallet.className = "color selected"
 
 //Pinta os pixels
+/*function pixelColorOfSelectedPallete() {
+  const pixelsBoard = document.querySelector('#pixel-board');
+
+  pixelsBoard.addEventListener('click', (event) => {
+    const selectedColor = document.querySelector('.selected');
+
+    if (selectedColor !== null) {
+      if (event.target.className !== 'pixel-board') {
+        event.target.style.backgroundColor = selectedColor.style.backgroundColor;
+      }
+    }
+  });
+}*/
 document.addEventListener('click', function(event){    
     if (event.target.classList.contains("pixel")){
         let apply = document.querySelector(".selected").style.backgroundColor;
         event.target.style.backgroundColor = apply;
-        //alert ("clicou no pixel e não aconteceu nada")
+    //alert ("clicou no pixel e não aconteceu nada")
     }
 });
+
 let pixels = document.querySelectorAll(".pixel")
 let clearButton = document.querySelector("#clear-board")
 clearButton.addEventListener('click', function(event){    
-    for (let i = 0; i < pixels.length; i++){            
+    for (let i = 0; i < pixels.length; i++){        
     pixels[i].style.backgroundColor = "white";
     }
     
