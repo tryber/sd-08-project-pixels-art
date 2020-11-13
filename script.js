@@ -1,17 +1,3 @@
-window.onload = function() {
-  boardSize(5);
-  sessionStorage.setItem('selectedColor', 'black');
-  gerarLista();
-  btnColorDelete();
-
-  const btnColor1 = document.getElementsByClassName('color')[1];
-  const btnColor2 = document.getElementsByClassName('color')[2];
-  const btnColor3 = document.getElementsByClassName('color')[3];
-  btnColor1.addEventListener('click', classChange);
-  btnColor2.addEventListener('click', classChange);
-  btnColor3.addEventListener('click', classChange);
-}
-
 const colorList = ['red', 'orange', 'yellow', 'green', 'grey', 'blue'];
 const btnBlack = document.getElementById('black');
 const btnColor1 = document.getElementsByClassName('color')[1];
@@ -31,7 +17,7 @@ function gerarLista() {
 
 
 function btnColoredActivation() {
-  for (let color in colorList) {
+  for (const color of colorList) {
     btnColoredGen(colorList[color]);
   }
 }
@@ -47,8 +33,8 @@ function btnColorDelete() {
 
 function btnColoredGen(color) {
   const btnColored = document.createElement('td');
-  btnColored.id = color
-  btnColored.className = 'color'
+  btnColored.id = color;
+  btnColored.className = 'color';
   btnColored.style.backgroundColor = color;
   document.getElementById('color-palette').firstElementChild.firstElementChild.appendChild(btnColored);
 }
@@ -80,12 +66,12 @@ function reset() {
 
 btnClear.addEventListener('click', reset);
 
-function boardSize (sizeInput) {
+function boardSize(sizeInput) {
   for (let repeatTr = 1; repeatTr <= sizeInput; repeatTr += 1) {
     const createTr = document.createElement('tr');
     for (let repeatTd = 1; repeatTd <= sizeInput; repeatTd += 1) {
       const createTd = document.createElement('td');
-      createTd.className = 'pixel'
+      createTd.className = 'pixel';
       createTr.appendChild(createTd);
     }
     document.getElementById('pixel-board').appendChild(createTr);
@@ -103,14 +89,24 @@ function inputValidation() {
     for (let index = btnPixel.rows.length; index > 0; index -= 1) {
       btnPixel.lastChild.outerHTML = '';
     }
-    boardSize(getInput.value)
+    boardSize(getInput.value);
     getInput.value = '';
   } else {
-    alert ('Board inválido!');
+    alert('Board inválido!');
   }
 }
 
 const getInput = document.getElementById('board-size');
 const btnInput = document.getElementById('generate-board');
 
-btnInput.addEventListener('click', inputValidation)
+btnInput.addEventListener('click', inputValidation);
+
+window.onload = function() {
+  boardSize(5);
+  sessionStorage.setItem('selectedColor', 'black');
+  gerarLista();
+  btnColorDelete();
+  btnColor1.addEventListener('click', classChange);
+  btnColor2.addEventListener('click', classChange);
+  btnColor3.addEventListener('click', classChange);
+};

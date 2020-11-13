@@ -26,7 +26,6 @@ td .pixel {
 }
 
 fieldset {
+  margin: 0 0 20px;
   width: 248px;
-  margin: 0 0 20px 0;
-
 }
