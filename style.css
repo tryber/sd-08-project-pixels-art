@@ -31,3 +31,13 @@ body {
   height: 40px;
   width: 40px;
 }
+
+button:focus {
+  outline: none;
+  border: none;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+}
