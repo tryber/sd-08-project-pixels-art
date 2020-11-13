@@ -69,16 +69,16 @@ function nPixel() {
 
   button.addEventListener('click', function() {
     let input = document.querySelector('#board-size');
-    let size = input.value;
-    if (size === "") {
+    if (input.value === "") {
       alert('Board inválido!');
     }
-    if (size < 5) {
-      size = 5;
-    } else if (size > 50) {
-      size = 50;
+    if (input.value < 5) {
+      input.value = 5;
+    } else if (input.value > 50) {
+      input.value = 50;
     }
-    if (size >= 1) {
+    if (input.value >= 1) {
+      let size = input.value;
       input.value = '';
       const tr = document.querySelectorAll('.pixel');
       const br = document.querySelectorAll('br');
