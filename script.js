@@ -6,6 +6,8 @@ let colorOne = '#'+Math.random().toString(16).substr(-6);
 let colorTwo = '#'+Math.random().toString(16).substr(-6);
 let colorThree = '#'+Math.random().toString(16).substr(-6);
 
+// Fonte da linha c/ math.random pra gerar um numero de cor aleatoria: https://stackoverflow.com/questions/1484506/random-color-generator
+// Resposta do usuario Mohsen
 
 for (index = 0; index < elementosPaleta.length; index += 1) {
   const coresDisponiveis = ["black", colorOne, colorTwo, colorThree];
