@@ -1,36 +1,26 @@
 .color {
   border: 1px solid black;
   display: inline;
-  margin: 5px;
-  margin-left: 50px;
-  padding: 25px;
+  width: 10px;
+  height: 10px;
+  margin: 15px;
+  padding: 30px;
 }
-table,
-th,
-td {
-  /*  border: 1px solid black; */
-  border-collapse: collapse;
-  padding: 25px;
+#color-palette {
   margin: 50px;
 }
-#title {
-  margin-bottom: 50px;
-}
-#cor1 {
-  background-color: black;
-}
-#cor2 {
-  background-color: yellow;
-}
-#cor3 {
-  background-color: red;
-}
-#cor4 {
-  background-color: blue;
-}
-.pixel {
-  background-color: white;
-  width: 39px;
-  height: 39px;
+#pixel-board {
+  width: 210px;
+  height: 210px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: start;
   border: 1px solid black;
+}
+
+.pixel {
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  background-color: white;
 }
