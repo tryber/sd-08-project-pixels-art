@@ -34,7 +34,6 @@ body {
 
 button:focus {
   outline: none;
-  border: none;
 }
 
 section {
