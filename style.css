@@ -1,4 +1,6 @@
-
+* {
+  text-align: center;
+}
 
 .color {
   border: 1px solid black;
@@ -21,6 +23,7 @@
 #pixel-board {
   border-collapse: collapse;
   display: table;
+  margin: auto;
 }
 
 

@@ -8,24 +8,34 @@ function createDiv() {
 }
 createDiv();
 
+let rgb = ['black', 'red', 'green', 'blue'];
+
 function fillColor() {
-  let rgb = ['black', 'red', 'green', 'blue'];
   for (let j = 0; j < rgb.length; j++) {
-    let someColor = document.getElementsByClassName('color')[j];
-    someColor.style.backgroundColor = rgb[j];
+    let eachColor = document.getElementsByClassName('color')[j];
+    eachColor.style.backgroundColor = rgb[j];
   }
+  document.querySelector('.color').classList.add("selected"); 
 }
 fillColor();
 
-function createBoard() {
-  let generateRow = document.getElementById('pixel-board');
-  for (let i = 1; i < 5; i++) {
-    let creatCell = document.createElement('div');
-    creatCell.className = 'pixel';
-    generateRow.appendChild(creatCell);
+let listColors = document.querySelectorAll('.color');
+
+function changeColor(event) {
+ for (let index=0; index<listColors.length; index++) {
+  listColors[index].classList.remove('selected');
+ } 
+ event.target.classList.add('selected');
+}
+
+function choseColor() {
+  for (let selector of listColors) {
+    selector.addEventListener('click', changeColor);
   }
 }
-createBoard();
+choseColor();
+
+
 
 function createBoard() {
   let generateBoard = document.getElementById('pixel-board');
@@ -35,7 +45,12 @@ function createBoard() {
     for (let j = 0; j < 5; j++) {
       let createRow = document.createElement('div');
       createRow.className = 'pixel';
-      generateBoard.appendChild(createRow);
+      createColun.appendChild(createRow);
+      createRow.addEventListener('click', (e)=> {
+        // let bgColor = window.getComputedStyle(document.getElementsByClassName('selected')[0]).backgroundColor;
+        let bgColor = document.getElementsByClassName('selected')[0].style.backgroundColor;
+        e.target.style.backgroundColor = bgColor;
+      })
     }
   }
 }
