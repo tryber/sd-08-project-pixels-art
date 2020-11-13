@@ -7,12 +7,8 @@ pxItem.className = "pixel"
 pixelBox.appendChild(pxItem);
 };
 
-
-let blackPallet = document.querySelector("#black-pallete")
-blackPallet.className = "color selected"
-
-let colors = document.querySelectorAll(".color");
 //Seleciona a cor na paleta / alert ("Make it so!")
+let colors = document.querySelectorAll(".color");
 for (let i = 0; i< colors.length; i++){
     let  pallet = colors[i];
     pallet.addEventListener('click', function(event){
@@ -25,12 +21,14 @@ for (let i = 0; i< colors.length; i++){
         }
     })
 }
+//Deixar a cor preta já selecionada para pintar os pixels
+let blackPallet = document.querySelector("#black-pallete")
+blackPallet.className = "color selected"
 
-//document.querySelector("black-pallete") = 
 //Pinta os pixels
 document.addEventListener('click', function(event){    
     if (event.target.classList.contains("pixel")){
-        let apply = document.querySelector("selected").style.backgroundColor;
+        let apply = document.querySelector(".selected").style.backgroundColor;
         event.target.style.backgroundColor = apply;
         //alert ("clicou no pixel e não aconteceu nada")
     }
