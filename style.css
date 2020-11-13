@@ -1,0 +1,32 @@
+* {
+  text-align: center;
+}
+
+.color {
+  border: 1px solid black;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin-right: 2px;
+  background: white;
+}
+
+.pixel {
+  border: 1px solid black;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin-right: 2px;
+  background: white;
+}
+
+#pixel-board {
+  border-collapse: collapse;
+  display: table;
+  margin: auto;
+}
+
+
+.pixel-row {
+  display: table-row;
+}
