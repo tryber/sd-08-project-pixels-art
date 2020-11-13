@@ -1,3 +1,9 @@
+window.onload = function() {
+  const color = document.querySelectorAll('.color');
+  const vetor = ['red', 'green','blue'];
+
+}
+
 function addTable() {
     const table = document.querySelector('#pixel-board');
   
