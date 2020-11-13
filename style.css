@@ -1,0 +1,41 @@
+#title {
+    color:  black;
+}
+.color-palette {
+
+}
+.color {
+    height: 50px;
+    width: 50px;
+    border: 1px solid black;
+    display: inline-block;
+}
+#black-pallete {
+    background-color: black;
+}
+#red-pallete {
+    background-color: red;
+}
+#yellow-pallete {
+    background-color: yellow;
+}
+#blue-pallete {
+    background-color: blue;
+}
+#pixel-board {
+width: 230px;
+height: 227px;
+border: 1px solid black;
+}
+.pixel {
+    height: 40px;
+    width: 40px;
+    border: 1px solid black;
+    display: inline-block;
+    background-color:white;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+#clear-board {
+    margin: 7px;
+}
