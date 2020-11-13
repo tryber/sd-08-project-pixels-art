@@ -1,0 +1,17 @@
+#color-palette div {
+    display: inline-block;
+    border: 1px solid black;
+    margin: 10px auto;
+    padding: 20px;
+}
+#pixel-board {
+    width: 210px;
+}
+
+#pixel-board .pixel {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    margin: 0px 0px;
+}
