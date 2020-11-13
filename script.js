@@ -8,6 +8,10 @@ for (let index = 0; index < colors.length; index += 1) {
   colorPalet.appendChild(divPalet);
   divPalet.className = "color";
   divPalet.style.backgroundColor = colors[index];
+
+  if (index == 0) {
+    divPalet.classList.add("selected");
+  }
 }
 
 for (let index = 0; index < 25; index += 1) {
