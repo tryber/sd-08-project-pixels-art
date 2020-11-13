@@ -1,3 +1,9 @@
+//requisito 6
+window.onload = function () {
+    const addClassSelected = document.querySelectorAll('.color')[0];
+    addClassSelected.classList.add('selected')
+};
+
 //requisito 2 - criando as 4 divs 'color'
 const captureDivColorPalette = document.getElementById('color-palette')
 for (let index = 0; index <= 3; index += 1) {
@@ -27,14 +33,44 @@ for (let index = 1; index <= 25; index += 1) {
     captureIdPixelBoard.appendChild(createIdPixel);
 }
 
-//requisito 6
-const captureColor = document.getElementsByClassName('color');
-for (let index = 0; index < captureColor.length; index += 1 ) {
-    let select = captureColor[index];
-        if (select.style.backgroundColor === 'black') {
-            select.className = 'color selected';
-        }
+//requisito 7
+
+const captureClassColor = document.querySelectorAll('.color');
+//foi necessário criar esse laço para pegar os elementos da 'classe color' pq se colocasse a classe color direto para criar o evento o console do navegador acusava erro
+for (index = 0; index < captureClassColor.length; index += 1) {
+    let liColor = captureClassColor[index]
+    liColor.addEventListener('click', selectClass);
 }
+function selectClass (event) {  
+       
+    const selectedClass = document.getElementsByClassName('selected')[0];
+    selectedClass.classList.remove('selected');
+    event.target.classList.add('selected');
+    
+}
+
+
+
+
+
+/*
+const captureClassColor = document.querySelectorAll('.color');
+captureClassColor[3].addEventListener('click', teste)
+let a = ''
+
+function teste () {
+    console.log('dfv')
+}
+teste ();
+
+*/
+
+
+    
+    
+
+
+
 
 
 
