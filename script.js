@@ -4,22 +4,17 @@ function backgroundWhite(){
 }
 window.onload=backgroundWhite;
 
-let allColors=document.querySelector('#collor-palette');
-let color=allColors.childNodes;
+let corSelecionada = document.querySelectorAll('.color');
 
-function removeSelected(){
-    for (let inedx=0;index <color.length;index++){
-        if (color[index].className ='color selected'){
-            color[index].className ='color';
-        }
+for (let i = 0; i < corSelecionada.length; i += 1) {
+  let atual = corSelecionada[i];
+  atual.addEventListener('click', function (event) {
+    for (let j = 0; j < corSelecionada.length; j += 1) {
+      let marcado = corSelecionada[j];
+      if (marcado.classList.contains('selected')) {
+        marcado.classList.remove('selected');
+      }
     }
+    event.target.classList.add('selected');
+  });
 }
-
-function addSelected(){
-    allColors.addEventListener('click',function(event){
-        removeSelected();
-        event.target.className = 'color selected';
-    })
-}
-
-addSelected();
