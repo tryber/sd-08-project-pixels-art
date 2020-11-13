@@ -27,8 +27,6 @@
 }
 
 #pixel-board {
-    width: 250px;
-    height: 250px;
     margin: 0;
 }
 
@@ -38,11 +36,15 @@
     display: inline-block;
     margin: 0;
     height: 40px;
-    width: 40px;  
+    width: 40px;
   }
 
   #clear-board {
-      margin-left: 80px;
+      margin-left: 10px;
       margin-top: 10px;
       margin-bottom: 10px;
+  }
+
+  #board-size {
+    width: 50px;
   }

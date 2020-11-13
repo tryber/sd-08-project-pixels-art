@@ -7,6 +7,8 @@ function addTable() {
         tableDiv.className = 'pixel';
         table.appendChild(tableDiv);
       }
+      const br = document.createElement('br');
+      table.appendChild(br);
     }
   }
 
@@ -61,3 +63,41 @@ function clearTable() {
 }
 
 clearTable();
+
+function nPixel() {
+  const button = document.querySelector('#generate-board');
+
+  button.addEventListener('click', function() {
+    let input = document.querySelector('#board-size');
+    const size = input.value;
+    if (size === "") {
+      alert('Board inválido!');
+    }
+    if (size > 0) {
+      input.value = '';
+      const tr = document.querySelectorAll('.pixel');
+      const br = document.querySelectorAll('br');
+      for (index = 0; index < br.length; index += 1){
+        let table = document.querySelector('#pixel-board');
+        table.removeChild(br[index]);
+      }
+      for (index = 0; index < tr.length; index += 1) {
+        let table = document.querySelector('#pixel-board');     
+        table.removeChild(tr[index]);
+      }
+      for (let index = 0; index < size; index += 1) {
+        let table = document.querySelector('#pixel-board');
+        for (let index2 = 0; index2 < size; index2 += 1) {
+          let table = document.querySelector('#pixel-board');
+          const tableDiv = document.createElement('tr');
+          tableDiv.className = 'pixel';
+          table.appendChild(tableDiv);
+        }
+        const br = document.createElement('br');
+        table.appendChild(br);
+      }
+    }
+  });
+}
+
+nPixel();
