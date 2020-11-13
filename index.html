@@ -13,52 +13,25 @@
       <table id='color-palette'>
         <tr>
             <td class=' color selected' id='black'></td>
-            <td class='color' id='red'></td>
+            <!-- <td class='color' id='red'></td>
             <td class='color' id='orange'></td>
-            <td class='color' id='yellow'></td>
-        </tr>
-    </table>
-    <div>
-        <button type='reset' id='clear-board'>Limpar</button>
-    </div>
-    <table id='pixel-board' class='border-collapsed'>
-        <tr>
-          <td class='pixel'></td>
-          <td class='pixel'></td>
-          <td class='pixel'></td>
-          <td class='pixel'></td>
-          <td class='pixel'></td>
-        </tr>
-        <tr>
-          <td class='pixel'></td>
-          <td class='pixel'></td>
-          <td class='pixel'></td>
-          <td class='pixel'></td>
-          <td class='pixel'></td>
-        </tr>
-        <tr>
-          <td class='pixel'></td>
-          <td class='pixel'></td>
-          <td class='pixel'></td>
-          <td class='pixel'></td>
-          <td class='pixel'></td>
-        </tr>
-        <tr>
-          <td class='pixel'></td>
-          <td class='pixel'></td>
-          <td class='pixel'></td>
-          <td class='pixel'></td>
-          <td class='pixel'></td>
-        </tr>
-        <tr>
-          <td class='pixel'></td>
-          <td class='pixel'></td>
-          <td class='pixel'></td>
-          <td class='pixel'></td>
-          <td class='pixel'></td>
+            <td class='color' id='yellow'></td> -->
         </tr>
       </table>
+    <div>
+        <button type='reset' id='clear-board'>Limpar</button>
+        <fieldset>
+          <legend>Tamanho da tela de arte:</legend>
+          <label for="quantity">Defina o tamanho:</label> 
+          <input type="number" min="1" max="50" step="1" name="quantity" id="board-size">
+          <button type="submit" id='generate-board'>VQV</button>
+        </fieldset>
     </div>
+    <div  class="board-cotainer">
+      <table id='pixel-board' class='border-collapsed board-cotainer'>
+      </table>
+    </div>
+  </div>
   </main>
   <script src="script.js"></script>
 </body>

@@ -1,8 +1,22 @@
-window.onload = sessionStorage.setItem('selectedColor', 'black');
+window.onload = function() {
+  boardSize(5);
+  sessionStorage.setItem('selectedColor', 'black');
+  gerarLista();
+  btnColorDelete();
+
+  const btnColor1 = document.getElementsByClassName('color')[1];
+  const btnColor2 = document.getElementsByClassName('color')[2];
+  const btnColor3 = document.getElementsByClassName('color')[3];
+  btnColor1.addEventListener('click', classChange);
+  btnColor2.addEventListener('click', classChange);
+  btnColor3.addEventListener('click', classChange);
+}
+
+const colorList = ['red', 'orange', 'yellow', 'green', 'grey', 'blue'];
 const btnBlack = document.getElementById('black');
-const btnRed = document.getElementById('red');
-const btnOrange = document.getElementById('orange');
-const btnYellow = document.getElementById('yellow');
+const btnColor1 = document.getElementsByClassName('color')[1];
+const btnColor2 = document.getElementsByClassName('color')[2];
+const btnColor3 = document.getElementsByClassName('color')[3];
 const btnPixel = document.getElementById('pixel-board');
 const pixelList = document.getElementsByClassName('pixel');
 const btnClear = document.getElementById('clear-board');
@@ -11,10 +25,35 @@ function saveColor(key, value) {
   sessionStorage.setItem(key, value);
 }
 
+function gerarLista() {
+  btnColoredActivation();
+}
+
+
+function btnColoredActivation() {
+  for (let color in colorList) {
+    btnColoredGen(colorList[color]);
+  }
+}
+
+function btnColorDelete() {
+  const indexColor = Math.ceil(Math.random() * 6);
+  while (document.getElementsByClassName('color').length > 4) {
+    if (document.getElementsByClassName('color')[indexColor] !== undefined) {
+      document.getElementsByClassName('color')[indexColor].outerHTML = '';
+    }
+  }
+}
+
+function btnColoredGen(color) {
+  const btnColored = document.createElement('td');
+  btnColored.id = color
+  btnColored.className = 'color'
+  btnColored.style.backgroundColor = color;
+  document.getElementById('color-palette').firstElementChild.firstElementChild.appendChild(btnColored);
+}
+
 btnBlack.style.backgroundColor = 'black';
-btnRed.style.backgroundColor = 'red';
-btnOrange.style.backgroundColor = 'orange';
-btnYellow.style.backgroundColor = 'yellow';
 
 function classChange(evt) {
   if (evt.target.className === 'color') {
@@ -25,9 +64,6 @@ function classChange(evt) {
 }
 
 btnBlack.addEventListener('click', classChange);
-btnRed.addEventListener('click', classChange);
-btnOrange.addEventListener('click', classChange);
-btnYellow.addEventListener('click', classChange);
 
 function changeColor(evt) {
   const color = sessionStorage.getItem('selectedColor');
@@ -43,3 +79,38 @@ function reset() {
 }
 
 btnClear.addEventListener('click', reset);
+
+function boardSize (sizeInput) {
+  for (let repeatTr = 1; repeatTr <= sizeInput; repeatTr += 1) {
+    const createTr = document.createElement('tr');
+    for (let repeatTd = 1; repeatTd <= sizeInput; repeatTd += 1) {
+      const createTd = document.createElement('td');
+      createTd.className = 'pixel'
+      createTr.appendChild(createTd);
+    }
+    document.getElementById('pixel-board').appendChild(createTr);
+  }
+}
+
+function inputValidation() {
+  if (getInput.value.length > 0) {
+    if (getInput.value < 5) {
+      getInput.value = 5;
+    }
+    if (getInput.value > 50) {
+      getInput.value = 50;
+    }
+    for (let index = btnPixel.rows.length; index > 0; index -= 1) {
+      btnPixel.lastChild.outerHTML = '';
+    }
+    boardSize(getInput.value)
+    getInput.value = '';
+  } else {
+    alert ('Board inválido!');
+  }
+}
+
+const getInput = document.getElementById('board-size');
+const btnInput = document.getElementById('generate-board');
+
+btnInput.addEventListener('click', inputValidation)
