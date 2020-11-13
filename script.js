@@ -1,7 +1,35 @@
 window.onload = function() {
-  const color = document.querySelectorAll('.color');
-  const vetor = ['red', 'green','blue'];
+  let colors;
+  let stringColors = [];
+  let color = document.querySelectorAll('.color');
+  let colorsBefore = localStorage.getItem('colors');
 
+  if (colorsBefore !== null) {
+    stringColors = colorsBefore.split(',');
+    for (let index = 0; index < stringColors.length; index += 1) {
+      if (stringColors[index] === 'black') {
+        stringColors[index] = 'black';
+      } else if (stringColors[index] === 'red') {
+        stringColors[index] = 'blue';
+      } else if (stringColors[index] === 'green') {
+        stringColors[index] = 'red';
+      } else if (stringColors[index] === 'blue') {
+        stringColors[index] = 'green';
+      }
+    }
+  
+    for (let index = 0; index < color.length; index += 1) {
+      color[index].id = stringColors[index];
+    }
+  
+  }
+  
+  const vetor = [];
+
+  for (let index = 0; index < color.length; index += 1) {
+    vetor[index] = color[index].id;
+  }
+  localStorage.setItem('colors',vetor);
 }
 
 function addTable() {
