@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <title>Paleta de Cores</title>
+</head>
+<body>
+  <header>
+    <!--Requisito 01 - A página deve possuir o título "Paleta de Cores".-->
+    <h1 id="title">Paleta de Cores</h1>
+  </header>
+  <!--Requisito 02 - A página deve possuir uma paleta de quatro cores distintas.-->
+  <div id="color-palette">
+    <div class="color"></div>
+    <div class="color"></div>
+    <div class="color"></div>
+    <div class="color"></div>
+  </div>
+  <div id="inputs">
+    <button id="clear-board">Limpar</button>
+    <input type="number" min="1" id="board-size" placeholder="Quant. de pixels do quadro">
+    <button id="generate-board">VQV</button>
+  </div>
+  <div id="pixel-board"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
