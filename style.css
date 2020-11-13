@@ -4,6 +4,11 @@
     margin: 10px auto;
     padding: 20px;
 }
+
+#clear-board {
+    margin-bottom: 10px;
+}
+
 #pixel-board {
     width: 210px;
 }
@@ -13,5 +18,5 @@
     width: 40px;
     height: 40px;
     border: 1px solid black;
-    margin: 0px 0px;
+    margin: 0;
 }
