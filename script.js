@@ -1,16 +1,19 @@
-let paletaCompleta = document.getElementById("color-palette");
-let selectedColor = "black";
+function selector (event) {
+    let seleciona = document.querySelector('.selected');
+    seleciona.classList.remove('selected');
+    event.target.classList.add('selected');
 
-paletaCompleta.addEventListener("click", function (event) {
-  let selected = document.querySelectorAll(".color");
-  for (index = 0; index < selected.length; index += 1) {
-  selected[index].className = "color";
-  }
-  event.target.className = "color selected";
-  selectedColor = event.target.style.backgroundColor;
-});
 
-let board = document.getElementById('pixel-board')
-board.addEventListener ("click", function (event){
+}
+
+const palette = document.getElementById('color-palette');
+palette.addEventListener('click', selector);
+
+function pintaPixels (event) {
+    let selectedColor = document.querySelector('.color.selected').style.backgroundColor = 'black';
+     
     event.target.style.backgroundColor = selectedColor;
-    })
+}
+
+let pixels = document.getElementById('pixel-board');
+pixels.addEventListener('click', pintaPixels);
