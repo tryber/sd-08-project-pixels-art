@@ -1,12 +1,9 @@
-body * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .container {
@@ -22,28 +19,24 @@ h1 {
   font-size: 36px;
 }
 
-.section-first {
-
-}
-
 .color {
   display: inline-block;
-  border: 1px solid #000;
+  border: 1px solid black;
   width: 40px;
   height: 40px;
 }
 
 .color-1 {
-  background-color: #000;
+  background-color: black;
   margin-left: 33px;
 }
 
 .color-2 {
-  background-color: #FF7C24;
+  background-color: #ff7c24;
 }
 
 .color-3 {
-  background-color: #60F252;
+  background-color: #60f252;
 }
 
 .color-4 {
@@ -58,7 +51,7 @@ h1 {
 
 .section-second div {
   display: inline-block;
-  border: 1px solid #000;
+  border: 1px solid black;
   margin: -3px;
   width: 40px;
   height: 40px;
