@@ -51,3 +51,12 @@ function colorPixel(){
     });
 }
 colorPixel();
+
+let clearButton = document.getElementById("clear-board");
+clearButton.addEventListener("click", function () {
+    let allPixels = document.querySelectorAll(".pixel");
+    for (let index = 0; index < allPixels.length; index ++) {
+        allPixels[index].style.backgroundColor = "white";
+    }
+});
+  

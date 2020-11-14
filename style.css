@@ -18,10 +18,12 @@ header {
     justify-content: left;
     padding: 20px;
 }
+#clear-board{
+    justify-content: left;
+}
 #pixel-board {
   width: 210px;
   height: 210px;
-  position: relative;
   padding: 20px;  
 }
 .pixel {
