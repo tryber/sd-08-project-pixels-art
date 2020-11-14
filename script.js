@@ -98,14 +98,16 @@ function inputValidation() {
   }
 }
 
+
+gerarLista();
+btnColorDelete();
+
+btnColor1.addEventListener('click', classChange);
+btnColor2.addEventListener('click', classChange);
+btnColor3.addEventListener('click', classChange);
 btnInput.addEventListener('click', inputValidation);
 
-window.onload = function() {
+window.onload = function () {
   boardSize(5);
   sessionStorage.setItem('selectedColor', 'black');
-  gerarLista();
-  btnColorDelete();
-  btnColor1.addEventListener('click', classChange);
-  btnColor2.addEventListener('click', classChange);
-  btnColor3.addEventListener('click', classChange);
 };
