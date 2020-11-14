@@ -17,3 +17,14 @@ function pintaPixels (event) {
 
 let pixels = document.getElementById('pixel-board');
 pixels.addEventListener('click', pintaPixels);
+
+let clearButton = document.getElementById('clear-board');
+clearButton.addEventListener('click', clear);
+
+function clear () {
+    let board = document.getElementsByClassName('pixel');
+
+    for (let i = 0; i < board.length; i++) {
+        board[i].style.backgroundColor = 'white';
+    }
+}
