@@ -1,3 +1,8 @@
+window.onload = function (){
+    document.querySelector('.color').classList.add('selected');
+}
+
+
 function createDivs(){
 let colors = ["black", "blue", "green", "yellow"];
 let colorPalette = document.getElementById('color-palette');
