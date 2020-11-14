@@ -1,30 +1,61 @@
 
 
-function selector (event) {
-    let seleciona = document.querySelector('.color.selected');
-    seleciona.classList.remove('selected');
+
+function selectBlue(event) {
+    let black = document.getElementById('black');
+    let green = document.getElementById('green');
+    let red = document.getElementById('red');
+
+    black.classList.remove('selected');
+    green.classList.remove('selected');
+    red.classList.remove('selected');
+    event.target.classList.add('selected');  
+}
+
+function selectGreen (event) {
+    let black = document.getElementById('black');
+    let blue = document.getElementById('blue');
+    let red = document.getElementById('red');
+
+    black.classList.remove('selected');
+    blue.classList.remove('selected');
+    red.classList.remove('selected');
+    event.target.classList.add('selected');  
+}    
+
+function selectRed (event) {
+    let black = document.getElementById('black');
+    let blue = document.getElementById('blue');
+    let green = document.getElementById('green');
+
+    black.classList.remove('selected');
+    blue.classList.remove('selected');
+    green.classList.remove('selected');
     event.target.classList.add('selected');
 
+}
+
+function selectBlack (event) {
+    let blue = document.getElementById('blue');
+    let green = document.getElementById('green');
+    let red = document.getElementById('red');
+
+    blue.classList.remove('selected');
+    red.classList.remove('selected');
+    green.classList.remove('selected');
+    event.target.classList.add('selected')
 
 }
 
-const palette = document.getElementById('color-palette');
-palette.addEventListener('click', selector);
 
+const btnBlue = document.getElementById('blue');
+btnBlue.addEventListener('click', selectBlue);
 
+const btnGreen = document.getElementById('green');
+btnGreen.addEventListener('click', selectGreen);
 
+const btnRed = document.getElementById('red');
+btnRed.addEventListener('click', selectRed)
 
-
-
-
-
-let clearButton = document.getElementById('clear-board');
-clearButton.addEventListener('click', clear);
-
-function clear () {
-    let board = document.getElementsByClassName('pixel');
-
-    for (let i = 0; i < board.length; i++) {
-        board[i].style.backgroundColor = 'white';
-    }
-}
+const btnBlack = document.getElementById('black');
+btnBlack.addEventListener('click' selectBlack);
