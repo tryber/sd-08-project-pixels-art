@@ -5,14 +5,18 @@ function backgroundWhite(){
 window.onload=backgroundWhite;
 
 
-function color(event) {
-    let getPaleta = document.getElementsByClassName('color');
-    let cor = event.target.style.backgroundColor;
-    for (let i = 0; i < getPaleta.length; i += 1) {
-        if (getPaleta[i].style.backgroundColor === cor) {
-            getPaleta[i].classList.add('selected');
-        } else {
-            getPaleta[i].classList.remove('selected');
-        }
+let findColor = document.getElementsByClassName("color");
+
+for(let i of findColor)
+{
+    i.addEventListener("click", function()
+    {
+        for(let i of findColor)
+    {
+        if(i.classList.contains("selected"))
+            i.classList.remove("selected");
     }
+        if(!this.classList.contains("selected"))
+            this.classList.add("selected");
+    })
 }
