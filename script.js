@@ -58,4 +58,4 @@ const btnRed = document.getElementById('red');
 btnRed.addEventListener('click', selectRed)
 
 const btnBlack = document.getElementById('black');
-btnBlack.addEventListener('click' selectBlack);
+btnBlack.addEventListener('click', selectBlack);
