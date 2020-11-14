@@ -5,18 +5,14 @@ function backgroundWhite(){
 window.onload=backgroundWhite;
 
 
-let findColor = document.getElementsByClassName("color");
+const color = document.querySelectorAll('.color');
+const palette = document.querySelector('#color-palette');
 
-for(let i of findColor)
-{
-    i.addEventListener("click", function()
-    {
-        for(let i of findColor)
-    {
-        if(i.classList.contains("selected"))
-            i.classList.remove("selected");
+function changeSelector(event) {
+    for (let i = 0; i < color.length; i += 1) {
+      color[i].classList.remove('selected');
     }
-        if(!this.classList.contains("selected"))
-            this.classList.add("selected");
-    })
-}
+    event.target.classList.add('selected');
+  }
+  
+  palette.addEventListener('click', changeSelector);
