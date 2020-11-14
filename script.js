@@ -49,7 +49,15 @@ function selectClass (event) {
     
 }
 
+const captureClassPixel = document.querySelector("#pixel-board");
 
+captureClassPixel.addEventListener('click', colorPixel);
+
+function colorPixel (event) {
+   let exchangeColor = document.querySelector('.selected').style.backgroundColor;
+   event.target.style.backgroundColor = exchangeColor;
+
+}
 
 
 
