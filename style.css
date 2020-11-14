@@ -1,0 +1,44 @@
+.color {
+    border: 1px solid black;
+    height: 40px;
+    margin-right: 14px;
+    width: 40px;
+}
+
+header {
+    align-items: center;
+    display: flex;
+    justify-self: center;
+    padding: 20px;
+}
+
+#color-palette {
+    align-items: center;
+    display: flex;
+    justify-content: left;
+    padding: 20px;
+}
+#clear-board{
+    justify-content: left;
+}
+#pixel-board {
+  width: 210px;
+  height: 210px;
+  padding: 20px;  
+}
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  width: 40px;
+  height: 40px;
+  display: block;
+  float: left;
+}
+.selected {
+    border: 1px solid black;
+    width: 40px;
+    height: 40px;
+    list-style-type: none;
+    display: inline-block;
+    margin: 10px;
+}
