@@ -1,25 +1,16 @@
-function selector (event) {
-    let seleciona = document.querySelector('.selected');
-    seleciona.classList.remove('selected');
-    event.target.classList.add('selected');
+let paletaCompleta = document.getElementById("color-palette");
+let selectedColor = "black";
 
+paletaCompleta.addEventListener("click", function (event) {
+  let selected = document.querySelectorAll(".color");
+  for (index = 0; index < selected.length; index += 1) {
+  selected[index].className = "color";
+  }
+  event.target.className = "color selected";
+  selectedColor = event.target.style.backgroundColor;
+});
 
-}
-
-const palette = document.getElementById('color-palette');
-palette.addEventListener('click', selector);
-
-
-function clearBoard () {
-    let board = document.querySelectorAll('.pixel');
-    
-    for (let i = 0; i < board.length; i++) {
-        board[i].style.backgroundColor = 'white';
-    }        
-
-    
-}
-
-
-let clearButton = document.getElementById('clear-board');
-clearButton.addEventListener('click', clearBoard)
+let board = document.getElementById('pixel-board')
+board.addEventListener ("click", function (event){
+    event.target.style.backgroundColor = selectedColor;
+    })
