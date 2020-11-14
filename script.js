@@ -6,20 +6,30 @@ const btnColor3 = document.getElementsByClassName('color')[3];
 const btnPixel = document.getElementById('pixel-board');
 const pixelList = document.getElementsByClassName('pixel');
 const btnClear = document.getElementById('clear-board');
+const getInput = document.getElementById('board-size');
+const btnInput = document.getElementById('generate-board');
+
 
 function saveColor(key, value) {
   sessionStorage.setItem(key, value);
 }
 
-function gerarLista() {
-  btnColoredActivation();
+function btnColoredGen(color) {
+  const btnColored = document.createElement('td');
+  btnColored.id = color;
+  btnColored.className = 'color';
+  btnColored.style.backgroundColor = color;
+  document.getElementById('color-palette').firstElementChild.firstElementChild.appendChild(btnColored);
 }
-
 
 function btnColoredActivation() {
   for (const color of colorList) {
     btnColoredGen(colorList[color]);
   }
+}
+
+function gerarLista() {
+  btnColoredActivation();
 }
 
 function btnColorDelete() {
@@ -29,14 +39,6 @@ function btnColorDelete() {
       document.getElementsByClassName('color')[indexColor].outerHTML = '';
     }
   }
-}
-
-function btnColoredGen(color) {
-  const btnColored = document.createElement('td');
-  btnColored.id = color;
-  btnColored.className = 'color';
-  btnColored.style.backgroundColor = color;
-  document.getElementById('color-palette').firstElementChild.firstElementChild.appendChild(btnColored);
 }
 
 btnBlack.style.backgroundColor = 'black';
@@ -95,9 +97,6 @@ function inputValidation() {
     alert('Board inválido!');
   }
 }
-
-const getInput = document.getElementById('board-size');
-const btnInput = document.getElementById('generate-board');
 
 btnInput.addEventListener('click', inputValidation);
 
