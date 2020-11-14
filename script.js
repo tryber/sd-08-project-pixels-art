@@ -1,8 +1,5 @@
 const colorList = ['red', 'orange', 'yellow', 'green', 'grey', 'blue'];
 const btnBlack = document.getElementById('black');
-const btnColor1 = document.getElementsByClassName('color')[1];
-const btnColor2 = document.getElementsByClassName('color')[2];
-const btnColor3 = document.getElementsByClassName('color')[3];
 const btnPixel = document.getElementById('pixel-board');
 const pixelList = document.getElementsByClassName('pixel');
 const btnClear = document.getElementById('clear-board');
@@ -23,8 +20,8 @@ function btnColoredGen(color) {
 }
 
 function btnColoredActivation() {
-  for (const color of colorList) {
-    btnColoredGen(colorList[color]);
+  for (let index = 0; index < colorList.length; index += 1) {
+    btnColoredGen(colorList[index]);
   }
 }
 
@@ -98,16 +95,18 @@ function inputValidation() {
   }
 }
 
-
 gerarLista();
 btnColorDelete();
 
-btnColor1.addEventListener('click', classChange);
-btnColor2.addEventListener('click', classChange);
-btnColor3.addEventListener('click', classChange);
 btnInput.addEventListener('click', inputValidation);
 
 window.onload = function () {
   boardSize(5);
   sessionStorage.setItem('selectedColor', 'black');
+  const btnColor1 = document.getElementsByClassName('color')[1];
+  const btnColor2 = document.getElementsByClassName('color')[2];
+  const btnColor3 = document.getElementsByClassName('color')[3];
+  btnColor1.addEventListener('click', classChange);
+  btnColor2.addEventListener('click', classChange);
+  btnColor3.addEventListener('click', classChange);
 };
