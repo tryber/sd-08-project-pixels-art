@@ -27,11 +27,13 @@ function selectRed (event) {
     let black = document.getElementById('black');
     let blue = document.getElementById('blue');
     let green = document.getElementById('green');
-
+    
     black.classList.remove('selected');
     blue.classList.remove('selected');
     green.classList.remove('selected');
     event.target.classList.add('selected');
+
+       
 
 }
 
@@ -59,3 +61,27 @@ btnRed.addEventListener('click', selectRed)
 
 const btnBlack = document.getElementById('black');
 btnBlack.addEventListener('click', selectBlack);
+
+//requisito 8
+
+function paintPixels () {
+    let selectedColor = document.querySelector('.selected').style.backgroundColor;
+    let pixel = document.querySelectorAll('.pixel');
+    for (let i = 0; i < pixel.length; i++) {
+        pixel[i] = selectedColor;
+    }
+}
+
+
+const pixels = document.getElementById('pixel-board');
+pixels.addEventListener('click', paintPixels);
+
+//requisito 9
+function clearPixels() {
+    let pixs = document.getElementsByClassName('pixel');
+    for (let i = 0; i < pixs.length; i++) {
+    pixs[i].style.backgroundColor = 'white';
+    }
+}
+let clearButton = document.getElementById('clear-board');
+clearButton.addEventListener('click', clearPixels)
