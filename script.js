@@ -16,7 +16,7 @@ function createPixelsBox(){
     for (let coluns = 0; coluns < 5; coluns += 1) {
         let colunsPixels = document.createElement('div');
         pixelsBox.appendChild(colunsPixels);
-        
+       
         for(let lines = 0; lines < 5; lines += 1) {
         let linesPixels = document.createElement('div');
         pixelsBox.appendChild(linesPixels);
