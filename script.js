@@ -1,5 +1,13 @@
+window.onload = iniciaPreto
+
+function iniciaPreto() {
+    let preto = document.getElementsById('black');
+    preto.classList.add('selected');
+}
+
+
 function selector (event) {
-    let seleciona = document.querySelector('.selected');
+    let seleciona = document.querySelector('.color.selected');
     seleciona.classList.remove('selected');
     event.target.classList.add('selected');
 
@@ -9,14 +17,17 @@ function selector (event) {
 const palette = document.getElementById('color-palette');
 palette.addEventListener('click', selector);
 
+
 function pintaPixels (event) {
-    let selectedColor = document.querySelector('.color.selected').style.backgroundColor = 'black';
+    let selectedColor = document.querySelector('.color.selected').style.backgroundColor;
      
     event.target.style.backgroundColor = selectedColor;
 }
 
-let pixels = document.getElementById('pixel-board');
-pixels.addEventListener('click', pintaPixels);
+
+
+let pixelsBoard = document.querySelectorAll('.pixel');
+pixelsBoard.addEventListener('click', pintaPixels());
 
 let clearButton = document.getElementById('clear-board');
 clearButton.addEventListener('click', clear);
