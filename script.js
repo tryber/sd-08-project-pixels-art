@@ -34,6 +34,17 @@ function createPixelsBox(){
 }    
 createPixelsBox()
 
+function paintPixel(){
+  let selectedPixel = document.querySelectorAll(".pixel");
+  for (let index = 0; index < selectedPixel.length; index += 1){;
+  selectedPixel[index].addEventListener("click", function (event){
+    let selectedColor = document.querySelector(".selected").style.backgroundColor;
+    event.target.style.backgroundColor = selectedColor;
+  });  
+}
+}
+paintPixel();
+
 
 
 
