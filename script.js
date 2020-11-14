@@ -33,7 +33,7 @@ for (let index = 1; index <= 25; index += 1) {
     captureIdPixelBoard.appendChild(createIdPixel);
 }
 
-//requisito 7
+//requisito 7 - Respondi com o Bruno Gomes da T8 me ajudando a organizar meus pensamentos
 
 const captureClassColor = document.querySelectorAll('.color');
 //foi necessário criar esse laço para pegar os elementos da 'classe color' pq se colocasse a classe color direto para criar o evento o console do navegador acusava erro
@@ -48,9 +48,8 @@ function selectClass (event) {
     event.target.classList.add('selected');
     
 }
-
+//requisito 8
 const captureClassPixel = document.querySelector("#pixel-board");
-
 captureClassPixel.addEventListener('click', colorPixel);
 
 function colorPixel (event) {
@@ -59,19 +58,23 @@ function colorPixel (event) {
 
 }
 
+//requisito 9
+const captureIdClassBoard = document.querySelector('#clear-board');
+captureIdClassBoard.addEventListener('click', clearColor);
 
-
-/*
-const captureClassColor = document.querySelectorAll('.color');
-captureClassColor[3].addEventListener('click', teste)
-let a = ''
-
-function teste () {
-    console.log('dfv')
+function clearColor () {
+//só consegui pensar no laço para pintar os elementos da classe de uma vez, porém deve haver uma forma de usar event.target nisso, analisar com calma depois   
+    const white = 'rgb(255, 255, 255)';
+    let resetColor = document.querySelectorAll('.pixel')
+    for (let index = 0; index < resetColor.length; index += 1) {
+        let count = resetColor[index];
+        count.style.backgroundColor = white;
+    }   
 }
-teste ();
 
-*/
+
+
+
 
 
     
