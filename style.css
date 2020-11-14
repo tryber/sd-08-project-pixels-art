@@ -1,0 +1,31 @@
+button {
+  margin: 10px;
+}
+
+.border-collapsed {
+  border-collapse: collapse;
+}
+
+.pixel {
+  background-color: white;
+}
+
+table {
+  margin-bottom: 10px;
+}
+
+td {
+  border: black solid 1px;
+  height: 41px;
+  padding: 0;
+  width: 41px;
+}
+
+td .pixel {
+  margin: 0;
+}
+
+fieldset {
+  margin: 0 0 20px;
+  width: 248px;
+}
