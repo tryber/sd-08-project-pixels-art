@@ -1,0 +1,38 @@
+.color {
+    border: 1px solid black;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    
+}
+
+#black {
+    background-color: black;
+}
+
+#blue {
+    background-color: blue;
+}
+
+#green {
+    background-color: green;
+}
+
+#red {
+    background-color: red;
+}
+
+.pixel {
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    
+    
+}
+
+#pixel-board {
+    display: grid;
+    grid-template-columns: repeat(5, 42px);
+
+}
