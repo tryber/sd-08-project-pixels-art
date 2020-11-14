@@ -9,14 +9,13 @@
 <body>
   <h1 id="title">Paleta de Cores</h1>
   
-  <section id="color-palette">
-    <div class="color selected" style="background-color:  rgb( 0 , 0 , 0 )" onclick="selectColor(this)"></div>
-    <div class="color" style="background-color: rgb( 214 , 40 , 40 )" onclick="selectColor(this)"></div>
-    <div class="color" style="background-color: rgb( 247 , 127 , 0 )" onclick="selectColor(this)"></div>
-    <div class="color" style="background-color: rgb( 252 , 191 , 73 )" onclick="selectColor(this)"></div>
-  </section>
+  <section id="color-palette"></section>
   
-  <button id="clear-board" onclick="clearBoard()">Limpar</button>
+  <button id="clear-board" onclick="pixelBoardPlayground.clearBoard()">Limpar</button>
+
+  <label for="board-size">Número de linhas e colunas do quadro:</label>
+  <input id="board-size" type="range" name="boardSize" min="5" max="50" value="5">
+  <button id="generate-board" type="submit" onclick="pixelBoardPlayground.setNewBoardSize()">VQV</button>
 
   <section id="pixel-board"></section>
   
