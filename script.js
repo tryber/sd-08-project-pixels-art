@@ -1,12 +1,20 @@
-// O elemento da cor preta deve possuir, inicialmente, a `classe` `selected`;
+// Requisito 6
 let firstColor = document.querySelector('.color-1');
 
 function callback(){
   firstColor.classList.add('selected');
 }
 window.addEventListener('load', callback);
+// Requisito 7
+let colors = document.querySelectorAll('.color');
 
-/*window.onload = function(){
-  let firstColor = document.querySelector('.color');
-  firstColor.classList.add('selected');
-}*/
+function exchange(event){
+  colors.forEach(element => {
+    element.classList.remove('selected');
+  })
+  event.currentTarget.classList.add('selected');
+}
+
+colors.forEach(element => {
+  element.addEventListener('click', exchange);
+});
