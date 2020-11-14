@@ -1,17 +1,42 @@
-#color-palette{
-    display:inline-block;
-}
-.color{
-    border:1px solid 'black';
-    display: inline-block;
+.color {
+    border: 1px solid black;
     height: 40px;
-    margin: 5px;
-    width: 40px; 
-    border:1px solid black;
+    margin-right: 14px;
+    width: 40px;
 }
-.pixel{
-    background: white;
+
+header {
+    align-items: center;
+    display: flex;
+    justify-self: center;
+    padding: 20px;
+}
+
+#color-palette {
+    align-items: center;
+    display: flex;
+    justify-content: left;
+    padding: 20px;
+}
+#pixel-board {
+  width: 210px;
+  height: 210px;
+  position: relative;
+  padding: 20px;  
+}
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  width: 40px;
+  height: 40px;
+  display: block;
+  float: left;
+}
+.selected {
+    border: 1px solid black;
     width: 40px;
     height: 40px;
-    border: 1px solid black;
+    list-style-type: none;
+    display: inline-block;
+    margin: 10px;
 }
