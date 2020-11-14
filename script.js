@@ -5,19 +5,14 @@ function backgroundWhite(){
 window.onload=backgroundWhite;
 
 
-const itemPalette = document.querySelectorAll('.color');
+const color = document.querySelectorAll('.color');
+const palette = document.querySelector('#color-palette');
 
-function selectedPalette() {
-    for (let index = 0; index < itemPalette.length; index += 1) {
-      const item = itemPalette[index];
-  
-      item.addEventListener('click', (event) => {
-        const selectedColor = document.querySelector('.selected');
-        if (item.className === 'color') {
-          selectedColor.classList.remove('selected');
-          event.target.classList.add('selected');
-        }
-      });
+function changeSelected(event) {
+    for (let i = 0; i < color.length; i += 1) {
+      color[i].classList.remove('selected');
     }
-}
-selectedPalette();
+    event.target.classList.add('selected');
+  }
+  
+  color.addEventListener('click', changeSelected);
