@@ -4,61 +4,24 @@
 		<meta charset="utf-8"></meta>
 		<meta name="viewport" content="width=device-width,initial-scale=1.0">
 		<title>Paleta de Cores</title>
-		<link rel="stylesheet" href="styles.css">
+		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
 		<!-- Requisito 01 -->
-		<h1 id="title">Paleta de Cores</h1>
+		<header>
+			<h1 id="title">Paleta de Cores</h1>
+		</header>
+		<main>
+			<section class="color-palette" id="color-palette"></section>
 		
-		<!-- Requisito 02 -->
-		<section class="color-palette" id="color-palette">
-			<div class="color preto"></div>
-			<div class="color amarelo"></div>
-			<div class="color laranja"></div>
-			<div class="color vermelho"></div>
-		</section>
 
-		<!-- Requisito 09 -->
-		<button id="clear-board">Limpar</button>
+			<section class="pixel-board" id="pixel-board"></section>
 
-		<section id="pixel-board" class="pixel-board">
-			<div class="row">
-				<div class="pixel"></div>
-				<div class="pixel"></div>
-				<div class="pixel"></div>
-				<div class="pixel"></div>
-				<div class="pixel"></div>
-			</div>
-			<div class="row">
-				<div class="pixel"></div>
-				<div class="pixel"></div>
-				<div class="pixel"></div>
-				<div class="pixel"></div>
-				<div class="pixel"></div>
-			</div>
-			<div class="row">
-				<div class="pixel"></div>
-				<div class="pixel"></div>
-				<div class="pixel"></div>
-				<div class="pixel"></div>
-				<div class="pixel"></div>
-			</div>
-			<div class="row">
-				<div class="pixel"></div>
-				<div class="pixel"></div>
-				<div class="pixel"></div>
-				<div class="pixel"></div>
-				<div class="pixel"></div>
-			</div>
-			<div class="row">
-				<div class="pixel"></div>
-				<div class="pixel"></div>
-				<div class="pixel"></div>
-				<div class="pixel"></div>
-				<div class="pixel"></div>
-			</div>
-		</section>
+			<button id="reset"></button>
 
+			<section id="pixel-board"></section>
+		
+		</main>
 		<script src="script.js"></script>
 	</body>
 </html>

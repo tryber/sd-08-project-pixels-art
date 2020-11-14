@@ -1,36 +1,44 @@
-// Declaracao de variaveis globais
-const palette = document.getElementById('color-palette');
-
-const preto = document.getElementsByClassName('preto');
-const amarelo = document.getElementsByClassName('amarelo');
-const laranja = document.getElementsByClassName('laranja');
-const vermelho = document.getElementsByClassName('vermelho');
-
-const cores = document.querySelectorAll('.color');
-
-
-// function createDiv() {
-//     let palette = document.getElementById('color-palette');
-
-//     for (let i = 1; i < 5; i+=1) {
-//         let colorDiv = document.createElement('div');
-//         colorDiv.className = ('color');
-//     }
-// };
-
-// createDiv();
-
-window.onload = function () {
-  preto.style.backgroundColor = 'black';
-  preto.classList.add('selected');
+window.onload = function() {
+  document.querySelectorAll('.color')[0].classList.add("selected");
 };
-function corDeFundo() {
-  if (cores.className === amarelo) {
-    cores.style.backgroundColor = 'yellow';
-  } else if (cores.className === laranja) {
-    cores.style.backgroundColor = 'orange';
-  } else {
-    cores.style.backgroundColor = 'red';
-  }
+
+function palette() {
+  const colorsArray = ["#000", "#FF9933", "#FF6600", "#FF3300",];
+  const colors = document.getElementById('color-palette');
+  colors.forEach = function(cor) {
+    const paletteColorDiv = document.getElementById("color-palette");
+    paletteColorDiv.addEventListener("click", createEventsColor);
+    for(let index = 0; index < colorsArray.length; index++) {
+      const colorDiv = document.createElement("div");
+      colorDiv.style.backgroundColor = colorsArray[index];
+      paletteColorDiv.appendChild(colorDiv);
+      colorDiv.className = "color";
+    };
+
+
+    let button = '';
+      button.document.createElement('button');
+      button.value = cor;
+      button.type = 'button';
+      button.className = 'color';
+      button.style.width = '40px';
+      button.style.height = '40px';
+      button.style.backgroundColor = cor;
+      button.style.border = "1px solid #000";
+      button.addEventListener('click', handler(button));
+      colors.appendChild(button);
+  });
+};
+
+button[0].classList.add('selected');
+
+const colorPalette = document.querySelector('.color-palette');
+
+const pixelBoard = document.querySelector('.pixel-board');
+
+let boardSize = 5;
+
+function createBoard(n) {
+
 }
-corDeFundo();
+
