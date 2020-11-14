@@ -1,40 +1,40 @@
-const colorList = ['red', 'orange', 'yellow', 'green', 'grey', 'blue'];
-const btnBlack = document.getElementById('black');
+const colorList = ['red', 'green', 'blue', 'yellow', 'grey', 'orange', 'crimson', 'cyan', 'darkcyan', 'lime'];
 const btnPixel = document.getElementById('pixel-board');
 const pixelList = document.getElementsByClassName('pixel');
 const btnClear = document.getElementById('clear-board');
 const getInput = document.getElementById('board-size');
 const btnInput = document.getElementById('generate-board');
 
+function btnGenerate() {
+  let listIndex = [];
+  while (listIndex.length < 3) {
+    const num = Math.ceil(Math.random() * 10) - 1;
+    if (listIndex.includes(num) === false) {
+      listIndex.push(num);
+    }
+  }
+  console.log(listIndex)
+  for (let indexColor = 0; indexColor < listIndex.length; indexColor += 1) {
+    const tdColor = document.createElement('td');
+    tdColor.id = colorList[listIndex[indexColor]];
+    tdColor.className = 'color';
+    tdColor.style.backgroundColor = colorList[listIndex[indexColor]];
+    document.getElementById('color-palette').firstElementChild.firstElementChild.appendChild(tdColor);
+  }
+}
+
+btnGenerate();
+
+const btnBlack = document.getElementById('black');
+const btnColor1 = document.getElementsByClassName('color')[1];
+const btnColor2 = document.getElementsByClassName('color')[2];
+const btnColor3 = document.getElementsByClassName('color')[3];
+
+btnBlack.style.backgroundColor = 'black';
 
 function saveColor(key, value) {
   sessionStorage.setItem(key, value);
 }
-
-function btnColoredGen(color) {
-  const btnColored = document.createElement('td');
-  btnColored.id = color;
-  btnColored.className = 'color';
-  btnColored.style.backgroundColor = color;
-  document.getElementById('color-palette').firstElementChild.firstElementChild.appendChild(btnColored);
-}
-
-function btnColoredActivation() {
-  for (let index = 0; index < colorList.length; index += 1) {
-    btnColoredGen(colorList[index]);
-  }
-}
-
-function btnColorDelete() {
-  const indexColor = Math.ceil(Math.random() * 6);
-  while (document.getElementsByClassName('color').length > 4) {
-    if (document.getElementsByClassName('color')[indexColor] !== undefined) {
-      document.getElementsByClassName('color')[indexColor].outerHTML = '';
-    }
-  }
-}
-
-btnBlack.style.backgroundColor = 'black';
 
 function classChange(evt) {
   if (evt.target.className === 'color') {
@@ -45,6 +45,9 @@ function classChange(evt) {
 }
 
 btnBlack.addEventListener('click', classChange);
+btnColor1.addEventListener('click', classChange);
+btnColor2.addEventListener('click', classChange);
+btnColor3.addEventListener('click', classChange);
 
 function changeColor(evt) {
   const color = sessionStorage.getItem('selectedColor');
@@ -91,18 +94,9 @@ function inputValidation() {
   }
 }
 
-btnColoredActivation();
-btnColorDelete();
-
 btnInput.addEventListener('click', inputValidation);
 
 window.onload = function () {
   boardSize(5);
   sessionStorage.setItem('selectedColor', 'black');
-  const btnColor1 = document.getElementsByClassName('color')[1];
-  const btnColor2 = document.getElementsByClassName('color')[2];
-  const btnColor3 = document.getElementsByClassName('color')[3];
-  btnColor1.addEventListener('click', classChange);
-  btnColor2.addEventListener('click', classChange);
-  btnColor3.addEventListener('click', classChange);
 };
