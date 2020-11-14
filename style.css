@@ -3,6 +3,7 @@
     width: 40px;
     height: 40px;
     display: inline-block;
+    
 }
 
 #black {
@@ -26,8 +27,12 @@
     width: 40px;
     height: 40px;
     border: 1px solid black;
-    display: table-cell;
+    
     
 }
 
+#pixel-board {
+    display: grid;
+    grid-template-columns: repeat(5, 42px);
 
+}

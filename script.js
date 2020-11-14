@@ -64,12 +64,12 @@ btnBlack.addEventListener('click', selectBlack);
 
 //requisito 8
 
-function paintPixels () {
-    let selectedColor = document.querySelector('.selected').style.backgroundColor;
-    let pixel = document.querySelectorAll('.pixel');
-    for (let i = 0; i < pixel.length; i++) {
-        pixel[i] = selectedColor;
-    }
+function paintPixels (event) {
+    let selectedColor = document.querySelector('.selected').id;
+    let pixel = event.target;
+    pixel.style.backgroundColor = selectedColor;
+    
+    
 }
 
 
