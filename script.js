@@ -6,14 +6,13 @@ const getInput = document.getElementById('board-size');
 const btnInput = document.getElementById('generate-board');
 
 function btnGenerate() {
-  let listIndex = [];
+  const listIndex = [];
   while (listIndex.length < 3) {
     const num = Math.ceil(Math.random() * 10) - 1;
     if (listIndex.includes(num) === false) {
       listIndex.push(num);
     }
   }
-  console.log(listIndex)
   for (let indexColor = 0; indexColor < listIndex.length; indexColor += 1) {
     const tdColor = document.createElement('td');
     tdColor.id = colorList[listIndex[indexColor]];
