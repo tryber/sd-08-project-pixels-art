@@ -11,12 +11,21 @@ for (let index = 0; index < colors.length; index += 1) {
 }
 createDivs();
 
-function createPixels(){
-    let pixelBoard = document.getElementById('pixel-board');
-    for (let index = 0; index < 25; index += 1){
-        let pixel = document.createElement("div");
-        pixelBoard.appendChild(pixel);
-        pixel.className = "pixel";
+function createPixelsBox(){
+    let pixelsBox = document.getElementById("pixel-board");
+    for (let coluns = 0; coluns < 5; coluns += 1) {
+        let colunsPixels = document.createElement('div');
+        pixelsBox.appendChild(colunsPixels);
+        
+        for(let lines = 0; lines < 5; lines += 1) {
+        let linesPixels = document.createElement('div');
+        pixelsBox.appendChild(linesPixels);
+        linesPixels.className = 'pixel';
     }
 }
-createPixels();
+}    
+createPixelsBox()   
+    
+   
+
+
