@@ -25,10 +25,6 @@ function btnColoredActivation() {
   }
 }
 
-function gerarLista() {
-  btnColoredActivation();
-}
-
 function btnColorDelete() {
   const indexColor = Math.ceil(Math.random() * 6);
   while (document.getElementsByClassName('color').length > 4) {
@@ -95,7 +91,7 @@ function inputValidation() {
   }
 }
 
-gerarLista();
+btnColoredActivation();
 btnColorDelete();
 
 btnInput.addEventListener('click', inputValidation);
