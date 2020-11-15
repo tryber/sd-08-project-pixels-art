@@ -1,5 +1,5 @@
 // Collor Palette
-const colorPalette = document.getElementById('color-palette')
+const colorPalette = document.getElementById('color-palette');
 const colorsArray = ['black', 'yellow', 'orange', 'red'];
 
 colorsArray.forEach(function (color) {
@@ -19,9 +19,9 @@ window.onload = function() {
 };
 
 function handler(button) {
-    return function() {
-        pixelBoard.style.backgroundColor = button.value;
-    }
+  return function() {
+    pixelBoard.style.backgroundColor = button.value;
+  }
 };
 
 // Pixel Board
@@ -31,11 +31,9 @@ function createPixelBoard() {
   for (let column = 0; column < 5; column += 1) {
     const pixel = document.createElement('div');
     pixelBoard.appendChild(pixel);
-    
     for (let row = 0; row < 5; row += 1) {
       const pixel = document.createElement('div');
       pixel.className = 'pixel';
-      
       pixelBoard.appendChild(pixel);
     }
   }
