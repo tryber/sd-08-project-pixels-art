@@ -20,11 +20,12 @@ function firstSelectedColor(boxPalette) {
 //pega a cor selecionada do palette
 let palette = document.getElementById('color-palette');
 
-palette.addEventListener('click', function (event) {
-    selectedColor = event.target;
+palette.addEventListener('click', function click(event) {
+    let selected = document.getElementsByClassName('selected'); // cor selecionada
+    selected[0].className = 'color';
     
-    selectedColor.className = 'color selected';
-    return selectedColor;
+    selectColor = event.target;
+    selectColor.className = 'color selected';
 })
 
 
