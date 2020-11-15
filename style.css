@@ -11,13 +11,6 @@ body {
 
 }
 
-.color {
-  display: inline-block;
-  border:1px solid rgb(0, 0, 0);
-  width: 5px;
-  padding: 25px;
-  text-align: center;
-}
 
 #color1 {
   background-color: rgb(0, 0, 0);
@@ -44,6 +37,14 @@ body {
 
 .selected {
 
+}
+
+.color {
+  display: inline-block;
+  border:1px solid rgb(0, 0, 0);
+  width: 5px;
+  padding: 25px;
+  text-align: center;
 }
 
 #clear-board {
