@@ -1,0 +1,80 @@
+body {
+  background-color: rgb(119, 141, 169);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+  background-color: rgb(218, 224, 231);
+  border-radius: 6px;
+  margin: 40px auto 0;
+  padding: 30px;
+  width: fit-content;
+}
+
+header {
+  background-color: rgb(65, 90, 119);
+  border-radius: 6px;
+  color: rgb(218, 224, 231);
+  margin-bottom: 10px;
+  padding: 3px;
+  text-align: center;
+}
+
+h1 {
+  background-color: rgb(72, 100, 132);
+  border: 2px solid rgb(51, 70, 92);
+  margin: 10px 20px;
+  padding: 4px 0;
+
+}
+
+.palette-style {
+  margin: 0 auto 20px;
+  width: fit-content;
+}
+
+.palette-style div {
+  border-radius: 6px;
+  margin: 0 2px;
+}
+
+.btn-style {
+  border-radius: 6px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 auto 20px;
+  width: fit-content;
+}
+
+.btn-style input {
+  text-align: center;
+  width: 100px;
+}
+
+.btn-style button {
+  width: 60px;
+}
+
+.color {
+  border: 1px solid black;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+}
+
+.board-style {
+  line-height: 0;
+  margin: 0 auto;
+  width: fit-content;
+}
+
+.board-line {
+  white-space: nowrap;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+}
