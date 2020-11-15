@@ -35,10 +35,10 @@ body {
   background-color: violet;
 }
 
-table tr td {
-border: 1px solid black;
+.pixel {
 height: 40px;
 width: 40px;
+border: 1px solid black;
 }
 
 .selected {
@@ -51,3 +51,5 @@ width: 40px;
 
 }
 
+#pixel-board {
+}

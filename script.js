@@ -1,11 +1,11 @@
 //function pixelBoard(){
-   // const pixelList = document.querySelector('#pixel-board');
+   // const pixelList = document.querySelectorAll('tr');
 
-  //  for (let index = 1; index < 25; index += 1) {
-      //  const pixelElement = document.createElement('li');
+    //for (let index = 1; index <= 5; index ++) {
+      //  const pixelElement = document.createElement('td');
 
      //   pixelList.appendChild(pixelElement);
-     //   pixelElement.className('pixel')
-  //  }
+     //   pixelElement.className ='pixel'
+ //   }
 //}
 //pixelBoard();
