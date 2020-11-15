@@ -18,3 +18,4 @@ function exchange(event){
 colors.forEach(element => {
   element.addEventListener('click', exchange);
 });
+// Requisito 8
