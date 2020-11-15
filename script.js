@@ -52,10 +52,14 @@ function paintPixel() {
 }
 paintPixel();
 
+function createEventsColor(event) {
+  const colorClass = document.querySelector(".selected");
+  colorClass.classList.remove("selected");
+  event.target.classList.add("selected");
+}
 
 // Clear button
 const buttonClear = document.getElementById('clear-board');
-const clearPixels;
 buttonClear.addEventListener('click', clearPixels);
 function clearPixels() {
   const boxPixels = document.querySelectorAll('.pixel');
