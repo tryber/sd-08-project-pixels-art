@@ -1,41 +1,39 @@
 // Collor Palette
-const colorPalette = document.getElementById('color-palette')
-const colorsArray = ["black", "yellow", "orange", "red"];
+const colorPalette = document.getElementById('color-palette');
+const colorsArray = ['black', 'yellow', 'orange', 'red'];
 
-colorsArray.forEach(function(color) {
+colorsArray.forEach(function (color) {
   const button = document.createElement('button');
   button.type = 'button';
   button.className = 'color';
   button.style.height = '40px';
   button.style.width = '40px';
   button.style.backgroundColor = color;
-  button.style.border = "1px solid #000";
-  button.addEventListener('click', handler(button));
+  button.style.border = '1px solid #000';
   colorPalette.appendChild(button);
 });
+button.addEventListener('click', handler(button));
 
-window.onload = function() {
-  document.querySelectorAll('.color')[0].classList.add("selected");
+window.onload = function () {
+  document.querySelectorAll('.color')[0].classList.add('selected');
 };
 
 function handler(button) {
-    return function() {
-        pixelBoard.style.backgroundColor = button.value;
-    }
-};
+  const pixelBoard = document.getElementById('pixel-board');
+  return function() {
+    pixelBoard.style.backgroundColor = button.value;
+  }
+}
 
 // Pixel Board
 function createPixelBoard() {
   const pixelBoard = document.getElementById('pixel-board');
-
   for (let column = 0; column < 5; column += 1) {
-    const pixel = document.createElement("div");
+    const pixel = document.createElement('div');
     pixelBoard.appendChild(pixel);
-    
     for (let row = 0; row < 5; row += 1) {
-      const pixel = document.createElement("div");
+      const pixel = document.createElement('div');
       pixel.className = 'pixel';
-      
       pixelBoard.appendChild(pixel);
     };
   };
@@ -51,10 +49,10 @@ function changeColorPixel(event) {
 
 // Paint every pixel
 function paintPixel() {
-  const pixelSelected = document.querySelectorAll(".pixel");
+  const pixelSelected = document.querySelectorAll('.pixel');
   for (let index = 0; index < pixelSelected.length; index += 1) {
-    pixelSelected[index].addEventListener("click", function (event) {
-      let colorCurrent = document.querySelector(".selected").style.backgroundColor;
+    pixelSelected[index].addEventListener('click', function (event) {
+      let colorCurrent = document.querySelector('.selected').style.backgroundColor;
       event.target.style.backgroundColor = colorCurrent;
     });
   }
@@ -63,20 +61,11 @@ paintPixel();
 
 
 // Clear button
-const buttonClear = document.getElementById("clear-board");
-buttonClear.addEventListener("click", clearPixels);
+const buttonClear = document.getElementById('clear-board');
+buttonClear.addEventListener('click', clearPixels);
 function clearPixels() {
-  const boxPixels = document.querySelectorAll(".pixel");
+  const boxPixels = document.querySelectorAll('.pixel');
   boxPixels.forEach((element) => {
-    element.style.backgroundColor = "white";
+    element.style.backgroundColor = 'white';
   });
 };
-
-
-
-
-
-
-// Requisito 01 ok 02 ok 03 ok 05 ok 06 ok
-// Requisitos não ok: 04 07 08 09
-// Bonus 10 11 12
