@@ -19,13 +19,13 @@ window.onload = function () {
 };
 
 function handler(button) {
-  return function() {
+  return function () {
     pixelBoard.style.backgroundColor = button.value;
   };
 }
 
 // Pixel Board
-function createPixelBoard () {
+function createPixelBoard() {
   const pixelBoard = document.getElementById('pixel-board');
 
   for (let column = 0; column < 5; column += 1) {
@@ -53,9 +53,9 @@ function paintPixel() {
 paintPixel();
 
 function createEventsColor(event) {
-  const colorClass = document.querySelector(".selected");
-  colorClass.classList.remove("selected");
-  event.target.classList.add("selected");
+  const colorClass = document.querySelector('.selected');
+  colorClass.classList.remove('selected');
+  event.target.classList.add('selected');
 }
 
 // Clear button
