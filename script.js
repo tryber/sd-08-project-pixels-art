@@ -52,9 +52,9 @@ function paintPixel() {
   const pixelSelected = document.querySelectorAll('.pixel');
   for (let index = 0; index < pixelSelected.length; index += 1) {
     pixelSelected[index].addEventListener('click', function (event) {
-      let colorCurrent = document.querySelector('.selected').style.backgroundColor;
+      color colorCurrent = document.querySelector('.selected').style.backgroundColor;
       event.target.style.backgroundColor = colorCurrent;
-    });
+    })
   }
 };
 paintPixel();
@@ -62,10 +62,11 @@ paintPixel();
 
 // Clear button
 const buttonClear = document.getElementById('clear-board');
+const clearButton;
 buttonClear.addEventListener('click', clearPixels);
 function clearPixels() {
   const boxPixels = document.querySelectorAll('.pixel');
   boxPixels.forEach((element) => {
     element.style.backgroundColor = 'white';
-  });
+  })
 };

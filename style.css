@@ -5,18 +5,17 @@
 .pixel-board {
   width: 200px;
   height: 200px;
-  border: 1px solid #000;
+  border: 1px solid black;
   display: table-cell;
   border-collapse: collapse;
 }
 
 .pixel {
-  background-color: #FFF;
-  border: 1px solid #000;
+  background-color: white;
+  border: 1px solid black;
   height: 40px;
   width: 40px;
   display: table-cell;
+
   /* border-collapse: collapse; */
 }
-
-
