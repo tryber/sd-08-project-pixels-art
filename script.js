@@ -14,18 +14,18 @@ colorsArray.forEach(function (color) {
   colorPalette.appendChild(button);
 });
 
-window.onload = function() {
-  document.querySelectorAll('.color')[0].classList.add("selected");
+window.onload = function () {
+  document.querySelectorAll('.color')[0].classList.add('selected');
 };
 
 function handler(button) {
   return function() {
     pixelBoard.style.backgroundColor = button.value;
-  }
-};
+  };
+}
 
 // Pixel Board
-function createPixelBoard() {
+function createPixelBoard () {
   const pixelBoard = document.getElementById('pixel-board');
 
   for (let column = 0; column < 5; column += 1) {
@@ -37,28 +37,29 @@ function createPixelBoard() {
       pixelBoard.appendChild(pixel);
     }
   }
-};
+}
 createPixelBoard();
 
 // Paint every pixel
-function paintPixel () {
+function paintPixel() {
   const pixelSelected = document.querySelectorAll('.pixel');
   for (let index = 0; index < pixelSelected.length; index += 1) {
     pixelSelected[index].addEventListener('click', function (event) {
-      let colorCurrent = document.querySelector('.selected').style.backgroundColor;
+      const colorCurrent = document.querySelector('.selected').style.backgroundColor;
       event.target.style.backgroundColor = colorCurrent;
-    })
+    });
   }
-};
+}
 paintPixel();
 
 
 // Clear button
 const buttonClear = document.getElementById('clear-board');
+const clearPixels;
 buttonClear.addEventListener('click', clearPixels);
 function clearPixels() {
   const boxPixels = document.querySelectorAll('.pixel');
   boxPixels.forEach((element) => {
     element.style.backgroundColor = 'white';
-  })
-};
+  });
+}
