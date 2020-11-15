@@ -8,17 +8,17 @@
 </head>
 <body>
   <h1 id="title">Paleta de Cores</h1>
-  
+
   <section id="color-palette"></section>
-  
+
   <button id="clear-board" onclick="pixelBoardPlayground.clearBoard()">Limpar</button>
 
   <label for="board-size">Número de linhas e colunas do quadro:</label>
-  <input id="board-size" type="range" name="boardSize" min="5" max="50" value="5">
+  <input id="board-size" type="number" name="boardSize" min="5" max="50" value="5">
   <button id="generate-board" type="submit" onclick="pixelBoardPlayground.setNewBoardSize()">VQV</button>
 
   <section id="pixel-board"></section>
-  
+
   <script src="./script.js"></script>
 </body>
 </html>
