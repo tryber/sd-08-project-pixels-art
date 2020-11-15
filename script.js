@@ -1,17 +1,17 @@
-    // Collor Palette
-    const colorPalette = document.getElementById('color-palette')
-    const colorsArray = ["black", "yellow", "orange", "red"];
+// Collor Palette
+const colorPalette = document.getElementById('color-palette')
+const colorsArray = ["black", "yellow", "orange", "red"];
 
-    colorsArray.forEach(function(color) {
-      const button = document.createElement('button');
-      button.type = 'button';
-      button.className = 'color';
-      button.style.height = '40px';
-      button.style.width = '40px';
-      button.style.backgroundColor = color;
-      button.style.border = "1px solid #000";
-      button.addEventListener('click', handler(button));
-      colorPalette.appendChild(button);
+colorsArray.forEach(function(color) {
+  const button = document.createElement('button');
+  button.type = 'button';
+  button.className = 'color';
+  button.style.height = '40px';
+  button.style.width = '40px';
+  button.style.backgroundColor = color;
+  button.style.border = "1px solid #000";
+  button.addEventListener('click', handler(button));
+  colorPalette.appendChild(button);
 });
 
 window.onload = function() {
@@ -42,19 +42,14 @@ function createPixelBoard() {
 };
 createPixelBoard();
 
-function createEventColor(event) {
-  pixel.addEventListener('click', handler(pixel));
-  const colorClass = document.getElementsByClassName("selected");
-  colorClass.classList.remove("selected");
-  event.target.classList.add("selected");
+// Change class selected
+function changeColorPixel(event) {
+  const colorClass = document.querySelector('.selected');
+  colorClass.classList.remove('selected');
+  event.target.classList.add('selected');
 };
 
-function handler(pixel) {
-  return function() {
-    pixel.style.backgroundColor = pixel.value;
-  }
-};
-
+// Paint every pixel
 function paintPixel() {
   const pixelSelected = document.querySelectorAll(".pixel");
   for (let index = 0; index < pixelSelected.length; index += 1) {
@@ -75,7 +70,8 @@ function clearPixels() {
   boxPixels.forEach((element) => {
     element.style.backgroundColor = "white";
   });
-}
+};
+
 
 
 
