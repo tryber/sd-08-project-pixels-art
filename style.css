@@ -1,0 +1,33 @@
+body {
+    text-align: center;
+}
+
+.color {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border: black solid 1px;
+}
+
+#black {
+    background-color: black;
+}
+
+#orange {
+    background-color: orange;
+}
+
+#pink {
+    background-color: pink;
+}
+
+#blue {
+    background-color: blue;
+}
+
+.pixel {
+    border: black solid 1px;
+    height: 25px;
+    width: 25px;
+    display: table;
+}
