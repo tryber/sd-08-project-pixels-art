@@ -36,9 +36,10 @@ body {
 }
 
 .pixel {
-height: 40px;
-width: 40px;
-border: 1px solid black;
+  background-color: rgb(255, 255, 255);
+  height: 40px;
+  width: 40px;
+  border: 1px solid black;
 }
 
 .selected {
@@ -52,5 +53,5 @@ border: 1px solid black;
 }
 
 #pixel-board {
-  background-color: rgb(255, 255, 255);
+
 }
