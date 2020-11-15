@@ -58,7 +58,7 @@ const pixelBoardPlayground = {
   setNewBoardSize() {
     let inputSize = document.querySelector('#board-size').value;
 
-    if (inputSize === null) {
+    if (inputSize === '') {
       alert('Board inválido!');
     }
 
