@@ -6,7 +6,7 @@ button.addEventListener('click', evento);
 }
 
 function evento () {
-    const eventClearBoard = document.getElementsByClassName('pixel');
-    pixel.style.backgroundColor = "#FFFFFF";
+    document.getElementsByClassName('pixel').style.backgroundColor = "#ffffff";
 
 }
+evento()
