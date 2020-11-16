@@ -3,8 +3,8 @@
 }
 
 .color {
-    border-style: solid;
     border-color: black;
+    border-style: solid;
     border-width: 1px;
     display: inline-block;
     height: 100px;
@@ -35,12 +35,12 @@
 }
 
 .pixel {
-    border-style: solid;
     border-color: black;
+    border-style: solid;
     border-width: 1px;
     background-color: white;
     float: left;
     height: 40px;
     width: 40px;
-}    
+}   
     
