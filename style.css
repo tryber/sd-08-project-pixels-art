@@ -1,0 +1,23 @@
+#color-palette {
+  display: inline-block;
+}
+
+.color black {
+  background-color: #000000;
+  border: 1px solid black;
+}
+
+.color red {
+  background-color: #D4392D;
+  border: 1px solid black;
+}
+
+.color orange {
+  background-color: #FF5817;
+  border: 1px solid black;
+}
+
+.color yellow {
+  background-color: #F8AD44;
+  border: 1px solid black;
+}
