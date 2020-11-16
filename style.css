@@ -16,6 +16,10 @@
   height: 40px;
   width: 40px;
   display: table-cell;
+  border-collapse: collapse;
+}
 
-  /* border-collapse: collapse; */
+.color {
+  height: 40px;
+  width: 40px;
 }
