@@ -52,3 +52,17 @@ function mudaCor() {
     })
 }
 mudaCor();
+
+
+//Requisito 9
+function limpar() {
+    const botao = document.getElementById("clear-board");
+    const tabela = document.getElementsByClassName("pixel");
+    botao.addEventListener("click", function(){
+        for (let index = 0; index < tabela.length; index += 1) {
+              tabela[index].style.backgroundColor = "white";
+        }
+        
+    })
+}
+limpar();

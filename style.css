@@ -57,3 +57,11 @@
 #pixel-board {
     border-collapse: collapse;
 }
+
+.color {
+    margin-left: 5px;
+}
+
+.white {
+    background-color: white;
+}
