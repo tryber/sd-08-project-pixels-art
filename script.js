@@ -31,6 +31,7 @@ function creatColorsOptions() {
     options.appendChild(colors[i]);
   }
 }
+creatColorsOptions();
 
 function creatPixelBoard(n) {
   const board = document.getElementById('pixel-board');
@@ -55,7 +56,7 @@ function sizeOfTheBoard() {
   return chosenNumber;
 }
 
-function boardGenerator() {
+function resizeButton() {
   const createBoardButton = document.querySelector('#generate-board');
   createBoardButton.addEventListener('click', () => {
     let size = sizeOfTheBoard();
@@ -66,6 +67,7 @@ function boardGenerator() {
     }
   });
 }
+
 
 function allPixelsBckGroundWhite() {
   const pixels = document.querySelectorAll('.pixel');
@@ -84,11 +86,11 @@ function colorToBePainted() {
   const colorSelected = document.querySelector('.selected').style.backgroundColor;
   return colorSelected;
 }
+clearBoard();
+
+creatPixelBoard(5);
+resizeButton();
 
 
-//window.onload = function () {
-  boardGenerator();
-  clearBoard();
-  creatColorsOptions();
-  //creatPixelBoard();
-//};
+
+
