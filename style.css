@@ -7,7 +7,7 @@
     width: 40px;
     height: 40px;
     border: 1px solid black;
-    margin: 10px;
+    margin: 5px;
 }
 
 #pixel-board{
@@ -16,7 +16,7 @@
 
 .pixel {
     display: table-column-group;
-    height: 70px;
+    height: 40px;
     width: 40px;
     border: 1px solid black;
 }

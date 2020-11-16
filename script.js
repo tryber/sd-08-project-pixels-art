@@ -42,11 +42,6 @@ createBoard();
 
 //Requisito 6
 function mousePaint(){
-    let select = document.querySelectorAll(".color");
-    
-
-
-
-
-
+    let select = document.querySelectorAll(".color")[0];
+    select.className = "selected";
 }
