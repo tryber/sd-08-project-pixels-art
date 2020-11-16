@@ -16,7 +16,6 @@
 
 .azul{
     background-color: blue;
-   
 }
 
 .vermelho{
@@ -41,4 +40,16 @@
 ul li {
     text-decoration: none;
     display: inline-block;
+    margin: 0px;
+}
+
+/* 
+    QUADRO DE PIXEL
+*/
+
+.pixel{
+    border: solid black 1px;
+    height: 100px;
+    width: 100px;
+    margin: 0px 0px 0px 0px;
 }
