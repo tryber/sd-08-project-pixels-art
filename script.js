@@ -50,7 +50,7 @@ function creatPixelBoard(n) {
 }
 
 function sizeOfTheBoard() {
-  let inputData = document.getElementById('#board-size').childNodes[0].nodeName;
+  let inputData = document.getElementById('#board-size');
   let chosenNumber = parseInt(inputData);
   console.log(inputData);
   return chosenNumber;
