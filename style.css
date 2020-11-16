@@ -16,6 +16,7 @@
 #pixel-board{
     border-collapse: collapse;
 }
+
 .pixel{
     border:solid black 1px;
     width:38px;
