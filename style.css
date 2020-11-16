@@ -5,6 +5,7 @@ h1 {
 
 ul {
   margin: 5px;
+  padding-inline-start: 0;
 }
 
 table {
@@ -14,9 +15,9 @@ table {
 .color {
   border: 1px solid black;
   display: inline-block;
-  height: 20px;
+  height: 30px;
   margin: 1px;
-  width: 20px;
+  width: 30px;
 }
 
 .pixel {
@@ -25,4 +26,16 @@ table {
   height: 40px;
   margin: 0;
   width: 40px;
+}
+
+.botao {
+  border: 2px solid black;
+  display: inline-block;
+  padding: 3px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
