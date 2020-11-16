@@ -70,7 +70,6 @@ function resizeButton() {
   const createBoardButton = document.querySelector('#generate-board');
   createBoardButton.addEventListener('click', () => {
     const size = sizeOfTheBoard();
-    console.log(size);
     if (size < 1 || size === 'empty') {
       alert('Board inválido!');
     } else if (size < 5) {
