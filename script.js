@@ -51,9 +51,9 @@ function paintPixel() {
 }
 paintPixel();
 
-function changeSelector (){
-  const boxsColor = colorPalette.children ;
-  for (let index = 0; index < boxsColor.length ; index += 1){
+function changeSelector () {
+  const boxsColor = colorPalette.children;
+  for (let index = 0; index < boxsColor.length; index += 1) {
     boxsColor[index].addEventListener('click', function (event) {
       const colorClass = document.querySelector('.selected');
       colorClass.classList.remove('selected');
