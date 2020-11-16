@@ -32,8 +32,10 @@ palette.addEventListener('click', function clickPalette(event) {
 //Pinta os boxes da table
 table.addEventListener('click', function clickTable(event) {
     let selected = document.getElementsByClassName('selected'); // cor selecionada
-    event.target.style.backgroundColor = selected[0].style.backgroundColor;
-    event.target.className = 'pixel'
+    if (event.target.className == 'pixel') {
+        event.target.style.backgroundColor = selected[0].style.backgroundColor;
+        event.target.className = 'pixel'
+    }
 })
 
 //limpa os boxes da table
