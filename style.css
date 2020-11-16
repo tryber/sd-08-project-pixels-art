@@ -1,23 +1,23 @@
-div .color{
+.color{
     border: solid 1px;
     display: inline-block;
     width: 40px;
     height: 40px;
 }
 
-.colorBlack {
+#colorBlack {
     background-color: black;
 }
 
-.colorBlue {
+#colorBlue {
     background-color: #36467C;
 }
 
-.colorGray{
+#colorGray{
     background-color: #B0B0B0;
 }
 
-.colorBrown{
+#colorBrown{
     background-color: #CCBAAA;
 }
 
