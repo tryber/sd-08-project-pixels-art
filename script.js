@@ -11,8 +11,8 @@ let tbl = document.getElementById('pixel-board');
 function criandoElemento(){
     for(let index = 0;index < 5; index++){
         let col = document.createElement('tr');
-        col.classList.add('pixel');
-        col.style.backgroundColor='white';
+        /*col.classList.add('pixel');
+        col.style.backgroundColor='white';*/
         tbl.appendChild(col);
        for(let i = 0; i < 5; i++){
             let linha = document.createElement('td');
