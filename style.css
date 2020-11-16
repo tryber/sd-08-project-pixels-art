@@ -1,15 +1,21 @@
-#color1{
+#color-palette {
+    width: 25px;
+    height:25px;
+    display: inline-block;
+}
+
+.colorBlack {
     background-color: black;
 }
 
-#color2{
+.colorRed {
     background-color: red;
 }
 
-#color3{
+.colorBlue {
     background-color:blue;
 }
 
-#color4{
+.colorGreen {
     background-color:green;
 }
