@@ -4,10 +4,11 @@
     CORES
 */
 .color{
+    display: inline-block;
     height: 100px;
     width: 100px;
     border: solid black 1px;
-    margin-right: 5px;
+    margin: auto;
 }
 
 .preto{
@@ -48,8 +49,9 @@ ul li {
 */
 
 .pixel{
+    display: inline-block;
     border: solid black 1px;
-    height: 100px;
-    width: 100px;
-    margin: 0px 0px 0px 0px;
+    height: 40px;
+    width: 40px;
+    background-color: white;
 }
