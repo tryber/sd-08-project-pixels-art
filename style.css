@@ -1,6 +1,8 @@
 div .color{
     border: solid 1px;
     display: inline-block;
+    width: 40px;
+    height: 40px;
 }
 
 .colorBlack {
@@ -17,4 +19,12 @@ div .color{
 
 .colorBrown{
     background-color: #CCBAAA;
+}
+
+.pixel{
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    border: solid 1px;
+    margin: -2px;
 }
