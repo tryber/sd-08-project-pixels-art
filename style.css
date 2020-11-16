@@ -1,7 +1,29 @@
+#title {
+    margin: 5px;
+    text-align: center;
+}
+
+#color-palette {
+    margin: 5px;
+}
+
+#pixel-board {
+    border-spacing: 0;
+}
+
 .color {
   border: 1px solid black;
   display: inline-block;
-  height: 50px;
+  height: 20px;
   margin: 1px;
-  width: 50px;
+  width: 20px;
 }
+
+.pixel {
+  background-color: white;  
+  border: 1px solid black;
+  height: 40px;
+  margin: 0;
+  width: 40px;
+}
+
