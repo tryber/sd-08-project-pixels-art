@@ -26,7 +26,7 @@ selecionandoCorPreta();
 function mudaCor(param){
     for(let indiceArrayC = 0; indiceArrayC < cor.length; indiceArrayC += 1){
         cor[indiceArrayC].classList.remove('selected');
-        param.target.classList.add('select');
+        param.target.classList.add('selected');
         cor[indiceArrayC] = param.target;
     }
 }
