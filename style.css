@@ -1,13 +1,7 @@
 .color {
-    border: 1px solid black;
-    display: inline-block;
-    height: 50px;
-    width: 50px;
-    margin: 1px;
-}
-
-section {
-    border:1px solid black;
-    margin-top: 5px;
-    margin-bottom: 5px;
+  border: 1px solid black;
+  display: inline-block;
+  height: 50px;
+  margin: 1px;
+  width: 50px;
 }
