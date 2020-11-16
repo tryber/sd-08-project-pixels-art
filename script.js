@@ -59,12 +59,11 @@ creatPixelBoard();
 
 function sizeOfTheBoard() {
   const inputData = document.querySelectorAll('input')[0].value;
-  if (inputData == '') {
+  if (inputData === '') {
     return 'empty';
-  } else {
+  }
   const choseNumber = parseFloat(inputData);
   return choseNumber;
-  }
 }
 
 function resizeButton() {
@@ -72,7 +71,7 @@ function resizeButton() {
   createBoardButton.addEventListener('click', () => {
     const size = sizeOfTheBoard();
     console.log(size);
-    if (size < 1 || size == 'empty') {
+    if (size < 1 || size === 'empty') {
       alert('Board inválido!');
     } else if (size < 5) {
       creatPixelBoard(5);
