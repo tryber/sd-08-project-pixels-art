@@ -3,6 +3,10 @@ let corVermelho = document.getElementsByClassName('color')[1];corVermelho.style.
 let corAzul = document.getElementsByClassName('color')[2]; corAzul.style.background = 'blue';
 let corVerde = document.getElementsByClassName('color')[3]; corVerde.style.background = 'green';
 
+window.onload = function(){
+    corPreto.classList.add('selected');
+}
+
 let tbl = document.getElementById('pixel-board');
 function criandoElemento(){
     for(let index = 0;index < 5; index++){
