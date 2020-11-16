@@ -29,3 +29,13 @@ function colorirPixel(e) {
 let palette = document.querySelector('#color-palette');
 palette.addEventListener('click', colorirPixel);
 board.addEventListener('click', colorirPixel);
+
+function limparPixel() {
+    let pixel = document.querySelectorAll('.pixel')
+    for (let i = 0; i < pixel.length; i += 1) {
+      pixel[i].removeAttribute('id');
+    }
+}
+
+let botao = document.querySelector('#clear-board');
+botao.addEventListener('click', limparPixel);

@@ -27,8 +27,8 @@ body {
 
 .pixel {
   border: black solid 1px;
-  height: 25px;
-  width: 25px;
+  height: 40px;
+  width: 40px;
   display: table-cell;
   background-color: white;
 }
