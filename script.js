@@ -33,8 +33,9 @@ function creatColorsOptions() {
 }
 creatColorsOptions();
 
-function creatPixelBoard(n) {
+function creatPixelBoard(n = 5) {
   const board = document.getElementById('pixel-board');
+  board.innerHTML = "";
   for (let i = 0; i < n; i += 1) {
     const pixelsLine = document.createElement('div');
     pixelsLine.className = 'line';
@@ -49,25 +50,30 @@ function creatPixelBoard(n) {
     }
   }
 }
+creatPixelBoard();
 
 function sizeOfTheBoard() {
   let inputData = document.querySelectorAll('input')[0].value;
-  let chosenNumber = parseInt(inputData);
-  return chosenNumber;
+  let choseNumber = parseInt(inputData);
+  return choseNumber;
 }
 
 function resizeButton() {
   const createBoardButton = document.querySelector('#generate-board');
   createBoardButton.addEventListener('click', () => {
     let size = sizeOfTheBoard();
-    if (size < 1 || size > 50) {
-    alert('Board inválido!');
+    if (size < 1){
+      alert('Board inválido!')
+    } else if (size < 5) {
+      creatPixelBoard(5);
+    } else if (size > 50) {
+      creatPixelBoard(50);
     } else {
-    creatPixelBoard(size);
+      creatPixelBoard(size);
     }
-  });
+  })
 }
-
+resizeButton();
 
 function allPixelsBckGroundWhite() {
   const pixels = document.querySelectorAll('.pixel');
@@ -87,10 +93,3 @@ function colorToBePainted() {
   return colorSelected;
 }
 clearBoard();
-
-creatPixelBoard(5);
-resizeButton();
-
-
-
-
