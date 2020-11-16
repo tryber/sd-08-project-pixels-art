@@ -1,5 +1,13 @@
+body {
+    max-width: 800px;
+    width: 100%;
+    margin: auto;
+    border: 1px solid black;
+    height: 400px;
+}
 #title {
-    font-family: fantasy;    
+    font-family: fantasy, monospace, sans-serif; 
+    text-align: center;      
 }
 
 .color {
@@ -14,7 +22,7 @@
     width: 240px;
     height: 200px;
     position: relative;
-    top: 10px
+    top: 10px;   
 }
 
 .pixel {
@@ -25,5 +33,23 @@
     background-color: white;
 }
 
-#color-palette {   
+.black{
+    background-color: black;
+}
+
+.crimson {
+    background-color: crimson;
+}
+
+.blue {
+    background-color: blue;
+}
+
+.aqua {
+    background-color: aqua;
+}
+
+.centralizar {
+    position: relative;
+    margin-left: 36%;
 }
