@@ -1,14 +1,20 @@
 function changeSelected(event) {
-  let lastSelected = document.querySelector('.selected')
+  const lastSelected = document.querySelector('.selected');
   lastSelected.className = 'color';
-  let newSelected = event.target;
+  const newSelected = event.target;
   newSelected.className = 'color selected';
 }
 
+function firstSelect(element) {
+  if (element.style.backgroundColor === 'black') {
+    element.className = 'color selected';
+  }
+}
+
 function paint(event) {
-  let selectedColor = document.querySelector('.selected');
-  let color = selectedColor.style.backgroundColor;
-  let selectedPixel = event.target;
+  const selectedColor = document.querySelector('.selected');
+  const color = selectedColor.style.backgroundColor;
+  const selectedPixel = event.target;
   selectedPixel.style.backgroundColor = color;
 }
 
@@ -35,12 +41,6 @@ function fillPalete() {
   }
 }
 
-function firstSelect(element) {
-  if (element.style.backgroundColor === 'black') {
-    element.className = 'color selected';
-  }
-}
-
 function fillBoard() {
   const board = document.querySelector('#pixel-board');
   for (let rowIndex = 0; rowIndex < 5; rowIndex += 1) {
@@ -55,14 +55,14 @@ function fillBoard() {
   }
 }
 
-function clearBoard(event) {
-  let board = document.querySelectorAll('.pixel');
+function clearBoard() {
+  const board = document.querySelectorAll('.pixel');
   for (let pixel = 0; pixel < board.length; pixel += 1) {
     board[pixel].style.backgroundColor = 'white';
   }
 }
 
-let button = document.querySelector('#clear-board');
+const button = document.querySelector('#clear-board');
 button.addEventListener('click', clearBoard);
 
 fillPalete();
