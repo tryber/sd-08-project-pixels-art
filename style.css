@@ -1,0 +1,25 @@
+.color-palette {
+  border-collapse: collapse;
+}
+
+.pixel-board {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  display: table-cell;
+  border-collapse: collapse;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
+  display: table-cell;
+  border-collapse: collapse;
+}
+
+.color {
+  height: 40px;
+  width: 40px;
+}
