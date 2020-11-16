@@ -53,7 +53,7 @@ function colorPixel(){
 colorPixel();
 
 function cleanBoard() {
-    let btnClean = document.querySelector('#clean-board');
+    let btnClean = document.querySelector('#clear-board');
     btnClean.addEventListener('click', function() {
         document.querySelectorAll('.pixel').forEach(function(item) {
             item.style.backgroundColor = 'white';
