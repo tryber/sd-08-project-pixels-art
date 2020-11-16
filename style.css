@@ -1,14 +1,14 @@
-#title {
-    margin: 5px;
-    text-align: center;
+h1 {
+  margin: 5px;
+  text-align: center;
 }
 
-#color-palette {
-    margin: 5px;
+ul {
+  margin: 5px;
 }
 
-#pixel-board {
-    border-spacing: 0;
+table {
+  border-spacing: 0;
 }
 
 .color {
@@ -20,10 +20,9 @@
 }
 
 .pixel {
-  background-color: white;  
+  background-color: white;
   border: 1px solid black;
   height: 40px;
   margin: 0;
   width: 40px;
 }
-
