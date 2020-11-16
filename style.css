@@ -1,0 +1,23 @@
+.color{
+    border: black 1px solid;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+}
+
+.blue{
+    background-color: #6ABECD;
+}
+
+.green{
+    background-color: #88D78C;
+}
+
+.lightGreen{
+    background-color: #C2EBCA;
+}
+
+.darkBlue{
+    background-color: #265473;
+}
