@@ -17,8 +17,11 @@ div {
     font-size: 0;
 }
 
-.color {
-    
+#clear-board {
+    margin: 2vh 0;
+    padding: 0.3rem;
+    border: 1px solid #ddd;
+    border-radius: 8%;
 }
 
 .color, .pixel {
