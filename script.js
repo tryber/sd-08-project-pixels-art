@@ -50,9 +50,8 @@ function creatPixelBoard(n) {
 }
 
 function sizeOfTheBoard() {
-  let inputData = document.getElementById('#board-size');
+  let inputData = document.querySelectorAll('input')[0].value;
   let chosenNumber = parseInt(inputData);
-  console.log(inputData);
   return chosenNumber;
 }
 
@@ -61,7 +60,7 @@ function boardGenerator() {
   createBoardButton.addEventListener('click', () => {
     let size = sizeOfTheBoard();
     if (size < 1 || size > 50) {
-      return alert('Board inválido!');
+    alert('Board inválido!');
     } else {
     creatPixelBoard(size);
     }
@@ -87,9 +86,9 @@ function colorToBePainted() {
 }
 
 
-window.onload = function () {
+//window.onload = function () {
   boardGenerator();
   clearBoard();
   creatColorsOptions();
-  creatPixelBoard(5);
-};
+  //creatPixelBoard();
+//};
