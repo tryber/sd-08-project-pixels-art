@@ -1,6 +1,7 @@
 // Collor Palette
 const colorPalette = document.getElementById('color-palette');
 const colorsArray = ['black', 'yellow', 'orange', 'red'];
+const pixelBoard = document.getElementById('pixel-board');
 
 colorsArray.forEach(function (color) {
   const button = document.createElement('button');
@@ -26,8 +27,6 @@ function handler(button) {
 
 // Pixel Board
 function createPixelBoard() {
-  const pixelBoard = document.getElementById('pixel-board');
-
   for (let column = 0; column < 5; column += 1) {
     const pixel = document.createElement('div');
     pixelBoard.appendChild(pixel);
@@ -52,11 +51,18 @@ function paintPixel() {
 }
 paintPixel();
 
-function createEventsColor(event) {
-  const colorClass = document.querySelector('.selected');
-  colorClass.classList.remove('selected');
-  event.target.classList.add('selected');
+function changeSelector (){
+  const boxsColor = colorPalette.children ;
+  for (let index = 0; index < boxsColor.length ; index += 1){
+    boxsColor[index].addEventListener('click', function (event) {
+      const colorClass = document.querySelector('.selected');
+      colorClass.classList.remove('selected');
+      event.target.classList.add('selected');
+    });
+  }
 }
+
+changeSelector();
 
 // Clear button
 const buttonClear = document.getElementById('clear-board');
