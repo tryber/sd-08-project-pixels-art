@@ -1,5 +1,13 @@
-function alteraCor (classe, cor) {
-document.querySelectorAll(classe)[0].style.backgroundColor = cor;
+let alteraCor = document.querySelectorAll('.color')
+
+for(let i = 0; i < alteraCor.length; i+=1) {
+    alteraCor[i].addEventListener('click', trocaCor)
 }
 
-event.target
+function trocaCor(evento) {
+    let antigoSelected = document.querySelector('.selected');
+    antigoSelected.classList.remove('selected');
+
+    evento.target.classList.add('selected');
+    console.log(evento.target)
+}
