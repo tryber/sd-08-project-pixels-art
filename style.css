@@ -5,20 +5,17 @@
     height: 40px;
 }
 
-#colorBlack {
-    background-color: black;
-}
 
 #colorBlue {
-    background-color: #36467C;
+    background-color: green;
 }
 
 #colorGray{
-    background-color: #B0B0B0;
+    background-color: blue;
 }
 
 #colorBrown{
-    background-color: #CCBAAA;
+    background-color: gray;
 }
 
 .pixel-board{
@@ -34,3 +31,4 @@
     margin: -2px;
     background-color: white;
 }   
+
