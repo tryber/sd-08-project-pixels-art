@@ -3,6 +3,7 @@ const boxPalette = document.getElementsByClassName('color'); //elementos com cla
 const colors = ["black", "red", "orange", "yellow"]; // array de cores
 const palette = document.getElementById('color-palette'); // seleciona o palette
 const table = document.getElementById('pixel-board'); // seleciona a table
+const clear = document.getElementById('clear'); // botão limpar
 
 //roda as funções quando a página é carregada
 window.onload = criateColorsPalette(boxPalette,colors), firstSelectedColor(boxPalette);
@@ -32,6 +33,15 @@ palette.addEventListener('click', function clickPalette(event) {
 table.addEventListener('click', function clickTable(event) {
     let selected = document.getElementsByClassName('selected'); // cor selecionada
     event.target.style.backgroundColor = selected[0].style.backgroundColor;
+    event.target.className = 'pixel painted'
 })
 
+//limpa os boxes da table
+clear.addEventListener('click', function() {
+    let boxes = document.getElementsByClassName('painted');
+    
+    for (let index = 0; index < boxes.length; index +=1) {
+        boxes[index].style.backgroundColor = 'white';
+    }
+})
 
