@@ -1,8 +1,8 @@
 div .color{
     border: solid 1px;
     display: inline-block;
-    width: 40px;
-    height: 40px;
+    width: 5em;
+    height: 5em;
 }
 
 .colorBlack {
@@ -22,9 +22,10 @@ div .color{
 }
 
 .pixel{
-    width: 40px;
-    height: 40px;
+    width: 5em;
+    height: 5em;
     display: inline-block;
     border: solid 1px;
     margin: -2px;
+    background-color: white;
 }
