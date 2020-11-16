@@ -1,4 +1,5 @@
 const colors = ['black', 'red', 'green', 'blue'];
+let brush = 0;
 const classColor = 'color';
 const classColorSelected = 'color selected';
 
@@ -38,7 +39,30 @@ function inputOutputSelected() {
                 palettes[i].classList = 'color';
             }
             event.target.classList.toggle('selected');
-            console.log(palettes[index]);// Testando 
+            brush = index;
+            console.log(index);// Testando 
+            console.log(colors[brush]);// Testando 
         });
     }
 }inputOutputSelected();
+// Pinta os pixels
+function paintPixels() {
+    const pixels = document.querySelectorAll('#pixel-board  ul li');
+    
+    for(let index = 0; index < pixels.length; index += 1) {
+        pixels[index].addEventListener('click', dadada);
+        function dadada(event) {
+            let p = pixels[index];
+            console.log('cliquei ' + index);
+            p.style.background = colors[brush];
+            console.log(brush + ' brush');
+            console.log(colors[brush] + ': colors brush');
+            // let pp = pixels[index];
+            // event.target.style.background = "'" + colors[brush] + "'";
+        }
+    }
+
+
+
+    // pixels.forEach(pixel => console.log(pixel));
+}paintPixels();
