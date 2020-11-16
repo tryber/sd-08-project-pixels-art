@@ -1,8 +1,8 @@
 function changeSelected(event) {
-    let lastSelected = document.querySelector('.selected')
-    lastSelected.className = 'color';
-    let newSelected = event.target;
-    newSelected.className = 'color selected';
+  let lastSelected = document.querySelector('.selected')
+  lastSelected.className = 'color';
+  let newSelected = event.target;
+  newSelected.className = 'color selected';
 }
 
 function paint(event) {
@@ -11,6 +11,16 @@ function paint(event) {
   let selectedPixel = event.target;
   selectedPixel.style.backgroundColor = color;
 }
+
+// function generateRandomColor(index) {
+//   if (index === 0) {
+//     return 'black';
+//   }
+//   else {
+//     let randomColor = Math.floor(Math.random()*16777215).toString(16);
+//     return `#${randomColor}`;
+//   }
+// }
 
 function fillPalete() {
   const colorList = ['black', 'red', 'green', 'blue'];
