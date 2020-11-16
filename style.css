@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+main {
+    text-align: center;
+    margin-top: 20vh;
+}
+
+div {
+    margin-top: 10px;
+    font-size: 0;
+}
+
+#clear-board {
+    margin: 2vh 0;
+    padding: 0.3rem;
+    border: 1px solid #ddd;
+    border-radius: 8%;
+}
+
+.color, .pixel {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #000;
+}
+
+.pixel {
+    background: #fff;
+}
