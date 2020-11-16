@@ -1,0 +1,42 @@
+h1 {
+  margin: 5px;
+  text-align: center;
+}
+
+ul {
+  margin: 5px;
+  padding-inline-start: 0;
+}
+
+table {
+  border-spacing: 0;
+}
+
+.color {
+  border: 1px solid black;
+  display: inline-block;
+  height: 30px;
+  margin: 1px;
+  width: 30px;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  height: 40px;
+  margin: 0;
+  width: 40px;
+}
+
+.botao {
+  border: 2px solid black;
+  display: inline-block;
+  margin-bottom: 10px;
+  padding: 3px;
+}
+
+.content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
