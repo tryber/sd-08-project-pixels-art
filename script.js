@@ -5,6 +5,21 @@ const butonGenerateLocal = document.getElementById('generate-board');
 let nLinhasEColunasAtual = 5;
 let nLinhasEColunasAnterior = nLinhasEColunasAtual;
 
+function sorteio() {
+    const numCor = Math.round(Math.random() * 256);
+    return numCor;
+  }
+  
+  function gerarCores() {
+    for (let index = 1; index < colors.length; index += 1) {
+      let cor = 'rgb(' + sorteio() + ', ' + sorteio() + ', ' + sorteio() + ')';
+      colors[index] = cor;
+    }
+   return colors;
+  }
+  gerarCores();
+
+
 function alteraBoard() {
     if (inputGenereteLocal.value === ""){
         alert("Board inválido!");
@@ -25,6 +40,7 @@ function alteraBoard() {
         createPixels();
     }
     inputGenereteLocal.value = "";
+    nLinhasEColunasAtual
 }
 butonGenerateLocal.addEventListener("click", alteraBoard);
 
