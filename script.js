@@ -7,7 +7,7 @@ let nLinhasEColunasAnterior = nLinhasEColunasAtual;
 
 function alteraBoard() {
     if (inputGenereteLocal.value === ""){
-        alert("digite um valor entre 5 e 50");
+        alert("Board inválido!");
     } else {
     nLinhasEColunasAnterior = nLinhasEColunasAtual;
     nLinhasEColunasAtual = parseInt(inputGenereteLocal.value);
