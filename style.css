@@ -3,8 +3,8 @@
 } 
 #color-palette {
     display: inline-flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+   /*flex-direction: row;
+    flex-wrap: nowrap;*/
     justify-content: flex-start;
 }
 .color{
@@ -25,6 +25,5 @@
     height:40px;
     box-sizing: border-box;
 }
-.selected{
-    background-color:rgb(000,000,000);
-}
+
+

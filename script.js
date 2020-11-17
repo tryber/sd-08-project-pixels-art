@@ -23,3 +23,19 @@ function criandoElemento(){
     }
 }
 criandoElemento();
+
+var elementos = document.getElementsByClassName('color');
+for(let contador = 0; contador < elementos.length; contador+=1){
+    elementos[contador].onclick = function(){
+
+        let removeElementos = elementos[0];
+        while(removeElementos){
+            if(removeElementos.tagName === 'DIV'){
+                removeElementos.classList.remove('selected');
+            }
+            removeElementos = removeElementos.nextSibling;
+        }
+        
+        this.classList.add('selected');
+    }
+}
