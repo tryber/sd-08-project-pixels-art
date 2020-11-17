@@ -3,19 +3,20 @@
 }
 
 body {
-  margin: auto;
-  max-width: 90%;
+  margin: 0px;
 }
 
 .box-center {
   display: flex;
   justify-content: center;
+  width: 90em;
 }
 
 .buttons {
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
+  width: 90em;
 }
 
 .color {
@@ -37,6 +38,7 @@ body {
   background-color: lightgray;
   display: flex;
   justify-content: center;
+  width: 90em;
 }
 
 .pixel {
@@ -50,4 +52,5 @@ body {
 .posicao-table {
   display: flex;
   justify-content: center;
+  width: 90em;
 }
