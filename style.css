@@ -42,5 +42,11 @@
     float: left;
     height: 40px;
     width: 40px;
-}   
+}
+
+.selected {
+    border-color: purple;
+    border-style: ridge;
+    border-width: 4px;
+}
     
