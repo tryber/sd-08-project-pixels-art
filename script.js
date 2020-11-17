@@ -1,21 +1,39 @@
-let colors = ["black", "red", "yellow", "blue"];
+//Cores para Sortear
+let coresBases = ["yellow", "blue", "gray", "gold", "orange", "brown", "silver", "pink", "purple", "green", "red", "violet"];
+// Referenciando Endereços
+let botaoCoresSortidas = document.getElementById("botao-cores-sortidas");
+let paletaDeCores = document.getElementById("color-palette");
+let quadroDePixels = document.getElementById("pixel-board");
 let tamanhoDoQuadro = document.getElementById('board-sizer');
-let botaGerarQuadrados = document.getElementById('generate-board');
-let paletaDeCores = document.querySelector("#color-palette");
-let pixelBoard = document.querySelector("#pixel-board");
-let cor = "black";
+let botaoGerarQuadrados = document.getElementById('generate-board');
 let limparPixels = document.querySelector("#clear-board");
-botaGerarQuadrados.addEventListener('click', gerarTabela);
-limparPixels.addEventListener("click", limpaTabela);
+//Eventos
+botaoCoresSortidas.addEventListener('click', geraPaletaDeCores);
+botaoGerarQuadrados.addEventListener('click', gerarTabela);
 paletaDeCores.addEventListener("click", alteraSelected);
-pixelBoard.addEventListener("click", pintaPixel);
-
+quadroDePixels.addEventListener("click", pintaPixel);
+limparPixels.addEventListener("click", limpaPixels);
+function geraCoresAleatorias() {
+  let novaCoresBase = coresBases.slice();
+  let cores = ["black"];
+  let contador = 0;
+  while (contador < 3) {
+    let sortir = [Math.floor(Math.random() * 9)];
+    let novaCor = novaCoresBase[sortir];
+    novaCoresBase.splice(novaCoresBase.indexOf(novaCor), 1);
+    cores.push(novaCor);
+    contador ++;
+  }
+  return cores;
+}
 function geraPaletaDeCores() { // Função que gera paleta de cores
-  for (let index = 0; index < colors.length; index += 1) {
+  let cores = geraCoresAleatorias();
+  paletaDeCores.innerHTML = "";
+  for (let index = 0; index < cores.length; index += 1) {
     let divPalet = document.createElement("div");
     paletaDeCores.appendChild(divPalet);
     divPalet.className = "color";
-    divPalet.style.backgroundColor = colors[index];
+    divPalet.style.backgroundColor = cores[index];
     if (index == 0) {
       divPalet.classList.add("selected");
     }
@@ -33,10 +51,10 @@ function gerarTabela() {
   if (numeroDeQuadros > 50) {
     numeroDeQuadros = 50;
   }
-  pixelBoard.innerHTML = '';
+  quadroDePixels.innerHTML = '';
   for (let index = 0; index < numeroDeQuadros; index++) {
     let maePixexl = document.createElement('div');
-    pixelBoard.appendChild(maePixexl);
+    quadroDePixels.appendChild(maePixexl);
     for (let j = 0; j < numeroDeQuadros; j++) {
       let divTable = document.createElement("div");
       maePixexl.appendChild(divTable);
@@ -45,8 +63,8 @@ function gerarTabela() {
     }
   }
 }
+cor = "black";
 gerarTabela();
-
 function alteraSelected(event) {
   let removederSeletect = document.getElementsByClassName("selected");
   for (let i = 0; i < removederSeletect.length; i++) {
@@ -60,7 +78,7 @@ function pintaPixel(event) {
   let evento = event.target;
   evento.style.backgroundColor = cor;
 }
-function limpaTabela() {
+function limpaPixels() {
   let cadaPixel = document.getElementsByClassName('pixel');
   for (let i = 0; i < cadaPixel.length; i++) {
     cadaPixel[i].style.backgroundColor = "white";
