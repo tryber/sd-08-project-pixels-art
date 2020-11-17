@@ -9,6 +9,7 @@ let quadrado1 = document.getElementById("quad1");
 let quadrado2 = document.getElementById("quad2");
 let quadrado3 = document.getElementById("quad3");
 let quadrado4 = document.getElementById("quad4");
+let corParaPintar = "black";
 
 quadrado1.addEventListener("click", function () {
     quadrado1.classList.add("selected");
@@ -21,6 +22,8 @@ quadrado1.addEventListener("click", function () {
     if (quadrado4.className = "color selected") {
         quadrado4.className = "color";
     }
+    corParaPintar = "black"
+    console.log(corParaPintar);
 });
  quadrado2.addEventListener("click", function () {
      quadrado2.classList.add("selected");
@@ -33,6 +36,8 @@ quadrado1.addEventListener("click", function () {
      if (quadrado4.className = "color selected") {
          quadrado4.className = "color";
      }
+     corParaPintar = "red";
+     console.log(corParaPintar);
  });
  quadrado3.addEventListener("click", function () {
      quadrado3.classList.add("selected");
@@ -45,6 +50,8 @@ quadrado1.addEventListener("click", function () {
      if (quadrado4.className = "color selected") {
          quadrado4.className = "color";
      }
+    corParaPintar = "green";
+    console.log(corParaPintar);
  });
  quadrado4.addEventListener("click", function () {
      quadrado4.classList.add("selected");
@@ -57,4 +64,15 @@ quadrado1.addEventListener("click", function () {
      if (quadrado1.className = "color selected") {
          quadrado1.className = "color";
      }
+     corParaPintar = "blue";
+     console.log(corParaPintar);
  });
+
+ let pixels = document.querySelectorAll(".pixel");
+ for (let index = 0; index < pixels.length; index += 1) {
+     let pixelParaPintar = pixels[index];
+     pixelParaPintar.addEventListener("click", function () {
+        pixelParaPintar.style.backgroundColor = corParaPintar;
+     })
+ }
+ // corParaPintar.style.backgroundColor
