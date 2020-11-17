@@ -17,12 +17,12 @@ function selectBlack() {
    selectBlackPalette.className = "color selected"
 }
 
-// function createBlackButton () {
-//    let blackButton = document.getElementById("black");
-//     blackButton.addEventListener("click", newBlackButton);
+// function createNewButton () {
+//    let newButton = document.getElementById("black");
+//     newButton.addEventListener("click", paletteButton);
 // }
 
-// function newBlackButton () {
+// function paletteButton () {
 //    let enventHappening = document.querySelectorAll(".pixel");
 //    for(let index = 0; index < enventHappening.length; index += 1) {
 //     enventHappening[index].style.backgroundColor = "black"
