@@ -1,4 +1,4 @@
-//Variáveis
+// Variáveis
 const boxPalette = document.getElementsByClassName("color");
 const colors = ["black", "red", "orange", "yellow"];
 const palette = document.getElementById("color-palette");
@@ -6,24 +6,22 @@ const table = document.getElementById("pixel-board");
 const clear = document.getElementById("clear-board");
 const generateBoard = document.getElementById("generate-board");
 
-//roda as funções quando a página é carregada
-(window.onload = criateColorsPalette(boxPalette, colors)),
-  firstSelectedColor(boxPalette),
-  populaTable();
+// roda as funções quando a página é carregada
+(window.onload = criateColorsPalette(boxPalette, colors),firstSelectedColor(boxPalette),populaTable())
 
-//Preenche as cores do palette
+// Preenche as cores do palette
 function criateColorsPalette(boxPalette, colors) {
   for (key in colors) {
     boxPalette[key].style.backgroundColor = colors[key];
   }
 }
 
-//seleciona cor black
+// seleciona cor black
 function firstSelectedColor(boxPalette) {
   boxPalette[0].className = "color selected";
 }
 
-//Popula table no onload
+// Popula table no onload
 function populaTable() {
   for (colunas = 1; colunas <= 5; colunas += 1) {
     tr = document.createElement("tr");
@@ -40,7 +38,7 @@ function populaTable() {
   }
 }
 
-//cria as boxes da table com o tamanho setado
+// cria as boxes da table com o tamanho setado
 generateBoard.addEventListener("click", function () {
   table.innerHTML = "";
 
@@ -73,7 +71,7 @@ generateBoard.addEventListener("click", function () {
   document.getElementById("board-size").value = "";
 });
 
-//pega a cor selecionada do palette
+// pega a cor selecionada do palette
 palette.addEventListener("click", function clickPalette(event) {
   let selected = document.getElementsByClassName("selected");
   selected[0].className = "color";
@@ -82,7 +80,7 @@ palette.addEventListener("click", function clickPalette(event) {
   selectColor.className = "color selected";
 });
 
-//Pinta os boxes da table
+// Pinta os boxes da table
 table.addEventListener("click", function clickTable(event) {
   let selected = document.getElementsByClassName("selected");
   if (event.target.className == "pixel") {
@@ -91,7 +89,7 @@ table.addEventListener("click", function clickTable(event) {
   }
 });
 
-//limpa os boxes da table
+// limpa os boxes da table
 clear.addEventListener("click", function () {
   let boxes = document.getElementsByClassName("pixel");
 
