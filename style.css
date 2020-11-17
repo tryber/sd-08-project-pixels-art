@@ -32,10 +32,6 @@ button {
   padding: 10px 15px;
 }
 
-#pixel-board {
-  max-width: 210px;
-}
-
 .pixel {
   background-color: white;
   border: 1px solid black;

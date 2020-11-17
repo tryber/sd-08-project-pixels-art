@@ -1,16 +1,20 @@
 let boardSize = 5;
 
 function createPixels() {
-  const pixelBoard = document.querySelector('#pixel-board');
+  const pixelBoard = document.getElementById('pixel-board');
+  for (let line = 0; line < boardSize; line +=1) {
+    const pixelLine = document.createElement('div');
 
-  for (let index = 0; index < (boardSize * boardSize); index += 1) {
-    const pixelDiv = document.createElement('div');
-    pixelDiv.className = 'pixel ' + index;
+    pixelBoard.appendChild(pixelLine);
+    
+    for (let index = 0; index < boardSize; index += 1) {
+    const pixel = document.createElement('div');
+    pixel.className = 'pixel';
 
-    pixelBoard.appendChild(pixelDiv);
+    pixelLine.appendChild(pixel);
+    }
   }
 }
-
 createPixels();
 
 function selectColor() {
@@ -18,7 +22,7 @@ function selectColor() {
 }
 
 function clearBoard() {
-  for (let index = 0; index < (boardSize * boardSize); index += 1) {
+  for (let index = 0; index < (boardSize ** 2); index += 1) {
     const turnWhite = document.getElementsByClassName('pixel')[index];
     turnWhite.style.backgroundColor = 'white';
   }
