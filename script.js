@@ -1,5 +1,4 @@
 const corDeFundo = ["black", "green", "orange", "yellow"];
-const paints = document.getElementsByClassName("color");
 
 
 //Requisito 2 e 3
@@ -10,9 +9,12 @@ function createDivs() {
         let div = document.createElement("div");
         div.className = "color";
         palette.appendChild(div);
-}
+        div.addEventListener("click", changeColor)
+    }
 }
 createDivs();
+
+const paints = document.getElementsByClassName("color");
 
 function colors (){
     for (let c = 0; c < corDeFundo.length; c += 1){
@@ -47,12 +49,17 @@ function mousePaint(){
 mousePaint();
 
 //Requisito 7
-
-
-
+function changeColor(event){
+    for (index = 0; index < paints.length; index += 1) {
+        paints[index].className = "color";
+    }
+    event.target.className += " selected";
+}
 
 //Requisito 8
-
+function paintBoard(){
+    
+}
 
 
 //Requisito 9
