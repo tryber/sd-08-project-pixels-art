@@ -1,46 +1,33 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background-image: url("imagens/cartoonquestionmark.jpeg");
-  background-repeat: no-repeat;
-  background-position: right;
-}
-
 .color {
-  width: 40px;
-  height: 40px;
   border: 1px solid black;
-  margin: 2px;
+  display: inline-block;
+  height: 40px;
+  margin: 5px;
+  width: 40px;
 }
-
-#color-palette {
-  display: flex;
-  align-content: center;
-  justify-content: center;
-}
-
 header {
-  font-family: "Xanh Mono", monospace, Arial, Helvetica, sans-serif;
-  display: flex;
   align-content: center;
-  justify-content: center;
-  padding: 20px;
 }
-
-#pixel-board {
-  padding-top: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.pixel-board {
+  border-collapse: collapse;
+  display: table;
 }
-
+.pixel-row {
+  display: table-row;
+}
 .pixel {
+  background: white;
   border: 1px solid black;
-  color: white;
-  width: 40px;
+  box-sizing: border-box;
+  display: table-cell;
   height: 40px;
+  width: 40px;
+}
+.btn-clear {
+  margin: 10px 0;
+  padding: 5px;
+}
+
+.board-size {
+  width: 40px;
 }

@@ -11,10 +11,14 @@
   <script defer src="./script.js"></script>
 </head>
 <body>
-  <header>
-    <h1 id="title">Paleta de Cores</h1>
-  </header> 
-  <div id="color-palette"></div>
-  <div id="pixel-board"></div>
+    <header>
+        <h1 id="title">Paleta de Cores</h1>
+    </header>
+    <div id="color-palette" class="color-palette"></div>
+    <label for="board-size">Defina o número de pixels = </label>
+    <input type="number" name="pixels" id="board-size" class="board-size" placeholder="5" min="1">
+    <button id="generate-board" class="generate-board">VQV</button>
+    <button id="clear-board" class="btn-clear">Limpar</button>
+    <div id="pixel-board" class="pixel-board"></div>
 </body>
 </html>
