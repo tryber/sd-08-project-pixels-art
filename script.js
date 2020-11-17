@@ -1,13 +1,13 @@
-let alteraCor = document.querySelectorAll('.color')
+let cores = document.querySelectorAll('.color')
 
-for(let i = 0; i < alteraCor.length; i+=1) {
-    alteraCor[i].addEventListener('click', trocaCor)
-}
+
+let selecionarCor = document.getElementById ('color-palette')
+    selecionarCor.addEventListener('click', trocaCor)
+
+// let antigoSelected = document.querySelector('.selected')
 
 function trocaCor(evento) {
-    let antigoSelected = document.querySelector('.selected');
-    antigoSelected.classList.remove('selected');
-
-    evento.target.classList.add('selected');
-    console.log(evento.target)
+    if (evento.target.className == 'color') {
+        evento.target.className = 'color selected'
+    }
 }
