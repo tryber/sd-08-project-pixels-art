@@ -1,4 +1,23 @@
 const colors = ["black", "yellow", "green", "red"];
+
+const inputGenereteLocal = document.getElementById('board-size');
+const butonGenerateLocal = document.getElementById('generate-board');
+let nLinhasEColunasAtual = 5;
+let nLinhasEColunasAnterior = nLinhasEColunasAtual;
+
+function alteraBoard() {
+    if (inputGenereteLocal.value === ""){
+        alert("digite um valor entre 5 e 50");
+    } else {
+    nLinhasEColunasAnterior = nLinhasEColunasAtual;
+    nLinhasEColunasAtual = parseInt(inputGenereteLocal.value);
+    clearTable();
+    createPixels();
+    inputGenereteLocal.value = "";
+    }
+}
+butonGenerateLocal.addEventListener("click", alteraBoard);
+
 function colorPalette () {
     let paletteLocal = document.getElementById("color-palette");
     
@@ -14,14 +33,14 @@ function colorPalette () {
 colorPalette();
 
 function createPixels (){
-    for (let line = 0; line < 5; line += 1){
+    for (let line = 0; line < nLinhasEColunasAtual; line += 1){
         let lineLocal = document.getElementById('pixel-board');
         let linePixels = document.createElement('div');
         linePixels.className = "line";
         lineLocal.appendChild(linePixels); 
         let pixelLine = document.getElementsByClassName('line')[line]; 
 
-        for (let colum = 0; colum < 5; colum += 1){                       
+        for (let colum = 0; colum < nLinhasEColunasAtual; colum += 1){                       
             let columPixels = document.createElement('div');    
             columPixels.className = "pixel";
             pixelLine.appendChild(columPixels);
@@ -29,6 +48,16 @@ function createPixels (){
     }    
 }
 createPixels();
+
+function clearTable() {    
+  for (let i = 0; i < nLinhasEColunasAnterior; i += 1) {
+    const lineLocal = document.getElementsByClassName('line');
+    for (let index = 0; index < nLinhasEColunasAnterior; index += 1) {  
+      let pixelLocal = document.querySelector(".pixel"); 
+      lineLocal[i].removeChild(pixelLocal);       
+    }
+  }
+}
 
 function selectedColor (){
     let colorInicial = document.querySelector(".color");
@@ -40,7 +69,7 @@ function changeSelectedColor (){
     const colorSelected = document.querySelector("#color-palette");
     const colorLocal = document.querySelectorAll(".color");
 
-    colorSelected.addEventListener("click", function (event){  
+    colorSelected.addEventListener('click', function (event){  
         for (let i = 0; i < colors.length; i += 1) {
             colorLocal[i].className = "color";           
         }

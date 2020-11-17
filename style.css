@@ -4,25 +4,26 @@
     border: 1px black solid;
     display: inline-block;  
     margin-left: 5px;
-
 }
 
 h4 {
     margin: 2px;
 }
+
 #board-size {
     width: 180px;
     margin-bottom: 5px;
 }
 
 #pixel-board {
-    max-width: 210px;
-    max-height: 210px;     
+    min-width: 210px;
+    min-height: 210px;   
 }
 
 #clear-board {
     padding-bottom: 5px;
 }
+
 
 .pixel {
     width: 40px;
