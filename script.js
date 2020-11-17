@@ -23,6 +23,25 @@ function firstSelectedColor(boxPalette) {
   boxPalette[0].className = "color selected";
 }
 
+//Popula table no onload
+function populaTable () {
+    for (colunas = 1; colunas <= 5; colunas +=1) {
+        tr = document.createElement('tr');
+        table.appendChild(tr);
+    }
+    let coluna = document.getElementsByTagName('tr');
+    
+    for (let linhas = 0; linhas < coluna.length; linhas +=1) {
+        for (index = 1; index <= 5; index += 1) {
+            td = document.createElement('td');
+            coluna[linhas].appendChild(td);
+            td.className = 'pixel';
+        }
+    }
+}
+
+window.onload = populaTable();
+
 //cria as boxes da table com o tamanho setado
 generateBoard.addEventListener('click', function () {
     table.innerHTML = '';
@@ -30,25 +49,29 @@ generateBoard.addEventListener('click', function () {
     let size = document.getElementById('board-size').value;
     let tr = '';
     let td = '';
-    
-    if (size >= 5 && size <= 50) {
-        for (colunas = 1; colunas <= size; colunas +=1) {
-            tr = document.createElement('tr');
-            table.appendChild(tr);
-        }
-        let coluna = document.getElementsByTagName('tr');
-    
-        for (let linhas = 0; linhas < coluna.length; linhas +=1) {
-            for (index = 1; index <= size; index += 1) {
-                td = document.createElement('td');
-                coluna[linhas].appendChild(td);
-                td.className = 'pixel';
-            }
-        }
-    } else if (size === '') {
+
+    if (size === ''){
         alert('Board inválido');
-    } 
- 
+    } else if (size > 50) {
+        size = 50;
+    } else if(size < 5){
+        size = 5;
+    }
+        
+    for (colunas = 1; colunas <= size; colunas +=1) {
+        tr = document.createElement('tr');
+        table.appendChild(tr);
+    }
+    let coluna = document.getElementsByTagName('tr');
+
+    for (let linhas = 0; linhas < coluna.length; linhas +=1) {
+        for (index = 1; index <= size; index += 1) {
+            td = document.createElement('td');
+            coluna[linhas].appendChild(td);
+            td.className = 'pixel';
+        }
+    }
+        
     document.getElementById('board-size').value = '';
 })
 
