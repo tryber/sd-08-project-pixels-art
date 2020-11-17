@@ -1,13 +1,13 @@
-let cores = document.querySelectorAll('.color')
+let cores = document.querySelectorAll('.color');
 
 
-let selecionarCor = document.getElementById('color-palette')
+let selecionarCor = document.getElementById('color-palette');
 selecionarCor.addEventListener('click', function (evento) {
 	if (evento.target.classList.contains('color')) {
-		evento.target.classList.add('selected')
+		evento.target.classList.add('selected');
 
 	}
-	console.log(evento.target)
+	console.log(evento.target);
 
 })
 
