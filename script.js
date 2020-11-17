@@ -3,6 +3,9 @@ let paleta = document.querySelector("#color-palette");
 for (let contador = 0; contador < cores.length; contador += 1) {
     let coresInicias = document.createElement("div");
     coresInicias.className = "color";
+    if (contador ==0){
+        coresInicias.className += " selected";
+    }
     coresInicias.style.backgroundColor = cores[contador];
     paleta.appendChild(coresInicias);
 }
