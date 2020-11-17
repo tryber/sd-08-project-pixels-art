@@ -43,7 +43,7 @@ geraPaletaDeCores();
 function gerarTabela() {
   let numeroDeQuadros = tamanhoDoQuadro.value;
   if (numeroDeQuadros === "") {
-    alert('Valor inválido!');
+    alert('Board inválido!');
     return;
   }
   quadroDePixels.innerHTML = '';

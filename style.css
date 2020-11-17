@@ -11,8 +11,8 @@
   border-color: black;
 }
 #pixel-board {
-  width: auto;
-  height: auto;
+  width: 200;
+  height: 200;
   display: flex;
   flex-wrap: wrap;
   align-content: start;
