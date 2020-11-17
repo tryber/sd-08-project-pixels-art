@@ -11,8 +11,8 @@
   border-color: black;
 }
 #pixel-board {
-  width: 200px;
-  height: 200px;
+  /* width: 200px;
+  height: 200px; */
   display: flex;
   flex-wrap: nowrap;
 }
