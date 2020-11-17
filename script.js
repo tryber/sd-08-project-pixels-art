@@ -46,6 +46,12 @@ function gerarTabela() {
     alert('Board inválido!');
     return;
   }
+  if(numeroDeQuadros < 5 && numeroDeQuadros > 0) {
+    numeroDeQuadros = 5;
+  }
+  if(numeroDeQuadros > 50) {
+    numeroDeQuadros = 50;
+  }
   quadroDePixels.innerHTML = '';
   for (let index = 0; index < numeroDeQuadros; index++) {
     let maePixexl = document.createElement('div');
@@ -58,6 +64,19 @@ function gerarTabela() {
     }
   }
 }
+function geraPrimeiraTabela(){
+  for (let index = 0; index < 5; index++) {
+    let maePixexl = document.createElement('div');
+    quadroDePixels.appendChild(maePixexl);
+    for (let j = 0; j < 5; j++) {
+      let divTable = document.createElement("div");
+      maePixexl.appendChild(divTable);
+      divTable.className = "pixel";
+      divTable.style.backgroundColor = "white";
+    }
+  }
+}
+geraPrimeiraTabela();
 cor = "black";
 //gerarTabela();
 function alteraSelected(event) {
