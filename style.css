@@ -6,3 +6,19 @@
   margin: 8px;
   
 }
+.pixel-board {
+    border-collapse: collapse;
+    display: block;
+    height: 250px;
+    width: 300px;
+    text-align: center;
+    
+}
+.pixel{
+     background-color: white;
+     border: black solid 1px;
+     border-spacing: 0;
+     display: inline-block;
+     height: 50px;
+     width: 50px;
+}
