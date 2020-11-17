@@ -35,3 +35,31 @@
 #clear-board {
     margin: 10px;
 }
+
+/*Estilos*/
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#clear-board {
+    margin: 20px 0;
+    padding: 10px;
+    font-weight: 900;
+    border-radius: 5px;
+    border: 2px solid yellowgreen;
+    font-size: 16px;
+    
+}
+
+#title {
+    font-family: Helvetica, monospace, sans-serif;
+    font-size: 50px;
+}
+
+body {
+    background-color: midnightblue;
+}
