@@ -1,0 +1,40 @@
+body {
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+#color-palette {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+}
+
+.color {
+  border: 1px solid black;
+  display: inline-block;
+  height: 48px;
+  left: 173px;
+  top: 61px;
+  width: 48px;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
+}
+
+table {
+  border: 1px solid black;
+}
