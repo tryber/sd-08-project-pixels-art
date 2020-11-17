@@ -4,7 +4,7 @@ let coresBases = ["yellow", "blue", "gray", "gold", "orange", "brown", "silver",
 let botaoCoresSortidas = document.getElementById("botao-cores-sortidas");
 let paletaDeCores = document.getElementById("color-palette");
 let quadroDePixels = document.getElementById("pixel-board");
-let tamanhoDoQuadro = document.getElementById('board-sizer');
+let tamanhoDoQuadro = document.getElementById('board-size');
 let botaoGerarQuadrados = document.getElementById('generate-board');
 let limparPixels = document.querySelector("#clear-board");
 //Eventos
