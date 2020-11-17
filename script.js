@@ -76,7 +76,7 @@ quadrado1.addEventListener("click", function () {
      })
  }
 
- let botao = document.getElementById("btn");
+ let botao = document.getElementById("clear-board");
  botao.addEventListener("click", function () {
     for (let index = 0; index < pixels.length; index += 1) {
         let pixelParaLimpar = pixels[index];
