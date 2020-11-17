@@ -1,0 +1,57 @@
+
+/* ------------------BOTÕES DA PALLETA----------------*/
+/* 
+    CORES
+*/
+.color{
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    border: solid black 1px;
+    margin: auto;
+}
+
+.preto{
+    background-color: black;
+}
+
+.azul{
+    background-color: blue;
+}
+
+.vermelho{
+    background-color: red;
+ 
+}
+
+.verde{
+    background-color: green;
+    
+}
+
+
+/* 
+    PROPRIEDADE DOS BOTÕES 
+*/
+#color-pallete{
+    
+}
+
+
+ul li {
+    text-decoration: none;
+    display: inline-block;
+    margin: 0px;
+}
+
+/* 
+    QUADRO DE PIXEL
+*/
+
+.pixel{
+    display: inline-block;
+    border: solid black 1px;
+    height: 40px;
+    width: 40px;
+    background-color: white;
+}
