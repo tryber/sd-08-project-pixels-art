@@ -15,3 +15,7 @@ function createPixels() {
 }
 
 createPixels();
+
+function selectColor() {
+  
+}
