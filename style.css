@@ -1,0 +1,65 @@
+#color-palette {
+    display: table;
+    
+}
+
+.color {
+    border: 1px solid black;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+/*Tabela de Cores*/
+
+#pixel-board {
+    display: table;
+}
+
+.tr {
+    display: table-row;
+}
+
+.pixel {
+    display: table-cell;
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    margin: 5px;
+    background-color: white;
+}
+
+/*Botao*/
+
+#clear-board {
+    margin: 10px;
+}
+
+/*Estilos*/
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#clear-board {
+    margin: 20px 0;
+    padding: 10px;
+    font-weight: 900;
+    border-radius: 5px;
+    border: 2px solid yellowgreen;
+    font-size: 16px;
+    
+}
+
+#title {
+    font-family: Helvetica, monospace, sans-serif;
+    font-size: 50px;
+}
+
+body {
+    background-color: midnightblue;
+}
