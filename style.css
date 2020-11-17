@@ -1,12 +1,11 @@
 #color-palette {
-    display: inline-block;
+    display: flex;
 }
 
 .color {
     border-color: black;
     border-style: solid;
     border-width: 1px;
-    display: inline-block;
     height: 100px;
     margin-right: 5px;
     width: 100px;
@@ -45,8 +44,6 @@
 }
 
 .selected {
-    border-color: purple;
-    border-style: ridge;
-    border-width: 4px;
+    
 }
     
