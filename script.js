@@ -16,19 +16,21 @@ function selectBlack() {
    let selectBlackPalette = document.getElementById("black");
    selectBlackPalette.className = "color selected"
 }
-
-// function createNewButton () {
-//    let newButton = document.getElementById("black");
-//     newButton.addEventListener("click", paletteButton);
-// }
-
-// function paletteButton () {
-//    let enventHappening = document.querySelectorAll(".pixel");
-//    for(let index = 0; index < enventHappening.length; index += 1) {
-//     enventHappening[index].style.backgroundColor = "black"
-// }
-
-
+let newButton = document.getElementsByClassName("color");
+//requisito 7
+function createNewButton () {
+   for(let index = 0; index < newButton.length; index += 1) {
+      newButton[index].addEventListener("click", paletteButton);
+   }  
+}
+createNewButton();
+function paletteButton (event) {
+   
+   for(let index = 0; index < newButton.length; index += 1) {
+      newButton[index].className = "color" 
+   }
+   event.target.className = "color selected";
+}
 
 function createButton () {
    let clearButton = document.getElementById("clear-board");
@@ -44,5 +46,4 @@ function newEvent () {
    }
    
 }
-
 
