@@ -1,32 +1,27 @@
-.color{
+.color {
     border: solid 1px;
     display: inline-block;
     width: 40px;
     height: 40px;
 }
 
-.pixel{
+.pixel {
     width: 40px;
     height: 40px;
     border: solid 1px;
     margin: -2px;
     background-color: white;
-}   
+    float: left;
+}
 
-#clear-board{
+#clear-board {
     position: relative;
     top: 15px;
 }
 
-#pixel-board{
+#pixel-board {
     position: relative;
     top: 30px;
-}
-
-.column{
-    display: inline-block;
-}
-
-.row{
-    display: inline-block;
+    width: 190px;
+    height: 5em;
 }
