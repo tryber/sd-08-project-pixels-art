@@ -35,3 +35,22 @@ evt.addEventListener('click', function(event){
     });
 }
 painted();
+
+/*Botao Limpar*/
+const clearAll = document.getElementById('clear-board');
+const pixel = document.querySelectorAll('.pixel');
+
+clearAll.addEventListener('click', allWhite)
+    function allWhite () {
+        for (let index = 0; index < pixel.length; index +=1) {
+            pixel[index].style.backgroundColor = 'white';
+        }
+        
+    }
+    
+
+
+    
+
+
+  
