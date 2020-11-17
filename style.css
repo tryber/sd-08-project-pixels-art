@@ -9,9 +9,9 @@
     width: 40px;
     height: 40px;
     border: solid 1px;
-    margin: -2px;
     background-color: white;
     float: left;
+    display: block;
 }
 
 #clear-board {
@@ -22,7 +22,6 @@
 #pixel-board {
     position: relative;
     top: 30px;
-    width: 5em;
-    height: 5em;
+    width: 15em;
     background-color: white;
 }
