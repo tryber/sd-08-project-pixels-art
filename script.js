@@ -12,7 +12,7 @@ createButton();
 function newEvent () {
    let enventHappening = document.querySelectorAll(".pixel");
    for(let index = 0; index < enventHappening.length; index += 1) {
-    enventHappening[index].style.backgroundColor = "white";
+    enventHappening[index].style.backgroundColor = "rgb(255, 0, 0)";
    }
    
 }
