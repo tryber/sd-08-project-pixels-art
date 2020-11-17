@@ -1,10 +1,10 @@
 h1 {
-  background-color: yellowgreen;
-  height: 80px;
-  margin: 0;
-  display: flex;
-  justify-content: center;
   align-items: center;
+  background-color: yellowgreen;
+  display: flex;
+  height: 80px;
+  justify-content: center;
+  margin: 0;
 }
 
 .palette {
@@ -13,27 +13,27 @@ h1 {
 
 .color {
   border: 1px solid black;
+  border-radius: 100%;
   display: inline-block;
-  width: 40px;
   height: 40px;
   margin: 5px;
-  border-radius: 100%;
+  width: 40px;
 }
 
 .button-clear {
-  width: 100px;
   margin: 20px;
   display: block;
+  width: 100px;
 }
 
 .button-board {
-  width: 100px;
   margin: 20px;
+  width: 100px;
 }
 
 .input-board {
+  margin-left: 20px;
   width: 100px;
-  margin-right: 20px;
 }
 
 .board {
@@ -42,8 +42,8 @@ h1 {
 }
 
 .lines {
-  margin: 0;
   height: 40px;
+  margin: 0;
   width: fit-content;
 }
 
@@ -51,6 +51,6 @@ h1 {
   background-color: white;
   border: 1px solid black;
   display: inline-block;
-  width: 40px;
   height: 40px;
+  width: 40px;
 }

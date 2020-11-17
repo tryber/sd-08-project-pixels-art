@@ -4,9 +4,20 @@ window.onload = function () {
   createBoardPixel(5);
 };
 
+function randomColor() {
+  let colorArray = ['rgb(0 , 0 , 0)'];
+  for (let index = 1; index < 4; index += 1) {
+    let red = Math.floor(Math.random() * 255);
+    let green = Math.floor(Math.random() * 255);
+    let blue = Math.floor(Math.random() * 255);
+    colorArray.push(`rgb(${red} , ${green} , ${blue})`);
+  }
+  return colorArray;
+}
+
 function createPalette() {
   const palleteColorsList = document.querySelector('#color-palette');
-  const colorArray = ['black', 'red', 'green', 'blue'];
+  const colorArray = randomColor();
   for (let i = 0; i < colorArray.length; i += 1) {
     const colorElement = document.createElement('li');
     colorElement.className = 'color';
@@ -83,22 +94,22 @@ clearBoard();
 
 function createButtonInput() {
   const buttonsTag = document.querySelector('#buttons');
+  const labelElement = document.createElement('label');
+  labelElement.htmlFor = 'board-size';
+  labelElement.innerHTML = 'Tabuleiro (entre 5 a 50 pixels)';
+  buttonsTag.appendChild(labelElement);
+  const inputElement = document.createElement('input');
+  inputElement.id = 'board-size';
+  inputElement.type = 'number';
+  inputElement.className = 'input-board'
+  inputElement.min = '1';
+  inputElement.max = '50';
+  buttonsTag.appendChild(inputElement);
   const buttonElement = document.createElement('button');
   buttonElement.id = 'generate-board';
   buttonElement.innerHTML = 'VQV';
   buttonElement.className = 'button-board';
   buttonsTag.appendChild(buttonElement);
-  const inputElement = document.createElement('input');
-  inputElement.id = 'board-size';
-  inputElement.type = 'number';
-  inputElement.className = 'input-board'
-  inputElement.min = '5';
-  inputElement.max = '50';
-  buttonsTag.appendChild(inputElement);
-  const labelElement = document.createElement('label');
-  labelElement.htmlFor = 'board-size';
-  labelElement.innerHTML = 'Tabuleiro (entre 5 a 50 pixels)';
-  buttonsTag.appendChild(labelElement);
 }
 
 createButtonInput();
@@ -107,11 +118,11 @@ function validateInput() {
   const inputBoard = document.querySelector("#board-size");
   inputBoard.addEventListener("change", function (size) {
     if (!size.target.value){
-      size.target.value = "";
+      size.target.value = '';
     } else if (size.target.value > parseInt(size.target.getAttribute("max"))) { 
       size.target.value = size.target.getAttribute("max");
-    } else if (size.target.value < parseInt(size.target.getAttribute("min"))) {
-      size.target.value = size.target.getAttribute("min");
+    } else if (size.target.value < '5') {
+      size.target.value = '5';
     }
   });
 }
