@@ -1,25 +1,25 @@
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
 }
 
 .color {
   border: 1px solid black;
+  display: inline-block;
   height: 40px;
   width: 40px;
-  display: inline-block;
 }
 
 .color.black {
-  background-color: #000000;
+  background-color: #000;
 }
 
 .color.red {
-  background-color: #D4392D;
+  background-color: #d4392d;
 }
 
 .color.orange {
-  background-color: #FF5817;
+  background-color: #ff5817;
 }
 
 .color.yellow {
@@ -31,10 +31,10 @@
 }
 
 .pixel {
-  display: inline-block;
   background-color: white;
   border: 1px solid black;
+  display: inline-block;
   height: 40px;
-  width: 40px;
   margin: -3px -1px;
+  width: 40px;
 }
