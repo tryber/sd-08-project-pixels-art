@@ -3,14 +3,11 @@ let boardSize = 5;
 function createPixels() {
   const pixelBoard = document.querySelector('#pixel-board');
 
-  for (let index = 0; index < boardSize; index += 1) {
-    for (let counter = 0; counter < boardSize; counter += 1) {
-      const pixel = index;
-      const pixelDiv = document.createElement('div');
-      pixelDiv.className = 'pixel';
+  for (let index = 0; index < (boardSize * boardSize); index += 1) {
+    const pixelDiv = document.createElement('div');
+    pixelDiv.className = 'pixel ' + index;
 
-      pixelBoard.appendChild(pixelDiv);
-    }
+    pixelBoard.appendChild(pixelDiv);
   }
 }
 
