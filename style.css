@@ -11,13 +11,12 @@
   border-color: black;
 }
 #pixel-board {
-  width: 200;
-  height: 200;
+  width: 200px;
+  height: 200px;
   display: flex;
-  flex-wrap: wrap;
-  align-content: start;
+  flex-wrap: nowrap;
 }
-.pixel{
+ .pixel{
   width: 40px;
   height: 40px;
   border: 1px solid black;
