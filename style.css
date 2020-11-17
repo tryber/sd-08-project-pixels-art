@@ -10,3 +10,17 @@
   display: inline-block;
   margin-right: 5px;
 }
+
+#pixel-board {
+  margin-top: 15px;
+  line-height: 0;
+}
+.pixel {
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  border-color: black;
+  border-width: 1px;
+  border-style: solid;
+  display: inline-block;
+}
