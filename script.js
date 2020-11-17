@@ -19,3 +19,13 @@ createPixels();
 function selectColor() {
   
 }
+
+let clickButton = document.getElementById('clear-board');
+clickButton.addEventListener('click', clearBoard)
+
+function clearBoard() {
+  for (let counter = 0; counter < boardSize * boardSize; counter += 1) {
+    let turnWhite = document.getElementsByClassName('pixel')[index];
+    turnWhite.style.backgroundColor = 'white';
+  }
+}

@@ -26,6 +26,12 @@
   background-color: #f8ce44;
 }
 
+button {
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin: 20px;
+}
+
 #pixel-board {
   max-width: 210px;
 }
