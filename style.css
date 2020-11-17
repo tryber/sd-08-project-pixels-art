@@ -27,6 +27,10 @@
     background-color: blue;
 }
 
+#container-btn {
+    margin: 12px;
+}
+
 #pixel-board {
     border-collapse: collapse;
     margin-top: 20px;

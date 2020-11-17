@@ -75,4 +75,13 @@ quadrado1.addEventListener("click", function () {
         pixelParaPintar.style.backgroundColor = corParaPintar;
      })
  }
+
+ let botao = document.getElementById("btn");
+ botao.addEventListener("click", function () {
+    for (let index = 0; index < pixels.length; index += 1) {
+        let pixelParaLimpar = pixels[index];
+        pixelParaLimpar.style.backgroundColor = "white";
+        
+    }
+ })
  // corParaPintar.style.backgroundColor
