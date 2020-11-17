@@ -3,15 +3,11 @@
 function addTitle() {
     const header = document.getElementsByTagName('header')[0];
     const h1 = document.createElement('h1');
-    const p = document.createElement('p');
 
     h1.id = 'title';
     h1.innerHTML = 'Paleta de Cores';
-    p.classList.add('subtitle');
-    p.innerHTML = 'Projeto 03 - Desenvolvido por João Carlito'
 
     header.appendChild(h1);
-    header.appendChild(p);
 }
 
 addTitle();
@@ -100,6 +96,7 @@ paintPixel();
 
 const button = document.createElement('button');
 button.id = 'clear-board';
+button.title = 'Limpar Campos';
 button.innerHTML = 'Limpar';
 
 const secondSection = document.querySelector('#pixel-board');
@@ -115,5 +112,32 @@ function clearPixels() {
 }
 
 /* ---------------------------- REQUISITO 10 ---------------------------- */
-/* ---------------------------- REQUISITO 11 ---------------------------- */
-/* ---------------------------- REQUISITO 12 ---------------------------- */
+
+function sizeBoard() {
+    const inputPixel = document.querySelector('input').value;
+    if (inputPixel === '') {
+        alert('Adicione um valor');
+    }
+    const number = parseInt(inputPixel);
+    return number;
+}
+
+function resizePixels() {
+    const buttonBoard = document.querySelector('#generate-board');
+    buttonBoard.addEventListener('click', function () {
+
+        sectionPixels.innerHTML = '';
+        const size = sizeBoard();
+        if (size < 1) {
+            alert('Board inválido!');
+        } else if (size < 5) {
+            addPixels(5);
+        } else if (size > 50) {
+            addPixels(50);
+        } else {
+            addPixels(size);
+        }
+    })
+}
+
+resizePixels();

@@ -57,7 +57,28 @@ body {
     margin-left: 10px;
 }
 
+#board-size{
+    width: 50px;
+    font-size: 20px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 500;
+    height: 40px;
+    border: 2px solid black;
+}
+
 #clear-board {
+    font-size: 20px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 500;
+    padding: 10px;
+    border-radius: 20px 20px;
+    background-color: black;
+    color: white;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+#generate-board{
     font-size: 20px;
     font-family: 'Comfortaa', cursive;
     font-weight: 500;
