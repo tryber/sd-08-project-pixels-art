@@ -1,8 +1,15 @@
 .color {
     border: black solid 1px;
     display: inline-block;
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     margin: 10px;
+}
+.pixel {
+    width: 80px;
+    height: 80px;
+    border: 1px solid black;
+    background-color: white;
+    display: table-cell;
 }
 
