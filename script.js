@@ -8,8 +8,8 @@ const generateBoard = document.getElementById('generate-board'); // Botão de ge
 
 
 //roda as funções quando a página é carregada
-(window.onload = criateColorsPalette(boxPalette, colors)),
-  firstSelectedColor(boxPalette);
+window.onload = criateColorsPalette(boxPalette, colors),
+  firstSelectedColor(boxPalette),populaTable();
 
 //Preenche as cores do palette
 function criateColorsPalette(boxPalette, colors) {
@@ -40,8 +40,6 @@ function populaTable () {
     }
 }
 
-window.onload = populaTable();
-
 //cria as boxes da table com o tamanho setado
 generateBoard.addEventListener('click', function () {
     table.innerHTML = '';
@@ -51,7 +49,7 @@ generateBoard.addEventListener('click', function () {
     let td = '';
 
     if (size === ''){
-        alert('Board inválido');
+        alert('Board inválido!');
     } else if (size > 50) {
         size = 50;
     } else if(size < 5){

@@ -6,24 +6,27 @@
   </head>
 
   <body>
-    <header>
+    <header class="header">
       <h1 id="title">Paleta de Cores</h1>
     </header>
-
+    <br>
+    <div class="box-center">
     <section id="color-palette">
       <div class="color"></div>
       <div class="color"></div>
       <div class="color"></div>
       <div class="color"></div>
     </section>
+    </div>
+    <br>
     <div class="buttons">
         <button type="reset" id="clear-board">Limpar</button>
         <button type="submit" id="generate-board">VQV</button>
         <input type="text" name="table-size" id="board-size" placeholder="Digite um número de 5 a 50">
     </div>
-
-    <table id="pixel-board">
-    </table>
+    <div class="posicao-table">
+        <table id="pixel-board"></table>
+    </div>
     <script type="text/javascript" src="script.js"></script>
   </body>
 </html>
