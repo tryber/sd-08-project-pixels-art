@@ -22,6 +22,7 @@
 #pixel-board {
     position: relative;
     top: 30px;
-    width: 190px;
+    width: 5em;
     height: 5em;
+    background-color: white;
 }
