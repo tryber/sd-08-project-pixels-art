@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang = 'en'>
+<html lang = 'pt-br'>
 <head>
   <meta charset = 'UTF-8'>
   <meta name = 'viewport' content = 'width=device-width, initial-scale=1.0'>
@@ -7,12 +7,26 @@
   <title>Projeto Art Pixels</title>
 </head>
 <body>
-  <h1 id = 'title'>Paleta de Cores</h1>
-  <div id = 'color-palette'></div>
-  <input id = 'board-size' type = 'number' min = '1' max = '50'>
-  <button id = 'generate-board'>VQV</button><br>
-  <button id = 'clear-board' type = 'submit'>Limpar</button>
-  <table id = 'pixel-board'></table>
+  <main class='main-content'>
+    <div class='title-style'>
+      <h1 id = 'title'>Paleta de Cores</h1>
+    </div>
+    <div class='palette'>
+      <div id = 'color-palette'></div>
+    </div>
+    <div class='input-grid'>
+      <label for="board-size">Insira o tamanho do Grid:</label>
+      <input class='input-style' id = 'board-size' type = 'number' min = '1' max = '50' placeholder="5">
+      <button class='btn' id = 'generate-board'>VQV</button><br>
+    </div>
+    <div class='clean-grid'>
+      <label for="clear-board">Limpar o Grid:</label>
+      <button class='btn' id = 'clear-board' type = 'submit'>Limpar</button>
+    </div>
+  </main>
+  <div class='board'>
+    <table id = 'pixel-board'></table>
+  </div>
   <script src = 'script.js'></script>
 </body>
 </html>
