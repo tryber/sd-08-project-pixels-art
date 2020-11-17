@@ -1,5 +1,10 @@
 h1 {
-  padding-left: 20px;
+  background-color: yellowgreen;
+  height: 80px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .palette {

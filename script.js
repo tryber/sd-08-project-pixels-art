@@ -22,7 +22,7 @@ function createBoardPixel(size) {
   for (let index = 1; index <= size; index += 1) {
     const lineBoardElement = document.createElement('div');
     lineBoardElement.className = 'lines';
-    for (let i = 0; i < size; i += 1) {
+    for (let index = 0; index < size; index += 1) {
       const squarePixel = document.createElement('div');
       squarePixel.className = 'pixel';
       lineBoardElement.appendChild(squarePixel);
@@ -33,14 +33,13 @@ function createBoardPixel(size) {
 
 function paletteColorSelected() {
   const paletteColors = document.querySelector('#color-palette');
-  paletteColors.addEventListener('click', colorSelected);
-  function colorSelected(eventColor) {
+  paletteColors.addEventListener('click', function (eventColor) {
     const colors = document.querySelectorAll('.color')
     for (let element of colors) {
       element.className = 'color';
     }
     eventColor.target.className = 'color selected';
-  }
+  });
 }
 
 paletteColorSelected();
@@ -71,13 +70,16 @@ function createButtonClear() {
 createButtonClear();
 
 function clearBoard() {
-  const boardPixel = document.querySelectorAll('.pixel');
-  for (let pixel of boardPixel) {
-    pixel.style.backgroundColor = 'white';
-  }
+  const buttonClear = document.querySelector('#clear-board');
+  buttonClear.addEventListener('click', function () {
+    const boardPixel = document.querySelectorAll('.pixel');
+    for (let pixel of boardPixel) {
+      pixel.style.backgroundColor = 'white';
+    }
+  });
 }
-const buttonClear = document.querySelector('#clear-board');
-buttonClear.addEventListener('click', clearBoard);
+
+clearBoard();
 
 function createButtonInput() {
   const buttonsTag = document.querySelector('#buttons');
@@ -103,35 +105,35 @@ createButtonInput();
 
 function validateInput() {
   const inputBoard = document.querySelector("#board-size");
-  inputBoard.addEventListener("input", validateSize);
-
-  function validateSize(size) {
-    if (size.target.value > parseInt(size.target.getAttribute("max"))) 
+  inputBoard.addEventListener("change", function (size) {
+    if (!size.target.value){
+      size.target.value = "";
+    } else if (size.target.value > parseInt(size.target.getAttribute("max"))) { 
       size.target.value = size.target.getAttribute("max");
-    if (size.target.value < parseInt(size.target.getAttribute("min"))) 
+    } else if (size.target.value < parseInt(size.target.getAttribute("min"))) {
       size.target.value = size.target.getAttribute("min");
-  }
+    }
+  });
 }
 
 validateInput();
 
 function buttonCreateBoard() {
   const buttonBoard = document.querySelector('#generate-board');
-  buttonBoard.addEventListener('click', getSize);
-  function getSize() {
+  buttonBoard.addEventListener('click', function () {
     const inputBoard = document.querySelector('#board-size');
     const boardPixels = document.querySelectorAll('.lines');
     console.log(inputBoard.value);
-    if (inputBoard.value == '')
+    if (inputBoard.value == '') {
       alert('Board inválido!')
-    else {
+    } else {
       for (let tag of boardPixels) {
         const board = document.querySelector('#pixel-board');
         board.removeChild(tag);
       }
       createBoardPixel(inputBoard.value);
     }
-  }
+  });
 }
 
 buttonCreateBoard();
