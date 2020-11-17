@@ -21,7 +21,7 @@ function selectColor() {
 }
 
 function clearBoard() {
-  for (let index = 0; index < boardSize * boardSize; index += 1) {
+  for (let index = 0; index < (boardSize * boardSize); index += 1) {
     const turnWhite = document.getElementsByClassName('pixel')[index];
     turnWhite.style.backgroundColor = 'white';
   }
