@@ -5,30 +5,28 @@
     height: 40px;
 }
 
-
-#colorBlue {
-    background-color: green;
-}
-
-#colorGray{
-    background-color: blue;
-}
-
-#colorBrown{
-    background-color: gray;
-}
-
-.pixel-board{
-    width: 5em;
-    height: 5em;
-}
-
 .pixel{
     width: 40px;
     height: 40px;
-    display: inline-block;
     border: solid 1px;
     margin: -2px;
     background-color: white;
 }   
 
+#clear-board{
+    position: relative;
+    top: 15px;
+}
+
+#pixel-board{
+    position: relative;
+    top: 30px;
+}
+
+.column{
+    display: inline-block;
+}
+
+.row{
+    display: inline-block;
+}
