@@ -42,14 +42,9 @@ function geraPaletaDeCores() { // Função que gera paleta de cores
 geraPaletaDeCores();
 function gerarTabela() {
   let numeroDeQuadros = tamanhoDoQuadro.value;
-  if (tamanhoDoQuadro.value === '') {
-    numeroDeQuadros = 5;
-  }
-  if (numeroDeQuadros < 5) {
-    numeroDeQuadros = 5;
-  }
-  if (numeroDeQuadros > 50) {
-    numeroDeQuadros = 50;
+  if (numeroDeQuadros === "") {
+    alert('Valor inválido!');
+    return;
   }
   quadroDePixels.innerHTML = '';
   for (let index = 0; index < numeroDeQuadros; index++) {
@@ -64,7 +59,7 @@ function gerarTabela() {
   }
 }
 cor = "black";
-gerarTabela();
+//gerarTabela();
 function alteraSelected(event) {
   let removederSeletect = document.getElementsByClassName("selected");
   for (let i = 0; i < removederSeletect.length; i++) {
