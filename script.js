@@ -8,13 +8,23 @@ let nLinhasEColunasAnterior = nLinhasEColunasAtual;
 function alteraBoard() {
     if (inputGenereteLocal.value === ""){
         alert("Board inválido!");
-    } else {
+    } else if (inputGenereteLocal.value < 5){
     nLinhasEColunasAnterior = nLinhasEColunasAtual;
-    nLinhasEColunasAtual = parseInt(inputGenereteLocal.value);
+    nLinhasEColunasAtual = 5;
     clearTable();
     createPixels();
-    inputGenereteLocal.value = "";
+    } else if (inputGenereteLocal.value > 50){
+        nLinhasEColunasAnterior = nLinhasEColunasAtual;
+        nLinhasEColunasAtual = 50;
+        clearTable();
+        createPixels();
+    } else {
+        nLinhasEColunasAnterior = nLinhasEColunasAtual;
+        nLinhasEColunasAtual = inputGenereteLocal.value;
+        clearTable();
+        createPixels();
     }
+    inputGenereteLocal.value = "";
 }
 butonGenerateLocal.addEventListener("click", alteraBoard);
 
