@@ -56,9 +56,7 @@ function gerarTabela() {
   for (let index = 0; index < numeroDeQuadros; index++) {
     let maePixexl = document.createElement('div');
     quadroDePixels.appendChild(maePixexl);
-    maePixexl.style.backgroundColor = "white";
-    maePixexl.classList.add('pixel');
-    for (let j = 0; j < numeroDeQuadros; j++) {
+      for (let j = 0; j < numeroDeQuadros; j++) {
       let divTable = document.createElement("div");
       maePixexl.appendChild(divTable);
       divTable.className = "pixel";
@@ -70,8 +68,6 @@ function geraPrimeiraTabela(){
   for (let index = 0; index < 5; index++) {
     let maePixexl = document.createElement('div');
     quadroDePixels.appendChild(maePixexl);
-    maePixexl.style.backgroundColor = "white";
-    maePixexl.classList.add('pixel');
     for (let j = 0; j < 5; j++) {
       let divTable = document.createElement("div");
       maePixexl.appendChild(divTable);
