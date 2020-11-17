@@ -1,0 +1,53 @@
+#color-palette {
+    display: flex;
+}
+
+.color {
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    height: 100px;
+    margin-right: 5px;
+    width: 100px;
+}
+
+#quad1 {
+    background-color: black;
+}
+
+#quad2 {
+    background-color: red;
+}
+
+#quad3 {
+    background-color: green;
+}
+
+#quad4 {
+    background-color: blue;
+}
+
+#container-btn {
+    margin: 12px;
+}
+
+#pixel-board {
+    border-collapse: collapse;
+    margin-top: 20px;
+
+}
+
+.pixel {
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    background-color: white;
+    float: left;
+    height: 40px;
+    width: 40px;
+}
+
+.selected {
+    
+}
+    
