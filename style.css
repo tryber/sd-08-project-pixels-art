@@ -28,7 +28,7 @@
 
 #pixel-board {
     position: absolute;
-    top: 150px;
+    top: 170px;
 }
 
 .pixel {
@@ -42,4 +42,9 @@
 
 .selected {
     
+}
+
+#clear-board {
+    position: absolute;
+    top: 135px;
 }
