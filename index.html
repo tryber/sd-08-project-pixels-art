@@ -1,62 +1,29 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <title>projeto</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
-    
-    <body>
-       
-        <header>
-            <h1 id="title">Paleta de Cores</h1>
-        </header>
-       
-        <section id="color-palette">
-            <div class="color"></div>
-            <div class="color"></div>
-            <div class="color"></div>
-            <div class="color"></div>
-        </section>
-        
-        <button type="reset" id="clear-board">Limpar</button>
+  <head>
+    <title>projeto</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
 
-        <table id="pixel-board">
-            <tr>
-                <td class="pixel"></td>
-                <td class="pixel"></td>
-                <td class="pixel"></td>
-                <td class="pixel"></td>
-                <td class="pixel"></td>
-            </tr>
-            <tr>
-                <td class="pixel"></td>
-                <td class="pixel"></td>
-                <td class="pixel"></td>
-                <td class="pixel"></td>
-                <td class="pixel"></td>
-            </tr>
-            <tr>
-                <td class="pixel"></td>
-                <td class="pixel"></td>
-                <td class="pixel"></td>
-                <td class="pixel"></td>
-                <td class="pixel"></td>
-            </tr>
-            <tr>
-                <td class="pixel"></td>
-                <td class="pixel"></td>
-                <td class="pixel"></td>
-                <td class="pixel"></td>
-                <td class="pixel"></td>
-            </tr>
-            <tr>
-                <td class="pixel"></td>
-                <td class="pixel"></td>
-                <td class="pixel"></td>
-                <td class="pixel"></td>
-                <td class="pixel"></td>
-            </tr>
-        </table>
-        <script type="text/javascript" src="script.js"></script>
-    </body>
+  <body>
+    <header>
+      <h1 id="title">Paleta de Cores</h1>
+    </header>
+
+    <section id="color-palette">
+      <div class="color"></div>
+      <div class="color"></div>
+      <div class="color"></div>
+      <div class="color"></div>
+    </section>
+    <div class="buttons">
+        <button type="reset" id="clear-board">Limpar</button>
+        <button type="submit" id="generate-board">VQV</button>
+        <input type="text" name="table-size" id="board-size" placeholder="Digite um número de 5 a 50">
+    </div>
+
+    <table id="pixel-board">
+    </table>
+    <script type="text/javascript" src="script.js"></script>
+  </body>
 </html>
