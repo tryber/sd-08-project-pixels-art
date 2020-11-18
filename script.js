@@ -10,6 +10,10 @@ const generatePalette = (colors) => {
         color_pixel.className = 'color';
         color_pixel.id = color;
         color_pixel.style.backgroundColor = color;
+        color_pixel.onclick = () => {
+            document.querySelector('div#color-palette>.selected').className = 'color';
+            color_pixel.className = 'color selected';
+        }
         color_palette.appendChild(color_pixel);
     }
     let first_element = document.querySelector('div#color-palette').firstElementChild;
