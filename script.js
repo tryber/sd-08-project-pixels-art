@@ -26,3 +26,5 @@ function selectColor(chosen){
       chosen.target.className = 'color selected';
 }
 pixelBoard.addEventListener('click', selectColor);
+
+//
