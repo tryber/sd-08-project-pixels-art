@@ -1,0 +1,50 @@
+#color-palette {
+    position: absolute;
+
+}
+
+.color {
+    border: black solid 1px;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+}
+
+#black {
+    background-color: black;
+}
+
+#red {
+    background-color: red;
+}
+
+#blue {
+    background-color: blue;
+}
+
+#green {
+    background-color: green;
+}
+
+#pixel-board {
+    position: absolute;
+    top: 170px;
+}
+
+.pixel {
+    border: black solid 1px;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background-color: white;
+    margin: -1px;
+}
+
+.selected {
+    
+}
+
+#clear-board {
+    position: absolute;
+    top: 135px;
+}
