@@ -24,18 +24,34 @@ body{
     border: solid black 1px;
 }
 
-#black{
+.black{
     background-color: black;
 }
 
-#green{
+.green{
     background-color: green;
 }
 
-#red{
+.red{
     background-color: red;
 }
 
-#blue{
+.blue{
     background-color: blue;
+}
+
+#pixels{
+    width: 400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 0px;
+
+    align-items: center;
+    justify-content: center;
+}
+
+#pixel-unico{
+    width: 40px;
+    height: 40px;
+    border: solid black 1px;
 }
