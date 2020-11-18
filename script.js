@@ -36,8 +36,8 @@ createPixels();
 
 
 function makeEvents(event) {
-    let unselect = document.getElementByClassName('selected');
-    unselect.classList.remove('selected');
+    let unselect = document.getElementsByClassName('selected');
+    unselect[0].classList.remove('selected');
     event.target.classList.add('selected');
 }
 
