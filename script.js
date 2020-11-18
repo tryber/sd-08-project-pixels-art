@@ -31,3 +31,15 @@ function createPixels() {
      }
     }
 createPixels();
+
+
+function makeEvents() {
+    let unselect = document.getElementsById('color-palette');
+    for (let i = 0; i < colors.length; i += 1) {
+        if (colors[i].className = "selected") {
+            colors.classList.remove('.selected');
+        }
+        unselect.event.target.classList.add('.selected');
+    }
+}
+colors.addEventListener('click', makeEvents);
