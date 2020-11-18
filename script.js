@@ -3,8 +3,8 @@ const repeat = (what, times) => {
     for (let index = 0; index < times; index++) what();
 }
 
-let color_palette = document.querySelector('div#color-palette');
 const generatePalette = (colors) => {
+    let color_palette = document.querySelector('div#color-palette');
     for (let color of colors) {
         let color_pixel = document.createElement('div');
         color_pixel.className = 'color';
@@ -19,6 +19,16 @@ const generatePalette = (colors) => {
 const createPixel = () => {
     let pixel = document.createElement('div');
     pixel.className = 'pixel';
+    pixel.onclick = () => {
+        pixel.style.backgroundColor = document.querySelector('div#color-palette>.selected').style.backgroundColor;/*() => {
+            Array.from(document.querySelectorAll('div#color-palette>.color')).reduce((pV, cV) => {
+                if (Array.from(cV.classList).reduce((pv, cv) => {
+                    if (cv == 'selected') return true;
+                    else return pv;
+                }, false)) return cV;
+            }, undefined);
+        }*/
+    };
     return pixel;
 }
 
