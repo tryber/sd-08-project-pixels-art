@@ -11,6 +11,7 @@ function createPixels(n) {
     for (let index = 0; index < boardSize; index += 1) {
     const pixel = document.createElement('div');
     pixel.className = 'pixel';
+    pixel.style.backgroundColor = 'white';
 
     pixelLine.appendChild(pixel);
     }
@@ -35,7 +36,7 @@ function responsiveBoard(edgeSize) {
   }
   const deleteOldBoard = document.getElementById('pixel-board');
   deleteOldBoard.innerHTML = '';
-  // Truque que eu vi no pull request do Massaki.
+// Truque que eu vi no pull request do Massaki.
   createPixels(boardSize);
 }
 

@@ -14,14 +14,8 @@
   background-color: black;
 }
 
-#board-size {
+input {
   width: 50px;
-}
-
-#generate-board {
-  border-radius: 5px;
-  margin: 20px;
-  padding: 10px 15px;
 }
 
 button {
