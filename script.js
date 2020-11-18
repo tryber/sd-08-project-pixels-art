@@ -6,6 +6,7 @@ let blue = document.getElementById('blue').style.backgroundColor = '#6ABECD';
 let green = document.getElementById('green').style.backgroundColor = '#88D78C';
 let darkBlue = document.getElementById('darkBlue').style.backgroundColor = '#265473';
 let black = document.getElementById('black').style.backgroundColor = 'black';
+
 //Cria Painel Dinâmico
 function createBoard(){
 let board = document.getElementById('pixel-board');
@@ -19,7 +20,7 @@ createBoard();
 
 //Seleciona Somente a Cor Clicada
 function selectColor(chosen){
-  for(let index = 0; index < color.length; index++){
+  for(let index = 0; index <  color.length; index++){
     color[index].className = 'color';
   }
     chosen.target.className = 'color selected';
@@ -35,3 +36,6 @@ function paint(clicked){
   console.log(selected);
 }
 pixelBoard.addEventListener('click', paint);
+
+
+//Obs. Tive ajuda do Bruno Cândido para resolver alguns problemas nos requisitos.
