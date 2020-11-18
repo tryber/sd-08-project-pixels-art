@@ -18,6 +18,25 @@ function createPixels() {
 }
 createPixels();
 
+// Paleta aleatória
+function generateNewPalette() {
+  let colors = [];
+  for (let index = 0; index < 3; index += 1) {
+    let a = Math.floor(Math.random() * 256);
+    let b = Math.floor(Math.random() * 256);
+    let c = Math.floor(Math.random() * 256);
+    let color = `rgb(${a} , ${b} , ${c})`;
+
+    colors.push(color);
+  }
+  document.getElementById('second').style.backgroundColor = colors[0];
+  document.getElementById('third').style.backgroundColor = colors[1];
+  document.getElementById('fourth').style.backgroundColor = colors[2];
+// Usei esse link para consertar meus erros ao fazer uma cor aleatória aqui: https://www.w3resource.com/javascript-exercises/javascript-math-exercise-40.php
+}
+generateNewPalette();
+
+
 // Select a color
 function selectColor(clickOnColor) {
   let findSelected = document.querySelector('.selected');
@@ -37,7 +56,7 @@ function paintPixel(event) {
   let color = window.getComputedStyle(chosen).getPropertyValue('background-color');
 
   event.target.style.backgroundColor = color;
-  // Aprendi usando esse link que foi uma dica no slack. https://www.w3schools.com/jsref/jsref_getcomputedstyle.asp
+// Aprendi usando esse link que foi uma dica no slack. https://www.w3schools.com/jsref/jsref_getcomputedstyle.asp
 }
 
 const paint = document.getElementById('pixel-board');
