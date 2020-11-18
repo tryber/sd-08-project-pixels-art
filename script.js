@@ -32,9 +32,9 @@ pixel.addEventListener('click', function (event) {
 //Requisito 9
 let button = document.getElementById('clear-board');
 let quadroPixel = document.getElementsByClassName('pixel')
-button.addEventListener('click', function (quadroPixel) {
+button.addEventListener('click', function () {
 	for (let i = 0; i < quadroPixel.length; i += 1) {
-		quadroPixel[i].style.backgroundColor = 'white';
+		quadroPixel[i].style.backgroundColor = '#ffff';
 	}
 
 })
