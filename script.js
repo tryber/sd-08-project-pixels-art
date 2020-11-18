@@ -6,13 +6,15 @@ let cor = document.getElementById('black').style.backgroundColor
 selecionarCor.addEventListener('click', function (evento) {
 	if (evento.target.classList.contains('color')) {
 		evento.target.classList.add('selected');
-	}
+	} else if (evento.target.classList.contains('selected'))
+	evento.target.classList.remove('selected');
 	console.log(evento.target);
 })
 
 let pixel = document.getElementById('pixel-board');
 
 //Requisito 8
+let roubaCor = document.querySelectorAll('.selected')[0].style.backgroundColor
 pixel.addEventListener('click', function (event) {
 	if (event.target.classList.contains('pixel')) {
 		event.target.classList.add('selected')
