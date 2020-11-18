@@ -68,9 +68,9 @@ paintBoard();
 
 function paintPixel (event){
     let paintSelect = document.querySelector(".selected");
-    let paintColor = paintSelect.backgroundColor;
+    let paintColor = paintSelect.style.backgroundColor;
     event.target.style.backgroundColor = paintColor;
-    console.log(paintSelect);
+    console.log(paintColor);
 }
 
 
