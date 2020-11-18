@@ -3,13 +3,14 @@ function createDivs() {
     let newPalette = document.getElementById('color-palette');
     for (let i = 0; i < colors.length; i += 1) {
         let newDivs = document.createElement("div");
-        if (i === 0) {
-            newDivs.className = "selected";
-        }
         newDivs.className = "color";
+        if (i === 0) {
+            newDivs.className += " selected"; //.classList.add("classe")
+        }
         newDivs.style.border = "1px solid black";
         newDivs.style.backgroundColor = colors[i];
         newPalette.appendChild(newDivs)
+        newDivs.addEventListener('click', makeEvents);
     }
 }
 createDivs();
@@ -26,34 +27,30 @@ function createPixels() {
             pixel.style.border = "1px solid black";
             pixel.style.backgroundColor = "white";
             pixel.className = "pixel";
-            line.appendChild(pixel)  
+            pixel.addEventListener('click', makeFill);
+            line.appendChild(pixel);
          }
      }
     }
 createPixels();
 
 
-function makeEvents() {
-    let unselect = document.getElementsById('color-palette');
-    for (let i = 0; i < colors.length; i += 1) {
-        if (colors[i].className = "selected") {
-            colors.classList.remove('.selected');
-        }
-        unselect.event.target.classList.add('.selected');
-    }
+function makeEvents(event) {
+    let unselect = document.getElementByClassName('selected');
+    unselect.classList.remove('selected');
+    event.target.classList.add('selected');
 }
-colors.addEventListener('click', makeEvents);
 
 
 
-pixel.addEventListener('click', makeFill);
 function makeFill() {
     let getPixel = document.getElementsById('pixel');
     let getColor = document.getElementsByClassName('selected');
     pixel.style.backgroundColor = getColor
 }
 
-button.addEventListener('click', clearAll);
+let getButton = document.getElementById('clear-board')
+getButton.addEventListener('click', clearAll);
 function clearAll() {
     let getPixel = document.getElementsById('pixel');
     getPixel.style.backgroundColor = "white"
