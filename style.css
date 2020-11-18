@@ -1,8 +1,11 @@
 .color {
+    position: relative;
     border: solid 1px;
     display: inline-block;
     width: 40px;
-    height: 40px;
+    height: 40px; 
+    left: 15px;
+    border-radius: 25px;
 }
 
 .pixel {
@@ -15,17 +18,46 @@
 }
 
 #clear-board {
-
+    display: block;
     position: relative;
     top: 15px;
 }
 
 #pixel-board {
     position: relative;
-    top: 30px;
-    width: 240px;
-    height: 240px;
+    width: 210px;
+    height: 200px;
     background-color: white;
     display: block;
+    top: 35px;
 }
 
+#position {
+    left: 50%;
+    top: 50%;
+    transform: translate(40%, 50%);
+}
+
+#color-palette {
+    display: inline-block;
+}
+
+body {
+    background-image: url(novobkg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    font-family: 'Sacramento', cursive;
+    font-size: 40px;
+    position: relative;
+    top: 20px;
+}
+
+#clear-board{
+    border-style: none;
+    background-color: white;
+    padding: 8px;
+    font-size: 15px;
+}
