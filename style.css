@@ -1,0 +1,38 @@
+#black {
+    background-color: black;
+}
+
+#red {
+    background-color: red;
+}
+
+#blue {
+    background-color: blue;
+}
+
+#green {
+    background-color: green;
+}
+
+.color {
+    height: 25px;
+    width: 25px;
+    border: 1px solid black;
+    display: inline-block;
+}
+
+#pixel-board { 
+    width: 250px;
+    height: 210px;
+    background-color: white;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+}
+
+.pixel {
+    background-color: white;
+    border: 1px solid black;
+    height: 40px;
+    width: 40px;
+}
