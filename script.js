@@ -19,18 +19,19 @@ selecionarCor.addEventListener('click', function (evento) {
 })
 
 let pixel = document.getElementById('pixel-board');
-
 //Requisito 8
-let roubaCor = document.querySelectorAll('.selected')[0].style.backgroundColor
-pixel.addEventListener('click', function (event) {
+
+let roubaCor = document.querySelector('.selected').style.background
+pixel.addEventListener('click', function (event, roubaCor) {
+	let theCSSprop = window.getComputedStyle(roubaCor, null).getPropertyValue("background-color");
 	if (event.target.classList.contains('pixel')) {
-		event.target.classList.add('selected')
+		event.target.style.background = theCSSprop
 	}
 })
 //Requisito 9
 let button = document.getElementById('clear-board');
 let quadroPixel = document.getElementsByClassName('pixel')
-button.addEventListener('click', function () {
+button.addEventListener('click', function (quadroPixel) {
 	for (let i = 0; i < quadroPixel.length; i += 1) {
 		quadroPixel[i].style.backgroundColor = 'white';
 	}
