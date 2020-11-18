@@ -4,10 +4,11 @@ let cor = document.getElementById('black').style.backgroundColor
 
 // requisito 7
 selecionarCor.addEventListener('click', function (evento) {
-	if (evento.target.classList.contains('color')) {
+	for (let index = 0; index < cores.length; index += 1)
+		if (cores[index].classList.contains('color')) {
+			cores[index].classList.remove('selected');
+		} if (evento.target.classList.contains('color'))
 		evento.target.classList.add('selected');
-	} else if (evento.target.classList.contains('selected'))
-	evento.target.classList.remove('selected');
 	console.log(evento.target);
 })
 
@@ -25,7 +26,7 @@ let button = document.getElementById('clear-board');
 let quadroPixel = document.getElementsByClassName('pixel')
 button.addEventListener('click', function () {
 	for (let i = 0; i < quadroPixel.length; i += 1) {
-		quadroPixel[i].style.backgroundColor = "white"
+		quadroPixel[i].style.backgroundColor = "white";
 	}
 
 })
