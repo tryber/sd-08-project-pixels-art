@@ -1,3 +1,8 @@
+let pixel = document.getElementsByClassName('pixel');
+let color = document.getElementsByClassName('color');
+let pixelBoard = document.getElementById('color-palette');
+
+//Cria Painel Dinâmico
 function createBoard(){
 let board = document.getElementById('pixel-board');
   for (let index = 0; index < 5; index ++) {
@@ -13,4 +18,11 @@ let board = document.getElementById('pixel-board');
 }
 createBoard();
 
-
+//Seleciona Somente a Cor Clicada
+function selectColor(chosen){
+    for(let index = 0; index < pixelBoard.length; index++){
+      pixelBoard[index].className = 'color';
+    }
+      chosen.target.className = 'color selected';
+}
+pixelBoard.addEventListener('click', selectColor);

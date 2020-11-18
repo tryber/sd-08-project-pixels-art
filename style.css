@@ -11,19 +11,19 @@ margin-top: 50px;
     margin: 10px;
 }
 
-.blue{
+#blue{
     background-color: #6ABECD;
 }
 
-.green{
+#green{
     background-color: #88D78C;
 }
 
-.black{
+#black{
     background-color: black;
 }
 
-.darkBlue{
+#darkBlue{
     background-color: #265473;
 }
 
@@ -37,7 +37,7 @@ margin-top: 50px;
     height: 40px;
     width: 40px;
     background-color: white;
-    margin: -2px;
+    line-height: 0;
 }
 
 .row{
