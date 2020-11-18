@@ -25,7 +25,7 @@ function clearAllPixels() {
     const button = document.getElementById('clear-board');
     button.addEventListener('click', function(){
         for (let indexClear = 0; indexClear < arrayPixels.length; indexClear += 1){
-            arrayPixels[indexClear].style.backgroundColor = 'white';
+            arrayPixels[indexClear].className = 'pixel';
         }
     })
 }    
