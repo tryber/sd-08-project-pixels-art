@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: rgb(139,126,102);
+    text-align: center;
+}
+
+.header {
+    margin: 50px 0px;
+}
+
+#title {
+    font-size: 48px;
+    text-align: center;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 700;
+}
+
+.subtitle {
+    font-size: 24px;
+    text-align: center;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+#color-palette {
+    display: flex;
+    justify-content: center;
+}
+
+.color {
+    border: 1px solid black;
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#pixel-board {
+    text-align: center;
+    margin: 20px;
+}
+
+.pixel {
+    border: 1px solid black;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+#board-size{
+    width: 50px;
+    font-size: 20px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 500;
+    height: 40px;
+    border: 2px solid black;
+}
+
+#clear-board {
+    font-size: 20px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 500;
+    padding: 10px;
+    border-radius: 20px 20px;
+    background-color: black;
+    color: white;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+#generate-board{
+    font-size: 20px;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 500;
+    padding: 10px;
+    border-radius: 20px 20px;
+    background-color: black;
+    color: white;
+    margin-top: 20px;
+    cursor: pointer;
+}
