@@ -1,9 +1,8 @@
-let boardSize = 5;
-
 // Create board
+let boardSize = 5;
 function createPixels() {
   const pixelBoard = document.getElementById('pixel-board');
-  for (let line = 0; line < boardSize; line +=1) {
+  for (let line = 0; line < boardSize; line += 1) {
     const pixelLine = document.createElement('div');
 
     pixelBoard.appendChild(pixelLine);
@@ -18,7 +17,28 @@ function createPixels() {
 }
 createPixels();
 
-// Paleta aleatória
+// Create a responsive board
+function responsiveBoard(edgeSize) {
+  edgeSize = document.getElementById('board-size').value;
+  if (edgeSize === '') {
+    alert('Board inválido!');
+  }
+  else if (edgeSize < 5) {
+    boardSize = 5;
+  }
+  else if (edgeSize > 50) {
+    boardSize = 50;
+  }
+  else {
+    boardSize = edgeSize;
+  }
+  createPixels(boardSize);
+}
+
+const newBoardSize = document.getElementById('generate-board');
+newBoardSize.addEventListener('click', responsiveBoard);
+
+// Random palette
 function generateNewPalette() {
   let colors = [];
   for (let index = 0; index < 3; index += 1) {
