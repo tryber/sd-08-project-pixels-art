@@ -1,10 +1,25 @@
 // Requirements 2 and 3:
-const colors = ["black", "red", "yellow", "blue"];
+const colors = ["red", "yellow", "blue", "orange", "green", "purple"];
 const colorPalette = document.querySelectorAll(".color");
 
+function randomColor() {
+  const colorPosition = Math.ceil(Math.random() * (colors.length - 1));
+  console.log(colorPosition);
+  return colors[colorPosition];
+}
+
 function fillingInPalette() {
-  for (let index = 0; index < colorPalette.length; index += 1) {
-    colorPalette[index].style.backgroundColor = colors[index];
+  colorPalette[0].style.backgroundColor = "black";
+
+  const previousColors = [];
+
+  for (let index = 1; index < colorPalette.length; index += 1) {
+    let newColor = randomColor();
+    while (previousColors.includes(newColor)) {
+      newColor = randomColor();
+    }
+    colorPalette[index].style.backgroundColor = newColor;
+    previousColors.push(newColor);
   }
 }
 fillingInPalette();
@@ -30,7 +45,6 @@ function createPixels(width) {
     pixel.style.backgroundColor = "white";
     pixelBoard.appendChild(pixel);
   }
-  console.log((width * 40).toString() + "px");
 }
 
 createPixels(5);
@@ -69,7 +83,7 @@ addListenerToPixels();
 
 // Requirement 9
 function clearPixels() {
-	const allPixels = document.querySelectorAll(".pixel");
+  const allPixels = document.querySelectorAll(".pixel");
   for (let pixel = 0; pixel < allPixels.length; pixel += 1) {
     allPixels[pixel].style.backgroundColor = "white";
   }
@@ -91,8 +105,8 @@ function createNewBoard() {
 }
 
 const generateBoardBtn = document.getElementById("generate-board");
-generateBoardBtn.addEventListener("click", generateNewBoard)
-function generateNewBoard () {
+generateBoardBtn.addEventListener("click", generateNewBoard);
+function generateNewBoard() {
   if (boardSizeInput.value) {
     createNewBoard();
     addListenerToPixels();
