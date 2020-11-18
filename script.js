@@ -1,15 +1,9 @@
-window.onload = function () {
-  const palleteColorsList = document.querySelectorAll('.color');
-  palleteColorsList[0].className += ' selected';
-  createBoardPixel(5);
-};
-
 function randomColor() {
-  let colorArray = ['rgb(0 , 0 , 0)'];
+  const colorArray = ['rgb(0 , 0 , 0)'];
   for (let index = 1; index < 4; index += 1) {
-    let red = Math.floor(Math.random() * 255);
-    let green = Math.floor(Math.random() * 255);
-    let blue = Math.floor(Math.random() * 255);
+    const red = Math.floor(Math.random() * 255);
+    const green = Math.floor(Math.random() * 255);
+    const blue = Math.floor(Math.random() * 255);
     colorArray.push(`rgb(${red} , ${green} , ${blue})`);
   }
   return colorArray;
@@ -33,7 +27,7 @@ function createBoardPixel(size) {
   for (let index = 1; index <= size; index += 1) {
     const lineBoardElement = document.createElement('div');
     lineBoardElement.className = 'lines';
-    for (let index = 0; index < size; index += 1) {
+    for (let i = 0; i < size; i += 1) {
       const squarePixel = document.createElement('div');
       squarePixel.className = 'pixel';
       lineBoardElement.appendChild(squarePixel);
@@ -51,30 +45,28 @@ function clearSelected() {
   }
 }
 
-function paletteColorSelected() {  
+function paletteColorSelected() {
   const paletteColors = document.querySelectorAll('.color');
-  for (index = 0; index < paletteColors.length; index += 1) {  
-    console.log(paletteColors[index]);
+  for (let index = 0; index < paletteColors.length; index += 1) {
     paletteColors[index].addEventListener('click', function (eventColor) {
       clearSelected();
       eventColor.target.classList.add('selected');
     });
   }
-
 }
 
 paletteColorSelected();
 
 function paint() {
   const board = document.querySelector('#pixel-board');
-  board.addEventListener('click', paintPixel);
-  function paintPixel(eventPixel) {
-    const pixelSelected = document.querySelector('.selected');
-    if (eventPixel.target.style.backgroundColor == pixelSelected.style.backgroundColor)
-      eventPixel.target.style.backgroundColor = 'white';
-    else
-    eventPixel.target.style.backgroundColor = pixelSelected.style.backgroundColor;
-  }
+  board.addEventListener('click', function (eventPixel) {
+      const pixelSelected = document.querySelector('.selected');
+      if (eventPixel.target.style.backgroundColor === pixelSelected.style.backgroundColor) {
+        eventPixel.target.style.backgroundColor = 'white';
+      } else {
+      eventPixel.target.style.backgroundColor = pixelSelected.style.backgroundColor;
+      }
+  });
 }
 
 paint();
@@ -94,8 +86,8 @@ function clearBoard() {
   const buttonClear = document.querySelector('#clear-board');
   buttonClear.addEventListener('click', function () {
     const boardPixel = document.querySelectorAll('.pixel');
-    for (let pixel of boardPixel) {
-      pixel.style.backgroundColor = 'white';
+    for (let index = 0; index < boardPixel.length; index += 1) {
+      boardPixel[index].style.backgroundColor = 'white';
     }
   });
 }
@@ -111,7 +103,7 @@ function createButtonInput() {
   const inputElement = document.createElement('input');
   inputElement.id = 'board-size';
   inputElement.type = 'number';
-  inputElement.className = 'input-board'
+  inputElement.className = 'input-board';
   inputElement.min = '1';
   inputElement.max = '50';
   buttonsTag.appendChild(inputElement);
@@ -125,13 +117,12 @@ function createButtonInput() {
 createButtonInput();
 
 function validateInput() {
-  const inputBoard = document.querySelector("#board-size");
-  inputBoard.addEventListener("change", function (size) {
-    console.log(size.target.value);
-    if (!size.target.value){
+  const inputBoard = document.querySelector('#board-size');
+  inputBoard.addEventListener('change', function (size) {
+    if (!size.target.value) {
       size.target.value = '';
-    } else if (size.target.value > parseInt(size.target.getAttribute("max"))) { 
-      size.target.value = size.target.getAttribute("max");
+    } else if (size.target.value > parseInt(size.target.getAttribute('max'), 10)) {
+      size.target.value = size.target.getAttribute('max');
     } else if (size.target.value < 5) {
       size.target.value = 5;
     }
@@ -145,13 +136,12 @@ function buttonCreateBoard() {
   buttonBoard.addEventListener('click', function () {
     const inputBoard = document.querySelector('#board-size');
     const boardPixels = document.querySelectorAll('.lines');
-    console.log(inputBoard.value);
-    if (inputBoard.value == '') {
-      alert('Board inválido!')
+    if (!inputBoard.value) {
+      alert('Board inválido!');
     } else {
-      for (let tag of boardPixels) {
+      for (let index = 0; index < boardPixels.length; index +=1) {
         const board = document.querySelector('#pixel-board');
-        board.removeChild(tag);
+        board.removeChild(boardPixels[index]);
       }
       createBoardPixel(inputBoard.value);
     }
@@ -159,3 +149,9 @@ function buttonCreateBoard() {
 }
 
 buttonCreateBoard();
+
+window.onload = function () {
+  const palleteColorsList = document.querySelectorAll('.color');
+  palleteColorsList[0].className += ' selected';
+  createBoardPixel(5);
+};
