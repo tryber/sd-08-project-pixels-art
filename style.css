@@ -71,3 +71,7 @@ body {
 	margin-top: 20px;
 	border-radius: 10px;
 }
+
+.selected {
+	background-color: black;
+}

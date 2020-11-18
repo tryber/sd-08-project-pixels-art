@@ -1,6 +1,12 @@
 let cores = document.querySelectorAll('.color');
 let selecionarCor = document.getElementById('color-palette');
 let cor = document.getElementById('black').style.backgroundColor
+let crimson = document.getElementById('crimson');
+let selected = document.getElementsByClassName('selected')
+
+// // crimson.addEventListener('click', function () {
+// // 	selected[0].style.backgroundColor = "crimson"
+// })
 
 // requisito 7
 selecionarCor.addEventListener('click', function (evento) {
@@ -26,7 +32,8 @@ let button = document.getElementById('clear-board');
 let quadroPixel = document.getElementsByClassName('pixel')
 button.addEventListener('click', function () {
 	for (let i = 0; i < quadroPixel.length; i += 1) {
-		quadroPixel[i].classList.remove('selected');
+		quadroPixel[i].style.backgroundColor = 'white';
 	}
 
 })
+
