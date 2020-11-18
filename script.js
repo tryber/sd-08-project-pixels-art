@@ -52,3 +52,9 @@ function makeFill() {
     let getColor = document.getElementsByClassName('selected');
     pixel.style.backgroundColor = getColor
 }
+
+button.addEventListener('click', clearAll);
+function clearAll() {
+    let getPixel = document.getElementsById('pixel');
+    getPixel.style.backgroundColor = "white"
+}
