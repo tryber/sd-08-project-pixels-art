@@ -5,6 +5,20 @@ function firstColor(){
 }
 firstColor();
 
+function addEventSelected (){
+    for (let index = 0; index < getColor.length; index += 1) {
+        getColor[index].addEventListener('click', eventSelected);
+    }
+}
+addEventSelected();
+
+function eventSelected (event){
+    for (let i = 0; i < getColor.length; i += 1) {
+        getColor[i].classList.remove('selected');
+    }
+    event.target.classList.add('selected');
+}
+
 
 function clearButton(){
 let arrayPixels = document.getElementsByClassName('pixel');
