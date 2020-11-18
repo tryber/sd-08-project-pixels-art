@@ -1,0 +1,48 @@
+#color-palette {
+    display: flex;
+    visibility: visible;
+}
+
+.color {
+    border: solid black 1px;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    margin: 0;
+}
+
+/*
+.color#black {
+    background-color: black;
+}
+
+.color#red {
+    background-color: red;
+}
+
+.color#lime {
+    background-color: lime;
+}
+
+.color#blue {
+    background-color: blue;
+} */
+
+#pixel-board {
+    margin: 5px;
+}
+
+.pixel-row {
+    margin: 0;
+    display: flex;
+}
+
+.pixel {
+    background-color: white;
+    border: solid black 1px;
+    margin: 0;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+}
+
