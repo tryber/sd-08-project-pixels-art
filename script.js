@@ -6,15 +6,26 @@ function firstColor(){
 firstColor();
 
 function changeColor(event){
-    event.target.className += ' selected';
+    for (let indice = 0; indice < getColor.length; indice += 1){
+        getColor[indice].classList.remove('selected');
+        event.target.classList.add('selected');
+        getColor[indice] = event.target;
+    }
 }
 
+function clickChangeColor(){
+    for (const colors of getColor) {
+        colors.addEventListener('click', changeColor);
+    }
+}
+
+
 function clearAllPixels() {
-    const arrayPixels = document.getElementById('clear-board');
-    arrayPixels.addEventListener('click', () => {
-        const getPixels = document.getElementsByClassName('pixel');
-        for (const pixel of getPixels) {
-            pixel.getElementsByClassName.backgroundColor = 'white';
+    let arrayPixels = document.getElementsByClassName('pixel');
+    const button = document.getElementById('clear-board');
+    button.addEventListener('click', function(){
+        for (let indexClear = 0; indexClear < arrayPixels.length; indexClear += 1){
+            arrayPixels[indexClear].style.backgroundColor = 'white';
         }
-    });
+    })
 }    
