@@ -1,0 +1,41 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-direction: column;
+}
+
+
+#color-palette{
+    width: 400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 0px;
+
+    align-items: center;
+    justify-content: center;
+}
+
+#color-palette div{
+    width: 25px;
+    height: 25px;
+    margin: auto;
+    border: solid black 1px;
+}
+
+#black{
+    background-color: black;
+}
+
+#green{
+    background-color: green;
+}
+
+#red{
+    background-color: red;
+}
+
+#blue{
+    background-color: blue;
+}
