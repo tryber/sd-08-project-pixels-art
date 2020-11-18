@@ -33,8 +33,6 @@ window.onload = function() {
     document.getElementById('black').classList.add('selected')
 }
 
-
-
 let selecionada = 'black'
 
 function pintarPixel() {
@@ -46,3 +44,15 @@ function pintarPixel() {
     }
 }
 pintarPixel ()
+
+function limpar() {
+    let limparBotao = document.querySelector('#clear-board')
+    let color = 'white'
+    limparBotao.addEventListener('click', () => {
+        const pixels = document.querySelectorAll('.pixel')
+        for (let i = 0; i < pixels.length; i += 1) {
+            pixels[i].style.backgroundColor = color
+        }
+    })
+}
+limpar()
