@@ -33,3 +33,16 @@ window.onload = function() {
     document.getElementById('black').classList.add('selected')
 }
 
+
+
+let selecionada = 'black'
+
+function pintarPixel() {
+    let selecionado = document.querySelectorAll(".pixel")
+    for (let i = 0; i < selecionado.length; i += 1) {
+        selecionado[i].addEventListener("click", function (event) {
+            event.target.style.backgroundColor = selecionada
+        })
+    }
+}
+pintarPixel ()
