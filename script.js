@@ -14,7 +14,7 @@ addTitle();
 
 /* ---------------------------- REQUISITO 02 e 03 ---------------------------- */
 
-const colorsPallete = ['black', 'orange', 'gray', 'blue'];
+const colorsPallete = randomColors();
 
 const sectionPallete = document.querySelector('.main-section');
 const divContainer = document.createElement('div');
@@ -140,3 +140,22 @@ function resizePixels() {
 }
 
 resizePixels();
+
+/* ---------------------------- REQUISITO 12 ---------------------------- */
+
+function generateColors() {
+    let red = Math.floor(Math.random() * 256);
+    let green = Math.floor(Math.random() * 256);
+    let blue = Math.floor(Math.random() * 256);
+    let colors = `rgb(${red},${green},${blue})`;
+    return colors;
+}
+
+function randomColors() {
+    let color = ['black'];
+    for (let index = 0; index < 3; index += 1) {
+        color.push(generateColors());
+    }
+    return color;
+}
+
