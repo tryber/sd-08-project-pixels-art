@@ -25,22 +25,22 @@ function colors (){
 colors ();
 
 //Requisito 4 e 5
-function createBoard() {
-    let board = document.getElementById("pixel-board");
+// function createBoard() {
+//     let board = document.getElementById("pixel-board");
 
-    for (let index = 0; index < 5; index += 1) {
-        let div = document.createElement("div");
-        div.className = "pixel";
-        board.appendChild(div);
+//     for (let index = 0; index < 25; index += 1) {
+//         let div = document.createElement("div");
+//         div.className = "pixel";
+//         board.appendChild(div);
         
-    for(let index = 0; index < 5; index += 1) {
-        let div = document.createElement("div");
-        div.className = "pixel-coloumn";
-        board.appendChild(div);
-    }    
-  }  
-}
-createBoard();
+//     for(let index = 0; index < 4; index += 1) {
+//         let div = document.createElement("div");
+//         div.className = "pixel-column";
+//         board.appendChild(div);
+//     }    
+//   }  
+// }
+// createBoard();
 
 //Requisito 6
 function mousePaint(){
@@ -57,8 +57,20 @@ function changeColor(event){
 }
 
 //Requisito 8
+let pixel = document.querySelectorAll(".pixel");
+
 function paintBoard(){
-    
+    for (index = 0; index < pixel.length; index += 1){
+        pixel[index].addEventListener("click",paintPixel);
+    }
+}
+paintBoard();
+
+function paintPixel (event){
+    let paintSelect = document.querySelector(".selected");
+    let paintColor = paintSelect.backgroundColor;
+    event.target.style.backgroundColor = paintColor;
+    console.log(paintSelect);
 }
 
 

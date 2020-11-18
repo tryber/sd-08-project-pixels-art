@@ -15,20 +15,13 @@
 }
 
 #pixel-board{
-    display: block;
+    display: table;
     padding-top: 2%;
 }
 
 .pixel {
-    display: table-column-group;
-    height: 40px;
-    width: 40px;
+    display: inline-block;
     border: 1px solid black;
-}
-
-.pixel-coloumn {
-    display: table-cell;
-    height: 40px;
     width: 40px;
-    border: 1px solid black;
+    height: 40px;
 }
