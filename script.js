@@ -1,6 +1,7 @@
 // Create board
-let boardSize = 5;
-function createPixels() {
+
+function createPixels(n) {
+  let boardSize = n;
   const pixelBoard = document.getElementById('pixel-board');
   for (let line = 0; line < boardSize; line += 1) {
     const pixelLine = document.createElement('div');
@@ -15,7 +16,7 @@ function createPixels() {
     }
   }
 }
-createPixels();
+createPixels(5);
 
 // Create a responsive board
 function responsiveBoard(edgeSize) {
@@ -32,6 +33,9 @@ function responsiveBoard(edgeSize) {
   else {
     boardSize = edgeSize;
   }
+  const deleteOldBoard = document.getElementById('pixel-board');
+  deleteOldBoard.innerHTML = '';
+  // Truque que eu vi no pull request do Massaki.
   createPixels(boardSize);
 }
 
