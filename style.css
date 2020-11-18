@@ -4,23 +4,36 @@
 
 body {
   margin: 0px;
+  padding: 0px;
+  background-color: lightgray;
 }
 
 .box-center {
   display: flex;
   justify-content: center;
-  width: 90em;
 }
 
 .buttons {
+  width: 400px;
   display: flex;
   flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.buttons-container {
+  display: flex;
   justify-content: center;
-  width: 90em;
+}
+
+.buttons .board-size {
+  align-self: start;
+  flex-grow: 0.8;
+  margin-right: 0.3px;
 }
 
 .color {
   border: solid;
+  border-radius: 4%;
   border-width: 1px;
   display: inline-block;
   height: 50px;
@@ -35,10 +48,14 @@ body {
 }
 
 .header {
-  background-color: lightgray;
+  color: white;
+  background-color: black;
   display: flex;
   justify-content: center;
-  width: 90em;
+}
+
+.header h1 {
+  display: flex;
 }
 
 .pixel {
@@ -52,5 +69,4 @@ body {
 .posicao-table {
   display: flex;
   justify-content: center;
-  width: 90em;
 }
