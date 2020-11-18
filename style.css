@@ -1,0 +1,56 @@
+h1 {
+  align-items: center;
+  background-color: yellowgreen;
+  display: flex;
+  height: 80px;
+  justify-content: center;
+  margin: 0;
+}
+
+.palette {
+  padding-left: 15px;
+}
+
+.color {
+  border: 1px solid black;
+  border-radius: 100%;
+  display: inline-block;
+  height: 40px;
+  margin: 5px;
+  width: 40px;
+}
+
+.button-clear {
+  display: block;
+  margin: 20px;
+  width: 100px;
+}
+
+.button-board {
+  margin: 20px;
+  width: 100px;
+}
+
+.input-board {
+  margin-left: 20px;
+  width: 100px;
+}
+
+.board {
+  margin: 20px;
+  white-space: nowrap;
+}
+
+.lines {
+  height: 40px;
+  margin: 0;
+  width: fit-content;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+}
