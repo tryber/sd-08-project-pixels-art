@@ -40,7 +40,7 @@ body{
     background-color: blue;
 }
 
-#pixels{
+#pixel-board{
     width: 400px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
@@ -48,9 +48,11 @@ body{
 
     align-items: center;
     justify-content: center;
+    margin-top: 20px;
 }
 
-#pixel-unico{
+.pixel{
+    margin: 5px auto;
     width: 40px;
     height: 40px;
     border: solid black 1px;
