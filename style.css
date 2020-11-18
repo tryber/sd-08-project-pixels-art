@@ -11,33 +11,18 @@ margin-top: 50px;
     margin: 10px;
 }
 
-#blue{
-    background-color: #6ABECD;
-}
-
-#green{
-    background-color: #88D78C;
-}
-
-#black{
-    background-color: black;
-}
-
-#darkBlue{
-    background-color: #265473;
-}
-
 #pixel-board{
     margin-top: 50px;
     margin-left: 30px;
+    width: 250px;
 }
-
 .pixel{
     border: black 1px solid;
     height: 40px;
     width: 40px;
     background-color: white;
     line-height: 0;
+    float: left;
 }
 
 .row{

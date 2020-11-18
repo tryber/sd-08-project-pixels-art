@@ -1,30 +1,37 @@
 let pixel = document.getElementsByClassName('pixel');
 let color = document.getElementsByClassName('color');
-let pixelBoard = document.getElementById('color-palette');
-
+let palette = document.getElementById('color-palette');
+let selected = document.querySelector('.selected').style.backgroundColor
+let blue = document.getElementById('blue').style.backgroundColor = '#6ABECD';
+let green = document.getElementById('green').style.backgroundColor = '#88D78C';
+let darkBlue = document.getElementById('darkBlue').style.backgroundColor = '#265473';
+let black = document.getElementById('black').style.backgroundColor = 'black';
 //Cria Painel Dinâmico
 function createBoard(){
 let board = document.getElementById('pixel-board');
-  for (let index = 0; index < 5; index ++) {
+  for (let index = 0; index < 25; index ++) {
     let row = document.createElement('div');
     row.className = 'pixel row';
     board.appendChild(row);
-    for (let index2 = 0; index2 < 5; index2 ++) {
-      let column = document.createElement('div');
-      column.className = 'pixel column';
-      row.appendChild(column);
-    }
   }
 }
 createBoard();
 
 //Seleciona Somente a Cor Clicada
 function selectColor(chosen){
-    for(let index = 0; index < pixelBoard.length; index++){
-      pixelBoard[index].className = 'color';
-    }
-      chosen.target.className = 'color selected';
+  for(let index = 0; index < color.length; index++){
+    color[index].className = 'color';
+  }
+    chosen.target.className = 'color selected';
 }
-pixelBoard.addEventListener('click', selectColor);
+palette.addEventListener('click', selectColor);
 
-//
+let pixelBoard = document.getElementById('pixel-board');
+
+//Preenche com a Cor Selecionada
+function paint(clicked){
+  let selected = document.querySelector('.selected').style.backgroundColor;
+  clicked.target.style.backgroundColor = selected;
+  console.log(selected);
+}
+pixelBoard.addEventListener('click', paint);
