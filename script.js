@@ -42,15 +42,25 @@ function createBoardPixel(size) {
   }
 }
 
-function paletteColorSelected() {
-  const paletteColors = document.querySelector('#color-palette');
-  paletteColors.addEventListener('click', function (eventColor) {
-    const colors = document.querySelectorAll('.color')
-    for (let element of colors) {
-      element.className = 'color';
+function clearSelected() {
+  const paletteColors = document.querySelectorAll('.color');
+  for (let index = 0; index < paletteColors.length; index += 1) {
+    if (paletteColors[index].classList.contains('selected')) {
+      paletteColors[index].classList.remove('selected');
     }
-    eventColor.target.className = 'color selected';
-  });
+  }
+}
+
+function paletteColorSelected() {  
+  const paletteColors = document.querySelectorAll('.color');
+  for (index = 0; index < paletteColors.length; index += 1) {  
+    console.log(paletteColors[index]);
+    paletteColors[index].addEventListener('click', function (eventColor) {
+      clearSelected();
+      eventColor.target.classList.add('selected');
+    });
+  }
+
 }
 
 paletteColorSelected();
@@ -117,12 +127,13 @@ createButtonInput();
 function validateInput() {
   const inputBoard = document.querySelector("#board-size");
   inputBoard.addEventListener("change", function (size) {
+    console.log(size.target.value);
     if (!size.target.value){
       size.target.value = '';
     } else if (size.target.value > parseInt(size.target.getAttribute("max"))) { 
       size.target.value = size.target.getAttribute("max");
-    } else if (size.target.value < '5') {
-      size.target.value = '5';
+    } else if (size.target.value < 5) {
+      size.target.value = 5;
     }
   });
 }

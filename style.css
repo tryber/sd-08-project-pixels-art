@@ -38,7 +38,7 @@ h1 {
 
 .board {
   margin: 20px;
-  width: fit-content;
+  white-space: nowrap;
 }
 
 .lines {
