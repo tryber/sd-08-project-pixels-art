@@ -1,5 +1,5 @@
-// Requirements 2 and 3:
-const colors = ["red", "yellow", "blue", "orange", "green", "purple"];
+// Requirements 2, 3 and 12:
+const colors = ["", "red", "yellow", "blue", "orange", "green", "purple"];
 const colorPalette = document.querySelectorAll(".color");
 
 function randomColor() {
@@ -9,8 +9,6 @@ function randomColor() {
 }
 
 function fillingInPalette() {
-  colorPalette[0].style.backgroundColor = "black";
-
   const previousColors = [];
 
   for (let index = 1; index < colorPalette.length; index += 1) {
