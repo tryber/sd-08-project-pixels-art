@@ -18,7 +18,7 @@ pixel.addEventListener('click', function (event) {
 		event.target.classList.add('selected')
 	}
 })
-//Requisito 10 
+//Requisito 9
 let button = document.getElementById('clear-board');
 let quadroPixel = document.getElementsByClassName('pixel')
 button.addEventListener('click', function () {
