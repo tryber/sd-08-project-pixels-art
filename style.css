@@ -23,6 +23,9 @@ body{
     margin: auto;
     border: solid black 1px;
 }
+.pixel{
+    background-color: white;
+}
 
 .black{
     background-color: black;
