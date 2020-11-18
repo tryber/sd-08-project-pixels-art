@@ -1,0 +1,72 @@
+.board-size {
+  width: 200px;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: lightgray;
+}
+
+.box-center {
+  display: flex;
+  justify-content: center;
+}
+
+.buttons {
+  width: 400px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+}
+
+.buttons .board-size {
+  align-self: start;
+  flex-grow: 0.8;
+  margin-right: 0.3px;
+}
+
+.color {
+  border: solid;
+  border-radius: 4%;
+  border-width: 1px;
+  display: inline-block;
+  height: 50px;
+  width: 50px;
+}
+
+.color-palette {
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+  width: 300px;
+}
+
+.header {
+  color: white;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+}
+
+.header h1 {
+  display: flex;
+}
+
+.pixel {
+  background-color: white;
+  border: solid;
+  border-width: 1px;
+  height: 40px;
+  width: 40px;
+}
+
+.posicao-table {
+  display: flex;
+  justify-content: center;
+}
