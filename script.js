@@ -30,7 +30,7 @@ function createPixels(width) {
     pixel.style.backgroundColor = "white";
     pixelBoard.appendChild(pixel);
   }
-  console.log((width * 40).toString + "px");
+  console.log((width * 40).toString() + "px");
 }
 
 createPixels(5);
@@ -69,6 +69,7 @@ addListenerToPixels();
 
 // Requirement 9
 function clearPixels() {
+	const allPixels = document.querySelectorAll(".pixel");
   for (let pixel = 0; pixel < allPixels.length; pixel += 1) {
     allPixels[pixel].style.backgroundColor = "white";
   }
@@ -90,11 +91,12 @@ function createNewBoard() {
 }
 
 const generateBoardBtn = document.getElementById("generate-board");
-generateBoardBtn.addEventListener("click", function () {
+generateBoardBtn.addEventListener("click", generateNewBoard)
+function generateNewBoard () {
   if (boardSizeInput.value) {
     createNewBoard();
     addListenerToPixels();
   } else {
     alert("Board inválido!");
   }
-});
+}
