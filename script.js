@@ -21,9 +21,10 @@ selecionarCor.addEventListener('click', function (evento) {
 let pixel = document.getElementById('pixel-board');
 //Requisito 8
 
-let roubaCor = document.querySelector('.selected').style.background
-pixel.addEventListener('click', function (event, roubaCor) {
-	let theCSSprop = window.getComputedStyle(roubaCor, null).getPropertyValue("background-color");
+;
+pixel.addEventListener('click', function (event) {
+	let roubaCor = document.querySelector('.selected')
+	let theCSSprop = window.getComputedStyle(roubaCor, null).getPropertyValue("background");
 	if (event.target.classList.contains('pixel')) {
 		event.target.style.background = theCSSprop
 	}
