@@ -38,22 +38,37 @@ addPalleteColors();
 
 const sectionPixels = document.querySelector('#pixel-board');
 
-function addPixels(size) {
-    for (let row = 0; row < size; row += 1) {
-        const boxPixel = document.createElement('div');
-        boxPixel.style.backgroundColor = 'white';
-        sectionPixels.appendChild(boxPixel);
+/* ---------------------------- REQUISITO 08 ---------------------------- */
 
-        for (let col = 0; col < size; col += 1) {
-            const boxPixel = document.createElement('div');
-            boxPixel.style.backgroundColor = 'white';
-            boxPixel.classList.add('pixel');
-            sectionPixels.appendChild(boxPixel);
-        }
+function paintPixel(event) {
+    const selected = divContainer.querySelector('.selected');
+    event.target.style.backgroundColor = selected.style.backgroundColor;
+}
+
+function createPixel() {
+    const boxPixel = document.createElement('div');
+    boxPixel.style.backgroundColor = 'white';
+    boxPixel.classList.add('pixel');
+    boxPixel.addEventListener('click', paintPixel);
+    return boxPixel;
+}
+
+function createRow(size) {
+    const newRow = document.createElement('div');
+    newRow.className = 'row';
+    for (let col = 0; col < size; col += 1) {
+        newRow.appendChild(createPixel());
+    }
+    return newRow;
+}
+
+function createBoard(size) {
+    for (let row = 0; row < size; row += 1) {
+        sectionPixels.appendChild(createRow(size));
     }
 }
 
-addPixels(5);
+createBoard(5);
 
 /* ---------------------------- REQUISITO 06 ---------------------------- */
 
@@ -77,20 +92,6 @@ function chooseSelectedColor(event) {
     event.target.classList.add('selected');
 }
 
-/* ---------------------------- REQUISITO 08 ---------------------------- */
-
-function paintPixel() {
-    const pixelSelected = document.querySelectorAll('.pixel');
-
-    for (let i = 0; i < pixelSelected.length; i += 1) {
-        pixelSelected[i].addEventListener('click', function (event) {
-            let current = document.querySelector('.selected').style.backgroundColor;
-            event.target.style.backgroundColor = current;
-        })
-    }
-}
-
-paintPixel();
 
 /* ---------------------------- REQUISITO 09 ---------------------------- */
 
@@ -131,11 +132,11 @@ function resizePixels() {
         if (size < 1) {
             alert('Board inválido!');
         } else if (size < 5) {
-            addPixels(5);
+            createBoard(5);
         } else if (size > 50) {
-            addPixels(50);
+            createBoard(50);
         } else {
-            addPixels(size);
+            createBoard(size);
         }
     })
 }
