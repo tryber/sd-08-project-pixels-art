@@ -11,7 +11,7 @@ document.querySelector('#colorGray').style.backgroundColor = '#B0B0B0';
 document.querySelector('#colorBrown').style.backgroundColor = '#CCBAAA';
 
 function createPixel () {
-    for(let index = 1; index < 26; index +=1){
+    for(let index = 0; index < 25; index +=1){
      let row = document.createElement('div');
      row.className = 'pixel';
      pixelBoard.appendChild(row);

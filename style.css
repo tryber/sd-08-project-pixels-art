@@ -15,6 +15,7 @@
 }
 
 #clear-board {
+
     position: relative;
     top: 15px;
 }
@@ -24,4 +25,5 @@
     top: 30px;
     width: 15em;
     background-color: white;
+    display: block;
 }
