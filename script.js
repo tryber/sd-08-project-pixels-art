@@ -116,8 +116,8 @@ function clearPixels() {
 
 function sizeBoard() {
     const inputPixel = document.querySelector('input').value;
-    if (inputPixel === '') {
-        alert('Adicione um valor');
+    if (inputPixel === '' || inputPixel < 1) {
+        alert('Board inválido!');
     }
     const number = parseInt(inputPixel);
     return number;
@@ -129,9 +129,7 @@ function resizePixels() {
 
         sectionPixels.innerHTML = '';
         const size = sizeBoard();
-        if (size < 1) {
-            alert('Board inválido!');
-        } else if (size < 5) {
+        if (size < 5) {
             createBoard(5);
         } else if (size > 50) {
             createBoard(50);
