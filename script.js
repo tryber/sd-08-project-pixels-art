@@ -11,8 +11,6 @@ let tbl = document.getElementById('pixel-board');
 function criandoElemento(){
     for(let index = 0;index < 5; index++){
         let col = document.createElement('tr');
-        /*col.classList.add('pixel');
-        col.style.backgroundColor='white';*/
         tbl.appendChild(col);
        for(let i = 0; i < 5; i++){
             let linha = document.createElement('td');
@@ -24,10 +22,9 @@ function criandoElemento(){
 }
 criandoElemento();
 
-var elementos = document.getElementsByClassName('color');
+let elementos = document.getElementsByClassName('color');
 for(let contador = 0; contador < elementos.length; contador+=1){
     elementos[contador].onclick = function(){
-
         let removeElementos = elementos[0];
         while(removeElementos){
             if(removeElementos.tagName === 'DIV'){
@@ -37,5 +34,15 @@ for(let contador = 0; contador < elementos.length; contador+=1){
         }
         
         this.classList.add('selected');
+    }
+}
+
+let quadrado = document.getElementsByClassName('pixel');
+for(let cont = 0; cont < quadrado.length; cont+=1){
+    quadrado[cont].onclick = function selecionaPixel(event) {
+        let selecionaDiv = document.querySelector('.selected');
+        let selecionaCor = selecionaDiv.style.background;
+        event.target.style.backgroundColor = selecionaCor;
+
     }
 }
