@@ -20,16 +20,28 @@ createPixels();
 
 // Select a color
 function selectColor(clickOnColor) {
-  findSelected = document.querySelector('.selected');
+  let findSelected = document.querySelector('.selected');
   findSelected.classList.remove('selected');
 
-  chosen = clickOnColor.target.id;
-  chosenColor = document.getElementById(chosen);
+  let chosen = clickOnColor.target.id;
+  let chosenColor = document.getElementById(chosen);
   chosenColor.classList.add('selected');
 }
 
-let colorPalette = document.getElementById('color-palette');
+const colorPalette = document.getElementById('color-palette');
 colorPalette.addEventListener('click', selectColor);
+
+// Paint a pixel
+function paintPixel(event) {
+  let chosen = document.querySelector('.selected');
+  let color = window.getComputedStyle(chosen).getPropertyValue('background-color');
+
+  event.target.style.backgroundColor = color;
+  // Aprendi usando esse link que foi uma dica no slack. https://www.w3schools.com/jsref/jsref_getcomputedstyle.asp
+}
+
+const paint = document.getElementById('pixel-board');
+paint.addEventListener('click', paintPixel);
 
 // Clear the board
 function clearBoard() {
