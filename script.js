@@ -20,12 +20,11 @@ function clickChangeColor(){
 }
 
 
-function clearAllPixels() {
+
+let button = document.getElementById('clear-board');
+button.addEventListener('click', function(){
     let arrayPixels = document.getElementsByClassName('pixel');
-    const button = document.getElementById('clear-board');
-    button.addEventListener('click', function(){
-        for (let indexClear = 0; indexClear < arrayPixels.length; indexClear += 1){
-            arrayPixels[indexClear].className = 'pixel';
-        }
-    })
-}    
+    for (let indexClear = 0; indexClear < arrayPixels.length; indexClear += 1){
+        arrayPixels[indexClear].style.backgroundColor = 'white';
+    }
+})
