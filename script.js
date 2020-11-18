@@ -9,7 +9,8 @@ function randomColor() {
 }
 
 function fillingInPalette() {
-	colorPalette[0].style.backgroundColor = colors[0];
+  colorPalette[0].style.backgroundColor = colors[0];
+
   const previousColors = [];
 
   for (let index = 1; index < colorPalette.length; index += 1) {
