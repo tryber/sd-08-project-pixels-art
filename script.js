@@ -66,3 +66,11 @@ generateButton.addEventListener("click", function(){
         alert("Board Inválido!")
     }
 })
+
+//Cores em posição aleatória
+let position1 = Math.floor(Math.random() * 10);
+let position2 = Math.floor(Math.random() * 10);
+let position3 = Math.floor(Math.random() * 10);
+document.getElementById("yellow").style.order = position1;
+document.getElementById("green").style.order = position2;
+document.getElementById("pink").style.order = position3;

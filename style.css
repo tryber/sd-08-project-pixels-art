@@ -18,14 +18,17 @@
 
 #yellow {
     background-color: yellow;
+    display: flex;
 }
 
 #green {
     background-color: green;
+    display: flex;
 }
 
 #pink {
     background-color: pink;
+    display: flex;
 }
 
 .pixel {
@@ -43,5 +46,9 @@
 
 #clear-board {
     margin: 30px 15px;
+}
 
+#color-palette {
+    display: flex;
+    justify-content: center;
 }
