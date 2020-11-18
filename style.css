@@ -47,3 +47,12 @@ body {
 #clear-board {
     margin-bottom: 30px;
 }
+
+#genetare-board, #board-size {
+    display: inline;
+}
+
+#clear-board {
+    display: block;
+    margin: 15px auto 15px;
+}
