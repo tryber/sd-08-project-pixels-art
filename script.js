@@ -32,6 +32,28 @@ function paletteButton (event) {
    event.target.className = "color selected";
 }
 
+//requisito 9
+
+let arrayOfPixels = document.getElementsByClassName("pixel");
+function paddingPixel () {
+   for(let index = 0; index < arrayOfPixels.length; index += 1) {
+      arrayOfPixels[index].addEventListener("click", paddingColor);
+   }
+}
+paddingPixel();
+
+function paddingColor (event) {
+      let colorSelected = document.querySelector(".selected");
+      let newColor = colorSelected.id;
+      event.target.style.backgroundColor = newColor;
+   console.log(colorSelected)
+}
+
+
+//
+
+
+
 function createButton () {
    let clearButton = document.getElementById("clear-board");
    
