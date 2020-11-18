@@ -20,7 +20,7 @@ body {
 
 .tr {
 	display: flex;
-	align-items: baseline;
+	align-items: baseline;	
 }
 
 .color {
@@ -28,6 +28,7 @@ body {
 	width: 40px;
 	border: 1px solid black;
 	display: table-cell;
+	margin-right: 10px;
 }
 
 #pixel-board {
