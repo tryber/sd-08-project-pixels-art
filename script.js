@@ -43,3 +43,12 @@ function makeEvents() {
     }
 }
 colors.addEventListener('click', makeEvents);
+
+
+
+pixel.addEventListener('click', makeFill);
+function makeFill() {
+    let getPixel = document.getElementsById('pixel');
+    let getColor = document.getElementsByClassName('selected');
+    pixel.style.backgroundColor = getColor
+}
