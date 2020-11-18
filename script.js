@@ -1,5 +1,5 @@
 // Create board
-
+let boardSize = 5;
 function createPixels(n) {
   let boardSize = n;
   const pixelBoard = document.getElementById('pixel-board');
@@ -42,6 +42,17 @@ function responsiveBoard(edgeSize) {
 
 const newBoardSize = document.getElementById('generate-board');
 newBoardSize.addEventListener('click', responsiveBoard);
+
+// Clear the board
+function clearBoard(n) {
+  for (let index = 0; index < (boardSize ** 2); index += 1) {
+    const turnWhite = document.getElementsByClassName('pixel')[index];
+    turnWhite.style.backgroundColor = 'white';
+  }
+}
+
+const clickButton = document.getElementById('clear-board');
+clickButton.addEventListener('click', clearBoard);
 
 // Random palette
 function generateNewPalette() {
@@ -86,14 +97,3 @@ function paintPixel(event) {
 
 const paint = document.getElementById('pixel-board');
 paint.addEventListener('click', paintPixel);
-
-// Clear the board
-function clearBoard() {
-  for (let index = 0; index < (boardSize ** 2); index += 1) {
-    const turnWhite = document.getElementsByClassName('pixel')[index];
-    turnWhite.style.backgroundColor = 'white';
-  }
-}
-
-const clickButton = document.getElementById('clear-board');
-clickButton.addEventListener('click', clearBoard);
