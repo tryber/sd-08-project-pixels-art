@@ -23,7 +23,9 @@
 #pixel-board {
     position: relative;
     top: 30px;
-    width: 15em;
+    width: 240px;
+    height: 240px;
     background-color: white;
     display: block;
 }
+
