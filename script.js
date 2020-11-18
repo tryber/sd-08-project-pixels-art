@@ -76,6 +76,16 @@ function paintPixel (event){
 
 //Requisito 9
 function createButton (){
-    let btn = document.getElementById("button");
+    let btn = document.getElementById("clear-board");
+    btn.addEventListener("click",clearBoard)
 }
 createButton ();
+
+function clearBoard(event){
+    let clean = document.querySelectorAll(".pixel");
+    
+    for (let index = 0; index < clean.length; index += 1){
+        clean[index].style.backgroundColor = "white";
+    }
+        event.target.style.backgroundColor;
+}
