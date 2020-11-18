@@ -1,4 +1,13 @@
+#title {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 36px;
+}
+body {
+  background-color: #edf2f4;
+  text-align: center;
+}
 #color-palette {
+  margin-bottom: 10px;
 }
 
 .color {

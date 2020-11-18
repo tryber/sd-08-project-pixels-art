@@ -5,7 +5,7 @@ window.onload = function () {
 function createDivs() {
   const arrayColor = ["black", "blue", "gray", "red"];
   const palletDiv = document.getElementById("color-palette");
-  palletDiv.addEventListener("click", CreateEventsColor);
+  palletDiv.addEventListener("click", createEventsColor);
   for (let index = 0; index < arrayColor.length; index += 1) {
     const myDivs = document.createElement("div");
     myDivs.style.backgroundColor = arrayColor[index]
@@ -29,8 +29,29 @@ function createBoxPixels() {
 }
 createBoxPixels();
 
-function CreateEventsColor(event) {
+function createEventsColor(event) {
   const colorClass = document.querySelector(".selected");
   colorClass.classList.remove("selected");
   event.target.classList.add("selected");
+}
+
+function paintPixel() {
+  const pixelSelected = document.querySelectorAll(".pixel");
+  for (let index = 0; index < pixelSelected.length; index += 1) {
+    pixelSelected[index].addEventListener("click", function (event) {
+      let colorCurrent = document.querySelector(".selected").style
+        .backgroundColor;
+      event.target.style.backgroundColor = colorCurrent;
+    });
+  }
+}
+paintPixel();
+
+const buttonClear = document.getElementById("clear-board");
+buttonClear.addEventListener("click", clearPixels);
+function clearPixels() {
+  const boxPixels = document.querySelectorAll(".pixel");
+  boxPixels.forEach((element) => {
+    element.style.backgroundColor = "white";
+  });
 }
