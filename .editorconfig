@@ -13,7 +13,9 @@ trim_trailing_whitespace = true
 # Set default charset
 [*.{js,html,md,css}]
 charset = utf-8
+quote_type = single
 
 [*.{js,css}]
 indent_style = space
 indent_size = 2
+

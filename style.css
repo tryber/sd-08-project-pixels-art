@@ -37,7 +37,7 @@ body {
 }
 
 button:focus {
-  outline: none;
+  outline: transparent;
 }
 
 section {
