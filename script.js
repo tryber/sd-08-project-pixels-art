@@ -1,18 +1,19 @@
 //Cores para Sortear
 let coresBases = ["yellow", "blue", "gray", "gold", "orange", "brown", "silver", "pink", "purple", "green", "red", "violet"];
 // Referenciando Endereços
-let botaoCoresSortidas = document.getElementById("botao-cores-sortidas");
+let botaoGeraPaletas = document.getElementById("botao-cores-sortidas");
 let paletaDeCores = document.getElementById("color-palette");
-let quadroDePixels = document.getElementById("pixel-board");
-let tamanhoDoQuadro = document.getElementById('board-size');
+let quadroPixels = document.getElementById("pixel-board");
+let tamanhoQuadro = document.getElementById('board-size');
 let botaoGerarQuadrados = document.getElementById('generate-board');
-let limparPixels = document.querySelector("#clear-board");
+let botaolimpaQuadroPixels = document.querySelector("#clear-board");
 //Eventos
-botaoCoresSortidas.addEventListener('click', geraPaletaDeCores);
+botaoGeraPaletas.addEventListener('click', geraPaletaCores);
 botaoGerarQuadrados.addEventListener('click', gerarTabela);
-paletaDeCores.addEventListener("click", alteraSelected);
-quadroDePixels.addEventListener("click", pintaPixel);
-limparPixels.addEventListener("click", limpaPixels);
+paletaDeCores.addEventListener("click", alteraPaletaSelecionada);
+quadroPixels.addEventListener("click", pintaQuadroPexil);
+botaolimpaQuadroPixels.addEventListener("click", limpaPixels);
+//Gera Cores Aleatórias
 function geraCoresAleatorias() {
   let novaCoresBase = coresBases.slice();
   let cores = ["black"];
@@ -26,7 +27,8 @@ function geraCoresAleatorias() {
   }
   return cores;
 }
-function geraPaletaDeCores() { // Função que gera paleta de cores
+//Gera paleta de cores
+function geraPaletaCores() { // Função que gera paleta de cores
   let cores = geraCoresAleatorias();
   paletaDeCores.innerHTML = "";
   for (let index = 0; index < cores.length; index += 1) {
@@ -39,49 +41,47 @@ function geraPaletaDeCores() { // Função que gera paleta de cores
     }
   }
 }
-geraPaletaDeCores();
+geraPaletaCores();
+//Gera tabela de pixels
 function gerarTabela() {
-  let numeroDeQuadros = tamanhoDoQuadro.value;
-  if (numeroDeQuadros === "") {
-    alert('Board inválido!');
-    return;
+  let nQuadros = tamanhoQuadro.value;
+  trataInputInvalidos(nQuadros);
+  let quadrosAjustados = trataInputValidos(nQuadros);
+  quadroPixels.innerHTML = '';
+  gerarPixels(quadrosAjustados);
+}
+function trataInputValidos(nQuadros) {
+  if(nQuadros < 5 && nQuadros > 0) {
+    nQuadros = 5;
   }
-  if(numeroDeQuadros < 5 && numeroDeQuadros > 0) {
-    numeroDeQuadros = 5;
-  }
-  if(numeroDeQuadros > 50) {
-    numeroDeQuadros = 50;
-  }
-  quadroDePixels.innerHTML = '';
-  for (let index = 0; index < numeroDeQuadros; index++) {
-    let maePixexl = document.createElement('div');
-    maePixexl.classList.add('row');
-    quadroDePixels.appendChild(maePixexl);
-    maePixexl.style.backgroundColor= "white";
-      for (let j = 0; j < numeroDeQuadros; j++) {
-      let divTable = document.createElement("div");
-      maePixexl.appendChild(divTable);
-      divTable.className = "pixel";
-    }
+  if(nQuadros > 50) {
+    nQuadros = 50;
+  } return nQuadros;
+}
+function trataInputInvalidos(nQuadros){
+  if (nQuadros === "" || nQuadros < 0) {
+     return alert('Board inválido!');
   }
 }
-function geraPrimeiraTabela(){
-  for (let index = 0; index < 5; index++) {
-    let maePixexl = document.createElement('div');
-    maePixexl.classList.add('row');
-    quadroDePixels.appendChild(maePixexl);
-    maePixexl.style.backgroundColor= "white";
-    for (let j = 0; j < 5; j++) {
-      let divTable = document.createElement("div");
-      maePixexl.appendChild(divTable);
-      divTable.className = "pixel";
+function gerarPixels(quadrosAjustados) {
+  if(quadrosAjustados == undefined){
+    quadrosAjustados = 5;
+  }
+  for (let index = 0; index <  quadrosAjustados; index++) {
+    let quadroPixel = document.createElement('div');
+    quadroPixel.classList.add('row');
+    quadroPixels.appendChild(quadroPixel);
+    //quadroPixel.style.backgroundColor= "white";
+      for (let j = 0; j < quadrosAjustados; j++) {
+      let pixel = document.createElement("div");
+      quadroPixel.appendChild(pixel);
+      pixel.className = "pixel";
     }
   }
-}
-geraPrimeiraTabela();
+} gerarPixels();
 cor = "black";
 //gerarTabela();
-function alteraSelected(event) {
+function alteraPaletaSelecionada(event) {
   let removederSeletect = document.getElementsByClassName("selected");
   for (let i = 0; i < removederSeletect.length; i++) {
     removederSeletect[i].classList.remove("selected");
@@ -90,13 +90,13 @@ function alteraSelected(event) {
   cor = evento.style.backgroundColor;
   evento.classList.add("selected");
 }
-function pintaPixel(event) {
+function pintaQuadroPexil(event) {
   let evento = event.target;
   evento.style.backgroundColor = cor;
 }
 function limpaPixels() {
-  let cadaPixel = document.getElementsByClassName('pixel');
-  for (let i = 0; i < cadaPixel.length; i++) {
-    cadaPixel[i].style.backgroundColor = "white";
+  let todosPixels = document.getElementsByClassName('pixel');
+  for (let i = 0; i < todosPixels.length; i++) {
+    todosPixels[i].style.backgroundColor = "white";
   }
 }
