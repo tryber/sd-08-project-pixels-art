@@ -43,15 +43,14 @@ function makeEvents(event) {
 
 
 
-function makeFill() {
-    let getPixel = document.getElementsById('pixel');
+function makeFill(event) {
     let getColor = document.getElementsByClassName('selected');
-    pixel.style.backgroundColor = getColor
+    event.target.backgroundColor.add(getColor[0])
 }
 
 let getButton = document.getElementById('clear-board')
 getButton.addEventListener('click', clearAll);
 function clearAll() {
-    let getPixel = document.getElementsById('pixel');
+    let getPixel = document.getElementById('pixel');
     getPixel.style.backgroundColor = "white"
 }
