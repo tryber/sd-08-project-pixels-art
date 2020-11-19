@@ -1,0 +1,46 @@
+body {
+  text-align: center;
+}
+
+.color-palette {
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+
+.color {
+  border: solid 1px black;
+  height: 70px;
+  width: 70px;
+}
+
+.color:first-of-type {
+  background-color: black;
+}
+
+.clear-board {
+  display: block;
+  height: 30px;
+  margin: 10px auto;
+  width: 200px;
+}
+
+.pixel-board {
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+}
+
+.pixel {
+  border: solid 1px black;
+  height: 40px;
+  width: 40px;
+}
+
+button:focus {
+  outline: transparent;
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+}
