@@ -22,7 +22,8 @@ function eventSelected (event){
 function paintingPixels(){
   for (let i = 0; i < allPixels.length; i += 1){
     allPixels[i].addEventListener('click', function (event){
-
+      let colorSelected = document.querySelector('.selected');
+      event.target.style.backgroundColor = colorSelected.style.backgroundColor;
     });
   }
 }

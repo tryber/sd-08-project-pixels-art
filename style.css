@@ -1,15 +1,18 @@
 #title {
-   margin-left: 45px;
+  display: flex;
+  justify-content: center;
 }
 
 #color-palette {
     height: 40px;
+    display: flex;
+    justify-content: center;
+    margin: 12px;
 }
 
 .color {
     width: 75px;
     height: 40px;
-    float: left;
     border: solid black 1px;
 }
 
@@ -30,28 +33,21 @@
 }
 
 #pixel-board {
-    margin-left: 45px;
-    margin-top: 30px;
-    width: 220px;
-    height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 210px;
+  margin: auto;
 }
 
 .pixel {
-    display: inline-block;
-    width: 40px;
-    height: 40px;
-    border: solid black 1px;
-    margin: 0px;
-    background-color: white;
-}
-
-.linePixel {
-    height: 40px;
-    width: 230px;
+  width: 40px;
+  height: 40px;
+  border: solid black 1px;
+  background-color: white;
 }
 
 #clear-board {
     height: 30px;  
-    margin-left: -305px;
-    margin-top: 30px;
+    display: flex;
+    margin: auto;
 }
