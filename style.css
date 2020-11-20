@@ -1,21 +1,24 @@
-#color-palette {
-    width: 25px;
-    height:25px;
-    display: inline-block;
-}
 
-.colorBlack {
+
+#colorBlack {
     background-color: black;
 }
 
-.colorRed {
+#colorRed {
     background-color: red;
 }
 
-.colorBlue {
+#colorBlue {
     background-color:blue;
 }
 
-.colorGreen {
+#colorGreen {
     background-color:green;
+}
+
+.color {
+    display: inline-block;
+    border: 1px solid black;
+    width: 25px;
+    height:25px;
 }
