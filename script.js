@@ -89,3 +89,5 @@ function clearBoard(event){
     }
         event.target.style.backgroundColor;
 }
+
+//Requisito 10
