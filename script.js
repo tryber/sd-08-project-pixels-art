@@ -19,11 +19,14 @@ function createDivPixelBoard() {
 createDivPixelBoard();
 
 function styleColors() {
+  let x = Math.random() * 255;
+  let y = Math.random() * 255;
+  let z = Math.random() * 255;
   const paletteColors = document.getElementsByClassName('color');
   paletteColors[0].style.backgroundColor = 'black';
-  paletteColors[1].style.backgroundColor = 'yellow';
-  paletteColors[2].style.backgroundColor = 'orange';
-  paletteColors[3].style.backgroundColor = 'red';
+  paletteColors[1].style.backgroundColor = `rgb(${x}, ${y}, ${z})`;
+  paletteColors[2].style.backgroundColor = `rgb(${z}, ${x}, ${y})`;
+  paletteColors[3].style.backgroundColor = `rgb(${y}, ${z}, ${x})`;
 }
 styleColors();
 
