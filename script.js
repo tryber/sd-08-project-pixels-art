@@ -42,15 +42,11 @@ function makeEvents(event) {
 }
 
 
-
 function makeFill(event) {
     let getColor = document.getElementsByClassName('selected');
-    event.target.backgroundColor.add(getColor[0])
+    let getPixel = document.getElementsByClassName('pixel');
+    event.target.style.backgroundColor = getColor[0].style.backgroundColor;
 }
 
-let getButton = document.getElementById('clear-board')
-getButton.addEventListener('click', clearAll);
-function clearAll() {
-    let getPixel = document.getElementById('pixel');
-    getPixel.style.backgroundColor = "white"
-}
+
+
