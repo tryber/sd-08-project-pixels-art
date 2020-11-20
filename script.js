@@ -28,12 +28,12 @@ colors ();
 // function createBoard() {
 //     let board = document.getElementById("pixel-board");
 
-//     for (let index = 0; index < 25; index += 1) {
+//     for (let index = 0; index < 5; index += 1) {
 //         let div = document.createElement("div");
 //         div.className = "pixel";
 //         board.appendChild(div);
         
-//     for(let index = 0; index < 4; index += 1) {
+//     for(let index = 0; index < 5; index += 1) {
 //         let div = document.createElement("div");
 //         div.className = "pixel-column";
 //         board.appendChild(div);
@@ -91,3 +91,6 @@ function clearBoard(event){
 }
 
 //Requisito 10
+function defineSize () {
+    let input = document.getElementById('board-size');
+}
