@@ -4,32 +4,16 @@
 }
 
 #color-palette {
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    margin: 12px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  margin: 12px;
 }
 
 .color {
-    width: 75px;
-    height: 40px;
-    border: solid black 1px;
-}
-
-#black {
-    background-color: black;
-}
-
-#yellow {
-    background-color: yellow;
-}
-
-#orange {
-    background-color: orange;
-}
-
-#red {
-    background-color: red;
+  width: 75px;
+  height: 40px;
+  border: solid black 1px;
 }
 
 #pixel-board {
@@ -47,7 +31,7 @@
 }
 
 #clear-board {
-    height: 30px;  
-    display: flex;
-    margin: auto;
+  height: 30px;  
+  display: flex;
+  margin: auto;
 }
