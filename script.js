@@ -92,5 +92,19 @@ function clearBoard(event){
 
 //Requisito 10
 function defineSize () {
-    let input = document.getElementById('board-size');
+    let btnBoard = document.getElementById('generate-board');
+    
+    btnBoard.addEventListener("click", function(){
+        let input = document.getElementById('board-size');
+        console.log(input.value);
+        if (input.value == '') {
+            alert('Board Inválido!');
+        }
+    });
+}
+defineSize ();
+
+//Requisito 11
+function sizeBoard () {
+
 }

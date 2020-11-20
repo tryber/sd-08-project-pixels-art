@@ -26,3 +26,7 @@
     width: 40px;
     height: 40px;
 }
+
+#board-size {
+    margin-top: 5px;
+}
