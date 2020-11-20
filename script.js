@@ -24,23 +24,24 @@ function colors (){
 }
 colors ();
 
-//Requisito 4 e 5
-// function createBoard() {
-//     let board = document.getElementById("pixel-board");
+// Requisito 4 e 5
+function createBoard(size) {
+    let board = document.getElementById("pixel-board");
 
-//     for (let index = 0; index < 5; index += 1) {
-//         let div = document.createElement("div");
-//         div.className = "pixel";
-//         board.appendChild(div);
+    for (let index = 0; index < size; index += 1) {
+        let div = document.createElement("div");
+        div.className = "pixel-column";
+        board.appendChild(div);
         
-//     for(let index = 0; index < 5; index += 1) {
-//         let div = document.createElement("div");
-//         div.className = "pixel-column";
-//         board.appendChild(div);
-//     }    
-//   }  
-// }
-// createBoard();
+        for (let index = 0; index < size; index += 1) {
+            let div = document.createElement("div");
+            div.className = "pixel";
+            board.appendChild(div);
+        }
+    }
+    paintBoard();
+}
+createBoard(5);
 
 //Requisito 6
 function mousePaint(){
@@ -57,9 +58,9 @@ function changeColor(event){
 }
 
 //Requisito 8
-let pixel = document.querySelectorAll(".pixel");
-
 function paintBoard(){
+    let pixel = document.querySelectorAll(".pixel");
+    
     for (index = 0; index < pixel.length; index += 1){
         pixel[index].addEventListener("click",paintPixel);
     }
@@ -96,10 +97,15 @@ function defineSize () {
     
     btnBoard.addEventListener("click", function(){
         let input = document.getElementById('board-size');
-        console.log(input.value);
-        if (input.value == '') {
+
+        if (input.value == '' || input.value <= 0) {
             alert('Board Inválido!');
         }
+        let pixel = document.querySelectorAll('.pixel');
+        let pixelColumn = document.querySelectorAll('.pixel-column');
+        let pixelBoard = document.getElementById('pixel-board');
+        pixelBoard.removeChild(pixel);
+        createBoard(input.value);
     });
 }
 defineSize ();
