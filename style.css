@@ -1,3 +1,7 @@
+body {
+  background-color: rgb(189, 183, 107);
+}
+
 #title {
   display: flex;
   justify-content: center;
@@ -30,8 +34,21 @@
   background-color: white;
 }
 
+.generate-board {
+    display: flex;
+    justify-content: center;
+}
+
 #clear-board {
   height: 30px;  
   display: flex;
   margin: auto;
+}
+
+#board-size {
+  margin: 10px;
+}
+
+#generate-board {
+  margin: 10px;
 }
