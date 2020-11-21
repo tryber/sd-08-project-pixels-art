@@ -8,13 +8,15 @@ function createDivPalette() {
 }
 createDivPalette();
 
+let boardSize = 5;
 function createDivPixelBoard() {
   const pixelBoard = document.getElementById('pixel-board');
-  for (let index = 1; index <= 25; index += 1) {
+  for (let index = 1; index <= (boardSize ** 2); index += 1) {
     let pixelDivs = document.createElement('div');
     pixelDivs.className = 'pixel';
     pixelBoard.appendChild(pixelDivs);
   }
+  pixelBoard.style.width = boardSize * 42 + 'px';
 }
 createDivPixelBoard();
 
@@ -69,3 +71,5 @@ clearButton();
 
 let button = document.getElementById('clear-board');
 button.addEventListener('click', clearButton);
+
+

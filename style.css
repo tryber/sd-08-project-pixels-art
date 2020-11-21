@@ -23,7 +23,6 @@ body {
 #pixel-board {
   display: flex;
   flex-wrap: wrap;
-  max-width: 210px;
   margin: auto;
 }
 
@@ -43,6 +42,7 @@ body {
   height: 30px;  
   display: flex;
   margin: auto;
+  align-items: center;
 }
 
 #board-size {
