@@ -17,3 +17,8 @@
 #pixel-board {
   border-collapse: collapse;
 }
+
+#clear-board {
+  display: flex;
+  margin-bottom: 10px;
+}
