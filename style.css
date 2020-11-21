@@ -22,7 +22,7 @@
 }
 
 #pixel-board {
-
+    display: inline-block;
 }
 
 .pixel{
