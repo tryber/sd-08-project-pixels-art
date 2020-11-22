@@ -34,3 +34,8 @@ function criaQuadro() {
   }
 }
 criaQuadro();
+
+function substituiCoresPorBranco() {
+  let elemento = document.getElementsByClassName('clear-board');
+  
+}
