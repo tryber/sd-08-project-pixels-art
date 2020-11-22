@@ -1,0 +1,58 @@
+.color {
+  border: 1px solid black;
+  display: inline;
+  width: 10px;
+  height: 10px;
+  margin: 1px;
+  padding: 20px;
+  border-radius: 5px;
+}
+#color-palette {
+  margin: 50px;
+}
+#pixel-board {
+  width: 210px;
+  height: 210px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: start;
+  border: 1px solid black;
+}
+
+.pixel {
+  width: 40px;
+  height: 40px;
+  border: 1px solid black;
+  background-color: white;
+}
+#title {
+  font-family: 'Dancing Script', cursive;
+  font-size: 50px;
+}
+
+body {
+  background: rgb(2,0,36);
+background: linear-gradient(90deg, rgb(51, 5, 5) 0%, rgb(201, 39, 39) 35%, rgb(230, 102, 102) 100%);
+
+
+}
+
+#clear-board {
+  margin: 10px;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+  background-color: rgb(153, 153, 153);
+}
+
+.container{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#title{
+  font-size: 70px;
+  color: rgb(78, 8, 8);
+}
