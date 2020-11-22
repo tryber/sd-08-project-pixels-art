@@ -1,24 +1,17 @@
 //Requisito 1,2
 function criaDivs() {
-let paleta = document.getElementById("color-palette");
+  let paleta = document.getElementById("color-palette");
 
-let cores = ["black", "blue", "red", "green"];
-
-
+  let cores = ["black", "blue", "red", "green"];
   for(let index = 0; index < cores.length; index += 1) {
     let cor = cores[index];
     let box = document.createElement("div");
-    box.addEventListener("click", function(){
-        box.className = "color selected";
-      })
     box.className = "color";
     box.style.backgroundColor = cor;
     paleta.appendChild(box);
   }
 }
 criaDivs();
-
-
 
 function criaQuadro() {
   for(let index = 0; index < 5; index += 1) {
@@ -34,6 +27,22 @@ function criaQuadro() {
   }
 }
 criaQuadro();
+
+function selecionaCor() {
+  const coresPaleta = document.querySelectorAll('.color');
+  coresPaleta[0].classList.add('selected');
+  for (let index = 0; index < coresPaleta.length; index +=1) {
+    const corPaleta = coresPaleta[index];
+    corPaleta.addEventListener('click', function(event) {
+    const selecionado = document.querySelector('.selected');
+    if (corPaleta.className === 'color') {
+      selecionado.classList.remove('selected');
+      event.target.classList.add('selected');
+    }
+    })
+  }
+}
+selecionaCor();
 
 function substituiCoresPorBranco() {
   let button = document.getElementById('pixel-board');
