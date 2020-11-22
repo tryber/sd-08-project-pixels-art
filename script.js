@@ -14,16 +14,21 @@ paletaDeCores.addEventListener("click", alteraPaletaSelecionada);
 quadroPixels.addEventListener("click", pintaQuadroPexil);
 botaolimpaQuadroPixels.addEventListener("click", limpaPixels);
 //Gera Cores Aleatórias
+function geraNumeroRGBAlatorio(limite) {
+  return Math.floor(Math.random() * limite)
+}
+
+function geraCoresRandomicas() {
+  const red = geraNumeroRGBAlatorio(256);
+  const green = geraNumeroRGBAlatorio(256);
+  const blue = geraNumeroRGBAlatorio(256);
+  return `rgb(${red}, ${green}, ${blue})`;
+}
+
 function geraCoresAleatorias() {
-  let novaCoresBase = coresBases.slice();
   let cores = ["black"];
-  let contador = 0;
-  while (contador < 3) {
-    let sortir = [Math.floor(Math.random() * 9)];
-    let novaCor = novaCoresBase[sortir];
-    novaCoresBase.splice(novaCoresBase.indexOf(novaCor), 1);
-    cores.push(novaCor);
-    contador ++;
+  while (cores.length < 4) {
+    cores.push(geraCoresRandomicas());
   }
   return cores;
 }
@@ -79,8 +84,8 @@ function gerarPixels(quadrosAjustados) {
     }
   }
 } gerarPixels();
-cor = "black";
-//gerarTabela();
+cor = "black"; // cor perta como padrão da primeira pintada se não houver escolha na paleta
+// Selciona qual cor vai ser pintada
 function alteraPaletaSelecionada(event) {
   let removederSeletect = document.getElementsByClassName("selected");
   for (let i = 0; i < removederSeletect.length; i++) {
@@ -90,10 +95,12 @@ function alteraPaletaSelecionada(event) {
   cor = evento.style.backgroundColor;
   evento.classList.add("selected");
 }
+//Pinta os pixels a cor selcionda
 function pintaQuadroPexil(event) {
   let evento = event.target;
   evento.style.backgroundColor = cor;
 }
+//Limpa os pixels
 function limpaPixels() {
   let todosPixels = document.getElementsByClassName('pixel');
   for (let i = 0; i < todosPixels.length; i++) {
