@@ -1,27 +1,12 @@
 //Requisito 1,2//
 function criaDivs() {
-<<<<<<< HEAD
-  let paleta = document.getElementById("color-palette");
+ let paleta = document.getElementById("color-palette");
 
   let cores = ["black", "blue", "red", "green"];
   for(let index = 0; index < cores.length; index += 1) {
     let cor = cores[index];
     let box = document.createElement("div");
     box.className = "color";
-=======
-  let paleta = document.getElementById('color-palette');
-
-  let cores = ['black', 'blue', 'red', 'green'];
-
-
-  for (let index = 0; index < cores.length; index += 1) {
-    let cor = cores[index];
-    let box = document.createElement('div');
-    box.addEventListener('click', function(){
-        box.className = 'color selected';
-      })
-    box.className = 'color';
->>>>>>> 77bdf951d97bce550611bae411cceb8115b17590
     box.style.backgroundColor = cor;
     paleta.appendChild(box);
   }
