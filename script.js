@@ -1,4 +1,4 @@
-let colors = ["black", "red", "yellow", "blue"];
+let colors = ["black", "red", "yellow", "green"];
 let colorPalet = document.querySelector("#color-palette");
 let pixelBoard = document.querySelector("#pixel-board");
 
@@ -35,7 +35,6 @@ function alteraSelected(event) {
   const evento = event.target;
   cor = evento.style.backgroundColor;
   evento.classList.add("selected");
-  console.log(cor);
 }
 //Criação de evento para pintar os pixels
 pixelBoard.addEventListener("click", pintaPixel);
