@@ -36,6 +36,11 @@ function criaQuadro() {
 criaQuadro();
 
 function substituiCoresPorBranco() {
-  let elemento = document.getElementsByClassName('clear-board');
-  
+  let button = document.getElementById('pixel-board');
+  button.addEventListener('click', trocaCor);
+
+  function trocaCor() {
+    let quadroPixel = document.getElementById('pixel-board').style.color = 'rgb(255, 255, 255)';
+  }
 }
+substituiCoresPorBranco();
