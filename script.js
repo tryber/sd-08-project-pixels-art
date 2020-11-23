@@ -1,7 +1,7 @@
 // Create board
 let boardSize = 5;
 function createPixels(n) {
-  const boardSize = n;
+  boardSize = n;
   const pixelBoard = document.getElementById('pixel-board');
   for (let line = 0; line < boardSize; line += 1) {
     const pixelLine = document.createElement('div');
