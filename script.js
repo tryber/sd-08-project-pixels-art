@@ -29,15 +29,15 @@ function criaQuadro() {
 criaQuadro();
 
 function selecionaCor() {
-  const coresPaleta = document.querySelectorAll('.color');
-  coresPaleta[0].classList.add('selected');
+  const coresPaleta = document.querySelectorAll('.color');/*CoresPaleta recebe todos os elementos da classe .color*/
+  coresPaleta[0].classList.add('selected');/*coresPaleta na posição 0 recebe a classe .selected*/
   for (let index = 0; index < coresPaleta.length; index +=1) {
-    const corPaleta = coresPaleta[index];
-    corPaleta.addEventListener('click', function(event) {
-    const selecionado = document.querySelector('.selected');
-    if (corPaleta.className === 'color') {
-      selecionado.classList.remove('selected');
-      event.target.classList.add('selected');
+    const corPaleta = coresPaleta[index];/*corPaleta recebe os elementos dos indices do array coresPaleta*/
+    corPaleta.addEventListener('click', function(event) {/*corPaleta recebe um evento click que realiza uma função event*/
+    const selecionado = document.querySelector('.selected');/*A constante selecionado a classe .selected*/
+    if (corPaleta.className === 'color') {/*Se corPaleta tiver a classe .color*/
+      selecionado.classList.remove('selected');/*selecionado remove a classe selected*/
+      event.target.classList.add('selected');/*O event adiciona a classe selected*/
     }
     })
   }
@@ -53,3 +53,18 @@ function substituiCoresPorBranco() {
   }
 }
 substituiCoresPorBranco();
+
+function insereCores() {
+  const tabela = document.querySelectorAll('.pixel');
+  for (let index = 0; index < tabela.length; index += 1) {
+    const corDaTabela = tabela[index];
+  }
+  tabela.addEventListener('click', function(event) {
+    const tabela = document.querySelector('.selected');
+    if (tabela.className === '.pixel') {
+      tabela.classList.remove('selected');
+      event.target.classList.add('selected');
+    }
+    })
+}
+insereCores();
