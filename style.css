@@ -12,19 +12,16 @@ body {
   width: 180px;
   height: 50px;
   justify-content: space-evenly;
-
 }
 #botao-cores-sortidas{
   margin-top: 0px;
 }
-
 .color {
   width: 40px;
   height: 40px;
   border: solid 1px;
   border-color: black;
 }
-
 .pixel {
   width: 40px;
   height: 40px;
@@ -32,28 +29,24 @@ body {
   background-color: white;
   display: inline-block;
 }
-
 .row {
   display: flex;
   background-color: white;
   margin: 0;
 }
-
 .buttons {
-  background-color: #4267B2;
+  background-color: #48aa7c ;;
   color: white;
   text-decoration: none;
   border: none;
-  border-radius: 5%;
+  border-radius: 5px;
   margin: 5px;
 }
-
 .buttons:hover {
-  background-color: #213a6d;
+  background-color:#335c3f;
   color: white;
   border: none;
 }
-
 h1{
   margin-bottom: 2px;
 }
