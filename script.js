@@ -1,19 +1,19 @@
 // Create board
 let boardSize = 5;
 function createPixels(n) {
-  let boardSize = n;
+  const boardSize = n;
   const pixelBoard = document.getElementById('pixel-board');
   for (let line = 0; line < boardSize; line += 1) {
     const pixelLine = document.createElement('div');
 
     pixelBoard.appendChild(pixelLine);
-    
-    for (let index = 0; index < boardSize; index += 1) {
-    const pixel = document.createElement('div');
-    pixel.className = 'pixel';
-    pixel.style.backgroundColor = 'white';
 
-    pixelLine.appendChild(pixel);
+    for (let index = 0; index < boardSize; index += 1) {
+      const pixel = document.createElement('div');
+      pixel.className = 'pixel';
+      pixel.style.backgroundColor = 'white';
+
+      pixelLine.appendChild(pixel);
     }
   }
 }
@@ -24,14 +24,11 @@ function responsiveBoard(edgeSize) {
   edgeSize = document.getElementById('board-size').value;
   if (edgeSize === '') {
     alert('Board inválido!');
-  }
-  else if (edgeSize < 5) {
+  } else if (edgeSize < 5) {
     boardSize = 5;
-  }
-  else if (edgeSize > 50) {
+  } else if (edgeSize > 50) {
     boardSize = 50;
-  }
-  else {
+  } else {
     boardSize = edgeSize;
   }
   const deleteOldBoard = document.getElementById('pixel-board');
@@ -44,7 +41,7 @@ const newBoardSize = document.getElementById('generate-board');
 newBoardSize.addEventListener('click', responsiveBoard);
 
 // Clear the board
-function clearBoard(n) {
+function clearBoard() {
   for (let index = 0; index < (boardSize ** 2); index += 1) {
     const turnWhite = document.getElementsByClassName('pixel')[index];
     turnWhite.style.backgroundColor = 'white';
@@ -56,12 +53,12 @@ clickButton.addEventListener('click', clearBoard);
 
 // Random palette
 function generateNewPalette() {
-  let colors = [];
+  const colors = [];
   for (let index = 0; index < 3; index += 1) {
-    let a = Math.floor(Math.random() * 256);
-    let b = Math.floor(Math.random() * 256);
-    let c = Math.floor(Math.random() * 256);
-    let color = `rgb(${a} , ${b} , ${c})`;
+    const a = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    const c = Math.floor(Math.random() * 256);
+    const color = `rgb(${a} , ${b} , ${c})`;
 
     colors.push(color);
   }
@@ -75,11 +72,11 @@ generateNewPalette();
 
 // Select a color
 function selectColor(clickOnColor) {
-  let findSelected = document.querySelector('.selected');
+  const findSelected = document.querySelector('.selected');
   findSelected.classList.remove('selected');
 
-  let chosen = clickOnColor.target.id;
-  let chosenColor = document.getElementById(chosen);
+  const chosen = clickOnColor.target.id;
+  const chosenColor = document.getElementById(chosen);
   chosenColor.classList.add('selected');
 }
 
@@ -88,8 +85,8 @@ colorPalette.addEventListener('click', selectColor);
 
 // Paint a pixel
 function paintPixel(event) {
-  let chosen = document.querySelector('.selected');
-  let color = window.getComputedStyle(chosen).getPropertyValue('background-color');
+  const chosen = document.querySelector('.selected');
+  const color = window.getComputedStyle(chosen).getPropertyValue('background-color');
 
   event.target.style.backgroundColor = color;
 // Aprendi usando esse link que foi uma dica no slack. https://www.w3schools.com/jsref/jsref_getcomputedstyle.asp
