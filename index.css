@@ -1,3 +1,7 @@
+body {
+  background-color: #077825;
+}
+
 #title {
   text-align: center;
 }
@@ -45,6 +49,10 @@
 
 .black:hover {
   border: 1px red solid;
+}
+
+.selected {
+  border: 2px solid red;
 }
 
 #button-container {
