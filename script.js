@@ -103,6 +103,8 @@ function defineSize () {
         if (input.value == '' || input.value <= 0) {
             alert('Board Inválido!');
         }
+        limitBoard(input.value);
+
         let pixel = document.querySelectorAll('.pixel');
         let pixelRow = document.querySelectorAll('.pixel-row');
         let pixelBoard = document.getElementById('pixel-board');
@@ -115,6 +117,20 @@ function defineSize () {
 defineSize ();
 
 //Requisito 11
-function sizeBoard () {
-
+function limitBoard (value) {
+    if (value < 5){
+        value = 5
+    } else if (value > 50) {
+        value = 50
+    }
 }
+
+//Requisito 12
+function randomColor (){
+
+
+    for (let i = 1; i < corDeFundo.length; i += 1){
+
+    }
+}
+randomColor();
