@@ -3,7 +3,7 @@ function criaDivs() {
  //stackoverflow.com/questions/4550505/getting-a-random-value-from-a-javascript-array
   let cores = ["black", "blue", "red", "green"];
   for(let index = 0; index < cores.length; index += 1) {
-    let cor = cores[Math.floor(Math.random() * cores.length)];
+    let cor = cores[index];
     let box = document.createElement("div");
     box.className = "color";
     box.style.backgroundColor = cor;
