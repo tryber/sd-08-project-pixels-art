@@ -101,12 +101,21 @@ header h2 {
 }
 
 #button-container button {
-  padding: 0 2rem;
+  padding: 0 1rem;
+  margin: 0 2rem;
+  font-size: 1.6rem;
+}
+
+#button-container input {
+  display: flex;
+  justify-content: center;
+  font-size: 1.6rem;
 }
 
 #pixel-board {
+  display: flex;
+  justify-content: center;
   text-align: center;
-  margin: auto;
 }
 
 table {
