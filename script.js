@@ -1,6 +1,5 @@
 function criaDivs() {
- let paleta = document.getElementById("color-palette");
- //stackoverflow.com/questions/4550505/getting-a-random-value-from-a-javascript-array
+  let paleta = document.getElementById("color-palette");
   let cores = ["black", "blue", "red", "green"];
   for(let index = 0; index < cores.length; index += 1) {
     let cor = cores[index];
@@ -12,20 +11,20 @@ function criaDivs() {
 }
 criaDivs();
 
-function criaQuadro() {
-  for (let index = 0; index < 5; index += 1) {
+function criaQuadro(parametro) {
+  for (let index = 0; index < parametro; index += 1) {
     let pixel = document.createElement('tr');
     document.querySelector('#pixel-board').appendChild(pixel);
     pixel.className = `linha${index}`;
 
-  for (let i = 0; i < 5; i += 1) {
+  for (let i = 0; i < parametro; i += 1) {
     let coluna = document.createElement('td');
     document.querySelector(`.linha${index}`).appendChild(coluna);
     coluna.className = 'pixel';
     }
   }
 }
-criaQuadro();
+criaQuadro(5);
 
 function selecionaCor() {
   const coresPaleta = document.querySelectorAll('.color');/*CoresPaleta recebe todos os elementos da classe .color*/
@@ -46,7 +45,7 @@ selecionaCor();
 function substituiCoresPorBranco() {
   const button = document.getElementById('clear-board');
   button.addEventListener('click', (event) => {
-    const quadroDePixel = document.getElementsByClassName('pixel');
+  const quadroDePixel = document.getElementsByClassName('pixel');
     for (let index = 0; index < quadroDePixel.length; index += 1) {
       quadroDePixel[index].style.backgroundColor = 'rgb(255, 255, 255)';
     }
@@ -57,18 +56,24 @@ substituiCoresPorBranco();
 function insereCores() {
   document.addEventListener('click', (event) => {
   const quadrado = document.getElementsByClassName('selected')[0].style.backgroundColor;
-  if (event.target.className === 'pixel') {
-    event.target.style.backgroundColor = quadrado;
-  }
+    if (event.target.className === 'pixel') {
+      event.target.style.backgroundColor = quadrado;
+    }
   })
 }
 insereCores();
 
 function defineTamanhoDoQuadro() {
+  const buttonGenerateBoard = document.getElementById('generate-board');
   buttonGenerateBoard.addEventListener('click', (event) => {
-    const buttonGenerateBoard = document.getElementById('generate-board');
-
-    const entrada = document.getElementById('board-size').value;
+  const entrada = document.getElementById('board-size').value;
+  const pixelBoard = document.getElementById('pixel-board');
+  if (entrada === '') {
+    alert ('Board inválido!');
+  } else {
+    pixelBoard.innerHTML = '';
+    criaQuadro(entrada);
+  }
   })
-
 }
+defineTamanhoDoQuadro();
