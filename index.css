@@ -19,21 +19,43 @@
   background-color: rgb(15, 163, 107);
 }
 
+.color2:hover {
+  border: 1px red solid;
+}
+
 .color3 {
   background-color: rgb(255, 255, 0);
+}
+
+.color3:hover {
+  border: 1px red solid;
 }
 
 .color4 {
   background-color: red;
 }
 
+.color4:hover {
+  border: 1px red solid;
+}
+
 .black {
   background-color: black;
 }
 
+.black:hover {
+  border: 1px red solid;
+}
+
 #button-container {
+  display: flex;
+  justify-content: center;
   text-align: center;
   margin: 2rem;
+}
+
+#button-container button {
+  padding: 0 2rem;
 }
 
 #pixel-board {
