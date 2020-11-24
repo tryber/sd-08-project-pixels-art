@@ -134,7 +134,7 @@ function setPixelBoardSizeButtonAndInput() {
 
   input.id = 'board-size';
   input.type = 'number';
-  input.setAttribute('min', '0');
+  input.setAttribute('min', '1');
   input.setAttribute('max', '');
   sizeButton.id = 'generate-board';
   buttonContainer.appendChild(input);
@@ -174,7 +174,9 @@ function createsPixelBoard() {
       alert('Board inválido!');
 
     } else {
-
+      if (boardSize <= 0) {
+        boardSize = 5;
+      }
       if (boardSize < 5) {
         clearBoard();
         for (let index = 0; index < 5; index += 1) {
