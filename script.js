@@ -25,6 +25,14 @@ function userGenerateBoard() {
   buttonBoardSize.addEventListener('click', () => {
     let inputBoard = document.querySelector('#board-size');
     pixelBoard.innerHTML = '';
+    if (inputBoard.value == '') {
+      createDivPixelBoard(5);
+      alert('Board inválido!');      
+    } else if (inputBoard.value < 5) {
+      createDivPixelBoard(5);
+    } else if (inputBoard.value > 50) {
+      createDivPixelBoard(50);
+    } else
     createDivPixelBoard(inputBoard.value);
   });
 }
