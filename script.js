@@ -107,9 +107,8 @@ function defineSize () {
         let pixelRow = document.querySelectorAll('.pixel-row');
         let pixelBoard = document.getElementById('pixel-board');
         for (let index = 0; index < pixelRow.length; index += 1){
-            
+            pixelBoard.removeChild(pixelRow[index]);
         }
-        pixelBoard.removeChild(pixelRow);
         createBoard(input.value);
     });
 }
