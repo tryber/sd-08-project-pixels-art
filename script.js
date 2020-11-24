@@ -30,13 +30,15 @@ function createBoard(size) {
 
     for (let index = 0; index < size; index += 1) {
         let div = document.createElement("div");
-        div.className = "pixel-column";
+        div.className = "pixel-row";
         board.appendChild(div);
         
+        let pixelRow = document.querySelectorAll('.pixel-row')[index];
+
         for (let index = 0; index < size; index += 1) {
             let div = document.createElement("div");
             div.className = "pixel";
-            board.appendChild(div);
+            pixelRow.appendChild(div);
         }
     }
     paintBoard();
@@ -95,16 +97,19 @@ function clearBoard(event){
 function defineSize () {
     let btnBoard = document.getElementById('generate-board');
     
-    btnBoard.addEventListener("click", function(){
+    btnBoard.addEventListener("click", function() {
         let input = document.getElementById('board-size');
 
         if (input.value == '' || input.value <= 0) {
             alert('Board Inválido!');
         }
         let pixel = document.querySelectorAll('.pixel');
-        let pixelColumn = document.querySelectorAll('.pixel-column');
+        let pixelRow = document.querySelectorAll('.pixel-row');
         let pixelBoard = document.getElementById('pixel-board');
-        pixelBoard.removeChild(pixel);
+        for (let index = 0; index < pixelRow.length; index += 1){
+            
+        }
+        pixelBoard.removeChild(pixelRow);
         createBoard(input.value);
     });
 }

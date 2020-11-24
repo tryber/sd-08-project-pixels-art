@@ -24,10 +24,11 @@
     border: 1px solid black;
     width: 40px;
     height: 40px;
+    display: table-cell;
 }
 
-.pixel-column {
-    display: table-cell;
+.pixel-row {
+    display: table-row;
 }
 
 #board-size {
