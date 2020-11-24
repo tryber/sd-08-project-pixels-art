@@ -41,6 +41,8 @@ header h2 {
 }
 
 #color-palette {
+  display: flex;
+  align-items: center;
   text-align: center;
   margin-left: -1.8em;
 }
@@ -50,7 +52,7 @@ header h2 {
   display: inline-block;
   width: 25px;
   height: 25px;
-
+  margin: 0.4vw;
 }
 
 .color2 {
@@ -86,7 +88,9 @@ header h2 {
 }
 
 .selected {
-  border: 1px solid red;
+  border: 1px solid black;
+  width: 3rem;
+  height: 3rem;
 }
 
 #button-container {
