@@ -63,3 +63,12 @@ function insereCores() {
   })
 }
 insereCores();
+
+function defineTamanhoDoQuadro() {
+  buttonGenerateBoard.addEventListener('click', (event) => {
+    const buttonGenerateBoard = document.getElementById('generate-board');
+
+    const entrada = document.getElementById('board-size').value;
+  })
+
+}
