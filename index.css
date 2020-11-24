@@ -1,0 +1,151 @@
+body {
+  background-color: #077825;
+  padding: 0;
+  margin: 0;
+}
+
+#header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  color: white;
+  font-size: 2rem;
+}
+
+header h1 {
+  order: 2;
+}
+
+header h2 {
+  color: #077825;
+  background-color: white;
+  width: fit-content;
+  padding: 1rem;
+  order: 0;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#title {
+  text-align: center;
+  background-color: black;
+  color: white;
+  width: fit-content;
+  padding: 1rem;
+  border-radius: 2rem;
+}
+
+#color-palette {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-left: -1.8em;
+}
+
+.color {
+  border: 1px solid black;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  margin: 0.4vw;
+}
+
+.color2 {
+  background-color: rgb(15, 163, 107);
+}
+
+.color2:hover {
+  border: 1px red solid;
+}
+
+.color3 {
+  background-color: rgb(255, 255, 0);
+}
+
+.color3:hover {
+  border: 1px red solid;
+}
+
+.color4 {
+  background-color: red;
+}
+
+.color4:hover {
+  border: 1px red solid;
+}
+
+.black {
+  background-color: black;
+}
+
+.black:hover {
+  border: 1px red solid;
+}
+
+.selected {
+  border: 1px solid black;
+  width: 3rem;
+  height: 3rem;
+}
+
+#button-container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 2rem;
+}
+
+#button-container button {
+  padding: 0 1rem;
+  margin: 0 2rem;
+  font-size: 1.6rem;
+}
+
+#button-container input {
+  display: flex;
+  justify-content: center;
+  font-size: 1.6rem;
+}
+
+#pixel-board {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+table {
+  background-color: transparent;
+}
+
+.pixel {
+  border: 1px solid black;
+  margin: 0;
+  width: 40px;
+  height: 40px;
+}
+
+footer {
+  display: flex;
+  color: black;
+  margin: 2rem 0 0 0;
+}
+
+footer ul {
+  display: flex;
+}
+
+footer ul li {
+  margin: 1rem;
+  list-style: none;
+  font-size: 1.5rem;
+}
+
+#fb-link, #linkedin-link, #instagram-link, #github-link {
+  width: 2.5rem;
+}
+
