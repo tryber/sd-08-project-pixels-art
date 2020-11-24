@@ -1,0 +1,54 @@
+body {
+  background-color: rgb(189, 183, 107);
+}
+
+#title {
+  display: flex;
+  justify-content: center;
+}
+
+#color-palette {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  margin: 12px;
+}
+
+.color {
+  width: 75px;
+  height: 40px;
+  border: solid black 1px;
+}
+
+#pixel-board {
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+}
+
+.pixel {
+  width: 40px;
+  height: 40px;
+  border: solid black 1px;
+  background-color: white;
+}
+
+.generate-board {
+    display: flex;
+    justify-content: center;
+}
+
+#clear-board {
+  height: 30px;  
+  display: flex;
+  margin: auto;
+  align-items: center;
+}
+
+#board-size {
+  margin: 10px;
+}
+
+#generate-board {
+  margin: 10px;
+}
