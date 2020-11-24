@@ -1,4 +1,3 @@
-//Requisito 1,2//
 function criaDivs() {
  let paleta = document.getElementById("color-palette");
 
@@ -45,26 +44,22 @@ function selecionaCor() {
 selecionaCor();
 
 function substituiCoresPorBranco() {
-  let button = document.getElementById('pixel-board');
-  button.addEventListener('click', trocaCor);
-
-  function trocaCor() {
-    let quadroPixel = document.getElementById('pixel-board').style.color = 'rgb(255, 255, 255)';
-  }
+  const button = document.getElementById('clear-board');
+  button.addEventListener('click', (event) => {
+    const quadroDePixel = document.getElementsByClassName('pixel');
+    for (let index = 0; index < quadroDePixel.length; index += 1) {
+      quadroDePixel[index].style.backgroundColor = 'rgb(255, 255, 255)';
+    }
+  });
 }
 substituiCoresPorBranco();
 
 function insereCores() {
-  const tabela = document.querySelectorAll('.pixel');
-  for (let index = 0; index < tabela.length; index += 1) {
-    const corDaTabela = tabela[index];
+  document.addEventListener('click', (event) => {
+  const quadrado = document.getElementsByClassName('selected')[0].style.backgroundColor;
+  if (event.target.className === 'pixel') {
+    event.target.style.backgroundColor = quadrado;
   }
-  tabela.addEventListener('click', function(event) {
-    const tabela = document.querySelector('.selected');
-    if (tabela.className === '.pixel') {
-      tabela.classList.remove('selected');
-      event.target.classList.add('selected');
-    }
-    })
+  })
 }
 insereCores();
