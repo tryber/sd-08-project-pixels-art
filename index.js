@@ -31,42 +31,44 @@ function startLoad() {              /* Implement window.onload */
 
   /* Selecione as cores das paletas de cores */
 
-  const randomColor = () => {
 
-    const rgb = [];
-
-    for (let index = 0; index < 3; index += 1) {
-      let color = Math.floor(Math.random() * 255);
-      rgb[index] = color;
-    }
-    return rgb;
-  }
-
-  function setColorOne(color) {
-    let colorOne = document.querySelectorAll('.color')[0];
-    colorOne.style.backgroundColor = color;
-  }
-  setColorOne('black');
-
-  function setColorTwo(color) {
-    let colorTwo = document.querySelectorAll('.color')[1];
-    colorTwo.style.backgroundColor = color;
-  }
-  setColorTwo(`rgb(${randomColor()})`);
-
-  function setColorThree(color) {
-    let colorThree = document.querySelectorAll('.color')[2];
-    colorThree.style.backgroundColor = color;
-  }
-  setColorThree(`rgb(${randomColor()})`);
-
-  function setColorFour(color) {
-    let colorFour = document.querySelectorAll('.color')[3];
-    colorFour.style.backgroundColor = color;
-  }
-  setColorFour(`rgb(${randomColor()})`);
 }
 startLoad();
+
+const randomColor = () => {
+
+  const rgb = [];
+
+  for (let index = 0; index < 3; index += 1) {
+    let color = Math.floor(Math.random() * 255);
+    rgb[index] = color;
+  }
+  return rgb;
+}
+
+function setColorOne(color) {
+  let colorOne = document.querySelectorAll('.color')[0];
+  colorOne.style.backgroundColor = color;
+}
+setColorOne('black');
+
+function setColorTwo(color) {
+  let colorTwo = document.querySelectorAll('.color')[1];
+  colorTwo.style.backgroundColor = color;
+}
+setColorTwo(`rgb(${randomColor()})`);
+
+function setColorThree(color) {
+  let colorThree = document.querySelectorAll('.color')[2];
+  colorThree.style.backgroundColor = color;
+}
+setColorThree(`rgb(${randomColor()})`);
+
+function setColorFour(color) {
+  let colorFour = document.querySelectorAll('.color')[3];
+  colorFour.style.backgroundColor = color;
+}
+setColorFour(`rgb(${randomColor()})`);
 
 
 /**/

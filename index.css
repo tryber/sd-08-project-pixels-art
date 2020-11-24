@@ -1,9 +1,43 @@
 body {
   background-color: #077825;
+  padding: 0;
+  margin: 0;
+}
+
+#header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: black;
+  color: white;
+  font-size: 2rem;
+}
+
+header h1 {
+  order: 2;
+}
+
+header h2 {
+  color: #077825;
+  background-color: white;
+  width: fit-content;
+  padding: 1rem;
+  order: 0;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #title {
   text-align: center;
+  background-color: black;
+  color: white;
+  width: fit-content;
+  padding: 1rem;
+  border-radius: 2rem;
 }
 
 #color-palette {
@@ -81,3 +115,24 @@ table {
   width: 40px;
   height: 40px;
 }
+
+footer {
+  display: flex;
+  color: black;
+  margin: 2rem 0 0 0;
+}
+
+footer ul {
+  display: flex;
+}
+
+footer ul li {
+  margin: 1rem;
+  list-style: none;
+  font-size: 1.5rem;
+}
+
+#fb-link, #linkedin-link, #instagram-link, #github-link {
+  width: 2.5rem;
+}
+
