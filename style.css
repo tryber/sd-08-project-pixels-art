@@ -1,0 +1,39 @@
+body {
+  background-color: darkturquoise;
+  text-align: center;
+}
+
+.color {
+  border: black solid 1px;
+  height: 50px;
+  width: 50px;
+  display: inline-block;
+  margin-right: 5px;
+
+}
+
+.pixel {
+  background-color: white;
+  border: black solid 1px;
+  border-collapse: collapse;
+  box-sizing: border-box;
+  display: table-cell;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  width: 40px;
+}
+
+#pixel-board {
+  border-collapse: collapse;
+  margin: auto;
+  margin-top: 30px;
+}
+
+#clear-board {
+  display: flex;
+  margin-bottom: 10px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
