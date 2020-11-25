@@ -1,6 +1,31 @@
+let color1 = randomColors ();
+let color2 = randomColors ();
+let color3 = randomColors ();
+
+if (color1 === color2) {
+  color2 = randomColors();
+};
+
+if (color1 === color3) {
+  color3 = randomColors();
+};
+
+if (color2 === color3) {
+  color3 = randomColors();
+};
+
+function randomColors () {
+  let color = '';
+  while (color.length < 6) {
+    color += (Math.random()).toString(16).substr(-6).substr(-1);
+  };
+  return `#${color}`;
+}
+
+let cores = ["black", color1, color2, color3];
+
 function criaDivs() {
   let paleta = document.getElementById("color-palette");
-  let cores = ["black", "blue", "red", "green"];
   for(let index = 0; index < cores.length; index += 1) {
     let cor = cores[index];
     let box = document.createElement("div");
