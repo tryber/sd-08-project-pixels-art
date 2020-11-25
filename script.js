@@ -100,10 +100,14 @@ function defineSize () {
     btnBoard.addEventListener("click", function() {
         let input = document.getElementById('board-size');
 
-        if (input.value == '' || input.value <= 0) {
+        if (input.value == '') {
             alert('Board Inválido!');
-        }
-        limitBoard(input.value);
+        } else if (input.value < 5) {
+            createBoard(5);
+        } else if (input.value > 50){
+            createBoard(50);
+        } else
+            createBoard(input.value);
 
         let pixel = document.querySelectorAll('.pixel');
         let pixelRow = document.querySelectorAll('.pixel-row');
@@ -115,15 +119,6 @@ function defineSize () {
     });
 }
 defineSize ();
-
-//Requisito 11
-function limitBoard (value) {
-    if (value < 5){
-        value = 5
-    } else if (value > 50) {
-        value = 50
-    }
-}
 
 //Requisito 12
 function randomColor (){
