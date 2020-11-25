@@ -65,15 +65,25 @@ insereCores();
 
 function defineTamanhoDoQuadro() {
   const buttonGenerateBoard = document.getElementById('generate-board');
+  const entrada = document.getElementById('board-size');
+  entrada.min = '1';
+  entrada.type = 'number';
   buttonGenerateBoard.addEventListener('click', (event) => {
-  const entrada = document.getElementById('board-size').value;
   const pixelBoard = document.getElementById('pixel-board');
-  if (entrada === '') {
-    alert ('Board inválido!');
-  } else {
-    pixelBoard.innerHTML = '';
-    criaQuadro(entrada);
-  }
-  })
-}
+    if (entrada.value === '') {
+      alert ('Board inválido!');
+    } else if (entrada.value >= 5 && entrada.value <= 50) {
+      pixelBoard.innerHTML = '';
+      criaQuadro(entrada.value);
+    } else if (entrada.value < 5) {
+      entrada.value = 5;
+      pixelBoard.innerHTML = '';
+      criaQuadro(entrada.value);
+    } else if (entrada.value > 50) {
+      entrada.value = 50;
+      pixelBoard.innerHTML = '';
+      criaQuadro(entrada.value);
+    };
+  });
+};
 defineTamanhoDoQuadro();
