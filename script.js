@@ -26,7 +26,7 @@ colors ();
 
 // Requisito 4 e 5
 function createBoard(size) {
-    clearBoard();
+    resetBoard();
     let board = document.getElementById("pixel-board");
 
     for (let index = 0; index < size; index += 1) {
@@ -85,9 +85,18 @@ function createButton (){
 }
 createButton ();
 
-function clearBoard(event){
+function resetBoard(event){
     const clear = document.getElementById('pixel-board');
     clear.innerHTML = '';
+}
+
+function clearBoard(event){
+        let clean = document.querySelectorAll(".pixel");
+    
+    for (let index = 0; index < clean.length; index += 1){
+        clean[index].style.backgroundColor = "white";
+    }
+        event.target.style.backgroundColor;
 }
 
 //Requisito 10
@@ -104,8 +113,7 @@ function defineSize () {
         } else if (input.value > 50){
             createBoard(50);
         } else
-            createBoard(input.value);    
-
+            createBoard(input.value);
     });
 }
 defineSize ();
