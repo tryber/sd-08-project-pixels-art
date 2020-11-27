@@ -34,10 +34,10 @@ main button {
   background-color: white;
   border: black solid 1px;
   display: table;
-  height: 500px;
+  height: 800px;
   margin: auto;
   position: relative;
-  width: 500px;
+  width: 800px;
 }
 
 .tr , .td {
