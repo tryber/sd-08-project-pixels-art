@@ -47,10 +47,10 @@ main button {
 
 .tr {
   display: table-row;
-  height: 40px;
-  width: 40px;
 }
 
 .td {
   display: table-cell;
+  height: 40px;
+  width: 40px;
 }
