@@ -164,7 +164,7 @@ O não cumprimento de um requisito, total ou parcialmente, impactará em sua ava
 
 - [x] O quadro de pixels tem altura e comprimento de 5 elementos;
 
-- [x] 40 pixels deve ser o tamanho total do elemento, incluindo seu conteúdo e excluindo a borda preta, que deve ser criada à parte.
+- [ ] 40 pixels deve ser o tamanho total do elemento, incluindo seu conteúdo e excluindo a borda preta, que deve ser criada à parte.
 
 ### 6 - Ao carregar a página, a cor **preta** da paleta já deve estar selecionada para pintar os pixels.
 
