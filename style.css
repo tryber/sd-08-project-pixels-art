@@ -43,12 +43,12 @@ main button {
 .tr , .td {
   background-color: white;
   border: black solid 1px;
-  height: 40px;
-  width: 40px;
 }
 
 .tr {
   display: table-row;
+  height: 40px;
+  width: 40px;
 }
 
 .td {
