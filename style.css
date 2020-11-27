@@ -30,17 +30,19 @@ main button {
   position: relative;
 }
 
-.table , .td {
+.table {
   background-color: white;
   border: black solid 1px;
-}
-
-.table {
   display: table;
   height: 500px;
   margin: auto;
   position: relative;
   width: 500px;
+}
+
+.tr , .td {
+  background-color: white;
+  border: black solid 1px;
 }
 
 .tr {
