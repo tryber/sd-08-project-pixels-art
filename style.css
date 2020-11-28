@@ -1,0 +1,11 @@
+#color-palette{
+  display:flex;
+}
+
+#color-palette .color{
+  border: black solid 1px;
+  display:flex;
+  height: 25px;
+  justify-content: center;
+  width: 25px;
+}
