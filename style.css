@@ -1,16 +1,7 @@
-body {
-
-}
-
 #title {
   text-align: center;
 
 }
-
-#color-palette {
-
-}
-
 
 #color1 {
   background-color: rgb(0, 0, 0);
@@ -35,10 +26,6 @@ body {
   border: 1px solid black;
 }
 
-.selected {
-
-}
-
 .color {
   display: inline-block;
   border:1px solid rgb(0, 0, 0);
@@ -50,9 +37,4 @@ body {
 #clear-board {
   height:35px;
   width: 55px;
-
-}
-
-#pixel-board {
-
 }
