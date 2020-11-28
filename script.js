@@ -1,16 +1,3 @@
-function randomColors() {
-    const getNewPalette = document.getElementsByClassName('color');    
-    for(let color of getNewPalette) {
-        let redColorGenerate = Math.round(Math.random() * 255);
-        let greenColorGenerate = Math.round(Math.random() * 255);
-        let blueColorGenerate = Math.round(Math.random() * 255);
-        color.style.backgroundColor = `rgb(${redColorGenerate}, ${greenColorGenerate}, ${blueColorGenerate})`;
-    }
-    getNewPalette[0].style.backgroundColor = 'black';
-9
-
-}
-
 const colors = ["black", "green", "purple", "yellow"];
 function createDivs() {
     let newPalette = document.getElementById('color-palette');
@@ -27,6 +14,21 @@ function createDivs() {
     }
 }
 createDivs();
+
+function randomColors() {
+    const getNewPalette = document.getElementsByClassName('color');    
+    for(let index = 0; index < getNewPalette.length; index += 1) {
+        let firstColor = Math.round(Math.random() * 255);
+        let secondColor = Math.round(Math.random() * 255);
+        let thridColor = Math.round(Math.random() * 255);
+        getNewPalette[index].style.backgroundColor = `rgb(${firstColor}, ${secondColor}, ${thridColor})`;
+    }
+    getNewPalette[0].style.backgroundColor = 'black';
+
+}
+randomColors();
+
+// função randomColors desenvolvida a partir de code review 
 
 const pixelsLength = 5;
 function createPixels() {
