@@ -1,12 +1,32 @@
+body{
+  background-color: rgb(243,243,243);
+}
+
 #color-palette{
   display:flex;
+}
+
+#pixel-board{
+  display: flex;
+  flex-wrap: nowrap;
 }
 
 .color{
   margin:1px;
 }
 
+.pixel{
+  background-color: white;
+}
+
 #color-palette .color{
+  border: black solid 1px;
+  display:flex;
+  height: 50px;
+  width: 50px;
+}
+
+#pixel-board .pixel{
   border: black solid 1px;
   display:flex;
   height: 50px;
