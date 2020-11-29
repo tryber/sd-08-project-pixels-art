@@ -46,12 +46,12 @@ createPixels(pixelsLength);
 
 const reset = () => {
     let pixelBoard = document.getElementById('pixel-board');
-    while(pixelBoard.firstChild) {
-        pixelBoard.removeChild(pixelBoard.firstChild);
+    // while(pixelBoard.firstChild) {
+    //     pixelBoard.removeChild(pixelBoard.firstChild);
+    // }
+    for (let reset2 = 0; reset2 < pixelBoard.childNodes.length; reset2 += 1) {
+        pixelBoard.removeChild(pixelBoard.childNodes[reset2]);
     }
-//     for (reset2 of pixelBoard.childNodes) {
-//         pixelBoard.removeChild(pixelBoard.lastChild);
-//     }
 }
 
 
