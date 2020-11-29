@@ -40,6 +40,6 @@ function botao() {
   let colorBoard = document.getElementsByClassName('pixel');
 
   for (let index = 0; index < colorBoard.length; index++) {
-    colorBoard[index].style.backgroundColor = '#FFF';
+    colorBoard[index].style.backgroundColor = 'rgb(255, 255, 255)';
   }
 }
