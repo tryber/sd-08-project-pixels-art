@@ -1,8 +1,9 @@
 body{
+  align-items: center;
   background-color: rgb(243,243,243);
   display: flex;
   flex-direction: column;
-  align-items: center;
+  margin: 0px;
 }
 
 #color-palette{
@@ -12,8 +13,9 @@ body{
 #pixel-board{
   display: flex;
   flex-wrap: wrap;
-  height: 220px;
-  width: 220px;
+  height: 200px;
+  margin: 0px;
+  width: 200px;
 }
 
 .color{
@@ -33,7 +35,6 @@ body{
 
 #pixel-board .pixel{
   border: black solid 1px;
-  display:flex;
-  height: 40px;
-  width: 40px;
+  height: 38px;
+  width: 38px;
 }
