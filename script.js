@@ -31,12 +31,15 @@ function cliqueRosa () {
   document.getElementById('color4').classList.add('selected');
 };
 
+
 //requisito 9
 let button = document.querySelector('#clear-board');
-
 button.addEventListener('click', botao);
+
 function botao() {
-  console.log('deu certo');
-  let colorBoard = document.querySelector('.pixel');
-  colorBoard.style.backgroundColor = "rgb(255, 255, 255)";
+  let colorBoard = document.getElementsByClassName('pixel');
+
+  for (let index = 0; index < colorBoard.length; index++) {
+    colorBoard[index].style.backgroundColor = '#FFF';
+  }
 }
