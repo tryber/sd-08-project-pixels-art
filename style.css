@@ -1,0 +1,13 @@
+.color {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+}
+.pixel {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+}
+ #pixel-board {
+    border-collapse: collapse;
+ }
