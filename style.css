@@ -2,10 +2,13 @@
   display:flex;
 }
 
+.color{
+  margin:1px;
+}
+
 #color-palette .color{
   border: black solid 1px;
   display:flex;
-  height: 25px;
-  justify-content: center;
-  width: 25px;
+  height: 50px;
+  width: 50px;
 }
