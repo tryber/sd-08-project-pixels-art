@@ -1,6 +1,5 @@
 body {
-  background-color: aqua;
-  color: grey;
+  background-color: aqua;s
   margin: 0;
   padding: 0;
 }
@@ -21,7 +20,7 @@ header div {
   border: black solid 1px;
   display: inline-block;
   margin: 10px 0;
-  padding: 10px 35px;
+  padding: 20px 35px;
 }
 
 .clear-board {

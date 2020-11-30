@@ -13,29 +13,45 @@ function gridCreation(size) {
   }
 }
 
+// Random the 4 colors
+function getRandomColors() {
+  return (Math.floor(Math.random()*256) + ", " + Math.floor(Math.random()*256) + ", " + Math.floor(Math.random()*256));
+}
+
+function defineColorsBackground() {
+  const buttons = document.querySelectorAll(".color");
+  buttons[0].style.backgroundColor = "black";
+  let helper = ["0, 0, 0"];
+  for (let i = 1; i < buttons.length; i++) {
+      helper[i] = getRandomColors();
+      for (let j = 0; j < helper.length; j++) {
+          if (helper[j] === helper[i]) {
+              helper[i] = getRandomColors();
+          }
+      }
+      buttons[i].style.backgroundColor = "rgb(" + getRandomColors() + ")";
+  }
+}
+
 // Selected Color Change
 
 // Clear Button
 const clearButton = document.querySelector('#clear-board');
-// clearButton.addEventListener('click', function () {
-//   let line = document.querySelectorAll('.tr');
-//   let column = document.querySelectorAll('.td');
-//   for (let i = 0; i < line.length; i += 1) {
-//     line[i].style.backgroundColor = 'white';
-//     for (let j = 0; j < column.length; j += 1) {
-//       column[j].style.backgroundColor = 'white';
-//     }
-//   }
-// });
-const clearBoard = () => {
-  const pixel = document.querySelectorAll('.pixel');
 
-  for (let i = 0; i < pixel.length; i += 1) {
-    pixel[i].removeAttribute('style');
+function cleanScreen() {
+  let linha = document.querySelectorAll(".tr");
+  let coluna = document.querySelectorAll(".td");
+  for (let i = 0; i < linha.length; i++) {
+      linha[i].style.backgroundColor = "white";
+      for (let j = 0; j < coluna.length; j++) {
+          coluna[j].style.backgroundColor = "white";
+      }
   }
-};
-clearButton.addEventListener('click', clearBoard);
+}
+
+clearButton.addEventListener('click', cleanScreen);
 
 window.onload = function () {
+  defineColorsBackground();
   gridCreation(5);
 };
