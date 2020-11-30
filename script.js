@@ -15,37 +15,58 @@ function gridCreation(size) {
 
 // Random the 4 colors
 function getRandomColors() {
-  return (Math.floor(Math.random()*256) + ", " + Math.floor(Math.random()*256) + ", " + Math.floor(Math.random()*256));
+  return (Math.floor(Math.random()*256) + ', ' + Math.floor(Math.random()*256) + ', ' + Math.floor(Math.random()*256));
 }
 
 function defineColorsBackground() {
-  const buttons = document.querySelectorAll(".color");
-  buttons[0].style.backgroundColor = "black";
-  let helper = ["0, 0, 0"];
-  for (let i = 1; i < buttons.length; i++) {
-      helper[i] = getRandomColors();
-      for (let j = 0; j < helper.length; j++) {
-          if (helper[j] === helper[i]) {
-              helper[i] = getRandomColors();
-          }
+  const buttons = document.querySelectorAll('.color');
+  buttons[0].style.backgroundColor = 'black';
+  buttons[0].classList.add('selected');
+  let helper = ['0, 0, 0'];
+  for (let i = 1; i < buttons.length; i += 1) {
+    helper[i] = getRandomColors();
+    for (let j = 0; j < helper.length; j += 1) {
+      if (helper[j] === helper[i]) {
+        helper[i] = getRandomColors();
       }
-      buttons[i].style.backgroundColor = "rgb(" + getRandomColors() + ")";
+    }
+    buttons[i].style.backgroundColor = 'rgb(' + helper[i] + ')';
   }
 }
 
 // Selected Color Change
+function removeSelected () {
+  const buttons = document.querySelectorAll('.color');
+  for (let i = 0; i < buttons.length; i += 1) {
+    buttons[i].classList.remove('selected');
+  }
+};
+
+const paletaCor = document.querySelector('#color-palette');
+
+function mudarCorEscolhida (event) {
+  if (event.target.classList.contains('color')) {
+    if (event.target.className !== 'selected') {
+      removeSelected();
+
+      event.target.classList.add('selected');
+    }
+  }
+};
+
+paletaCor.addEventListener('click', mudarCorEscolhida);
 
 // Clear Button
 const clearButton = document.querySelector('#clear-board');
 
 function cleanScreen() {
-  let linha = document.querySelectorAll(".tr");
-  let coluna = document.querySelectorAll(".td");
+  let linha = document.querySelectorAll('.tr');
+  let coluna = document.querySelectorAll('.td');
   for (let i = 0; i < linha.length; i++) {
-      linha[i].style.backgroundColor = "white";
-      for (let j = 0; j < coluna.length; j++) {
-          coluna[j].style.backgroundColor = "white";
-      }
+    linha[i].style.backgroundColor = 'white';
+    for (let j = 0; j < coluna.length; j++) {
+      coluna[j].style.backgroundColor = 'white';
+    }
   }
 }
 
