@@ -72,7 +72,7 @@ function putColor (event) {
 }
 
 const grid = document.querySelector('#pixel-board');
-grid.addEventListener('click', putColor);
+
 
 // Clear Button
 const clearButton = document.querySelector('#clear-board');
