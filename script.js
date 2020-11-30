@@ -71,9 +71,9 @@ const clearButton = document.querySelector('#clear-board');
 
 function cleanScreen() {
   const pixels = document.getElementsByClassName('pixel');
-  pixels.forEach((pixel) => { 
-    pixel.style.backgroundColor = 'rgb( 255 , 255 , 255 )'; 
-  });
+  for (let i = 0; i < pixels.length; i++) {
+    pixels[i].style.backgroundColor = 'white';
+  }
 }
 
 clearButton.addEventListener('click', cleanScreen);
