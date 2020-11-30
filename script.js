@@ -28,9 +28,6 @@ function cliqueRosa () {
 };
 
 //requisito 7
-let colorBoard = document.getElementsByClassName('selected');
-let corBoard = document.getElementsByClassName('pixel');
-
 function pintarQuad() {
   event.target.classList.remove('cor1');
   event.target.classList.remove('cor2');
