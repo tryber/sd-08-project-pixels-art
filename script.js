@@ -48,7 +48,6 @@ function mudarCorEscolhida (event) {
   if (event.target.classList.contains('color')) {
     if (event.target.className !== 'selected') {
       removeSelected();
-
       event.target.classList.add('selected');
     }
   }
@@ -57,21 +56,15 @@ function mudarCorEscolhida (event) {
 paletaCor.addEventListener('click', mudarCorEscolhida);
 
 // Put color in grid
-function corSelecionada () {
-  const buttons = document.getElementsByClassName('color');
-  for (let i = 0; i < buttons.length; i += 1) {
-    if (buttons[i].classList.contains('selected')) {
-      return buttons[i].style.backgroundColor 
-    }
+function putColor (event) {
+  let selected = document.getElementsByClassName('selected');
+  if (event.target.className == 'pixel') {
+    event.target.style.backgroundColor = selected[0].style.backgroundColor;
+    event.target.className = 'pixel';
   }
 }
-
-function putColor (event) {
-  const cor = corSelecionada();
-  event.target.style.backgroundColor = '' + color;
-}
-
 const grid = document.querySelector('#pixel-board');
+grid.addEventListener('click', putColor)
 
 // Clear Button
 const clearButton = document.querySelector('#clear-board');
