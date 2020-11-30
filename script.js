@@ -1,33 +1,56 @@
 //requisito 8
 function cliquePreto () {
-  document.getElementById('color2').classList.remove('selected');
-  document.getElementById('color3').classList.remove('selected');
-  document.getElementById('color4').classList.remove('selected');
-  document.getElementById('color1').classList.add('selected');
+  document.getElementById('vermelho').classList.remove('selected');
+  document.getElementById('azul').classList.remove('selected');
+  document.getElementById('rosa').classList.remove('selected');
+  document.getElementById('preto').classList.add('selected');
 };
 
 function cliqueVermelho () {
-  document.getElementById('color1').classList.remove('selected');
-  document.getElementById('color3').classList.remove('selected');
-  document.getElementById('color4').classList.remove('selected');
-  document.getElementById('color2').classList.add('selected');
+  document.getElementById('preto').classList.remove('selected');
+  document.getElementById('azul').classList.remove('selected');
+  document.getElementById('rosa').classList.remove('selected');
+  document.getElementById('vermelho').classList.add('selected');
 };
 
 function cliqueAzul () {
-  document.getElementById('color1').classList.remove('selected');
-  document.getElementById('color2').classList.remove('selected');
-  document.getElementById('color4').classList.remove('selected');
-  document.getElementById('color3').classList.add('selected');
+  document.getElementById('preto').classList.remove('selected');
+  document.getElementById('vermelho').classList.remove('selected');
+  document.getElementById('rosa').classList.remove('selected');
+  document.getElementById('azul').classList.add('selected');
 };
 
 function cliqueRosa () {
-  document.getElementById('color1').classList.remove('selected');
-  document.getElementById('color2').classList.remove('selected');
-  document.getElementById('color3').classList.remove('selected');
-  document.getElementById('color4').classList.add('selected');
+  document.getElementById('preto').classList.remove('selected');
+  document.getElementById('vermelho').classList.remove('selected');
+  document.getElementById('azul').classList.remove('selected');
+  document.getElementById('rosa').classList.add('selected');
 };
 
 //requisito 7
+let colorBoard = document.getElementsByClassName('selected');
+let corBoard = document.getElementsByClassName('pixel');
+
+function pintarQuad() {
+  event.target.classList.remove('cor1');
+  event.target.classList.remove('cor2');
+  event.target.classList.remove('cor3');
+  event.target.classList.remove('cor4');
+  event.target.classList.remove('branco')
+  
+  if(document.getElementById('preto').classList.contains('selected')){
+    event.target.classList.add('cor1');
+  } 
+  else if (document.getElementById('vermelho').classList.contains('selected')){
+    event.target.classList.add('cor2');
+  } 
+  else if (document.getElementById('azul').classList.contains('selected')){
+    event.target.classList.add('cor3');
+  }
+  else { 
+   event.target.classList.add('cor4'); 
+  }
+}
 
 
 
@@ -40,8 +63,20 @@ function botao() {
   let cleanBoard = document.getElementsByClassName('pixel');
 
   for (let index = 0; index < cleanBoard.length; index++) {
-    cleanBoard[index].style.backgroundColor = 'rgb(255, 255, 255)';
+    cleanBoard[index].classList.remove('cor1');
+    cleanBoard[index].classList.remove('cor2');
+    cleanBoard[index].classList.remove('cor3');
+    cleanBoard[index].classList.remove('cor4');
+    cleanBoard[index].classList.add('branco');
   }
 }
 
 //requisito 10
+//let btn = getElementById('generate-board');
+//let input = getElementById('board-size');
+
+//btn.addEventListener('click', changeBoard);
+
+//function changeBoard() {
+
+//}

@@ -3,24 +3,26 @@
 
 }
 
-.color1 {
+.cor1 {
   background-color: rgb(0, 0, 0);
 }
 
-.color2 {
+.cor2 {
   background-color: red;
 }
 
-.color3 {
+.cor3 {
   background-color:turquoise;
 }
 
-.color4 {
+.cor4 {
   background-color: violet;
 }
+ .branco {
+   background-color: rgb(255, 255, 255);
+ }
 
 .pixel {
-  background-color: rgb(255,255,255);
   height: 40px;
   width: 40px;
   border: 1px solid black;
