@@ -24,14 +24,14 @@ header div {
   padding: 10px 35px;
 }
 
-main button {
+.clear-board {
   background-color: ivory;
   margin: 0 635px 30px;
+  padding: 15px;
   position: relative;
 }
 
 .table {
-  background-color: white;
   display: table;
   margin: auto;
   position: relative;
@@ -39,6 +39,7 @@ main button {
 
 .tr {
   background-color: white;
+  border: black solid 1px;
   display: table-row;
 }
 
