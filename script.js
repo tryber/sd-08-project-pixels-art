@@ -58,34 +58,31 @@ paletaCor.addEventListener('click', mudarCorEscolhida);
 
 // Put color in grid
 function corSelecionada () {
-  const buttons = document.querySelectorAll('.color');
+  const buttons = document.getElementsByClassName('color');
   for (let i = 0; i < buttons.length; i += 1) {
     if (buttons[i].classList.contains('selected')) {
-     return buttons[i].style.backgroundColor; 
+      return buttons[i].style.backgroundColor 
     }
   }
 }
 
 function putColor (event) {
   const cor = corSelecionada();
-  event.target.style.backgroundColor = color;
+  event.target.style.backgroundColor = '' + color;
 }
 
 const grid = document.querySelector('#pixel-board');
+grid.addEventListener('click', putColor);
 
 
 // Clear Button
 const clearButton = document.querySelector('#clear-board');
 
 function cleanScreen() {
-  let linha = document.querySelectorAll('.tr');
-  let coluna = document.querySelectorAll('.td');
-  for (let i = 0; i < linha.length; i++) {
-    linha[i].style.backgroundColor = 'white';
-    for (let j = 0; j < coluna.length; j++) {
-      coluna[j].style.backgroundColor = 'white';
-    }
-  }
+  const pixels = document.getElementsByClassName('pixel');
+  pixels.forEach((pixel) => { 
+    pixel.style.backgroundColor = 'rgb( 255 , 255 , 255 )'; 
+  });
 }
 
 clearButton.addEventListener('click', cleanScreen);
