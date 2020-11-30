@@ -18,7 +18,7 @@
     </div>
     <section>
         <input type="number" min="1" name="" id="board-size">
-        <button id="generate-board">VQV</button>
+        <button id="generate-board" onclick="btnFunction()">VQV</button>
     </section>
     <div>
         <button id="clear-board">Limpar</button>
@@ -26,6 +26,7 @@
     
 
     <table id="pixel-board">
+      <tbody>
         <tr>
             <td class="pixel branco" onclick="pintarQuad(this)"></td>
             <td class="pixel branco" onclick="pintarQuad(this)"></td>
@@ -61,7 +62,8 @@
             <td class="pixel branco" onclick="pintarQuad(this)"></td>
             <td class="pixel branco" onclick="pintarQuad(this)"></td>
         </tr>
-    </table>
+    </tbody>
+  </table>
     
 
     <script src="script.js"></script>

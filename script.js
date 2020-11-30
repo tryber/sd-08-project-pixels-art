@@ -69,11 +69,10 @@ function botao() {
 }
 
 //requisito 10
-//let btn = getElementById('generate-board');
-//let input = getElementById('board-size');
-
-//btn.addEventListener('click', changeBoard);
-
-//function changeBoard() {
-
-//}
+const input = document.getElementById('board-size');
+function btnFunction() {
+   if (input.value === '0' || input.value === '') {
+   alert("Board inválido!");
+   }
+ }
+ 
