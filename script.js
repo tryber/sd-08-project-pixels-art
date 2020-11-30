@@ -17,24 +17,24 @@ function gridCreation(size) {
 
 // Clear Button
 const clearButton = document.querySelector('#clear-board');
-// clearButton.addEventListener('click', function () {
-//   const line = document.querySelectorAll('.tr');
-//   const column = document.querySelectorAll('.td');
-//   for (let i = 0; i < line.length; i += 1) {
-//     line[i].style.backgroundColor = 'white';
-//     for (let j = 0; j < column.length; j += 1) {
-//       column[j].style.backgroundColor = 'white';
-//     }
-//   }
-// });
-const clearBoard = () => {
-  const pixel = document.querySelectorAll('.pixel');
-
-  for (let i = 0; i < pixel.length; i += 1) {
-    pixel[i].removeAttribute('style');
+clearButton.addEventListener('click', function () {
+  const line = document.querySelectorAll('.tr');
+  const column = document.querySelectorAll('.td');
+  for (let i = 0; i < line.length; i += 1) {
+    line[i].style.backgroundColor = 'white';
+    for (let j = 0; j < column.length; j += 1) {
+      column[j].style.backgroundColor = 'white';
+    }
   }
-};
-clearButton.addEventListener('click', clearBoard);
+});
+// const clearBoard = () => {
+//   const pixel = document.querySelectorAll('.pixel');
+
+//   for (let i = 0; i < pixel.length; i += 1) {
+//     pixel[i].removeAttribute('style');
+//   }
+// };
+// clearButton.addEventListener('click', clearBoard);
 
 window.onload = function () {
   gridCreation(5);
