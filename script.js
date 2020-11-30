@@ -30,6 +30,8 @@ function cliqueRosa () {
 //requisito 7
 
 
+
+
 //requisito 9
 let button = document.querySelector('#clear-board');
 button.addEventListener('click', botao);
@@ -41,3 +43,5 @@ function botao() {
     cleanBoard[index].style.backgroundColor = 'rgb(255, 255, 255)';
   }
 }
+
+//requisito 10
