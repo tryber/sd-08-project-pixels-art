@@ -56,6 +56,24 @@ function mudarCorEscolhida (event) {
 
 paletaCor.addEventListener('click', mudarCorEscolhida);
 
+// Put color in grid
+function corSelecionada () {
+  const buttons = document.querySelectorAll('.color');
+  for (let i = 0; i < buttons.length; i += 1) {
+    if (buttons[i].classList.contains('selected')) {
+     return buttons[i].style.backgroundColor; 
+    }
+  }
+}
+
+function putColor (event) {
+  const cor = corSelecionada();
+  event.target.style.backgroundColor = color;
+}
+
+const grid = document.querySelector('#pixel-board');
+grid.addEventListener('click', putColor);
+
 // Clear Button
 const clearButton = document.querySelector('#clear-board');
 

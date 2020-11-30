@@ -32,7 +32,6 @@ header div {
 .table {
   display: table;
   margin: auto;
-  position: relative;
 }
 
 .tr {
