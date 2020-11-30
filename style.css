@@ -35,11 +35,10 @@ header div {
 }
 
 .tr {
-  border: black solid 1px;
   display: table-row;
 }
 
-.td {
+.pixel {
   background-color: white;
   border: black solid 1px;
   display: table-cell;

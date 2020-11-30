@@ -6,7 +6,7 @@ function gridCreation(size) {
     line.className = 'tr';
     for (let j = 0; j < size; j += 1) {
       const column = document.createElement('div');
-      column.className = 'pixel td';
+      column.className = 'pixel';
       line.appendChild(column);
     }
     table.appendChild(line);
@@ -72,8 +72,6 @@ function putColor (event) {
 }
 
 const grid = document.querySelector('#pixel-board');
-grid.addEventListener('click', putColor);
-
 
 // Clear Button
 const clearButton = document.querySelector('#clear-board');
