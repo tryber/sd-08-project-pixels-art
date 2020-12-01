@@ -1,6 +1,8 @@
 const pixelPalette = document.getElementById('color-palette');
 const palettes = document.querySelectorAll('.color');
 const pixelBoard = document.getElementById('pixel-board');
+const colors = document.getElementsByClassName('.color');
+
 
 pixelPalette.addEventListener('click',function(event) {
     if (event.target.className !== 'color selected') {
@@ -18,7 +20,12 @@ pixelBoard.addEventListener('click', function (event) {
   }
 })
 
-
+function generatorRgb(){
+    let cor1 =  (Math.round(Math.random()*255));
+    let cor2 =  (Math.round(Math.random()*255));
+    let cor3 =  (Math.round(Math.random()*255));
+    let rColors =  ("rgb("+cor1+", "+cor2+", "+cor3+")");
+    return rColors;
 
 /* 
 const pixels = document.querySelectorAll('.pixel');
