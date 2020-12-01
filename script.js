@@ -31,7 +31,12 @@ btnGenerateBoard.addEventListener('click', function(){
     if(iptBoardSize.value === '') {
         alert('Board inválido!');
     } else {
-        const n = parseInt(iptBoardSize.value);
+        let n = parseInt(iptBoardSize.value);
+        if (n < 5) {
+            n = 5;
+        } else if (n >50 ) {
+            n = 50;
+        }
         pixelBoard.innerHTML = '';
         for (let indexLine = 0; indexLine < n; indexLine += 1) {
             const line = document.createElement('div');
