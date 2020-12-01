@@ -1,0 +1,44 @@
+body {
+  text-align: center;
+}
+
+.color-palette {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.color {
+  background-color: black;
+  border: 1px solid black;
+  display: flex;
+  height: 40px;
+  text-align: center;
+  width: 40px;
+}
+
+.pixel-board {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  width: 210px;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
+}
+
+.tr {
+  display: table-row;
+}
+
+.td {
+  display: table-cell;
+}
