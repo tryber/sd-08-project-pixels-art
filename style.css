@@ -38,9 +38,15 @@ background-color: blue;
   background-color:yellow;
 }
 
+#black{
+  background-color: black;
+}
+
 .white{
   background-color: white;
 }
+
+
 
 .pixel{
   background-color: white;
