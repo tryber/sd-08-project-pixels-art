@@ -7,7 +7,7 @@
     background-color: white;
     width: 40px;
     height: 40px;
-    border: 1px black;
+    border: 1px black solid;
 }
 
 #black {
@@ -28,5 +28,6 @@
 
 #pixel-board {
     display: grid;
-    grid-template-columns: 40px 40px 40px 40px 40px;
+    grid-template-columns: repeat(5, 40px);
+    grid-template-rows: repeat(5, 40px);
 }
