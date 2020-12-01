@@ -19,7 +19,12 @@ body{
 }
 
 .color{
-  margin:1px;
+  border:solid 1px black;
+  display: inline-block;
+  height: 100px;
+  margin:10px;
+  width:100px;
+
 }
 
 #c1{
@@ -46,12 +51,16 @@ background-color: blue;
   background-color: white;
 }
 
-
+#pixel-board{
+  display: table;
+  margin:10px;
+}
 
 .pixel{
   background-color: white;
   border: black solid 1px;
   height: 40px;
+  padding: 0px;
   width: 40px;
 }
 
