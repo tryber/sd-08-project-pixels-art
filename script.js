@@ -1,6 +1,8 @@
 const colors = document.getElementsByClassName('color');
 const pixelBoard = document.getElementById('pixel-board');
 const clear = document.getElementById('clear-board');
+const btnGenerateBoard = document.querySelector('#generate-board');
+const iptBoardSize = document.querySelector('#board-size');
 
 for (let index = 0; index < colors.length; index += 1) {
     const item = colors[index];
@@ -21,5 +23,25 @@ clear.addEventListener('click', function(){
     for (let index =0; index < pixelBoard.children.length; index += 1) {
         const item = pixelBoard.children[index];
         item.style.backgroundColor = 'white';
+    }
+})
+
+btnGenerateBoard.addEventListener('click', function(){
+    console.log(iptBoardSize.value)
+    if(iptBoardSize.value === '') {
+        alert('Board inválido!');
+    } else {
+        const n = parseInt(iptBoardSize.value);
+        pixelBoard.innerHTML = '';
+        for (let indexLine = 0; indexLine < n; indexLine += 1) {
+            const line = document.createElement('div');
+            line.className = 'line';
+            pixelBoard.appendChild(line);
+            for (let indexColumn = 0; indexColumn < n; indexColumn += 1){
+                const pixel = document.createElement('div');
+                pixel.className = 'pixel';
+                line.appendChild(pixel);
+            }
+        }
     }
 })
