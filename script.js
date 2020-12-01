@@ -3,7 +3,8 @@ const pixels = document.querySelectorAll('.pixel');
 const clearBtn = document.getElementById('clear-board');
 const pixelPalette = document.getElementById('color-palette')
 const pixelBoard = document.getElementById('pixel-board');
-const colorSel = document.querySelector('.selected')
+const colorSel = document.querySelector('.selected');
+
 const paint = document.querySelector('.selected')
 const allPixels =document.querySelectorAll('.pixel')
 //document.getElementsByClassName('color')[0].style.backgroundColor = 'red'
@@ -21,7 +22,7 @@ function createPalette(colors){
         document.getElementById("color-palette").appendChild(pPixel);
         
     }
-}
+/* }
 
 //function clear(){ for (let div of pixels){document.getElementsByClassname("pixel-board).")}} 
 
@@ -42,8 +43,13 @@ clearBtn.addEventListener('click', function(){
     });
 });
 
+//seleciona paletta
 pixelPalette.addEventListener('click',(event) => {
-    let check = event.target.className;
-        colorSel.className = check.className('color')
-        event.target.className ='color selected';
+    colorSel.classList.toggle('selected');
+    event.target.classList.add('selected');
 });
+
+pixelBoard.addEventListener('click',(event)=>{
+    event.target.backgroundColor = colorSel.style.backgroundColor;
+})
+ */
