@@ -3,7 +3,7 @@ const palettes = document.querySelectorAll('.color');
 const pixelBoard = document.getElementById('pixel-board');
 const colors = document.getElementsByClassName('.color');
 const vqvBtn = document.getElementById('generate-board');
-const pixels = document.getElementsByc('.pixel');
+const pixels = document.getElementsByClassName('pixel');
 
 
 
