@@ -18,3 +18,16 @@
     border: 1px black solid;
     display: inline-block;
 }
+
+.pixel-board {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+}
+
+.pixel {
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border: 1px black;
+}
