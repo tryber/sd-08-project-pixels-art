@@ -1,31 +1,31 @@
-.black {
-    background-color: black;
-}
-
-.blue {
-    background-color: blue;
-}
-
-.red {
-    background-color: red;
-}
-
-.green {
-    background-color: green;
-}
-
 .color {
     border: 1px black solid;
     display: inline-block;
 }
 
-.pixel-board {
+#black {
+    background-color: black;
+}
+
+#blue {
+    background-color: blue;
+}
+
+#red {
+    background-color: red;
+}
+
+#green {
+    background-color: green;
+}
+
+#pixel-board {
     display: grid;
     grid-template-columns: 20% 20% 20% 20% 20%;
     grid-template-rows: 20% 20% 20% 20% 20%;
 }
 
-.pixel {
+#pixel {
     background-color: white;
     width: 40px;
     height: 40px;
