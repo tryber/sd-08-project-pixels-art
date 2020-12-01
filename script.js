@@ -3,6 +3,7 @@ const pixelBoard = document.getElementById('pixel-board');
 const clear = document.getElementById('clear-board');
 const btnGenerateBoard = document.querySelector('#generate-board');
 const iptBoardSize = document.querySelector('#board-size');
+const pixels = document.querySelectorAll('.pixel');
 
 for (let index = 0; index < colors.length; index += 1) {
     const item = colors[index];
@@ -20,14 +21,13 @@ pixelBoard.addEventListener('click', function(event) {
 })
 
 clear.addEventListener('click', function(){
-    for (let index =0; index < pixelBoard.children.length; index += 1) {
-        const item = pixelBoard.children[index];
+    for (let index =0; index < pixels.length; index += 1) {
+        const item = pixels[index];
         item.style.backgroundColor = 'white';
     }
 })
 
 btnGenerateBoard.addEventListener('click', function(){
-    console.log(iptBoardSize.value)
     if(iptBoardSize.value === '') {
         alert('Board inválido!');
     } else {
