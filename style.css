@@ -22,8 +22,31 @@ body{
   margin:1px;
 }
 
+#c1{
+  background-color: black;
+}
+
+#c2{
+background-color: blue;
+}
+
+#c3{
+  background-color: red;
+}
+
+#c4{
+  background-color:yellow;
+}
+
+.white{
+  background-color: white;
+}
+
 .pixel{
   background-color: white;
+  border: black solid 1px;
+  height: 40px;
+  width: 40px;
 }
 
 #color-palette .color{
@@ -33,8 +56,6 @@ body{
   width: 50px;
 }
 
-#pixel-board .pixel{
-  border: black solid 1px;
-  height: 40px;
-  width: 40px;
+#selected{
+  padding: 3px;
 }
