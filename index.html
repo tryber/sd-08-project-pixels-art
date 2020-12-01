@@ -1,68 +1,73 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Paleta de Cores</title>
 </head>
 <body>
-  <header>
     <h1 id="title">Paleta de Cores</h1>
-  </header>
-  <div id="color-palette">
-    <div class="color selected" id="cor-preta"></div>
-    <div class="color"></div>
-    <div class="color"></div>
-    <div class="color"></div>
-  </div>
-  <div>
-    <button id="clear-board">Limpar</button>    
-  </div>
-  <div>
-    <label for="board-size">Digite o númeo de linhas/colunas do quadro</label>
-    <input id="board-size"  type="number" min="1">
-    <button id="generate-board">VQV</button>
 
-  </div>
-  <div>
-    <div id="pixel-board">
-        <div class="divTableRow">
-          <div class="pixel"></div>
-          <div class="pixel"></div>
-          <div class="pixel"></div>
-          <div class="pixel"></div>
-          <div class="pixel"></div>
+    <section id="color-palette">
+    </section>
+    <br> 
+    <form>
+        <label for="board-size">Escolha o Tamanho da Tela!</label>
+        <!--Uso de placeholder https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/number -->
+        <input type="text" class="board-size" name="board-size" id="board-size" placeholder="Entre 5 até 50" maxlength="2" min="5" max="50">
+        <button type="button" id="generate-board">VQV</button>
+    </form>
+
+</div>
+    <div>
+        <div id="pixel-board">
+            <div class="divTableRow">
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
         </div>
         <div class="divTableRow">
-          <div class="pixel"></div>
-          <div class="pixel"></div>
-          <div class="pixel"></div>
-          <div class="pixel"></div>
-          <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
         </div>
         <div class="divTableRow">
-          <div class="pixel"></div>
-          <div class="pixel"></div>
-          <div class="pixel"></div>
-          <div class="pixel"></div>
-          <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
         </div>
         <div class="divTableRow">
-          <div class="pixel"></div>
-          <div class="pixel"></div>
-          <div class="pixel"></div>
-          <div class="pixel"></div>
-          <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
         </div>
         <div class="divTableRow">
-          <div class="pixel"></div>
-          <div class="pixel"></div>
-          <div class="pixel"></div>
-          <div class="pixel"></div>
-          <div class="pixel"></div>
-      </div>
-  </div>
-  <script src="script.js"></script>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+            <div class="pixel"></div>
+    </div>
+</div>
+
+    <br>
+    <button id="clear-board">Limpar</button>
+    <br>
+    <section id="pixel-board">
+    </section>
+    
+    
+    
 </body>
+<script src="script.js"></script>
 </html>
