@@ -1,9 +1,28 @@
-const colors = ['black','blue','red','yellow'];
+const pixelPalette = document.getElementById('color-palette');
+const palettes = document.querySelectorAll('.color');
+const pixelBoard = document.getElementById('pixel-board');
+
+pixelPalette.addEventListener('click',function(event) {
+    if (event.target.className !== 'color selected') {
+        const colorSel = document.getElementsByClassName('selected');
+        event.target.className = 'color selected';
+        colorSel.className = 'color';
+      })
+});
+
+pixelBoard.addEventListener('click', function (event) {
+  for (let pos = 0; pos < palettes.length; pos++) {
+    if (palettes[pos].className === 'color selected') {
+      event.target.style.backgroundColor = window.getComputedStyle(palettes[pos], null).getPropertyValue('background-color')
+    }
+  }
+})
+
+
+
+/* 
 const pixels = document.querySelectorAll('.pixel');
 const clearBtn = document.getElementById('clear-board');
-const pixelPalette = document.getElementById('color-palette')
-const pixelBoard = document.getElementById('pixel-board');
-const colorSel = document.querySelector('.selected');
 
 const paint = document.querySelector('.selected')
 const allPixels =document.querySelectorAll('.pixel')
@@ -22,7 +41,7 @@ function createPalette(colors){
         document.getElementById("color-palette").appendChild(pPixel);
         
     }
-/* }
+}
 
 //function clear(){ for (let div of pixels){document.getElementsByClassname("pixel-board).")}} 
 
