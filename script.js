@@ -20,34 +20,34 @@ vqvBtn.addEventListener('click', function() {
   if (quant.value !== ""){
     document.querySelector('#pixel-board').parentNode.removeChild(document.querySelector('#pixel-board'));
     if (quant.value < 50 && quant.value > 5){
-          for (let i = 1; i<= quant.value; i++){
+          for (let pos1 = 1; pos1<= quant.value; pos1++){
             let row = document.createElement('div');
             nPixels.appendChild(row)
             row.className = 'new-divTableRow'
-            for (let j = 1; j <= quant.value; j++){
-              let colunas = document.createElement('div');
-              row.appendChild(colunas);
-              colunas.className = 'pixel';
+            for (let pos2 = 1; pos2 <= quant.value; pos2++){
+              let column = document.createElement('div');
+              row.appendChild(column);
+              column.className = 'pixel';
             }
           }
     }else{
       if (quant.value <= 5){
-        for (let i = 1; i<= 5; i++){
+        for (let pos1 = 1; pos1<= 5; pos1++){
           let row = document.createElement('div');
           nPixels.appendChild(row)
           row.className = 'new-divTableRow'
-          for (let j = 1; j <= 5; j++){
-            let colunas = document.createElement('div');
-            row.appendChild(colunas);
-            colunas.className = 'pixel';
+          for (let pos2 = 1; pos2 <= 5; pos2++){
+            let column = document.createElement('div');
+            row.appendChild(column);
+            column.className = 'pixel';
           }
         }
       }else{
-        for (let i = 1; i<= 50; i++){
+        for (let pos1 = 1; pos1<= 50; pos1++){
           let row = document.createElement('div');
           nPixels.appendChild(row)
           row.className = 'new-divTableRow'
-          for (let j = 1; j <= 50; j++){
+          for (let pos2 = 1; pos2 <= 50; pos2++){
             let column = document.createElement('div');
             row.appendChild(column);
             column.className = 'pixel';
@@ -60,19 +60,12 @@ vqvBtn.addEventListener('click', function() {
   }
 
   nPixels.addEventListener('click', function (event) {
-    for (let pos = 0; pos < paletas.length; pos++) {
-      if (paletas[pos].className === 'color selected') {
-        event.target.style.backgroundColor = window.getComputedStyle(paletas[i], null).getPropertyValue('background-color')
+    for (let pos = 0; pos < palettes.length; pos++) {
+      if (palettes[pos].className === 'color selected') {
+        event.target.style.backgroundColor = window.getComputedStyle(palettes[pos], null).getPropertyValue('background-color')
       }
     }
   })
-  let pixelsList = document.querySelectorAll('.pixel');
-let botaoLimpeza = document.querySelector('#clear-board');
-botaoLimpeza.addEventListener('click', function () {
-  for (let pos = 0; pos < pixelsList.length; pos++) {
-    pixelsList[pos].style.backgroundColor = 'white'
-  }
-})
 })
 
 
@@ -91,11 +84,18 @@ function randomMaker(){
 }
 
 
+
 for (let pos = 1; pos < colors.length; pos++){
     let aux = colors[pos];
     
     aux.style.backgroundColor = randomMaker();
 }
+
+function generatorId () {
+    let Ref = (Math.round(Math.random()*2))
+    let Id = "cor"+ Ref;
+    return Id;
+  }
 
 pixelPalette.addEventListener('click',function(event) {
     if (event.target.className !== 'color selected') {
