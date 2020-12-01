@@ -7,7 +7,7 @@ pixelPalette.addEventListener('click',function(event) {
         const colorSel = document.getElementsByClassName('selected');
         event.target.className = 'color selected';
         colorSel.className = 'color';
-      })
+      }
 });
 
 pixelBoard.addEventListener('click', function (event) {
