@@ -37,9 +37,9 @@ function createBoard(){
 }
 
 clearBtn.addEventListener('click', function(){
-    allPixels.forEach((pixel)=>{
-    pixel.style.backgroundColor=q'white';
-    
+    allPixels.forEach((pixel)=> {
+        pixel.style.backgroundColor = 'white';
+    });
 });
 
 pixelPalette.addEventListener('click',(event) => {
@@ -47,4 +47,3 @@ pixelPalette.addEventListener('click',(event) => {
         colorSel.className = check.className('color')
         event.target.className ='color selected';
 });
-
