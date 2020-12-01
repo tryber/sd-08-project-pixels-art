@@ -3,6 +3,7 @@ const pixels = document.querySelectorAll('.pixel');
 const clearBtn = document.getElementById('clear-board');
 const pixelPalette = document.getElementById('color-palette')
 const pixelBoard = document.getElementById('pixel-board');
+const colorSel = document.querySelector('.selected')
 //document.getElementsByClassName('color')[0].style.backgroundColor = 'red'
 
 window.onload = createPalette(colors),createBoard();
@@ -44,8 +45,9 @@ clearBtn.addEventListener('click', function(){
     
 });
 
-
-/* pixelPalette.addEventListener('click', (event)=>{
-    const
-    event.className.target
-}) */
+pixelBoard.addEventListener('click',(event)=>{
+    if (event.target.classList.contains('color')){  //target.classList
+        colorSel.className = 'color';
+        event.target.className ='color selected';
+    }
+});
