@@ -4,6 +4,8 @@ const clearBtn = document.getElementById('clear-board');
 const pixelPalette = document.getElementById('color-palette')
 const pixelBoard = document.getElementById('pixel-board');
 const colorSel = document.querySelector('.selected')
+const paint = document.querySelector('.selected')
+const allPixels =document.querySelectorAll('.pixel')
 //document.getElementsByClassName('color')[0].style.backgroundColor = 'red'
 
 window.onload = createPalette(colors),createBoard();
@@ -34,20 +36,15 @@ function createBoard(){
     }
 }
 
-function blackSelected(boxPalette) {
-    pixels[0].className = 'color selected';
-  }
-
 clearBtn.addEventListener('click', function(){
-    let allDivs = document.getElementsByTagName('div');
-        Array.from(allDivs.className).forEach((value) =>
-            value.className.toggle(".white"));
+    allPixels.forEach((pixel)=>{
+    pixel.style.backgroundColor=q'white';
     
 });
 
-pixelBoard.addEventListener('click',(event)=>{
-    if (event.target.classList.contains('color')){  //target.classList
-        colorSel.className = 'color';
+pixelPalette.addEventListener('click',(event) => {
+    let check = event.target.className;
+        colorSel.className = check.className('color')
         event.target.className ='color selected';
-    }
 });
+
