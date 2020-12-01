@@ -13,9 +13,9 @@ body{
 #pixel-board{
   display: flex;
   flex-wrap: wrap;
-  height: 200px;
+  height: 210px;
   margin: 0px;
-  width: 200px;
+  width: 210px;
 }
 
 .color{
@@ -35,6 +35,6 @@ body{
 
 #pixel-board .pixel{
   border: black solid 1px;
-  height: 38px;
-  width: 38px;
+  height: 40px;
+  width: 40px;
 }
