@@ -1,53 +1,64 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <h1 id= "title">Paleta de Cores</h1>
-        <section id="color-palette">
-            <div class="color" id="black"></div>
-            <div class="color" id="red"></div>
-            <div class="color" id="blue"></div>
-            <div class="color" id="green"></div>
-        </section>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projeto Pixel Art</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+      <h1 id="title">Paleta de Cores</h1>
 
+    <section id="color-palette" class="color-palette">
+      <div class="color"></div>
+      <div class="color"></div>
+      <div class="color"></div>
+      <div class="color"></div>
+    </section>
 
-        <div id="pixel-board">
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
+    <button id="clear-board">Limpar</button>
 
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
+    <input id="board-size" type="number" min="1">
+    <button id="generate-board">VQV</button>
 
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
+    <section id="pixel-board" class="pixel-board">
+      <div class="tr">
+        <div class="pixel td"></div>
+        <div class="pixel td"></div>
+        <div class="pixel td"></div>
+        <div class="pixel td"></div>
+        <div class="pixel td"></div>
+      </div>
+      <div class="tr">
+        <div class="pixel td"></div>
+        <div class="pixel td"></div>
+        <div class="pixel td"></div>
+        <div class="pixel td"></div>
+        <div class="pixel td"></div>
+      </div>
+      <div class="tr">
+        <div class="pixel td"></div>
+        <div class="pixel td"></div>
+        <div class="pixel td"></div>
+        <div class="pixel td"></div>
+        <div class="pixel td"></div>
+      </div>
+      <div class="tr">
+        <div class="pixel td"></div>
+        <div class="pixel td"></div>
+        <div class="pixel td"></div>
+        <div class="pixel td"></div>
+        <div class="pixel td"></div>
+      </div>
+      <div class="tr">
+        <div class="pixel td"></div>
+        <div class="pixel td"></div>
+        <div class="pixel td"></div>
+        <div class="pixel td"></div>
+        <div class="pixel td"></div>
+      </div>
+    </section>
 
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-            <div class="pixel"></div>
-        </div>
-        
-        <button id="clear-board">Limpar</button>
-
-        <script src="script.js"></script>
-    </body>
+    <script src="/script.js"></script>
+  </body>
 </html>
