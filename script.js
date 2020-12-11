@@ -1,5 +1,20 @@
+function getRandomNumber(limit) {
+  return Math.floor(Math.random() * limit + 1);
+}
 
-let colors = ["black", "yellow", "green", "blue"];
+function getRandomColor() {
+  const red = getRandomNumber(255);
+  const green = getRandomNumber(255);
+  const blue = getRandomNumber(255);
+  return `rgb(${red}, ${green}, ${blue})`;
+}
+
+let colors = ["black"];
+while(colors.length < 4) {
+  colors.push(getRandomColor());
+}
+
+
 //creation of the divs in the color palette.
 function createDivColor() {
   let divColor = document.getElementById("color-palette");
@@ -18,12 +33,15 @@ function firstColorSelected() {
 createDivColor();
 firstColorSelected();
 //creation of the pixels in the pixels board.
-function createBox() {
+function createBox(size) {
+  if (size < 5) size = 5;
+  if (size > 50) size = 50;
   const squareBox = document.getElementById("pixel-board");
-  for (let line = 0; line < 5; line += 1) {
+  Array.from(squareBox.children).forEach(child => child.remove());
+  for (let line = 0; line < size; line += 1) {
     // number of lines
     const row = document.createElement("div");
-    for (let column = 0; column < 5; column += 1) {
+    for (let column = 0; column < size; column += 1) {
       // number of pixels
       const pixel = document.createElement("div");
       pixel.className = "pixel";
@@ -35,7 +53,7 @@ function createBox() {
     squareBox.appendChild(row); //As linhas são filhas do Pixel-board.
   }
 }
-createBox();
+createBox(5);
 
 //By clicking on a pixel within the frame after selecting a color in the palette
 
@@ -72,3 +90,16 @@ function clearBoard(){
     element.style.backgroundColor = "white";
   });
 }
+
+
+const generateBoard = document.querySelector('#generate-board');
+const inputSize = document.querySelector('#board-size');
+let pixelBoard = document.querySelector('#pixel-board')
+generateBoard.addEventListener('click', () => {
+  const size = inputSize.value;
+  if(!size) {
+    alert('Board inválido!');
+    return;
+  }
+  createBox(parseInt(size));
+});

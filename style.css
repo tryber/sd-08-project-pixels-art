@@ -4,12 +4,16 @@
 
 body {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.24);
 }
 
 #color-palette{
-   display: flex;
-   
+    display: flex;
 }
 
 .color {
@@ -18,7 +22,6 @@ body {
     height: 40px;
     width: 40px; 
     margin: 5px; 
-    
 }
 
 .pixel {
@@ -27,4 +30,20 @@ body {
     border: 1px solid black;
     background-color: white;
     display: inline-block;
+}
+
+#title {
+    color: black
+    font-family: Impact, fantasy￼, Geneva, Tahoma, sans-serif;
+    font-weight: bold
+}
+
+button {
+    background-color: rgb(128, 105, 0);
+}
+
+#board-size {
+    width: 135%;
+    margin-right: 50px;
+    margin-left: -16px
 }
