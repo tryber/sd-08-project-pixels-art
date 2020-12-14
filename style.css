@@ -1,0 +1,27 @@
+body {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.color {
+  border: 1px solid black;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+}
+
+.buttons {
+  display: flex;
+}
+
+.linha {
+  display: flex;
+}
+
+.pixel {
+  background-color: white;
+  border: 1px solid black;
+  height: 40px;
+  width: 40px;
+}
