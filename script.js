@@ -1,5 +1,6 @@
 const colorPalette = document.querySelector("#color-palette");
 const pixelBoard = document.querySelector('#pixel-board');
+const colors = document.querySelectorAll('.color');
 
 function geraNumeroRandom() {
   return Math.floor(Math.random() * 256);
@@ -25,7 +26,10 @@ function geraPaletaDeCores() {
   for(let index = 0; index < cores.length; index += 1) {
     const paletaDeCores = document.createElement('div');
     paletaDeCores.style.backgroundColor = cores[index];
-    paletaDeCores.className = 'color';
+    paletaDeCores.classList.add('color');
+    if(index == 0) {
+      paletaDeCores.classList.add('selected');
+    }
     colorPalette.appendChild(paletaDeCores);
   }
 }
@@ -46,3 +50,18 @@ function geraQuadroDePixels() {
 }
 
 geraQuadroDePixels()
+
+let cor = 'black';
+function alteraPaletaSelecionada(event) {
+  let removedSeletect = document.getElementsByClassName("selected");
+
+  for (let i = 0; i < removedSeletect.length; i++) {
+    removedSeletect[i].classList.remove("selected");
+  }
+
+  let evento = event.target;
+  cor = evento.style.backgroundColor;
+  evento.classList.add("selected");
+}
+
+colorPalette.addEventListener("click", alteraPaletaSelecionada);
