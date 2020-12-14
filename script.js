@@ -94,7 +94,7 @@ function trataInputValidos(numeroDeQuadros) {
   return numeroDeQuadros;
 }
 function trataInputInvalidos(numeroDeQuadros) {
-  if (numeroDeQuadros === '' || numeroDeQuadros <= 0) {
+  if (!numeroDeQuadros) {
     return alert('Board inválido!'), geraQuadroDePixels(quadrosAjustados);
   }
 }
