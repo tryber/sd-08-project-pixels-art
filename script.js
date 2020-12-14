@@ -82,7 +82,7 @@ function limparQuadro() {
   }
 }
 
-botaoLimpar.addEventListener('click', limparQuadro)
+botaoLimpar.addEventListener('click', limparQuadro);
 
 function trataInputValidos(numeroDeQuadros) {
   if (numeroDeQuadros < 5 && numeroDeQuadros > 0) {
@@ -93,20 +93,17 @@ function trataInputValidos(numeroDeQuadros) {
   }
   return numeroDeQuadros;
 }
-function trataInputInvalidos(numeroDeQuadros) {
-  if (!numeroDeQuadros === '' || numeroDeQuadros <= 0) {
-    return alert('Board inválido!'), geraQuadroDePixels(quadrosAjustados);
-  }
-}
 
 function gerarTabela() {
   const numeroDeQuadros = tamanhoQuadro.value;
+
   if (!numeroDeQuadros) {
     return alert('Board inválido!');
   }
+
   const quadrosAjustados = trataInputValidos(numeroDeQuadros);
   pixelBoard.innerHTML = '';
-  geraQuadroDePixels(quadrosAjustados);
+  return geraQuadroDePixels(quadrosAjustados);
 }
 
 botaoVqv.addEventListener('click', gerarTabela);
