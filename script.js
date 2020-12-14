@@ -1,4 +1,5 @@
 const colorPalette = document.querySelector("#color-palette");
+const pixelBoard = document.querySelector('#pixel-board');
 
 function geraNumeroRandom() {
   return Math.floor(Math.random() * 256);
@@ -30,3 +31,18 @@ function geraPaletaDeCores() {
 }
 
 geraPaletaDeCores();
+
+function geraQuadroDePixels() {
+  for (let linha = 0; linha < 5; linha++) {
+    let quadroPixel = document.createElement('div');
+    quadroPixel.classList.add('linha');
+    pixelBoard.appendChild(quadroPixel);
+    for (let elemento = 0; elemento < 5; elemento += 1) {
+      let pixel = document.createElement('div');
+      quadroPixel.appendChild(pixel);
+      pixel.className = 'pixel';
+    }
+  }
+}
+
+geraQuadroDePixels()
