@@ -94,14 +94,16 @@ function trataInputValidos(numeroDeQuadros) {
   return numeroDeQuadros;
 }
 function trataInputInvalidos(numeroDeQuadros) {
-  if (!numeroDeQuadros) {
+  if (!numeroDeQuadros === '' || numeroDeQuadros <= 0) {
     return alert('Board inválido!'), geraQuadroDePixels(quadrosAjustados);
   }
 }
 
 function gerarTabela() {
   const numeroDeQuadros = tamanhoQuadro.value;
-  trataInputInvalidos(numeroDeQuadros);
+  if (!numeroDeQuadros) {
+    return alert('Board inválido!');
+  }
   const quadrosAjustados = trataInputValidos(numeroDeQuadros);
   pixelBoard.innerHTML = '';
   geraQuadroDePixels(quadrosAjustados);
