@@ -1,6 +1,9 @@
 const colorPalette = document.querySelector("#color-palette");
 const pixelBoard = document.querySelector('#pixel-board');
-const colors = document.querySelectorAll('.color');
+const botaoLimpar = document.querySelector('#clear-board');
+const todosPixels = document.getElementsByClassName('pixel');
+const tamanhoQuadro = document.getElementById('board-size');
+const botaoVqv = document.getElementById('generate-board');
 
 function geraNumeroRandom() {
   return Math.floor(Math.random() * 256);
@@ -36,12 +39,12 @@ function geraPaletaDeCores() {
 
 geraPaletaDeCores();
 
-function geraQuadroDePixels() {
-  for (let linha = 0; linha < 5; linha++) {
+function geraQuadroDePixels(tamanho) {
+  for (let linha = 0; linha < tamanho; linha++) {
     let quadroPixel = document.createElement('div');
     quadroPixel.classList.add('linha');
     pixelBoard.appendChild(quadroPixel);
-    for (let elemento = 0; elemento < 5; elemento += 1) {
+    for (let elemento = 0; elemento < tamanho; elemento += 1) {
       let pixel = document.createElement('div');
       quadroPixel.appendChild(pixel);
       pixel.className = 'pixel';
@@ -49,7 +52,7 @@ function geraQuadroDePixels() {
   }
 }
 
-geraQuadroDePixels()
+geraQuadroDePixels(5);
 
 let cor = 'black';
 function alteraPaletaSelecionada(event) {
@@ -65,3 +68,41 @@ function alteraPaletaSelecionada(event) {
 }
 
 colorPalette.addEventListener("click", alteraPaletaSelecionada);
+
+function pintaPixel(event) {
+  event.target.style.backgroundColor = cor;
+}
+
+pixelBoard.addEventListener('click', pintaPixel);
+
+function limparQuadro() {
+  for (let index = 0; index < todosPixels.length; index += 1) {
+    todosPixels[index].style.backgroundColor = "initial";
+  }
+}
+
+botaoLimpar.addEventListener('click', limparQuadro)
+
+function gerarTabela() {
+  let numeroDeQuadros = tamanhoQuadro.value;
+  trataInputInvalidos(numeroDeQuadros);
+  let quadrosAjustados = trataInputValidos(numeroDeQuadros);
+  pixelBoard.innerHTML = '';
+  geraQuadroDePixels(quadrosAjustados);
+}
+function trataInputValidos(numeroDeQuadros) {
+  if (numeroDeQuadros < 5 && numeroDeQuadros > 0) {
+    numeroDeQuadros = 5;
+  }
+  if (numeroDeQuadros > 50) {
+    numeroDeQuadros = 50;
+  }
+  return numeroDeQuadros;
+}
+function trataInputInvalidos(numeroDeQuadros) {
+  if (numeroDeQuadros === "" || numeroDeQuadros <= 0) {
+    return alert('Board inválido!'), gerarPixels(quadrosAjustados);
+  }
+}
+
+botaoVqv.addEventListener('click', gerarTabela);
