@@ -1,48 +1,96 @@
+body {
+  background-image: url(psicologia-das-cores.jpg);
+  background-position: 100px;
+  text-align: center;
+  line-height: 0%;
+  margin: 0;
+}
+
 .black {
   background-color: black;
   display: inline-block;
-  margin-right: 5px;
 }
 
-.black , .blue , .green , .red {
+.yellow {
+  background-color: yellow;
+}
+
+.black , .blue , .green , .red, .yellow {
   border: black solid 1px;
-  height: 25px;
-  width: 25px;
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
 }
 
 .blue {
   background-color: blue;
   display: inline-block;
-  margin-right: 5px;
 }
 
 .color-palette {
-  background-color: aqua;
-  display: inline-block;
-  padding: 20px;
+  display: flex;
+  padding: 5px;
   width: 100%;
+  justify-content: center;
 }
 
 .green {
-  background-color: green;
+  background-color: #0FA36B;
   display: inline-block;
-  margin-right: 5px;
+}
+
+header {
+    background-color: black;
+    opacity: 80%;
+    color: white;
+    padding: 20px;
+    font-family: 'Press Start 2P', cursive;
+    width: 100vmax;
 }
 
 .red {
   background-color: red;
   display: inline-block;
-  margin-right: 5px;
 }
 
 .pixel {
   background-color: white;
-  border: black solid 1px;
-  display: inline-block;
-  height: 40px;
-  width: 40px;
+  border: 1px black solid;
+  display: flex;
+  align-content: stretch;
+  justify-items: stretch;
+  min-width: 10px;
+  min-height: 10px;
 }
 
 .pixel-board {
-  width: 210px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.number-input {
+  width: 40px;
+}
+
+.div-line {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.board-length {
+  padding: 5px;
+  opacity: 80%;
+  background-color: white;
+  width: 410px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
