@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixels art</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1 id="title">Pixels art</h1>
+    </header>
+    <main>
+        <section id="color-palette" class="color-palette">
+            <div class="color black selected"></div>
+            <div class="color red"></div>
+            <div class="color green"></div>
+            <div class="color blue"></div>
+            <div class="color yellow"></div>
+        </section>
+        <div class="board-length">
+            <label for="number-input">Board length:
+                <input type="number" name="num" class='number-input' id="number-input" maxlength="2">
+            </label>
+            <button id="add-board">New board</button>
+            </div>
+        <section id="pixel-board" class="pixel-board"></section>
+    </main>
+    <script src="/script.js"></script>
+</body>
+</html>
