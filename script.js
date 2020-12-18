@@ -10,7 +10,7 @@ function getRandomColor() {
 }
 
 let colors = ["black"];
-while(colors.length < 4) {
+while(colors.length < 20) {
   colors.push(getRandomColor());
 }
 
@@ -18,7 +18,7 @@ while(colors.length < 4) {
 //creation of the divs in the color palette.
 function createDivColor() {
   let divColor = document.getElementById("color-palette");
-  for (let i = 0; i < 4; i += 1) {
+  for (let i = 0; i < 20; i += 1) {
     let divChild = document.createElement("div");
     divChild.className = "color";
     divChild.style.backgroundColor = colors[i];
