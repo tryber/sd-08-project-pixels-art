@@ -1,21 +1,31 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>Pixel Art</title>
   </head>
-  <body>
-    <h1 id="title">Paleta de Cores</h1>
-    <div id="color-palette" class="color-palette"></div>
 
-    <label for="board-size">Defina o número de pixels = </label>
-    <input type="number" name="pixels" id="board-size" class="board-size" placeholder="5" min="1">
-    <button id="generate-board" class="generate-board">VQV</button>
-    <button id="clear-board" class="btn-clear">Limpar</button>
-    
+  <body>
+    <header>
+      <h1 id="title" class="title">Paleta de Cores</h1>
+    </header>
+    <div id="color-palette" class="color-palette">
+      <h2 class="select-a-color">Selecione uma cor: </h2>
+    </div>
+    <section class="comands">
+      <label for="board-size">Defina tamanho da tela : </label>
+      <input type="text" name="pixels" id="board-size" class="board-size" placeholder="5 ~ 50"/>
+      <button id="generate-board" class="generate-board">VQV</button>
+      <button id="clear-board" class="btn-clear">Limpar</button>
+    </section>
     <div id="pixel-board" class="pixel-board"></div>
+    <footer>
+      <p>&#169 Copyright | Eric Massaki Hirayama</p>
+    </footer>
     <script src="script.js"></script>
   </body>
+
 </html>

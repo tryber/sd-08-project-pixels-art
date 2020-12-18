@@ -1,5 +1,4 @@
-// Cria a paleta de cores
-function createColorPalette(n) {
+const createColorPalette = (n) => {
   const colorPaletteContainer = document.getElementById('color-palette');
   const colors = ['rgb(0, 0, 0)'];
   for (let numberOfColors = 0; numberOfColors < n - 1; numberOfColors += 1) {
@@ -18,10 +17,8 @@ function createColorPalette(n) {
     colorPalette.style.background = colors[color];
     colorPaletteContainer.appendChild(colorPalette);
   }
-}
-createColorPalette(4);
+};
 
-// Cria o quadro de pixels
 function generateBoard(n) {
   const boardSize = n;
   const pixelBoard = document.getElementById('pixel-board');
@@ -38,29 +35,23 @@ function generateBoard(n) {
     }
   }
 }
-generateBoard(5);
 
-// Eventos
 document.addEventListener('click', function (event) {
-  // Seleciona a cor
   if (event.target.classList.contains('color')) {
     const selectedColor = document.querySelector('.selected');
-    selectedColor.className = 'color';
-    event.target.className = 'color selected';
+    selectedColor.classList.remove('selected');
+    event.target.classList.add('selected');
   }
-  // Pinta o pixel com a cor selecionada
   if (event.target.classList.contains('pixel')) {
     const applyColor = document.querySelector('.selected').style.background;
     event.target.style.background = applyColor;
   }
-  // Limpa o quadro
   if (event.target.classList.contains('btn-clear')) {
     const pixel = document.getElementsByClassName('pixel');
     for (let index = 0; index < pixel.length; index += 1) {
       pixel[index].style.background = 'white';
     }
   }
-  // Gera um novo quadro
   if (event.target.classList.contains('generate-board')) {
     let numberOfPixels = document.getElementById('board-size').value;
     if (numberOfPixels === '') {
@@ -77,3 +68,6 @@ document.addEventListener('click', function (event) {
     generateBoard(numberOfPixels);
   }
 });
+
+generateBoard(5);
+createColorPalette(4);
