@@ -1,0 +1,32 @@
+body {
+  box-sizing: border-box;
+}
+
+.color {
+  border: 1px solid black;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+}
+
+.pixel-board {
+  display: table;
+  border-collapse: collapse;
+}
+
+.pixel-row {
+  display: table-row;
+}
+
+.pixel {
+  background: white;
+  border: 1px solid black;
+  box-sizing: border-box;
+  display: table-cell;
+  width: 40px;
+  height: 40px;
+}
+
+.board-size {
+  width: 40px;
+}
