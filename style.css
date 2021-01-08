@@ -1,60 +1,32 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
 body {
-  background-color: rgb(189, 255, 189);
-}
-
-header {
-  background-color: rgb(8, 121, 8);
-  color: white;
-  padding: 10px;
-  text-align: center;
-}
-
-ul {
-  margin-top: 30px;
-  text-align: center;
-}
-
-button {
-  display: flex;
-  margin: 15px auto;
-  padding: 4px;
-}
-
-table {
-  margin: auto;
-}
-
-#container {
-  background-color: gray;
-  width: 280px;
-  margin: 10px auto;
-  padding-top: 1px;
-  padding-bottom: 10px;
-  border: 20px groove rgb(51, 51, 51);
+  box-sizing: border-box;
 }
 
 .color {
   border: 1px solid black;
-  height: 50px;
-  width: 50px;
-}
-
-#black {
-  background-color: black;
-}
-
-li {
   display: inline-block;
+  height: 40px;
+  width: 40px;
+}
+
+.pixel-board {
+  display: table;
+  border-collapse: collapse;
+}
+
+.pixel-row {
+  display: table-row;
 }
 
 .pixel {
-  background-color: white;
+  background: white;
   border: 1px solid black;
+  box-sizing: border-box;
+  display: table-cell;
+  width: 40px;
   height: 40px;
+}
+
+.board-size {
   width: 40px;
 }
