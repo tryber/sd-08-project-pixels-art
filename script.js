@@ -23,7 +23,6 @@ criaAsCoresDaPaleta();
 
 function criaQuadroDePixels() {
   quadroDePixels.id = "pixel-board";
-
   main.appendChild(quadroDePixels);
   for (let i = 1; i <= 5; i += 1) {
     for (let j = 1; j <= 5; j += 1) {
@@ -37,3 +36,13 @@ function criaQuadroDePixels() {
   }
 }
 criaQuadroDePixels();
+
+function selecionaCorParaPintar() {
+  paletaDeCores.addEventListener("click", function (evento) {
+    for (let i = 0; i < coresDaPaleta.length; i += 1) {
+      coresDaPaleta[i].className = "color";
+    }
+    evento.target.className = "color selected";
+  });
+}
+selecionaCorParaPintar();
