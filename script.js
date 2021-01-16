@@ -1,6 +1,8 @@
 const main = document.getElementById("main");
 const paletaDeCores = document.getElementById("color-palette");
 const coresDaPaleta = document.getElementsByClassName("color");
+const quadroDePixels = document.createElement("ul");
+const pixels = document.createElement("li");
 
 function criaAsCoresDaPaleta() {
   coresDaPaleta[0].style.backgroundColor = "rgb(0,0,0)";
@@ -12,3 +14,11 @@ function criaAsCoresDaPaleta() {
   }
 }
 criaAsCoresDaPaleta();
+
+function criaQuadroDePixels() {
+  quadroDePixels.id = "pixel-board";
+  pixels.className = "pixel";
+  pixels.style.backgroundColor = "rgb(255,255,255)";
+  main.appendChild(quadroDePixels);
+  quadroDePixels.appendChild(pixels);
+}
