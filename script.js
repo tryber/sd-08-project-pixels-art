@@ -46,3 +46,11 @@ function selecionaCorParaPintar() {
   });
 }
 selecionaCorParaPintar();
+
+function colorePixelDoQuadro() {
+  quadroDePixels.addEventListener("click", function (evento) {
+    const corSelecionada = document.querySelector(".selected");
+    evento.target.style.backgroundColor = corSelecionada.style.backgroundColor;
+  });
+}
+colorePixelDoQuadro();
