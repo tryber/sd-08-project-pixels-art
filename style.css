@@ -5,3 +5,9 @@
   height: 40px;
   width: 40px;
 }
+
+br {
+  margin: 0px;
+  border: 0px;
+  padding: 0px;
+}

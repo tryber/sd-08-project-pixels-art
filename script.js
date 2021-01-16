@@ -48,19 +48,19 @@ function selecionaCorParaPintar() {
 }
 selecionaCorParaPintar();
 
-function colorePixelDoQuadro() {
+function pintaPixelsDoQuadro() {
   quadroDePixels.addEventListener("click", function (evento) {
     const corSelecionada = document.querySelector(".selected");
     evento.target.style.backgroundColor = corSelecionada.style.backgroundColor;
   });
 }
-colorePixelDoQuadro();
+pintaPixelsDoQuadro();
 
 function limpaQuadroDePixels() {
   botaoLimpar.addEventListener("click", function () {
     const pixels = document.getElementsByClassName("pixel");
     for (let i = 0; i < pixels.length; i += 1) {
-      pixels[i].style.backgroundColor = "rgb(250, 250, 250)";
+      pixels[i].style.backgroundColor = "white";
     }
   });
 }
