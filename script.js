@@ -8,6 +8,7 @@ const r = Math.floor(Math.random() * 255);
 const g = Math.floor(Math.random() * 255);
 const b = Math.floor(Math.random() * 255);
 const quadroDePixels = document.createElement("ul");
+const botaoLimpar = document.getElementById("clear-board");
 
 function criaAsCoresDaPaleta() {
   coresDaPaleta[0].style.backgroundColor = `rgb(${red},${green},${blue})`;
@@ -54,3 +55,13 @@ function colorePixelDoQuadro() {
   });
 }
 colorePixelDoQuadro();
+
+function limpaQuadroDePixels() {
+  botaoLimpar.addEventListener("click", function () {
+    const pixels = document.getElementsByClassName("pixel");
+    for (let i = 0; i < pixels.length; i += 1) {
+      pixels[i].style.backgroundColor = "rgb(250, 250, 250)";
+    }
+  });
+}
+limpaQuadroDePixels();
