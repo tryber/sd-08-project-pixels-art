@@ -11,6 +11,7 @@ const quadroDePixels = document.createElement("ul");
 
 function criaAsCoresDaPaleta() {
   coresDaPaleta[0].style.backgroundColor = `rgb(${red},${green},${blue})`;
+  coresDaPaleta[0].className = "color selected";
   for (let i = 1; i <= 3; i += 1) {
     const r = Math.floor(Math.random() * 255);
     const g = Math.floor(Math.random() * 255);
