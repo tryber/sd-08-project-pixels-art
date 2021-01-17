@@ -7,13 +7,13 @@
 }
 
 #pixel-board {
-  padding: 0px;
+  padding: 1px;
 }
 
 #color-palette {
   height: 42px;
   margin: 15px;
-  padding: 0;
+  padding: 1px;
   width: 180px;
 }
 

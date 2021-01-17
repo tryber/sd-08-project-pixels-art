@@ -4,12 +4,8 @@ const coresDaPaleta = document.getElementsByClassName("color");
 const red = Math.floor(Math.random() * 0);
 const green = Math.floor(Math.random() * 0);
 const blue = Math.floor(Math.random() * 0);
-const r = Math.floor(Math.random() * 256);
-const g = Math.floor(Math.random() * 256);
-const b = Math.floor(Math.random() * 256);
 const quadroDePixels = document.createElement("ul");
 const botaoLimpar = document.getElementById("clear-board");
-const entradaDoTamanhoDoQuadro = document.getElementById("board-size");
 const botaoAlteraTamanhoDoQuadro = document.getElementById("generate-board");
 
 function criaAsCoresDaPaleta() {
@@ -68,6 +64,29 @@ function limpaQuadroDePixels() {
 }
 limpaQuadroDePixels();
 
+function criaQuadroDePixelsPeloUsuario(tamanhoDoQuadro) {
+  const quadroDePixels = document.getElementById("pixel-board");
+  main.removeChild(quadroDePixels);
+  const quadroDePixelsUsuario = document.createElement("ul");
+  quadroDePixelsUsuario.id = "pixel-board";
+  main.appendChild(quadroDePixelsUsuario);
+  if (tamanhoDoQuadro < 5) {
+    tamanhoDoQuadro = 5;
+  } else if (tamanhoDoQuadro > 50) {
+    tamanhoDoQuadro = 50;
+  }
+  for (let i = 1; i <= tamanhoDoQuadro; i += 1) {
+    for (let j = 1; j <= tamanhoDoQuadro; j += 1) {
+      const pixels = document.createElement("li");
+      pixels.className = "pixel";
+      pixels.style.backgroundColor = "rgb(256,256,256)";
+      quadroDePixelsUsuario.appendChild(pixels);
+    }
+    const quebraDeLinha = document.createElement("br");
+    quadroDePixelsUsuario.appendChild(quebraDeLinha);
+  }
+}
+
 function alteraTamanhoDoQuadro() {
   botaoAlteraTamanhoDoQuadro.addEventListener("click", function () {
     const entradaDoTamanhoDoQuadro = document.getElementById("board-size");
@@ -80,21 +99,3 @@ function alteraTamanhoDoQuadro() {
   });
 }
 alteraTamanhoDoQuadro();
-
-function criaQuadroDePixelsPeloUsuario(tamanhoDoQuadro) {
-  const quadroDePixels = document.getElementById("pixel-board");
-  main.removeChild(quadroDePixels);
-  const quadroDePixelsUsuario = document.createElement("ul");
-  quadroDePixelsUsuario.id = "pixel-board";
-  main.appendChild(quadroDePixelsUsuario);
-  for (let i = 1; i <= tamanhoDoQuadro; i += 1) {
-    for (let j = 1; j <= tamanhoDoQuadro; j += 1) {
-      const pixels = document.createElement("li");
-      pixels.className = "pixel";
-      pixels.style.backgroundColor = "rgb(256,256,256)";
-      quadroDePixelsUsuario.appendChild(pixels);
-    }
-    const quebraDeLinha = document.createElement("br");
-    quadroDePixelsUsuario.appendChild(quebraDeLinha);
-  }
-}
