@@ -9,6 +9,8 @@ const g = Math.floor(Math.random() * 256);
 const b = Math.floor(Math.random() * 256);
 const quadroDePixels = document.createElement("ul");
 const botaoLimpar = document.getElementById("clear-board");
+const entradaDoTamanhoDoQuadro = document.getElementById("board-size");
+const botaoAlteraTamanhoDoQuadro = document.getElementById("generate-board");
 
 function criaAsCoresDaPaleta() {
   coresDaPaleta[0].style.backgroundColor = `rgb(${red},${green},${blue})`;
@@ -65,3 +67,34 @@ function limpaQuadroDePixels() {
   });
 }
 limpaQuadroDePixels();
+
+function alteraTamanhoDoQuadro() {
+  botaoAlteraTamanhoDoQuadro.addEventListener("click", function () {
+    const entradaDoTamanhoDoQuadro = document.getElementById("board-size");
+    if (entradaDoTamanhoDoQuadro.value === "") {
+      alert("Board inválido!");
+    } else {
+      const tamanhoDoQuadro = entradaDoTamanhoDoQuadro.value;
+      criaQuadroDePixelsPeloUsuario(tamanhoDoQuadro);
+    }
+  });
+}
+alteraTamanhoDoQuadro();
+
+function criaQuadroDePixelsPeloUsuario(tamanhoDoQuadro) {
+  const quadroDePixels = document.getElementById("pixel-board");
+  main.removeChild(quadroDePixels);
+  const quadroDePixelsUsuario = document.createElement("ul");
+  quadroDePixelsUsuario.id = "pixel-board";
+  main.appendChild(quadroDePixelsUsuario);
+  for (let i = 1; i <= tamanhoDoQuadro; i += 1) {
+    for (let j = 1; j <= tamanhoDoQuadro; j += 1) {
+      const pixels = document.createElement("li");
+      pixels.className = "pixel";
+      pixels.style.backgroundColor = "rgb(256,256,256)";
+      quadroDePixelsUsuario.appendChild(pixels);
+    }
+    const quebraDeLinha = document.createElement("br");
+    quadroDePixelsUsuario.appendChild(quebraDeLinha);
+  }
+}
